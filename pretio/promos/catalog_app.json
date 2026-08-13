@@ -1,1 +1,9 @@
-
+{
+  "nation": "Indonesia",
+  "province": "Jawa Barat",
+  "city_or_regency": "Bandung",
+  "district": "Coblong",
+  "sub_district": "Dago",
+  "postal_code": "40135",
+  "coverage_type": "sub_district"
+}
