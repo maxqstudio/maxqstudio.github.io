@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalog_revision": "pretio-production-location-r1-2026-08-21",
+  "catalog_revision": "pretio-production-location-images-r2-2026-08-21",
   "location_contract": {
     "catalog_country_code": "ID",
     "catalog_country": "Indonesia",
@@ -13,7 +13,9 @@
     "blog.alfagift.id",
     "alfagift.id",
     "www.hypermart.co.id",
-    "www.superindo.co.id"
+    "www.superindo.co.id",
+    "psrs.alfamart.co.id",
+    "upload.wikimedia.org"
   ],
   "items": [
     {
@@ -37,7 +39,8 @@
           "scope": "country",
           "country_code": "ID"
         }
-      ]
+      ],
+      "logo_url": "https://www.indomaret.co.id/wp-content/uploads/2025/02/logos/idm-main-logo.png"
     },
     {
       "id": "alfamart-national-live",
@@ -60,7 +63,8 @@
           "scope": "country",
           "country_code": "ID"
         }
-      ]
+      ],
+      "logo_url": "https://psrs.alfamart.co.id/static/dist/img_sso/alfamart.png"
     },
     {
       "id": "hypermart-national-live",
@@ -83,7 +87,8 @@
           "scope": "country",
           "country_code": "ID"
         }
-      ]
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Hypermart_%282025%29.svg/960px-Hypermart_%282025%29.svg.png"
     },
     {
       "id": "superindo-national-live",
@@ -106,7 +111,8 @@
           "scope": "country",
           "country_code": "ID"
         }
-      ]
+      ],
+      "logo_url": "https://www.superindo.co.id/images/layout/superindo.png"
     }
   ]
 }
