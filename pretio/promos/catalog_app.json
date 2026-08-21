@@ -1,9 +1,13 @@
 {
   "schema_version": 1,
-  "catalog_id": "pretio-public-promos",
-  "updated_at": "2026-08-14T00:00:00+07:00",
-  "default_locale": "id-ID",
-  "default_nation": "Indonesia",
+  "catalog_revision": "pretio-production-location-r1-2026-08-21",
+  "location_contract": {
+    "catalog_country_code": "ID",
+    "catalog_country": "Indonesia",
+    "catalog_items_require_explicit_location_rules": true,
+    "administrative_reference": "Kepmendagri No. 300.2.2-2430 Tahun 2025",
+    "note": "All catalog items in this release are explicitly scoped to Indonesia. No item is global-by-omission."
+  },
   "allowed_hosts": [
     "www.indomaret.co.id",
     "blog.alfagift.id",
@@ -18,25 +22,22 @@
       "publisher": "Indomaret",
       "title": "Promo resmi Indomaret",
       "summary": "Lihat katalog promosi resmi Indomaret.",
-      "nation": "Indonesia",
-      "province": null,
-      "city_or_regency": null,
-      "district": null,
-      "sub_district": null,
-      "postal_code": null,
       "coverage_type": "national",
       "coverage_label": "Nasional",
       "content_type": "webview",
       "url": "https://www.indomaret.co.id/promosi/",
-      "logo_url": "https://www.indomaret.co.id/wp-content/uploads/2025/02/logos/idm-main-logo.png",
-      "image_url": "https://www.indomaret.co.id/wp-content/uploads/2025/08/SuperHemat-Thumbnail-Website-800x510-1.png",
       "source_type": "official_retailer",
-      "source_name": "Indomaret",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-14T00:00:00+07:00",
+      "last_verified_at": "2026-08-21T00:00:00+07:00",
       "status": "active",
-      "sort_order": 10
+      "sort_order": 10,
+      "locations": [
+        {
+          "scope": "country",
+          "country_code": "ID"
+        }
+      ]
     },
     {
       "id": "alfamart-national-live",
@@ -44,25 +45,22 @@
       "publisher": "Alfagift",
       "title": "Promo resmi Alfamart",
       "summary": "Lihat katalog promo Alfamart melalui kanal resmi Alfagift.",
-      "nation": "Indonesia",
-      "province": null,
-      "city_or_regency": null,
-      "district": null,
-      "sub_district": null,
-      "postal_code": null,
       "coverage_type": "national",
       "coverage_label": "Nasional",
       "content_type": "webview",
       "url": "https://blog.alfagift.id/promo/",
-      "logo_url": "https://alfagift.id/resources/images/logo_alfamart.png",
-      "image_url": "https://blog.alfagift.id/wp-content/uploads/2026/07/flash-sale-alfagift.png",
       "source_type": "official_digital_channel",
-      "source_name": "Alfagift",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-14T00:00:00+07:00",
+      "last_verified_at": "2026-08-21T00:00:00+07:00",
       "status": "active",
-      "sort_order": 20
+      "sort_order": 20,
+      "locations": [
+        {
+          "scope": "country",
+          "country_code": "ID"
+        }
+      ]
     },
     {
       "id": "hypermart-national-live",
@@ -70,25 +68,22 @@
       "publisher": "Hypermart",
       "title": "Promo resmi Hypermart",
       "summary": "Lihat katalog promosi resmi Hypermart.",
-      "nation": "Indonesia",
-      "province": null,
-      "city_or_regency": null,
-      "district": null,
-      "sub_district": null,
-      "postal_code": null,
       "coverage_type": "national",
       "coverage_label": "Nasional",
       "content_type": "webview",
       "url": "https://www.hypermart.co.id/promo-katalog-hypermart/",
-      "logo_url": "https://www.hypermart.co.id/wp-content/uploads/2021/02/LOGO-HYPERMART-2025-02-300x101.png",
-      "image_url": "https://www.hypermart.co.id/wp-content/uploads/2026/07/KATALOG-HPM-1-scaled.jpg",
       "source_type": "official_retailer",
-      "source_name": "Hypermart",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-14T00:00:00+07:00",
+      "last_verified_at": "2026-08-21T00:00:00+07:00",
       "status": "active",
-      "sort_order": 30
+      "sort_order": 30,
+      "locations": [
+        {
+          "scope": "country",
+          "country_code": "ID"
+        }
+      ]
     },
     {
       "id": "superindo-national-live",
@@ -96,25 +91,22 @@
       "publisher": "Super Indo",
       "title": "Promo resmi Super Indo",
       "summary": "Lihat katalog promosi resmi Super Indo.",
-      "nation": "Indonesia",
-      "province": null,
-      "city_or_regency": null,
-      "district": null,
-      "sub_district": null,
-      "postal_code": null,
       "coverage_type": "national",
       "coverage_label": "Nasional",
       "content_type": "webview",
       "url": "https://www.superindo.co.id/promosi/katalog-super-hemat",
-      "logo_url": "https://www.superindo.co.id/images/new/logo-superindo.png",
-      "image_url": "https://www.superindo.co.id/images/katalog/6a7bd6dcc2659HEMAT_E_33_(1)_DKI.jpg",
       "source_type": "official_retailer",
-      "source_name": "Super Indo",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-14T00:00:00+07:00",
+      "last_verified_at": "2026-08-21T00:00:00+07:00",
       "status": "active",
-      "sort_order": 40
+      "sort_order": 40,
+      "locations": [
+        {
+          "scope": "country",
+          "country_code": "ID"
+        }
+      ]
     }
   ]
 }
