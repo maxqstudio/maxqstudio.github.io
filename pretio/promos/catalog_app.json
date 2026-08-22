@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "catalog_revision": "pretio-production-location-images-r2-2026-08-21",
+  "catalog_revision": "pretio-production-location-images-r3-1-safe-2026-08-22",
   "location_contract": {
     "catalog_country_code": "ID",
     "catalog_country": "Indonesia",
     "catalog_items_require_explicit_location_rules": true,
     "administrative_reference": "Kepmendagri No. 300.2.2-2430 Tahun 2025",
-    "note": "All catalog items in this release are explicitly scoped to Indonesia. No item is global-by-omission."
+    "note": "All catalog items are explicitly scoped to Indonesia. Country rules are retained only for broadly national channels; other retailers use conservative province coverage verified from official store locators or official catalog-area selectors."
   },
   "allowed_hosts": [
     "www.indomaret.co.id",
@@ -15,7 +15,12 @@
     "www.hypermart.co.id",
     "www.superindo.co.id",
     "psrs.alfamart.co.id",
-    "upload.wikimedia.org"
+    "upload.wikimedia.org",
+    "indogrosir.co.id",
+    "www.indogrosir.co.id",
+    "www.lottemart.co.id",
+    "transmart.co.id",
+    "www.tiptop.co.id"
   ],
   "items": [
     {
@@ -31,7 +36,7 @@
       "source_type": "official_retailer",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-21T00:00:00+07:00",
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
       "status": "active",
       "sort_order": 10,
       "locations": [
@@ -55,7 +60,7 @@
       "source_type": "official_digital_channel",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-21T00:00:00+07:00",
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
       "status": "active",
       "sort_order": 20,
       "locations": [
@@ -79,13 +84,154 @@
       "source_type": "official_retailer",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-21T00:00:00+07:00",
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
       "status": "active",
       "sort_order": 30,
       "locations": [
         {
-          "scope": "country",
-          "country_code": "ID"
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "12"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "13"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "14"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "15"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "16"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "17"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "19"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "21"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "33"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "34"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "35"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "51"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "52"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "53"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "61"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "62"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "63"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "64"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "71"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "72"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "73"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "74"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "75"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "81"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "82"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "91"
         }
       ],
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Hypermart_%282025%29.svg/960px-Hypermart_%282025%29.svg.png"
@@ -103,16 +249,477 @@
       "source_type": "official_retailer",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-08-21T00:00:00+07:00",
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
       "status": "active",
       "sort_order": 40,
       "locations": [
         {
-          "scope": "country",
-          "country_code": "ID"
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "16"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "18"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "33"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "34"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "35"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
         }
       ],
       "logo_url": "https://www.superindo.co.id/images/layout/superindo.png"
+    },
+    {
+      "id": "indogrosir-location-live",
+      "merchant": "Indogrosir",
+      "publisher": "Indogrosir",
+      "title": "Promo resmi Indogrosir",
+      "summary": "Lihat katalog promosi resmi Indogrosir dan pilih cabang pada kanal resminya.",
+      "coverage_type": "national",
+      "coverage_label": "Nasional",
+      "content_type": "webview",
+      "url": "https://indogrosir.co.id/promosi",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
+      "status": "active",
+      "sort_order": 50,
+      "locations": [
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "12"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "14"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "15"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "16"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "18"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "21"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "33"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "34"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "35"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "51"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "61"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "63"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "64"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "71"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "73"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "74"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "75"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "81"
+        }
+      ]
+    },
+    {
+      "id": "lotte-mart-location-live",
+      "merchant": "LOTTE MART",
+      "publisher": "LOTTE MART",
+      "title": "Promo resmi LOTTE MART",
+      "summary": "Lihat e-Flyer dan promo resmi LOTTE MART.",
+      "coverage_type": "national",
+      "coverage_label": "Nasional",
+      "content_type": "webview",
+      "url": "https://www.lottemart.co.id/all-promo-mart",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
+      "status": "active",
+      "sort_order": 60,
+      "locations": [
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "12"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "33"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "35"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "73"
+        }
+      ]
+    },
+    {
+      "id": "lotte-grosir-location-live",
+      "merchant": "LOTTE Grosir",
+      "publisher": "LOTTE Grosir",
+      "title": "Promo resmi LOTTE Grosir",
+      "summary": "Lihat katalog, flyer, dan promo resmi LOTTE Grosir.",
+      "coverage_type": "national",
+      "coverage_label": "Nasional",
+      "content_type": "webview",
+      "url": "https://www.lottemart.co.id/all-promo-grosir",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
+      "status": "active",
+      "sort_order": 70,
+      "locations": [
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "12"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "14"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "16"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "18"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "21"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "33"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "34"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "35"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "51"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "52"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "63"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "64"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "71"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "73"
+        }
+      ]
+    },
+    {
+      "id": "transmart-location-live",
+      "merchant": "Transmart",
+      "publisher": "Transmart",
+      "title": "Katalog resmi Transmart",
+      "summary": "Lihat Katalog Super Hemat dan katalog digital resmi Transmart.",
+      "coverage_type": "national",
+      "coverage_label": "Nasional",
+      "content_type": "webview",
+      "url": "https://transmart.co.id/katalog",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
+      "status": "active",
+      "sort_order": 80,
+      "locations": [
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "12"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "13"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "14"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "15"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "16"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "18"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "19"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "33"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "34"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "35"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "51"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "52"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "53"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "64"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "73"
+        }
+      ]
+    },
+    {
+      "id": "tiptop-location-live",
+      "merchant": "TIP TOP",
+      "publisher": "TIP TOP Supermarket",
+      "title": "Promo resmi TIP TOP",
+      "summary": "Lihat katalog promo resmi TIP TOP Supermarket.",
+      "coverage_type": "national",
+      "coverage_label": "Nasional",
+      "content_type": "webview",
+      "url": "https://www.tiptop.co.id/promo-products/katalog",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-08-22T00:00:00+07:00",
+      "status": "active",
+      "sort_order": 90,
+      "locations": [
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "31"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "32"
+        },
+        {
+          "scope": "region",
+          "country_code": "ID",
+          "province_code": "36"
+        }
+      ]
     }
   ]
 }
