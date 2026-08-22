@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalog_revision": "pretio-production-location-images-r3-1-safe-2026-08-22",
+  "catalog_revision": "pretio-production-location-images-r3-2-2026-08-22",
   "location_contract": {
     "catalog_country_code": "ID",
     "catalog_country": "Indonesia",
@@ -20,7 +20,9 @@
     "www.indogrosir.co.id",
     "www.lottemart.co.id",
     "transmart.co.id",
-    "www.tiptop.co.id"
+    "www.tiptop.co.id",
+    "cdn.jsdelivr.net",
+    "graph.facebook.com"
   ],
   "items": [
     {
@@ -418,7 +420,8 @@
           "country_code": "ID",
           "province_code": "81"
         }
-      ]
+      ],
+      "logo_url": "https://www.indogrosir.co.id/images/logo/logo_2feb2026.png"
     },
     {
       "id": "lotte-mart-location-live",
@@ -472,7 +475,8 @@
           "country_code": "ID",
           "province_code": "73"
         }
-      ]
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Lotte_Mart_%282023%29.svg/960px-Lotte_Mart_%282023%29.svg.png"
     },
     {
       "id": "lotte-grosir-location-live",
@@ -576,7 +580,8 @@
           "country_code": "ID",
           "province_code": "73"
         }
-      ]
+      ],
+      "logo_url": "https://cdn.jsdelivr.net/npm/idn-finlogos@2.5.0/dist/png/lotte-grosir@2x.png"
     },
     {
       "id": "transmart-location-live",
@@ -685,7 +690,8 @@
           "country_code": "ID",
           "province_code": "73"
         }
-      ]
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Transmart.svg/960px-Transmart.svg.png"
     },
     {
       "id": "tiptop-location-live",
@@ -719,7 +725,8 @@
           "country_code": "ID",
           "province_code": "36"
         }
-      ]
+      ],
+      "logo_url": "https://graph.facebook.com/244000162376462/picture?type=large"
     }
   ]
 }
