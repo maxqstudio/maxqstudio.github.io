@@ -1,28 +1,40 @@
 {
-  "schema_version": 1,
-  "catalog_revision": "pretio-production-location-images-r3-2-2026-08-22",
+  "schema_version": 2,
+  "catalog_revision": "pretio-g02-location-contract-v2-2026-09-14",
   "location_contract": {
-    "catalog_country_code": "ID",
-    "catalog_country": "Indonesia",
+    "location_schema": "pretio.location.v1",
+    "location_url": "https://maxqstudio.dev/pretio/promos/location.json",
+    "location_types": [
+      "country",
+      "province",
+      "city"
+    ],
     "catalog_items_require_explicit_location_rules": true,
-    "administrative_reference": "Kepmendagri No. 300.2.2-2430 Tahun 2025",
-    "note": "All catalog items are explicitly scoped to Indonesia. Country rules are retained only for broadly national channels; other retailers use conservative province coverage verified from official store locators or official catalog-area selectors."
+    "country_province_city_identifiers_must_match_location_json": true,
+    "no_catalog_message": "No catalog yet in this location"
   },
   "allowed_hosts": [
-    "www.indomaret.co.id",
-    "blog.alfagift.id",
     "alfagift.id",
-    "www.hypermart.co.id",
-    "www.superindo.co.id",
-    "psrs.alfamart.co.id",
-    "upload.wikimedia.org",
-    "indogrosir.co.id",
-    "www.indogrosir.co.id",
-    "www.lottemart.co.id",
-    "transmart.co.id",
-    "www.tiptop.co.id",
+    "blog.alfagift.id",
     "cdn.jsdelivr.net",
-    "graph.facebook.com"
+    "fe-browse-alvi-gcp-alvi-prod.alvi.cl",
+    "graph.facebook.com",
+    "indogrosir.co.id",
+    "psrs.alfamart.co.id",
+    "super.lider.cl",
+    "transmart.co.id",
+    "upload.wikimedia.org",
+    "www.hypermart.co.id",
+    "www.indogrosir.co.id",
+    "www.indomaret.co.id",
+    "www.jumbo.cl",
+    "www.lottemart.co.id",
+    "www.mayorista10.cl",
+    "www.santaisabel.cl",
+    "www.superindo.co.id",
+    "www.tiptop.co.id",
+    "www.tottus.cl",
+    "www.unimarc.cl"
   ],
   "items": [
     {
@@ -43,8 +55,9 @@
       "sort_order": 10,
       "locations": [
         {
-          "scope": "country",
-          "country_code": "ID"
+          "type": "country",
+          "country_code": "ID",
+          "country": "Indonesia"
         }
       ],
       "logo_url": "https://www.indomaret.co.id/wp-content/uploads/2025/02/logos/idm-main-logo.png"
@@ -67,8 +80,9 @@
       "sort_order": 20,
       "locations": [
         {
-          "scope": "country",
-          "country_code": "ID"
+          "type": "country",
+          "country_code": "ID",
+          "country": "Indonesia"
         }
       ],
       "logo_url": "https://psrs.alfamart.co.id/static/dist/img_sso/alfamart.png"
@@ -91,149 +105,207 @@
       "sort_order": 30,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "12"
+          "country": "Indonesia",
+          "province_code": "12",
+          "province": "Sumatera Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "13"
+          "country": "Indonesia",
+          "province_code": "13",
+          "province": "Sumatera Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "14"
+          "country": "Indonesia",
+          "province_code": "14",
+          "province": "Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "15"
+          "country": "Indonesia",
+          "province_code": "15",
+          "province": "Jambi"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "16"
+          "country": "Indonesia",
+          "province_code": "16",
+          "province": "Sumatera Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "17"
+          "country": "Indonesia",
+          "province_code": "17",
+          "province": "Bengkulu"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "19"
+          "country": "Indonesia",
+          "province_code": "19",
+          "province": "Kepulauan Bangka Belitung"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "21"
+          "country": "Indonesia",
+          "province_code": "21",
+          "province": "Kepulauan Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "33"
+          "country": "Indonesia",
+          "province_code": "33",
+          "province": "Jawa Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "34"
+          "country": "Indonesia",
+          "province_code": "34",
+          "province": "Daerah Istimewa Yogyakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "35"
+          "country": "Indonesia",
+          "province_code": "35",
+          "province": "Jawa Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "51"
+          "country": "Indonesia",
+          "province_code": "51",
+          "province": "Bali"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "52"
+          "country": "Indonesia",
+          "province_code": "52",
+          "province": "Nusa Tenggara Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "53"
+          "country": "Indonesia",
+          "province_code": "53",
+          "province": "Nusa Tenggara Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "61"
+          "country": "Indonesia",
+          "province_code": "61",
+          "province": "Kalimantan Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "62"
+          "country": "Indonesia",
+          "province_code": "62",
+          "province": "Kalimantan Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "63"
+          "country": "Indonesia",
+          "province_code": "63",
+          "province": "Kalimantan Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "64"
+          "country": "Indonesia",
+          "province_code": "64",
+          "province": "Kalimantan Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "71"
+          "country": "Indonesia",
+          "province_code": "71",
+          "province": "Sulawesi Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "72"
+          "country": "Indonesia",
+          "province_code": "72",
+          "province": "Sulawesi Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "73"
+          "country": "Indonesia",
+          "province_code": "73",
+          "province": "Sulawesi Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "74"
+          "country": "Indonesia",
+          "province_code": "74",
+          "province": "Sulawesi Tenggara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "75"
+          "country": "Indonesia",
+          "province_code": "75",
+          "province": "Gorontalo"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "81"
+          "country": "Indonesia",
+          "province_code": "81",
+          "province": "Maluku"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "82"
+          "country": "Indonesia",
+          "province_code": "82",
+          "province": "Maluku Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "91"
+          "country": "Indonesia",
+          "province_code": "91",
+          "province": "Papua"
         }
       ],
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Hypermart_%282025%29.svg/960px-Hypermart_%282025%29.svg.png"
@@ -256,44 +328,60 @@
       "sort_order": 40,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "16"
+          "country": "Indonesia",
+          "province_code": "16",
+          "province": "Sumatera Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "18"
+          "country": "Indonesia",
+          "province_code": "18",
+          "province": "Lampung"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "33"
+          "country": "Indonesia",
+          "province_code": "33",
+          "province": "Jawa Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "34"
+          "country": "Indonesia",
+          "province_code": "34",
+          "province": "Daerah Istimewa Yogyakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "35"
+          "country": "Indonesia",
+          "province_code": "35",
+          "province": "Jawa Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         }
       ],
       "logo_url": "https://www.superindo.co.id/images/layout/superindo.png"
@@ -316,109 +404,151 @@
       "sort_order": 50,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "12"
+          "country": "Indonesia",
+          "province_code": "12",
+          "province": "Sumatera Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "14"
+          "country": "Indonesia",
+          "province_code": "14",
+          "province": "Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "15"
+          "country": "Indonesia",
+          "province_code": "15",
+          "province": "Jambi"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "16"
+          "country": "Indonesia",
+          "province_code": "16",
+          "province": "Sumatera Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "18"
+          "country": "Indonesia",
+          "province_code": "18",
+          "province": "Lampung"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "21"
+          "country": "Indonesia",
+          "province_code": "21",
+          "province": "Kepulauan Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "33"
+          "country": "Indonesia",
+          "province_code": "33",
+          "province": "Jawa Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "34"
+          "country": "Indonesia",
+          "province_code": "34",
+          "province": "Daerah Istimewa Yogyakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "35"
+          "country": "Indonesia",
+          "province_code": "35",
+          "province": "Jawa Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "51"
+          "country": "Indonesia",
+          "province_code": "51",
+          "province": "Bali"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "61"
+          "country": "Indonesia",
+          "province_code": "61",
+          "province": "Kalimantan Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "63"
+          "country": "Indonesia",
+          "province_code": "63",
+          "province": "Kalimantan Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "64"
+          "country": "Indonesia",
+          "province_code": "64",
+          "province": "Kalimantan Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "71"
+          "country": "Indonesia",
+          "province_code": "71",
+          "province": "Sulawesi Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "73"
+          "country": "Indonesia",
+          "province_code": "73",
+          "province": "Sulawesi Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "74"
+          "country": "Indonesia",
+          "province_code": "74",
+          "province": "Sulawesi Tenggara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "75"
+          "country": "Indonesia",
+          "province_code": "75",
+          "province": "Gorontalo"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "81"
+          "country": "Indonesia",
+          "province_code": "81",
+          "province": "Maluku"
         }
       ],
       "logo_url": "https://www.indogrosir.co.id/images/logo/logo_2feb2026.png"
@@ -441,39 +571,53 @@
       "sort_order": 60,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "12"
+          "country": "Indonesia",
+          "province_code": "12",
+          "province": "Sumatera Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "33"
+          "country": "Indonesia",
+          "province_code": "33",
+          "province": "Jawa Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "35"
+          "country": "Indonesia",
+          "province_code": "35",
+          "province": "Jawa Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "73"
+          "country": "Indonesia",
+          "province_code": "73",
+          "province": "Sulawesi Selatan"
         }
       ],
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Lotte_Mart_%282023%29.svg/960px-Lotte_Mart_%282023%29.svg.png"
@@ -496,89 +640,123 @@
       "sort_order": 70,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "12"
+          "country": "Indonesia",
+          "province_code": "12",
+          "province": "Sumatera Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "14"
+          "country": "Indonesia",
+          "province_code": "14",
+          "province": "Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "16"
+          "country": "Indonesia",
+          "province_code": "16",
+          "province": "Sumatera Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "18"
+          "country": "Indonesia",
+          "province_code": "18",
+          "province": "Lampung"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "21"
+          "country": "Indonesia",
+          "province_code": "21",
+          "province": "Kepulauan Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "33"
+          "country": "Indonesia",
+          "province_code": "33",
+          "province": "Jawa Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "34"
+          "country": "Indonesia",
+          "province_code": "34",
+          "province": "Daerah Istimewa Yogyakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "35"
+          "country": "Indonesia",
+          "province_code": "35",
+          "province": "Jawa Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "51"
+          "country": "Indonesia",
+          "province_code": "51",
+          "province": "Bali"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "52"
+          "country": "Indonesia",
+          "province_code": "52",
+          "province": "Nusa Tenggara Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "63"
+          "country": "Indonesia",
+          "province_code": "63",
+          "province": "Kalimantan Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "64"
+          "country": "Indonesia",
+          "province_code": "64",
+          "province": "Kalimantan Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "71"
+          "country": "Indonesia",
+          "province_code": "71",
+          "province": "Sulawesi Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "73"
+          "country": "Indonesia",
+          "province_code": "73",
+          "province": "Sulawesi Selatan"
         }
       ],
       "logo_url": "https://cdn.jsdelivr.net/npm/idn-finlogos@2.5.0/dist/png/lotte-grosir@2x.png"
@@ -601,94 +779,130 @@
       "sort_order": 80,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "12"
+          "country": "Indonesia",
+          "province_code": "12",
+          "province": "Sumatera Utara"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "13"
+          "country": "Indonesia",
+          "province_code": "13",
+          "province": "Sumatera Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "14"
+          "country": "Indonesia",
+          "province_code": "14",
+          "province": "Riau"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "15"
+          "country": "Indonesia",
+          "province_code": "15",
+          "province": "Jambi"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "16"
+          "country": "Indonesia",
+          "province_code": "16",
+          "province": "Sumatera Selatan"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "18"
+          "country": "Indonesia",
+          "province_code": "18",
+          "province": "Lampung"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "19"
+          "country": "Indonesia",
+          "province_code": "19",
+          "province": "Kepulauan Bangka Belitung"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "33"
+          "country": "Indonesia",
+          "province_code": "33",
+          "province": "Jawa Tengah"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "34"
+          "country": "Indonesia",
+          "province_code": "34",
+          "province": "Daerah Istimewa Yogyakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "35"
+          "country": "Indonesia",
+          "province_code": "35",
+          "province": "Jawa Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "51"
+          "country": "Indonesia",
+          "province_code": "51",
+          "province": "Bali"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "52"
+          "country": "Indonesia",
+          "province_code": "52",
+          "province": "Nusa Tenggara Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "53"
+          "country": "Indonesia",
+          "province_code": "53",
+          "province": "Nusa Tenggara Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "64"
+          "country": "Indonesia",
+          "province_code": "64",
+          "province": "Kalimantan Timur"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "73"
+          "country": "Indonesia",
+          "province_code": "73",
+          "province": "Sulawesi Selatan"
         }
       ],
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Transmart.svg/960px-Transmart.svg.png"
@@ -711,22 +925,204 @@
       "sort_order": 90,
       "locations": [
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "31"
+          "country": "Indonesia",
+          "province_code": "31",
+          "province": "Daerah Khusus Ibukota Jakarta"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "32"
+          "country": "Indonesia",
+          "province_code": "32",
+          "province": "Jawa Barat"
         },
         {
-          "scope": "region",
+          "type": "province",
           "country_code": "ID",
-          "province_code": "36"
+          "country": "Indonesia",
+          "province_code": "36",
+          "province": "Banten"
         }
       ],
       "logo_url": "https://graph.facebook.com/244000162376462/picture?type=large"
+    },
+    {
+      "id": "lider-country-cl",
+      "merchant": "Lider",
+      "publisher": "Lider",
+      "title": "Ofertas Lider",
+      "summary": "Revisa las ofertas oficiales de Lider.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://super.lider.cl/v/ofertas",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 110,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
+    },
+    {
+      "id": "jumbo-country-cl",
+      "merchant": "Jumbo",
+      "publisher": "Jumbo Chile",
+      "title": "Ofertas Jumbo",
+      "summary": "Revisa las ofertas oficiales de Jumbo Chile.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://www.jumbo.cl/jumbo-ofertas",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 120,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
+    },
+    {
+      "id": "santaisabel-country-cl",
+      "merchant": "Santa Isabel",
+      "publisher": "Santa Isabel",
+      "title": "Santas Ofertas",
+      "summary": "Revisa las ofertas oficiales de Santa Isabel.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://www.santaisabel.cl/santas-ofertas",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 130,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
+    },
+    {
+      "id": "unimarc-country-cl",
+      "merchant": "Unimarc",
+      "publisher": "Unimarc",
+      "title": "Catálogo Unimarc",
+      "summary": "Revisa el catálogo y las ofertas oficiales de Unimarc.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://www.unimarc.cl/page/catalogo",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 140,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
+    },
+    {
+      "id": "tottus-country-cl",
+      "merchant": "Tottus",
+      "publisher": "Tottus Chile",
+      "title": "Ofertas Tottus",
+      "summary": "Revisa las ofertas oficiales de Tottus Chile.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://www.tottus.cl/tottus-cl/content/ofertas-tottus",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 150,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
+    },
+    {
+      "id": "mayorista10-country-cl",
+      "merchant": "Mayorista 10",
+      "publisher": "Mayorista 10",
+      "title": "Ofertas Mayorista 10",
+      "summary": "Revisa las ofertas oficiales de Mayorista 10.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://www.mayorista10.cl/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 160,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
+    },
+    {
+      "id": "alvi-country-cl",
+      "merchant": "Alvi",
+      "publisher": "Alvi",
+      "title": "Ofertas Alvi",
+      "summary": "Revisa las ofertas oficiales de Alvi.",
+      "coverage_type": "national",
+      "coverage_label": "Chile",
+      "content_type": "webview",
+      "url": "https://fe-browse-alvi-gcp-alvi-prod.alvi.cl/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-14T00:00:00Z",
+      "status": "active",
+      "sort_order": 170,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CL",
+          "country": "Chile"
+        }
+      ],
+      "logo_url": null
     }
-  ]
+  ],
+  "schema": "pretio.catalog_app.v2"
 }
