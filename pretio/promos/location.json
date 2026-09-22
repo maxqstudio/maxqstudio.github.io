@@ -4692,6 +4692,1565 @@
           ]
         }
       ]
+    },
+    {
+      "type": "country",
+      "country_code": "RS",
+      "country": "Serbia",
+      "provinces": [
+        {
+          "type": "province",
+          "province_code": "RS-00",
+          "province": "Beograd",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-00:beograd",
+              "city": "Belgrade"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-01",
+          "province": "Severnobacki okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-01:subotica",
+              "city": "Subotica"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-02",
+          "province": "Srednjobanatski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-02:zrenjanin",
+              "city": "Zrenjanin"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-03",
+          "province": "Severnobanatski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-03:kikinda",
+              "city": "Kikinda"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-04",
+          "province": "Juznobanatski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-04:pancevo",
+              "city": "Pancevo"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-05",
+          "province": "Zapadnobacki okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-05:sombor",
+              "city": "Sombor"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-06",
+          "province": "Juznobacki okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-06:novi-sad",
+              "city": "Novi Sad"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-07",
+          "province": "Sremski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-07:sremska-mitrovica",
+              "city": "Sremska Mitrovica"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-08",
+          "province": "Macvanski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-08:sabac",
+              "city": "Sabac"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-09",
+          "province": "Kolubarski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-09:valjevo",
+              "city": "Valjevo"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-10",
+          "province": "Podunavski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-10:smederevo",
+              "city": "Smederevo"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-11",
+          "province": "Branicevski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-11:pozarevac",
+              "city": "Pozarevac"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-12",
+          "province": "Sumadijski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-12:kragujevac",
+              "city": "Kragujevac"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-13",
+          "province": "Pomoravski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-13:jagodina",
+              "city": "Jagodina"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-14",
+          "province": "Borski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-14:bor",
+              "city": "Bor"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-15",
+          "province": "Zajecarski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-15:zajecar",
+              "city": "Zajecar"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-16",
+          "province": "Zlatiborski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-16:uzice",
+              "city": "Uzice"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-17",
+          "province": "Moravicki okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-17:cacak",
+              "city": "Cacak"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-18",
+          "province": "Raski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-18:kraljevo",
+              "city": "Kraljevo"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-19",
+          "province": "Rasinski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-19:krusevac",
+              "city": "Krusevac"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-20",
+          "province": "Nisavski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-20:nis",
+              "city": "Nis"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-21",
+          "province": "Toplicki okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-21:prokuplje",
+              "city": "Prokuplje"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-22",
+          "province": "Pirotski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-22:pirot",
+              "city": "Pirot"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-23",
+          "province": "Jablanicki okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-23:leskovac",
+              "city": "Leskovac"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "RS-24",
+          "province": "Pcinski okrug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "RS-24:vranje",
+              "city": "Vranje"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "country",
+      "country_code": "US",
+      "country": "United States",
+      "provinces": [
+        {
+          "type": "province",
+          "province_code": "US-AL",
+          "province": "Alabama",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-AL:montgomery",
+              "city": "Montgomery"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-AK",
+          "province": "Alaska",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-AK:juneau",
+              "city": "Juneau"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-AZ",
+          "province": "Arizona",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-AZ:phoenix",
+              "city": "Phoenix"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-AR",
+          "province": "Arkansas",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-AR:little-rock",
+              "city": "Little Rock"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-CA",
+          "province": "California",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-CA:sacramento",
+              "city": "Sacramento"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-CO",
+          "province": "Colorado",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-CO:denver",
+              "city": "Denver"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-CT",
+          "province": "Connecticut",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-CT:hartford",
+              "city": "Hartford"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-DE",
+          "province": "Delaware",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-DE:dover",
+              "city": "Dover"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-FL",
+          "province": "Florida",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-FL:tallahassee",
+              "city": "Tallahassee"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-GA",
+          "province": "Georgia",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-GA:atlanta",
+              "city": "Atlanta"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-HI",
+          "province": "Hawaii",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-HI:honolulu",
+              "city": "Honolulu"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-ID",
+          "province": "Idaho",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-ID:boise",
+              "city": "Boise"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-IL",
+          "province": "Illinois",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-IL:springfield",
+              "city": "Springfield"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-IN",
+          "province": "Indiana",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-IN:indianapolis",
+              "city": "Indianapolis"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-IA",
+          "province": "Iowa",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-IA:des-moines",
+              "city": "Des Moines"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-KS",
+          "province": "Kansas",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-KS:topeka",
+              "city": "Topeka"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-KY",
+          "province": "Kentucky",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-KY:frankfort",
+              "city": "Frankfort"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-LA",
+          "province": "Louisiana",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-LA:baton-rouge",
+              "city": "Baton Rouge"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-ME",
+          "province": "Maine",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-ME:augusta",
+              "city": "Augusta"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MD",
+          "province": "Maryland",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MD:annapolis",
+              "city": "Annapolis"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MA",
+          "province": "Massachusetts",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MA:boston",
+              "city": "Boston"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MI",
+          "province": "Michigan",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MI:lansing",
+              "city": "Lansing"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MN",
+          "province": "Minnesota",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MN:saint-paul",
+              "city": "Saint Paul"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MS",
+          "province": "Mississippi",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MS:jackson",
+              "city": "Jackson"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MO",
+          "province": "Missouri",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MO:jefferson-city",
+              "city": "Jefferson City"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-MT",
+          "province": "Montana",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-MT:helena",
+              "city": "Helena"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NE",
+          "province": "Nebraska",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NE:lincoln",
+              "city": "Lincoln"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NV",
+          "province": "Nevada",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NV:carson-city",
+              "city": "Carson City"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NH",
+          "province": "New Hampshire",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NH:concord",
+              "city": "Concord"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NJ",
+          "province": "New Jersey",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NJ:trenton",
+              "city": "Trenton"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NM",
+          "province": "New Mexico",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NM:santa-fe",
+              "city": "Santa Fe"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NY",
+          "province": "New York",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NY:albany",
+              "city": "Albany"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-NC",
+          "province": "North Carolina",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-NC:raleigh",
+              "city": "Raleigh"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-ND",
+          "province": "North Dakota",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-ND:bismarck",
+              "city": "Bismarck"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-OH",
+          "province": "Ohio",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-OH:columbus",
+              "city": "Columbus"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-OK",
+          "province": "Oklahoma",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-OK:oklahoma-city",
+              "city": "Oklahoma City"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-OR",
+          "province": "Oregon",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-OR:salem",
+              "city": "Salem"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-PA",
+          "province": "Pennsylvania",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-PA:harrisburg",
+              "city": "Harrisburg"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-RI",
+          "province": "Rhode Island",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-RI:providence",
+              "city": "Providence"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-SC",
+          "province": "South Carolina",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-SC:columbia",
+              "city": "Columbia"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-SD",
+          "province": "South Dakota",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-SD:pierre",
+              "city": "Pierre"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-TN",
+          "province": "Tennessee",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-TN:nashville",
+              "city": "Nashville"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-TX",
+          "province": "Texas",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-TX:austin",
+              "city": "Austin"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-UT",
+          "province": "Utah",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-UT:salt-lake-city",
+              "city": "Salt Lake City"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-VT",
+          "province": "Vermont",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-VT:montpelier",
+              "city": "Montpelier"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-VA",
+          "province": "Virginia",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-VA:richmond",
+              "city": "Richmond"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-WA",
+          "province": "Washington",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-WA:olympia",
+              "city": "Olympia"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-WV",
+          "province": "West Virginia",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-WV:charleston",
+              "city": "Charleston"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-WI",
+          "province": "Wisconsin",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-WI:madison",
+              "city": "Madison"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-WY",
+          "province": "Wyoming",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-WY:cheyenne",
+              "city": "Cheyenne"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "US-DC",
+          "province": "District of Columbia",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "US-DC:washington",
+              "city": "Washington, D.C."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "country",
+      "country_code": "ZA",
+      "country": "South Africa",
+      "provinces": [
+        {
+          "type": "province",
+          "province_code": "ZA-EC",
+          "province": "Eastern Cape",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-EC:bhisho",
+              "city": "Bhisho"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-FS",
+          "province": "Free State",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-FS:bloemfontein",
+              "city": "Bloemfontein"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-GP",
+          "province": "Gauteng",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-GP:johannesburg",
+              "city": "Johannesburg"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-NL",
+          "province": "KwaZulu-Natal",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-NL:pietermaritzburg",
+              "city": "Pietermaritzburg"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-LP",
+          "province": "Limpopo",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-LP:polokwane",
+              "city": "Polokwane"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-MP",
+          "province": "Mpumalanga",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-MP:mbombela",
+              "city": "Mbombela"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-NW",
+          "province": "North West",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-NW:mahikeng",
+              "city": "Mahikeng"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-NC",
+          "province": "Northern Cape",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-NC:kimberley",
+              "city": "Kimberley"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "ZA-WC",
+          "province": "Western Cape",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "ZA-WC:cape-town",
+              "city": "Cape Town"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "country",
+      "country_code": "DE",
+      "country": "Germany",
+      "provinces": [
+        {
+          "type": "province",
+          "province_code": "DE-BW",
+          "province": "Baden-Wurttemberg",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-BW:stuttgart",
+              "city": "Stuttgart"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-BY",
+          "province": "Bavaria",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-BY:munich",
+              "city": "Munich"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-BE",
+          "province": "Berlin",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-BE:berlin",
+              "city": "Berlin"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-BB",
+          "province": "Brandenburg",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-BB:potsdam",
+              "city": "Potsdam"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-HB",
+          "province": "Bremen",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-HB:bremen",
+              "city": "Bremen"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-HH",
+          "province": "Hamburg",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-HH:hamburg",
+              "city": "Hamburg"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-HE",
+          "province": "Hesse",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-HE:wiesbaden",
+              "city": "Wiesbaden"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-MV",
+          "province": "Mecklenburg-Western Pomerania",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-MV:schwerin",
+              "city": "Schwerin"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-NI",
+          "province": "Lower Saxony",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-NI:hanover",
+              "city": "Hanover"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-NW",
+          "province": "North Rhine-Westphalia",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-NW:dusseldorf",
+              "city": "Dusseldorf"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-RP",
+          "province": "Rhineland-Palatinate",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-RP:mainz",
+              "city": "Mainz"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-SL",
+          "province": "Saarland",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-SL:saarbrucken",
+              "city": "Saarbrucken"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-SN",
+          "province": "Saxony",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-SN:dresden",
+              "city": "Dresden"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-ST",
+          "province": "Saxony-Anhalt",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-ST:magdeburg",
+              "city": "Magdeburg"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-SH",
+          "province": "Schleswig-Holstein",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-SH:kiel",
+              "city": "Kiel"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "DE-TH",
+          "province": "Thuringia",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "DE-TH:erfurt",
+              "city": "Erfurt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "country",
+      "country_code": "CH",
+      "country": "Switzerland",
+      "provinces": [
+        {
+          "type": "province",
+          "province_code": "CH-AG",
+          "province": "Aargau",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-AG:aarau",
+              "city": "Aarau"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-AR",
+          "province": "Appenzell Ausserrhoden",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-AR:herisau",
+              "city": "Herisau"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-AI",
+          "province": "Appenzell Innerrhoden",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-AI:appenzell",
+              "city": "Appenzell"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-BL",
+          "province": "Basel-Landschaft",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-BL:liestal",
+              "city": "Liestal"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-BS",
+          "province": "Basel-Stadt",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-BS:basel",
+              "city": "Basel"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-BE",
+          "province": "Bern",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-BE:bern",
+              "city": "Bern"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-FR",
+          "province": "Fribourg",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-FR:fribourg",
+              "city": "Fribourg"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-GE",
+          "province": "Geneva",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-GE:geneva",
+              "city": "Geneva"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-GR",
+          "province": "Graubunden",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-GR:chur",
+              "city": "Chur"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-JU",
+          "province": "Jura",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-JU:delemont",
+              "city": "Delemont"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-LU",
+          "province": "Lucerne",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-LU:lucerne",
+              "city": "Lucerne"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-NE",
+          "province": "Neuchatel",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-NE:neuchatel",
+              "city": "Neuchatel"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-NW",
+          "province": "Nidwalden",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-NW:stans",
+              "city": "Stans"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-OW",
+          "province": "Obwalden",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-OW:sarnen",
+              "city": "Sarnen"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-SG",
+          "province": "St. Gallen",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-SG:st-gallen",
+              "city": "St. Gallen"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-SH",
+          "province": "Schaffhausen",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-SH:schaffhausen",
+              "city": "Schaffhausen"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-SZ",
+          "province": "Schwyz",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-SZ:schwyz",
+              "city": "Schwyz"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-SO",
+          "province": "Solothurn",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-SO:solothurn",
+              "city": "Solothurn"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-TG",
+          "province": "Thurgau",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-TG:frauenfeld",
+              "city": "Frauenfeld"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-TI",
+          "province": "Ticino",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-TI:bellinzona",
+              "city": "Bellinzona"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-UR",
+          "province": "Uri",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-UR:altdorf",
+              "city": "Altdorf"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-VD",
+          "province": "Vaud",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-VD:lausanne",
+              "city": "Lausanne"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-VS",
+          "province": "Valais",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-VS:sion",
+              "city": "Sion"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-ZG",
+          "province": "Zug",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-ZG:zug",
+              "city": "Zug"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-ZH",
+          "province": "Zurich",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-ZH:zurich",
+              "city": "Zurich"
+            }
+          ]
+        },
+        {
+          "type": "province",
+          "province_code": "CH-GL",
+          "province": "Glarus",
+          "cities": [
+            {
+              "type": "city",
+              "city_code": "CH-GL:glarus",
+              "city": "Glarus"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_revision": "pretio-g02-location-contract-v2-2026-09-14",
+  "catalog_revision": "pretio-country-catalog-expansion-v1-2026-09-22",
   "location_contract": {
     "location_schema": "pretio.location.v1",
     "location_url": "https://maxqstudio.dev/pretio/promos/location.json",
@@ -18,23 +18,46 @@
     "blog.alfagift.id",
     "cdn.jsdelivr.net",
     "fe-browse-alvi-gcp-alvi-prod.alvi.cl",
+    "filiale.kaufland.de",
     "graph.facebook.com",
     "indogrosir.co.id",
+    "preview.pnp.co.za",
     "psrs.alfamart.co.id",
+    "sortiment.lidl.ch",
+    "specials.checkers.co.za",
+    "specials.shoprite.co.za",
     "super.lider.cl",
     "transmart.co.id",
     "upload.wikimedia.org",
+    "www.aldi-nord.de",
+    "www.aldi-sued.de",
+    "www.aldi-suisse.ch",
+    "www.aldi.us",
+    "www.checkers.co.za",
+    "www.coop.ch",
+    "www.denner.ch",
     "www.hypermart.co.id",
+    "www.idea.rs",
     "www.indogrosir.co.id",
     "www.indomaret.co.id",
     "www.jumbo.cl",
+    "www.kroger.com",
+    "www.lidl.ch",
+    "www.lidl.de",
+    "www.lidl.rs",
     "www.lottemart.co.id",
+    "www.maxi.rs",
     "www.mayorista10.cl",
+    "www.migros.ch",
+    "www.rewe.de",
     "www.santaisabel.cl",
     "www.superindo.co.id",
+    "www.target.com",
     "www.tiptop.co.id",
     "www.tottus.cl",
-    "www.unimarc.cl"
+    "www.unimarc.cl",
+    "www.univerexport.rs",
+    "www.walmart.com"
   ],
   "items": [
     {
@@ -384,7 +407,7 @@
           "province": "Banten"
         }
       ],
-      "logo_url": "https://www.superindo.co.id/images/layout/superindo.png"
+      "logo_url": "https://www.superindo.co.id/favicon.ico"
     },
     {
       "id": "indogrosir-location-live",
@@ -971,7 +994,7 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Lider_2025.svg"
     },
     {
       "id": "jumbo-country-cl",
@@ -996,7 +1019,7 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png"
     },
     {
       "id": "santaisabel-country-cl",
@@ -1021,7 +1044,7 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://www.santaisabel.cl/favicon.ico"
     },
     {
       "id": "unimarc-country-cl",
@@ -1046,7 +1069,7 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Unimarc_logo.svg"
     },
     {
       "id": "tottus-country-cl",
@@ -1071,7 +1094,7 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Logotipo_Tottus.svg"
     },
     {
       "id": "mayorista10-country-cl",
@@ -1096,7 +1119,7 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/SUPERMERCADO_MAYORISTA_10_LOGO.png"
     },
     {
       "id": "alvi-country-cl",
@@ -1121,7 +1144,553 @@
           "country": "Chile"
         }
       ],
-      "logo_url": null
+      "logo_url": "https://fe-browse-alvi-gcp-alvi-prod.alvi.cl/favicon.ico"
+    },
+    {
+      "id": "idea-rs-country",
+      "merchant": "IDEA",
+      "publisher": "IDEA",
+      "title": "Promo katalog IDEA",
+      "summary": "Aktuelne IDEA akcije i katalozi na zvaničnom kanalu.",
+      "coverage_type": "national",
+      "coverage_label": "Serbia (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.idea.rs/Aktuelno",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 360,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "RS",
+          "country": "Serbia"
+        }
+      ],
+      "logo_url": "https://www.idea.rs/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "univerexport-rs-country",
+      "merchant": "Univerexport",
+      "publisher": "Univerexport",
+      "title": "Aktuelne akcije Univerexport",
+      "summary": "Pregledajte aktuelne akcije na zvaničnom kanalu Univerexport.",
+      "coverage_type": "national",
+      "coverage_label": "Serbia (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.univerexport.rs/sr/akcije",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 370,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "RS",
+          "country": "Serbia"
+        }
+      ],
+      "logo_url": "https://www.univerexport.rs/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "lidl-rs-country",
+      "merchant": "Lidl Srbija",
+      "publisher": "Lidl Srbija",
+      "title": "Online letak Lidl Srbija",
+      "summary": "Pregledajte aktuelni online letak Lidl Srbija.",
+      "coverage_type": "national",
+      "coverage_label": "Serbia (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.lidl.rs/c/online-letak/s10019338",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 380,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "RS",
+          "country": "Serbia"
+        }
+      ],
+      "logo_url": "https://www.lidl.rs/apple-touch-icon.png",
+      "image_url": null
+    },
+    {
+      "id": "maxi-rs-country",
+      "merchant": "Maxi",
+      "publisher": "Maxi",
+      "title": "Maxi online ponuda",
+      "summary": "Izaberite grad i adresu da biste videli ponudu koja važi za vašu lokaciju.",
+      "coverage_type": "national",
+      "coverage_label": "Serbia (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.maxi.rs/maxi-online-ponuda",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 390,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "RS",
+          "country": "Serbia"
+        }
+      ],
+      "logo_url": "https://www.maxi.rs/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "walmart-us-country",
+      "merchant": "Walmart",
+      "publisher": "Walmart",
+      "title": "Walmart advertised deals",
+      "summary": "Browse Walmart advertised deals; availability and prices may depend on the selected store.",
+      "coverage_type": "national",
+      "coverage_label": "United States (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.walmart.com/shop/deals/shop-advertised-deals",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 400,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "US",
+          "country": "United States"
+        }
+      ],
+      "logo_url": "https://www.walmart.com/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "target-us-country",
+      "merchant": "Target",
+      "publisher": "Target",
+      "title": "Target weekly ad",
+      "summary": "Browse the official Target weekly ad and select a store when required.",
+      "coverage_type": "national",
+      "coverage_label": "United States (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.target.com/weekly-ad",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 410,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "US",
+          "country": "United States"
+        }
+      ],
+      "logo_url": "https://www.target.com/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "aldi-us-country",
+      "merchant": "ALDI",
+      "publisher": "ALDI US",
+      "title": "ALDI Weekly Specials",
+      "summary": "Browse ALDI weekly specials; offers can vary by location.",
+      "coverage_type": "national",
+      "coverage_label": "United States (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.aldi.us/store/aldi/pages/weekly-specials",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 420,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "US",
+          "country": "United States"
+        }
+      ],
+      "logo_url": "https://www.aldi.us/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "kroger-us-country",
+      "merchant": "Kroger",
+      "publisher": "Kroger",
+      "title": "Kroger Weekly Ad",
+      "summary": "Browse the official Kroger weekly ad after selecting a store.",
+      "coverage_type": "national",
+      "coverage_label": "United States (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.kroger.com/weeklyad",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 430,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "US",
+          "country": "United States"
+        }
+      ],
+      "logo_url": "https://www.kroger.com/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "shoprite-za-country",
+      "merchant": "Shoprite",
+      "publisher": "Shoprite",
+      "title": "Shoprite Specials",
+      "summary": "Browse official Shoprite specials; availability can vary by store and region.",
+      "coverage_type": "national",
+      "coverage_label": "South Africa (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://specials.shoprite.co.za/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 440,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "ZA",
+          "country": "South Africa"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_-_Shoprite_-_SUPERMARCE.jpg",
+      "image_url": null
+    },
+    {
+      "id": "checkers-za-country",
+      "merchant": "Checkers",
+      "publisher": "Checkers",
+      "title": "Checkers Specials",
+      "summary": "Browse official Checkers specials; availability can vary by store and region.",
+      "coverage_type": "national",
+      "coverage_label": "South Africa (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://specials.checkers.co.za/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 450,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "ZA",
+          "country": "South Africa"
+        }
+      ],
+      "logo_url": "https://www.checkers.co.za/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "pnp-za-country",
+      "merchant": "Pick n Pay",
+      "publisher": "Pick n Pay",
+      "title": "Pick n Pay Catalogues",
+      "summary": "Browse official Pick n Pay catalogues; offers can vary by store and region.",
+      "coverage_type": "national",
+      "coverage_label": "South Africa (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://preview.pnp.co.za/catalogues",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 460,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "ZA",
+          "country": "South Africa"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Pick_n_Pay_logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "lidl-de-country",
+      "merchant": "Lidl",
+      "publisher": "Lidl Deutschland",
+      "title": "Lidl Online Prospekte",
+      "summary": "Browse official Lidl Germany online prospectuses.",
+      "coverage_type": "national",
+      "coverage_label": "Germany (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.lidl.de/c/online-prospekte/s10005610/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 470,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "DE",
+          "country": "Germany"
+        }
+      ],
+      "logo_url": "https://www.lidl.de/apple-touch-icon.png",
+      "image_url": null
+    },
+    {
+      "id": "aldi-sued-de-country",
+      "merchant": "ALDI Süd",
+      "publisher": "ALDI Süd",
+      "title": "ALDI Süd Angebote",
+      "summary": "Browse official ALDI Süd offers; availability can vary by location.",
+      "coverage_type": "national",
+      "coverage_label": "Germany (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.aldi-sued.de/angebote",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 480,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "DE",
+          "country": "Germany"
+        }
+      ],
+      "logo_url": "https://www.aldi-sued.de/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "aldi-nord-de-country",
+      "merchant": "ALDI Nord",
+      "publisher": "ALDI Nord",
+      "title": "ALDI Nord Angebote",
+      "summary": "Browse official ALDI Nord offers; availability can vary by location.",
+      "coverage_type": "national",
+      "coverage_label": "Germany (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.aldi-nord.de/angebote.html",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 490,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "DE",
+          "country": "Germany"
+        }
+      ],
+      "logo_url": "https://www.aldi-nord.de/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "rewe-de-country",
+      "merchant": "REWE",
+      "publisher": "REWE",
+      "title": "REWE nationale Angebote",
+      "summary": "Browse official REWE national offers; store-specific availability may apply.",
+      "coverage_type": "national",
+      "coverage_label": "Germany (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.rewe.de/angebote/nationale-angebote/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 500,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "DE",
+          "country": "Germany"
+        }
+      ],
+      "logo_url": "https://www.rewe.de/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "kaufland-de-country",
+      "merchant": "Kaufland",
+      "publisher": "Kaufland",
+      "title": "Kaufland Angebote",
+      "summary": "Browse weekly official Kaufland offers for the selected branch.",
+      "coverage_type": "national",
+      "coverage_label": "Germany (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://filiale.kaufland.de/angebote.html",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 510,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "DE",
+          "country": "Germany"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Kaufland_Logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "coop-ch-country",
+      "merchant": "Coop",
+      "publisher": "Coop Schweiz",
+      "title": "Coop Aktionen",
+      "summary": "Browse official Coop Switzerland promotions; offers may depend on store and region.",
+      "coverage_type": "national",
+      "coverage_label": "Switzerland (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.coop.ch/de/aktionen/alle-aktionen/c/m_1111",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 520,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CH",
+          "country": "Switzerland"
+        }
+      ],
+      "logo_url": "https://www.coop.ch/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "migros-ch-country",
+      "merchant": "Migros",
+      "publisher": "Migros",
+      "title": "Migros Angebote",
+      "summary": "Browse official Migros Switzerland offers; availability may depend on region.",
+      "coverage_type": "national",
+      "coverage_label": "Switzerland (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.migros.ch/de/offers/home",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 530,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CH",
+          "country": "Switzerland"
+        }
+      ],
+      "logo_url": "https://www.migros.ch/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "lidl-ch-country",
+      "merchant": "Lidl Schweiz",
+      "publisher": "Lidl Schweiz",
+      "title": "Lidl Schweiz aktuelle Aktionen",
+      "summary": "Browse official Lidl Switzerland current promotions.",
+      "coverage_type": "national",
+      "coverage_label": "Switzerland (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://sortiment.lidl.ch/de/aktuelle-aktionen",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 540,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CH",
+          "country": "Switzerland"
+        }
+      ],
+      "logo_url": "https://www.lidl.ch/apple-touch-icon.png",
+      "image_url": null
+    },
+    {
+      "id": "aldi-suisse-ch-country",
+      "merchant": "ALDI Suisse",
+      "publisher": "ALDI SUISSE",
+      "title": "ALDI SUISSE Aktionen",
+      "summary": "Browse official ALDI SUISSE promotions; offers may depend on region.",
+      "coverage_type": "national",
+      "coverage_label": "Switzerland (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.aldi-suisse.ch/de/aktionen-und-angebote",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 550,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CH",
+          "country": "Switzerland"
+        }
+      ],
+      "logo_url": "https://www.aldi-suisse.ch/favicon.ico",
+      "image_url": null
+    },
+    {
+      "id": "denner-ch-country",
+      "merchant": "Denner",
+      "publisher": "Denner",
+      "title": "Denner aktuelle Aktionen",
+      "summary": "Browse official Denner Switzerland current promotions.",
+      "coverage_type": "national",
+      "coverage_label": "Switzerland (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.denner.ch/de/aktionen/aktuelle-aktionen",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-22T00:00:00Z",
+      "status": "active",
+      "sort_order": 560,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "CH",
+          "country": "Switzerland"
+        }
+      ],
+      "logo_url": "https://www.denner.ch/favicon-32x32.png",
+      "image_url": null
     }
   ],
   "schema": "pretio.catalog_app.v2"
