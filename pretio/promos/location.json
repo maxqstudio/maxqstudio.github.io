@@ -4706,14 +4706,14 @@
             {
               "type": "city",
               "city_code": "RS-00:beograd",
-              "city": "Belgrade"
+              "city": "Beograd"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-01",
-          "province": "Severnobacki okrug",
+          "province": "Severnobački okrug",
           "cities": [
             {
               "type": "city",
@@ -4749,19 +4749,19 @@
         {
           "type": "province",
           "province_code": "RS-04",
-          "province": "Juznobanatski okrug",
+          "province": "Južnobanatski okrug",
           "cities": [
             {
               "type": "city",
               "city_code": "RS-04:pancevo",
-              "city": "Pancevo"
+              "city": "Pančevo"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-05",
-          "province": "Zapadnobacki okrug",
+          "province": "Zapadnobački okrug",
           "cities": [
             {
               "type": "city",
@@ -4773,7 +4773,7 @@
         {
           "type": "province",
           "province_code": "RS-06",
-          "province": "Juznobacki okrug",
+          "province": "Južnobački okrug",
           "cities": [
             {
               "type": "city",
@@ -4797,12 +4797,12 @@
         {
           "type": "province",
           "province_code": "RS-08",
-          "province": "Macvanski okrug",
+          "province": "Mačvanski okrug",
           "cities": [
             {
               "type": "city",
               "city_code": "RS-08:sabac",
-              "city": "Sabac"
+              "city": "Šabac"
             }
           ]
         },
@@ -4833,19 +4833,19 @@
         {
           "type": "province",
           "province_code": "RS-11",
-          "province": "Branicevski okrug",
+          "province": "Braničevski okrug",
           "cities": [
             {
               "type": "city",
               "city_code": "RS-11:pozarevac",
-              "city": "Pozarevac"
+              "city": "Požarevac"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-12",
-          "province": "Sumadijski okrug",
+          "province": "Šumadijski okrug",
           "cities": [
             {
               "type": "city",
@@ -4881,12 +4881,12 @@
         {
           "type": "province",
           "province_code": "RS-15",
-          "province": "Zajecarski okrug",
+          "province": "Zaječarski okrug",
           "cities": [
             {
               "type": "city",
               "city_code": "RS-15:zajecar",
-              "city": "Zajecar"
+              "city": "Zaječar"
             }
           ]
         },
@@ -4898,26 +4898,26 @@
             {
               "type": "city",
               "city_code": "RS-16:uzice",
-              "city": "Uzice"
+              "city": "Užice"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-17",
-          "province": "Moravicki okrug",
+          "province": "Moravički okrug",
           "cities": [
             {
               "type": "city",
               "city_code": "RS-17:cacak",
-              "city": "Cacak"
+              "city": "Čačak"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-18",
-          "province": "Raski okrug",
+          "province": "Raški okrug",
           "cities": [
             {
               "type": "city",
@@ -4934,26 +4934,26 @@
             {
               "type": "city",
               "city_code": "RS-19:krusevac",
-              "city": "Krusevac"
+              "city": "Kruševac"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-20",
-          "province": "Nisavski okrug",
+          "province": "Nišavski okrug",
           "cities": [
             {
               "type": "city",
               "city_code": "RS-20:nis",
-              "city": "Nis"
+              "city": "Niš"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "RS-21",
-          "province": "Toplicki okrug",
+          "province": "Toplički okrug",
           "cities": [
             {
               "type": "city",
@@ -4977,7 +4977,7 @@
         {
           "type": "province",
           "province_code": "RS-23",
-          "province": "Jablanicki okrug",
+          "province": "Jablanički okrug",
           "cities": [
             {
               "type": "city",
@@ -4989,7 +4989,7 @@
         {
           "type": "province",
           "province_code": "RS-24",
-          "province": "Pcinski okrug",
+          "province": "Pčinjski okrug",
           "cities": [
             {
               "type": "city",
@@ -5742,7 +5742,7 @@
         {
           "type": "province",
           "province_code": "DE-BW",
-          "province": "Baden-Wurttemberg",
+          "province": "Baden-Württemberg",
           "cities": [
             {
               "type": "city",
@@ -5754,12 +5754,12 @@
         {
           "type": "province",
           "province_code": "DE-BY",
-          "province": "Bavaria",
+          "province": "Bayern",
           "cities": [
             {
               "type": "city",
               "city_code": "DE-BY:munich",
-              "city": "Munich"
+              "city": "München"
             }
           ]
         },
@@ -5814,7 +5814,7 @@
         {
           "type": "province",
           "province_code": "DE-HE",
-          "province": "Hesse",
+          "province": "Hessen",
           "cities": [
             {
               "type": "city",
@@ -5826,7 +5826,7 @@
         {
           "type": "province",
           "province_code": "DE-MV",
-          "province": "Mecklenburg-Western Pomerania",
+          "province": "Mecklenburg-Vorpommern",
           "cities": [
             {
               "type": "city",
@@ -5838,31 +5838,31 @@
         {
           "type": "province",
           "province_code": "DE-NI",
-          "province": "Lower Saxony",
+          "province": "Niedersachsen",
           "cities": [
             {
               "type": "city",
               "city_code": "DE-NI:hanover",
-              "city": "Hanover"
+              "city": "Hannover"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "DE-NW",
-          "province": "North Rhine-Westphalia",
+          "province": "Nordrhein-Westfalen",
           "cities": [
             {
               "type": "city",
               "city_code": "DE-NW:dusseldorf",
-              "city": "Dusseldorf"
+              "city": "Düsseldorf"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "DE-RP",
-          "province": "Rhineland-Palatinate",
+          "province": "Rheinland-Pfalz",
           "cities": [
             {
               "type": "city",
@@ -5879,14 +5879,14 @@
             {
               "type": "city",
               "city_code": "DE-SL:saarbrucken",
-              "city": "Saarbrucken"
+              "city": "Saarbrücken"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "DE-SN",
-          "province": "Saxony",
+          "province": "Sachsen",
           "cities": [
             {
               "type": "city",
@@ -5898,7 +5898,7 @@
         {
           "type": "province",
           "province_code": "DE-ST",
-          "province": "Saxony-Anhalt",
+          "province": "Sachsen-Anhalt",
           "cities": [
             {
               "type": "city",
@@ -5922,7 +5922,7 @@
         {
           "type": "province",
           "province_code": "DE-TH",
-          "province": "Thuringia",
+          "province": "Thüringen",
           "cities": [
             {
               "type": "city",
@@ -6025,19 +6025,19 @@
         {
           "type": "province",
           "province_code": "CH-GE",
-          "province": "Geneva",
+          "province": "Genève",
           "cities": [
             {
               "type": "city",
               "city_code": "CH-GE:geneva",
-              "city": "Geneva"
+              "city": "Genève"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "CH-GR",
-          "province": "Graubunden",
+          "province": "Graubünden",
           "cities": [
             {
               "type": "city",
@@ -6054,31 +6054,31 @@
             {
               "type": "city",
               "city_code": "CH-JU:delemont",
-              "city": "Delemont"
+              "city": "Delémont"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "CH-LU",
-          "province": "Lucerne",
+          "province": "Luzern",
           "cities": [
             {
               "type": "city",
               "city_code": "CH-LU:lucerne",
-              "city": "Lucerne"
+              "city": "Luzern"
             }
           ]
         },
         {
           "type": "province",
           "province_code": "CH-NE",
-          "province": "Neuchatel",
+          "province": "Neuchâtel",
           "cities": [
             {
               "type": "city",
               "city_code": "CH-NE:neuchatel",
-              "city": "Neuchatel"
+              "city": "Neuchâtel"
             }
           ]
         },
@@ -6229,12 +6229,12 @@
         {
           "type": "province",
           "province_code": "CH-ZH",
-          "province": "Zurich",
+          "province": "Zürich",
           "cities": [
             {
               "type": "city",
               "city_code": "CH-ZH:zurich",
-              "city": "Zurich"
+              "city": "Zürich"
             }
           ]
         },
