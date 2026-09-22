@@ -19,7 +19,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> September 14, 2026</p>
+      <p><strong>Last updated:</strong> September 22, 2026</p>
 
       <div class="content-card">
         <h3>Your shopping records remain local</h3>
@@ -30,7 +30,7 @@
       <p>Pretio does not require a Pretio account. Your core shopping data remains on your device unless you choose to use Compare Online, create a backup, export a file, restore a file, or otherwise share data using your device's system features. Compare Online is optional, internet-dependent, and does not run until you select the Online action for a product.</p>
 
       <h2>2. Backup, export, restore, and deletion</h2>
-      <p>You can back up or export Pretio data using the available app features. Once a file leaves Pretio, the storage provider, destination app, or person receiving it may process that file under their own terms and privacy practices.</p>
+      <p>You can back up Pretio data, export saved product and price-history data as CSV, and export a Shopping List receipt as PDF. A receipt PDF may include the store name you enter, shopping-list items, quantities, prices, subtotal, tax, discount, currency, date, and calculated total. Pretio writes these files only when you choose an export and select a destination through Android's file picker. Once a file leaves Pretio, the storage provider, destination app, or person receiving it may process that file under their own terms and privacy practices.</p>
       <p>You can use Delete All Data to remove products, saved prices, your shopping list, stores, and related local records from the device. App preferences such as language, theme, number format, currency, and text size may be preserved as described in the app.</p>
 
       <h2>3. Compare Online</h2>
@@ -50,11 +50,12 @@
       <p>Pretio may use your general location to make catalog content and online comparison results more relevant to your area. Pretio can infer your country from your internet connection, including your IP address. If you choose to grant Android location permission, Pretio may also use foreground approximate device location to improve the selected country, province, or city. Pretio does not require background location, and precise location is not required for these features.</p>
       <p>You may choose or change your country, province, or city manually. A manual location selection takes priority over automatically detected location until you change it. If you do not grant device-location permission, Pretio can continue to use IP-based or manually selected location.</p>
       <p>Pretio retrieves its supported location directory and catalog directory from Max-Q Studio web resources. The selected country, province, or city is used to decide which catalogs are relevant. A supported location may have no available catalog yet.</p>
+      <p>Pretio may also download supported remote language packs from Max-Q Studio web resources when you choose a remotely delivered language. These requests may expose ordinary network information, such as your IP address, to the hosting infrastructure. Pretio does not upload your local products, saved prices, shopping list, notes, backups, or exports as part of a language-pack download.</p>
       <p><strong>IP-country provider:</strong> When Pretio uses the IP-country fallback, it sends an HTTPS request to <code>https://ipapi.co/country/</code>. That request exposes the requesting public IP address to <strong>ipapi.co</strong>, operated by <strong>Kloudend, Inc.</strong>, as the network data recipient, only to obtain a two-letter country code and country-level location context. Pretio does not send raw device latitude or longitude to ipapi.co, and raw GPS coordinates are not included in that request. Read the <a href="https://ipapi.co/privacy/" rel="noopener noreferrer">ipapi.co privacy policy</a>.</p>
       <p>For Compare Online, Pretio may use the resolved location context, such as country, province, city, language, or currency, to localize the visible search experience. Pretio does not need to send raw device latitude or longitude to Google Shopping for this purpose. A website opened inside or outside Pretio may have its own separate geolocation request and privacy practices.</p>
 
       <h2>5. Advertising</h2>
-      <p>The free version of Pretio may use Google AdMob to display banner advertisements and rewarded advertisements. A rewarded advertisement is shown only after you choose to watch it, for example to unlock one CSV export.</p>
+      <p>The free version of Pretio may use Google AdMob to display banner advertisements and rewarded advertisements. A rewarded advertisement is shown only after you choose to watch it, for example before an eligible saved-data export or Shopping List receipt export.</p>
       <p>Google Mobile Ads technology may automatically collect or process information such as:</p>
       <ul>
         <li>your device's IP address, which may be used to estimate general location;</li>
@@ -70,12 +71,13 @@
       <p>When required, Pretio will provide a Privacy Options entry in the app so you can review or change available advertising choices. You can also manage or reset your Android advertising ID through your device settings, where supported.</p>
 
       <h2>7. Rewarded export</h2>
-      <p>For free users, Pretio may require one completed rewarded advertisement for each CSV export. Pretio uses the ad completion result only to decide whether to grant that export attempt. Pretio does not send the contents of your exported CSV file, product list, prices, stores, or notes to the advertising provider as part of this reward flow.</p>
+      <p>For free users, Pretio may require a completed rewarded advertisement before an eligible export. Current eligible exports include saved product and price-history data as CSV and a Shopping List receipt as PDF. Pretio uses the rewarded-ad completion and dismissal result only to decide whether export authorization is granted.</p>
+      <p>Pretio does not send the contents of your exported CSV or PDF file to the advertising provider as part of this reward flow. This includes your products, saved prices, stores, notes, shopping-list entries, store name, tax, discount, and calculated totals.</p>
 
       <h2>8. Pretio Premium and Google Play Billing</h2>
       <p>Pretio Premium may be purchased as a one-time product through Google Play. Google processes the payment. Pretio receives purchase and entitlement information needed to determine whether Premium features should be enabled, such as product identity, purchase status, and verification-related information.</p>
       <p>Pretio does not directly receive or store your full payment-card details. Google may process purchase information under Google's own terms and privacy policies.</p>
-      <p>A valid Premium entitlement removes Pretio's banner ads and the rewarded-ad requirement for CSV export. If a purchase is refunded, revoked, cancelled, reversed, or cannot be verified, Premium access may be removed.</p>
+      <p>A valid Premium entitlement removes Pretio's banner ads and the rewarded-ad requirement for supported saved-data CSV exports and Shopping List receipt PDF exports. If a purchase is refunded, revoked, cancelled, reversed, or cannot be verified, Premium access may be removed.</p>
 
       <h2>9. Third-party services</h2>
       <p>Depending on the features available in your version of Pretio, third-party services may include Google Shopping results served through Google Search, Google AdMob, Google User Messaging Platform, Google Play Billing, Android link handling, web browsers, marketplace apps, and destination websites opened from Compare Online. These providers process information under their own terms and privacy policies.</p>
@@ -93,7 +95,7 @@
         <li>change your country, province, or city manually where supported;</li>
         <li>use Google, browser, and Android privacy controls where available;</li>
         <li>choose not to watch a rewarded advertisement;</li>
-        <li>purchase Pretio Premium, where available, to remove Pretio ads;</li>
+        <li>purchase Pretio Premium, where available, to remove Pretio ads and avoid rewarded-ad requirements for supported exports;</li>
         <li>delete your local Pretio records using the app's deletion features; and</li>
         <li>contact us with privacy or purchase questions.</li>
       </ul>
