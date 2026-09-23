@@ -1,0 +1,2249 @@
+{
+  "schema": "pretio.location.index.v2",
+  "schema_version": 2,
+  "revision": "geonames-2026-09-23",
+  "default_country_code": "ID",
+  "countries": [
+    {
+      "code": "AD",
+      "name": "Andorra",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AD.json",
+      "revision": "geonames-2026-09-23-ad",
+      "sha256": "c3acc0b46bb50a094e6111291940e815ee0a860087f789162b05d35d563580e6",
+      "subdivision_count": 7,
+      "place_count": 20
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AE.json",
+      "revision": "geonames-2026-09-23-ae",
+      "sha256": "49e1acd99afc1e6d359ee7c511798330d1f373f317532747f4eff1f29ca966f3",
+      "subdivision_count": 7,
+      "place_count": 107
+    },
+    {
+      "code": "AF",
+      "name": "Afghanistan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AF.json",
+      "revision": "geonames-2026-09-23-af",
+      "sha256": "0f11c77578a25399aa5fbc59af2e1f792c833f353f4683be2f2f231f5ce7811b",
+      "subdivision_count": 34,
+      "place_count": 320
+    },
+    {
+      "code": "AG",
+      "name": "Antigua and Barbuda",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AG.json",
+      "revision": "geonames-2026-09-23-ag",
+      "sha256": "51864a12b127e4d9620ffd26555ba3884a56fda753cd077e84935ca8ba5dd1c8",
+      "subdivision_count": 8,
+      "place_count": 41
+    },
+    {
+      "code": "AI",
+      "name": "Anguilla",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AI.json",
+      "revision": "geonames-2026-09-23-ai",
+      "sha256": "86c3d6865682c9051ac60a6761a9f740a1f61e9a5cdee9c3c5018cd19e498388",
+      "subdivision_count": 14,
+      "place_count": 14
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AL.json",
+      "revision": "geonames-2026-09-23-al",
+      "sha256": "54e2816e17eb81b0d170e3206cabfcda4e1138701fce84a8fd053710268a4cec",
+      "subdivision_count": 12,
+      "place_count": 417
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AM.json",
+      "revision": "geonames-2026-09-23-am",
+      "sha256": "4f362cf5d96b6a65aac49d0fb07e95dad02c33865cab7fa0178f92fa47de7ea1",
+      "subdivision_count": 11,
+      "place_count": 618
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AO.json",
+      "revision": "geonames-2026-09-23-ao",
+      "sha256": "85cecb3ae8707873b457ac5a8b297acbfecabfde9beb319d8a303f11d2aecd2a",
+      "subdivision_count": 21,
+      "place_count": 554
+    },
+    {
+      "code": "AQ",
+      "name": "Antarctica",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AQ.json",
+      "revision": "geonames-2026-09-23-aq",
+      "sha256": "7d94ebe85b9e7e1a286f1494d7c2fecc734e39e55d13daef81e8ea7f44eaef8d",
+      "subdivision_count": 0,
+      "place_count": 0
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AR.json",
+      "revision": "geonames-2026-09-23-ar",
+      "sha256": "c700883856887bfde763c2f21e8c73a44685199efbaaa05a8f292372171e8b89",
+      "subdivision_count": 24,
+      "place_count": 1202
+    },
+    {
+      "code": "AS",
+      "name": "American Samoa",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AS.json",
+      "revision": "geonames-2026-09-23-as",
+      "sha256": "50a50db2699b070b5ae74ec0be6962b821d26a44c326ace484ba68435c5508fd",
+      "subdivision_count": 5,
+      "place_count": 28
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AT.json",
+      "revision": "geonames-2026-09-23-at",
+      "sha256": "21ecfa5881b911d835e9ac29b60a565d25bb3d6fc91a03d07557fc16e671794d",
+      "subdivision_count": 9,
+      "place_count": 3010
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AU.json",
+      "revision": "geonames-2026-09-23-au",
+      "sha256": "7fcd9046b8d914aa612061ae7de4e94e18fe5d195379db4e0f667ff4eb818bc5",
+      "subdivision_count": 8,
+      "place_count": 4886
+    },
+    {
+      "code": "AW",
+      "name": "Aruba",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AW.json",
+      "revision": "geonames-2026-09-23-aw",
+      "sha256": "5af07e94d42832355ae138f9d5ee417d38e93c3785276147284885379dbd85dd",
+      "subdivision_count": 0,
+      "place_count": 14
+    },
+    {
+      "code": "AX",
+      "name": "Aland Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AX.json",
+      "revision": "geonames-2026-09-23-ax",
+      "sha256": "f9cf7be57f2c2a551c10ea1f7baed0fc312d9673a71f5de992f16aab437597a1",
+      "subdivision_count": 3,
+      "place_count": 21
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/AZ.json",
+      "revision": "geonames-2026-09-23-az",
+      "sha256": "656ca23e26181e3f84123768a4e54b766cdd0dbee56596538ebce7687da8defa",
+      "subdivision_count": 71,
+      "place_count": 246
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BA.json",
+      "revision": "geonames-2026-09-23-ba",
+      "sha256": "98ce0834dd72aafc922a5b22807dfacd2ef56eef6e88a147a41afbb2fc59995d",
+      "subdivision_count": 3,
+      "place_count": 307
+    },
+    {
+      "code": "BB",
+      "name": "Barbados",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BB.json",
+      "revision": "geonames-2026-09-23-bb",
+      "sha256": "e75d6c1c05c306c7e20d68051305f53e45ca79823e29c2c8e602e56d0a9bec03",
+      "subdivision_count": 11,
+      "place_count": 16
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BD.json",
+      "revision": "geonames-2026-09-23-bd",
+      "sha256": "2f729db14dd23b1f78b9098bf7be669b421881eb1292be2ffe7e85c91759e315",
+      "subdivision_count": 8,
+      "place_count": 163
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BE.json",
+      "revision": "geonames-2026-09-23-be",
+      "sha256": "9fdfa6f4a74a5e5f78cd1432e699eef9efa2b5b1d92b3e93b5a1744bcf37de65",
+      "subdivision_count": 3,
+      "place_count": 2223
+    },
+    {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BF.json",
+      "revision": "geonames-2026-09-23-bf",
+      "sha256": "50b5f9f766081e1c513d6821ba58b4c691fef47d09e79fd6c0b19660c3712c18",
+      "subdivision_count": 13,
+      "place_count": 118
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BG.json",
+      "revision": "geonames-2026-09-23-bg",
+      "sha256": "1c19036794dea4a8154e0178e5d89fa85183a36f7ec4a9ee0d1107dcd20aad00",
+      "subdivision_count": 28,
+      "place_count": 332
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BH.json",
+      "revision": "geonames-2026-09-23-bh",
+      "sha256": "3592f7b54348ae40a293e0961aa722284a784d5e2ddc6441cd521a626b32d8b8",
+      "subdivision_count": 4,
+      "place_count": 12
+    },
+    {
+      "code": "BI",
+      "name": "Burundi",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BI.json",
+      "revision": "geonames-2026-09-23-bi",
+      "sha256": "6a9437d37c1931dcf42f6931a5dd1d7ea6ed39169b35e563361d18b089227bf2",
+      "subdivision_count": 16,
+      "place_count": 33
+    },
+    {
+      "code": "BJ",
+      "name": "Benin",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BJ.json",
+      "revision": "geonames-2026-09-23-bj",
+      "sha256": "e615ec4b21a1655274d2f04b3facbce9ce2ab4a523d8ab7d6995ea1265e911eb",
+      "subdivision_count": 12,
+      "place_count": 87
+    },
+    {
+      "code": "BL",
+      "name": "Saint Barthelemy",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BL.json",
+      "revision": "geonames-2026-09-23-bl",
+      "sha256": "8553fb24808201dbdb0e6c7118da6ecadb8be7a6ff38e6d391dcf7f66f344e45",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "BM",
+      "name": "Bermuda",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BM.json",
+      "revision": "geonames-2026-09-23-bm",
+      "sha256": "d9493601646246316af721115e8f99647fb768a6371630e2a8df6c9e47eb66a5",
+      "subdivision_count": 11,
+      "place_count": 12
+    },
+    {
+      "code": "BN",
+      "name": "Brunei",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BN.json",
+      "revision": "geonames-2026-09-23-bn",
+      "sha256": "c3863d179111cefd1bf7eda8254706e828d2d789b9c5b21e4a7ad031cf6e8986",
+      "subdivision_count": 4,
+      "place_count": 63
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BO.json",
+      "revision": "geonames-2026-09-23-bo",
+      "sha256": "e4314457b000d1beb3f87304fa15e03d26eeaf5d86d50501d3e2202740563604",
+      "subdivision_count": 9,
+      "place_count": 180
+    },
+    {
+      "code": "BQ",
+      "name": "Bonaire, Saint Eustatius and Saba",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BQ.json",
+      "revision": "geonames-2026-09-23-bq",
+      "sha256": "a775a12d985139baf27f4f06f48757e1b4536d270384f1678d0460797ed65be4",
+      "subdivision_count": 3,
+      "place_count": 10
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BR.json",
+      "revision": "geonames-2026-09-23-br",
+      "sha256": "43335f77c0d308770fc354b5e87326300cb20b8fbe59f70cfade873a7d192b10",
+      "subdivision_count": 27,
+      "place_count": 5801
+    },
+    {
+      "code": "BS",
+      "name": "Bahamas",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BS.json",
+      "revision": "geonames-2026-09-23-bs",
+      "sha256": "7bb6990caa5892e1db32b90b5ab86c745c80ec331f2b848c0dcef909d0b3624a",
+      "subdivision_count": 32,
+      "place_count": 28
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BT.json",
+      "revision": "geonames-2026-09-23-bt",
+      "sha256": "eabe337c1204e85d522032bf6885728432af88f43a932de2b2b736c9fe2a1a8a",
+      "subdivision_count": 20,
+      "place_count": 34
+    },
+    {
+      "code": "BV",
+      "name": "Bouvet Island",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BV.json",
+      "revision": "geonames-2026-09-23-bv",
+      "sha256": "638c65db82a058a1634a8bca3a930be854544af34547f3bec200e3c15377fbfc",
+      "subdivision_count": 0,
+      "place_count": 0
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BW.json",
+      "revision": "geonames-2026-09-23-bw",
+      "sha256": "85cbf4f49be2cd94fdfc3a850de2282bfdbbfa305429b4e3614a7cb98ccf9778",
+      "subdivision_count": 16,
+      "place_count": 139
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BY.json",
+      "revision": "geonames-2026-09-23-by",
+      "sha256": "141c85ba77f3c3f56fde9ae36b4ec6d197f6baf8362af0c5fc39e49095732243",
+      "subdivision_count": 7,
+      "place_count": 313
+    },
+    {
+      "code": "BZ",
+      "name": "Belize",
+      "url": "https://maxqstudio.dev/pretio/location/v2/BZ.json",
+      "revision": "geonames-2026-09-23-bz",
+      "sha256": "e96f9e9029eb63480724c9a0d180caadf4e4bed73ef6847dd5fcde0763118e96",
+      "subdivision_count": 6,
+      "place_count": 138
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CA.json",
+      "revision": "geonames-2026-09-23-ca",
+      "sha256": "338e4a80be6e36d39e4eca6e3e42036e692b589cbd0bbea51eb52fae2dca0b9b",
+      "subdivision_count": 13,
+      "place_count": 3260
+    },
+    {
+      "code": "CC",
+      "name": "Cocos Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CC.json",
+      "revision": "geonames-2026-09-23-cc",
+      "sha256": "ea8c68302679b3ad77121eae67759643eb12dab99b84edfe431adbfe78bb274f",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "CD",
+      "name": "Democratic Republic of the Congo",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CD.json",
+      "revision": "geonames-2026-09-23-cd",
+      "sha256": "8c51fd284222499f2167188e0de302e6c4fd56023fbd42beaf4339611f0f7f26",
+      "subdivision_count": 26,
+      "place_count": 118
+    },
+    {
+      "code": "CF",
+      "name": "Central African Republic",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CF.json",
+      "revision": "geonames-2026-09-23-cf",
+      "sha256": "7a87661dc93376607811a67bccfaa0dbf03f8978aebcc97ac2fa5359eeecff13",
+      "subdivision_count": 20,
+      "place_count": 51
+    },
+    {
+      "code": "CG",
+      "name": "Republic of the Congo",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CG.json",
+      "revision": "geonames-2026-09-23-cg",
+      "sha256": "b69fc0d22c316c7fe224e23c5e17fef1c18de2dd7bfb51977445384584ccb1d7",
+      "subdivision_count": 12,
+      "place_count": 60
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CH.json",
+      "revision": "geonames-2026-09-23-ch",
+      "sha256": "0bd6a331e9efdb71d7781532e097541805ce604717c20c96cb8f2ef49de1d34f",
+      "subdivision_count": 26,
+      "place_count": 1898
+    },
+    {
+      "code": "CI",
+      "name": "Ivory Coast",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CI.json",
+      "revision": "geonames-2026-09-23-ci",
+      "sha256": "c399e0d52c2e5557ed850d3db9c050c263d70a6ccd3423ae1b55776b2ae1e46c",
+      "subdivision_count": 14,
+      "place_count": 5088
+    },
+    {
+      "code": "CK",
+      "name": "Cook Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CK.json",
+      "revision": "geonames-2026-09-23-ck",
+      "sha256": "9cf10e45e84cdec64566e6decf958970307b34558adad590f89a37bc8b05d790",
+      "subdivision_count": 11,
+      "place_count": 2
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CL.json",
+      "revision": "geonames-2026-09-23-cl",
+      "sha256": "111d1c4c69e0f3f25f66a02c6f71d9a8f9473411079cc09eaf16df2c32dfbbb3",
+      "subdivision_count": 16,
+      "place_count": 393
+    },
+    {
+      "code": "CM",
+      "name": "Cameroon",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CM.json",
+      "revision": "geonames-2026-09-23-cm",
+      "sha256": "1a3f61a28368d01f3ff9544a887ab876a0c0a8a5831c47f2482852f0dd7c4f53",
+      "subdivision_count": 10,
+      "place_count": 145
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CN.json",
+      "revision": "geonames-2026-09-23-cn",
+      "sha256": "4d0563d8c3a4b54ac77d93ee1be3efb14a783101f0de17b42733ad9a6516c9df",
+      "subdivision_count": 31,
+      "place_count": 14990
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CO.json",
+      "revision": "geonames-2026-09-23-co",
+      "sha256": "2f52a06d0f1a3d9bf8981ee27df69e79b5e4330b6722899ec5a36f3833a88db5",
+      "subdivision_count": 33,
+      "place_count": 1141
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CR.json",
+      "revision": "geonames-2026-09-23-cr",
+      "sha256": "ea1dac51cffdc83a2cec3bdcc2ec32006645a7c83252ff5016e346d76e312342",
+      "subdivision_count": 7,
+      "place_count": 137
+    },
+    {
+      "code": "CU",
+      "name": "Cuba",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CU.json",
+      "revision": "geonames-2026-09-23-cu",
+      "sha256": "4f56fc24cb7485c4f45d70074a8cc92b2e41ce9d57ec5defab824730dc9ba093",
+      "subdivision_count": 16,
+      "place_count": 210
+    },
+    {
+      "code": "CV",
+      "name": "Cabo Verde",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CV.json",
+      "revision": "geonames-2026-09-23-cv",
+      "sha256": "32987022c8254e9e18dd0cb96bccd107e3596ece8916c8cf5bcd70e843b1ed01",
+      "subdivision_count": 22,
+      "place_count": 227
+    },
+    {
+      "code": "CW",
+      "name": "Curacao",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CW.json",
+      "revision": "geonames-2026-09-23-cw",
+      "sha256": "23d90554908bebc53668839c7b3582a3b350e9ee6bd96d1e4439ec8d5c95b9d8",
+      "subdivision_count": 0,
+      "place_count": 14
+    },
+    {
+      "code": "CX",
+      "name": "Christmas Island",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CX.json",
+      "revision": "geonames-2026-09-23-cx",
+      "sha256": "b8e5dabe0c6c8803dd94d8c13430eee360c478713c252669b5e4f97ce4bdea6a",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CY.json",
+      "revision": "geonames-2026-09-23-cy",
+      "sha256": "f43b8bafa3fc89ec1699f5e6e7a85e4a7839afbae1284f4c33d76993cedacbc6",
+      "subdivision_count": 6,
+      "place_count": 132
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/CZ.json",
+      "revision": "geonames-2026-09-23-cz",
+      "sha256": "b6a83fedc34ff349cab0307cad6aa637921980ca80526e2c9573b927ee6787d8",
+      "subdivision_count": 14,
+      "place_count": 2736
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "url": "https://maxqstudio.dev/pretio/location/v2/DE.json",
+      "revision": "geonames-2026-09-23-de",
+      "sha256": "27f39add97c2aced969b95c33a14678176f69ce57814498db9dba91eacf455e8",
+      "subdivision_count": 16,
+      "place_count": 11552
+    },
+    {
+      "code": "DJ",
+      "name": "Djibouti",
+      "url": "https://maxqstudio.dev/pretio/location/v2/DJ.json",
+      "revision": "geonames-2026-09-23-dj",
+      "sha256": "be8d881d2b680f9650d4d9dcba08fef52fb0c699fb9a1b8f8b0490b28a1d50e8",
+      "subdivision_count": 6,
+      "place_count": 32
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "url": "https://maxqstudio.dev/pretio/location/v2/DK.json",
+      "revision": "geonames-2026-09-23-dk",
+      "sha256": "8872123c91b11035ecaf449713abf3cb09bd5084d65440b7c582546779506722",
+      "subdivision_count": 5,
+      "place_count": 499
+    },
+    {
+      "code": "DM",
+      "name": "Dominica",
+      "url": "https://maxqstudio.dev/pretio/location/v2/DM.json",
+      "revision": "geonames-2026-09-23-dm",
+      "sha256": "2a582c1e761963211ef69c7dbf6c23e466abd0483ac35b8846b1f995e0af0370",
+      "subdivision_count": 10,
+      "place_count": 20
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic",
+      "url": "https://maxqstudio.dev/pretio/location/v2/DO.json",
+      "revision": "geonames-2026-09-23-do",
+      "sha256": "920d6020a410fc5b9780a0f130e0f1c6f251d4387ee8f846e4fa8683274e11e8",
+      "subdivision_count": 32,
+      "place_count": 214
+    },
+    {
+      "code": "DZ",
+      "name": "Algeria",
+      "url": "https://maxqstudio.dev/pretio/location/v2/DZ.json",
+      "revision": "geonames-2026-09-23-dz",
+      "sha256": "9cfb41fe52b7e7fc24a03d0ffad129d6050189d1860421c5788a5fef75278d24",
+      "subdivision_count": 58,
+      "place_count": 353
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador",
+      "url": "https://maxqstudio.dev/pretio/location/v2/EC.json",
+      "revision": "geonames-2026-09-23-ec",
+      "sha256": "ca37d8d3eee5bbd9805ad184c4ff53600e95c97e0e7f724191f14b0bb0959654",
+      "subdivision_count": 24,
+      "place_count": 533
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/EE.json",
+      "revision": "geonames-2026-09-23-ee",
+      "sha256": "c13e38e977761cd22bd2bdaf15026c250a136664bd987601f323cf90a3046dec",
+      "subdivision_count": 15,
+      "place_count": 214
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "url": "https://maxqstudio.dev/pretio/location/v2/EG.json",
+      "revision": "geonames-2026-09-23-eg",
+      "sha256": "cccc15761afdae8d9ca870ef641586011d02f97674f0565b1593ba78756cfe26",
+      "subdivision_count": 27,
+      "place_count": 260
+    },
+    {
+      "code": "EH",
+      "name": "Western Sahara",
+      "url": "https://maxqstudio.dev/pretio/location/v2/EH.json",
+      "revision": "geonames-2026-09-23-eh",
+      "sha256": "d23014a968d476dc1af3c397de37dec8529a442a68d1ae38f2e12fa998c1acf5",
+      "subdivision_count": 0,
+      "place_count": 27
+    },
+    {
+      "code": "ER",
+      "name": "Eritrea",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ER.json",
+      "revision": "geonames-2026-09-23-er",
+      "sha256": "de3ed589d802e1a64db259e4847d2fb6e3b0fe55773f5132d9503d4c0b1839c3",
+      "subdivision_count": 6,
+      "place_count": 19
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ES.json",
+      "revision": "geonames-2026-09-23-es",
+      "sha256": "1eabd7b3ef9d26f21027a1dc993bdd1d3fab78f6f822e3b9a6fdc030da4daf15",
+      "subdivision_count": 19,
+      "place_count": 7409
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ET.json",
+      "revision": "geonames-2026-09-23-et",
+      "sha256": "341b5a3f2139698483478d422fbea6e473aa280fa02912857ac4ac14c661ff78",
+      "subdivision_count": 14,
+      "place_count": 254
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "url": "https://maxqstudio.dev/pretio/location/v2/FI.json",
+      "revision": "geonames-2026-09-23-fi",
+      "sha256": "3aa66c02449f9100713b658c58c7f3cba1d39379935d81623b1dc8c87551b88f",
+      "subdivision_count": 18,
+      "place_count": 922
+    },
+    {
+      "code": "FJ",
+      "name": "Fiji",
+      "url": "https://maxqstudio.dev/pretio/location/v2/FJ.json",
+      "revision": "geonames-2026-09-23-fj",
+      "sha256": "45b1415e3883ee3b5aeb4e09d32f234a358d60d1cf0967adc071c6fca35a0267",
+      "subdivision_count": 5,
+      "place_count": 16
+    },
+    {
+      "code": "FK",
+      "name": "Falkland Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/FK.json",
+      "revision": "geonames-2026-09-23-fk",
+      "sha256": "5112e320f504e43d1a210f4073114bcd880a4b6c274c5e35c8ec00269cb68c44",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "FM",
+      "name": "Micronesia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/FM.json",
+      "revision": "geonames-2026-09-23-fm",
+      "sha256": "0d403f763fcd7fe140a63db0b58ac8402459023f66c1c1ef77bbd4821c45fb68",
+      "subdivision_count": 4,
+      "place_count": 61
+    },
+    {
+      "code": "FO",
+      "name": "Faroe Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/FO.json",
+      "revision": "geonames-2026-09-23-fo",
+      "sha256": "2e7dda24c2dbaebea0c1721934cc99b3eb4fe40b6dd18362a3e45153b44763e2",
+      "subdivision_count": 6,
+      "place_count": 35
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "url": "https://maxqstudio.dev/pretio/location/v2/FR.json",
+      "revision": "geonames-2026-09-23-fr",
+      "sha256": "bbb9c01d9f5eee4512172cb24beb9602ca61b58f566de3072169c0d799c11f8d",
+      "subdivision_count": 13,
+      "place_count": 15257
+    },
+    {
+      "code": "GA",
+      "name": "Gabon",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GA.json",
+      "revision": "geonames-2026-09-23-ga",
+      "sha256": "bd8eadf04bb31cc32b31a219e4b4533eed9933c169504ec95e34cef5ab14bd2d",
+      "subdivision_count": 9,
+      "place_count": 50
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GB.json",
+      "revision": "geonames-2026-09-23-gb",
+      "sha256": "1f76b3ce95e367579e7d4e41817cc3d8f2ea4f8ec3f563155bd1d6a15c3eb8dd",
+      "subdivision_count": 4,
+      "place_count": 5663
+    },
+    {
+      "code": "GD",
+      "name": "Grenada",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GD.json",
+      "revision": "geonames-2026-09-23-gd",
+      "sha256": "f3416a2f46861125bee594dd3e1fbb402774f4067e6eae4dd3b928e79ed97c8e",
+      "subdivision_count": 7,
+      "place_count": 10
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GE.json",
+      "revision": "geonames-2026-09-23-ge",
+      "sha256": "bfc73241dd2216a80bc79330cd9cbb234defaf69695b39bdd9c9a73bd3e15496",
+      "subdivision_count": 12,
+      "place_count": 217
+    },
+    {
+      "code": "GF",
+      "name": "French Guiana",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GF.json",
+      "revision": "geonames-2026-09-23-gf",
+      "sha256": "31e55659d50971091c10d6c0c422b723d08cc8898b60cfc66fcb5c9e508b0d18",
+      "subdivision_count": 1,
+      "place_count": 20
+    },
+    {
+      "code": "GG",
+      "name": "Guernsey",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GG.json",
+      "revision": "geonames-2026-09-23-gg",
+      "sha256": "3763d9af8ff6858c6f73b754f4cbe754abc4e40e79af52bf09d408b9765434e3",
+      "subdivision_count": 11,
+      "place_count": 12
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GH.json",
+      "revision": "geonames-2026-09-23-gh",
+      "sha256": "7741a3d3985c4665c7eb841d0ef6d53db0be27a95aa9a2b698c72cb494a695de",
+      "subdivision_count": 16,
+      "place_count": 119
+    },
+    {
+      "code": "GI",
+      "name": "Gibraltar",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GI.json",
+      "revision": "geonames-2026-09-23-gi",
+      "sha256": "6f59bc1107930121be57096375716c1c7ae57372480bb7d4c2d6feb28ce819e2",
+      "subdivision_count": 0,
+      "place_count": 7
+    },
+    {
+      "code": "GL",
+      "name": "Greenland",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GL.json",
+      "revision": "geonames-2026-09-23-gl",
+      "sha256": "5ee2177111351f9f0e9435aa74cacecdea3d081db725a07c193f5d613ce433df",
+      "subdivision_count": 5,
+      "place_count": 18
+    },
+    {
+      "code": "GM",
+      "name": "Gambia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GM.json",
+      "revision": "geonames-2026-09-23-gm",
+      "sha256": "b915ed8cc51057d2fe97bd5e1f0006c63623d451e7725725210ce075f203f58e",
+      "subdivision_count": 6,
+      "place_count": 180
+    },
+    {
+      "code": "GN",
+      "name": "Guinea",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GN.json",
+      "revision": "geonames-2026-09-23-gn",
+      "sha256": "6f2459d80542bb831b32ed816b6d85c106c13dd24be420bc5b06c45d187630d4",
+      "subdivision_count": 8,
+      "place_count": 83
+    },
+    {
+      "code": "GP",
+      "name": "Guadeloupe",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GP.json",
+      "revision": "geonames-2026-09-23-gp",
+      "sha256": "5cb870f04bf61e96917bd80232261f2574da56c8a9a28e7d74fbc5f6d62603aa",
+      "subdivision_count": 1,
+      "place_count": 25
+    },
+    {
+      "code": "GQ",
+      "name": "Equatorial Guinea",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GQ.json",
+      "revision": "geonames-2026-09-23-gq",
+      "sha256": "81121f46a6f8b267d6c4f3f64b08d0f256e80c88b7c382462d9132812a57567b",
+      "subdivision_count": 8,
+      "place_count": 27
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GR.json",
+      "revision": "geonames-2026-09-23-gr",
+      "sha256": "219e8e3259e3297b76ee57cde89e41648b2a6e0cc6a1e64afe381d10b4ae166b",
+      "subdivision_count": 14,
+      "place_count": 1956
+    },
+    {
+      "code": "GS",
+      "name": "South Georgia and the South Sandwich Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GS.json",
+      "revision": "geonames-2026-09-23-gs",
+      "sha256": "983eb83cc210ce8b42e249b1fe62add8c5529f2a0792d943f37f316a510f8030",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GT.json",
+      "revision": "geonames-2026-09-23-gt",
+      "sha256": "ec03ba7403d0312831eb95217b997204d0ab562e35aef49164fcb552675e6329",
+      "subdivision_count": 22,
+      "place_count": 340
+    },
+    {
+      "code": "GU",
+      "name": "Guam",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GU.json",
+      "revision": "geonames-2026-09-23-gu",
+      "sha256": "a5ef4dab37071d1c0992a7afebef3ffb6dc4f643fa955cc921568dd6908e757a",
+      "subdivision_count": 19,
+      "place_count": 28
+    },
+    {
+      "code": "GW",
+      "name": "Guinea-Bissau",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GW.json",
+      "revision": "geonames-2026-09-23-gw",
+      "sha256": "5e3b50a884a23dbfd7f5ba68263bc0d948be3e1414b7d49d1b301588c25b58a2",
+      "subdivision_count": 9,
+      "place_count": 50
+    },
+    {
+      "code": "GY",
+      "name": "Guyana",
+      "url": "https://maxqstudio.dev/pretio/location/v2/GY.json",
+      "revision": "geonames-2026-09-23-gy",
+      "sha256": "c058844770cdba69836c0010554c004992090122bb8d761ae85b0b4b2809083e",
+      "subdivision_count": 10,
+      "place_count": 22
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "url": "https://maxqstudio.dev/pretio/location/v2/HK.json",
+      "revision": "geonames-2026-09-23-hk",
+      "sha256": "89ad27029510b17cb4792f83f41214dfc6d0c8e9446c0c580a6cf10a50409635",
+      "subdivision_count": 18,
+      "place_count": 325
+    },
+    {
+      "code": "HM",
+      "name": "Heard Island and McDonald Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/HM.json",
+      "revision": "geonames-2026-09-23-hm",
+      "sha256": "c696debf76cbb7a458ce9ee0eeac0c660f3c542e65e5a7bf3b625cdbdfb28401",
+      "subdivision_count": 0,
+      "place_count": 0
+    },
+    {
+      "code": "HN",
+      "name": "Honduras",
+      "url": "https://maxqstudio.dev/pretio/location/v2/HN.json",
+      "revision": "geonames-2026-09-23-hn",
+      "sha256": "0d621e90ff02adfbc956d5692f04ece3f3982bee304471e04f671d697745c949",
+      "subdivision_count": 18,
+      "place_count": 537
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/HR.json",
+      "revision": "geonames-2026-09-23-hr",
+      "sha256": "cbd2a3bfaa724105d74c49b0b9dffe658862d10102ec9664c676e679aeeb3a7b",
+      "subdivision_count": 21,
+      "place_count": 1209
+    },
+    {
+      "code": "HT",
+      "name": "Haiti",
+      "url": "https://maxqstudio.dev/pretio/location/v2/HT.json",
+      "revision": "geonames-2026-09-23-ht",
+      "sha256": "ded797aa46fd790b461ae465effe4b332fe5198d076b39c1761333c84fe98a20",
+      "subdivision_count": 10,
+      "place_count": 114
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "url": "https://maxqstudio.dev/pretio/location/v2/HU.json",
+      "revision": "geonames-2026-09-23-hu",
+      "sha256": "d8c47c221faf5271f71119e87f8a312447b95bcc863ebd196837482b0215c57f",
+      "subdivision_count": 20,
+      "place_count": 1226
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ID.json",
+      "revision": "geonames-2026-09-23-id",
+      "sha256": "79f4806511f1ea45028bca2fdda3217710430763f58eb3fff59f8d169c2227cf",
+      "subdivision_count": 38,
+      "place_count": 8832
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IE.json",
+      "revision": "geonames-2026-09-23-ie",
+      "sha256": "69c49170b62c05fbf70249df2cad588cd42d47511a01d74118561ca315c79980",
+      "subdivision_count": 4,
+      "place_count": 561
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IL.json",
+      "revision": "geonames-2026-09-23-il",
+      "sha256": "023c7c81eb206506b27539afeb8fec926f8d089a0e18236eed37fe9043b39f41",
+      "subdivision_count": 7,
+      "place_count": 723
+    },
+    {
+      "code": "IM",
+      "name": "Isle of Man",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IM.json",
+      "revision": "geonames-2026-09-23-im",
+      "sha256": "b2df8331ca6106aa7bd356857b839380345a0ea6a05610e7d3ae42f1f72d0fd2",
+      "subdivision_count": 24,
+      "place_count": 21
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IN.json",
+      "revision": "geonames-2026-09-23-in",
+      "sha256": "3d4bbfe5efb8600179bc01bf1ef2ba44ac1135a4d312bd90178819f31a521a8a",
+      "subdivision_count": 36,
+      "place_count": 6972
+    },
+    {
+      "code": "IO",
+      "name": "British Indian Ocean Territory",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IO.json",
+      "revision": "geonames-2026-09-23-io",
+      "sha256": "6784ec86d2cc63d305c708a0ad511697eea350645e96f41a4b3d2ce1c9644d2c",
+      "subdivision_count": 0,
+      "place_count": 2
+    },
+    {
+      "code": "IQ",
+      "name": "Iraq",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IQ.json",
+      "revision": "geonames-2026-09-23-iq",
+      "sha256": "a9d82f21d64080917bb113ef72187a04c53e8224ffaaa7d67263c4380cec3a05",
+      "subdivision_count": 19,
+      "place_count": 173
+    },
+    {
+      "code": "IR",
+      "name": "Iran",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IR.json",
+      "revision": "geonames-2026-09-23-ir",
+      "sha256": "277363a5a2a5f1d7843b0b9d7903784dc60f963482971126ca42d2b3a8b30146",
+      "subdivision_count": 31,
+      "place_count": 2675
+    },
+    {
+      "code": "IS",
+      "name": "Iceland",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IS.json",
+      "revision": "geonames-2026-09-23-is",
+      "sha256": "3af0e6671776fc0703495efe9161011f7717c26e6b5365248c745197112dd876",
+      "subdivision_count": 8,
+      "place_count": 49
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "url": "https://maxqstudio.dev/pretio/location/v2/IT.json",
+      "revision": "geonames-2026-09-23-it",
+      "sha256": "06c624aa5bc06a11e76c8dbfcce18df739187a57cb1a17122ae01c2e12f83cbe",
+      "subdivision_count": 20,
+      "place_count": 11716
+    },
+    {
+      "code": "JE",
+      "name": "Jersey",
+      "url": "https://maxqstudio.dev/pretio/location/v2/JE.json",
+      "revision": "geonames-2026-09-23-je",
+      "sha256": "e145693be5c18cd0c7eff37afd4c4214cdc47c597a17400635a001266ca151e6",
+      "subdivision_count": 12,
+      "place_count": 6
+    },
+    {
+      "code": "JM",
+      "name": "Jamaica",
+      "url": "https://maxqstudio.dev/pretio/location/v2/JM.json",
+      "revision": "geonames-2026-09-23-jm",
+      "sha256": "c7a954fb84525d79323b40bc94d0922de230a3a13ad55fda86ba362cf0f6b4e2",
+      "subdivision_count": 14,
+      "place_count": 104
+    },
+    {
+      "code": "JO",
+      "name": "Jordan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/JO.json",
+      "revision": "geonames-2026-09-23-jo",
+      "sha256": "080ba6683392be7b7436a68364e975bd7f18dd73ea4c13dc8ffa65f3e63c9084",
+      "subdivision_count": 12,
+      "place_count": 148
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/JP.json",
+      "revision": "geonames-2026-09-23-jp",
+      "sha256": "b0f2f54379f235b0bd5442008dae9e2f2aa3b605d1747b0499c50ff7b39b0c98",
+      "subdivision_count": 47,
+      "place_count": 2166
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KE.json",
+      "revision": "geonames-2026-09-23-ke",
+      "sha256": "b12fa1cbd89c343ee771b1394fe042bdf9bdbee6eadf4e3bea94d8a55d55d8ec",
+      "subdivision_count": 47,
+      "place_count": 334
+    },
+    {
+      "code": "KG",
+      "name": "Kyrgyzstan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KG.json",
+      "revision": "geonames-2026-09-23-kg",
+      "sha256": "8d9fc223eac0df2e0faa9562b9c83092dc8af4d242f3aebc8464d29b20f197a2",
+      "subdivision_count": 9,
+      "place_count": 112
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KH.json",
+      "revision": "geonames-2026-09-23-kh",
+      "sha256": "faa9fa631035be26f936b2fe416abfb732a4f51b46b5efbe97327e8763ea2aa7",
+      "subdivision_count": 25,
+      "place_count": 337
+    },
+    {
+      "code": "KI",
+      "name": "Kiribati",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KI.json",
+      "revision": "geonames-2026-09-23-ki",
+      "sha256": "6ecd57273c32ca07c6cc2c61b85897d0cca0fb998a068948ffc91a255e80e22b",
+      "subdivision_count": 3,
+      "place_count": 34
+    },
+    {
+      "code": "KM",
+      "name": "Comoros",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KM.json",
+      "revision": "geonames-2026-09-23-km",
+      "sha256": "e100095d35754147cac1be81baad46990277ad07484d427c73b49cd087da97e9",
+      "subdivision_count": 3,
+      "place_count": 119
+    },
+    {
+      "code": "KN",
+      "name": "Saint Kitts and Nevis",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KN.json",
+      "revision": "geonames-2026-09-23-kn",
+      "sha256": "584d5bf1a759dfa623c8bffd04dfee3215261c33532615dfe68dc1407acb5823",
+      "subdivision_count": 14,
+      "place_count": 18
+    },
+    {
+      "code": "KP",
+      "name": "North Korea",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KP.json",
+      "revision": "geonames-2026-09-23-kp",
+      "sha256": "23149e26f164b1a5c6c6ba3ad7e82347d0832458900a8ccbc09d3f85e5161950",
+      "subdivision_count": 13,
+      "place_count": 127
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KR.json",
+      "revision": "geonames-2026-09-23-kr",
+      "sha256": "cece5dc266d8e5eb53bb7d851007b272c6659866923f9178a275539beed1012c",
+      "subdivision_count": 17,
+      "place_count": 308
+    },
+    {
+      "code": "KW",
+      "name": "Kuwait",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KW.json",
+      "revision": "geonames-2026-09-23-kw",
+      "sha256": "49520b995c4d08a6c3828dc8afe61eba025bada9d7bec49a4f60b399ad5a05bd",
+      "subdivision_count": 6,
+      "place_count": 28
+    },
+    {
+      "code": "KY",
+      "name": "Cayman Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KY.json",
+      "revision": "geonames-2026-09-23-ky",
+      "sha256": "439dcd429e8c2f0d5dba3e6efb11182d018cbe139f6317056091e3dbbf4f328d",
+      "subdivision_count": 6,
+      "place_count": 72
+    },
+    {
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/KZ.json",
+      "revision": "geonames-2026-09-23-kz",
+      "sha256": "fa85002899ba2a93bb594ba08d542a7a6369b34e53fa6c2cd09c0c10281fec38",
+      "subdivision_count": 21,
+      "place_count": 347
+    },
+    {
+      "code": "LA",
+      "name": "Laos",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LA.json",
+      "revision": "geonames-2026-09-23-la",
+      "sha256": "d4283624602b4f9c26ca4507ec074db25b09326a7c6410549868cc65b81bf3bf",
+      "subdivision_count": 18,
+      "place_count": 117
+    },
+    {
+      "code": "LB",
+      "name": "Lebanon",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LB.json",
+      "revision": "geonames-2026-09-23-lb",
+      "sha256": "dc96e6faaebfdb893ae9b512668b1e7bd46fd9e206c5b99e4806fe63e713cffb",
+      "subdivision_count": 8,
+      "place_count": 52
+    },
+    {
+      "code": "LC",
+      "name": "Saint Lucia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LC.json",
+      "revision": "geonames-2026-09-23-lc",
+      "sha256": "7093c02d975c939f47fc499db8e61a3c0d70b5ba6ccfdd1982ed06efe0b9648b",
+      "subdivision_count": 10,
+      "place_count": 38
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LI.json",
+      "revision": "geonames-2026-09-23-li",
+      "sha256": "7155fe039a51f23fcad96735a1ee2ef1759961edbed4017ee65ea071487bd6c4",
+      "subdivision_count": 11,
+      "place_count": 14
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LK.json",
+      "revision": "geonames-2026-09-23-lk",
+      "sha256": "1a8299be6604915ee6961b4b4c0670dec618515f8458c35fde8c7b681cc4df97",
+      "subdivision_count": 9,
+      "place_count": 89
+    },
+    {
+      "code": "LR",
+      "name": "Liberia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LR.json",
+      "revision": "geonames-2026-09-23-lr",
+      "sha256": "f0ea02f02993700407112fa9f5e5fbd744e470bf52e37c65595f02d3253353e3",
+      "subdivision_count": 15,
+      "place_count": 26
+    },
+    {
+      "code": "LS",
+      "name": "Lesotho",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LS.json",
+      "revision": "geonames-2026-09-23-ls",
+      "sha256": "dc6d38fa93046f16dc4c1558e7bfe7bd4b5dd1d90fa60a9a15acb4e3fca7b645",
+      "subdivision_count": 10,
+      "place_count": 47
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LT.json",
+      "revision": "geonames-2026-09-23-lt",
+      "sha256": "97d9b77112e7afaf1aede5f3bf4b3ae40189ad895a189531f14308cd4dba7f45",
+      "subdivision_count": 10,
+      "place_count": 164
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LU.json",
+      "revision": "geonames-2026-09-23-lu",
+      "sha256": "30cf830b270bb1c5a55f8cbbee8ea054c44cdae9c8453ff2cbd1e89bfe73810e",
+      "subdivision_count": 12,
+      "place_count": 235
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LV.json",
+      "revision": "geonames-2026-09-23-lv",
+      "sha256": "6e4c6e9e105e258e4afda6800021b8cfe30801dc18f0576ef387511416fb5765",
+      "subdivision_count": 43,
+      "place_count": 147
+    },
+    {
+      "code": "LY",
+      "name": "Libya",
+      "url": "https://maxqstudio.dev/pretio/location/v2/LY.json",
+      "revision": "geonames-2026-09-23-ly",
+      "sha256": "e5bc2e588c4be47ba418507005012a73f43eb83d6adc36de6d9505b81fda9a17",
+      "subdivision_count": 22,
+      "place_count": 119
+    },
+    {
+      "code": "MA",
+      "name": "Morocco",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MA.json",
+      "revision": "geonames-2026-09-23-ma",
+      "sha256": "dbc0921f453dbf60ac5749c24428322e3c34852d822e9112587ea002d1c30090",
+      "subdivision_count": 12,
+      "place_count": 480
+    },
+    {
+      "code": "MC",
+      "name": "Monaco",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MC.json",
+      "revision": "geonames-2026-09-23-mc",
+      "sha256": "4759e9ee12d5f4d4f131cda1cb9e65427cb42f86574255e1f4eaf2f164cc4f0c",
+      "subdivision_count": 1,
+      "place_count": 12
+    },
+    {
+      "code": "MD",
+      "name": "Moldova",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MD.json",
+      "revision": "geonames-2026-09-23-md",
+      "sha256": "e9dbfa9743433e6a4d0165990f43272593e61e5f67a60d3b99263f476cc2c997",
+      "subdivision_count": 37,
+      "place_count": 101
+    },
+    {
+      "code": "ME",
+      "name": "Montenegro",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ME.json",
+      "revision": "geonames-2026-09-23-me",
+      "sha256": "69d1065c12e33247014322c604a99c0ffcdf2f3ff861627f05bdc6f6df7bd711",
+      "subdivision_count": 25,
+      "place_count": 66
+    },
+    {
+      "code": "MF",
+      "name": "Saint Martin",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MF.json",
+      "revision": "geonames-2026-09-23-mf",
+      "sha256": "37fc552a1029a6b3a5ab9fc47c64a3ffbc77a41b075358898ab47a20f5fb16e3",
+      "subdivision_count": 0,
+      "place_count": 9
+    },
+    {
+      "code": "MG",
+      "name": "Madagascar",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MG.json",
+      "revision": "geonames-2026-09-23-mg",
+      "sha256": "661b2ed444cb8e1c3c71fd4c735fc7234db5cb584fd49c6eadbbf632343e942b",
+      "subdivision_count": 23,
+      "place_count": 151
+    },
+    {
+      "code": "MH",
+      "name": "Marshall Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MH.json",
+      "revision": "geonames-2026-09-23-mh",
+      "sha256": "4aad5535806cd46609c230582bde61f4412bae8de973c7235d2d028e9e27b634",
+      "subdivision_count": 33,
+      "place_count": 26
+    },
+    {
+      "code": "MK",
+      "name": "North Macedonia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MK.json",
+      "revision": "geonames-2026-09-23-mk",
+      "sha256": "cd4098001e0f5e47b6c8aa3124b7a912ea3f61945004d6fca9c39d2cddf30abd",
+      "subdivision_count": 71,
+      "place_count": 300
+    },
+    {
+      "code": "ML",
+      "name": "Mali",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ML.json",
+      "revision": "geonames-2026-09-23-ml",
+      "sha256": "c29aa04d9986ed8633ba9113cbefb61eec790638caf9b1dfff995efbb54de0ef",
+      "subdivision_count": 11,
+      "place_count": 94
+    },
+    {
+      "code": "MM",
+      "name": "Myanmar",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MM.json",
+      "revision": "geonames-2026-09-23-mm",
+      "sha256": "388468ea93e26f8814247841b68f86e67652c579266c13a9faee680e8c5d53a3",
+      "subdivision_count": 15,
+      "place_count": 570
+    },
+    {
+      "code": "MN",
+      "name": "Mongolia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MN.json",
+      "revision": "geonames-2026-09-23-mn",
+      "sha256": "eec544a9e17d7a3cd86ee05cfeeb9a35bf4d23ecea7f5137f31e4112c55d4682",
+      "subdivision_count": 22,
+      "place_count": 328
+    },
+    {
+      "code": "MO",
+      "name": "Macao",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MO.json",
+      "revision": "geonames-2026-09-23-mo",
+      "sha256": "ff6319481eb8458d692691a4b22646bf77c1cce32775016ca2a6aa438ec8ba85",
+      "subdivision_count": 8,
+      "place_count": 8
+    },
+    {
+      "code": "MP",
+      "name": "Northern Mariana Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MP.json",
+      "revision": "geonames-2026-09-23-mp",
+      "sha256": "5e79658c36f120e734deb8e2a6efa6b6d8f4ab3621ed02351996471a19685741",
+      "subdivision_count": 4,
+      "place_count": 10
+    },
+    {
+      "code": "MQ",
+      "name": "Martinique",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MQ.json",
+      "revision": "geonames-2026-09-23-mq",
+      "sha256": "607fd9cd927920ca05d03fc0b5fdd86830a736012742ec59bcdd3fcbc5a5bccd",
+      "subdivision_count": 1,
+      "place_count": 23
+    },
+    {
+      "code": "MR",
+      "name": "Mauritania",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MR.json",
+      "revision": "geonames-2026-09-23-mr",
+      "sha256": "d1712335398229fcae4bbbb24223688eff3ba03f920b150c6c8b4cb22990175d",
+      "subdivision_count": 15,
+      "place_count": 87
+    },
+    {
+      "code": "MS",
+      "name": "Montserrat",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MS.json",
+      "revision": "geonames-2026-09-23-ms",
+      "sha256": "2626e7aa6ef9325b5990bd2a8c60a0693bf51c127824258e6166307f9e54c319",
+      "subdivision_count": 3,
+      "place_count": 4
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MT.json",
+      "revision": "geonames-2026-09-23-mt",
+      "sha256": "a317f799f6b05c81e9e45cdc619eb172864e2255fa30658617cfcfef7d4f9594",
+      "subdivision_count": 68,
+      "place_count": 71
+    },
+    {
+      "code": "MU",
+      "name": "Mauritius",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MU.json",
+      "revision": "geonames-2026-09-23-mu",
+      "sha256": "8d4b33b353e71a6d78f545f9b168887ac37f3e10cdc40e263798815fc0c5e0ca",
+      "subdivision_count": 12,
+      "place_count": 116
+    },
+    {
+      "code": "MV",
+      "name": "Maldives",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MV.json",
+      "revision": "geonames-2026-09-23-mv",
+      "sha256": "d8c14ce414e9f589ec2e4867a8017046a14f89b2e0d2c8b0f3235a633353a2d2",
+      "subdivision_count": 21,
+      "place_count": 34
+    },
+    {
+      "code": "MW",
+      "name": "Malawi",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MW.json",
+      "revision": "geonames-2026-09-23-mw",
+      "sha256": "320800252aee1a2fbf7f6e9049d8e3bba4c4058eb4dab2d18f162abbcd258a61",
+      "subdivision_count": 3,
+      "place_count": 39
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MX.json",
+      "revision": "geonames-2026-09-23-mx",
+      "sha256": "5836f838eeaa9b359f9378d3ecee1e672c11a7150d1d8d8948ecc82a87d9d050",
+      "subdivision_count": 32,
+      "place_count": 15648
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MY.json",
+      "revision": "geonames-2026-09-23-my",
+      "sha256": "e1823fa00127a2d82ae74d6add295edef8632a8715bc889ac296372d1d6aea1d",
+      "subdivision_count": 16,
+      "place_count": 740
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique",
+      "url": "https://maxqstudio.dev/pretio/location/v2/MZ.json",
+      "revision": "geonames-2026-09-23-mz",
+      "sha256": "cfbc8127f43deff2d8759e442c5c386f490acf15b70432b4f4787bdbe6f3c5c3",
+      "subdivision_count": 11,
+      "place_count": 94
+    },
+    {
+      "code": "NA",
+      "name": "Namibia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NA.json",
+      "revision": "geonames-2026-09-23-na",
+      "sha256": "bbc06e71cfa808c8510f9e8d85d44824203a6baa28d75a8e718e60f322433355",
+      "subdivision_count": 14,
+      "place_count": 93
+    },
+    {
+      "code": "NC",
+      "name": "New Caledonia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NC.json",
+      "revision": "geonames-2026-09-23-nc",
+      "sha256": "ae159b218fd1b2fe757837c92347eb019cd150b05cabad7a5f3458de17dccec3",
+      "subdivision_count": 3,
+      "place_count": 63
+    },
+    {
+      "code": "NE",
+      "name": "Niger",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NE.json",
+      "revision": "geonames-2026-09-23-ne",
+      "sha256": "bcba5a806258c3b565cb3ce67e9b7a90eb3c8aae7a287a59645df7b9c3f3867b",
+      "subdivision_count": 8,
+      "place_count": 74
+    },
+    {
+      "code": "NF",
+      "name": "Norfolk Island",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NF.json",
+      "revision": "geonames-2026-09-23-nf",
+      "sha256": "a9bd97dc7ac4557f829ef9762324559b42ed25f5c9f8ad995998b1d3f7540014",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NG.json",
+      "revision": "geonames-2026-09-23-ng",
+      "sha256": "e28f20556d36108a680393f533efa4b2cb0a7c870b0f44226e6765c6923175ad",
+      "subdivision_count": 37,
+      "place_count": 926
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NI.json",
+      "revision": "geonames-2026-09-23-ni",
+      "sha256": "76ec9195b100a82121874cc04630577fbee64f26aa9e6b9fb3ccb8423dd3d88f",
+      "subdivision_count": 17,
+      "place_count": 167
+    },
+    {
+      "code": "NL",
+      "name": "The Netherlands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NL.json",
+      "revision": "geonames-2026-09-23-nl",
+      "sha256": "3553a87f063247874bc52c635ebde259f31f9cf61fd34423c4bd5486c30fc1e8",
+      "subdivision_count": 12,
+      "place_count": 2027
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NO.json",
+      "revision": "geonames-2026-09-23-no",
+      "sha256": "03e3de4a5c7b87f460eb88780e6b9b73a55bce924d6aa84160d76de925c1884a",
+      "subdivision_count": 15,
+      "place_count": 629
+    },
+    {
+      "code": "NP",
+      "name": "Nepal",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NP.json",
+      "revision": "geonames-2026-09-23-np",
+      "sha256": "8676924e2c317518b071176ec549e94b1939996b30f7c39699a2359a98f964a9",
+      "subdivision_count": 7,
+      "place_count": 83
+    },
+    {
+      "code": "NR",
+      "name": "Nauru",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NR.json",
+      "revision": "geonames-2026-09-23-nr",
+      "sha256": "06fa533053de19c6255353cd2b1d61b59848b728029799ebcf04eb4d7802d76f",
+      "subdivision_count": 14,
+      "place_count": 15
+    },
+    {
+      "code": "NU",
+      "name": "Niue",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NU.json",
+      "revision": "geonames-2026-09-23-nu",
+      "sha256": "34d1167d00f068d4693effd92ebf1b7c3bbe6bdcf1a91625e5fbc251568e4ce6",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "url": "https://maxqstudio.dev/pretio/location/v2/NZ.json",
+      "revision": "geonames-2026-09-23-nz",
+      "sha256": "18c2b5cf5ef2a5c44ccd76a30fd3bf19172bd91e811804e89dd1929bbe9f0988",
+      "subdivision_count": 17,
+      "place_count": 730
+    },
+    {
+      "code": "OM",
+      "name": "Oman",
+      "url": "https://maxqstudio.dev/pretio/location/v2/OM.json",
+      "revision": "geonames-2026-09-23-om",
+      "sha256": "710cb603129156300752abf71a2fc18c58d20a12869bc7faeb639234a3826bc0",
+      "subdivision_count": 11,
+      "place_count": 42
+    },
+    {
+      "code": "PA",
+      "name": "Panama",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PA.json",
+      "revision": "geonames-2026-09-23-pa",
+      "sha256": "9ae735657c73c0e3f3ec6f430f3cbad6de5fa4759660c1ee1389cdb2723872a1",
+      "subdivision_count": 14,
+      "place_count": 780
+    },
+    {
+      "code": "PE",
+      "name": "Peru",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PE.json",
+      "revision": "geonames-2026-09-23-pe",
+      "sha256": "00de16fce0ae3ee6f5c8e89c537ad9913ea8b1700acca89d48d59271d0057f52",
+      "subdivision_count": 26,
+      "place_count": 2256
+    },
+    {
+      "code": "PF",
+      "name": "French Polynesia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PF.json",
+      "revision": "geonames-2026-09-23-pf",
+      "sha256": "1c2483593abb3b5172910168274f91b1d1b487a2084f0460f0e42735ce84d8a0",
+      "subdivision_count": 5,
+      "place_count": 45
+    },
+    {
+      "code": "PG",
+      "name": "Papua New Guinea",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PG.json",
+      "revision": "geonames-2026-09-23-pg",
+      "sha256": "e82f91a6aa58ddba55ea6bc86e53f1dbe9a5643fa878d89933f34be62c3d396e",
+      "subdivision_count": 22,
+      "place_count": 59
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PH.json",
+      "revision": "geonames-2026-09-23-ph",
+      "sha256": "1a5eee8558ec3be6a9360e9503f394a520b634c6e7e9aa8b186b0b708fbd5eaa",
+      "subdivision_count": 17,
+      "place_count": 4242
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PK.json",
+      "revision": "geonames-2026-09-23-pk",
+      "sha256": "ab351f1a3c172b575472ba016c19b41149c247223629e25eb89c7dc405fc49a0",
+      "subdivision_count": 7,
+      "place_count": 572
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PL.json",
+      "revision": "geonames-2026-09-23-pl",
+      "sha256": "19826111e5544f6082bef87c22f194e4edfa4ed1e87fbb1c2c7a984a33e6f221",
+      "subdivision_count": 16,
+      "place_count": 3785
+    },
+    {
+      "code": "PM",
+      "name": "Saint Pierre and Miquelon",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PM.json",
+      "revision": "geonames-2026-09-23-pm",
+      "sha256": "defcf3b8dc3040e9b9ca6552b9cd54f7d6d20878361ce3b94886ecacb16140d9",
+      "subdivision_count": 2,
+      "place_count": 2
+    },
+    {
+      "code": "PN",
+      "name": "Pitcairn",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PN.json",
+      "revision": "geonames-2026-09-23-pn",
+      "sha256": "553ab15a8ce562414c59b1c622ead12dccdcf5294b39e3c7f6c55efe58115401",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "PR",
+      "name": "Puerto Rico",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PR.json",
+      "revision": "geonames-2026-09-23-pr",
+      "sha256": "c51a58288534beec46d612f8fe9ef95c3a413283d810eea53051543260f37a9e",
+      "subdivision_count": 78,
+      "place_count": 227
+    },
+    {
+      "code": "PS",
+      "name": "Palestinian Territory",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PS.json",
+      "revision": "geonames-2026-09-23-ps",
+      "sha256": "83feb9ca11cbc97147d28b5134cbf9a8f8c2de950127ac09a29c2100511e4e31",
+      "subdivision_count": 2,
+      "place_count": 441
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PT.json",
+      "revision": "geonames-2026-09-23-pt",
+      "sha256": "e0037f5c9affbada5321d6c13de2dc6fdf0baa9c33e64c00b90fb22f79229f2e",
+      "subdivision_count": 20,
+      "place_count": 1066
+    },
+    {
+      "code": "PW",
+      "name": "Palau",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PW.json",
+      "revision": "geonames-2026-09-23-pw",
+      "sha256": "2a75ee7cb46615ca2d4451a818ba4006c55adf9328d08a5dc49ce2261957db7f",
+      "subdivision_count": 16,
+      "place_count": 29
+    },
+    {
+      "code": "PY",
+      "name": "Paraguay",
+      "url": "https://maxqstudio.dev/pretio/location/v2/PY.json",
+      "revision": "geonames-2026-09-23-py",
+      "sha256": "1c6edf71a79fdca53bec075eccaf417c9bf45f39c44edb15394ad15cebe56ca5",
+      "subdivision_count": 18,
+      "place_count": 173
+    },
+    {
+      "code": "QA",
+      "name": "Qatar",
+      "url": "https://maxqstudio.dev/pretio/location/v2/QA.json",
+      "revision": "geonames-2026-09-23-qa",
+      "sha256": "24d526b7fe55d99204be4fec2529dba42b128fcd6a835d35d2db1584037b7f83",
+      "subdivision_count": 8,
+      "place_count": 43
+    },
+    {
+      "code": "RE",
+      "name": "Reunion",
+      "url": "https://maxqstudio.dev/pretio/location/v2/RE.json",
+      "revision": "geonames-2026-09-23-re",
+      "sha256": "8345b39297e72cfa88cfcd1557cc2d4717311db28f9f519d0b97e79ec547dcd4",
+      "subdivision_count": 1,
+      "place_count": 28
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "url": "https://maxqstudio.dev/pretio/location/v2/RO.json",
+      "revision": "geonames-2026-09-23-ro",
+      "sha256": "9a616064a5f7951c41a12d865c01bfea297ebd5ff9bf8104c0e1d3871d05c484",
+      "subdivision_count": 42,
+      "place_count": 7002
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/RS.json",
+      "revision": "geonames-2026-09-23-rs",
+      "sha256": "f46f79f2095ac4d1e0b74fcf28fa2cb63316d0236fd62eefadc0fb3616a0015b",
+      "subdivision_count": 27,
+      "place_count": 513
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/RU.json",
+      "revision": "geonames-2026-09-23-ru",
+      "sha256": "88d8b05fb2697d656dafe20c5c8fb74960d5f2a8c9374b4fc03efa556624b461",
+      "subdivision_count": 83,
+      "place_count": 5261
+    },
+    {
+      "code": "RW",
+      "name": "Rwanda",
+      "url": "https://maxqstudio.dev/pretio/location/v2/RW.json",
+      "revision": "geonames-2026-09-23-rw",
+      "sha256": "35c7d289f6e6a238c830e31bdd92338794dca22444e7f6db685c2dccb130b86f",
+      "subdivision_count": 5,
+      "place_count": 51
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SA.json",
+      "revision": "geonames-2026-09-23-sa",
+      "sha256": "48e624d881e9ad87f0706edc01cefeb4105efdaeb36e315e147adb77f9fe6366",
+      "subdivision_count": 13,
+      "place_count": 158
+    },
+    {
+      "code": "SB",
+      "name": "Solomon Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SB.json",
+      "revision": "geonames-2026-09-23-sb",
+      "sha256": "aab4d4f14f3bde5ab5629a24cf04e7da11d816d59de7f0cb36d2535242c178d8",
+      "subdivision_count": 10,
+      "place_count": 22
+    },
+    {
+      "code": "SC",
+      "name": "Seychelles",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SC.json",
+      "revision": "geonames-2026-09-23-sc",
+      "sha256": "419120087116434ae75c9430a0453db0e2cc78f105d64f8ec5f62524563800a9",
+      "subdivision_count": 28,
+      "place_count": 26
+    },
+    {
+      "code": "SD",
+      "name": "Sudan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SD.json",
+      "revision": "geonames-2026-09-23-sd",
+      "sha256": "24dee63a74a3f7253dcf87207359d7d6a1df19cb1c49eef46499590ed08969dd",
+      "subdivision_count": 18,
+      "place_count": 111
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SE.json",
+      "revision": "geonames-2026-09-23-se",
+      "sha256": "09ea6c8ed3ab99a526e6d8c269bbf975f6d1940a27be90296c234c75cf3940de",
+      "subdivision_count": 21,
+      "place_count": 1302
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SG.json",
+      "revision": "geonames-2026-09-23-sg",
+      "sha256": "196d641319bba1ca47a196bbf6842c4c121899cf56d4b45bbe63e3a685297e6d",
+      "subdivision_count": 0,
+      "place_count": 121
+    },
+    {
+      "code": "SH",
+      "name": "Saint Helena",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SH.json",
+      "revision": "geonames-2026-09-23-sh",
+      "sha256": "75f205ec125424b279722be2bf3902dcdc8d6e7d7da7fdf46fcf053074bd6fbe",
+      "subdivision_count": 3,
+      "place_count": 6
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SI.json",
+      "revision": "geonames-2026-09-23-si",
+      "sha256": "5b2cabf5cdb464aa654f9017bdaf30ee8da6de2dfa45f087897ca4fcd2446e74",
+      "subdivision_count": 212,
+      "place_count": 602
+    },
+    {
+      "code": "SJ",
+      "name": "Svalbard and Jan Mayen",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SJ.json",
+      "revision": "geonames-2026-09-23-sj",
+      "sha256": "329ec0450c26fb86fd1ef18653230d36818439ff5a80e4d6b4d18ac7e4acb79c",
+      "subdivision_count": 2,
+      "place_count": 2
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SK.json",
+      "revision": "geonames-2026-09-23-sk",
+      "sha256": "aeab98352cb9c40593d06a2647309a6609841e5be63be334a4d6c61c43854143",
+      "subdivision_count": 8,
+      "place_count": 830
+    },
+    {
+      "code": "SL",
+      "name": "Sierra Leone",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SL.json",
+      "revision": "geonames-2026-09-23-sl",
+      "sha256": "ee6bb37169ec8b7a87b217928125ca3b96e23f42923a989460a5b15e14acd08c",
+      "subdivision_count": 5,
+      "place_count": 86
+    },
+    {
+      "code": "SM",
+      "name": "San Marino",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SM.json",
+      "revision": "geonames-2026-09-23-sm",
+      "sha256": "becfd2f81cbf93e7c576cb1f6dfeabdf255a32868bed57411af25d6817e62f5a",
+      "subdivision_count": 9,
+      "place_count": 15
+    },
+    {
+      "code": "SN",
+      "name": "Senegal",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SN.json",
+      "revision": "geonames-2026-09-23-sn",
+      "sha256": "654074eee43e48ecb43d8c67620b6be07c4f4dd8b9fe0528258b6bf0383766c2",
+      "subdivision_count": 14,
+      "place_count": 157
+    },
+    {
+      "code": "SO",
+      "name": "Somalia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SO.json",
+      "revision": "geonames-2026-09-23-so",
+      "sha256": "e4f357bcd4042e27c3806ab854ac835631f8f07e726853ebbebf9cf6a848bf8e",
+      "subdivision_count": 18,
+      "place_count": 76
+    },
+    {
+      "code": "SR",
+      "name": "Suriname",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SR.json",
+      "revision": "geonames-2026-09-23-sr",
+      "sha256": "e53aba918a649a4abb2c5c53f27f33750501c5f56e5cca72adf1577d1b25cce0",
+      "subdivision_count": 10,
+      "place_count": 35
+    },
+    {
+      "code": "SS",
+      "name": "South Sudan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SS.json",
+      "revision": "geonames-2026-09-23-ss",
+      "sha256": "c0d58c99d433f36f700505d3ff8710a6676443f82bee668231ca34ff18b6e0a4",
+      "subdivision_count": 10,
+      "place_count": 23
+    },
+    {
+      "code": "ST",
+      "name": "Sao Tome and Principe",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ST.json",
+      "revision": "geonames-2026-09-23-st",
+      "sha256": "dadaf9a5a4109fdc3ab2adbe58cb8748563385e001bf3f87e4bc6bf4c63a4645",
+      "subdivision_count": 2,
+      "place_count": 51
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SV.json",
+      "revision": "geonames-2026-09-23-sv",
+      "sha256": "002b3a1f922a657bfe74260666ccd8cb6371460c0e413a39978a3e232cc6f899",
+      "subdivision_count": 14,
+      "place_count": 102
+    },
+    {
+      "code": "SX",
+      "name": "Sint Maarten",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SX.json",
+      "revision": "geonames-2026-09-23-sx",
+      "sha256": "a85581ee1cab97258f802c555da1f5e39f1c44b5e6c266ae19e6a237cc997b34",
+      "subdivision_count": 0,
+      "place_count": 7
+    },
+    {
+      "code": "SY",
+      "name": "Syria",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SY.json",
+      "revision": "geonames-2026-09-23-sy",
+      "sha256": "34548b5c2f1418cf7f5c212d92ffb0f7e3dd9e10026df64ee6a1b6b8262c370b",
+      "subdivision_count": 14,
+      "place_count": 310
+    },
+    {
+      "code": "SZ",
+      "name": "Eswatini",
+      "url": "https://maxqstudio.dev/pretio/location/v2/SZ.json",
+      "revision": "geonames-2026-09-23-sz",
+      "sha256": "3eb6999526d1c99353885a3978883f35aed5b5179ef5babfbba4bc160a4cb1d1",
+      "subdivision_count": 4,
+      "place_count": 25
+    },
+    {
+      "code": "TC",
+      "name": "Turks and Caicos Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TC.json",
+      "revision": "geonames-2026-09-23-tc",
+      "sha256": "ab19860389bd2d46d08aca4f973fd7f2f6593a2e7d6b99e8097a8238cb348907",
+      "subdivision_count": 0,
+      "place_count": 11
+    },
+    {
+      "code": "TD",
+      "name": "Chad",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TD.json",
+      "revision": "geonames-2026-09-23-td",
+      "sha256": "190299d120f931e687f944abf551a265ef2751d4633585695614051b79c377d7",
+      "subdivision_count": 23,
+      "place_count": 74
+    },
+    {
+      "code": "TF",
+      "name": "French Southern Territories",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TF.json",
+      "revision": "geonames-2026-09-23-tf",
+      "sha256": "7c5221edaa43137d2c3f45b9bbaa8107e0cff4a06f0fcb380b93c6471b7f81d3",
+      "subdivision_count": 5,
+      "place_count": 1
+    },
+    {
+      "code": "TG",
+      "name": "Togo",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TG.json",
+      "revision": "geonames-2026-09-23-tg",
+      "sha256": "f92ab8a9529407f39a95f597cf93497f71731637f438a510782223d127e5d5ae",
+      "subdivision_count": 5,
+      "place_count": 35
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TH.json",
+      "revision": "geonames-2026-09-23-th",
+      "sha256": "c1fd4015a21579afe05674c0a50d54455fcc4513d8e241ebe4bd854aa3ce407b",
+      "subdivision_count": 77,
+      "place_count": 1074
+    },
+    {
+      "code": "TJ",
+      "name": "Tajikistan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TJ.json",
+      "revision": "geonames-2026-09-23-tj",
+      "sha256": "9197a245846fde70ee61576953ca93a09a5d8a5efbfe6c0708aed265e0828d91",
+      "subdivision_count": 5,
+      "place_count": 100
+    },
+    {
+      "code": "TK",
+      "name": "Tokelau",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TK.json",
+      "revision": "geonames-2026-09-23-tk",
+      "sha256": "9e6d7b7d1538fe9ee82542572a8c9b1db513fbbe49fb6a6fbc1d76e1b55ca183",
+      "subdivision_count": 3,
+      "place_count": 3
+    },
+    {
+      "code": "TL",
+      "name": "Timor Leste",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TL.json",
+      "revision": "geonames-2026-09-23-tl",
+      "sha256": "33f72ec908e8c78996745fdeafd866acfc713a72d281f634c07c13af2d5f6bf9",
+      "subdivision_count": 13,
+      "place_count": 31
+    },
+    {
+      "code": "TM",
+      "name": "Turkmenistan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TM.json",
+      "revision": "geonames-2026-09-23-tm",
+      "sha256": "a06ffd95b3e88754d0865ccae04b0a694f05850d7d536c7c4e4bb4db81fdc085",
+      "subdivision_count": 6,
+      "place_count": 143
+    },
+    {
+      "code": "TN",
+      "name": "Tunisia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TN.json",
+      "revision": "geonames-2026-09-23-tn",
+      "sha256": "bc2c42e25f80f30570d6b44626d03590136ea3c18fcd19543cfefa645139e580",
+      "subdivision_count": 24,
+      "place_count": 286
+    },
+    {
+      "code": "TO",
+      "name": "Tonga",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TO.json",
+      "revision": "geonames-2026-09-23-to",
+      "sha256": "39b471db4ce519aba2ec6c90c2315001b5f1a121979d41b7bd4b0952c7d1cfe5",
+      "subdivision_count": 5,
+      "place_count": 47
+    },
+    {
+      "code": "TR",
+      "name": "Turkey",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TR.json",
+      "revision": "geonames-2026-09-23-tr",
+      "sha256": "5047fcc88dd7b8d3bd7c369fe00882019e0ff8ad133e7e29bf3a00951592cfbb",
+      "subdivision_count": 81,
+      "place_count": 3979
+    },
+    {
+      "code": "TT",
+      "name": "Trinidad and Tobago",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TT.json",
+      "revision": "geonames-2026-09-23-tt",
+      "sha256": "83ff84c80d66bf84fe2f247f1998be80de85af1355a60149d9da6c7aa03a68ed",
+      "subdivision_count": 15,
+      "place_count": 27
+    },
+    {
+      "code": "TV",
+      "name": "Tuvalu",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TV.json",
+      "revision": "geonames-2026-09-23-tv",
+      "sha256": "256d10d8881aead17abebc8a004be088cbb4bbbc8318957db20e80f7e580c853",
+      "subdivision_count": 8,
+      "place_count": 12
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TW.json",
+      "revision": "geonames-2026-09-23-tw",
+      "sha256": "c0a2d1e07d4cd2d2abaee1724e5f99399b36488ac4790b30756671af5bf8a99d",
+      "subdivision_count": 4,
+      "place_count": 88
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzania",
+      "url": "https://maxqstudio.dev/pretio/location/v2/TZ.json",
+      "revision": "geonames-2026-09-23-tz",
+      "sha256": "f2e6e82a2c290fe45b882fa3f7095ef9d67fdf6fb7001d340ce9ed612aec8371",
+      "subdivision_count": 31,
+      "place_count": 323
+    },
+    {
+      "code": "UA",
+      "name": "Ukraine",
+      "url": "https://maxqstudio.dev/pretio/location/v2/UA.json",
+      "revision": "geonames-2026-09-23-ua",
+      "sha256": "321993d761446e5722b2e0bcbc3d135bfb433ba6c3a7eec1032fc1db9dbd5b56",
+      "subdivision_count": 27,
+      "place_count": 5266
+    },
+    {
+      "code": "UG",
+      "name": "Uganda",
+      "url": "https://maxqstudio.dev/pretio/location/v2/UG.json",
+      "revision": "geonames-2026-09-23-ug",
+      "sha256": "c8ef666e34cffadddbfc6f93368cdf9fbb4dedc92b28d20d2521fcbe92ad9376",
+      "subdivision_count": 4,
+      "place_count": 208
+    },
+    {
+      "code": "UM",
+      "name": "United States Minor Outlying Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/UM.json",
+      "revision": "geonames-2026-09-23-um",
+      "sha256": "1f6c69b57695e20369736dbeda614e32f2b1784a0b233031d7050cc38773a3ea",
+      "subdivision_count": 9,
+      "place_count": 0
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "url": "https://maxqstudio.dev/pretio/location/v2/US.json",
+      "revision": "geonames-2026-09-23-us",
+      "sha256": "641d19811d5ec125955d873c545470c814dbb59e9cacdc43985f5011f42704c7",
+      "subdivision_count": 51,
+      "place_count": 21454
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "url": "https://maxqstudio.dev/pretio/location/v2/UY.json",
+      "revision": "geonames-2026-09-23-uy",
+      "sha256": "95156933d2e4f6f0504834b51360db15d222d26594fb1481d867c63c4dbf7900",
+      "subdivision_count": 19,
+      "place_count": 154
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "url": "https://maxqstudio.dev/pretio/location/v2/UZ.json",
+      "revision": "geonames-2026-09-23-uz",
+      "sha256": "4fffea22771fc5fb7051b7f4a6840777f967c32b4780a18ffcf85afb4f17ab51",
+      "subdivision_count": 14,
+      "place_count": 220
+    },
+    {
+      "code": "VA",
+      "name": "Vatican",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VA.json",
+      "revision": "geonames-2026-09-23-va",
+      "sha256": "430254659b50f998422bddc40091928c91c802c27d76ba2711c25d699bf28f21",
+      "subdivision_count": 0,
+      "place_count": 1
+    },
+    {
+      "code": "VC",
+      "name": "Saint Vincent and the Grenadines",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VC.json",
+      "revision": "geonames-2026-09-23-vc",
+      "sha256": "cb25281916c985887f7b0001ec0cac3b264e45cf8f2c91c3fe537a3ec6c4f7de",
+      "subdivision_count": 6,
+      "place_count": 25
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VE.json",
+      "revision": "geonames-2026-09-23-ve",
+      "sha256": "29807271c440ee391fa1ae80b0f5dffee7e7e5bf554570842d9056ce9828cac8",
+      "subdivision_count": 25,
+      "place_count": 412
+    },
+    {
+      "code": "VG",
+      "name": "British Virgin Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VG.json",
+      "revision": "geonames-2026-09-23-vg",
+      "sha256": "6345da49cc5f64eafaf47b71d7a74fa8832a97462494f493d0cec073ae76be53",
+      "subdivision_count": 0,
+      "place_count": 2
+    },
+    {
+      "code": "VI",
+      "name": "U.S. Virgin Islands",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VI.json",
+      "revision": "geonames-2026-09-23-vi",
+      "sha256": "ad0c01691e25bd2ca71154149f8271336259830628fb9b89a1c4d2fdac7d1a00",
+      "subdivision_count": 3,
+      "place_count": 8
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VN.json",
+      "revision": "geonames-2026-09-23-vn",
+      "sha256": "918953e0075b154007f8b58bdc3a0b4cb4cc6881dd922e49d1321b7ab9e2e65f",
+      "subdivision_count": 34,
+      "place_count": 909
+    },
+    {
+      "code": "VU",
+      "name": "Vanuatu",
+      "url": "https://maxqstudio.dev/pretio/location/v2/VU.json",
+      "revision": "geonames-2026-09-23-vu",
+      "sha256": "cd0a6baeae54c611b7c88320dba36fc2a5c12e7b908681f2b693f07f157055a7",
+      "subdivision_count": 6,
+      "place_count": 10
+    },
+    {
+      "code": "WF",
+      "name": "Wallis and Futuna",
+      "url": "https://maxqstudio.dev/pretio/location/v2/WF.json",
+      "revision": "geonames-2026-09-23-wf",
+      "sha256": "28a24645089eb28c38f8b17de3b983fea33ecd49f13629d016fa1f89a459ccf1",
+      "subdivision_count": 3,
+      "place_count": 8
+    },
+    {
+      "code": "WS",
+      "name": "Samoa",
+      "url": "https://maxqstudio.dev/pretio/location/v2/WS.json",
+      "revision": "geonames-2026-09-23-ws",
+      "sha256": "f556ce2f591a26cd693969a60528228d2debc577a1a30f5dad7fa60290ae2b0a",
+      "subdivision_count": 11,
+      "place_count": 73
+    },
+    {
+      "code": "YE",
+      "name": "Yemen",
+      "url": "https://maxqstudio.dev/pretio/location/v2/YE.json",
+      "revision": "geonames-2026-09-23-ye",
+      "sha256": "47b895a4bee775465f0d8acc817c2457cd6fbf5b0c905f5e3661c2f74df9c078",
+      "subdivision_count": 22,
+      "place_count": 316
+    },
+    {
+      "code": "YT",
+      "name": "Mayotte",
+      "url": "https://maxqstudio.dev/pretio/location/v2/YT.json",
+      "revision": "geonames-2026-09-23-yt",
+      "sha256": "f87b25a4edb562f55a62bbc67f53f835f831056bf65b7161a489c0a4510b4b25",
+      "subdivision_count": 17,
+      "place_count": 66
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ZA.json",
+      "revision": "geonames-2026-09-23-za",
+      "sha256": "f7fb74f2e38eb8bb5cb624307aaf95c02dcbf61ef0d88e7abbeb1021ec46561e",
+      "subdivision_count": 9,
+      "place_count": 987
+    },
+    {
+      "code": "ZM",
+      "name": "Zambia",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ZM.json",
+      "revision": "geonames-2026-09-23-zm",
+      "sha256": "e76412f2345ea781f69affac1243422b8197977d7657d8e37a9ee6e0cfd19391",
+      "subdivision_count": 10,
+      "place_count": 97
+    },
+    {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "url": "https://maxqstudio.dev/pretio/location/v2/ZW.json",
+      "revision": "geonames-2026-09-23-zw",
+      "sha256": "b0c458e63910fce55a1dac8789f2b75e6c85758e5aea25ba5f150cea4186ffc6",
+      "subdivision_count": 10,
+      "place_count": 69
+    }
+  ]
+}
