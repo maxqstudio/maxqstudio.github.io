@@ -1,15 +1,15 @@
 {
   "schema": "pretio.product_highlights.audit.v1",
   "schema_version": 1,
-  "run_id": "pretio-daily-promo-20260923T102403Z",
-  "observed_at": "2026-09-23T10:24:03Z",
-  "starting_main_sha": "99d14b38671d3f3e80247be2539884e6f38a0f5b",
+  "run_id": "pretio-daily-promo-20260923T103532Z",
+  "observed_at": "2026-09-23T10:35:32Z",
+  "starting_main_sha": "19dd7461c017c8a592e94415048afa98fb91020d",
   "production_changes": {
     "countries_changed": [
-      "ZA"
+      "US"
     ],
-    "items_accepted": 4,
-    "items_removed": 0
+    "items_accepted": 0,
+    "items_removed": 1
   },
   "validation": {
     "price_validation": "PASS",
@@ -20,17 +20,17 @@
     "retailer_limit_violations": 0,
     "image_validation": {
       "status": "PASS",
-      "method": "Four Pick n Pay product images rendered in official www.pnp.co.za product listing and resolve to the retailer CDN cdn-prd-02.pnp.co.za; exact raw bytes were not fetched. National Pick n Pay catalogue listing corroborated identity and prices.",
+      "method": "The prior Lay’s image still renders as the correct product from Walmart’s official i5.walmartimages.com CDN; it was removed because its current selected-store price/scope no longer supports the feed. Final US feed is empty.",
       "raw_bytes_hashed": false,
-      "revision_policy": "image_revision omitted because exact raw bytes were not verified."
+      "revision_policy": "No image_revision was created."
     }
   },
   "status_counts": {
     "EXTRACTION_FAILED": 11,
     "FETCH_FAILED": 2,
-    "FETCH_OK": 5,
+    "FETCH_OK": 4,
     "INVALID_PRICE": 3,
-    "LOCATION_RESTRICTED": 12,
+    "LOCATION_RESTRICTED": 13,
     "NO_PROMO_FOUND": 2
   },
   "catalogs": [
@@ -279,12 +279,12 @@
       "catalog_id": "walmart-us-country",
       "retailer": "Walmart",
       "source_url_checked": "https://www.walmart.com/ip/Lay-s-Classic-Potato-Chips-8-oz-Bag/33282303",
-      "result": "FETCH_OK",
-      "items_accepted": 1,
-      "items_rejected": 0,
-      "failure_reason": null,
-      "notes": "Current official Walmart product evidence shows Lay's Classic 8 oz as Rollback USD 2.50 from USD 2.97. Walmart corporate separately identifies the same item and price pair among featured Rollbacks at most Walmart stores within its nationwide U.S. savings program. Matching image validated from official Walmart Business/i5.walmartimages.com.",
-      "observed_at": "2026-09-23T08:20:50Z"
+      "result": "LOCATION_RESTRICTED",
+      "items_accepted": 0,
+      "items_rejected": 2,
+      "failure_reason": "The current official Lay’s product page opened with Walmart’s Sacramento 95829 / Sacramento Gerber Rd store context and showed $2.97 without the $2.50 Rollback. Walmart corporate describes $2.50 from $2.97 as available at most Walmart stores nationwide, so broad promotion exists but the inspected current store does not receive it; the country-level price is not defensible. A new Frito-Lay 18-pack candidate was also rejected because the opened official product page showed $8.97 without an explicit normal/reference price.",
+      "notes": "Lay’s item removed from the US feed. Official Lay’s page and Walmart corporate announcement disagree by current store context; corporate says most stores, while selected Sacramento shows only $2.97. Frito-Lay candidate not accepted (INVALID_PRICE). Lay’s image itself remains correctly rendered from the official Walmart CDN.",
+      "observed_at": "2026-09-23T10:35:32Z"
     },
     {
       "country": "US",
