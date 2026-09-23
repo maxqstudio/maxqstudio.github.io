@@ -1,14 +1,12 @@
 {
   "schema": "pretio.product_highlights.audit.v1",
   "schema_version": 1,
-  "run_id": "pretio-daily-promo-20260923T082050Z",
-  "observed_at": "2026-09-23T08:20:50Z",
-  "starting_main_sha": "63533a1d1dbe7b5628884c4a3a7e3a29a7e37cb1",
+  "run_id": "pretio-daily-promo-20260923T082408Z",
+  "observed_at": "2026-09-23T08:24:08Z",
+  "starting_main_sha": "c9254d15bb35ac0e1b7723d3c999a94f4e84cb28",
   "production_changes": {
-    "countries_changed": [
-      "US"
-    ],
-    "items_accepted": 1,
+    "countries_changed": [],
+    "items_accepted": 0,
     "items_removed": 0
   },
   "validation": {
@@ -26,11 +24,12 @@
     }
   },
   "status_counts": {
-    "EXTRACTION_FAILED": 15,
+    "EXTRACTION_FAILED": 12,
     "FETCH_FAILED": 2,
     "FETCH_OK": 4,
     "INVALID_PRICE": 3,
-    "LOCATION_RESTRICTED": 11
+    "LOCATION_RESTRICTED": 12,
+    "NO_PROMO_FOUND": 2
   },
   "catalogs": [
     {
@@ -38,24 +37,24 @@
       "catalog_id": "indomaret-national-live",
       "retailer": "Indomaret",
       "source_url_checked": "https://www.indomaret.co.id/promosi/",
-      "result": "EXTRACTION_FAILED",
+      "result": "NO_PROMO_FOUND",
       "items_accepted": 0,
       "items_rejected": 0,
-      "failure_reason": "Official promo landing fetched and current campaign periods were visible, but item-level product/reference-price/promo-price/image evidence was not extractable from the accessible source.",
-      "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "failure_reason": null,
+      "notes": "Official Indomaret promo page was accessible, but the latest visible dated price-promotion campaigns ended on 2026-09-16; no current item with a complete normal-price/promo-price evidence set was visible for 2026-09-23.",
+      "observed_at": "2026-09-23T08:24:08Z"
     },
     {
       "country": "ID",
       "catalog_id": "alfamart-national-live",
       "retailer": "Alfamart",
       "source_url_checked": "https://blog.alfagift.id/promo/",
-      "result": "EXTRACTION_FAILED",
+      "result": "NO_PROMO_FOUND",
       "items_accepted": 0,
       "items_rejected": 0,
-      "failure_reason": "Official Alfagift promo archive fetched, but no current offer with a complete verifiable reference-price/promo-price/product-image evidence set was extractable.",
-      "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "failure_reason": null,
+      "notes": "Official Alfagift promo archive was accessible. The latest visible price-focused Alfamart campaign ended on 2026-09-16; currently visible September content did not provide a current qualifying item with explicit normal and lower promo price.",
+      "observed_at": "2026-09-23T08:24:08Z"
     },
     {
       "country": "ID",
@@ -230,12 +229,12 @@
       "catalog_id": "idea-rs-country",
       "retailer": "IDEA",
       "source_url_checked": "https://www.idea.rs/Akcije/Katalozi",
-      "result": "EXTRACTION_FAILED",
+      "result": "LOCATION_RESTRICTED",
       "items_accepted": 0,
-      "items_rejected": 0,
-      "failure_reason": "Official catalog source fetched, but item-level reference-price/promo-price/image evidence was not extractable.",
+      "items_rejected": 1,
+      "failure_reason": "Current IDEA Online price pairs were found, but IDEA states online delivery is limited to Beograd and Novi Sad and that assortment/actions may differ by store size and location; country-level applicability is not established.",
       "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "observed_at": "2026-09-23T08:24:08Z"
     },
     {
       "country": "RS",
@@ -329,9 +328,9 @@
       "result": "EXTRACTION_FAILED",
       "items_accepted": 0,
       "items_rejected": 0,
-      "failure_reason": "Official catalog source fetched, but item-level complete production evidence was not extractable.",
+      "failure_reason": "Official Pick n Pay catalog page currently requires JavaScript and did not expose current item-level normal-price/promo-price/image evidence to the verifier.",
       "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "observed_at": "2026-09-23T08:24:08Z"
     },
     {
       "country": "DE",
