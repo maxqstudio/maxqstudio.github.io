@@ -1,14 +1,14 @@
 {
   "schema": "pretio.product_highlights.audit.v1",
   "schema_version": 1,
-  "run_id": "pretio-daily-promo-20260923T080756Z",
-  "observed_at": "2026-09-23T08:07:56Z",
-  "starting_main_sha": "f416068fdd6acaac981427caec9126cbcd0bc7fe",
+  "run_id": "pretio-daily-promo-20260923T081619Z",
+  "observed_at": "2026-09-23T08:16:19Z",
+  "starting_main_sha": "a07c31f615ea71247e7f94411477eafc2499789b",
   "production_changes": {
     "countries_changed": [
-      "CL"
+      "DE"
     ],
-    "items_accepted": 3,
+    "items_accepted": 1,
     "items_removed": 0
   },
   "validation": {
@@ -20,15 +20,15 @@
     "retailer_limit_violations": 0,
     "image_validation": {
       "status": "PASS",
-      "method": "New CL product images were rendered successfully from Jumbo's official VTEX asset CDN; existing CH Denner images remain unchanged.",
+      "method": "The new DE Solevita product image rendered successfully from Lidl's official img.lidl media endpoint; existing CL and CH images were not rewritten.",
       "raw_bytes_hashed": false,
       "revision_policy": "image_revision omitted because exact raw image bytes were not available to the binary fetch client; no synthetic revision was created."
     }
   },
   "status_counts": {
-    "EXTRACTION_FAILED": 17,
+    "EXTRACTION_FAILED": 16,
     "FETCH_FAILED": 2,
-    "FETCH_OK": 2,
+    "FETCH_OK": 3,
     "INVALID_PRICE": 3,
     "LOCATION_RESTRICTED": 11
   },
@@ -337,13 +337,13 @@
       "country": "DE",
       "catalog_id": "lidl-de-country",
       "retailer": "Lidl",
-      "source_url_checked": "https://www.lidl.de/c/online-prospekte/s10005610/",
-      "result": "EXTRACTION_FAILED",
-      "items_accepted": 0,
+      "source_url_checked": "https://unternehmen.lidl.de/pressemitteilungen/2026/260824_preissenkung-saft",
+      "result": "FETCH_OK",
+      "items_accepted": 1,
       "items_rejected": 0,
-      "failure_reason": "Official prospect source fetched, but item-level complete production evidence was not extractable.",
-      "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "failure_reason": null,
+      "notes": "Official Lidl Germany evidence states the Solevita 100% orange juice 1 L price is permanently reduced from EUR 1.99 to EUR 1.39, with no regional price differences and availability across all Lidl stores in Germany. The matching official product image rendered from img.lidl.",
+      "observed_at": "2026-09-23T08:16:19Z"
     },
     {
       "country": "DE",
