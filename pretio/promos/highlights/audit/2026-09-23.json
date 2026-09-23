@@ -1,12 +1,14 @@
 {
   "schema": "pretio.product_highlights.audit.v1",
   "schema_version": 1,
-  "run_id": "pretio-daily-promo-20260923T082408Z",
-  "observed_at": "2026-09-23T08:24:08Z",
-  "starting_main_sha": "c9254d15bb35ac0e1b7723d3c999a94f4e84cb28",
+  "run_id": "pretio-daily-promo-20260923T102403Z",
+  "observed_at": "2026-09-23T10:24:03Z",
+  "starting_main_sha": "99d14b38671d3f3e80247be2539884e6f38a0f5b",
   "production_changes": {
-    "countries_changed": [],
-    "items_accepted": 0,
+    "countries_changed": [
+      "ZA"
+    ],
+    "items_accepted": 4,
     "items_removed": 0
   },
   "validation": {
@@ -18,15 +20,15 @@
     "retailer_limit_violations": 0,
     "image_validation": {
       "status": "PASS",
-      "method": "The new US Lay's image rendered from Walmart's official Walmart Business surface and resolves to the official i5.walmartimages.com CDN; existing CL, DE and CH images were not rewritten.",
+      "method": "Four Pick n Pay product images rendered in official www.pnp.co.za product listing and resolve to the retailer CDN cdn-prd-02.pnp.co.za; exact raw bytes were not fetched. National Pick n Pay catalogue listing corroborated identity and prices.",
       "raw_bytes_hashed": false,
-      "revision_policy": "image_revision omitted because exact raw image bytes were not available to the binary fetch client; no synthetic revision was created."
+      "revision_policy": "image_revision omitted because exact raw bytes were not verified."
     }
   },
   "status_counts": {
-    "EXTRACTION_FAILED": 12,
+    "EXTRACTION_FAILED": 11,
     "FETCH_FAILED": 2,
-    "FETCH_OK": 4,
+    "FETCH_OK": 5,
     "INVALID_PRICE": 3,
     "LOCATION_RESTRICTED": 12,
     "NO_PROMO_FOUND": 2
@@ -325,12 +327,12 @@
       "catalog_id": "pnp-za-country",
       "retailer": "Pick n Pay",
       "source_url_checked": "https://www.pnp.co.za/catalogues",
-      "result": "EXTRACTION_FAILED",
-      "items_accepted": 0,
+      "result": "FETCH_OK",
+      "items_accepted": 4,
       "items_rejected": 0,
-      "failure_reason": "Official Pick n Pay catalog page currently requires JavaScript and did not expose current item-level normal-price/promo-price/image evidence to the verifier.",
-      "notes": null,
-      "observed_at": "2026-09-23T08:24:08Z"
+      "failure_reason": null,
+      "notes": "Four products were verified from the official Pick n Pay Weekend Liquor catalogue linked from the catalogue page, explicitly marked National and valid 23-27 September 2026. The corresponding official product listings exposed matching normal/promo price pairs and matching rendered product images. source_url uses official www.pnp.co.za product pages; image URLs use the official PnP CDN. No location/address was selected.",
+      "observed_at": "2026-09-23T10:24:03Z"
     },
     {
       "country": "DE",
