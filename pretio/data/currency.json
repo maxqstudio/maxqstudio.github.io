@@ -1,0 +1,77 @@
+{
+  "schema": "pretio.currency.v1",
+  "schema_version": 1,
+  "revision": "pretio-currency-v1",
+  "currencies": [
+    {
+      "code": "IDR",
+      "name": "Indonesian Rupiah",
+      "symbol": "Rp",
+      "default_decimal_digits": 0,
+      "symbol_position": "before",
+      "countries": [
+        "ID"
+      ]
+    },
+    {
+      "code": "CLP",
+      "name": "Chilean Peso",
+      "symbol": "$",
+      "default_decimal_digits": 0,
+      "symbol_position": "before",
+      "countries": [
+        "CL"
+      ]
+    },
+    {
+      "code": "RSD",
+      "name": "Serbian Dinar",
+      "symbol": "дин.",
+      "default_decimal_digits": 2,
+      "symbol_position": "after",
+      "countries": [
+        "RS"
+      ]
+    },
+    {
+      "code": "USD",
+      "name": "US Dollar",
+      "symbol": "$",
+      "default_decimal_digits": 2,
+      "symbol_position": "before",
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "code": "ZAR",
+      "name": "South African Rand",
+      "symbol": "R",
+      "default_decimal_digits": 2,
+      "symbol_position": "before",
+      "countries": [
+        "ZA"
+      ]
+    },
+    {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "default_decimal_digits": 2,
+      "symbol_position": "after",
+      "countries": [
+        "DE"
+      ]
+    },
+    {
+      "code": "CHF",
+      "name": "Swiss Franc",
+      "symbol": "CHF",
+      "default_decimal_digits": 2,
+      "symbol_position": "before",
+      "countries": [
+        "CH"
+      ]
+    }
+  ]
+}

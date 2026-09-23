@@ -1,0 +1,9 @@
+{
+  "schema": "pretio.product_highlights.v1",
+  "schema_version": 1,
+  "country": "RS",
+  "currency": "RSD",
+  "revision": "pretio-highlights-RS-empty-v1",
+  "generated_at": "2026-09-23T00:00:00Z",
+  "items": []
+}
