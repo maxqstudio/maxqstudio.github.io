@@ -1,14 +1,14 @@
 {
   "schema": "pretio.product_highlights.audit.v1",
   "schema_version": 1,
-  "run_id": "pretio-daily-promo-20260923T070539Z",
-  "observed_at": "2026-09-23T07:05:39Z",
-  "starting_main_sha": "f3aeab1e129cd1dd09aa03c1b6b367cbb04f50d9",
+  "run_id": "pretio-daily-promo-20260923T080756Z",
+  "observed_at": "2026-09-23T08:07:56Z",
+  "starting_main_sha": "f416068fdd6acaac981427caec9126cbcd0bc7fe",
   "production_changes": {
     "countries_changed": [
-      "CH"
+      "CL"
     ],
-    "items_accepted": 4,
+    "items_accepted": 3,
     "items_removed": 0
   },
   "validation": {
@@ -20,15 +20,15 @@
     "retailer_limit_violations": 0,
     "image_validation": {
       "status": "PASS",
-      "method": "Official product images were rendered successfully from Denner/denner.imgix.net during source verification.",
+      "method": "New CL product images were rendered successfully from Jumbo's official VTEX asset CDN; existing CH Denner images remain unchanged.",
       "raw_bytes_hashed": false,
-      "revision_policy": "image_revision omitted because exact raw image bytes could not be fetched by the binary client; no synthetic revision was created."
+      "revision_policy": "image_revision omitted because exact raw image bytes were not available to the binary fetch client; no synthetic revision was created."
     }
   },
   "status_counts": {
-    "EXTRACTION_FAILED": 18,
+    "EXTRACTION_FAILED": 17,
     "FETCH_FAILED": 2,
-    "FETCH_OK": 1,
+    "FETCH_OK": 2,
     "INVALID_PRICE": 3,
     "LOCATION_RESTRICTED": 11
   },
@@ -158,12 +158,12 @@
       "catalog_id": "jumbo-country-cl",
       "retailer": "Jumbo",
       "source_url_checked": "https://www.jumbo.cl/jumbo-ofertas",
-      "result": "EXTRACTION_FAILED",
-      "items_accepted": 0,
+      "result": "FETCH_OK",
+      "items_accepted": 3,
       "items_rejected": 0,
-      "failure_reason": "Official offers page fetched, but a complete current product/reference-price/promo-price/image evidence set was not extractable.",
-      "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "failure_reason": null,
+      "notes": "Three current Jumbo Days items passed product identity, explicit reference/promo price, CLP normalization, country-level catalog authority, same-site source validation, and official VTEX product-image rendering.",
+      "observed_at": "2026-09-23T08:07:56Z"
     },
     {
       "country": "CL",

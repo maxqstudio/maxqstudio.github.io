@@ -1,7 +1,7 @@
 {
   "schema": "pretio.product_highlights.index.v1",
   "schema_version": 1,
-  "revision": "2026-09-23T07:05:39Z",
+  "revision": "2026-09-23T08:07:56Z",
   "countries": [
     {
       "code": "ID",
@@ -11,8 +11,8 @@
     },
     {
       "code": "CL",
-      "revision": "pretio-highlights-CL-empty-v1",
-      "sha256": "0fd1c053f320f3ef2e851c44e5896b4f741da70e6339adc084b2be39ee63b546",
+      "revision": "pretio-highlights-CL-20260923T080756Z",
+      "sha256": "b2eb6277e01a8b50b0ae2d8d2fb01ae43fc8a5df0605de97ac48436fad24ceb1",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/CL.json"
     },
     {

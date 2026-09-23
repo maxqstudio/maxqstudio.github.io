@@ -3,7 +3,53 @@
   "schema_version": 1,
   "country": "CL",
   "currency": "CLP",
-  "revision": "pretio-highlights-CL-empty-v1",
-  "generated_at": "2026-09-23T00:00:00Z",
-  "items": []
+  "revision": "pretio-highlights-CL-20260923T080756Z",
+  "generated_at": "2026-09-23T08:07:56Z",
+  "items": [
+    {
+      "id": "jumbo-cl-1589277-pak",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "product_name": "Pack 12 un. Leche Soprole Entera Natural 1 L",
+      "brand": "Soprole",
+      "package_size": "12 x 1 L",
+      "normal_price": "16200",
+      "promo_price": "13200",
+      "currency": "CLP",
+      "image_url": "https://jumbocl.vtexassets.com/arquivos/ids/351685-900-900?aspect=true&height=900&width=900",
+      "source_url": "https://www.jumbo.cl/pack-leche-entera-soprole-1-l-12-unid/p",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
+      "observed_at": "2026-09-23T08:07:56Z"
+    },
+    {
+      "id": "jumbo-cl-1842649",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "product_name": "Huevos Coliumo Premium Grandes Blancos 30 un.",
+      "brand": "Coliumo",
+      "package_size": "30 un.",
+      "normal_price": "10610",
+      "promo_price": "7990",
+      "currency": "CLP",
+      "image_url": "https://jumbocl.vtexassets.com/arquivos/ids/512617-900-900?aspect=true&height=900&width=900",
+      "source_url": "https://www.jumbo.cl/huevo-grande-blanco-30-un/p",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
+      "observed_at": "2026-09-23T08:07:56Z"
+    },
+    {
+      "id": "jumbo-cl-915067",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "product_name": "Aceite de Oliva Las Doscientas Extra Virgen 500 ml",
+      "brand": "Las Doscientas",
+      "package_size": "500 ml",
+      "normal_price": "9340",
+      "promo_price": "6790",
+      "currency": "CLP",
+      "image_url": "https://jumbocl.vtexassets.com/arquivos/ids/352472-900-900?aspect=true&height=900&width=900",
+      "source_url": "https://www.jumbo.cl/aceite-de-oliva-las-doscientas-500-ml-blend-extra-virgen/p",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
+      "observed_at": "2026-09-23T08:07:56Z"
+    }
+  ]
 }
