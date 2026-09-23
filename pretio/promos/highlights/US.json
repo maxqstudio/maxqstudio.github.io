@@ -3,7 +3,23 @@
   "schema_version": 1,
   "country": "US",
   "currency": "USD",
-  "revision": "pretio-highlights-US-empty-v1",
-  "generated_at": "2026-09-23T00:00:00Z",
-  "items": []
+  "revision": "pretio-highlights-US-20260923T082050Z",
+  "generated_at": "2026-09-23T08:20:50Z",
+  "items": [
+    {
+      "id": "walmart-us-33282303",
+      "catalog_id": "walmart-us-country",
+      "retailer": "Walmart",
+      "product_name": "Lay's Classic Potato Chips",
+      "brand": "Lay's",
+      "package_size": "8 oz",
+      "normal_price": "2.97",
+      "promo_price": "2.50",
+      "currency": "USD",
+      "image_url": "https://i5.walmartimages.com/seo/Lay-s-Classic-Potato-Chips-8-oz-Bag_a2b2467f-cfee-4785-8220-bd0dfa344aa9.95165b9fe53a529f7e8ceaa732323e27.jpeg",
+      "source_url": "https://www.walmart.com/ip/Lay-s-Classic-Potato-Chips-8-oz-Bag/33282303",
+      "logo_url": "https://www.walmart.com/favicon.ico",
+      "observed_at": "2026-09-23T08:20:50Z"
+    }
+  ]
 }

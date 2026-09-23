@@ -1,12 +1,12 @@
 {
   "schema": "pretio.product_highlights.audit.v1",
   "schema_version": 1,
-  "run_id": "pretio-daily-promo-20260923T081619Z",
-  "observed_at": "2026-09-23T08:16:19Z",
-  "starting_main_sha": "a07c31f615ea71247e7f94411477eafc2499789b",
+  "run_id": "pretio-daily-promo-20260923T082050Z",
+  "observed_at": "2026-09-23T08:20:50Z",
+  "starting_main_sha": "63533a1d1dbe7b5628884c4a3a7e3a29a7e37cb1",
   "production_changes": {
     "countries_changed": [
-      "DE"
+      "US"
     ],
     "items_accepted": 1,
     "items_removed": 0
@@ -20,15 +20,15 @@
     "retailer_limit_violations": 0,
     "image_validation": {
       "status": "PASS",
-      "method": "The new DE Solevita product image rendered successfully from Lidl's official img.lidl media endpoint; existing CL and CH images were not rewritten.",
+      "method": "The new US Lay's image rendered from Walmart's official Walmart Business surface and resolves to the official i5.walmartimages.com CDN; existing CL, DE and CH images were not rewritten.",
       "raw_bytes_hashed": false,
       "revision_policy": "image_revision omitted because exact raw image bytes were not available to the binary fetch client; no synthetic revision was created."
     }
   },
   "status_counts": {
-    "EXTRACTION_FAILED": 16,
+    "EXTRACTION_FAILED": 15,
     "FETCH_FAILED": 2,
-    "FETCH_OK": 3,
+    "FETCH_OK": 4,
     "INVALID_PRICE": 3,
     "LOCATION_RESTRICTED": 11
   },
@@ -277,13 +277,13 @@
       "country": "US",
       "catalog_id": "walmart-us-country",
       "retailer": "Walmart",
-      "source_url_checked": "https://www.walmart.com/shop/deals/shop-advertised-deals",
-      "result": "EXTRACTION_FAILED",
-      "items_accepted": 0,
+      "source_url_checked": "https://www.walmart.com/ip/Lay-s-Classic-Potato-Chips-8-oz-Bag/33282303",
+      "result": "FETCH_OK",
+      "items_accepted": 1,
       "items_rejected": 0,
-      "failure_reason": "Official deals source fetched, but no complete country-scope product/reference-price/promo-price/image evidence set was verified.",
-      "notes": null,
-      "observed_at": "2026-09-23T07:05:39Z"
+      "failure_reason": null,
+      "notes": "Current official Walmart product evidence shows Lay's Classic 8 oz as Rollback USD 2.50 from USD 2.97. Walmart corporate separately identifies the same item and price pair among featured Rollbacks at most Walmart stores within its nationwide U.S. savings program. Matching image validated from official Walmart Business/i5.walmartimages.com.",
+      "observed_at": "2026-09-23T08:20:50Z"
     },
     {
       "country": "US",
