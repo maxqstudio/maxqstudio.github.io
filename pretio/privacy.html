@@ -19,7 +19,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> September 22, 2026</p>
+      <p><strong>Last updated:</strong> September 24, 2026</p>
 
       <div class="content-card">
         <h3>Your shopping records remain local</h3>
@@ -47,12 +47,13 @@
 
 
       <h2>4. Location and local catalog relevance</h2>
-      <p>Pretio may use your general location to make catalog content and online comparison results more relevant to your area. Pretio can infer your country from your internet connection, including your IP address. If you choose to grant Android location permission, Pretio may also use foreground approximate device location to improve the selected country, province, or city. Pretio does not require background location, and precise location is not required for these features.</p>
-      <p>You may choose or change your country, province, or city manually. A manual location selection takes priority over automatically detected location until you change it. If you do not grant device-location permission, Pretio can continue to use IP-based or manually selected location.</p>
-      <p>Pretio retrieves its supported location directory and catalog directory from Max-Q Studio web resources. The selected country, province, or city is used to decide which catalogs are relevant. A supported location may have no available catalog yet.</p>
+      <p>Pretio uses the country selected for your Google Play account to choose country-level catalog content, Product Highlights, and the supported location directory. Pretio obtains this country from Google Play Billing configuration. This is your Google Play country, not a measurement of your current physical location, and it may differ from the country where you are physically located.</p>
+      <p>Pretio uses the Google Play country result for the current app session and does not store or persist that result. Pretio does not use this value to create or enhance a user profile, or for advertising or marketing targeting. The country is not manually editable in Pretio.</p>
+      <p>You may select a province, state, region, city, or municipality within the current Google Play country where supported. If you choose to grant Android location permission and explicitly request approximate location, Pretio may use foreground approximate device location to refine province or city within the same Google Play country. Approximate device location does not override the Google Play country. Pretio does not require background location or precise location for these features.</p>
+      <p>Pretio does not use a dedicated IP-geolocation service to determine your country and does not send a country-detection request to ipapi.co for this feature. Google Play and other network services may still receive ordinary technical network information, such as your IP address, under their own policies when your device communicates with them.</p>
+      <p>Pretio retrieves its supported location directory and catalog directory from Max-Q Studio web resources. The current country, province, or city context is used to decide which catalogs and Product Highlights are relevant. A supported location may have no available catalog or Product Highlights yet.</p>
       <p>Pretio may also download supported remote language packs from Max-Q Studio web resources when you choose a remotely delivered language. These requests may expose ordinary network information, such as your IP address, to the hosting infrastructure. Pretio does not upload your local products, saved prices, shopping list, notes, backups, or exports as part of a language-pack download.</p>
-      <p><strong>IP-country provider:</strong> When Pretio uses the IP-country fallback, it sends an HTTPS request to <code>https://ipapi.co/country/</code>. That request exposes the requesting public IP address to <strong>ipapi.co</strong>, operated by <strong>Kloudend, Inc.</strong>, as the network data recipient, only to obtain a two-letter country code and country-level location context. Pretio does not send raw device latitude or longitude to ipapi.co, and raw GPS coordinates are not included in that request. Read the <a href="https://ipapi.co/privacy/" rel="noopener noreferrer">ipapi.co privacy policy</a>.</p>
-      <p>For Compare Online, Pretio may use the resolved location context, such as country, province, city, language, or currency, to localize the visible search experience. Pretio does not need to send raw device latitude or longitude to Google Shopping for this purpose. A website opened inside or outside Pretio may have its own separate geolocation request and privacy practices.</p>
+      <p>For Compare Online, Pretio may use the current location context, such as country, province, city, language, or currency, to localize the visible search experience. Pretio does not need to send raw device latitude or longitude to Google Shopping for this purpose. A website opened inside or outside Pretio may have its own separate geolocation request and privacy practices.</p>
 
       <h2>5. Advertising</h2>
       <p>The free version of Pretio may use Google AdMob to display banner advertisements and rewarded advertisements. A rewarded advertisement is shown only after you choose to watch it, for example before an eligible saved-data export or Shopping List receipt export.</p>
@@ -84,7 +85,7 @@
       <p>A valid Premium entitlement removes Pretio's banner ads and the rewarded-ad requirement for supported saved-data CSV exports and Shopping List receipt PDF exports. If a purchase is refunded, revoked, cancelled, reversed, or cannot be verified, Premium access may be removed.</p>
 
       <h2>10. Third-party services</h2>
-      <p>Depending on the features available in your version of Pretio, third-party services may include Google Shopping results served through Google Search, Google AdMob, Google User Messaging Platform, Google Play Billing, Android link handling, web browsers, marketplace apps, and destination websites opened from Compare Online. These providers process information under their own terms and privacy policies.</p>
+      <p>Depending on the features available in your version of Pretio, third-party services may include Google Shopping results served through Google Search, Google AdMob, Google User Messaging Platform, Google Play Billing, Android link handling, web browsers, marketplace apps, and destination websites opened from Compare Online. Google Play Billing may also provide the Google Play country used for Pretio's country-level local relevance. These providers process information under their own terms and privacy policies.</p>
 
       <h2>11. Data security</h2>
       <p>We take reasonable steps to keep Pretio's local-first design and monetization integrations separated. However, no device, storage method, network transmission, or third-party service can be guaranteed to be completely secure.</p>
@@ -96,8 +97,8 @@
         <li>allow or deny Android notification permission; denying it disables the optional inactivity reminder without blocking Pretio's core features;</li>
         <li>manage advertising settings on your Android device;</li>
         <li>choose not to use Compare Online;</li>
-        <li>deny device-location permission and continue using IP-based or manual location;</li>
-        <li>change your country, province, or city manually where supported;</li>
+        <li>deny device-location permission and continue using the Google Play country for country-level relevance;</li>
+        <li>select or change province, state, region, city, or municipality manually where supported; the country itself follows your Google Play country and is not manually editable in Pretio;</li>
         <li>use Google, browser, and Android privacy controls where available;</li>
         <li>choose not to watch a rewarded advertisement;</li>
         <li>purchase Pretio Premium, where available, to remove Pretio ads and avoid rewarded-ad requirements for supported exports;</li>
