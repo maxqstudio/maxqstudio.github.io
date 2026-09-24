@@ -19,7 +19,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> September 24, 2026</p>
+      <p><strong>Last updated:</strong> September 25, 2026</p>
 
       <div class="content-card">
         <h3>Your shopping records remain local</h3>
@@ -48,7 +48,7 @@
 
       <h2>4. Location and local catalog relevance</h2>
       <p>Pretio uses the country selected for your Google Play account to choose country-level catalog content, Product Highlights, and the supported location directory. Pretio obtains this country from Google Play Billing configuration. This is your Google Play country, not a measurement of your current physical location, and it may differ from the country where you are physically located.</p>
-      <p>Pretio uses the Google Play country result only for the current app session. Pretio does not write that result to its persistent database, preferences, user profile, analytics, or advertising data, and does not use it to create or enhance a user profile or for advertising or marketing targeting. The country is not manually editable in Pretio.</p>
+      <p>Pretio resolves Google Play country for each app session and does not store the Billing configuration result as a persistent Country setting or future Country authority. For app functionality, Pretio may cache country-specific Location V2 directory content locally and persist country-scoped canonical identities for selected provinces, states, regions, cities, or municipalities. On a later launch, Pretio resolves Google Play country first and then validates saved subdivision identities against that country; cached directory content and saved subdivisions cannot establish Country. This information is not used to create or enhance a user profile or for advertising or marketing targeting. Country is not manually editable in Pretio.</p>
       <p>You may select a province, state, region, city, or municipality within the current Google Play country where supported. If you choose to grant Android location permission and explicitly request approximate location, Pretio may use foreground approximate device location to refine province or city within the same Google Play country. Approximate device location does not override the Google Play country. Pretio does not require background location or precise location for these features.</p>
       <p>Pretio does not use a dedicated IP-geolocation service to determine your country and does not send a country-detection request to ipapi.co for this feature. Google Play and other network services may still receive ordinary technical network information, such as your IP address, under their own policies when your device communicates with them.</p>
       <p>Pretio retrieves its supported location directory and catalog directory from Max-Q Studio web resources. The current country, province, or city context is used to decide which catalogs and Product Highlights are relevant. A supported location may have no available catalog or Product Highlights yet.</p>
