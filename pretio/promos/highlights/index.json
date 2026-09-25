@@ -1,7 +1,7 @@
 {
   "schema": "pretio.product_highlights.index.v1",
   "schema_version": 1,
-  "revision": "2026-09-23T10:35:32Z",
+  "revision": "2026-09-25T05:38:08Z",
   "countries": [
     {
       "code": "ID",
@@ -17,8 +17,8 @@
     },
     {
       "code": "RS",
-      "revision": "pretio-highlights-RS-empty-v1",
-      "sha256": "31c527ee5c7dabc5a5c1e321bd48c000d970ac6f95b869dc7a0b4fdaa491a1c6",
+      "revision": "pretio-highlights-RS-20260925T053808Z",
+      "sha256": "fcb7749011ab34a976f0624da0bfd53b4efd6593042d92cd48f424b7f68a0700",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/RS.json"
     },
     {
