@@ -3,8 +3,8 @@
   "schema_version": 1,
   "country": "DE",
   "currency": "EUR",
-  "revision": "pretio-highlights-DE-20260923T081619Z",
-  "generated_at": "2026-09-23T08:16:19Z",
+  "revision": "pretio-highlights-DE-20260925T054324Z",
+  "generated_at": "2026-09-25T05:43:24Z",
   "items": [
     {
       "id": "lidl-de-solevita-orangensaft-100-1l",
@@ -19,8 +19,26 @@
       "image_url": "https://img.lidl/RhXEVZziQNZd2RmEZv4d6EgSiswcgSnarPUm9Kjazdc/dpr%3A1/g%3Ace%3A0%3A0/h%3A491/rt%3Afill/w%3A872/czM6Ly9jb3Jwb3JhdGUvY29ycG9yYXRlL2ltYWdlcy85LzEvMi80LzE2NDIxOS0xLWdlci1ERS82NTkzY2Q5ODdhMzgtMjYwODI0X0xpZGxfRm90b19QcmVpc3Nlbmt1bmctU2FmdC5qcGc",
       "source_url": "https://unternehmen.lidl.de/pressemitteilungen/2026/260824_preissenkung-saft",
       "logo_url": "https://www.lidl.de/apple-touch-icon.png",
-      "observed_at": "2026-09-23T08:16:19Z",
-      "valid_from": "2026-08-24"
+      "observed_at": "2026-09-25T05:43:24Z",
+      "valid_from": "2026-08-24",
+      "valid_until": null
+    },
+    {
+      "id": "lidl-de-alesto-nuts-royal-200g",
+      "catalog_id": "lidl-de-country",
+      "retailer": "Lidl",
+      "product_name": "Alesto Feine Nussvariation (Nuts Royal)",
+      "brand": "Alesto",
+      "package_size": "200 g",
+      "normal_price": "3.39",
+      "promo_price": "2.99",
+      "currency": "EUR",
+      "image_url": "https://img.lidl/8T0sSvIIFoLwmlr2uS5CVDvABDOsp834-il19dRmpYc/dpr%3A1/g%3Ace%3A0%3A0/h%3A491/rt%3Afill/w%3A872/czM6Ly9jb3Jwb3JhdGUvY29ycG9yYXRlL2ltYWdlcy8zLzEvMy81LzIwNTMxMy0xLWdlci1ERS80ZGExNGZmOWZmMDItMjYwOTE5X0xpZGxfUHJlaXNzZW5rdW5nX051ZXNzZS5qcGc",
+      "source_url": "https://unternehmen.lidl.de/pressemitteilungen/2026/260919_lidl_pi_preissenkung-nuesse",
+      "logo_url": "https://www.lidl.de/apple-touch-icon.png",
+      "observed_at": "2026-09-25T05:43:24Z",
+      "valid_from": "2026-09-19",
+      "valid_until": null
     }
   ]
 }
