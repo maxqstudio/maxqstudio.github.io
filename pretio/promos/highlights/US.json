@@ -3,7 +3,24 @@
   "schema_version": 1,
   "country": "US",
   "currency": "USD",
-  "revision": "pretio-highlights-US-20260923T103532Z",
-  "generated_at": "2026-09-23T10:35:32Z",
-  "items": []
+  "revision": "pretio-highlights-US-20260925T055835Z",
+  "generated_at": "2026-09-25T05:58:35Z",
+  "items": [
+    {
+      "id": "target-us-country:13349580",
+      "catalog_id": "target-us-country",
+      "retailer": "Target",
+      "product_name": "Rao's Homemade Marinara Sauce Premium Quality All Natural Tomato Sauce & Pasta Sauce Keto Friendly & Carb Conscious - 24oz",
+      "brand": "Rao's Homemade",
+      "package_size": "24 oz",
+      "normal_price": "7.59",
+      "promo_price": "5.99",
+      "currency": "USD",
+      "image_url": "https://target.scene7.com/is/image/Target/GUEST_3e8fd977-2095-4b63-9740-eaf14fa0d41b?fmt=pjpeg&hei=300&wid=300",
+      "source_url": "https://www.target.com/p/-/A-13349580",
+      "observed_at": "2026-09-25T05:58:35Z",
+      "valid_from": null,
+      "valid_until": "2026-09-26"
+    }
+  ]
 }
