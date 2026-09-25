@@ -3,8 +3,8 @@
   "schema_version": 1,
   "country": "ZA",
   "currency": "ZAR",
-  "revision": "pretio-highlights-ZA-20260923T102403Z",
-  "generated_at": "2026-09-23T10:24:03Z",
+  "revision": "pretio-highlights-ZA-20260925T054000Z",
+  "generated_at": "2026-09-25T05:40:00Z",
   "items": [
     {
       "id": "pnp-za-country:russian-bear-original-vodka-750ml",
@@ -69,6 +69,22 @@
       "observed_at": "2026-09-23T10:24:03Z",
       "valid_from": "2026-09-23",
       "valid_until": "2026-09-27"
+    },
+    {
+      "id": "pnp-za-country:mitchum-unscented-clear-gel-antiperspirant-deodorant-63g",
+      "catalog_id": "pnp-za-country",
+      "retailer": "Pick n Pay",
+      "product_name": "Mitchum Unscented Clear Gel Antiperspirant Deodorant",
+      "brand": "Mitchum",
+      "package_size": "63 g",
+      "normal_price": "114.99",
+      "promo_price": "86.99",
+      "currency": "ZAR",
+      "image_url": "https://cdn-prd-02.pnp.co.za/sys-master/images/h3f/hd5/11121973329950/silo-product-image-v2-16Mar2023-181817-309973155008-Straight_on-119262-4061_400Wx400H",
+      "source_url": "https://www.pnp.co.za/mitchum-unscented-clear-gel-antiperspirant-deodorant-63g/p/000000000000119970_EA",
+      "observed_at": "2026-09-25T05:40:00Z",
+      "valid_from": "2026-09-25",
+      "valid_until": "2026-10-06"
     }
   ]
 }
