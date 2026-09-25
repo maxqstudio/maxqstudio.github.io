@@ -3,7 +3,58 @@
   "schema_version": 1,
   "country": "RS",
   "currency": "RSD",
-  "revision": "pretio-highlights-RS-empty-v1",
-  "generated_at": "2026-09-23T00:00:00Z",
-  "items": []
+  "revision": "pretio-highlights-RS-20260925T053808Z",
+  "generated_at": "2026-09-25T05:38:08Z",
+  "items": [
+    {
+      "id": "lidl-rs-p11214496-rukola",
+      "catalog_id": "lidl-rs-country",
+      "retailer": "Lidl Srbija",
+      "product_name": "Rukola",
+      "package_size": "125 g",
+      "normal_price": "159.99",
+      "promo_price": "119.99",
+      "currency": "RSD",
+      "image_url": "https://www.lidl.rs/assets/gcpda3d0e616b104ecd8603a100a9dbbb58.png",
+      "source_url": "https://www.lidl.rs/p/rukola/p11214496",
+      "logo_url": "https://www.lidl.rs/apple-touch-icon.png",
+      "observed_at": "2026-09-25T05:38:08Z",
+      "valid_from": "2026-09-24",
+      "valid_until": "2026-09-27"
+    },
+    {
+      "id": "lidl-rs-p11264977-pizza-sunka",
+      "catalog_id": "lidl-rs-country",
+      "retailer": "Lidl Srbija",
+      "product_name": "Pizza šunka",
+      "brand": "Pikok",
+      "package_size": "500 g",
+      "normal_price": "299.99",
+      "promo_price": "259.99",
+      "currency": "RSD",
+      "image_url": "https://www.lidl.rs/assets/gcpc59adbafdb074fa78954113d364a2458.png",
+      "source_url": "https://www.lidl.rs/p/pikok-pizza-sunka/p11264977",
+      "logo_url": "https://www.lidl.rs/apple-touch-icon.png",
+      "observed_at": "2026-09-25T05:38:08Z",
+      "valid_from": "2026-09-24",
+      "valid_until": "2026-09-27"
+    },
+    {
+      "id": "lidl-rs-p11495235-suvi-vrat",
+      "catalog_id": "lidl-rs-country",
+      "retailer": "Lidl Srbija",
+      "product_name": "Suvi vrat",
+      "brand": "Pikok",
+      "package_size": "100 g",
+      "normal_price": "246.99",
+      "promo_price": "189.99",
+      "currency": "RSD",
+      "image_url": "https://www.lidl.rs/assets/gcp90dce87b87e24dc7a5e91d92dd1f74dc.png",
+      "source_url": "https://www.lidl.rs/p/pikok-suvi-vrat/p11495235",
+      "logo_url": "https://www.lidl.rs/apple-touch-icon.png",
+      "observed_at": "2026-09-25T05:38:08Z",
+      "valid_from": "2026-09-24",
+      "valid_until": "2026-09-27"
+    }
+  ]
 }
