@@ -3,8 +3,8 @@
   "schema_version": 1,
   "country": "ZA",
   "currency": "ZAR",
-  "revision": "pretio-highlights-ZA-20260925T054000Z",
-  "generated_at": "2026-09-25T05:40:00Z",
+  "revision": "pretio-highlights-ZA-20260925T060311Z",
+  "generated_at": "2026-09-25T06:03:11Z",
   "items": [
     {
       "id": "pnp-za-country:russian-bear-original-vodka-750ml",
@@ -18,25 +18,9 @@
       "currency": "ZAR",
       "image_url": "https://cdn-prd-02.pnp.co.za/sys-master/images/h88/hd1/13990387580958/silo-product-image-v2-01Aug2025-180043-6001466000140-Straight_on-338943-52_400Wx400H",
       "source_url": "https://www.pnp.co.za/russian-bear-original-vodka-750ml/p/000000000000182801_EA",
-      "observed_at": "2026-09-23T10:24:03Z",
-      "valid_from": "2026-09-23",
-      "valid_until": "2026-09-27"
-    },
-    {
-      "id": "pnp-za-country:spier-signature-chenin-blanc-750ml",
-      "catalog_id": "pnp-za-country",
-      "retailer": "Pick n Pay",
-      "product_name": "Spier Signature Collection Chenin Blanc White Wine",
-      "brand": "Spier",
-      "package_size": "750 ml",
-      "normal_price": "94.99",
-      "promo_price": "79.99",
-      "currency": "ZAR",
-      "image_url": "https://cdn-prd-02.pnp.co.za/sys-master/images/h29/hb6/32493376798750/silo-product-image-v2-09Jan2026-090050-6001522000367-Straight_on-393488-1974_400Wx400H",
-      "source_url": "https://www.pnp.co.za/spier-signature-collection-chenin-blanc-white-wine-750ml/p/000000000000131457_EA",
-      "observed_at": "2026-09-23T10:24:03Z",
-      "valid_from": "2026-09-23",
-      "valid_until": "2026-09-27"
+      "observed_at": "2026-09-25T06:03:11Z",
+      "valid_from": "2026-09-25",
+      "valid_until": "2026-10-06"
     },
     {
       "id": "pnp-za-country:nederburg-baronne-750ml",
@@ -50,25 +34,9 @@
       "currency": "ZAR",
       "image_url": "https://cdn-prd-02.pnp.co.za/sys-master/images/h36/h4f/65376078921758/silo-product-image-v2-24Jul2026-060042-6001452296861-Straight_on-448997-197_400Wx400H",
       "source_url": "https://www.pnp.co.za/nederburg-baronne-750ml/p/000000000000164313_EA",
-      "observed_at": "2026-09-23T10:24:03Z",
-      "valid_from": "2026-09-23",
-      "valid_until": "2026-09-27"
-    },
-    {
-      "id": "pnp-za-country:du-toitskloof-pinotage-rose-3l",
-      "catalog_id": "pnp-za-country",
-      "retailer": "Pick n Pay",
-      "product_name": "Du Toitskloof Pinotage Rose",
-      "brand": "Du Toitskloof",
-      "package_size": "3 L",
-      "normal_price": "184.99",
-      "promo_price": "149.99",
-      "currency": "ZAR",
-      "image_url": "https://cdn-prd-02.pnp.co.za/sys-master/images/h3f/h3f/12459460067358/silo-product-image-v2-10Jun2025-180035-6007676002837-Straight_on-329106-603_400Wx400H",
-      "source_url": "https://www.pnp.co.za/du-toitskloof-pinotage-rose-3l/p/000000000000860025_EA",
-      "observed_at": "2026-09-23T10:24:03Z",
-      "valid_from": "2026-09-23",
-      "valid_until": "2026-09-27"
+      "observed_at": "2026-09-25T06:03:11Z",
+      "valid_from": "2026-09-25",
+      "valid_until": "2026-10-04"
     },
     {
       "id": "pnp-za-country:mitchum-unscented-clear-gel-antiperspirant-deodorant-63g",
@@ -82,7 +50,7 @@
       "currency": "ZAR",
       "image_url": "https://cdn-prd-02.pnp.co.za/sys-master/images/h3f/hd5/11121973329950/silo-product-image-v2-16Mar2023-181817-309973155008-Straight_on-119262-4061_400Wx400H",
       "source_url": "https://www.pnp.co.za/mitchum-unscented-clear-gel-antiperspirant-deodorant-63g/p/000000000000119970_EA",
-      "observed_at": "2026-09-25T05:40:00Z",
+      "observed_at": "2026-09-25T06:03:11Z",
       "valid_from": "2026-09-25",
       "valid_until": "2026-10-06"
     }
