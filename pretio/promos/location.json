@@ -6251,6 +6251,24 @@
           ]
         }
       ]
+    },
+    {
+      "type": "country",
+      "country_code": "TR",
+      "country": "Türkiye",
+      "provinces": []
+    },
+    {
+      "type": "country",
+      "country_code": "NA",
+      "country": "Namibia",
+      "provinces": []
+    },
+    {
+      "type": "country",
+      "country_code": "PT",
+      "country": "Portugal",
+      "provinces": []
     }
   ]
 }
