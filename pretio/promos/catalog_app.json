@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_revision": "pretio-country-catalog-expansion-v3-2026-09-23",
+  "catalog_revision": "pretio-country-catalog-expansion-v4-2026-09-28",
   "location_contract": {
     "location_schema": "pretio.location.v1",
     "location_url": "https://maxqstudio.dev/pretio/promos/location.json",
@@ -14,22 +14,31 @@
     "no_catalog_message": "No catalog yet in this location"
   },
   "allowed_hosts": [
+    "agra.com.na",
     "alfagift.id",
     "blog.alfagift.id",
+    "cdn.foodloversmarket.co.za",
     "cdn.jsdelivr.net",
     "fe-browse-alvi-gcp-alvi-prod.alvi.cl",
     "filiale.kaufland.de",
+    "foodloversmarket.co.za",
     "graph.facebook.com",
     "indogrosir.co.id",
+    "intermarche.pt",
+    "kurumsal.sokmarket.com.tr",
     "psrs.alfamart.co.id",
     "sortiment.lidl.ch",
     "super.lider.cl",
     "transmart.co.id",
     "upload.wikimedia.org",
+    "www.a101.com.tr",
     "www.aldi-nord.de",
     "www.aldi-sued.de",
     "www.aldi-suisse.ch",
     "www.aldi.us",
+    "www.auchan.pt",
+    "www.bim.com.tr",
+    "www.continente.pt",
     "www.coop.ch",
     "www.denner.ch",
     "www.hypermart.co.id",
@@ -40,11 +49,13 @@
     "www.kroger.com",
     "www.lidl.ch",
     "www.lidl.de",
+    "www.lidl.pt",
     "www.lidl.rs",
     "www.lottemart.co.id",
     "www.maxi.rs",
     "www.mayorista10.cl",
     "www.migros.ch",
+    "www.money.com.tr",
     "www.pnp.co.za",
     "www.rewe.de",
     "www.santaisabel.cl",
@@ -1635,6 +1646,266 @@
         }
       ],
       "logo_url": "https://www.denner.ch/favicon-32x32.png",
+      "image_url": null
+    },
+    {
+      "id": "bim-tr-country",
+      "merchant": "BİM",
+      "publisher": "BİM",
+      "title": "BİM Aktüel Ürünler",
+      "summary": "BİM'in güncel aktüel ürün ve indirimlerini inceleyin.",
+      "coverage_type": "national",
+      "coverage_label": "Türkiye (national offers)",
+      "content_type": "webview",
+      "url": "https://www.bim.com.tr/Categories/254/aktuel-urunler.aspx",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 570,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "TR",
+          "country": "Türkiye"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bim_%28company%29_logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "a101-tr-country",
+      "merchant": "A101",
+      "publisher": "A101",
+      "title": "A101 Aldın Aldın",
+      "summary": "A101 Aldın Aldın kampanyasındaki güncel ürünleri inceleyin.",
+      "coverage_type": "national",
+      "coverage_label": "Türkiye (national offers)",
+      "content_type": "webview",
+      "url": "https://www.a101.com.tr/liste/aldin-aldin",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 580,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "TR",
+          "country": "Türkiye"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/A101_logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "sok-tr-country",
+      "merchant": "ŞOK",
+      "publisher": "ŞOK Marketler",
+      "title": "ŞOK Haftanın Fırsatları",
+      "summary": "ŞOK'un haftalık fırsat ve kampanyalı ürünlerini inceleyin.",
+      "coverage_type": "national",
+      "coverage_label": "Türkiye (national offers)",
+      "content_type": "webview",
+      "url": "https://kurumsal.sokmarket.com.tr/firsatlar/haftanin-firsatlari",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 590,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "TR",
+          "country": "Türkiye"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/%C5%9EOK_Market_logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "migros-tr-country",
+      "merchant": "Migros",
+      "publisher": "Migros",
+      "title": "Migroskop Dijital",
+      "summary": "Migros'un güncel Migroskop dijital kataloğunu inceleyin.",
+      "coverage_type": "national",
+      "coverage_label": "Türkiye (national offers)",
+      "content_type": "webview",
+      "url": "https://www.money.com.tr/migroskop-dijital",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 600,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "TR",
+          "country": "Türkiye"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/MiGROS_Logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "agra-na-country",
+      "merchant": "Agra",
+      "publisher": "Agra",
+      "title": "Agra Specials & Promotions",
+      "summary": "Browse current official Agra specials and promotions across Namibia.",
+      "coverage_type": "national",
+      "coverage_label": "Namibia (national offers)",
+      "content_type": "webview",
+      "url": "https://agra.com.na/index.php/retail-wholesale/specials-promotions",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 610,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "NA",
+          "country": "Namibia"
+        }
+      ],
+      "logo_url": "https://agra.com.na/images/slider/logo-with-outline.png",
+      "image_url": null
+    },
+    {
+      "id": "food-lovers-market-na-country",
+      "merchant": "Food Lover's Market",
+      "publisher": "Food Lover's Market",
+      "title": "Food Lover's Market Namibia Specials",
+      "summary": "Browse official Food Lover's Market specials for Namibia.",
+      "coverage_type": "national",
+      "coverage_label": "Namibia (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://foodloversmarket.co.za/namibia/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 620,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "NA",
+          "country": "Namibia"
+        }
+      ],
+      "logo_url": "https://cdn.foodloversmarket.co.za/wp-content/uploads/20231214113435/white-flm-logo_1-line-1.png",
+      "image_url": null
+    },
+    {
+      "id": "continente-pt-country",
+      "merchant": "Continente",
+      "publisher": "Continente",
+      "title": "Folhetos Continente",
+      "summary": "Consulte os folhetos e promoções oficiais do Continente.",
+      "coverage_type": "national",
+      "coverage_label": "Portugal (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.continente.pt/folhetos/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 630,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PT",
+          "country": "Portugal"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Logo_Continente.svg",
+      "image_url": null
+    },
+    {
+      "id": "lidl-pt-country",
+      "merchant": "Lidl",
+      "publisher": "Lidl Portugal",
+      "title": "Folhetos Lidl Portugal",
+      "summary": "Consulte os folhetos e promoções oficiais do Lidl Portugal.",
+      "coverage_type": "national",
+      "coverage_label": "Portugal (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.lidl.pt/c/folhetos/s10020672",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 640,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PT",
+          "country": "Portugal"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Lidl_logo.png",
+      "image_url": null
+    },
+    {
+      "id": "auchan-pt-country",
+      "merchant": "Auchan",
+      "publisher": "Auchan Retail Portugal",
+      "title": "Folhetos Auchan",
+      "summary": "Consulte os folhetos e promoções oficiais do Auchan.",
+      "coverage_type": "national",
+      "coverage_label": "Portugal (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.auchan.pt/pt/folhetos/",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 650,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PT",
+          "country": "Portugal"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Auchan_Retail_logo.svg",
+      "image_url": null
+    },
+    {
+      "id": "intermarche-pt-country",
+      "merchant": "Intermarché",
+      "publisher": "Intermarché Portugal",
+      "title": "Folhetos Semanais Intermarché",
+      "summary": "Consulte os folhetos e campanhas oficiais do Intermarché.",
+      "coverage_type": "national",
+      "coverage_label": "Portugal (location-selected offers)",
+      "content_type": "webview",
+      "url": "https://intermarche.pt/sign/brands/catalog-page",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-09-28T00:00:00Z",
+      "status": "active",
+      "sort_order": 660,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PT",
+          "country": "Portugal"
+        }
+      ],
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Intermarch%C3%A9_logo_2009_classic.svg",
       "image_url": null
     }
   ],
