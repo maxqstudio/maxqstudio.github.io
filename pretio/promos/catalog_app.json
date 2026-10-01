@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_revision": "pretio-country-catalog-expansion-v4-2026-09-28",
+  "catalog_revision": "pretio-country-catalog-expansion-v5-2026-10-02",
   "location_contract": {
     "location_schema": "pretio.location.v1",
     "location_url": "https://maxqstudio.dev/pretio/promos/location.json",
@@ -16,6 +16,7 @@
   "allowed_hosts": [
     "agra.com.na",
     "alfagift.id",
+    "alfatah.pk",
     "blog.alfagift.id",
     "cdn.foodloversmarket.co.za",
     "cdn.jsdelivr.net",
@@ -29,6 +30,7 @@
     "psrs.alfamart.co.id",
     "sortiment.lidl.ch",
     "super.lider.cl",
+    "thumb.wikimedia.org",
     "transmart.co.id",
     "upload.wikimedia.org",
     "www.a101.com.tr",
@@ -38,6 +40,7 @@
     "www.aldi.us",
     "www.auchan.pt",
     "www.bim.com.tr",
+    "www.carrefour.pk",
     "www.continente.pt",
     "www.coop.ch",
     "www.denner.ch",
@@ -54,6 +57,7 @@
     "www.lottemart.co.id",
     "www.maxi.rs",
     "www.mayorista10.cl",
+    "www.metro.pk",
     "www.migros.ch",
     "www.money.com.tr",
     "www.pnp.co.za",
@@ -1906,6 +1910,84 @@
         }
       ],
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Intermarch%C3%A9_logo_2009_classic.svg",
+      "image_url": null
+    },
+    {
+      "id": "metro-pk-catalogues",
+      "merchant": "METRO",
+      "publisher": "METRO Pakistan",
+      "title": "METRO Pakistan Catalogues",
+      "summary": "Browse METRO catalogues and offers for a selected Pakistan store. Offers may vary by local availability.",
+      "coverage_type": "national",
+      "coverage_label": "Pakistan (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.metro.pk/Metro-Catalogues",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-10-02T02:05:39+08:00",
+      "status": "active",
+      "sort_order": 670,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PK",
+          "country": "Pakistan"
+        }
+      ],
+      "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Logo_METRO.svg/960px-Logo_METRO.svg.png",
+      "image_url": null
+    },
+    {
+      "id": "carrefour-pk-store-promotions",
+      "merchant": "Carrefour",
+      "publisher": "Carrefour Pakistan",
+      "title": "Carrefour Pakistan Store Promotions",
+      "summary": "Browse current Carrefour promotions and leaflets for the selected Pakistan store. Offers are store-selected.",
+      "coverage_type": "national",
+      "coverage_label": "Pakistan (store-selected offers)",
+      "content_type": "webview",
+      "url": "https://www.carrefour.pk/mafpak/en/shop/storespromotions",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-10-02T02:05:39+08:00",
+      "status": "active",
+      "sort_order": 680,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PK",
+          "country": "Pakistan"
+        }
+      ],
+      "logo_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/65/Carrefour_Groupe.svg/960px-Carrefour_Groupe.svg.png",
+      "image_url": null
+    },
+    {
+      "id": "alfatah-pk-grocery-offers",
+      "merchant": "Al-Fatah",
+      "publisher": "Al-Fatah",
+      "title": "Al-Fatah Grocery Offers",
+      "summary": "Browse current special offers on Al-Fatah’s official online store. Product availability may vary.",
+      "coverage_type": "national",
+      "coverage_label": "Pakistan (online offers; availability may vary)",
+      "content_type": "webview",
+      "url": "https://alfatah.pk/collections/special-offers-general",
+      "source_type": "official_retailer",
+      "valid_from": null,
+      "valid_until": null,
+      "last_verified_at": "2026-10-02T02:05:39+08:00",
+      "status": "active",
+      "sort_order": 690,
+      "locations": [
+        {
+          "type": "country",
+          "country_code": "PK",
+          "country": "Pakistan"
+        }
+      ],
+      "logo_url": "https://alfatah.pk/cdn/shop/t/39/assets/logo.png?v=81162137638450272851764858334",
       "image_url": null
     }
   ],
