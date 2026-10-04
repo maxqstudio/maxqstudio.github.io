@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - Pretio</title>
-  <meta name="description" content="Privacy Policy for Pretio, including local data, location, catalogs, Compare Online, advertising, rewarded exports, consent, and purchases." />
+  <meta name="description" content="Privacy Policy for Pretio, including local data, location, Firebase catalogs, online search, advertising, consent, and purchases." />
   <link rel="icon" href="../images/pretio_icon.png" />
   <link rel="stylesheet" href="pretio.css" />
 </head>
@@ -19,11 +19,11 @@
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> October 4, 2026</p>
+      <p><strong>Last updated:</strong> October 5, 2026</p>
 
       <div class="content-card">
         <h3>Your shopping records remain local</h3>
-        <p>Pretio stores your products, saved prices, shopping list, stores, notes, and related shopping records on your device. Pretio does not send the contents of those records to AdMob for ad targeting. When you deliberately use Compare Online, only the product information shown in the Google Shopping search query is sent to Google as described below.</p>
+        <p>Pretio stores your products, saved prices, shopping list, stores, notes, and related shopping records on your device. Pretio does not send the contents of those records to AdMob for ad targeting. When you deliberately use Compare Online or Where To Buy, only product information included in the visible Google Shopping search query is sent to Google as described below.</p>
       </div>
 
       <h2>1. Local app data</h2>
@@ -33,9 +33,11 @@
       <p>You can back up Pretio data, export saved product and price-history data as CSV, and export a Shopping List receipt as PDF. A receipt PDF may include the store name you enter, shopping-list items, quantities, prices, subtotal, tax, discount, currency, date, and calculated total. Pretio writes these files only when you choose an export and select a destination through Android's file picker. Once a file leaves Pretio, the storage provider, destination app, or person receiving it may process that file under their own terms and privacy practices.</p>
       <p>You can use Delete All Data to remove products, saved prices, your shopping list, stores, and related local records from the device. App preferences such as language, theme, number format, currency, and text size may be preserved as described in the app.</p>
 
-      <h2>3. Compare Online</h2>
+      <h2>3. Compare Online and Where To Buy</h2>
 
       <p>When you select Online for a product, Pretio creates a Google Shopping search query using the current product name, the saved brand when available and not already represented in the product name, the saved package size when available, and the word “price.” That visible query is sent to Google over the internet, and the Google Shopping results page is displayed through an in-app web view.</p>
+
+      <p>Where To Buy is a separate, optional Google Shopping search opened from Scan Result. Before Pretio has a verified product identity, its product identifier in the query is the scanned barcode. When verified identity is available, the query may also include the brand, product name, and package size, together with the barcode. Pretio may add the selected country, region, or city as search context. Google receives the visible query and displays its own results; Pretio does not extract or store prices or offers from that page.</p>
 
       <p>Pretio does not include your saved price history, stores, notes, shopping list, backups, exports, or locally calculated Best Price in the Compare Online query. Best Price is calculated from your local Pretio records and is not obtained from Google.</p>
 
@@ -50,14 +52,14 @@
       <p>Pretio uses the country selected for your Google Play account to choose country-level catalog content, Product Highlights, and the supported location directory. Pretio obtains this country from Google Play Billing configuration. This is your Google Play country, not a measurement of your current physical location, and it may differ from the country where you are physically located.</p>
       <p>Pretio resolves Google Play country for each app session and does not store the Billing configuration result as a persistent Country setting or future Country authority. For app functionality, Pretio may cache country-specific Location V2 directory content locally and persist country-scoped canonical identities for selected provinces, states, regions, cities, or municipalities. On a later launch, Pretio resolves Google Play country first and then validates saved subdivision identities against that country; cached directory content and saved subdivisions cannot establish Country. This information is not used to create or enhance a user profile or for advertising or marketing targeting. Country is not manually editable in Pretio.</p>
       <p>You may select a province, state, region, city, or municipality within the current Google Play country where supported. If you explicitly tap Use approximate location and grant Android location permission, Android's coarse foreground location may resolve a country, province, and city. Pretio may use that result as temporary market context for the current app session, even when its country differs from Google Play. This does not replace your saved default; the next app session starts again with Google Play country and any valid province or city saved in Pretio. Pretio does not store raw device coordinates. Android and its geocoder service may process device location under their own policies. Pretio does not use precise or background location for this feature.</p>
-      <p>When you request a location-specific online feature such as Product Insight, Pretio may send the resolved country, province, city, and barcode to its backend. Google Gemini may process that context when an online component needs to be generated or translated. Product search uses the barcode as the search query; the resolved market context is supplied separately to help select relevant information.</p>
+      <p>When you explicitly open Product Insight, Pretio may send the barcode, selected app language, and resolved country, province, or city context to its Firebase backend. The backend may request Google Search grounding or Google Gemini generation/translation only for a missing or expired Product Insight component needed for that user request; it does not refresh Product Insight in the background. Product Insight uses the barcode as the product search query and does not search for, store, or return merchant prices or offers. Product Insight results may be cached so a later request can be served without another Gemini request.</p>
       <p>Pretio does not use a dedicated IP-geolocation service to determine your country and does not send a country-detection request to ipapi.co for this feature. Google Play and other network services may still receive ordinary technical network information, such as your IP address, under their own policies when your device communicates with them.</p>
-      <p>Pretio retrieves its supported location directory and catalog directory from Max-Q Studio web resources. The current country, province, or city context is used to decide which catalogs and Product Highlights are relevant. A supported location may have no available catalog or Product Highlights yet.</p>
-      <p>Pretio may also download supported remote language packs from Max-Q Studio web resources when you choose a remotely delivered language. These requests may expose ordinary network information, such as your IP address, to the hosting infrastructure. Pretio does not upload your local products, saved prices, shopping list, notes, backups, or exports as part of a language-pack download.</p>
+      <p>The supported location directory is bundled in Pretio for offline use. Catalog Promo and Product Highlight content is read from Pretio's Firebase public-content database when needed and cached on your device for 24 hours. Pretio uses the selected country, province, or city context to choose relevant content. Firebase receives ordinary technical request information when the app reads remote content. A supported location may have no available catalog or Product Highlights yet.</p>
+      <p>Pretio's supported language packs are bundled in the app. Pretio does not download language packs from GitHub or the Max-Q Studio website during normal app use.</p>
       <p>For Compare Online, Pretio may use the current location context, such as country, province, city, language, or currency, to localize the visible search experience. Pretio does not need to send raw device latitude or longitude to Google Shopping for this purpose. A website opened inside or outside Pretio may have its own separate geolocation request and privacy practices.</p>
 
       <h2>5. Advertising</h2>
-      <p>The free version of Pretio may use Google AdMob to display banner advertisements, interstitial advertisements during eligible page transitions, and rewarded advertisements. A transition interstitial may be shown after a locally stored weighted page-use counter reaches 10 units: Compare Item adds 1, Compare Category adds 1, Where To Buy adds 2, Compare Online adds 2, and the selected Catalog Promo page adds 1. Pretio uses this counter only to time interstitials; it remains on your device and is not sent to AdMob as product data. An interstitial is shown only when ad eligibility, consent, and availability permit. A rewarded advertisement is shown only after you choose to watch it, for example before an eligible saved-data export or Shopping List receipt export.</p>
+      <p>The free version of Pretio may use Google AdMob to display banner advertisements, native advertisements, transition interstitials, and rewarded advertisements. A locally stored counter starts with 10 remaining usage units and decreases on eligible transitions: Compare Item uses 1, Compare Category uses 1, Where To Buy uses 2, Compare Online uses 2, and a selected Catalog Promo page uses 1. After an interstitial is dismissed, the counter resets to 10. The counter remains on your device and is not sent to AdMob as product data. An interstitial is shown only when ad eligibility, consent, and ad availability permit. A rewarded advertisement is shown only after you choose to watch it, for example before an eligible saved-data export or Shopping List receipt export.</p>
       <p>Google Mobile Ads technology may automatically collect or process information such as:</p>
       <ul>
         <li>your device's IP address, which may be used to estimate general location;</li>
@@ -83,10 +85,10 @@
       <h2>9. Pretio Premium and Google Play Billing</h2>
       <p>Pretio Premium may be purchased as a one-time product through Google Play. Google processes the payment. Pretio receives purchase and entitlement information needed to determine whether Premium features should be enabled, such as product identity, purchase status, and verification-related information.</p>
       <p>Pretio does not directly receive or store your full payment-card details. Google may process purchase information under Google's own terms and privacy policies.</p>
-      <p>A valid Premium entitlement removes Pretio advertisements, including banner and transition interstitial ads, and removes the rewarded-ad requirement for supported saved-data CSV exports and Shopping List receipt PDF exports. If a purchase is refunded, revoked, cancelled, reversed, or cannot be verified, Premium access may be removed.</p>
+      <p>A valid Premium entitlement removes Pretio ads, including banner, native, transition interstitial, and rewarded ads; supported saved-data CSV and Shopping List receipt PDF exports do not require a rewarded ad while Premium is active. If a purchase is refunded, revoked, cancelled, reversed, or cannot be verified, Premium access may be removed.</p>
 
       <h2>10. Third-party services</h2>
-      <p>Depending on the features available in your version of Pretio, third-party services may include Google Shopping results served through Google Search, Google AdMob, Google User Messaging Platform, Google Play Billing, Android link handling, web browsers, marketplace apps, and destination websites opened from Compare Online. Google Play Billing may also provide the Google Play country used for Pretio's country-level local relevance. These providers process information under their own terms and privacy policies.</p>
+      <p>Depending on the features available in your version of Pretio, third-party services may include Google Shopping results served through Google Search, Google Firebase, Google Gemini, Google AdMob, Google User Messaging Platform, Google Play Billing, Android link handling, web browsers, marketplace apps, and destination websites opened from Compare Online or Where To Buy. Google Play Billing may also provide the Google Play country used for Pretio's country-level local relevance. These providers process information under their own terms and privacy policies.</p>
 
       <h2>11. Data security</h2>
       <p>We take reasonable steps to keep Pretio's local-first design and monetization integrations separated. However, no device, storage method, network transmission, or third-party service can be guaranteed to be completely secure.</p>
