@@ -7,8 +7,8 @@
       "enabled": true,
       "name": "English",
       "pack_schema": "pretio.localization.pack.v1",
-      "revision": "bundled-en-legal-consent-v9",
-      "sha256": "38777935dbebeb1bc2eb22816d5e861b740b41e4b444f9545aad5b7acbb3d73a",
+      "revision": "bundled-en-phase07-ui-v10",
+      "sha256": "8b641e8c6e02121e043b39e582680fa773b4fbb59c0ebace0b45f7e3b9bee485",
       "min_app_version": "1.4.0+47"
     },
     {
@@ -18,8 +18,8 @@
       "enabled": true,
       "name": "Bahasa Indonesia",
       "pack_schema": "pretio.localization.pack.v1",
-      "revision": "bundled-id-legal-consent-v9",
-      "sha256": "72799d8d3428924eb508d5d8d501a35faa5fd539fed72337e6005a191b8c3342",
+      "revision": "bundled-id-phase07-ui-v10",
+      "sha256": "1c578971b77888e5de975ff17e006c9cd62a2f73bbe2156c93a6b600556654fa",
       "min_app_version": "1.4.0+47"
     },
     {
@@ -29,8 +29,8 @@
       "enabled": true,
       "name": "Español",
       "pack_schema": "pretio.localization.pack.v1",
-      "revision": "pretio-phase07-es-v24",
-      "sha256": "435745c3bb0ad67195d979614fe32d8439ca134b7cd75ca152e68a895f5056d2",
+      "revision": "pretio-phase07-es-v25",
+      "sha256": "4bbf832a4a8721fad08aa5b968d6b9bcbb802b6f3180455c4774e89b7d3c0485",
       "url": "https://maxqstudio.dev/pretio/localization/es.json",
       "min_app_version": "1.4.0+47"
     },
@@ -41,8 +41,8 @@
       "enabled": true,
       "name": "Deutsch",
       "pack_schema": "pretio.localization.pack.v1",
-      "revision": "pretio-phase07-de-v8",
-      "sha256": "e04ca73be49ad76e597342a06e1faa22e5d61fe8b5159dfaab68ad4304acb796",
+      "revision": "pretio-phase07-de-v9",
+      "sha256": "cf039651534d72e67af1e14fcd11f6c6721fa1ff1cf4f07ba3e4940211087769",
       "url": "https://maxqstudio.dev/pretio/localization/de.json",
       "min_app_version": "1.4.0+47"
     },
@@ -53,8 +53,8 @@
       "enabled": true,
       "name": "Srpski",
       "pack_schema": "pretio.localization.pack.v1",
-      "revision": "pretio-phase07-sr-v7",
-      "sha256": "dd4c09ebe0739e55d34a4a4a4f3856eae07b2d7e465828763f90e86d8f3fae74",
+      "revision": "pretio-phase07-sr-v8",
+      "sha256": "bf39ae7cae4afe629563815521b8913afa8083e4e0aa95c6913b542cc7ee14df",
       "url": "https://maxqstudio.dev/pretio/localization/sr.json",
       "min_app_version": "1.4.0+47"
     },
@@ -65,13 +65,13 @@
       "enabled": true,
       "name": "Latin",
       "pack_schema": "pretio.localization.pack.v1",
-      "revision": "pretio-phase07-la-v9",
-      "sha256": "8f3a1aa11901e84b2b0fa0a04c570c59a0a7d78fb556a58e25a01d9585e0a248",
+      "revision": "pretio-phase07-la-v11",
+      "sha256": "a5ef720001e793482f40b3aa0cd23e240fc0c0a442cff91704f15158237c0274",
       "url": "https://maxqstudio.dev/pretio/localization/la.json",
       "min_app_version": "1.4.0+47"
     }
   ],
-  "revision": "pretio-phase07-location-privacy-v2",
+  "revision": "pretio-phase07-where-to-buy-locales-v2",
   "schema": "pretio.localization.index.v1",
   "schema_version": 1
 }
