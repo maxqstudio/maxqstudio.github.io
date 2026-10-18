@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Requests - Pretio</title>
+  <meta name="description" content="How to submit a request about server-side data handled by Pretio." />
+  <link rel="icon" href="../images/pretio_icon.png" />
+  <link rel="stylesheet" href="pretio.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="../images/pretio_logo.png" alt="Pretio logo" /><span>Pretio</span></a>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html" aria-current="page">Data deletion</a><a href="support.html">Support</a></nav>
+    </div>
+  </header>
+  <main class="legal-page">
+    <article class="container legal-card">
+      <p class="eyebrow">Privacy &amp; Data Safety</p>
+      <h1>Pretio Data Deletion Requests</h1>
+      <p><strong>Draft prepared:</strong> October 18, 2026 · <strong>Effective date:</strong> pending Owner approval</p>
+      <div class="content-card" role="note">
+        <p><strong>Draft for Owner review.</strong> This page is not published. The request route is prepared, but the operator workflow for locating and fulfilling eligible server-data requests has not been verified. Do not submit this page in Play Console until that workflow is approved and tested.</p>
+      </div>
+
+      <h2>Delete data stored on your device</h2>
+      <p>Use Pretio's Delete All Data feature to remove products, saved prices, stores, shopping lists, and related records stored locally in the app. This does not erase server-side records.</p>
+
+      <h2>Request a review of server-side data</h2>
+      <p>Pretio does not create a Pretio account. To ask Pretio to review whether server-side records associated with your use can be deleted, send an email to <a href="mailto:pretio.support@maxqstudio.dev?subject=Pretio%20Server%20Data%20Deletion%20Request">pretio.support@maxqstudio.dev</a> with the subject “Pretio Server Data Deletion Request.” Do not send passwords, payment-card details, or Google Play purchase tokens.</p>
+      <p>Include only information needed to investigate the request, such as the app version, approximate date of a Product Insight request, barcode involved, and—if the request concerns Premium—your Google Play order ID. These details may help investigate but do not guarantee that a server record can be matched to a particular person or installation.</p>
+
+      <h2>What may not be attributable to one person</h2>
+      <ul>
+        <li>Product Insight reports and product profiles are stored in shared caches keyed by product and market, not by a Pretio account.</li>
+        <li>Some request-activity records contain a barcode and time but no account identity.</li>
+        <li>Request-rate records use a hash of a random installation ID and expire automatically.</li>
+        <li>Purchase-entitlement records use a one-way hash of a Google Play purchase token and support purchase verification, restore, and fraud prevention.</li>
+      </ul>
+      <p>Because Pretio has no account linking these records together, Pretio may be unable to identify every record related to a request. Shared product information is not normally removed for one installation because it is used by other Pretio users. Purchase records may be retained or re-created when a valid purchase is verified again. If a record cannot be reliably matched or must be retained for security, fraud prevention, or purchase handling, Pretio will explain the limitation rather than claim it was deleted.</p>
+      <p>This is a manual request channel, not an automatic deletion function. The final response timeframe and the support team's verification and fulfillment procedure must be confirmed before publication.</p>
+    </article>
+  </main>
+</body>
+</html>
