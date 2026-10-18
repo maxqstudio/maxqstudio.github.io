@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Deletion Requests - Pretio</title>
-  <meta name="description" content="How to submit a request about server-side data handled by Pretio." />
+  <title>Data and Privacy Requests - Pretio</title>
+  <meta name="description" content="How Pretio handles local data deletion and privacy questions about server-side information." />
   <link rel="icon" href="../images/pretio_icon.png" />
   <link rel="stylesheet" href="pretio.css" />
 </head>
@@ -12,24 +12,23 @@
   <header class="app-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="../images/pretio_logo.png" alt="Pretio logo" /><span>Pretio</span></a>
-      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html" aria-current="page">Data deletion</a><a href="support.html">Support</a></nav>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html" aria-current="page">Data and privacy</a><a href="support.html">Support</a></nav>
     </div>
   </header>
   <main class="legal-page">
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
-      <h1>Pretio Data Deletion Requests</h1>
-      <p><strong>Draft prepared:</strong> October 18, 2026 · <strong>Effective date:</strong> pending Owner approval</p>
+      <h1>Pretio Data and Privacy Information</h1>
+      <p><strong>Effective date:</strong> the date this information is published · <strong>Last reviewed:</strong> October 18, 2026</p>
       <div class="content-card" role="note">
-        <p><strong>Draft for Owner review.</strong> This page is not published. The request route is prepared, but the operator workflow for locating and fulfilling eligible server-data requests has not been verified. Do not submit this page in Play Console until that workflow is approved and tested.</p>
+        <p>Pretio does not create user accounts. Pretio currently has no operational process for receiving and fulfilling individual requests to delete server-side records. The email below is for privacy questions; it is not a server-side deletion service.</p>
       </div>
 
       <h2>Delete data stored on your device</h2>
       <p>Use Pretio's Delete All Data feature to remove products, saved prices, stores, shopping lists, and related records stored locally in the app. This does not erase server-side records.</p>
 
-      <h2>Request a review of server-side data</h2>
-      <p>Pretio does not create a Pretio account. To ask Pretio to review whether server-side records associated with your use can be deleted, send an email to <a href="mailto:pretio.support@maxqstudio.dev?subject=Pretio%20Server%20Data%20Deletion%20Request">pretio.support@maxqstudio.dev</a> with the subject “Pretio Server Data Deletion Request.” Do not send passwords, payment-card details, or Google Play purchase tokens.</p>
-      <p>Include only information needed to investigate the request, such as the app version, approximate date of a Product Insight request, barcode involved, and—if the request concerns Premium—your Google Play order ID. These details may help investigate but do not guarantee that a server record can be matched to a particular person or installation.</p>
+      <h2>Ask a privacy question</h2>
+      <p>For questions about Pretio's data practices, email <a href="mailto:pretio.support@maxqstudio.dev?subject=Pretio%20Privacy%20Question">pretio.support@maxqstudio.dev</a>. Do not send passwords, payment-card details, or Google Play purchase tokens. The email route has not been verified as a server-data deletion process, and Pretio cannot promise deletion of server-side records in response.</p>
 
       <h2>What may not be attributable to one person</h2>
       <ul>
@@ -38,8 +37,8 @@
         <li>Request-rate records use a hash of a random installation ID and expire automatically.</li>
         <li>Purchase-entitlement records use a one-way hash of a Google Play purchase token and support purchase verification, restore, and fraud prevention.</li>
       </ul>
-      <p>Because Pretio has no account linking these records together, Pretio may be unable to identify every record related to a request. Shared product information is not normally removed for one installation because it is used by other Pretio users. Purchase records may be retained or re-created when a valid purchase is verified again. If a record cannot be reliably matched or must be retained for security, fraud prevention, or purchase handling, Pretio will explain the limitation rather than claim it was deleted.</p>
-      <p>This is a manual request channel, not an automatic deletion function. The final response timeframe and the support team's verification and fulfillment procedure must be confirmed before publication.</p>
+      <p>Product Insight caches and diagnostics are shared or request-scoped records without a Pretio account identifier. Request activity records contain a barcode and time, not an installation identity. Rate-limit records use a one-way hash of a random installation ID that the current app does not show to users. Purchase-entitlement records are keyed by a one-way hash of a Google Play purchase token, and the current source has no automatic TTL for them. These structures cannot currently be matched reliably to one person using an email address or order ID. Shared product information is also used by other Pretio users and is not deleted for one installation.</p>
+      <p>Some request-rate records and barcode-activity records have TTL expiry settings, but Firestore deletion is asynchronous. Cache freshness periods are not deletion periods. The current source does not define a deletion or maximum-retention period for shared Product Insight caches, Gemini diagnostics, or purchase-entitlement records. Pretio therefore does not claim that all server-side data is deleted on request or within 90 days.</p>
     </article>
   </main>
 </body>

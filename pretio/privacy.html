@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - Pretio</title>
-  <meta name="description" content="Draft Privacy Policy for Pretio, covering local shopping data, Product Insight, advertising, Firebase, location, and Google Play purchases." />
+  <meta name="description" content="Pretio Privacy Policy covering local shopping data, Product Insight, advertising, Firebase, location, and Google Play purchases." />
   <link rel="icon" href="../images/pretio_icon.png" />
   <link rel="stylesheet" href="pretio.css" />
 </head>
@@ -12,18 +12,14 @@
   <header class="app-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="../images/pretio_logo.png" alt="Pretio logo" /><span>Pretio</span></a>
-      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html">Data deletion</a><a href="support.html">Support</a></nav>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html">Data and privacy</a><a href="support.html">Support</a></nav>
     </div>
   </header>
   <main class="legal-page">
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Draft prepared:</strong> October 18, 2026 · <strong>Effective date:</strong> pending Owner approval</p>
-
-      <div class="content-card" role="note">
-        <p><strong>Draft for Owner review.</strong> This revision is not effective and has not been published. Do not treat it as the current policy until the Owner approves the final text and publication date.</p>
-      </div>
+      <p><strong>Effective date:</strong> the date this policy is published · <strong>Last reviewed:</strong> October 18, 2026</p>
 
       <div class="content-card">
         <h3>Your shopping records remain local</h3>
@@ -36,7 +32,7 @@
       <h2>2. Backup, export, restore, and deletion</h2>
       <p>You can back up Pretio data, export saved product and price-history data as CSV, and export a Shopping List receipt as PDF. A receipt PDF may include the store name you enter, shopping-list items, quantities, prices, subtotal, tax, discount, currency, date, and calculated total. Pretio writes these files only when you choose an export and select a destination through Android's file picker. Once a file leaves Pretio, the storage provider, destination app, or person receiving it may process that file under their own terms and privacy practices.</p>
       <p>You can use Delete All Data to remove products, saved prices, your shopping list, stores, and related local records from the device. App preferences such as language, theme, number format, currency, and text size may be preserved as described in the app.</p>
-      <p>Delete All Data affects local app records only. It does not delete shared Product Insight caches or Google Play purchase-entitlement records stored by Pretio's backend. Pretio does not create a Pretio account. You may <a href="data-deletion.html">submit a request about server-side data</a> by email. This is a manual request, not an automatic deletion feature; some shared product information is not tied to an individual installation, and purchase records may need to be retained or rechecked to honor purchases and prevent fraud. The draft request page explains the current limits.</p>
+      <p>Delete All Data affects local app records only. It does not delete shared Product Insight caches or Google Play purchase-entitlement records stored by Pretio's backend. Pretio does not create a Pretio account and currently has no operational process for deleting server-side records on an individual request. The <a href="data-deletion.html">data and privacy information page</a> explains what can and cannot be identified or removed. You may contact support with privacy questions, but an email does not mean server data has been deleted.</p>
 
       <h2>3. Compare Online and Where To Buy</h2>
 
@@ -59,7 +55,7 @@
       <p>You may select a province, state, region, city, or municipality where supported. If you explicitly tap Use approximate location and grant Android location permission, Android's coarse foreground location may resolve a country, province, and city. Pretio saves the resolved administrative area and its canonical identifiers in local app data and uses it as the active location in later sessions, even if its country differs from your Google Play country. It remains active until you select another approximate location or clear local app data. Pretio does not store raw device coordinates. Android and its geocoder service may process device location under their own policies. Pretio does not use precise or background location for this feature.</p>
       <p>Product Insight runs only after you choose that feature from a product screen. The request can include the scanned barcode, app language, Google Play country, selected market location (country, region or city), and a random installation ID used for request limits. When you request insight for a saved product, Pretio can also send that product's name, brand, package size, and category as context. Pretio does not upload your complete product database, saved price history, stores, notes, or shopping list for Product Insight.</p>
       <p>Pretio sends the request to its Firebase backend. The backend checks shared product data and may query Open Food Facts with the barcode. It may use Google Gemini and Google Search for product information or translation. When you open Product Insight from Scan Result, if the barcode has a verified product identity but no image is available, the backend may automatically use Gemini image search to look for a matching image. The barcode and available verified product details can be used to form that search; an image is shown only when an attributable source is available. A Gemini-generated report can be shown even when Search grounding returns no usable evidence; that text is labeled as AI-generated and is not externally verified. AI-generated descriptions can be incomplete or wrong and are not an official product, health, nutrition, or safety certification. Product Insight is a product-information report, not a chat service or professional advice. Check available source links and product packaging before relying on a claim.</p>
-      <p>Product Insight data may be stored in shared Firebase caches keyed by product barcode and, where relevant, country, language, or market context. Gemini text from a normally completed request is eligible for reuse for up to 30 days. A cache expiry controls whether information is considered fresh; it does not necessarily delete the stored document. The current Production source has no automatic deletion TTL configured for the shared product-profile, market-insight, or localized-summary caches, so expired cache records may remain until replaced or removed operationally. Saved-product hints are request context and are not written into shared verified product caches. A separate request-activity record stores a barcode and last-request time with a 30-day expiry policy; Firestore TTL deletion is asynchronous and may occur after that period. The random installation ID is used for rate limits; the backend stores a hash of it in rate-limit records that expire automatically.</p>
+      <p>Product Insight data may be stored in shared Firebase caches keyed by product barcode and, where relevant, country, language, or market context. Gemini text from a normally completed request is eligible for reuse for up to 30 days. A cache expiry controls whether information is considered fresh; it does not delete the stored document. The current Production source has no automatic deletion TTL configured for shared product profiles, market insights, localized summaries, or Gemini diagnostic records; expired shared cache records may remain until replaced or removed operationally. Gemini diagnostic records include the barcode, operation, language, requested components, request/response/error field names, timestamps, and duration, but do not include the installation ID. Saved-product hints are request context and are not written into shared verified product caches. A separate request-activity record stores a barcode and last-request time with a 30-day expiry; Firestore TTL deletion is asynchronous and may occur after the expiry time. Product Insight rate-limit records store a hash of the random installation ID and have an expiry set 24 hours after the limit window; TTL deletion is also asynchronous. Google Play purchase-entitlement records store a hash of the purchase token and entitlement details and have no automatic TTL in the current source.</p>
       <p>Pretio does not use a dedicated IP-geolocation service to determine your country and does not send a country-detection request to ipapi.co for this feature. Google Play and other network services may still receive ordinary technical network information, such as your IP address, under their own policies when your device communicates with them.</p>
       <p>The supported location directory is bundled in Pretio for offline use. Catalog Promo and Product Highlight content is read from Pretio's Firebase public-content database when needed and cached on your device for 24 hours. Pretio uses the selected country, province, or city context to choose relevant content. Firebase receives ordinary technical request information when the app reads remote content. A supported location may have no available catalog or Product Highlights yet.</p>
       <p>Pretio's supported language packs are bundled in the app. Pretio does not download language packs from GitHub or the Max-Q Studio website during normal app use.</p>
@@ -113,7 +109,7 @@
         <li>choose not to watch a rewarded advertisement;</li>
         <li>purchase Pretio Premium, where available, to remove Pretio ads and avoid rewarded-ad requirements for supported exports;</li>
         <li>delete local Pretio records using the app's deletion feature;</li>
-        <li>submit a request about server-side records through the <a href="data-deletion.html">data deletion request page</a>; and</li>
+        <li>contact support with a privacy question through the <a href="data-deletion.html">data and privacy information page</a>; and</li>
         <li>contact us with privacy or purchase questions.</li>
       </ul>
 
