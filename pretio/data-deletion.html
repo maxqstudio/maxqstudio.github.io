@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data and Privacy Requests - Pretio</title>
+  <meta name="description" content="How Pretio handles local data deletion and privacy questions about server-side information." />
+  <link rel="icon" href="../images/pretio_icon.png" />
+  <link rel="stylesheet" href="pretio.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="../images/pretio_logo.png" alt="Pretio logo" /><span>Pretio</span></a>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html" aria-current="page">Data and privacy</a><a href="support.html">Support</a></nav>
+    </div>
+  </header>
+  <main class="legal-page">
+    <article class="container legal-card">
+      <p class="eyebrow">Privacy &amp; Data Safety</p>
+      <h1>Pretio Data and Privacy Information</h1>
+      <p><strong>Effective date:</strong> October 18, 2026 · <strong>Last reviewed:</strong> October 18, 2026</p>
+      <div class="content-card" role="note">
+        <p>Pretio does not create user accounts. Pretio currently has no operational process for receiving and fulfilling individual requests to delete server-side records. The email below is for privacy questions; it is not a server-side deletion service.</p>
+      </div>
+
+      <h2>Delete data stored on your device</h2>
+      <p>Use Pretio's Delete All Data feature to remove products, saved prices, stores, shopping lists, and related records stored locally in the app. This does not erase server-side records.</p>
+
+      <h2>Ask a privacy question</h2>
+      <p>For questions about Pretio's data practices, email <a href="mailto:pretio.support@maxqstudio.dev?subject=Pretio%20Privacy%20Question">pretio.support@maxqstudio.dev</a>. Do not send passwords, payment-card details, or Google Play purchase tokens. The email route has not been verified as a server-data deletion process, and Pretio cannot promise deletion of server-side records in response.</p>
+
+      <h2>What may not be attributable to one person</h2>
+      <ul>
+        <li>Product Insight reports and product profiles are stored in shared caches keyed by product and market, not by a Pretio account.</li>
+        <li>Some request-activity records contain a barcode and time but no account identity.</li>
+        <li>Request-rate records use a hash of a random installation ID and expire automatically.</li>
+        <li>Purchase-entitlement records use a one-way hash of a Google Play purchase token and support purchase verification, restore, and fraud prevention.</li>
+      </ul>
+      <p>Product Insight cache records are shared or request-scoped and have no Pretio account identifier. Detailed per-call Gemini diagnostic records are written only in the Tester project, not Production. Production operational logs are separate from those Tester diagnostics. Request activity records contain a barcode and time, not an installation identity. Rate-limit records use a one-way hash of a random installation ID that the current app does not show to users. Purchase-entitlement records are keyed by a one-way hash of a Google Play purchase token, and the current source has no automatic TTL for them. These structures cannot currently be matched reliably to one person using an email address or order ID. Shared product information is also used by other Pretio users and is not deleted for one installation.</p>
+      <p>Some request-rate records and barcode-activity records have TTL expiry settings, but Firestore deletion is asynchronous. Cache freshness periods are not deletion periods. Detailed per-call Gemini diagnostic records are written only in the Tester project, not Production. Production Cloud Functions also emit operational event and error logs to Cloud Logging; their retention depends on the Production logging configuration, which has not been verified here. The current Production source does not define a deletion or maximum-retention period for shared Product Insight caches or purchase-entitlement records. Pretio therefore does not claim that all server-side data is deleted on request or within 90 days.</p>
+    </article>
+  </main>
+</body>
+</html>
