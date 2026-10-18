@@ -19,7 +19,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Pretio Data and Privacy Information</h1>
-      <p><strong>Effective date:</strong> the date this information is published · <strong>Last reviewed:</strong> October 18, 2026</p>
+      <p><strong>Effective date:</strong> October 18, 2026 · <strong>Last reviewed:</strong> October 18, 2026</p>
       <div class="content-card" role="note">
         <p>Pretio does not create user accounts. Pretio currently has no operational process for receiving and fulfilling individual requests to delete server-side records. The email below is for privacy questions; it is not a server-side deletion service.</p>
       </div>
@@ -37,8 +37,8 @@
         <li>Request-rate records use a hash of a random installation ID and expire automatically.</li>
         <li>Purchase-entitlement records use a one-way hash of a Google Play purchase token and support purchase verification, restore, and fraud prevention.</li>
       </ul>
-      <p>Product Insight caches and diagnostics are shared or request-scoped records without a Pretio account identifier. Request activity records contain a barcode and time, not an installation identity. Rate-limit records use a one-way hash of a random installation ID that the current app does not show to users. Purchase-entitlement records are keyed by a one-way hash of a Google Play purchase token, and the current source has no automatic TTL for them. These structures cannot currently be matched reliably to one person using an email address or order ID. Shared product information is also used by other Pretio users and is not deleted for one installation.</p>
-      <p>Some request-rate records and barcode-activity records have TTL expiry settings, but Firestore deletion is asynchronous. Cache freshness periods are not deletion periods. The current source does not define a deletion or maximum-retention period for shared Product Insight caches, Gemini diagnostics, or purchase-entitlement records. Pretio therefore does not claim that all server-side data is deleted on request or within 90 days.</p>
+      <p>Product Insight cache records are shared or request-scoped and have no Pretio account identifier. Detailed per-call Gemini diagnostic records are written only in the Tester project, not Production. Production operational logs are separate from those Tester diagnostics. Request activity records contain a barcode and time, not an installation identity. Rate-limit records use a one-way hash of a random installation ID that the current app does not show to users. Purchase-entitlement records are keyed by a one-way hash of a Google Play purchase token, and the current source has no automatic TTL for them. These structures cannot currently be matched reliably to one person using an email address or order ID. Shared product information is also used by other Pretio users and is not deleted for one installation.</p>
+      <p>Some request-rate records and barcode-activity records have TTL expiry settings, but Firestore deletion is asynchronous. Cache freshness periods are not deletion periods. Detailed per-call Gemini diagnostic records are written only in the Tester project, not Production. Production Cloud Functions also emit operational event and error logs to Cloud Logging; their retention depends on the Production logging configuration, which has not been verified here. The current Production source does not define a deletion or maximum-retention period for shared Product Insight caches or purchase-entitlement records. Pretio therefore does not claim that all server-side data is deleted on request or within 90 days.</p>
     </article>
   </main>
 </body>
