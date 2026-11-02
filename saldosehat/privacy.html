@@ -18,7 +18,7 @@
 
   <main class="legal-page">
     <article class="container legal-card">
-      <p class="eyebrow">Last updated: July 21, 2026</p>
+      <p class="eyebrow">Last updated: November 2, 2026</p>
       <h1>Privacy Policy</h1>
 
       <div class="content-card">
@@ -73,14 +73,16 @@
 
       <h2>4. Advertising and Google AdMob</h2>
       <p>
-        The free version of SaldoSehat may display banner advertisements and optional rewarded
-        advertisements through Google AdMob and the Google Mobile Ads SDK.
+        The free version of SaldoSehat may display banner, interstitial, native,
+        rewarded, and app-open advertisements through Google AdMob and the Google Mobile Ads SDK,
+        subject to applicable consent and availability.
       </p>
       <p>
         Google advertising services may process technical and advertising-related information,
-        such as device or app identifiers, IP address, device and operating-system information,
-        advertising interactions, diagnostics, and other information required to deliver,
-        secure, measure, or personalize ads, depending on your region, device settings, and
+        such as device or app identifiers, IP address (which may be used to estimate your
+        general location), device and operating-system information, advertising interactions,
+        and diagnostics. This information is used for advertising, analytics, and fraud
+        prevention, depending on your region, device settings, and
         privacy choices.
       </p>
       <p>
@@ -166,26 +168,51 @@
 
       <h2>9. Ask</h2>
       <p>
-        Ask provides template-based assistance and may use data available inside the app to help
-        you read summaries. Ask is not an official financial advisor and does not replace advice
-        from a qualified professional.
+        Ask is an optional online AI feature. When you choose to enable it, the app sends your
+        question, relevant recent conversation, and verified financial information needed for
+        your request through Firebase to an external AI provider (OpenAI). Only the context
+        selected for the request is sent; your entire local finance database is not uploaded.
+        Ask responses may be incomplete or inaccurate and are not professional financial advice.
       </p>
       <p>
-        Unless a future feature clearly states otherwise and requests appropriate permission,
-        the local finance records described in this policy are not intended to be sent to an
-        external AI service.
+        Financial facts prepared by the app are limited to the relevant numeric summaries;
+        original wallet and savings-target labels and raw transaction rows are excluded from
+        that fact context. Your question and conversation text can still contain personal or
+        financial details that you type. Do not include passwords, payment-card details, or
+        information unrelated to your request.
+      </p>
+      <p>
+        When online Ask needs backend access and no Firebase identity is active, the app
+        creates an anonymous Firebase authentication identity. This is not an email/password
+        sign-in account. Firebase and Google Cloud process authentication, app-integrity,
+        network, and operational information to provide the service and prevent abuse. The
+        backend maintains limited rate-limit, usage, cost, and diagnostic metadata.
+      </p>
+      <p>
+        Using online Ask requires a separate optional permission in the app, after accepting the
+        Privacy Policy and Terms. You can change that choice in Privacy settings. Declining
+        keeps local finance features available. Ask cannot save transactions without your
+        explicit confirmation. Withdrawing permission prevents new Ask requests, but cannot
+        withdraw information already processed by external services.
       </p>
 
       <h2>10. Third-party services</h2>
       <p>Depending on the version and features enabled, SaldoSehat may use:</p>
       <ul>
         <li>Google AdMob and Google Mobile Ads services for advertisements;</li>
-        <li>Google User Messaging Platform for advertising privacy choices; and</li>
-        <li>Google Play Billing for the Premium Lifetime purchase.</li>
+        <li>Google User Messaging Platform for advertising privacy choices;</li>
+        <li>Google Play Billing for the Premium Lifetime purchase;</li>
+        <li>Firebase Authentication, App Check, and Cloud Functions for authenticated online Ask;</li>
+        <li>OpenAI for processing online Ask requests and generating responses.</li>
       </ul>
       <p>
-        These providers process information under their own privacy policies and terms. Max-Q
-        does not control the independent data practices of those providers.
+        Max-Q uses Firebase, Google Cloud, and OpenAI to provide online Ask. Google also
+        processes advertising and payment information under its applicable policies and terms.
+        Max-Q remains responsible for its own handling of information. Provider practices
+        are described in the <a href="https://policies.google.com/privacy">Google Privacy
+        Policy</a>, <a href="https://firebase.google.com/support/privacy">Firebase privacy
+        information</a>, and <a href="https://openai.com/policies/privacy-policy/">OpenAI
+        Privacy Policy</a>.
       </p>
 
       <h2>11. Data retention and deletion</h2>
@@ -201,7 +228,24 @@
       </p>
       <p>
         Advertising choices and purchase records handled by Google may be retained according to
-        Google's policies and applicable legal requirements.
+        Google's policies and applicable legal requirements. Information sent through online Ask
+        may be processed and retained according to the relevant service providers' policies;
+        deleting local app data or withdrawing Ask permission does not automatically delete data
+        that has already been processed externally.
+      </p>
+      <p>
+        Anonymous authentication identities and operational rate-limit or cost records can
+        remain after an Ask request ends. These records are not all subject to automatic
+        deletion. Withdrawing Ask permission does not itself delete them. Service logs and
+        provider records have separate retention rules.
+      </p>
+      <p>
+        For questions or requests concerning information processed online, contact
+        <a href="mailto:saldosehat.support@maxqstudio.dev">saldosehat.support@maxqstudio.dev</a>.
+        We may need reasonable information to identify the relevant service records. Do not
+        send passwords, payment-card details, or a complete finance backup. We do not promise
+        that clearing local data deletes external records or that all providers use a
+        particular retention period.
       </p>
 
       <h2>12. Security</h2>
@@ -211,11 +255,10 @@
         export files, backup files, screenshots, Google account, and any copies of your data.
       </p>
 
-      <h2>13. Children</h2>
+      <h2>13. Intended audience and children</h2>
       <p>
-        SaldoSehat is a personal finance utility for general users and is not designed or directed
-        specifically to children. We do not knowingly ask children to submit personal financial
-        information through an online account.
+        SaldoSehat is intended for adults aged 18 and over and is not directed to children.
+        We do not knowingly ask children to submit personal financial information through Ask.
       </p>
 
       <h2>14. Changes to this Privacy Policy</h2>
