@@ -172,3 +172,31 @@ h4 { margin: 0 0 6px; font-size: 20px; }
         width: min(235px, 78vw);
       }
     }
+
+
+/* Pretio 1.4.5 screenshot and feature graphic presentation. */
+.pretio-feature-graphic-section { padding: 0 0 32px; }
+.pretio-feature-graphic {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.pretio-screenshot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.pretio-screen-card { margin: 0; min-width: 0; }
+.pretio-screen-card img { width: 100%; height: auto; border-radius: 18px; }
+.pretio-screen-card figcaption {
+  margin: 12px 2px 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 750;
+}
+@media (max-width: 900px) {
+  .pretio-screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 440px) {
+  .pretio-screenshot-grid { grid-template-columns: 1fr; }
+}
