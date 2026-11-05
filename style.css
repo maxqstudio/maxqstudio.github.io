@@ -292,7 +292,9 @@ h1 {
   box-shadow: 0 18px 44px rgba(0,0,0,.36);
 }
 .project-media.square img { width: 170px; height: 170px; max-height: none; object-fit: cover; border-radius: 34px; }
-.contact-card a { color: var(--cyan); }
+.contact-card a:not(.email-button) { color: var(--cyan); }
+.contact-card .email-button { color: #02111d; }
+.contact-card .email-button:focus-visible { outline: 3px solid var(--white); outline-offset: 4px; }
 .small-project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .small-project-grid.single { grid-template-columns: minmax(0, 420px); }
 .small-project { padding: 24px; }
