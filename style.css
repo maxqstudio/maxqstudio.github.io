@@ -366,3 +366,11 @@ h1 {
 .saldosehat-product-title img { flex:none; object-fit:contain; }
 .saldosehat-product-title h3 { margin:0; }
 .project-media .saldosehat-product-visual { width:100%; height:auto; max-height:none; object-fit:contain; background:#F6FFF8; }
+
+/* Keep developer contact details readable at narrow widths. */
+#profile .info-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#profile .info-grid div { min-width: 0; }
+#profile .info-grid strong { display: block; overflow-wrap: anywhere; line-height: 1.45; }
+@media (max-width: 720px) {
+  #profile .info-grid { grid-template-columns: 1fr; }
+}
