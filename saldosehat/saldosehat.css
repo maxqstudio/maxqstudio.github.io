@@ -1,13 +1,13 @@
 :root {
-  --green: #087436;
-  --green-2: #10a65a;
-  --green-soft: #eaf8ef;
-  --bg: #f7fff9;
+  --green: #087D74;
+  --green-2: #16A99A;
+  --green-soft: #E5F5EF;
+  --bg: #F6FFF8;
   --panel: #ffffff;
-  --text: #10223a;
-  --soft: #4d5f76;
-  --muted: #718199;
-  --line: #dce9e2;
+  --text: #123E43;
+  --soft: #426C6C;
+  --muted: #617F7B;
+  --line: #CBE4D9;
   --shadow: 0 24px 60px rgba(6, 64, 34, .12);
   --radius-lg: 32px;
   --radius-md: 20px;
@@ -235,3 +235,51 @@ h3 { margin: 0 0 8px; font-size: 22px; letter-spacing: -0.025em; }
 
 /* Hide feature numbers */
 .feature-card span { display: none; }
+
+/* SaldoSehat mascot palette: teal, leaf green, cream and ink. */
+body { background: var(--bg); }
+.app-header { background: rgba(246,255,248,.94); }
+.brand img { object-fit: contain; box-shadow: none; border-radius: 0; }
+.brand-subtitle { display:block; font-size:11px; font-weight:650; letter-spacing:1.7px; text-transform:uppercase; line-height:1.2; color:var(--soft); }
+.hero { padding-top:56px; }
+.hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); gap:20px; }
+.hero h1 { font-weight:750; font-size:clamp(44px,5.1vw,72px); line-height:1.04; }
+.hero-preview { position:relative; display:block; min-width:0; padding:0; border:0; background:none; box-shadow:none; }
+.hero-preview img { width:100%; height:auto; max-height:none; max-width:none; object-fit:contain; border:0; border-radius:0; box-shadow:none; }
+.preview-note { font-size:11px; text-align:center; color:var(--muted); padding:0 8px; }
+.button.primary,.email-button { background:var(--green); box-shadow:none; gap:12px; }
+.button.primary:hover,.email-button:hover { background:#096C65; }
+.button:focus-visible,.email-button:focus-visible,.screen-shot a:focus-visible { outline:3px solid #16A99A; outline-offset:5px; }
+.campaign-section { padding:32px 0 48px; }
+.campaign-image { display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:30px; }
+.section-title.wide { max-width:780px; margin-bottom:32px; }
+.screenshot-grid { gap:38px 28px; }
+.screen-shot { margin:0; min-width:0; }
+.screen-shot a { display:block; border-radius:24px; }
+.screen-shot img { border-radius:24px; height:auto; box-shadow:0 16px 36px #123e4310; }
+.screen-shot figcaption { padding:20px 2px 0; }
+.screen-shot h3 { font-size:20px; line-height:1.3; }
+.screen-shot p { font-size:14px; line-height:1.6; }
+.mobile-hint { display:none; }
+@media(max-width:900px) {
+ .hero-grid { grid-template-columns:1fr 1fr; gap:12px; }
+ .hero h1 { font-size:clamp(40px,6vw,60px); }
+ .nav { gap:13px; }
+ .brand { gap:8px; }
+}
+@media(max-width:700px) {
+ .hero-grid { grid-template-columns:1fr; gap:26px; }
+ .hero { padding-top:42px; }
+ .hero h1 { font-size:clamp(44px,11vw,66px); }
+ .hero-preview { max-width:490px; margin:auto; }
+ .brand { font-size:17px; }
+ .brand img { width:40px; height:40px; }
+ .brand-subtitle { font-size:10px; }
+ .section { padding-top:55px; padding-bottom:55px; }
+ .campaign-section { padding-top:15px; padding-bottom:26px; }
+ .campaign-image { border-radius:20px; }
+ .screenshot-grid { display:flex; gap:20px; overflow-x:auto; padding:12px 6px 28px; margin:0 -6px; scroll-snap-type:x mandatory; }
+ .screen-shot { flex:0 0 min(78vw,310px); scroll-snap-align:start; }
+ .mobile-hint { display:block; margin-top:14px; font-size:13px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .reveal { opacity:1; transform:none; transition:none; } }

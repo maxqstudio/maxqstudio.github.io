@@ -1,0 +1,55 @@
+{
+  "app": "SaldoSehat: Money Tracker",
+  "version": "1.2.0+31",
+  "source_commit": "ea456c85fae22f17ef2c1be720765245e23a304c",
+  "source": "Six owner-selected app screenshots; UI content and numbers are unaltered",
+  "positioning": [
+    "Local",
+    "Simple",
+    "Privacy"
+  ],
+  "palette": [
+    "#16A99A",
+    "#BCEB84",
+    "#123E43",
+    "#F6FFF8"
+  ],
+  "screenshots": [
+    {
+      "name": "home",
+      "width": 502,
+      "height": 831,
+      "sha256": "5be06a8e2bddeedde2934c2c63e76f7c99c90e5f1b6cb0f024f38c2b5839f711"
+    },
+    {
+      "name": "transactions",
+      "width": 506,
+      "height": 830,
+      "sha256": "66c3097b2d66d5ae06320b575e6915be57856c7f33b34ff96de7a2660d1d0551"
+    },
+    {
+      "name": "wallet-detail",
+      "width": 507,
+      "height": 840,
+      "sha256": "c8dc75eeaf3b4057ab877d104766b4a907de259393596e4a400f5054f20588f4"
+    },
+    {
+      "name": "target-detail",
+      "width": 506,
+      "height": 838,
+      "sha256": "ca36d657b60548e7160f8ee1dabf2e2528bfc2e4899e7e703890fce9be29650a"
+    },
+    {
+      "name": "debt-detail",
+      "width": 507,
+      "height": 853,
+      "sha256": "3430979a770c80d7ef4b91c16ecf5b1c6ab7ec1f5d81bd4946f66804aba137b8"
+    },
+    {
+      "name": "export",
+      "width": 502,
+      "height": 847,
+      "sha256": "30d2ceac5d9828d54622531f78b88d315d9c153b0031560584c66091dd9d107a"
+    }
+  ]
+}

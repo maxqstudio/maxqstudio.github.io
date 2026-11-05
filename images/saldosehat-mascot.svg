@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ask — SaldoSehat mascot</title>
+  <desc id="desc">A friendly mint conversation bubble with a distinctive folded sprout, expressive eyes and a clean curved smile. Original flat vector design.</desc>
+
+  <!-- Brand marks: zero gradients, zero filters, geometric flat color. -->
+  <g stroke="#123E43" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Tail is part of the silhouette, not a separate speech balloon. -->
+    <path d="M118 151
+             C145 115 193 94 253 94
+             C285 94 315 100 341 113
+             C390 138 417 181 418 235
+             C420 307 363 365 285 378
+             C245 385 202 379 164 362
+             C140 375 109 390 75 395
+             C69 396 65 390 69 384
+             C91 354 103 326 108 312
+             C87 290 77 260 79 230
+             C82 199 94 173 118 151 Z"
+          fill="#16A99A" stroke-width="13"/>
+
+    <!-- A small leaf fold is the signature asymmetric silhouette. -->
+    <path d="M322 108
+             C330 68 355 48 401 49
+             C401 90 380 118 349 128
+             C339 123 332 116 322 108 Z"
+          fill="#BCEB84" stroke-width="12"/>
+    <path d="M345 115 L374 80" fill="none" stroke-width="7"/>
+
+    <!-- Calm face panel, inset to preserve visibility on dark UIs. -->
+    <path d="M161 166
+             C186 142 221 133 265 136
+             C326 141 368 180 368 236
+             C368 290 333 328 283 339
+             C234 350 181 334 157 301
+             C130 264 132 193 161 166 Z"
+          fill="#F6FFF8" stroke-width="10"/>
+
+    <!-- Signature eyes: one curious arch, one attentive capsule. -->
+    <path d="M183 225 Q205 202 226 225" fill="none" stroke-width="11"/>
+    <rect x="281" y="205" width="21" height="35" rx="10.5" fill="#123E43" stroke="none"/>
+
+    <!-- Upswept tick/smile; a subtle nod to financial wellbeing. -->
+    <path d="M207 277 Q236 305 264 291 Q279 284 292 263"
+          fill="none" stroke-width="11"/>
+  </g>
+</svg>

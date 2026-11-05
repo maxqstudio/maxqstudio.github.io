@@ -358,3 +358,9 @@ h1 {
   .contact-card { align-items: flex-start; flex-direction: column; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
 }
+
+/* Scoped SaldoSehat brand treatment; other product cards are unchanged. */
+.saldosehat-product-title { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.saldosehat-product-title img { flex:none; object-fit:contain; }
+.saldosehat-product-title h3 { margin:0; }
+.project-media .saldosehat-product-visual { width:100%; height:auto; max-height:none; object-fit:contain; background:#F6FFF8; }

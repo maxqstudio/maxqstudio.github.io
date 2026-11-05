@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SaldoSehat - Personal Finance Tracker</title>
-  <meta name="description" content="SaldoSehat helps you track income, expenses, wallets, savings targets, loans, receivables, exports, and local backups." />
-  <meta name="theme-color" content="#f6fff9" />
-  <link rel="icon" href="../images/saldosehat_icon.png" />
+  <title>SaldoSehat: Money Tracker â€” Max-Q</title>
+  <meta name="description" content="SaldoSehat: Money Tracker helps you organize wallets, income, spending, savings targets and budgets in one local-first Android app." />
+  <meta name="theme-color" content="#F6FFF8" />
+  <meta property="og:title" content="SaldoSehat: Money Tracker" />
+  <meta property="og:description" content="Local. Simple. Private. A money tracker with financial records stored on your device." />
+  <meta property="og:image" content="https://maxqstudio.dev/images/saldosehat/overview.webp" />
+  <link rel="canonical" href="https://maxqstudio.dev/saldosehat/index.html" />
+  <link rel="icon" type="image/svg+xml" href="../images/saldosehat-mascot.svg" />
   <link rel="stylesheet" href="saldosehat.css" />
 
   <style>
@@ -52,8 +56,8 @@
   <header class="app-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="SaldoSehat home">
-        <img src="../images/saldosehat_logo.png" alt="SaldoSehat logo" />
-        <span>SaldoSehat</span>
+        <img src="../images/saldosehat-mascot.svg" alt="" width="46" height="46" />
+        <span>SaldoSehat<span class="brand-subtitle">Money Tracker</span></span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       <nav class="nav" aria-label="Main navigation">
@@ -70,15 +74,14 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Personal finance tracker</p>
-          <h1>Track your daily finances clearly</h1>
+          <p class="eyebrow">SaldoSehat: Money Tracker</p>
+          <h1>Local. Simple.<br>Private.</h1>
           <p>
-            SaldoSehat helps you record income, expenses, wallets, savings targets,
-            budgets, loans, receivables, exports, and local backups in one simple app.
+            Your financial records stay on your device. Track everyday money in a simple way, with local backups under your control.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="privacy.html">Read Privacy Policy</a>
-            <a class="button secondary" href="support.html">Contact Support</a>
+            <a class="button primary" href="#screenshots">Explore the app <span aria-hidden="true">â†—</span></a>
+            <a class="button secondary" href="#about">What you can do</a>
           </div>
 
           <div class="google-play-cta">
@@ -98,7 +101,8 @@
           </div>
         </div>
         <div class="hero-preview reveal">
-          <img src="../images/saldosehat_portrait.png" alt="SaldoSehat Portrait screen" />
+          <img src="../images/saldosehat/hero-preview.png" width="960" height="1080" fetchpriority="high" alt="SaldoSehat: Money Tracker wallet summary and savings goal, shown with sample data" />
+          <p class="preview-note">Actual app preview Â· Sample data Â· Premium appearance shown</p>
         </div>
       </div>
     </section>
@@ -139,6 +143,9 @@
             <h3>Free with ads</h3>
             <p>The free version may show banner and app-open ads and offer optional rewarded ads for selected Custom and Export features.</p>
           </article>
+          <article class="feature-card reveal"><h3>Calendar and reminders</h3><p>Review financial dates and upcoming obligations, with reminders you can configure in the app.</p></article>
+          <article class="feature-card reveal"><h3>Your view, your preferences</h3><p>Choose your language, theme, number and currency display. Hide balances whenever you need more privacy on screen.</p></article>
+          <article class="feature-card reveal"><h3>Custom categories</h3><p>Organize records with built-in categories or categories that fit the way you manage money.</p></article>
           <article class="feature-card reveal">
             <h3>Premium Lifetime</h3>
             <p>An optional one-time purchase removes ads and unlocks unlimited Custom features and Excel export.</p>
@@ -147,18 +154,28 @@
       </div>
     </section>
 
-    <section id="screenshots" class="section screenshots-section">
+    <section class="section campaign-section" aria-labelledby="daily-title">
       <div class="container">
-        <div class="section-title wide reveal">
-          <p class="eyebrow">Screenshots</p>
-          <h2>Review balances, income, expenses, and cash flow</h2>
-        </div>
+        <div class="section-title wide reveal"><p class="eyebrow">Everyday clarity</p><h2 id="daily-title">A place for every money move.</h2></div>
+        <img class="campaign-image reveal" src="../images/saldosehat/daily-records.webp" width="1440" height="1080" loading="lazy" alt="SaldoSehat: Money Tracker product illustration featuring authentic Home and transaction screens in mint, teal and leaf green" />
+      </div>
+    </section>
+    <section class="section campaign-section" aria-labelledby="goals-title">
+      <div class="container">
+        <div class="section-title wide reveal"><p class="eyebrow">Progress you can see</p><h2 id="goals-title">Make room for your next goal.</h2><p>Connect a savings target to a wallet and review progress from the records you keep.</p></div>
+        <img class="campaign-image reveal" src="../images/saldosehat/saving-goals.webp" width="1440" height="1080" loading="lazy" alt="SaldoSehat: Money Tracker savings targets and goal detail, illustrated in the mascotâ€™s dark teal and leaf-green palette" />
+      </div>
+    </section>
+    <section id="screenshots" class="section screenshots-section" aria-labelledby="screenshots-title">
+      <div class="container">
+        <div class="section-title wide reveal"><p class="eyebrow">Inside SaldoSehat: Money Tracker</p><h2 id="screenshots-title">Real screens. Everyday possibilities.</h2><p>Explore the current app preview. These screenshots were selected by the app owner and use demonstration data.</p><p class="mobile-hint">Swipe to browse, or tap a screen for the full image.</p></div>
         <div class="screenshot-grid">
-          <img class="reveal" src="../images/saldosehat_home.png" alt="SaldoSehat Home screen" />
-          <img class="reveal" src="../images/saldosehat_transactions.png" alt="SaldoSehat Transactions screen" />
-          <img class="reveal" src="../images/saldosehat_wallets.png" alt="SaldoSehat Wallets screen" />
-          <img class="reveal" src="../images/saldosehat_target.png" alt="SaldoSehat Target screen" />
-          <img class="reveal" src="../images/saldosehat_loans.png" alt="SaldoSehat Loans screen" />
+          <figure class="screen-shot reveal"><a href="../images/saldosehat/screens/home.png" target="_blank" rel="noopener noreferrer"><img src="../images/saldosehat/screens/home.png" width="502" height="831" loading="lazy" alt="SaldoSehat: Money Tracker — local clarity, sample data" /></a><figcaption><h3>Local clarity</h3><p>See balances, cash flow and upcoming obligations.</p></figcaption></figure>
+          <figure class="screen-shot reveal"><a href="../images/saldosehat/screens/transactions.png" target="_blank" rel="noopener noreferrer"><img src="../images/saldosehat/screens/transactions.png" width="506" height="830" loading="lazy" alt="SaldoSehat: Money Tracker — simple daily records, sample data" /></a><figcaption><h3>Simple daily records</h3><p>Review income, expenses and transfers by period.</p></figcaption></figure>
+          <figure class="screen-shot reveal"><a href="../images/saldosehat/screens/wallet-detail.png" target="_blank" rel="noopener noreferrer"><img src="../images/saldosehat/screens/wallet-detail.png" width="507" height="840" loading="lazy" alt="SaldoSehat: Money Tracker — your wallets in detail, sample data" /></a><figcaption><h3>Your wallets in detail</h3><p>Follow each wallet’s balance and transaction history.</p></figcaption></figure>
+          <figure class="screen-shot reveal"><a href="../images/saldosehat/screens/target-detail.png" target="_blank" rel="noopener noreferrer"><img src="../images/saldosehat/screens/target-detail.png" width="506" height="838" loading="lazy" alt="SaldoSehat: Money Tracker — visible savings progress, sample data" /></a><figcaption><h3>Visible savings progress</h3><p>Link your savings target to a wallet.</p></figcaption></figure>
+          <figure class="screen-shot reveal"><a href="../images/saldosehat/screens/debt-detail.png" target="_blank" rel="noopener noreferrer"><img src="../images/saldosehat/screens/debt-detail.png" width="507" height="853" loading="lazy" alt="SaldoSehat: Money Tracker — stay on top of repayments, sample data" /></a><figcaption><h3>Stay on top of repayments</h3><p>Review outstanding debt and payment history.</p></figcaption></figure>
+          <figure class="screen-shot reveal"><a href="../images/saldosehat/screens/export.png" target="_blank" rel="noopener noreferrer"><img src="../images/saldosehat/screens/export.png" width="502" height="847" loading="lazy" alt="SaldoSehat: Money Tracker — local files, under your control, sample data" /></a><figcaption><h3>Local files, under your control</h3><p>Export to Excel, back up locally and restore from your file.</p></figcaption></figure>
         </div>
       </div>
     </section>
@@ -171,7 +188,7 @@
             <h2>Your main finance data stays on your device</h2>
             <p>
               Main app data is stored locally. You are responsible for protecting your
-              device, app access, export files, and backup files after they are created.
+              device, app access, export files, and backup files after they are created. Ads, advertising consent and Google Play purchases may require an internet connection.
             </p>
           </div>
           <a class="email-button" href="support.html">Support</a>
@@ -182,7 +199,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Â© 2026 SaldoSehat. All rights reserved.</p>
+      <p>Ã‚Â© 2026 SaldoSehat: Money Tracker. All rights reserved.</p>
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms</a>
