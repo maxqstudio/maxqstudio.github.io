@@ -174,29 +174,38 @@ h4 { margin: 0 0 6px; font-size: 20px; }
     }
 
 
-/* Pretio 1.4.5 screenshot and feature graphic presentation. */
+/* Pretio 1.4.5 responsive feature-gallery cards. */
 .pretio-feature-graphic-section { padding: 0 0 32px; }
 .pretio-feature-graphic {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  display: block; width: 100%; height: auto; border-radius: var(--radius-md);
+  border: 1px solid var(--line); box-shadow: var(--shadow);
 }
-.pretio-screenshot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.pretio-screen-card { margin: 0; min-width: 0; }
-.pretio-screen-card img { width: 100%; height: auto; border-radius: 18px; }
+.pretio-screenshot-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px; align-items: stretch;
+}
+.pretio-screen-card {
+  margin: 0; padding: 12px 12px 15px; min-width: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  border: 1px solid var(--line); border-radius: 20px;
+  background: var(--panel); box-shadow: 0 12px 28px rgba(6, 64, 34, .07);
+}
+.pretio-screen-card img {
+  display: block; width: 100%; max-width: 220px; height: auto;
+  max-height: 391px; aspect-ratio: 9 / 16; object-fit: contain;
+  object-position: center top; margin: 0 auto; border: 0;
+  border-radius: 12px; box-shadow: none;
+}
 .pretio-screen-card figcaption {
-  margin: 12px 2px 0;
-  color: var(--text);
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 750;
+  margin: auto 4px 0; text-align: center; color: var(--text);
+  font-size: 14px; line-height: 1.4; font-weight: 750;
 }
 @media (max-width: 900px) {
-  .pretio-screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pretio-screenshot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-@media (max-width: 440px) {
-  .pretio-screenshot-grid { grid-template-columns: 1fr; }
+@media (max-width: 680px) {
+  .pretio-screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pretio-screen-card { padding: 8px 8px 12px; border-radius: 16px; }
+  .pretio-screen-card img { max-height: none; }
+  .pretio-screen-card figcaption { font-size: 12px; }
 }
