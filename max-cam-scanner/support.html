@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bantuan · Max Cam Scanner</title>
+  <meta name="description" content="Bantuan dan pertanyaan umum Max Cam Scanner." />
+  <meta name="theme-color" content="#fff4dd" />
+  <link rel="icon" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="max-cam-scanner.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Max Cam Scanner, beranda">
+        <span class="mark" aria-hidden="true">M</span>
+        <span>Max Cam Scanner</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="../index.html">Max-Q</a>
+        <a href="index.html#fitur">Fitur</a>
+        <a href="index.html#paket">Paket</a>
+        <a href="privacy.html">Privasi</a>
+        <a href="support.html" aria-current="page">Bantuan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <article class="container legal-card">
+      <p class="eyebrow">Pusat bantuan</p>
+      <h1>Bantuan Max Cam Scanner</h1>
+
+      <div class="box content-card">
+        <p style="margin:0 0 6px"><strong>Email support</strong></p>
+        <p style="margin:0 0 10px"><strong><a href="mailto:scanner.support@maxqstudio.dev">scanner.support@maxqstudio.dev</a></strong></p>
+        <p>Sebutkan tipe HP, versi Android, email akun (kalau login), dan apa yang terjadi. Screenshot sangat membantu.</p>
+        <a class="button primary" href="mailto:scanner.support@maxqstudio.dev?subject=Max%20Cam%20Scanner%20-%20Bantuan">Kirim email</a>
+      </div>
+
+      <h2>Pertanyaan umum</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Apakah perlu akun?</summary>
+          <p>Tidak. Tanpa akun kamu tetap bisa scan, impor, OCR, dan export. Semua file tersimpan di HP. Login Google hanya dibutuhkan untuk workspace bersama.</p>
+        </details>
+        <details>
+          <summary>Apakah foto dokumenku dikirim ke server?</summary>
+          <p>Tidak untuk mode OCR. Teks dibaca langsung di HP. File hanya keluar dari perangkat jika kamu membagikannya atau menyimpannya ke workspace.</p>
+        </details>
+        <details>
+          <summary>Hasil OCR berantakan atau salah.</summary>
+          <p>Scan di tempat terang, jaga kertas tetap datar, dan putar halaman yang miring di layar dokumen sebelum OCR. Tulisan tangan dan tabel tanpa garis memang lebih sulit, jadi perbaiki langsung di editor DOC atau Excel. Mode AI untuk dokumen rumit hadir di update berikutnya.</p>
+        </details>
+        <details>
+          <summary>Bagaimana cara impor PDF?</summary>
+          <p>Di layar utama, ketuk <strong>PDF</strong> lalu pilih file. Setiap halaman dijadikan gambar sehingga bisa dibaca, ditandai, dan ditandatangani. Maksimal 50 halaman per impor. PDF yang terkunci password belum bisa dibuka.</p>
+        </details>
+        <details>
+          <summary>Apakah tanda tangannya sah secara hukum?</summary>
+          <p>Fitur ini menempelkan gambar tanda tanganmu ke PDF. Ini bukan tanda tangan elektronik tersertifikasi, jadi pastikan cara ini diterima untuk keperluanmu.</p>
+        </details>
+        <details>
+          <summary>Kenapa ada iklan sebelum export?</summary>
+          <p>Versi gratis menampilkan iklan singkat sebelum export. Kamu bisa melewatinya, tetapi file tidak dibuat jika iklan dilewati. Kalau iklan sedang tidak tersedia, export langsung berjalan. Pengguna Pro export tanpa iklan.</p>
+        </details>
+        <details>
+          <summary>Bagaimana mengundang tim ke workspace?</summary>
+          <p>Buka workspace, pilih tab <strong>Anggota</strong>, lalu <strong>Undang lewat email</strong>. Pilih peran Editor atau Viewer. Undangan berlaku 7 hari dan hanya bisa diterima oleh akun Google dengan email yang sama.</p>
+        </details>
+        <details>
+          <summary>Storage workspace penuh.</summary>
+          <p>Akun Free punya 1 workspace milik sendiri sebesar 50 MB. File yang diunggah anggota memakai kuota owner. Hapus file lama untuk mengosongkan ruang. Paket Pro akan mendapat 5 GB.</p>
+        </details>
+        <details>
+          <summary>Undangan bilang "Email tidak cocok".</summary>
+          <p>Kamu login dengan akun Google yang berbeda dari email yang diundang. Ketuk <strong>Ganti akun</strong> dan masuk dengan email yang menerima undangan, atau minta owner mengundang email yang kamu pakai.</p>
+        </details>
+        <details>
+          <summary>Bagaimana menghapus akun?</summary>
+          <p>Lihat <a href="account-deletion.html">Hapus akun &amp; data</a>.</p>
+        </details>
+      </div>
+
+      <div class="support-links">
+        <a class="button primary" href="mailto:scanner.support@maxqstudio.dev?subject=Max%20Cam%20Scanner%20-%20Laporan%20Bug">Laporkan bug</a>
+        <a class="button secondary" href="privacy.html">Kebijakan Privasi</a>
+        <a class="button secondary" href="terms.html">Syarat</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio. Max Cam Scanner.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Kebijakan Privasi</a>
+        <a href="terms.html">Syarat</a>
+        <a href="account-deletion.html">Hapus akun</a>
+        <a href="support.html">Bantuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

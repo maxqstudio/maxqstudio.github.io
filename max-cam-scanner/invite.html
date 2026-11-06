@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan workspace · Max Cam Scanner</title>
+  <meta name="description" content="Buka undangan workspace di aplikasi Max Cam Scanner." />
+  <meta name="theme-color" content="#fff4dd" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="../images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="max-cam-scanner.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Max Cam Scanner, beranda">
+        <span class="mark" aria-hidden="true">M</span>
+        <span>Max Cam Scanner</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="../index.html">Max-Q</a>
+        <a href="index.html#fitur">Fitur</a>
+        <a href="index.html#paket">Paket</a>
+        <a href="privacy.html">Privasi</a>
+        <a href="support.html">Bantuan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <article class="container legal-card">
+      <span class="tag">Undangan</span>
+      <h1 style="margin-top:14px">Kamu diundang ke workspace</h1>
+      <p id="msg">Buka di aplikasi Max Cam Scanner, lalu masuk dengan akun Google yang menerima email ini.</p>
+      <div class="support-links">
+        <a id="open" class="button primary" href="#">Buka di aplikasi</a>
+        <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.maxq.scanner">Pasang dari Google Play</a>
+      </div>
+      <p class="meta" style="margin-top:24px">Link berlaku 7 hari. Butuh bantuan? <a href="support.html">Pusat bantuan</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio. Max Cam Scanner.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Kebijakan Privasi</a>
+        <a href="terms.html">Syarat</a>
+        <a href="account-deletion.html">Hapus akun</a>
+        <a href="support.html">Bantuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    // Fallback when App Links didn't open the app. The token stays in the browser.
+    (function () {
+      var token = new URLSearchParams(location.search).get("token") || "";
+      var open = document.getElementById("open");
+      if (!/^[a-f0-9]{32,128}$/i.test(token)) {
+        document.getElementById("msg").textContent =
+          "Link undangan tidak lengkap. Buka lagi link dari email, atau minta owner mengirim ulang.";
+        open.style.display = "none";
+        return;
+      }
+      open.href = "maxqscanner://invite?token=" + encodeURIComponent(token);
+    })();
+  </script>
+</body>
+</html>

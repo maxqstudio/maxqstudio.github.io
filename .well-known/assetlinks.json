@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.maxq.scanner",
+      "sha256_cert_fingerprints": [
+        "05:36:C7:21:1C:45:5F:08:68:DA:7C:8C:38:F9:49:91:F5:BA:19:94:AD:37:DB:1E:3A:80:CB:DC:04:5E:9C:B1"
+      ]
+    }
+  }
+]
