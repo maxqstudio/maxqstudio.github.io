@@ -2,6 +2,10 @@
 
 Static HTML/CSS/JS website. No React, no Next.js, no backend, no build step.
 
+The studio homepage uses a monochrome dark theme inspired by the Sleek X showcase, with a dotted hero background, rounded navigation, and consistent icon-led project cards. Product pages retain their own branding. `images/project-icon-sources.json` records the source revisions for Pretio, SaldoSehat, and Max Q Tools icons. SaldoSehat's Android adaptive vector is translated to SVG with its original paths and colors.
+
+The developer mark follows the supplied `icon_dev_2.svg` artwork. The header and footer use `images/icon-dev.svg` on a light backing in CSS; `images/icon-dev-favicon.svg` includes the same light backing for visibility in dark browser tabs.
+
 Upload all files and folders to your hosting root.
 
 Main pages:
