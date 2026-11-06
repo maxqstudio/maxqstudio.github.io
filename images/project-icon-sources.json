@@ -1,0 +1,28 @@
+{
+  "description": "Product icons used on the Max-Q Studio homepage. PNG files are byte-for-byte copies; the SaldoSehat SVG preserves the Android adaptive icon paths and transform.",
+  "icons": [
+    {
+      "file": "images/pretio/app-icon.png",
+      "repository": "maxqstudio/pretio",
+      "revision": "8d6f8d44ad7500de65548659352dea8667ae7008",
+      "source": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "blob": "b7e8e602e705945a4ab8c857d30b7a43287484ad"
+    },
+    {
+      "file": "images/saldosehat/app-icon.svg",
+      "repository": "maxqstudio/saldosehat",
+      "revision": "ea456c85fae22f17ef2c1be720765245e23a304c",
+      "source": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "blob": "d08641ec9593e38bd4a47a46b5abc780d6ee4159",
+      "background": "#EFFBF6 from app/src/main/res/values/colors.xml",
+      "conversion": "Android vector paths, colors, strokes and transform translated to SVG; adaptive background rendered as a rounded square."
+    },
+    {
+      "file": "images/maxq-tools-icon.png",
+      "repository": "maxqstudio/max-q-studio",
+      "revision": "d15a30bdebfcb8bdeefd008f9ab6903e50bf2b58",
+      "source": "public/brand/maxq-favicon.png",
+      "blob": "8b62ca257096d9eb310cda1540c25181d0804f26"
+    }
+  ]
+}
