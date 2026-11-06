@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kebijakan Privasi · Max Cam Scanner</title>
+  <meta name="description" content="Bagaimana Max Cam Scanner memproses dan menyimpan data kamu." />
+  <meta name="theme-color" content="#fff4dd" />
+  <link rel="icon" href="../../images/max-cam-scanner/favicon.png" />
+  <link rel="apple-touch-icon" href="../../images/max-cam-scanner/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="alternate" hreflang="en" href="https://maxqstudio.dev/max-cam-scanner/privacy.html" />
+  <link rel="alternate" hreflang="id" href="https://maxqstudio.dev/max-cam-scanner/id/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://maxqstudio.dev/max-cam-scanner/privacy.html" />
+  <link rel="stylesheet" href="../max-cam-scanner.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Max Cam Scanner, beranda">
+        <img class="brand-icon" src="../../images/max-cam-scanner/logo_icon.svg" width="38" height="38" alt="" />
+        <span class="brand-name">MAX CAM</span>
+        <span class="tag">Scanner</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="../../index.html">Max-Q</a>
+        <a href="index.html#fitur">Fitur</a>
+        <a href="index.html#paket">Paket</a>
+        <a href="privacy.html" aria-current="page">Privasi</a>
+        <a href="support.html">Bantuan</a>
+        <a class="lang" href="../privacy.html" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <article class="container legal-card">
+      <p class="eyebrow">Max Cam Scanner oleh Max-Q Studio</p>
+      <h1>Kebijakan Privasi</h1>
+        <p class="meta">Berlaku sejak 6 November 2026 · Aplikasi Android &amp; iOS “Max Cam Scanner” (com.maxq.scanner)</p>
+      
+        <div class="box content-card hl">
+          <strong>Singkatnya:</strong> foto dokumen dan hasil OCR diproses di HP kamu. Data hanya keluar dari perangkat
+          jika kamu sendiri membagikan file atau menyimpannya ke workspace. Iklan ditampilkan oleh Google AdMob.
+        </div>
+      
+        <h2>1. Siapa kami</h2>
+        <p>Max Cam Scanner dibuat oleh Max Q Studio (“kami”). Pertanyaan tentang privasi dapat dikirim ke
+        <a href="mailto:scanner.support@maxqstudio.dev">scanner.support@maxqstudio.dev</a>.</p>
+      
+        <h2>2. Data yang tetap di perangkat kamu</h2>
+        <ul>
+          <li><strong>Kamera dan foto.</strong> Kamera hanya dipakai saat kamu menekan Scan. Gambar dari galeri hanya dibaca jika kamu memilihnya.</li>
+          <li><strong>Hasil scan, OCR, anotasi, dan tanda tangan.</strong> Semuanya disimpan di penyimpanan aplikasi pada HP kamu. Pengenalan teks (OCR) memakai Google ML Kit yang berjalan di perangkat, sehingga gambar tidak dikirim ke server untuk dibaca.</li>
+          <li><strong>Tanda tangan</strong> yang kamu gambar disimpan sebagai gambar di HP kamu. Ini bukan tanda tangan elektronik tersertifikasi.</li>
+        </ul>
+        <p>Menghapus dokumen atau aplikasi akan menghapus data tersebut dari perangkat.</p>
+      
+        <h2>3. Data yang kami proses jika kamu masuk</h2>
+        <p>Kamu bisa memakai aplikasi tanpa akun. Workspace bersama membutuhkan login dengan Google. Jika kamu masuk, kami memproses:</p>
+        <ul>
+          <li><strong>Akun:</strong> nama, alamat email, foto profil, dan ID pengguna dari Google, melalui Firebase Authentication.</li>
+          <li><strong>Workspace:</strong> nama workspace, daftar anggota beserta email dan peran (Owner, Editor, Viewer), serta metadata file seperti judul, jenis, ukuran, waktu, dan pengunggah. Data ini disimpan di Cloud Firestore.</li>
+          <li><strong>File workspace:</strong> PDF, DOC, dan Excel yang kamu simpan ke workspace. File disimpan di Cloud Storage for Firebase dan hanya bisa dibuka oleh anggota workspace tersebut.</li>
+          <li><strong>Undangan:</strong> email orang yang kamu undang, peran yang ditawarkan, dan status undangan. Kami mengirim satu email undangan ke alamat tersebut atas permintaanmu.</li>
+          <li><strong>Paket langganan:</strong> status Free atau Pro.</li>
+        </ul>
+        <p>Data ini diproses oleh Google Firebase (Google LLC) sebagai penyedia layanan kami, dan dapat disimpan di server di luar negaramu.</p>
+      
+        <h2>4. Iklan</h2>
+        <p>Versi gratis menampilkan iklan dari Google AdMob, yaitu banner, iklan saat membuka aplikasi, dan iklan berhadiah sebelum export. Untuk menampilkan dan mengukur iklan, AdMob dapat mengumpulkan ID iklan perangkat, alamat IP, informasi perangkat, dan interaksi dengan iklan.
+        Di wilayah yang mewajibkan, kami meminta persetujuanmu lebih dulu melalui formulir persetujuan Google. Kamu dapat mereset atau menonaktifkan personalisasi ID iklan di pengaturan perangkat. Pengguna Pro tidak melihat iklan.
+        Lihat <a href="https://policies.google.com/technologies/partner-sites">cara Google menggunakan data</a>.</p>
+      
+        <h2>5. Fitur AI</h2>
+        <p>Versi saat ini tidak mengirim dokumen ke layanan AI. Jika mode AI dirilis nanti, kebijakan ini akan diperbarui sebelum fitur tersebut aktif, dan dokumen hanya akan dikirim ketika kamu memilih mode AI.</p>
+      
+        <h2>6. Untuk apa data dipakai</h2>
+        <ul>
+          <li>Menjalankan fitur yang kamu pilih: login, workspace, berbagi, dan undangan.</li>
+          <li>Menegakkan peran dan kuota penyimpanan.</li>
+          <li>Menampilkan iklan pada versi gratis.</li>
+          <li>Menjaga keamanan dan mencegah penyalahgunaan.</li>
+        </ul>
+        <p>Kami tidak menjual data pribadimu dan tidak memakai isi dokumenmu untuk iklan.</p>
+      
+        <h2>7. Berbagi data</h2>
+        <p>File di workspace dapat dilihat oleh semua anggota workspace tersebut. Selain itu, data hanya dibagikan kepada penyedia layanan di atas (Google Firebase dan Google AdMob), atau jika diwajibkan oleh hukum.</p>
+      
+        <h2>8. Penyimpanan &amp; penghapusan</h2>
+        <ul>
+          <li>File workspace disimpan sampai dihapus oleh Editor atau Owner, atau sampai workspace dihapus oleh Owner.</li>
+          <li>Undangan kedaluwarsa setelah 7 hari.</li>
+          <li>Untuk menghapus akun beserta datanya, ikuti langkah di <a href="account-deletion.html">Hapus akun &amp; data</a>.</li>
+        </ul>
+      
+        <h2>9. Keamanan</h2>
+        <p>Data dikirim melalui koneksi terenkripsi (HTTPS). Akses workspace dibatasi aturan keamanan yang memeriksa keanggotaan dan peran di setiap permintaan. Tidak ada sistem yang 100% aman, jadi jangan simpan dokumen yang sangat sensitif tanpa pertimbangan.</p>
+      
+        <h2>10. Anak-anak</h2>
+        <p>Aplikasi ini tidak ditujukan untuk anak di bawah 13 tahun, dan kami tidak dengan sengaja mengumpulkan data mereka.</p>
+      
+        <h2>11. Hak kamu</h2>
+        <p>Kamu dapat meminta akses, koreksi, atau penghapusan data pribadimu, sesuai undang-undang yang berlaku (termasuk UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi). Hubungi kami lewat email di atas.</p>
+      
+        <h2>12. Perubahan</h2>
+        <p>Jika kebijakan ini berubah, tanggal berlakunya diperbarui di halaman ini. Untuk perubahan penting, kami juga memberi tahu lewat aplikasi.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio. Max Cam Scanner.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Kebijakan Privasi</a>
+        <a href="terms.html">Syarat</a>
+        <a href="account-deletion.html">Hapus akun</a>
+        <a href="support.html">Bantuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

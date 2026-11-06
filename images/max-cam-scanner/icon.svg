@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Max Cam Scanner">
-  <rect width="512" height="512" rx="96" fill="#fff4dd"/>
-  <rect x="128" y="128" width="280" height="280" rx="40" fill="#26201a"/>
-  <rect x="104" y="104" width="280" height="280" rx="40" fill="#ff5c2b" stroke="#26201a" stroke-width="18"/>
-  <path d="M170 318V170h34l40 66 40-66h34v148h-36v-86l-38 62-38-62v86z" fill="#26201a"/>
-</svg>

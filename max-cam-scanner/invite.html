@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan workspace · Max Cam Scanner</title>
-  <meta name="description" content="Buka undangan workspace di aplikasi Max Cam Scanner." />
+  <title>Workspace invite · Max Cam Scanner</title>
+  <meta name="description" content="Open a workspace invite in the Max Cam Scanner app." />
   <meta name="theme-color" content="#fff4dd" />
   <meta name="robots" content="noindex" />
-  <link rel="icon" href="../images/favicon.png" />
+  <link rel="icon" href="../images/max-cam-scanner/favicon.png" />
+  <link rel="apple-touch-icon" href="../images/max-cam-scanner/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="alternate" hreflang="en" href="https://maxqstudio.dev/max-cam-scanner/invite.html" />
+  <link rel="alternate" hreflang="id" href="https://maxqstudio.dev/max-cam-scanner/id/invite.html" />
+  <link rel="alternate" hreflang="x-default" href="https://maxqstudio.dev/max-cam-scanner/invite.html" />
   <link rel="stylesheet" href="max-cam-scanner.css" />
 </head>
 <body>
   <header class="app-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Max Cam Scanner, beranda">
-        <span class="mark" aria-hidden="true">M</span>
-        <span>Max Cam Scanner</span>
+      <a class="brand" href="index.html" aria-label="Max Cam Scanner home">
+        <img class="brand-icon" src="../images/max-cam-scanner/logo_icon.svg" width="38" height="38" alt="" />
+        <span class="brand-name">MAX CAM</span>
+        <span class="tag">Scanner</span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
-      <nav class="nav" aria-label="Navigasi utama">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav" aria-label="Main navigation">
         <a href="../index.html">Max-Q</a>
-        <a href="index.html#fitur">Fitur</a>
-        <a href="index.html#paket">Paket</a>
-        <a href="privacy.html">Privasi</a>
-        <a href="support.html">Bantuan</a>
+        <a href="index.html#fitur">Features</a>
+        <a href="index.html#paket">Plans</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a class="lang" href="id/invite.html" hreflang="id" lang="id">ID</a>
       </nav>
     </div>
   </header>
 
   <main class="legal-page">
     <article class="container legal-card">
-      <span class="tag">Undangan</span>
-      <h1 style="margin-top:14px">Kamu diundang ke workspace</h1>
-      <p id="msg">Buka di aplikasi Max Cam Scanner, lalu masuk dengan akun Google yang menerima email ini.</p>
+      <span class="tag">Invite</span>
+      <h1 style="margin-top:14px">You're invited to a workspace</h1>
+      <p id="msg">Open it in the Max Cam Scanner app, then sign in with the Google account that received this email.</p>
       <div class="support-links">
-        <a id="open" class="button primary" href="#">Buka di aplikasi</a>
-        <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.maxq.scanner">Pasang dari Google Play</a>
+        <a id="open" class="button primary" href="#">Open in the app</a>
+        <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.maxq.scanner">Get it on Google Play</a>
       </div>
-      <p class="meta" style="margin-top:24px">Link berlaku 7 hari. Butuh bantuan? <a href="support.html">Pusat bantuan</a>.</p>
+      <p class="meta" style="margin-top:24px">The link is valid for 7 days. Need help? <a href="support.html">Help center</a>.</p>
     </article>
   </main>
 
@@ -48,10 +54,10 @@
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Max-Q Studio. Max Cam Scanner.</p>
       <div class="footer-links">
-        <a href="privacy.html">Kebijakan Privasi</a>
-        <a href="terms.html">Syarat</a>
-        <a href="account-deletion.html">Hapus akun</a>
-        <a href="support.html">Bantuan</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="account-deletion.html">Delete account</a>
+        <a href="support.html">Support</a>
       </div>
     </div>
   </footer>
@@ -64,7 +70,7 @@
       var open = document.getElementById("open");
       if (!/^[a-f0-9]{32,128}$/i.test(token)) {
         document.getElementById("msg").textContent =
-          "Link undangan tidak lengkap. Buka lagi link dari email, atau minta owner mengirim ulang.";
+          "This invite link is incomplete. Open the link from the email again, or ask the owner to resend it.";
         open.style.display = "none";
         return;
       }
