@@ -7,8 +7,7 @@
       "namespace": "android_app",
       "package_name": "com.maxq.scanner",
       "sha256_cert_fingerprints": [
-        "05:36:C7:21:1C:45:5F:08:68:DA:7C:8C:38:F9:49:91:F5:BA:19:94:AD:37:DB:1E:3A:80:CB:DC:04:5E:9C:B1",
-        "E9:D5:49:F0:6A:20:4E:CE:80:91:C9:32:29:F7:4B:51:62:DC:F1:51:91:FA:09:CD:73:4C:85:26:DA:3C:A0:D3"
+        "05:36:C7:21:1C:45:5F:08:68:DA:7C:8C:38:F9:49:91:F5:BA:19:94:AD:37:DB:1E:3A:80:CB:DC:04:5E:9C:B1"
       ]
     }
   }
