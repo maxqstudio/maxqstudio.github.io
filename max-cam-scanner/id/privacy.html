@@ -66,7 +66,10 @@
           <li><strong>Workspace:</strong> nama workspace, daftar anggota beserta email dan peran (Owner, Editor, Viewer), serta metadata file seperti judul, jenis, ukuran, waktu, dan pengunggah. Data ini disimpan di Cloud Firestore.</li>
           <li><strong>File workspace:</strong> PDF, DOC, dan Excel yang kamu simpan ke workspace. File disimpan di Cloud Storage for Firebase dan hanya bisa dibuka oleh anggota workspace tersebut.</li>
           <li><strong>Undangan:</strong> email orang yang kamu undang, peran yang ditawarkan, dan status undangan. Kami mengirim satu email undangan ke alamat tersebut atas permintaanmu.</li>
-          <li><strong>Paket langganan:</strong> status Free atau Pro.</li>
+          <li><strong>Kolaborasi:</strong> komentar di file workspace, siapa yang di-tag (@mention), permintaan tanda tangan dan statusnya, serta setiap versi file yang disimpan (siapa, kapan, catatan opsional, dan ringkasan perubahan). Maksimal 10 versi terakhir per file disimpan.</li>
+    <li><strong>Pengaturan yang tersinkron:</strong> tanda tangan yang kamu buat saat login dan watermark terakhir yang kamu pakai, supaya tersedia di HP lain. Tanda tangan dihapus dari HP saat kamu logout di HP itu.</li>
+    <li><strong>Notifikasi:</strong> notifikasi di app tentang mention dan permintaan tanda tangan, serta ID instalasi Firebase Cloud Messaging per HP untuk mengirim push. Push bisa dimatikan di pengaturan HP.</li>
+    <li><strong>Paket langganan:</strong> status Free atau Pro.</li>
         </ul>
         <p>Data ini diproses oleh Google Firebase (Google LLC) sebagai penyedia layanan kami, dan dapat disimpan di server di luar negaramu.</p>
       
@@ -80,7 +83,7 @@
       
         <h2>6. Untuk apa data dipakai</h2>
         <ul>
-          <li>Menjalankan fitur yang kamu pilih: login, workspace, berbagi, dan undangan.</li>
+          <li>Menjalankan fitur yang kamu pilih: login, workspace, berbagi, undangan, komentar, permintaan tanda tangan, riwayat versi, dan notifikasi.</li>
           <li>Menegakkan peran dan kuota penyimpanan.</li>
           <li>Menampilkan iklan pada versi gratis.</li>
           <li>Menjaga keamanan dan mencegah penyalahgunaan.</li>
@@ -92,7 +95,7 @@
       
         <h2>8. Penyimpanan &amp; penghapusan</h2>
         <ul>
-          <li>File workspace disimpan sampai dihapus oleh Editor atau Owner, atau sampai workspace dihapus oleh Owner.</li>
+          <li>File workspace beserta versinya disimpan sampai Owner atau Co-owner menghapus file itu (semua versi dan komentarnya ikut terhapus), atau Owner menghapus workspace.</li>
           <li>Undangan kedaluwarsa setelah 7 hari.</li>
           <li>Untuk menghapus akun beserta datanya, ikuti langkah di <a href="account-deletion.html">Hapus akun &amp; data</a>.</li>
         </ul>

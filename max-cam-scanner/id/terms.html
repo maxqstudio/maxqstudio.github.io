@@ -55,7 +55,8 @@
       
         <h2>3. Workspace, peran, dan kuota</h2>
         <ul>
-          <li><strong>Owner</strong> mengelola nama workspace, anggota, peran, undangan, dan bisa menghapus workspace. <strong>Editor</strong> bisa menambah dan menghapus file. <strong>Viewer</strong> hanya bisa membuka dan mengunduh.</li>
+          <li><strong>Owner</strong>: semua akses, termasuk menghapus workspace. <strong>Co-owner</strong>: sama seperti owner (anggota, peran, undangan, hapus file, rollback) kecuali menghapus workspace atau mengubah owner. <strong>Editor</strong>: menambah file dan menyimpan versi baru. <strong>Commenter</strong>: membuka file, komentar, dan minta tanda tangan. <strong>Viewer</strong>: hanya membuka dan mengunduh.</li>
+    <li>Setiap simpan membuat versi baru. Menghapus file juga menghapus semua versi dan komentarnya, dan tidak bisa dibatalkan. Rollback menambahkan isi lama sebagai versi baru.</li>
           <li>Pengguna Free punya satu workspace milik sendiri dengan kapasitas 50 MB. File yang diunggah anggota memakai kuota milik Owner workspace tersebut.</li>
           <li>Undangan dikirim ke email dan hanya dapat diterima oleh akun Google dengan email yang sama, dalam waktu 7 hari.</li>
           <li>Owner bertanggung jawab memilih siapa yang diundang. Semua anggota bisa melihat file di workspace.</li>
