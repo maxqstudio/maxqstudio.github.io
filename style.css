@@ -29,7 +29,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--text); outline-
 .header-inner, .brand, .nav { display: flex; align-items: center; }
 .header-inner { justify-content: space-between; gap: 32px; }
 .brand { flex-shrink: 0; gap: 12px; line-height: 1.2; font-size: 22px; font-weight: 600; letter-spacing: -.04em; }
-.brand img { flex-shrink: 0; width: 44px; height: 44px; padding: 6px; background: #fafafa; border-radius: 12px; }
+.brand img { flex-shrink: 0; width: 44px; height: 44px; object-fit: contain; }
 .brand strong { font-weight: 400; color: #c5c5cc; }
 .nav { gap: 32px; font-size: 15px; font-weight: 500; }
 .nav a { transition: color .2s; }
