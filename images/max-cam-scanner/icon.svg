@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Max Cam Scanner</title>
+  <!-- Max Cam mascot: the lens camera with eyes and feet, brutalist style.
+       Full-bleed cream square; Google Play / launchers apply their own mask. -->
+  <rect width="512" height="512" fill="#FFF4DD"/>
+  <g transform="translate(6 16) rotate(-6 256 246)">
+    <!-- feet (behind the body) -->
+    <rect x="150" y="352" width="78" height="52" rx="22" fill="#26201A"/>
+    <rect x="284" y="352" width="78" height="52" rx="22" fill="#26201A"/>
+    <!-- hard shadow -->
+    <rect x="124" y="98" width="282" height="270" rx="56" fill="#000000"/>
+    <!-- body -->
+    <rect x="106" y="80" width="282" height="270" rx="56" fill="#FF5C2B" stroke="#26201A" stroke-width="10"/>
+    <!-- inner face plate -->
+    <rect x="142" y="114" width="210" height="202" rx="34" fill="#FFD84D" stroke="#26201A" stroke-width="8"/>
+    <!-- lens -->
+    <circle cx="247" cy="222" r="70" fill="#FF5C2B" stroke="#26201A" stroke-width="8"/>
+    <circle cx="247" cy="222" r="34" fill="#FFD84D" stroke="#26201A" stroke-width="8"/>
+    <!-- shutter dot -->
+    <circle cx="320" cy="286" r="13" fill="#FF5C2B" stroke="#26201A" stroke-width="6"/>
+    <!-- eyes -->
+    <circle cx="196" cy="156" r="27" fill="#FFFFFF" stroke="#26201A" stroke-width="8"/>
+    <circle cx="300" cy="156" r="27" fill="#FFFFFF" stroke="#26201A" stroke-width="8"/>
+    <circle cx="203" cy="160" r="12" fill="#26201A"/>
+    <circle cx="307" cy="160" r="12" fill="#26201A"/>
+    <circle cx="207" cy="155" r="4" fill="#FFFFFF"/>
+    <circle cx="311" cy="155" r="4" fill="#FFFFFF"/>
+  </g>
+</svg>
