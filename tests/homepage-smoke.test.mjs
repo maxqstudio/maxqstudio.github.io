@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { mkdirSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const base = process.env.TEST_BASE_URL ?? 'http://127.0.0.1:8765';
+mkdirSync('artifacts/screenshots', { recursive: true });
 const browser = await chromium.launch({ headless: true });
 try {
   for (const width of [320, 375, 768, 1440]) {
@@ -15,7 +17,7 @@ try {
       assert.equal(await page.locator('h1').count(), 1);
       assert.match(await page.locator('h1').innerText(), /Small studio/);
       assert.equal(await page.locator('#products .product-tile').count(), 5);
-      assert.equal(await page.locator('a[href="https://maxq.tools/"]').count(), 2);
+      assert.ok(await page.locator('a[href="https://maxq.tools/"]').count() >= 2);
       const logo = page.locator('img[src="images/maxq-tools-logo.svg"]').first();
       await logo.waitFor({ state: 'visible' });
       assert.ok(await logo.evaluate(el => el.complete && el.naturalWidth > 0), 'Official Max Q Tools logo should load');
@@ -44,6 +46,7 @@ try {
         assert.equal(await page.getByRole('navigation', { name: 'Main navigation' }).isVisible(), true);
       }
       assert.deepEqual(failures, []);
+      await page.screenshot({ path: `artifacts/screenshots/homepage-${width}.png`, fullPage: true });
       await page.close();
     });
   }

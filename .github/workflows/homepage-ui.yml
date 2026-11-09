@@ -42,3 +42,11 @@ jobs:
           trap 'kill "$server_pid"' EXIT
           node --check script.js
           node --test tests/homepage-smoke.test.mjs
+      - name: Upload responsive screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-responsive-screenshots
+          path: artifacts/screenshots/
+          if-no-files-found: ignore
+          retention-days: 7
