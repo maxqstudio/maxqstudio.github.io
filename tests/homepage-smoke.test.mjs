@@ -25,7 +25,7 @@ try {
       assert.ok(await logo.evaluate(el => el.complete && el.naturalWidth > 0), 'Official Max Q Tools logo should load');
       const palette = await page.evaluate(() => ({
         background: getComputedStyle(document.body).backgroundColor,
-        ink: getComputedStyle(document.documentElement).getPropertyValue('--ink').trim().toLowerCase(),
+        ink: getComputedStyle(document.documentElement).getPropertyValue('--text').trim().toLowerCase(),
         orange: getComputedStyle(document.documentElement).getPropertyValue('--orange').trim().toLowerCase(),
         serif: getComputedStyle(document.querySelector('h1 em')).fontFamily,
         heroAlign: getComputedStyle(document.querySelector('.hero-inner')).textAlign,
