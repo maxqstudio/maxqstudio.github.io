@@ -15,6 +15,8 @@ const appearance = async (page) => page.evaluate(() => ({
   sheet: Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all' || link.media === '')?.getAttribute('href')?.split('?')[0],
   activeStylesheets: Array.from(document.querySelectorAll('link[data-theme-style]')).filter(link => link.media === 'all' || link.media === '').length,
   selectedStylesheetLoaded: Boolean(Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all' || link.media === '')?.sheet),
+  pending: document.documentElement.hasAttribute('data-theme-pending'),
+  visibility: getComputedStyle(document.body).visibility,
   meta: document.querySelector('meta[name="theme-color"]').content,
   overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
 }));
@@ -100,10 +102,16 @@ try {
     await page.goto(base, { waitUntil: 'domcontentloaded' });
     const state = await appearance(page);
     assert.equal(state.theme, 'light');
-    assert.equal(state.background, 'rgb(243, 238, 227)');
     assert.equal(state.sheet, 'style.css');
-    assert.equal(state.selectedStylesheetLoaded, true);
-    assert.equal(state.overflow, false);
+    if (state.pending) assert.equal(state.visibility, 'hidden', 'unstyled content must never be visible');
+    await page.waitForFunction(() =>
+      !document.documentElement.hasAttribute('data-theme-pending') &&
+      getComputedStyle(document.body).backgroundColor === 'rgb(243, 238, 227)'
+    );
+    const ready = await appearance(page);
+    assert.equal(ready.selectedStylesheetLoaded, true);
+    assert.equal(ready.visibility, 'visible');
+    assert.equal(ready.overflow, false);
     await page.close();
   });
 
@@ -129,6 +137,8 @@ try {
     const page = await browser.newPage();
     await page.route('**/style.css?v=*', route => route.abort());
     await page.goto(base, { waitUntil: 'load' });
+    const before = await appearance(page);
+    assert.equal(before.background, 'rgb(9, 9, 9)', 'dark CSS must be present before switching');
     const toggle = page.getByRole('button', { name: 'Switch to light mode' });
     await toggle.click();
     await page.waitForFunction(() => document.querySelector('.theme-toggle').disabled === false);
