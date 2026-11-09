@@ -1,0 +1,44 @@
+name: Homepage UI regression
+on:
+  push:
+    branches: [main, feat/editorial-cream-ink-orange-homepage]
+    paths:
+      - 'index.html'
+      - 'style.css'
+      - 'script.js'
+      - 'images/maxq-tools-logo.svg'
+      - 'tests/homepage-smoke.test.mjs'
+      - '.github/workflows/homepage-ui.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'style.css'
+      - 'script.js'
+      - 'images/maxq-tools-logo.svg'
+      - 'tests/homepage-smoke.test.mjs'
+      - '.github/workflows/homepage-ui.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Run browser smoke tests
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/homepage-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          node --check script.js
+          node --test tests/homepage-smoke.test.mjs

@@ -1,23 +1,21 @@
 # Max-Q Studio Static Website
 
-Static HTML/CSS/JS website. No React, no Next.js, no backend, no build step.
+Static HTML/CSS/JS website deployed at https://maxqstudio.dev/ through GitHub Pages. No build step.
 
-The studio homepage uses a monochrome dark theme inspired by the Sleek X showcase, with a dotted hero background, rounded navigation, and consistent icon-led project cards. Product pages retain their own branding. `images/project-icon-sources.json` records the source revisions for Pretio, SaldoSehat, and Max Q Tools icons. SaldoSehat's Android adaptive vector is translated to SVG with its original paths and colors.
+## Homepage design (November 2026)
 
-The developer mark uses the supplied `icon_dev_dark.svg` artwork unchanged. The header, footer, and favicon use its built-in light field for contrast on dark surfaces, with no extra CSS background, padding, or corner mask.
+The homepage uses the supplied editorial reference: Cream `#F3EEE3`, Ink Black `#111111`, and Burnt Orange `#C64E1E`. Type pairs DM Sans (heavy, tight headings) with Instrument Serif italic accents; local fallbacks are included. The homepage has a split editorial hero, an ink project index, and cream/orange content sections. Mobile navigation and reduced-motion behavior are preserved.
 
-Upload all files and folders to your hosting root.
+**Max Q Tools logo:** `images/maxq-tools-logo.svg` is copied unchanged from the canonical `maxqstudio/max-q-studio/public/brand/maxq-tools-logo.svg`. Do not substitute the Max-Q Studio developer mark or the legacy `maxq-tools-icon.png`.
 
-Main pages:
-- `/index.html`
-- `/saldosehat/index.html`
-- `/saldosehat/privacy.html`
-- `/saldosehat/terms.html`
-- `/saldosehat/support.html`
+**Scope:** The homepage (`index.html`, `style.css`) only. Product pages preserve their own branding; privacy, terms, support, and domain configuration remain unchanged.
 
+## CI
 
-Added Pretio app pages: /pretio/, /pretio/privacy.html, /pretio/terms.html, /pretio/support.html
+`.github/workflows/homepage-ui.yml` runs Chromium smoke tests at 320, 375, 768, and 1440 px, checks mobile navigation, assets, links/anchors, type and palette, console errors, and horizontal overflow. Run locally with a static server and Playwright 1.56.1, then `node --test tests/homepage-smoke.test.mjs`.
 
-Updated Pretio card on Max-Q homepage to match SaldoSehat card style. Removed feature numbers on Pretio and SaldoSehat pages. Pretio screenshots now show 5 images only.
-
-Added Max Cam Scanner app pages: /max-cam-scanner/ (index, privacy, terms, support, account-deletion, invite). `.well-known/assetlinks.json` lets workspace invite links open the Android app; `.nojekyll` makes GitHub Pages publish the `.well-known` folder.
+Other pages:
+- `/saldosehat/`
+- `/pretio/`
+- `/max-cam-scanner/`
+- `/blendin/`
