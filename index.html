@@ -12,24 +12,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
+  <!-- Keep the page hidden only while its selected stylesheet is loading.
+       This prevents an unstyled flash if an inactive stylesheet activates slowly. -->
+  <style>
+    html[data-theme-pending] { background: #090909; }
+    html[data-theme-pending][data-theme="light"] { background: #F3EEE3; }
+    html[data-theme-pending] body { visibility: hidden !important; }
+  </style>
+  <script>
+    // Capture load/error before stylesheet requests begin. A failed link may
+    // still expose a sheet object; only a confirmed load is safe to activate.
+    document.addEventListener('load', (event) => {
+      if (event.target?.matches?.('link[data-theme-style]')) event.target.dataset.loadStatus = 'loaded';
+    }, true);
+    document.addEventListener('error', (event) => {
+      if (event.target?.matches?.('link[data-theme-style]')) event.target.dataset.loadStatus = 'failed';
+    }, true);
+  </script>
+  <link id="theme-dark-stylesheet" data-theme-style rel="stylesheet" href="style-dark.css?v=20261109-stable3" />
+  <link id="theme-light-stylesheet" data-theme-style rel="stylesheet" href="style.css?v=20261109-stable3" media="not all" />
   <script>
     (() => {
+      const root = document.documentElement;
+      const dark = document.getElementById('theme-dark-stylesheet');
+      const light = document.getElementById('theme-light-stylesheet');
+      const meta = document.querySelector('meta[name="theme-color"]');
+      root.setAttribute('data-theme-pending', '');
       let theme = 'dark';
       try {
         if (localStorage.getItem('maxqstudio-theme') === 'light') theme = 'light';
       } catch (_) {
-        // Storage can be unavailable; the fallback remains dark.
+        // Private browsing may block storage. Default remains dark.
       }
-      document.documentElement.dataset.theme = theme;
-      document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#F3EEE3' : '#090909';
-      const stylesheet = document.createElement('link');
-      stylesheet.id = 'theme-stylesheet';
-      stylesheet.rel = 'stylesheet';
-      stylesheet.href = theme === 'light' ? 'style.css' : 'style-dark.css';
-      document.head.appendChild(stylesheet);
+      root.dataset.theme = theme;
+      dark.media = theme === 'dark' ? 'all' : 'not all';
+      light.media = theme === 'light' ? 'all' : 'not all';
+      meta.content = theme === 'light' ? '#F3EEE3' : '#090909';
+
+      let deadline;
+      const reveal = () => {
+        window.clearTimeout(deadline);
+        root.removeAttribute('data-theme-pending');
+      };
+      const fallbackDark = () => {
+        light.media = 'not all';
+        dark.media = 'all';
+        root.dataset.theme = 'dark';
+        meta.content = '#090909';
+        // Never leave the page hidden indefinitely if both stylesheets fail.
+        reveal();
+      };
+      dark.addEventListener('error', () => { dark.dataset.failed = 'true'; });
+      light.addEventListener('error', () => {
+        light.dataset.failed = 'true';
+        if (root.dataset.theme === 'light') fallbackDark();
+      });
+      deadline = window.setTimeout(fallbackDark, 6000);
+      const selected = theme === 'light' ? light : dark;
+      if (selected.dataset.loadStatus === 'loaded') reveal();
+      else if (selected.dataset.loadStatus === 'failed') fallbackDark();
+      else selected.addEventListener('load', () => {
+        if (root.dataset.theme === theme && selected.dataset.loadStatus === 'loaded') reveal();
+      }, { once: true });
     })();
   </script>
-  <noscript><link rel="stylesheet" href="style-dark.css" /></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -220,6 +266,6 @@
     </div>
     <div class="container footer-bottom"><p>© <span id="year">2026</span> Max-Q Studio</p><nav aria-label="Footer navigation"><a href="#projects">Apps</a><a href="#games">Games</a><a href="https://maxq.tools/">Max Q Tools</a><a href="mailto:support@maxqstudio.dev">Contact</a></nav><span>Made in Indonesia</span></div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=20261109-stable3"></script>
 </body>
 </html>

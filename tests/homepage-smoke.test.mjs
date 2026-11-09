@@ -12,13 +12,17 @@ const appearance = async (page) => page.evaluate(() => ({
   background: getComputedStyle(document.body).backgroundColor,
   font: getComputedStyle(document.body).fontFamily,
   heroAlign: getComputedStyle(document.querySelector('.hero-inner')).textAlign,
-  sheet: document.querySelector('#theme-stylesheet')?.getAttribute('href'),
+  sheet: Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all' || link.media === '')?.getAttribute('href')?.split('?')[0],
+  activeStylesheets: Array.from(document.querySelectorAll('link[data-theme-style]')).filter(link => link.media === 'all' || link.media === '').length,
+  selectedStylesheetLoaded: Boolean(Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all' || link.media === '')?.sheet),
+  pending: document.documentElement.hasAttribute('data-theme-pending'),
+  visibility: getComputedStyle(document.body).visibility,
   meta: document.querySelector('meta[name="theme-color"]').content,
   overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
 }));
 
 try {
-  for (const width of [320, 375, 768, 1440]) {
+  for (const width of [320, 375, 768, 850, 1024, 1440]) {
     await test(`default dark, original Studio layout, light toggle + persistence at ${width}px`, async () => {
       const page = await browser.newPage({ viewport: { width, height: 900 }, colorScheme: 'light' });
       const failures = [];
@@ -37,6 +41,8 @@ try {
       const dark = await appearance(page);
       assert.equal(dark.theme, 'dark');
       assert.equal(dark.sheet, 'style-dark.css');
+      assert.equal(dark.activeStylesheets, 1);
+      assert.equal(dark.selectedStylesheetLoaded, true);
       assert.equal(dark.background, 'rgb(9, 9, 9)');
       assert.equal(dark.meta.toLowerCase(), '#090909');
       assert.match(dark.font, /Inter/);
@@ -49,6 +55,8 @@ try {
       const light = await appearance(page);
       assert.equal(light.theme, 'light');
       assert.equal(light.sheet, 'style.css');
+      assert.equal(light.activeStylesheets, 1);
+      assert.equal(light.selectedStylesheetLoaded, true);
       assert.equal(light.meta.toLowerCase(), '#f3eee3');
       assert.match(light.font, /DM Sans/);
       assert.equal(light.heroAlign, 'center');
@@ -81,6 +89,77 @@ try {
       await page.close();
     });
   }
+
+  await test('light preference is fully styled at DOMContentLoaded even with delayed CSS', async () => {
+    const page = await browser.newPage({ viewport: { width: 375, height: 820 } });
+    await page.addInitScript(() => {
+      try { localStorage.setItem('maxqstudio-theme', 'light'); } catch (_) {}
+    });
+    await page.route('**/style.css?v=*', async (route) => {
+      await new Promise(resolve => setTimeout(resolve, 600));
+      await route.continue();
+    });
+    await page.goto(base, { waitUntil: 'domcontentloaded' });
+    const state = await appearance(page);
+    assert.equal(state.theme, 'light');
+    assert.equal(state.sheet, 'style.css');
+    if (state.pending) assert.equal(state.visibility, 'hidden', 'unstyled content must never be visible');
+    await page.waitForFunction(() =>
+      !document.documentElement.hasAttribute('data-theme-pending') &&
+      getComputedStyle(document.body).backgroundColor === 'rgb(243, 238, 227)'
+    );
+    const ready = await appearance(page);
+    assert.equal(ready.selectedStylesheetLoaded, true);
+    assert.equal(ready.visibility, 'visible');
+    assert.equal(ready.overflow, false);
+    await page.close();
+  });
+
+  await test('default dark remains fully styled under delayed CSS and blocked third-party fonts', async () => {
+    const page = await browser.newPage({ viewport: { width: 850, height: 850 }, colorScheme: 'light' });
+    await page.route('**/style-dark.css?v=*', async (route) => {
+      await new Promise(resolve => setTimeout(resolve, 600));
+      await route.continue();
+    });
+    await page.route('https://fonts.googleapis.com/**', route => route.abort());
+    await page.route('https://fonts.gstatic.com/**', route => route.abort());
+    await page.goto(base, { waitUntil: 'domcontentloaded' });
+    const state = await appearance(page);
+    assert.equal(state.theme, 'dark');
+    assert.equal(state.background, 'rgb(9, 9, 9)');
+    assert.equal(state.sheet, 'style-dark.css');
+    assert.equal(state.selectedStylesheetLoaded, true);
+    assert.equal(state.overflow, false);
+    await page.close();
+  });
+
+  await test('failed inactive theme CSS does not remove current dark styling', async () => {
+    const page = await browser.newPage();
+    await page.route('**/style.css?v=*', route => route.abort());
+    await page.goto(base, { waitUntil: 'load' });
+    const before = await appearance(page);
+    assert.equal(before.background, 'rgb(9, 9, 9)', 'dark CSS must be present before switching');
+    const toggle = page.getByRole('button', { name: 'Switch to light mode' });
+    await toggle.click();
+    await page.waitForFunction(() => document.querySelector('.theme-toggle').disabled === false);
+    const state = await appearance(page);
+    assert.equal(state.theme, 'dark');
+    assert.equal(state.background, 'rgb(9, 9, 9)');
+    assert.equal(state.sheet, 'style-dark.css');
+    assert.equal(state.selectedStylesheetLoaded, true);
+    await page.close();
+  });
+
+  await test('no-JavaScript fallback renders the original dark Studio', async () => {
+    const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 375, height: 850 } });
+    const page = await context.newPage();
+    await page.goto(base, { waitUntil: 'load' });
+    const state = await appearance(page);
+    assert.equal(state.background, 'rgb(9, 9, 9)');
+    assert.equal(state.sheet, 'style-dark.css');
+    assert.equal(state.selectedStylesheetLoaded, true);
+    await context.close();
+  });
 
   await test('all product logos and original navigation anchors remain available', async () => {
     const page = await browser.newPage();
