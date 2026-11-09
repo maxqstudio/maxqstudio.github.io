@@ -17,10 +17,11 @@ if (menuToggle && nav) {
 
 
 const themeToggle = document.querySelector('.theme-toggle');
-const themeStylesheet = document.querySelector('#theme-stylesheet');
+const darkStylesheet = document.querySelector('#theme-dark-stylesheet');
+const lightStylesheet = document.querySelector('#theme-light-stylesheet');
 const themeColor = document.querySelector('meta[name="theme-color"]');
 
-if (themeToggle && themeStylesheet) {
+if (themeToggle && darkStylesheet && lightStylesheet) {
   const updateThemeToggle = () => {
     const switchTo = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
     const label = `Switch to ${switchTo} mode`;
@@ -30,17 +31,51 @@ if (themeToggle && themeStylesheet) {
     themeToggle.querySelector('.theme-toggle-label').textContent = switchTo === 'light' ? 'Light' : 'Dark';
   };
 
-  themeToggle.addEventListener('click', () => {
-    const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-    document.documentElement.dataset.theme = theme;
-    themeStylesheet.href = theme === 'light' ? 'style.css' : 'style-dark.css';
-    if (themeColor) themeColor.content = theme === 'light' ? '#F3EEE3' : '#090909';
+  // Keep the current theme visible until the target CSS has actually loaded.
+  const waitForStylesheet = (link) => {
+    if (link.sheet) return Promise.resolve(true);
+    if (link.dataset.failed === 'true') return Promise.resolve(false);
+    return new Promise((resolve) => {
+      const cleanup = () => {
+        clearTimeout(timeout);
+        link.removeEventListener('load', onLoad);
+        link.removeEventListener('error', onError);
+      };
+      const finish = (loaded) => { cleanup(); resolve(loaded); };
+      const onLoad = () => finish(Boolean(link.sheet));
+      const onError = () => finish(false);
+      const timeout = setTimeout(() => finish(false), 6000);
+      link.addEventListener('load', onLoad);
+      link.addEventListener('error', onError);
+      if (link.sheet || link.dataset.failed === 'true') {
+        finish(Boolean(link.sheet));
+      }
+    });
+  };
+
+  themeToggle.addEventListener('click', async () => {
+    if (themeToggle.disabled) return;
+    const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    const target = nextTheme === 'light' ? lightStylesheet : darkStylesheet;
+    themeToggle.disabled = true;
     try {
-      localStorage.setItem('maxqstudio-theme', theme);
-    } catch (_) {
-      // Toggling remains functional when browser storage is blocked.
+      if (!(await waitForStylesheet(target))) {
+        themeToggle.title = 'Theme unavailable. Reload to retry.';
+        return;
+      }
+      darkStylesheet.media = nextTheme === 'dark' ? 'all' : 'not all';
+      lightStylesheet.media = nextTheme === 'light' ? 'all' : 'not all';
+      document.documentElement.dataset.theme = nextTheme;
+      if (themeColor) themeColor.content = nextTheme === 'light' ? '#F3EEE3' : '#090909';
+      try {
+        localStorage.setItem('maxqstudio-theme', nextTheme);
+      } catch (_) {
+        // Switching works when storage is blocked; reload defaults to dark.
+      }
+      updateThemeToggle();
+    } finally {
+      themeToggle.disabled = false;
     }
-    updateThemeToggle();
   });
 
   updateThemeToggle();

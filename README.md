@@ -23,3 +23,11 @@ The `.github/workflows/homepage-ui.yml` GitHub Actions workflow runs headless Ch
 - Header toggle switches stylesheets without changing the existing page layout and remembers the last selection using `localStorage['maxqstudio-theme']`. If storage is unavailable, the button still works during the session and defaults to dark on reload.
 - The head selects the correct stylesheet before page content is parsed; JavaScript-disabled visitors receive dark CSS.
 - Both desktop and mobile states are covered by `.github/workflows/homepage-ui.yml` smoke tests and screenshots.
+
+## Stable homepage theme loading (2026-11-09)
+
+- Two **static stylesheet links** in `index.html` replace JavaScript-injected CSS. The active CSS is declared before the body so slow connections do not briefly show an unstyled homepage.
+- Dark remains the default and no-JavaScript fallback; Light retains its existing stylesheet and stored preference. Both stylesheet assets are unchanged.
+- The header toggle waits for the target CSS to be available before switching; if an inactive stylesheet fails to load, the existing appearance is retained instead of showing unstyled content.
+- Versioned asset references avoid stale cross-release `index.html` / `script.js` combinations.
+- CI checks both appearances, storage persistence, navigation, asset loading, disabled JavaScript fallback, slow CSS loading, blocked external fonts and inactive stylesheet failure.
