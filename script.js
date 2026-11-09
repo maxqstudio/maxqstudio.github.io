@@ -33,8 +33,8 @@ if (themeToggle && darkStylesheet && lightStylesheet) {
 
   // Keep the current theme visible until the target CSS has actually loaded.
   const waitForStylesheet = (link) => {
-    if (link.dataset.failed === 'true') return Promise.resolve(false);
-    if (link.sheet) return Promise.resolve(true);
+    if (link.dataset.loadStatus === 'failed') return Promise.resolve(false);
+    if (link.dataset.loadStatus === 'loaded') return Promise.resolve(true);
     return new Promise((resolve) => {
       const cleanup = () => {
         clearTimeout(timeout);
@@ -42,13 +42,13 @@ if (themeToggle && darkStylesheet && lightStylesheet) {
         link.removeEventListener('error', onError);
       };
       const finish = (loaded) => { cleanup(); resolve(loaded); };
-      const onLoad = () => finish(Boolean(link.sheet));
+      const onLoad = () => finish(link.dataset.loadStatus === 'loaded');
       const onError = () => finish(false);
       const timeout = setTimeout(() => finish(false), 6000);
       link.addEventListener('load', onLoad);
       link.addEventListener('error', onError);
-      if (link.sheet || link.dataset.failed === 'true') {
-        finish(link.dataset.failed !== 'true' && Boolean(link.sheet));
+      if (link.dataset.loadStatus === 'loaded' || link.dataset.loadStatus === 'failed') {
+        finish(link.dataset.loadStatus === 'loaded');
       }
     });
   };

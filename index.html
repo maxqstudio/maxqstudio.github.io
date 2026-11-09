@@ -19,8 +19,18 @@
     html[data-theme-pending][data-theme="light"] { background: #F3EEE3; }
     html[data-theme-pending] body { visibility: hidden !important; }
   </style>
-  <link id="theme-dark-stylesheet" data-theme-style rel="stylesheet" href="style-dark.css?v=20261109-stable2" />
-  <link id="theme-light-stylesheet" data-theme-style rel="stylesheet" href="style.css?v=20261109-stable2" media="not all" />
+  <script>
+    // Capture load/error before stylesheet requests begin. A failed link may
+    // still expose a sheet object; only a confirmed load is safe to activate.
+    document.addEventListener('load', (event) => {
+      if (event.target?.matches?.('link[data-theme-style]')) event.target.dataset.loadStatus = 'loaded';
+    }, true);
+    document.addEventListener('error', (event) => {
+      if (event.target?.matches?.('link[data-theme-style]')) event.target.dataset.loadStatus = 'failed';
+    }, true);
+  </script>
+  <link id="theme-dark-stylesheet" data-theme-style rel="stylesheet" href="style-dark.css?v=20261109-stable3" />
+  <link id="theme-light-stylesheet" data-theme-style rel="stylesheet" href="style.css?v=20261109-stable3" media="not all" />
   <script>
     (() => {
       const root = document.documentElement;
@@ -49,7 +59,8 @@
         dark.media = 'all';
         root.dataset.theme = 'dark';
         meta.content = '#090909';
-        if (dark.sheet && dark.dataset.failed !== 'true') reveal();
+        if (dark.dataset.loadStatus === 'loaded') reveal();
+        else if (dark.dataset.loadStatus === 'failed') reveal();
         else dark.addEventListener('load', reveal, { once: true });
       };
       dark.addEventListener('error', () => { dark.dataset.failed = 'true'; });
@@ -59,9 +70,9 @@
       });
       deadline = window.setTimeout(fallbackDark, 6000);
       const selected = theme === 'light' ? light : dark;
-      if (selected.sheet && selected.dataset.failed !== 'true') reveal();
+      if (selected.dataset.loadStatus === 'loaded') reveal();
       else selected.addEventListener('load', () => {
-        if (root.dataset.theme === theme && selected.dataset.failed !== 'true') reveal();
+        if (root.dataset.theme === theme && selected.dataset.loadStatus === 'loaded') reveal();
       }, { once: true });
     })();
   </script>
@@ -255,6 +266,6 @@
     </div>
     <div class="container footer-bottom"><p>© <span id="year">2026</span> Max-Q Studio</p><nav aria-label="Footer navigation"><a href="#projects">Apps</a><a href="#games">Games</a><a href="https://maxq.tools/">Max Q Tools</a><a href="mailto:support@maxqstudio.dev">Contact</a></nav><span>Made in Indonesia</span></div>
   </footer>
-  <script src="script.js?v=20261109-stable2"></script>
+  <script src="script.js?v=20261109-stable3"></script>
 </body>
 </html>
