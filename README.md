@@ -15,3 +15,11 @@ The original Max-Q Studio homepage structure remains unchanged: centered hero, p
 ## CI
 
 The `.github/workflows/homepage-ui.yml` GitHub Actions workflow runs headless Chromium at 320, 375, 768 and 1440px, checking the original centered layout, absence of mockup panel/backgrounds behind icons, correct logo, colors/fonts, mobile navigation, anchors/assets, errors and overflow. Screenshots are uploaded as workflow artifacts for inspection.
+
+## Dark / Light toggle
+
+- Dark (default, independent of operating-system preference): `style-dark.css`, restored directly from `b646fc04cdffd074b6cc469c1fd50f9d14510182:style.css` with only toggle control rules and an emphasis reset appended.
+- Light (the approved November 9 cream/ink/orange theme): `style.css`.
+- Header toggle switches stylesheets without changing the existing page layout and remembers the last selection using `localStorage['maxqstudio-theme']`. If storage is unavailable, the button still works during the session and defaults to dark on reload.
+- The head selects the correct stylesheet before page content is parsed; JavaScript-disabled visitors receive dark CSS.
+- Both desktop and mobile states are covered by `.github/workflows/homepage-ui.yml` smoke tests and screenshots.
