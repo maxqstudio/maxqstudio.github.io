@@ -12,15 +12,15 @@ const appearance = async (page) => page.evaluate(() => ({
   background: getComputedStyle(document.body).backgroundColor,
   font: getComputedStyle(document.body).fontFamily,
   heroAlign: getComputedStyle(document.querySelector('.hero-inner')).textAlign,
-  sheet: Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all')?.getAttribute('href')?.split('?')[0],
-  activeStylesheets: document.querySelectorAll('link[data-theme-style][media="all"]').length,
-  selectedStylesheetLoaded: Boolean(Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all')?.sheet),
+  sheet: Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all' || link.media === '')?.getAttribute('href')?.split('?')[0],
+  activeStylesheets: Array.from(document.querySelectorAll('link[data-theme-style]')).filter(link => link.media === 'all' || link.media === '').length,
+  selectedStylesheetLoaded: Boolean(Array.from(document.querySelectorAll('link[data-theme-style]')).find(link => link.media === 'all' || link.media === '')?.sheet),
   meta: document.querySelector('meta[name="theme-color"]').content,
   overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
 }));
 
 try {
-  for (const width of [320, 375, 768, 1440]) {
+  for (const width of [320, 375, 768, 850, 1024, 1440]) {
     await test(`default dark, original Studio layout, light toggle + persistence at ${width}px`, async () => {
       const page = await browser.newPage({ viewport: { width, height: 900 }, colorScheme: 'light' });
       const failures = [];
