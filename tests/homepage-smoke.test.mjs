@@ -16,6 +16,8 @@ try {
       assert.equal(response?.status(), 200);
       assert.equal(await page.locator('h1').count(), 1);
       assert.match(await page.locator('h1').innerText(), /Small studio/);
+      assert.equal(await page.locator('.hero-inner').count(), 1, 'Restore original centered Studio hero');
+      assert.equal(await page.locator('.hero-visual, .visual-frame, .hero-grid').count(), 0, 'No added mockup/visual panel');
       assert.equal(await page.locator('#products .product-tile').count(), 5);
       assert.ok(await page.locator('a[href="https://maxq.tools/"]').count() >= 2);
       const logo = page.locator('img[src="images/maxq-tools-logo.svg"]').first();
@@ -23,15 +25,23 @@ try {
       assert.ok(await logo.evaluate(el => el.complete && el.naturalWidth > 0), 'Official Max Q Tools logo should load');
       const palette = await page.evaluate(() => ({
         background: getComputedStyle(document.body).backgroundColor,
-        ink: getComputedStyle(document.documentElement).getPropertyValue('--ink').trim().toLowerCase(),
+        ink: getComputedStyle(document.documentElement).getPropertyValue('--text').trim().toLowerCase(),
         orange: getComputedStyle(document.documentElement).getPropertyValue('--orange').trim().toLowerCase(),
         serif: getComputedStyle(document.querySelector('h1 em')).fontFamily,
+        heroAlign: getComputedStyle(document.querySelector('.hero-inner')).textAlign,
+        dockTileBackground: getComputedStyle(document.querySelector('.product-tile')).backgroundColor,
+        dockIconBackground: getComputedStyle(document.querySelector('.product-tile img')).backgroundColor,
+        featuredIconBackground: getComputedStyle(document.querySelector('.project-media img')).backgroundColor,
         scrollWidth: document.documentElement.scrollWidth
       }));
       assert.equal(palette.background, 'rgb(243, 238, 227)');
       assert.equal(palette.ink, '#111111');
       assert.equal(palette.orange, '#c64e1e');
       assert.match(palette.serif, /Instrument Serif/);
+      assert.equal(palette.heroAlign, 'center');
+      assert.equal(palette.dockTileBackground, 'rgba(0, 0, 0, 0)');
+      assert.equal(palette.dockIconBackground, 'rgba(0, 0, 0, 0)');
+      assert.equal(palette.featuredIconBackground, 'rgba(0, 0, 0, 0)');
       assert.ok(palette.scrollWidth <= width, `horizontal overflow: ${palette.scrollWidth}px at ${width}px`);
       const toggle = page.getByRole('button', { name: 'Open menu' });
       if (width <= 850) {

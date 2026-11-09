@@ -1,21 +1,17 @@
 # Max-Q Studio Static Website
 
-Static HTML/CSS/JS website deployed at https://maxqstudio.dev/ through GitHub Pages. No build step.
+Static HTML/CSS/JS website deployed to https://maxqstudio.dev/ through GitHub Pages. No build step.
 
-## Homepage design (November 2026)
+## Homepage visual theme
 
-The homepage uses the supplied editorial reference: Cream `#F3EEE3`, Ink Black `#111111`, and Burnt Orange `#C64E1E`. Type pairs DM Sans (heavy, tight headings) with Instrument Serif italic accents; local fallbacks are included. The homepage has a split editorial hero, an ink project index, and cream/orange content sections. Mobile navigation and reduced-motion behavior are preserved.
+The original Max-Q Studio homepage structure remains unchanged: centered hero, project index, studio profile, web tools, game and app lists, and contact/footer. The November 2026 visual refresh changes **only** the palette and typography:
+- Cream `#F3EEE3`, Ink Black `#111111`, Burnt Orange `#C64E1E`
+- DM Sans for body/headings, Instrument Serif italic accents, with fallback fonts
+- No extra background tiles behind project logos or photos. Container/cards reuse the page background.
+- Max Q Tools uses the canonical branded asset `images/maxq-tools-logo.svg`, sourced from `maxqstudio/max-q-studio/public/brand/maxq-tools-logo.svg`. The SVG itself contains the brand's orange artwork; the site must not add a second cream or black rectangle behind it.
 
-**Max Q Tools logo:** `images/maxq-tools-logo.svg` is copied unchanged from the canonical `maxqstudio/max-q-studio/public/brand/maxq-tools-logo.svg`. Do not substitute the Max-Q Studio developer mark or the legacy `maxq-tools-icon.png`.
-
-**Scope:** The homepage (`index.html`, `style.css`) only. Product pages preserve their own branding; privacy, terms, support, and domain configuration remain unchanged.
+**Scope:** Homepage `index.html` and `style.css`; all product pages and legal/support pages keep their existing branding and behavior.
 
 ## CI
 
-`.github/workflows/homepage-ui.yml` runs Chromium smoke tests at 320, 375, 768, and 1440 px, checks mobile navigation, assets, links/anchors, type and palette, console errors, and horizontal overflow. Run locally with a static server and Playwright 1.56.1, then `node --test tests/homepage-smoke.test.mjs`.
-
-Other pages:
-- `/saldosehat/`
-- `/pretio/`
-- `/max-cam-scanner/`
-- `/blendin/`
+The `.github/workflows/homepage-ui.yml` GitHub Actions workflow runs headless Chromium at 320, 375, 768 and 1440px, checking the original centered layout, absence of mockup panel/backgrounds behind icons, correct logo, colors/fonts, mobile navigation, anchors/assets, errors and overflow. Screenshots are uploaded as workflow artifacts for inspection.

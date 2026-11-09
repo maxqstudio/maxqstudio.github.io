@@ -1,7 +1,7 @@
 name: Homepage UI regression
 on:
   push:
-    branches: [main, feat/editorial-cream-ink-orange-homepage]
+    branches: [main, fix/restore-original-studio-layout-themed]
     paths:
       - 'index.html'
       - 'style.css'
