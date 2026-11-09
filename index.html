@@ -59,9 +59,8 @@
         dark.media = 'all';
         root.dataset.theme = 'dark';
         meta.content = '#090909';
-        if (dark.dataset.loadStatus === 'loaded') reveal();
-        else if (dark.dataset.loadStatus === 'failed') reveal();
-        else dark.addEventListener('load', reveal, { once: true });
+        // Never leave the page hidden indefinitely if both stylesheets fail.
+        reveal();
       };
       dark.addEventListener('error', () => { dark.dataset.failed = 'true'; });
       light.addEventListener('error', () => {
@@ -71,6 +70,7 @@
       deadline = window.setTimeout(fallbackDark, 6000);
       const selected = theme === 'light' ? light : dark;
       if (selected.dataset.loadStatus === 'loaded') reveal();
+      else if (selected.dataset.loadStatus === 'failed') fallbackDark();
       else selected.addEventListener('load', () => {
         if (root.dataset.theme === theme && selected.dataset.loadStatus === 'loaded') reveal();
       }, { once: true });
