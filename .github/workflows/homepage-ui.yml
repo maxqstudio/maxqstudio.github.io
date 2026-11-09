@@ -1,10 +1,11 @@
 name: Homepage UI regression
 on:
   push:
-    branches: [main, fix/restore-original-studio-layout-themed]
+    branches: [main, feat/theme-toggle-dark-default]
     paths:
       - 'index.html'
       - 'style.css'
+      - 'style-dark.css'
       - 'script.js'
       - 'images/maxq-tools-logo.svg'
       - 'tests/homepage-smoke.test.mjs'

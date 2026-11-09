@@ -5,13 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Max-Q Studio — Apps, Games &amp; Everyday Tools</title>
   <meta name="description" content="Meet Max-Q Studio: an independent studio creating Pretio, SaldoSehat, Max Cam Scanner, Blend In!, and Max Q Tools for everyday life." />
-  <meta name="theme-color" content="#F3EEE3" />
+  <meta name="theme-color" content="#090909" />
   <link rel="icon" type="image/svg+xml" href="images/icon-dev-favicon.svg" />
   <link rel="canonical" href="https://maxqstudio.dev/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    (() => {
+      let theme = 'dark';
+      try {
+        if (localStorage.getItem('maxqstudio-theme') === 'light') theme = 'light';
+      } catch (_) {
+        // Storage can be unavailable; the fallback remains dark.
+      }
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#F3EEE3' : '#090909';
+      const stylesheet = document.createElement('link');
+      stylesheet.id = 'theme-stylesheet';
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = theme === 'light' ? 'style.css' : 'style-dark.css';
+      document.head.appendChild(stylesheet);
+    })();
+  </script>
+  <noscript><link rel="stylesheet" href="style-dark.css" /></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,14 +39,20 @@
         <img src="images/icon-dev.svg" width="44" height="44" alt="" />
         <span>Max-Q <strong>Studio</strong></span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
-      <nav id="main-nav" class="nav" aria-label="Main navigation">
-        <a href="#profile">Studio</a>
-        <a href="#projects">Apps</a>
-        <a href="#games">Games</a>
-        <a href="#tools">Web tools</a>
-        <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
-      </nav>
+      <div class="header-actions">
+        <nav id="main-nav" class="nav" aria-label="Main navigation">
+          <a href="#profile">Studio</a>
+          <a href="#projects">Apps</a>
+          <a href="#games">Games</a>
+          <a href="#tools">Web tools</a>
+          <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+          <span class="theme-toggle-symbol" aria-hidden="true">☀</span>
+          <span class="theme-toggle-label" aria-hidden="true">Light</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
