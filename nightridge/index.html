@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Night Ridge - Light for adventurers</title>
+  <meta name="description" content="Night Ridge turns your phone into a signal light for night rides, trail hikes and camp. Screen light, rear LED flash and 15 patterns." />
+  <meta name="theme-color" content="#050b14" />
+  <meta property="og:title" content="Night Ridge - Light for adventurers" />
+  <meta property="og:description" content="A signal light for night rides, trail hikes and camp." />
+  <meta property="og:image" content="https://maxqstudio.dev/images/nightridge_feature.png" />
+  <link rel="icon" href="../images/nightridge_icon.png" />
+  <link rel="stylesheet" href="nightridge.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="../images/nightridge_icon.png" alt="" /><span>Night Ridge</span></a>
+      <nav class="nav" aria-label="Night Ridge pages">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a class="hide-sm" href="../index.html">Max-Q Studio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="moon" aria-hidden="true"></div>
+      <div class="container hero-copy">
+        <p class="tagline">Light for adventurers</p>
+        <h1>Night Ridge</h1>
+        <p class="lead">Your phone becomes a signal light for night rides, trail hikes and camp. Light the whole screen, or blink the rear camera flash.</p>
+        <div class="actions">
+          <a class="button primary" href="https://play.google.com/store/apps/details?id=com.maxq.nightridge">Get it on Google Play</a>
+          <a class="button secondary" href="support.html">Support</a>
+        </div>
+      </div>
+      <svg class="ridge" viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true">
+        <polygon fill="#2a425e" points="0,70 96,40 156,56 264,10 372,52 456,30 564,0 660,36 744,64 852,30 960,14 1056,44 1200,60 1200,180 0,180" />
+        <polygon fill="#172a40" points="0,100 144,76 240,92 408,58 552,110 696,74 816,94 984,62 1200,96 1200,180 0,180" />
+        <path fill="#0a1119" d="M0,150 Q264,118 528,156 Q768,104 1000,112 Q1104,118 1200,140 L1200,180 L0,180 Z" />
+      </svg>
+    </section>
+
+    <div class="container shots">
+      <img src="../images/nightridge_light.png" alt="Night Ridge light screen with Double pulse selected" loading="lazy" width="540" height="1200" />
+      <img src="../images/nightridge_patterns.png" alt="Grid of 15 light patterns" loading="lazy" width="540" height="1200" />
+      <img src="../images/nightridge_led.png" alt="Rear LED flash with six rhythms" loading="lazy" width="540" height="1200" />
+      <img src="../images/nightridge_text.png" alt="Running text message preview" loading="lazy" width="540" height="1200" />
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h2>What it does</h2>
+        <div class="features">
+          <article class="card wide">
+            <h3>Screen light</h3>
+            <p>The screen turns into a bright panel in landscape, at full brightness, and goes back to normal when you stop.</p>
+            <ul>
+              <li>15 patterns: Steady, Slow blink, Double pulse, Breathing, Running bars, Aurora, Running text, Heartbeat, Triple pulse, SOS, Wave, Alternating, Scanner, Comet and Custom.</li>
+              <li>The Stop button hides after a few seconds. Tap the screen to bring it back, or press Back.</li>
+              <li>Running text and Custom start after one short video per session.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Rear LED</h3>
+            <p>Blink the camera flash in six rhythms, with pause, next and stop controls in the notification.</p>
+          </article>
+          <article class="card">
+            <h3>Premium, one-time</h3>
+            <p>Any color with RGB or HEX, RGB cycle and rainbow, 10 text fonts, and no banner or app-open ads.</p>
+          </article>
+        </div>
+        <p class="note">Night Ridge is a backup visibility aid. It does not replace a dedicated bike light or headlamp. Flashing patterns may affect people with photosensitive conditions.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio</p>
+      <nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:support@maxqstudio.dev">support@maxqstudio.dev</a></nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
