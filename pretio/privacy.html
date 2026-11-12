@@ -12,14 +12,14 @@
   <header class="app-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="../images/pretio_logo.png" alt="Pretio logo" /><span>Pretio</span></a>
-      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="data-deletion.html">Data and privacy</a><a href="support.html">Support</a></nav>
     </div>
   </header>
   <main class="legal-page">
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> September 25, 2026</p>
+      <p><strong>Last updated:</strong> October 27, 2026</p>
 
       <div class="content-card">
         <h3>Your shopping records remain local</h3>
@@ -86,6 +86,9 @@
 
       <h2>10. Third-party services</h2>
       <p>Depending on the features available in your version of Pretio, third-party services may include Google Shopping results served through Google Search, Google AdMob, Google User Messaging Platform, Google Play Billing, Android link handling, web browsers, marketplace apps, and destination websites opened from Compare Online. Google Play Billing may also provide the Google Play country used for Pretio's country-level local relevance. These providers process information under their own terms and privacy policies.</p>
+      <p><strong>AI product features in Pretio v1.4.4.</strong> When you request Scan Enrichment or Product Insight, Pretio sends the barcode, response language, selected country, and relevant product details already saved on this device to Google Gemini through Firebase AI Logic. The AI prompts do not include the saved province, city, location key, raw coordinates, full product database, saved prices, stores, notes, or shopping list. Gemini can provide product descriptions and nutrition estimates; an AI estimate may be incomplete or inaccurate and is not official product, health, or safety advice. Google Search sources and Search Suggestions are displayed when returned. Pretio v1.4.4 does not persist AI responses, Grounded Results, links, or Search Suggestions in its local Product Insight cache or product records. Earlier Pretio versions may use different online processing and server-side caches.</p>
+      <p><strong>Product photos.</strong> Pretio first tries to read a barcode on the device. If no readable barcode is found, Pretio asks before sending the selected image to Google Gemini through Firebase AI Logic for a product suggestion. The suggestion remains unverified until you review and save it. Pretio does not add the image to product records and attempts to remove the temporary local copy when the platform permits. If no valid barcode is established, the barcode-based Product Insight request is not made.</p>
+      <p><strong>AI provider processing.</strong> Firebase AI Logic itself does not store model inputs or outputs; the selected Gemini API provider's rules apply. Pretio uses the paid Gemini API service. Google's terms state that paid-service prompts and responses are not used to improve Google products. Google may retain prompts and responses for a limited period for abuse monitoring. When Google Search Grounding is used through the paid Gemini API, Google retains the prompt, context, and output for 30 days to provide Grounded Results and Search Suggestions. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase privacy information</a> and <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Gemini API terms</a>.</p>
 
       <h2>11. Data security</h2>
       <p>We take reasonable steps to keep Pretio's local-first design and monetization integrations separated. However, no device, storage method, network transmission, or third-party service can be guaranteed to be completely secure.</p>

@@ -12,14 +12,14 @@
   <header class="app-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="../images/pretio_logo.png" alt="Pretio logo" /><span>Pretio</span></a>
-      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html" aria-current="page">Terms</a><a href="support.html">Support</a></nav>
+      <nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html" aria-current="page">Terms</a><a href="data-deletion.html">Data and privacy</a><a href="support.html">Support</a></nav>
     </div>
   </header>
   <main class="legal-page">
     <article class="container legal-card">
       <p class="eyebrow">Terms of Use</p>
       <h1>Terms and Conditions</h1>
-      <p><strong>Last updated:</strong> September 25, 2026</p>
+      <p><strong>Last updated:</strong> October 27, 2026</p>
 
       <div class="content-card">
         <p>Pretio is a tool for saving product prices, comparing local options, optionally searching for online price information, and planning shopping lists. By using Pretio, you agree to these Terms and Conditions.</p>
@@ -72,6 +72,9 @@
 
       <h2>10. Third-party services</h2>
       <p>Pretio may use Google services including Google Shopping results served through Google Search, Google AdMob, Google User Messaging Platform, and Google Play Billing. Google Play Billing may also provide the Google Play country used for country-level local relevance. Compare Online may also direct you to independent websites, browsers, or marketplace apps. Your use of Google and other third-party services is governed by their applicable terms and privacy policies.</p>
+      <p>Pretio v1.4.4 uses Firebase AI Logic and Google Gemini for user-requested barcode enrichment and Product Insight. A request can include the barcode, response language, selected country, and relevant product details saved on your device. Saved province, city, location key, and raw coordinates are not included in these AI prompts. AI-generated descriptions and nutrition values can be estimates and may be inaccurate. Google Search sources and Search Suggestions are shown when returned; their presence does not mean every AI statement is independently verified. Pretio does not persist these AI Logic results, Grounded Results, links, or Search Suggestions in its local Product Insight cache or product records. Earlier versions may use different server-side processing and caches.</p>
+      <p>For photo identification, Pretio first checks the selected image for a barcode on your device. If no readable barcode is found, Pretio asks for your permission before sending the image to Google Gemini through Firebase AI Logic. The result is an unverified product suggestion for you to review. Pretio does not add the image to product records and attempts to remove the temporary local copy when the platform permits. When there is no defensible barcode, Pretio offers manual product creation and does not submit a barcode-based Product Insight request.</p>
+      <p>Firebase AI Logic itself does not store model inputs or outputs; the selected Gemini API provider's terms apply. Pretio uses the paid Gemini API service. Google's terms state that paid-service prompts and responses are not used to improve Google products, while limited retention may apply for abuse monitoring. If Google Search Grounding is used through the paid Gemini API, Google retains prompts, context, and output for 30 days to provide Grounded Results and Search Suggestions. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase privacy information</a> and <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Gemini API terms</a>.</p>
 
       <h2>11. Availability and technical limitations</h2>
       <p>Pretio is provided on an “as available” basis. Features may be temporarily unavailable because of device limitations, operating-system restrictions, connectivity, third-party service outages, website changes, maintenance, or technical errors. Compare Online requires an internet connection and may stop working if Google Search, a destination website, Android link handling, or the embedded web-view technology changes or becomes unavailable. We do not guarantee uninterrupted operation, permanent availability of any search result, or permanent availability of any advertisement.</p>
