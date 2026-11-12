@@ -42,7 +42,7 @@
       <span class="tag">Invite</span>
       <h1 style="margin-top:14px">You're invited to a workspace</h1>
       <p id="msg">Open it in the Max Cam Scanner app, then sign in with the email that received this invite.</p>
-      <p id="what" class="meta">A workspace is a shared space in the app where your team keeps files, comments, and signs documents together.</p>
+      <p id="what" class="meta">A workspace is a shared folder in the Max Cam Scanner app where a team scans, stores and edits documents together (PDF, Word, Excel, images), with version history.</p>
       <div class="support-links">
         <a id="open" class="button primary" href="#">Open in the app</a>
         <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.maxq.scanner">Get it on Google Play</a>
@@ -78,10 +78,16 @@
       open.href = "maxqscanner://invite?token=" + encodeURIComponent(token);
 
       // Optional: show who invited you and to which workspace. If the lookup fails, the generic text stays.
-      var T = {title:'%s invited you to the “%s” workspace in Max Cam Scanner',title2:'You’re invited to the “%s” workspace in Max Cam Scanner',role:' You’ll join as %s.',what:'A workspace is a shared space in the app where your team keeps files, comments, and signs documents together.'};
+      var T = {title:'%s invited you to the “%s” workspace in Max Cam Scanner',title2:'You’re invited to the “%s” workspace in Max Cam Scanner',role:' You’ll join as %s.',what:'A workspace is a shared folder in the Max Cam Scanner app where a team scans, stores and edits documents together (PDF, Word, Excel, images), with version history.'};
       var roles = {owner:"Owner",co_owner:"Co-owner",editor:"Editor",commenter:"Commenter",viewer:"Viewer"};
-      fetch("https://api.maxq.tools/v1/invites/preview?token=" + encodeURIComponent(token), { headers: { Accept: "application/json" } })
-        .then(function (r) { return r.ok ? r.json() : null; })
+      // Try production first; fall back to staging while production is not live yet.
+      function preview(host) {
+        return fetch(host + "/v1/invites/preview?token=" + encodeURIComponent(token), { headers: { Accept: "application/json" } })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .catch(function () { return null; });
+      }
+      preview("https://api.maxq.tools")
+        .then(function (d) { return d || preview("https://api-staging.maxq.tools"); })
         .then(function (d) {
           if (!d || !d.workspaceName) return;
           var h = document.querySelector("h1");
