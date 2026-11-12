@@ -41,7 +41,8 @@
     <article class="container legal-card">
       <span class="tag">Undangan</span>
       <h1 style="margin-top:14px">Kamu diundang ke workspace</h1>
-      <p id="msg">Buka di aplikasi Max Cam Scanner, lalu masuk dengan akun Google yang menerima email ini.</p>
+      <p id="msg">Buka di aplikasi Max Cam Scanner, lalu masuk dengan email yang menerima undangan ini.</p>
+      <p id="what" class="meta">Workspace adalah folder bersama di aplikasi Max Cam Scanner tempat tim memindai, menyimpan, dan mengedit dokumen bersama (PDF, Word, Excel, gambar), lengkap dengan riwayat versi.</p>
       <div class="support-links">
         <a id="open" class="button primary" href="#">Buka di aplikasi</a>
         <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.maxq.scanner">Pasang dari Google Play</a>
@@ -75,6 +76,28 @@
         return;
       }
       open.href = "maxqscanner://invite?token=" + encodeURIComponent(token);
+
+      // Optional: show who invited you and to which workspace. If the lookup fails, the generic text stays.
+      var T = {title:'%s mengundangmu ke workspace “%s” di Max Cam Scanner',title2:'Kamu diundang ke workspace “%s” di Max Cam Scanner',role:' Kamu akan bergabung sebagai %s.',what:'Workspace adalah folder bersama di aplikasi Max Cam Scanner tempat tim memindai, menyimpan, dan mengedit dokumen bersama (PDF, Word, Excel, gambar), lengkap dengan riwayat versi.'};
+      var roles = {owner:"Owner",co_owner:"Co-owner",editor:"Editor",commenter:"Commenter",viewer:"Viewer"};
+      // Try production first; fall back to staging while production is not live yet.
+      function preview(host) {
+        return fetch(host + "/v1/invites/preview?token=" + encodeURIComponent(token), { headers: { Accept: "application/json" } })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .catch(function () { return null; });
+      }
+      preview("https://api.maxq.tools")
+        .then(function (d) { return d || preview("https://api-staging.maxq.tools"); })
+        .then(function (d) {
+          if (!d || !d.workspaceName) return;
+          var h = document.querySelector("h1");
+          h.textContent = d.inviterName
+            ? T.title.replace("%s", function () { return d.inviterName; }).replace("%s", function () { return d.workspaceName; })
+            : T.title2.replace("%s", function () { return d.workspaceName; });
+          var role = roles[d.role] || "";
+          document.getElementById("what").textContent = T.what + (role ? T.role.replace("%s", function () { return role; }) : "");
+        })
+        .catch(function () {});
     })();
   </script>
 </body>
