@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Argh! icon">
+  <rect width="512" height="512" rx="112" fill="#F3EEE3"/>
+  <polygon fill="#111111" points="268,44 306,130 392,74 380,170 476,168 404,238 480,300 386,320 422,412 330,378 302,470 252,392 188,468 176,374 82,410 122,322 34,290 116,240 46,168 146,164 124,72 212,124" transform="translate(10 12)"/>
+  <polygon fill="#C64E1E" stroke="#111111" stroke-width="14" stroke-linejoin="round" points="268,44 306,130 392,74 380,170 476,168 404,238 480,300 386,320 422,412 330,378 302,470 252,392 188,468 176,374 82,410 122,322 34,290 116,240 46,168 146,164 124,72 212,124"/>
+  <circle cx="256" cy="262" r="118" fill="#FFD23F" stroke="#111111" stroke-width="14"/>
+  <path d="M176 210 L232 232 M336 210 L280 232" stroke="#111111" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="210" cy="250" r="12" fill="#111111"/><circle cx="302" cy="250" r="12" fill="#111111"/>
+  <ellipse cx="256" cy="318" rx="46" ry="52" fill="#111111"/>
+  <ellipse cx="256" cy="346" rx="28" ry="18" fill="#C64E1E"/>
+</svg>
