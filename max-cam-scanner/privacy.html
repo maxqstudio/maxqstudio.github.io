@@ -40,7 +40,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Max Cam Scanner by Max-Q Studio</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 6 November 2026 · Android &amp; iOS app “Max Cam Scanner” (com.maxq.scanner)</p>
+      <p class="meta">Effective 13 November 2026 · Android &amp; iOS app “Max Cam Scanner” (com.maxq.scanner)</p>
 
       <div class="box content-card hl">
         <strong>In short:</strong> document photos and OCR results are processed on your phone. Data only leaves
@@ -63,15 +63,15 @@
       <p>You can use the app without an account. Shared workspaces require Google sign-in. If you sign in, we process:</p>
       <ul>
         <li><strong>Account:</strong> your name, email address, profile photo, and user ID from Google, through Firebase Authentication.</li>
-        <li><strong>Workspaces:</strong> workspace name, member list with emails and roles (Owner, Editor, Viewer), and file metadata such as title, type, size, time, and uploader, stored in Cloud Firestore.</li>
-        <li><strong>Workspace files:</strong> PDF, DOC, and Excel files you save to a workspace, stored in Cloud Storage for Firebase and accessible only to that workspace's members.</li>
-        <li><strong>Invites:</strong> the email of the person you invite, the role offered, and the invite status. We send one invitation email to that address at your request.</li>
-        <li><strong>Collaboration:</strong> comments on workspace files, who was tagged (@mentions), signature requests and their status, and every saved version of a file (who saved it, when, an optional note, and a summary of what changed). Up to the last 10 versions of each file are kept.</li>
+        <li><strong>Workspaces:</strong> workspace name, member list with emails and roles (Owner, Editor, Viewer), and file metadata such as title, type, size, time, and uploader, stored in Google Cloud Firestore or Cloudflare D1.</li>
+        <li><strong>Workspace files:</strong> PDF, DOC, and Excel files you save to a workspace, stored in Cloud Storage for Firebase or Cloudflare R2 and accessible only to that workspace's members.</li>
+        <li><strong>Invites:</strong> the email of the person you invite, the role offered, and the invite status (including whether the invited person blocked invites from you). We send one invitation email to that address at your request.</li>
+        <li><strong>Collaboration:</strong> comments on workspace files, who was tagged (@mentions), signature requests and their status, and every saved version of a file (who saved it, when, an optional note, and a summary of what changed). Every saved version of a file is kept until a member with permission deletes it, deletes the file, or the workspace is deleted. A rollback permanently removes the newer versions after confirmation.</li>
         <li><strong>Synced settings:</strong> signatures you draw while signed in and the last watermark you used, so they are available on your other phones. Signatures are removed from a phone when you sign out of it.</li>
         <li><strong>Notifications:</strong> in-app notifications about mentions and signature requests, and a Firebase Cloud Messaging installation ID per phone so we can send push notifications. You can turn push notifications off in your phone settings.</li>
-        <li><strong>Plan:</strong> Free or Pro status.</li>
+        <li><strong>Plan and storage:</strong> your plan (Free, Pro, Pro Team, Max, or Max Team), how much storage you and each workspace use, and any storage limit an Owner sets for a workspace.</li>
       </ul>
-      <p>This data is processed by Google Firebase (Google LLC) as our service provider, in data centres in Jakarta, Indonesia (asia-southeast2), and may also be handled on servers outside your country.</p>
+      <p>This data is processed by our service providers Google Firebase (Google LLC), in data centres in Jakarta, Indonesia (asia-southeast2), and Cloudflare, Inc. (Workers, D1, and R2), in its Asia-Pacific region. Data may also be handled on servers outside your country. Sign-in always goes through Firebase Authentication.</p>
 
       <h2>4. Ads</h2>
       <p>The free version shows ads from Google AdMob: a banner, an ad when you open the app, and a rewarded ad before export. To show and measure ads, AdMob may collect your device's advertising ID, IP address, device information, and ad interactions.
@@ -91,7 +91,7 @@
       <p>We do not sell your personal data and do not use the contents of your documents for advertising.</p>
 
       <h2>7. Sharing</h2>
-      <p>Files in a workspace can be seen by all of its members. Beyond that, data is only shared with the service providers above (Google Firebase and Google AdMob), or when required by law.</p>
+      <p>Files in a workspace can be seen by all of its members. Beyond that, data is only shared with the service providers above (Google Firebase, Cloudflare, and Google AdMob), or when required by law.</p>
 
       <h2>8. Retention &amp; deletion</h2>
       <ul>

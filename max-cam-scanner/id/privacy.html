@@ -40,7 +40,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Max Cam Scanner oleh Max-Q Studio</p>
       <h1>Kebijakan Privasi</h1>
-        <p class="meta">Berlaku sejak 6 November 2026 · Aplikasi Android &amp; iOS “Max Cam Scanner” (com.maxq.scanner)</p>
+        <p class="meta">Berlaku sejak 13 November 2026 · Aplikasi Android &amp; iOS “Max Cam Scanner” (com.maxq.scanner)</p>
       
         <div class="box content-card hl">
           <strong>Singkatnya:</strong> foto dokumen dan hasil OCR diproses di HP kamu. Data hanya keluar dari perangkat
@@ -63,15 +63,15 @@
         <p>Kamu bisa memakai aplikasi tanpa akun. Workspace bersama membutuhkan login dengan Google. Jika kamu masuk, kami memproses:</p>
         <ul>
           <li><strong>Akun:</strong> nama, alamat email, foto profil, dan ID pengguna dari Google, melalui Firebase Authentication.</li>
-          <li><strong>Workspace:</strong> nama workspace, daftar anggota beserta email dan peran (Owner, Editor, Viewer), serta metadata file seperti judul, jenis, ukuran, waktu, dan pengunggah. Data ini disimpan di Cloud Firestore.</li>
-          <li><strong>File workspace:</strong> PDF, DOC, dan Excel yang kamu simpan ke workspace. File disimpan di Cloud Storage for Firebase dan hanya bisa dibuka oleh anggota workspace tersebut.</li>
-          <li><strong>Undangan:</strong> email orang yang kamu undang, peran yang ditawarkan, dan status undangan. Kami mengirim satu email undangan ke alamat tersebut atas permintaanmu.</li>
-          <li><strong>Kolaborasi:</strong> komentar di file workspace, siapa yang di-tag (@mention), permintaan tanda tangan dan statusnya, serta setiap versi file yang disimpan (siapa, kapan, catatan opsional, dan ringkasan perubahan). Maksimal 10 versi terakhir per file disimpan.</li>
+          <li><strong>Workspace:</strong> nama workspace, daftar anggota beserta email dan peran (Owner, Editor, Viewer), serta metadata file seperti judul, jenis, ukuran, waktu, dan pengunggah. Data ini disimpan di Google Cloud Firestore atau Cloudflare D1.</li>
+          <li><strong>File workspace:</strong> PDF, DOC, dan Excel yang kamu simpan ke workspace. File disimpan di Cloud Storage for Firebase atau Cloudflare R2 dan hanya bisa dibuka oleh anggota workspace tersebut.</li>
+          <li><strong>Undangan:</strong> email orang yang kamu undang, peran yang ditawarkan, dan status undangan (termasuk apakah orang tersebut memblokir undangan darimu). Kami mengirim satu email undangan ke alamat tersebut atas permintaanmu.</li>
+          <li><strong>Kolaborasi:</strong> komentar di file workspace, siapa yang di-tag (@mention), permintaan tanda tangan dan statusnya, serta setiap versi file yang disimpan (siapa, kapan, catatan opsional, dan ringkasan perubahan). Setiap versi file yang disimpan tetap ada sampai anggota yang berwenang menghapusnya, menghapus file, atau workspace dihapus. Rollback menghapus permanen versi yang lebih baru setelah konfirmasi.</li>
     <li><strong>Pengaturan yang tersinkron:</strong> tanda tangan yang kamu buat saat login dan watermark terakhir yang kamu pakai, supaya tersedia di HP lain. Tanda tangan dihapus dari HP saat kamu logout di HP itu.</li>
     <li><strong>Notifikasi:</strong> notifikasi di app tentang mention dan permintaan tanda tangan, serta ID instalasi Firebase Cloud Messaging per HP untuk mengirim push. Push bisa dimatikan di pengaturan HP.</li>
-    <li><strong>Paket langganan:</strong> status Free atau Pro.</li>
+    <li><strong>Paket langganan:</strong> paket kamu (Free, Pro, Pro Team, Max, atau Max Team), jumlah penyimpanan yang dipakai kamu dan tiap workspace, serta batas kapasitas yang diatur Owner untuk sebuah workspace.</li>
         </ul>
-        <p>Data ini diproses oleh Google Firebase (Google LLC) sebagai penyedia layanan kami, dan dapat disimpan di server di luar negaramu.</p>
+        <p>Data ini diproses oleh penyedia layanan kami: Google Firebase (Google LLC) dan Cloudflare, Inc. (Workers, D1, dan R2) di wilayah Asia-Pasifik. Login selalu melalui Firebase Authentication. Data dapat disimpan di server di luar negaramu.</p>
       
         <h2>4. Iklan</h2>
         <p>Versi gratis menampilkan iklan dari Google AdMob, yaitu banner, iklan saat membuka aplikasi, dan iklan berhadiah sebelum export. Untuk menampilkan dan mengukur iklan, AdMob dapat mengumpulkan ID iklan perangkat, alamat IP, informasi perangkat, dan interaksi dengan iklan.
@@ -91,7 +91,7 @@
         <p>Kami tidak menjual data pribadimu dan tidak memakai isi dokumenmu untuk iklan.</p>
       
         <h2>7. Berbagi data</h2>
-        <p>File di workspace dapat dilihat oleh semua anggota workspace tersebut. Selain itu, data hanya dibagikan kepada penyedia layanan di atas (Google Firebase dan Google AdMob), atau jika diwajibkan oleh hukum.</p>
+        <p>File di workspace dapat dilihat oleh semua anggota workspace tersebut. Selain itu, data hanya dibagikan kepada penyedia layanan di atas (Google Firebase, Cloudflare, dan Google AdMob), atau jika diwajibkan oleh hukum.</p>
       
         <h2>8. Penyimpanan &amp; penghapusan</h2>
         <ul>
