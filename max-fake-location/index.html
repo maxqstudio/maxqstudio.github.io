@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max Fake Location - Mock GPS for app testing</title>
+  <meta name="description" content="Max Fake Location is a mock GPS tool for Android app testing. Pick a spot on the map, move with a joystick, or simulate a route. No root, no login." />
+  <meta name="theme-color" content="#060e15" />
+  <meta property="og:title" content="Max Fake Location - Mock GPS for app testing" />
+  <meta property="og:description" content="Max Fake Location is a mock GPS tool for Android app testing. Pick a spot on the map, move with a joystick, or simulate a route. No root, no login." />
+  <meta property="og:image" content="https://maxqstudio.dev/images/max-fake-location/feature-graphic.png" />
+  <link rel="icon" href="../images/max-fake-location/app-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="max-fake-location.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="../images/max-fake-location/app-icon.svg" alt="" /><span>Max Fake Location</span></a>
+      <nav class="nav" aria-label="Max Fake Location pages">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a class="hide-sm" href="../index.html">Max-Q Studio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="pin" src="../images/max-fake-location/app-icon.svg" alt="" />
+      <div class="container hero-copy">
+        <p class="tagline">Mock GPS for app testing</p>
+        <h1>Max Fake Location</h1>
+        <p class="lead">Pick a spot on the map, walk it with a joystick, or play back a route at real speed. Built on Android's own mock location setting. No root, no login.</p>
+        <div class="actions">
+          <span class="button primary is-static">Coming soon on Google Play</span>
+          <a class="button secondary" href="support.html">Setup guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container gallery" aria-label="Screenshots">
+      <img src="../images/max-fake-location/set-location.webp" alt="Set any location in one tap on the map or by coordinates" width="720" height="1280" loading="eager" />
+      <img src="../images/max-fake-location/joystick.webp" alt="Walk anywhere step by step with the four-direction joystick" width="720" height="1280" loading="eager" />
+      <img src="../images/max-fake-location/routes.webp" alt="Simulate a route of up to 50 points at 1 to 120 km/h" width="720" height="1280" loading="eager" />
+      <img src="../images/max-fake-location/favorites.webp" alt="Save up to 20 favorite locations on your device" width="720" height="1280" loading="lazy" />
+      <img src="../images/max-fake-location/no-root.webp" alt="Uses Android mock location from Developer options, with a Stop button in the notification" width="720" height="1280" loading="lazy" />
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>What it does</h2>
+        <div class="features">
+          <article class="card wide">
+            <h3>Set a location</h3>
+            <p>Tap the interactive OpenStreetMap map, or type latitude and longitude, then tap Start. Android receives the position through its official mock location provider until you stop.</p>
+            <ul>
+              <li>Joystick: move north, east, south or west in steps of 1 to 1000 meters.</li>
+              <li>Routes: 2 to 50 waypoints at 1 to 120 km/h, holding the last point when the route ends.</li>
+              <li>Favorites: keep up to 20 named places on your device.</li>
+              <li>Stop from the app or the ongoing notification at any time.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Private by default</h3>
+            <p>No account and no Max-Q Studio server. Your coordinates, routes and favorites stay on your phone. Viewed map tiles are cached on the device.</p>
+          </article>
+          <article class="card">
+            <h3>Made for testing</h3>
+            <p>Check geofences, check-in radius, store finders and delivery flows from your desk. The free app shows Google AdMob ads.</p>
+          </article>
+        </div>
+        <p class="note">Android marks simulated positions as mock locations, and some apps choose to ignore them. Only GPS location changes; your IP address and Wi-Fi or cell-network location do not. Please respect the terms of the apps and services you use.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio</p>
+      <nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:support@maxqstudio.dev">support@maxqstudio.dev</a></nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
