@@ -31,7 +31,7 @@ try {
       assert.equal(res?.status(), 200);
       assert.equal(await page.locator('.hero-inner').count(), 1);
       assert.equal(await page.locator('.hero-grid, .hero-visual, .visual-frame').count(), 0);
-      assert.equal(await page.locator('.product-tile').count(), 7);
+      assert.equal(await page.locator('.product-tile').count(), 8);
       assert.match(await page.locator('h1').innerText(), /Small studio/);
       const logo = page.locator('img[src="images/maxq-tools-logo.svg"]').first();
       assert.ok(await logo.evaluate(img => img.complete && img.naturalWidth > 0), 'Official logo must load');

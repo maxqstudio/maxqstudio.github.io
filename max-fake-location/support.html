@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - Max Fake Location</title>
+  <meta name="description" content="Setup guide and answers for Max Fake Location: Developer options, mock location app, and common questions." />
+  <meta name="theme-color" content="#060e15" />
+  <meta property="og:title" content="Support - Max Fake Location" />
+  <meta property="og:description" content="Setup guide and answers for Max Fake Location: Developer options, mock location app, and common questions." />
+  <meta property="og:image" content="https://maxqstudio.dev/images/max-fake-location/feature-graphic.png" />
+  <link rel="icon" href="../images/max-fake-location/app-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="max-fake-location.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="../images/max-fake-location/app-icon.svg" alt="" /><span>Max Fake Location</span></a>
+      <nav class="nav" aria-label="Max Fake Location pages">
+        <a href="index.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a class="hide-sm" href="../index.html">Max-Q Studio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <article class="container legal-card">
+      <h1>Support</h1>
+      <p class="meta">Help for Max Fake Location on Android</p>
+
+      <div class="card summary">
+        <h3>Setup in four steps</h3>
+        <ol class="steps">
+          <li>Enable <strong>Developer options</strong>: Settings &gt; About phone &gt; tap <em>Build number</em> 7 times.</li>
+          <li>Open Developer options &gt; <strong>Select mock location app</strong> &gt; choose <strong>Max Fake Location</strong>.</li>
+          <li>Turn on device Location and allow the location permission when the app asks.</li>
+          <li>Pick a point on the map or enter coordinates, then tap <strong>Start location</strong>.</li>
+        </ol>
+      </div>
+
+      <h2>Common questions</h2>
+      <details>
+        <summary>The app says it is not selected as the mock location app.</summary>
+        <p>Open Developer options, find <em>Select mock location app</em> (on some phones under Debugging), and choose Max Fake Location. The app has a shortcut button to Developer options.</p>
+      </details>
+      <details>
+        <summary>Another app still shows my real location.</summary>
+        <p>Some apps check whether a location is a mock location and ignore it. This is an Android feature and cannot be bypassed. Also make sure Location is on and try turning Wi-Fi scanning off while testing.</p>
+      </details>
+      <details>
+        <summary>Does it change my IP address or network location?</summary>
+        <p>No. Only GPS location is simulated. Your IP address and Wi-Fi or cell-network based location stay the same.</p>
+      </details>
+      <details>
+        <summary>How do I enter coordinates?</summary>
+        <p>Use decimal degrees with a dot, for example <code>-6.175392</code> and <code>106.827153</code>. For routes, enter one <code>latitude,longitude</code> pair per line, 2 to 50 lines.</p>
+      </details>
+      <details>
+        <summary>The location stops after a while in the background.</summary>
+        <p>Some phones limit background apps to save battery. Keep the notification visible, and if needed allow the app to run without battery restrictions in your phone settings.</p>
+      </details>
+      <details>
+        <summary>How do I stop the simulation?</summary>
+        <p>Tap Stop in the app or in the ongoing notification. Your phone returns to its real location.</p>
+      </details>
+      <details>
+        <summary>Does the map work offline?</summary>
+        <p>Map areas you have already viewed may load from the on-device cache without a connection. New areas and zoom levels need the internet. Coordinates can always be entered manually.</p>
+      </details>
+      <details>
+        <summary>How do I change my ad privacy choices?</summary>
+        <p>Where required by law, a Privacy choices option appears in the app. You can also reset your advertising ID in Android settings.</p>
+      </details>
+
+      <h2>Contact</h2>
+      <p>Still stuck? Email <a href="mailto:support@maxqstudio.dev?subject=Max%20Fake%20Location%20support">support@maxqstudio.dev</a> with your phone model, Android version and a short description.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio</p>
+      <nav aria-label="Footer"><a href="index.html">Max Fake Location</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
