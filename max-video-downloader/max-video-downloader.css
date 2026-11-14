@@ -1,0 +1,45 @@
+@font-face{font-family:"Plus Jakarta Sans";src:url("PlusJakartaSans.ttf") format("truetype");font-weight:200 800;font-display:swap}
+:root{--bg:#FBF8FF;--surface:#fff;--alt:#F2EEFF;--ink:#1D1A2B;--soft:#6B6785;--line:#E7E1F7;--primary:#6C4BFF;--primary-d:#4E2FE8;--psoft:#E9E3FF;--mint:#14C79C;--lemon:#FFD23F;--peach:#FF8A65}
+@media (prefers-color-scheme:dark){:root{--bg:#12101C;--surface:#1C1929;--alt:#262238;--ink:#F4F1FF;--soft:#ABA5C6;--line:#332E4A;--primary:#8D74FF;--psoft:#2E2752}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--primary)}img{max-width:100%;height:auto}
+.container{width:min(1080px,100% - 40px);margin-inline:auto}
+.app-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap;padding-block:8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800}
+.brand img{width:38px;height:38px;border-radius:11px}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{text-decoration:none;color:var(--soft);font-weight:700;font-size:.92rem;padding:8px 14px;border-radius:99px}
+.nav a:hover,.nav a[aria-current=page]{background:var(--psoft);color:var(--primary)}
+.hero{padding:56px 0 40px;overflow:hidden}
+.hero-grid{display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
+.pill{display:inline-block;background:var(--lemon);color:#3B2A00;font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:6px 14px}
+h1{font-size:clamp(2.2rem,5.4vw,3.7rem);line-height:1.04;font-weight:800;margin:18px 0 14px;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(90deg,#6C4BFF,#3FB6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.15rem;color:var(--soft);max-width:34em}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.button{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:0 24px;border-radius:99px;font-weight:800;text-decoration:none}
+.button.primary{background:linear-gradient(90deg,#6C4BFF,#9B5CFF);color:#fff}
+.button.secondary{background:var(--psoft);color:var(--primary)}
+.soon{margin-top:16px;color:var(--soft);font-size:.95rem}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art .blob{position:absolute;border-radius:50%;z-index:0}
+.hero-art img{position:relative;z-index:1;width:min(300px,78%);border-radius:28px;box-shadow:0 30px 70px rgba(80,50,200,.28);transform:rotate(3deg)}
+section{padding:48px 0}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.15;margin:0 0 10px;font-weight:800}
+.sub{color:var(--soft);max-width:40em;margin:0 0 28px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px}
+.card h3{margin:12px 0 6px;font-size:1.08rem}.card p{margin:0;color:var(--soft);font-size:.96rem}
+.badge{width:46px;height:46px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.shots{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.shots img{border-radius:22px;border:1px solid var(--line);width:100%}
+.note{background:var(--alt);border-radius:20px;padding:18px 22px;color:var(--soft);font-size:.95rem}
+.legal-page{padding:40px 0 64px}.legal-card{max-width:780px}
+.legal-card h1{font-size:clamp(2rem,4vw,2.6rem)}.legal-card h2{font-size:1.25rem;margin-top:32px}
+.meta{color:var(--soft);font-size:.92rem}
+.summary{background:var(--alt);border-radius:20px;padding:18px 22px;margin:20px 0}.summary h3{margin:0 0 6px}
+.site-footer{border-top:1px solid var(--line);padding:26px 0;color:var(--soft);font-size:.92rem}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.footer-inner nav{display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-art{order:-1}.hero{padding-top:28px}}
