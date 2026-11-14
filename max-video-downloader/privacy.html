@@ -39,15 +39,18 @@
       <p>Max Video Downloader is published by Max-Q Studio. Contact: <a href="mailto:support@maxqstudio.dev">support@maxqstudio.dev</a>.</p>
 
       <h2>2. Data stored on your device</h2>
-      <p>The app saves, in its private storage, your theme choice and a list of recent downloads (Android download IDs, file names and the link used, so a failed download can be retried). This data is not sent to Max-Q Studio. Device backup of app data is turned off. Uninstalling the app or clearing its storage deletes it. Downloaded videos are saved in your Downloads folder and are yours to manage.</p>
+      <p>The app saves, in its private storage, your theme choice and a list of recent downloads (download IDs, file names, the link used and the page it came from, so a failed download can be retried). This data is not sent to Max-Q Studio. Device backup of app data is turned off. Uninstalling the app or clearing its storage deletes it. Downloaded videos are saved in your Downloads folder and are yours to manage.</p>
+      <p>If you use the built-in browser to find a video, the pages you open there may store cookies, cache and site data inside the app's private storage, like any browser. This data stays on your device and is never sent to Max-Q Studio; clearing the app's storage removes it. The app does not read your sign-ins or use them for downloads.</p>
 
       <h2>3. Links you check or download</h2>
-      <p>When you check a link, your phone contacts the site that hosts it (for direct links), Wikimedia Commons (commons.wikimedia.org) or the Internet Archive (archive.org) to confirm it is a supported video. Those requests come directly from your phone and include your IP address and the app's name and version. The actual download is performed by Android's Download Manager. These sites have their own privacy policies. Max-Q Studio does not receive your links.</p>
+      <p>When you check a link, your phone contacts the site that hosts it, and any video servers or embedded players that page points to, Wikimedia Commons (commons.wikimedia.org) or the Internet Archive (archive.org), to find a supported video and its available qualities. Those requests come directly from your phone and include your IP address, a standard browser user agent and, for video files, the address of the page the video came from (Referer), as a normal browser would send. Video files are downloaded by Android's Download Manager; video playlists (HLS) are downloaded and joined by the app itself while a notification shows the progress. These sites have their own privacy policies. Max-Q Studio does not receive your links or your videos.</p>
 
       <h2>4. Permissions</h2>
       <ul>
         <li><strong>Internet and network state:</strong> to check links, download videos and load ads.</li>
         <li><strong>Storage (Android 8 and 9 only):</strong> to save into your Downloads folder.</li>
+        <li><strong>Notifications (Android 13 and later):</strong> to show download progress; you can decline and downloads still work.</li>
+        <li><strong>Foreground service (data sync):</strong> so a video playlist download can finish while the app is in the background.</li>
         <li><strong>Advertising ID:</strong> used by Google Mobile Ads, if you haven't opted out.</li>
       </ul>
       <p>The app does not request location, contacts, camera, microphone or account access.</p>
