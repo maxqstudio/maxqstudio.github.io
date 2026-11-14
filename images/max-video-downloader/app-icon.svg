@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="0" x2="100" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8A63FF"/><stop offset=".55" stop-color="#5B3DF5"/><stop offset="1" stop-color="#2FA4FF"/>
+    </linearGradient>
+    <linearGradient id="play" x1="49" y1="34" x2="63" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7B5CFF"/><stop offset="1" stop-color="#4E2FE8"/>
+    </linearGradient>
+    <clipPath id="clip"><rect width="108" height="108" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="108" height="108" fill="url(#bg)"/>
+    <circle cx="96" cy="4" r="26" fill="#fff" fill-opacity=".15"/>
+    <circle cx="8" cy="100" r="22" fill="#FFD23F" fill-opacity=".12"/>
+    <path fill="#200A8C" fill-opacity=".2" d="M31,32 Q31,26 37,26 L77,26 Q83,26 83,32 L83,60 Q83,66 77,66 L37,66 Q31,66 31,60 Z"/>
+    <path fill="#fff" d="M29,28 Q29,22 35,22 L75,22 Q81,22 81,28 L81,56 Q81,62 75,62 L35,62 Q29,62 29,56 Z"/>
+    <path d="M49,34 L49,50 L63,42 Z" fill="url(#play)" stroke="url(#play)" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M55,67 L55,82 M45.5,74 L55,83.5 L64.5,74" fill="none" stroke="#FFD23F" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="82" cy="66" r="4" fill="#14E0B0"/>
+  </g>
+</svg>
