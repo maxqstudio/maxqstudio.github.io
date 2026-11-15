@@ -84,6 +84,12 @@ if (themeToggle && darkStylesheet && lightStylesheet) {
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
 
+const projectCount = document.querySelector('[data-project-count]');
+if (projectCount) {
+  const total = document.querySelectorAll('#products .product-tile').length;
+  projectCount.textContent = `${total} projects`;
+}
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
