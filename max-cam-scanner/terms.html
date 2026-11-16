@@ -62,6 +62,10 @@
         <li>Invites are sent by email and can only be accepted, within 7 days, by the account with the same email (Google, or email and password). The invited person can block invites from an Owner; blocking hides the invite on their side and does not notify the Owner, who keeps seeing it as Pending.</li>
         <li>Owners are responsible for who they invite. All members can see the files in a workspace.</li>
       </ul>
+      <p><strong>Editing a workspace file.</strong> While a file is open in its editor, one member at a time holds the editing session; other workspace members can see who is editing. Your changes are first kept in a local working cache. The App may autosave to this cache, but this does not update the workspace. Only an explicit <em>Save to Workspace</em> uploads the file and creates a new remote version. The cache remains after that save and is hidden from Documents. <em>Save to Device</em> creates a separate local document.</p>
+      <p>When you enter or re-enter the editor, the App checks your signed-in account and this device's saved session ID, then checks the latest workspace version. The same device can recover its own session; another device, even with the same account, cannot take over that active session. If the workspace version changed, the old unsaved cache is cancelled and replaced with the latest version. Your cache is resumed only when its base version is still current. The App does not merge concurrent edits or promise simultaneous editing.</p>
+      <p>Each workspace save also checks that the version you started from is still current. If it has changed, the save is refused to prevent overwriting the newer version.</p>
+      <p>The server session expires 60 seconds after the last successful renewal. While the editor is active, the App sends a lightweight heartbeat every 30 seconds; it does not download the document, model, or blobs. Back, a successful workspace save, and normal app backgrounding or closing stop renewals and attempt to release the session right away. A force-stop, crash, power loss, or connectivity failure may prevent immediate release or detection; if renewals stop, the session expires automatically no later than 60 seconds after the last successful renewal.</p>
 
       <h2>4. Paid plans</h2>
       <p>Paid plans (Pro, Pro Team, Max, Max Team) provide ad-free export, a larger storage pool as described in section 3, and AI mode once available. Price, billing period, and cancellation follow the Google Play or App Store terms shown at purchase.</p>
@@ -92,7 +96,7 @@
       <p>These terms are governed by the laws of the Republic of Indonesia.</p>
 
       <h2>12. Changes</h2>
-      <p>These terms may be updated. The effective date above will change, and for important changes we let you know in the app.</p>
+      <p>These terms may be updated. The effective date above will change, and for important changes we let you know in the app. Change history: <a href="https://github.com/maxqstudio/max-cam-scanner/issues/107">Workspace editing and cached saves (#107)</a>, related to the same-device session recovery in <a href="https://github.com/maxqstudio/max-cam-scanner/issues/106">#106</a>.</p>
     </article>
   </main>
 
