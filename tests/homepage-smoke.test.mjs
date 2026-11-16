@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { mkdirSync } from 'node:fs';
 import { chromium } from 'playwright';
+import { assertTermsPages } from './terms-smoke.test.mjs';
 
 const base = process.env.TEST_BASE_URL ?? 'http://127.0.0.1:8765';
 mkdirSync('artifacts/screenshots', { recursive: true });
@@ -22,6 +23,10 @@ const appearance = async (page) => page.evaluate(() => ({
 }));
 
 try {
+  await test('Terms and Privacy describe Workspace editing accurately', () => {
+    assertTermsPages();
+  });
+
   for (const width of [320, 375, 768, 850, 1024, 1440]) {
     await test(`default dark, original Studio layout, light toggle + persistence at ${width}px`, async () => {
       const page = await browser.newPage({ viewport: { width, height: 900 }, colorScheme: 'light' });
