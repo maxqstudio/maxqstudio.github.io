@@ -20,6 +20,20 @@ export function assertTermsPages() {
   assert.match(idTerms, /<em>Simpan ke Perangkat<\/em> membuat dokumen lokal yang terpisah/);
   assert.match(idTerms, /tidak menggabungkan perubahan bersamaan atau menjanjikan pengeditan simultan/);
 
+  // AI mode is live and its external processing is disclosed in both languages.
+  assert.match(enTerms, /Effective 16 November 2026/);
+  assert.match(enTerms, /AI mode, subject to the usage limits shown in the App/);
+  assert.match(enTerms, /selected page images are sent to our server and the AI provider or providers configured/);
+  assert.match(enTerms, /AI conversion may misread or omit content/);
+  assert.match(enTerms, /https:\/\/openai\.com\/business-data\//);
+  assert.match(enTerms, /https:\/\/privacy\.anthropic\.com\/en\//);
+  assert.doesNotMatch(enTerms, /AI mode once available/);
+  assert.match(idTerms, /Berlaku sejak 16 November 2026/);
+  assert.match(idTerms, /mode AI dengan batas pemakaian/);
+  assert.match(idTerms, /gambar halaman yang dipilih dikirim ke server kami dan penyedia AI/);
+  assert.match(idTerms, /Konversi AI dapat salah membaca atau melewatkan isi/);
+  assert.doesNotMatch(idTerms, /mode AI saat fitur itu tersedia/);
+
   // Both languages document lease, recovery, conflict protection, and history links.
   for (const terms of [enTerms, idTerms]) {
     assert.match(terms, /30 seconds|30 detik/);
@@ -37,4 +51,17 @@ export function assertTermsPages() {
   assert.match(enPrivacy, /Workspace members can also see which member currently holds the editing session/);
   assert.match(idPrivacy, /identitas anggota yang sedang mengedit file/);
   assert.match(idPrivacy, /Anggota workspace juga dapat melihat anggota yang sedang memegang sesi edit/);
+
+  assert.match(enPrivacy, /Effective 16 November 2026/);
+  assert.match(enPrivacy, /selected page images are sent through our server to configured AI provider/);
+  assert.match(enPrivacy, /Up to 10 page images may be sent in one request/);
+  assert.match(enPrivacy, /AI result is returned to the App as a local document draft/);
+  assert.match(enPrivacy, /Each AI provider handles submitted images under its own terms and privacy practices/);
+  assert.doesNotMatch(enPrivacy, /current version does not send documents to any AI service/);
+  assert.match(idPrivacy, /Berlaku sejak 16 November 2026/);
+  assert.match(idPrivacy, /gambar halaman yang dipilih dikirim melalui server kami ke penyedia AI/);
+  assert.match(idPrivacy, /Maksimal 10 gambar halaman/);
+  assert.match(idPrivacy, /sebagai draf dokumen lokal/);
+  assert.match(idPrivacy, /menangani gambar yang dikirim sesuai ketentuan dan praktik privasinya sendiri/);
+  assert.doesNotMatch(idPrivacy, /Versi saat ini tidak mengirim dokumen ke layanan AI/);
 }

@@ -23,7 +23,7 @@ const appearance = async (page) => page.evaluate(() => ({
 }));
 
 try {
-  await test('Terms and Privacy describe Workspace editing accurately', () => {
+  await test('Terms and Privacy describe Workspace editing and AI processing accurately', () => {
     assertTermsPages();
   });
 

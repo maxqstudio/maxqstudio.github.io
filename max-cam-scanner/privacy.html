@@ -40,21 +40,20 @@
     <article class="container legal-card">
       <p class="eyebrow">Max Cam Scanner by Max-Q Studio</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 13 November 2026 · Android &amp; iOS app “Max Cam Scanner” (com.maxq.scanner)</p>
+      <p class="meta">Effective 16 November 2026 · Android &amp; iOS app “Max Cam Scanner” (com.maxq.scanner)</p>
 
       <div class="box content-card hl">
-        <strong>In short:</strong> document photos and OCR results are processed on your phone. Data only leaves
-        the device when you share a file yourself or save it to a workspace. Ads are served by Google AdMob.
+        <strong>In short:</strong> document photos and OCR are processed on your phone by default. If you choose AI mode, selected page images are sent through our server to configured AI provider(s) to create editable Word or Excel output. Sharing or saving to a workspace also sends data off your device. Ads are served by Google AdMob.
       </div>
 
       <h2>1. Who we are</h2>
       <p>Max Cam Scanner is made by Max-Q Studio (“we”). Privacy questions can be sent to
       <a href="mailto:scanner.support@maxqstudio.dev">scanner.support@maxqstudio.dev</a>.</p>
 
-      <h2>2. Data that stays on your device</h2>
+      <h2>2. Data processed on your device</h2>
       <ul>
         <li><strong>Camera and photos.</strong> The camera is used only when you tap Scan. Gallery photos and PDF files are read only when you pick them.</li>
-        <li><strong>Scans, OCR results, annotations, watermarks, and signatures.</strong> All are stored in the app's storage on your phone. Text recognition (OCR) uses Google ML Kit running on the device, so images are not sent to a server to be read.</li>
+        <li><strong>Scans, OCR results, annotations, watermarks, and signatures.</strong> These are stored in the app's storage on your phone. Text recognition (OCR) uses Google ML Kit running on the device, so OCR itself does not send images to a server. AI mode is different: when you choose it, selected page images are sent for AI processing as described in section 5.</li>
         <li><strong>Signatures</strong> you draw are stored as images on your phone. They are not certified electronic signatures.</li>
       </ul>
       <p>Deleting a document or the app removes that data from the device.</p>
@@ -70,8 +69,9 @@
         <li><strong>Synced settings:</strong> signatures you draw while signed in and the last watermark you used, so they are available on your other phones. Signatures are removed from a phone when you sign out of it.</li>
         <li><strong>Notifications:</strong> in-app notifications about mentions and signature requests, and a Firebase Cloud Messaging installation ID per phone so we can send push notifications. You can turn push notifications off in your phone settings.</li>
         <li><strong>Plan and storage:</strong> your plan (Free, Pro, Pro Team, Max, or Max Team), how much storage you and each workspace use, and any storage limit an Owner sets for a workspace.</li>
+        <li><strong>AI usage:</strong> your user ID, plan, page counts by day and month, and the AI provider/model used may appear in quota records and operational logs. We use this information to enforce usage limits, show your usage, operate, and troubleshoot the feature.</li>
       </ul>
-      <p>This data is processed by our service providers Google Firebase (Google LLC), in data centres in Jakarta, Indonesia (asia-southeast2), and Cloudflare, Inc. (Workers, D1, and R2), in its Asia-Pacific region. Data may also be handled on servers outside your country. Sign-in always goes through Firebase Authentication.</p>
+      <p>This data is processed by Google Firebase (Google LLC), including Firebase Functions in Jakarta, Indonesia (asia-southeast2); Cloudflare, Inc. (Workers, D1, and R2) in its Asia-Pacific region; and, when you choose AI mode, the AI provider(s) configured for the feature. AI providers may include OpenAI, Anthropic, or another configured provider. Data may be handled on servers outside your country. Sign-in always goes through Firebase Authentication.</p>
 
       <h2>4. Ads</h2>
       <p>The free version shows ads from Google AdMob: a banner, an ad when you open the app, and a rewarded ad before export. To show and measure ads, AdMob may collect your device's advertising ID, IP address, device information, and ad interactions.
@@ -79,7 +79,8 @@
       See <a href="https://policies.google.com/technologies/partner-sites">how Google uses data</a>.</p>
 
       <h2>5. AI features</h2>
-      <p>The current version does not send documents to any AI service. If AI mode is released, this policy will be updated before the feature goes live, and documents will only be sent when you choose AI mode.</p>
+      <p>AI mode is optional and available on eligible paid plans. When you select it to convert pages into editable Word or Excel output, the App sends the selected page images to a Firebase Function in Jakarta. Images are resized and compressed before sending and may contain personal or sensitive information. Up to 10 page images may be sent in one request. The Function forwards the images to one or more AI providers enabled in our server configuration; this may include OpenAI, Anthropic, or another configured provider. If a provider fails, the service may send the same images to the next enabled provider. The AI result is returned to the App as a local document draft; it is not uploaded to a workspace unless you explicitly save it there.</p>
+      <p>We record account-linked page usage to enforce daily and monthly limits and show your allowance. Each AI provider handles submitted images under its own terms and privacy practices, which may include processing or retention outside your country. See <a href="https://openai.com/business-data/">OpenAI's business data privacy information</a> and the <a href="https://privacy.anthropic.com/en/">Anthropic Privacy Center</a>. We cannot promise the same retention or training settings for every provider or a separately configured provider. Avoid sending highly sensitive information unless you are comfortable with that provider's terms.</p>
 
       <h2>6. How we use data</h2>
       <ul>
@@ -91,7 +92,7 @@
       <p>We do not sell your personal data and do not use the contents of your documents for advertising.</p>
 
       <h2>7. Sharing</h2>
-      <p>Files in a workspace can be seen by all of its members. Workspace members can also see which member currently holds the editing session for a file. Beyond that, data is only shared with the service providers above (Google Firebase, Cloudflare, and Google AdMob), or when required by law.</p>
+      <p>Files in a workspace can be seen by all of its members. Workspace members can also see which member currently holds the editing session for a file. If you choose AI mode, the selected page images are also shared with our server and the AI provider(s) configured for the feature. Other data is shared with the service providers listed above or when required by law.</p>
 
       <h2>8. Retention &amp; deletion</h2>
       <ul>
@@ -110,7 +111,7 @@
       <p>You can ask to access, correct, or delete your personal data under applicable law, including Indonesia's Personal Data Protection Law (Law No. 27 of 2022). Contact us at the email above.</p>
 
       <h2>12. Changes</h2>
-      <p>If this policy changes, the effective date on this page is updated. For important changes, we also let you know in the app.</p>
+      <p>If this policy changes, the effective date on this page is updated. For important changes, we also let you know in the app. This update explains AI mode data processing.</p>
     </article>
   </main>
 
