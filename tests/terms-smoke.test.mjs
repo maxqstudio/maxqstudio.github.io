@@ -6,6 +6,10 @@ const enTerms = read('max-cam-scanner/terms.html');
 const idTerms = read('max-cam-scanner/id/terms.html');
 const enPrivacy = read('max-cam-scanner/privacy.html');
 const idPrivacy = read('max-cam-scanner/id/privacy.html');
+const enLanding = read('max-cam-scanner/index.html');
+const idLanding = read('max-cam-scanner/id/index.html');
+const enSupport = read('max-cam-scanner/support.html');
+const idSupport = read('max-cam-scanner/id/support.html');
 
 export function assertTermsPages() {
   // English and Indonesian Terms describe cached editing and explicit saves.
@@ -64,4 +68,21 @@ export function assertTermsPages() {
   assert.match(idPrivacy, /sebagai draf dokumen lokal/);
   assert.match(idPrivacy, /menangani gambar yang dikirim sesuai ketentuan dan praktik privasinya sendiri/);
   assert.doesNotMatch(idPrivacy, /Versi saat ini tidak mengirim dokumen ke layanan AI/);
+
+  // Scanner pages describe the standalone app and current AI/storage/history behavior.
+  for (const page of [enLanding, idLanding, enTerms, idTerms, enPrivacy, idPrivacy, enSupport, idSupport]) {
+    assert.match(page, /maxq\.tools/);
+    assert.doesNotMatch(page, /Same plan on maxq\.tools|Paket yang sama di maxq\.tools/);
+    assert.doesNotMatch(page, /AI mode.{0,50}(Soon|next update)|Mode AI.{0,50}(Segera|update berikutnya)/i);
+  }
+  assert.match(enLanding, /standalone Android document scanner/i);
+  assert.match(enLanding, /They do not connect or sync with maxq\.tools/);
+  assert.match(idLanding, /aplikasi pemindai dokumen Android mandiri/i);
+  assert.match(idLanding, /tidak terhubung atau tersinkron dengan maxq\.tools/);
+  assert.match(enSupport, /AI mode is available on eligible paid plans/);
+  assert.match(idSupport, /Mode AI tersedia di paket berbayar/);
+  assert.match(enSupport, /full version history/);
+  assert.match(idSupport, /seluruh riwayat versi/);
+  assert.match(enSupport, /Pro and Pro Team have 25 GB/);
+  assert.match(idSupport, /Pro dan Pro Team memiliki penyimpanan 25 GB/);
 }
