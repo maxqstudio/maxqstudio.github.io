@@ -23,7 +23,7 @@ const appearance = async (page) => page.evaluate(() => ({
 }));
 
 try {
-  await test('Terms and Privacy describe Workspace editing and AI processing accurately', () => {
+  await test('Max Cam Scanner pages describe standalone accounts, live AI, and current processing accurately', () => {
     assertTermsPages();
   });
 
