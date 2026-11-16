@@ -62,6 +62,10 @@
           <li>Undangan dikirim ke email dan hanya dapat diterima oleh akun dengan email yang sama (Google, atau email dan password), dalam waktu 7 hari. Orang yang diundang dapat memblokir undangan dari seorang Owner; pemblokiran menyembunyikan undangan di sisinya dan tidak memberi tahu Owner, yang tetap melihatnya sebagai Pending.</li>
           <li>Owner bertanggung jawab memilih siapa yang diundang. Semua anggota bisa melihat file di workspace.</li>
         </ul>
+        <p><strong>Mengedit file workspace.</strong> Selama file terbuka di editornya, satu anggota memegang sesi edit; anggota workspace lain dapat melihat siapa yang sedang mengedit. Perubahanmu pertama-tama disimpan di cache kerja lokal. Aplikasi dapat menyimpan perubahan otomatis ke cache ini, tetapi itu tidak memperbarui workspace. File dan versi remote baru hanya diperbarui setelah kamu memilih <em>Simpan ke Workspace</em>. Cache tetap tersimpan setelah penyimpanan itu dan tidak ditampilkan di Dokumen. <em>Simpan ke Perangkat</em> membuat dokumen lokal yang terpisah.</p>
+        <p>Saat masuk atau kembali ke editor, Aplikasi memeriksa akun yang sedang login dan ID sesi tersimpan pada perangkat ini, lalu memeriksa versi workspace terbaru. Perangkat yang sama dapat memulihkan sesinya sendiri; perangkat lain, meskipun memakai akun yang sama, tidak dapat mengambil alih sesi aktif tersebut. Jika versi workspace berubah, cache lama yang belum disimpan dibatalkan dan diganti dengan versi terbaru. Cache dilanjutkan hanya jika versi dasarnya masih terbaru. Aplikasi tidak menggabungkan perubahan bersamaan atau menjanjikan pengeditan simultan.</p>
+        <p>Setiap penyimpanan ke workspace juga memeriksa apakah versi dasar yang kamu buka masih terbaru. Jika sudah berubah, penyimpanan ditolak agar tidak menimpa versi yang lebih baru.</p>
+        <p>Sesi server kedaluwarsa 60 detik setelah perpanjangan terakhir yang berhasil. Saat editor aktif, Aplikasi mengirim heartbeat ringan setiap 30 detik; heartbeat tidak mengunduh dokumen, model, atau blob. Kembali, penyimpanan workspace yang berhasil, serta aplikasi yang masuk latar belakang atau ditutup secara normal akan menghentikan heartbeat dan langsung mencoba melepas sesi. Force-stop, crash, perangkat mati, atau gangguan koneksi dapat mencegah pelepasan segera atau deteksi langsung; jika heartbeat berhenti, sesi kedaluwarsa otomatis paling lambat 60 detik setelah perpanjangan terakhir yang berhasil.</p>
       
         <h2>4. Paket berbayar</h2>
         <p>Paket berbayar (Pro, Pro Team, Max, Max Team) memberikan export tanpa iklan, kolam penyimpanan lebih besar seperti di bagian 3, dan mode AI saat fitur itu tersedia. Harga, masa tagihan, dan pembatalan mengikuti ketentuan Google Play atau App Store yang ditampilkan saat pembelian.</p>
@@ -92,7 +96,7 @@
         <p>Syarat ini diatur oleh hukum Republik Indonesia.</p>
       
         <h2>12. Perubahan</h2>
-        <p>Syarat ini dapat diperbarui. Tanggal berlaku di atas akan berubah, dan untuk perubahan penting kami memberi tahu lewat aplikasi.</p>
+        <p>Syarat ini dapat diperbarui. Tanggal berlaku di atas akan berubah, dan untuk perubahan penting kami memberi tahu lewat aplikasi. Riwayat perubahan: <a href="https://github.com/maxqstudio/max-cam-scanner/issues/107">Sesi edit workspace dan penyimpanan cache (#107)</a>, terkait pemulihan sesi pada perangkat yang sama di <a href="https://github.com/maxqstudio/max-cam-scanner/issues/106">#106</a>.</p>
     </article>
   </main>
 

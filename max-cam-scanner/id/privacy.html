@@ -63,7 +63,7 @@
         <p>Kamu bisa memakai aplikasi tanpa akun. Workspace bersama membutuhkan login dengan Google. Jika kamu masuk, kami memproses:</p>
         <ul>
           <li><strong>Akun:</strong> nama, alamat email, foto profil, dan ID pengguna dari Google, melalui Firebase Authentication.</li>
-          <li><strong>Workspace:</strong> nama workspace, daftar anggota beserta email dan peran (Owner, Editor, Viewer), serta metadata file seperti judul, jenis, ukuran, waktu, dan pengunggah. Data ini disimpan di Google Cloud Firestore atau Cloudflare D1.</li>
+          <li><strong>Workspace:</strong> nama workspace, daftar anggota beserta email dan peran (Owner, Editor, Viewer), metadata file seperti judul, jenis, ukuran, waktu, dan pengunggah, serta identitas anggota yang sedang mengedit file. Data ini disimpan di Google Cloud Firestore atau Cloudflare D1.</li>
           <li><strong>File workspace:</strong> PDF, DOC, dan Excel yang kamu simpan ke workspace. File disimpan di Cloud Storage for Firebase atau Cloudflare R2 dan hanya bisa dibuka oleh anggota workspace tersebut.</li>
           <li><strong>Undangan:</strong> email orang yang kamu undang, peran yang ditawarkan, dan status undangan (termasuk apakah orang tersebut memblokir undangan darimu). Kami mengirim satu email undangan ke alamat tersebut atas permintaanmu.</li>
           <li><strong>Kolaborasi:</strong> komentar di file workspace, siapa yang di-tag (@mention), permintaan tanda tangan dan statusnya, serta setiap versi file yang disimpan (siapa, kapan, catatan opsional, dan ringkasan perubahan). Setiap versi file yang disimpan tetap ada sampai anggota yang berwenang menghapusnya, menghapus file, atau workspace dihapus. Rollback menghapus permanen versi yang lebih baru setelah konfirmasi.</li>
@@ -91,7 +91,7 @@
         <p>Kami tidak menjual data pribadimu dan tidak memakai isi dokumenmu untuk iklan.</p>
       
         <h2>7. Berbagi data</h2>
-        <p>File di workspace dapat dilihat oleh semua anggota workspace tersebut. Selain itu, data hanya dibagikan kepada penyedia layanan di atas (Google Firebase, Cloudflare, dan Google AdMob), atau jika diwajibkan oleh hukum.</p>
+        <p>File di workspace dapat dilihat oleh semua anggota workspace tersebut. Anggota workspace juga dapat melihat anggota yang sedang memegang sesi edit sebuah file. Selain itu, data hanya dibagikan kepada penyedia layanan di atas (Google Firebase, Cloudflare, dan Google AdMob), atau jika diwajibkan oleh hukum.</p>
       
         <h2>8. Penyimpanan &amp; penghapusan</h2>
         <ul>

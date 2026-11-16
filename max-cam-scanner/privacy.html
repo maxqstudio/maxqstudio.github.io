@@ -63,7 +63,7 @@
       <p>You can use the app without an account. Shared workspaces require Google sign-in. If you sign in, we process:</p>
       <ul>
         <li><strong>Account:</strong> your name, email address, profile photo, and user ID from Google, through Firebase Authentication.</li>
-        <li><strong>Workspaces:</strong> workspace name, member list with emails and roles (Owner, Editor, Viewer), and file metadata such as title, type, size, time, and uploader, stored in Google Cloud Firestore or Cloudflare D1.</li>
+        <li><strong>Workspaces:</strong> workspace name, member list with emails and roles (Owner, Editor, Viewer), file metadata such as title, type, size, time, and uploader, and the identity of the member currently editing a file, stored in Google Cloud Firestore or Cloudflare D1.</li>
         <li><strong>Workspace files:</strong> PDF, DOC, and Excel files you save to a workspace, stored in Cloud Storage for Firebase or Cloudflare R2 and accessible only to that workspace's members.</li>
         <li><strong>Invites:</strong> the email of the person you invite, the role offered, and the invite status (including whether the invited person blocked invites from you). We send one invitation email to that address at your request.</li>
         <li><strong>Collaboration:</strong> comments on workspace files, who was tagged (@mentions), signature requests and their status, and every saved version of a file (who saved it, when, an optional note, and a summary of what changed). Every saved version of a file is kept until a member with permission deletes it, deletes the file, or the workspace is deleted. A rollback permanently removes the newer versions after confirmation.</li>
@@ -91,7 +91,7 @@
       <p>We do not sell your personal data and do not use the contents of your documents for advertising.</p>
 
       <h2>7. Sharing</h2>
-      <p>Files in a workspace can be seen by all of its members. Beyond that, data is only shared with the service providers above (Google Firebase, Cloudflare, and Google AdMob), or when required by law.</p>
+      <p>Files in a workspace can be seen by all of its members. Workspace members can also see which member currently holds the editing session for a file. Beyond that, data is only shared with the service providers above (Google Firebase, Cloudflare, and Google AdMob), or when required by law.</p>
 
       <h2>8. Retention &amp; deletion</h2>
       <ul>
