@@ -36,8 +36,8 @@ try {
       assert.equal(res?.status(), 200);
       assert.equal(await page.locator('.hero-inner').count(), 1);
       assert.equal(await page.locator('.hero-grid, .hero-visual, .visual-frame').count(), 0);
-      assert.equal(await page.locator('.product-tile').count(), 9);
-      assert.equal(await page.locator('[data-project-count]').innerText(), '9 projects');
+      assert.equal(await page.locator('.product-tile').count(), 10);
+      assert.equal(await page.locator('[data-project-count]').innerText(), '10 projects');
       assert.match(await page.locator('h1').innerText(), /Small studio/);
       const logo = page.locator('img[src="images/maxq-tools-logo.svg"]').first();
       assert.ok(await logo.evaluate(img => img.complete && img.naturalWidth > 0), 'Official logo must load');
@@ -164,7 +164,7 @@ try {
     assert.equal(state.background, 'rgb(9, 9, 9)');
     assert.equal(state.sheet, 'style-dark.css');
     assert.equal(state.selectedStylesheetLoaded, true);
-    assert.equal(await page.locator('[data-project-count]').innerText(), '9 projects', 'static count must work without JavaScript');
+    assert.equal(await page.locator('[data-project-count]').innerText(), '10 projects', 'static count must work without JavaScript');
     await context.close();
   });
 
