@@ -209,3 +209,6 @@ h4 { margin: 0 0 6px; font-size: 20px; }
   .pretio-screen-card img { max-height: none; }
   .pretio-screen-card figcaption { font-size: 12px; }
 }
+
+.feature-card ul { margin: 8px 0 0; padding-left: 20px; }
+.feature-card li { margin: 4px 0; }
