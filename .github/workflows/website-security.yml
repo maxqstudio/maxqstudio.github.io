@@ -1,0 +1,33 @@
+name: Website security regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.mjs'
+      - 'tests/site-security.test.mjs'
+      - '.github/workflows/website-security.yml'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.mjs'
+      - 'tests/site-security.test.mjs'
+      - '.github/workflows/website-security.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security-regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify invite deep links and prevent token egress
+        run: node --test tests/site-security.test.mjs

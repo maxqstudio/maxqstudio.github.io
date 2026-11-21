@@ -6,7 +6,8 @@
   <title>Undangan workspace · Max Cam Scanner</title>
   <meta name="description" content="Buka undangan workspace di aplikasi Max Cam Scanner." />
   <meta name="theme-color" content="#fff4dd" />
-  <meta name="robots" content="noindex" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
   <link rel="icon" href="../../images/max-cam-scanner/favicon.png" />
   <link rel="apple-touch-icon" href="../../images/max-cam-scanner/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,9 +66,22 @@
 
   <script src="../../script.js"></script>
   <script>
-    // Fallback when App Links didn't open the app. The token stays in the browser.
+    // App Links fallback: handle the invite locally and never send its token to unrelated APIs.
     (function () {
-      var token = new URLSearchParams(location.search).get("token") || "";
+      var params = new URLSearchParams(location.search);
+      var token = params.get("token") || "";
+      // Clear the address bar promptly; the token stays only in memory
+      // for this page and the explicit app deep link.
+      if (params.has("token")) {
+        params.delete("token");
+        var remaining = params.toString();
+        try {
+          history.replaceState(history.state, "", location.pathname +
+            (remaining ? "?" + remaining : "") + location.hash);
+        } catch (_) {
+          // A blocked History API must not prevent the invite from opening.
+        }
+      }
       var open = document.getElementById("open");
       if (!/^[a-f0-9]{32,128}$/i.test(token)) {
         document.getElementById("msg").textContent =
@@ -77,27 +91,6 @@
       }
       open.href = "maxqscanner://invite?token=" + encodeURIComponent(token);
 
-      // Optional: show who invited you and to which workspace. If the lookup fails, the generic text stays.
-      var T = {title:'%s mengundangmu ke workspace “%s” di Max Cam Scanner',title2:'Kamu diundang ke workspace “%s” di Max Cam Scanner',role:' Kamu akan bergabung sebagai %s.',what:'Workspace adalah folder bersama di aplikasi Max Cam Scanner tempat tim memindai, menyimpan, dan mengedit dokumen bersama (PDF, Word, Excel, gambar), lengkap dengan riwayat versi.'};
-      var roles = {owner:"Owner",co_owner:"Co-owner",editor:"Editor",commenter:"Commenter",viewer:"Viewer"};
-      // Try production first; fall back to staging while production is not live yet.
-      function preview(host) {
-        return fetch(host + "/v1/invites/preview?token=" + encodeURIComponent(token), { headers: { Accept: "application/json" } })
-          .then(function (r) { return r.ok ? r.json() : null; })
-          .catch(function () { return null; });
-      }
-      preview("https://api.maxq.tools")
-        .then(function (d) { return d || preview("https://api-staging.maxq.tools"); })
-        .then(function (d) {
-          if (!d || !d.workspaceName) return;
-          var h = document.querySelector("h1");
-          h.textContent = d.inviterName
-            ? T.title.replace("%s", function () { return d.inviterName; }).replace("%s", function () { return d.workspaceName; })
-            : T.title2.replace("%s", function () { return d.workspaceName; });
-          var role = roles[d.role] || "";
-          document.getElementById("what").textContent = T.what + (role ? T.role.replace("%s", function () { return role; }) : "");
-        })
-        .catch(function () {});
     })();
   </script>
 </body>
