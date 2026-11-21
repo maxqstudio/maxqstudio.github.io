@@ -7,7 +7,8 @@
   <meta name="description" content="Set a new password for your Max Cam Scanner account." />
   <meta name="theme-color" content="#fff4dd" />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="referrer" content="no-referrer" />
+  <!-- Send only the site origin (never oobCode) to Firebase; HTTP-referrer-restricted Web keys need Referer. -->
+  <meta name="referrer" content="origin" />
   <link rel="icon" href="../../images/max-cam-scanner/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
