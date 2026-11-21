@@ -96,12 +96,15 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getAuth, verifyPasswordResetCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-    const app = initializeApp({
-      apiKey: "AIzaSyDNQ4S6EFL14B7l2Yb9K1KoWKGZOWzKng4",
-      authDomain: "max-cam-scanner.firebaseapp.com",
-      projectId: "max-cam-scanner",
-    });
-    const auth = getAuth(app);
+    // A Firebase Web API key is public, but must NOT reuse the Android-restricted key.
+    // Keep this feature unavailable until a dedicated HTTP-referrer-restricted Web key
+    // has been configured in firebase-config.js and verified end-to-end.
+    const firebaseWebConfig = (await import("./firebase-config.js")).firebaseWebConfig;
+    const isWebConfigured = typeof firebaseWebConfig?.apiKey === "string" &&
+      /^AIza[A-Za-z0-9_-]{30,}$/.test(firebaseWebConfig.apiKey) &&
+      firebaseWebConfig.authDomain === "max-cam-scanner.firebaseapp.com" &&
+      firebaseWebConfig.projectId === "max-cam-scanner";
+    const auth = isWebConfigured ? getAuth(initializeApp(firebaseWebConfig)) : null;
 
     const I18N = {
       en: {
@@ -117,6 +120,7 @@
         weak: "This password does not meet the rules above.",
         generic: "Something went wrong. Try again in a moment.",
         noCode: "This link is incomplete. Open the link from the email again, or request a new one in the app.",
+        notConfigured: "Password reset is not available on this website yet. Please request a new link in the app.",
       },
       id: {
         navSupport: "Bantuan", tag: "Password", title: "Atur ulang password",
@@ -131,6 +135,7 @@
         weak: "Password ini belum memenuhi aturan di atas.",
         generic: "Terjadi kesalahan. Coba lagi sebentar lagi.",
         noCode: "Link ini tidak lengkap. Buka lagi link dari email, atau minta link baru di app.",
+        notConfigured: "Pengaturan ulang password belum tersedia di situs ini. Minta link baru melalui aplikasi.",
       },
     };
 
@@ -163,6 +168,8 @@
 
     if (!oobCode) {
       $("status").textContent = L.noCode;
+    } else if (!auth) {
+      $("status").textContent = L.notConfigured;
     } else {
       verifyPasswordResetCode(auth, oobCode)
         .then((email) => {
