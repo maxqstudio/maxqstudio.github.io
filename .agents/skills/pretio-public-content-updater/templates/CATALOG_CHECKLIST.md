@@ -17,6 +17,12 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] `last_verified_at` only changed after actual positive verification
 - [ ] No extra catalog JSON keys or schema changes
 
+## Explicit scope / one-off validation
+
+- [ ] Confirm mode: global scheduled scan **OR** Owner-explicit `ONE_OFF(country_code=ID)` (never both for this run)
+- [ ] If ONE_OFF: manifest includes ONLY requested country; external sources for other countries are untouched; no cron/second cycle created
+- [ ] Complete every official catalog in the selected country once, including skipped or failed entries, and STOP after its own closing gate
+
 ## 2. Product Highlights — discounted items ONLY
 - [ ] All eligible discounted products on this catalog checked; candidates listed
 - [ ] Each has same-product explicit **normal and promo prices** from original retailer; `promo_price < normal_price`
