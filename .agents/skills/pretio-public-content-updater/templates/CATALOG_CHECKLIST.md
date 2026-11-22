@@ -28,7 +28,8 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] Each has same-product explicit **normal and promo prices** from original retailer; `promo_price < normal_price`
 - [ ] Product name/size/brand and currency verified; no guessed fields
 - [ ] Product image decodable, same exact item, official/authorized source
-- [ ] Exact approved `catalog_id` and official item source URL verified
+- [ ] Exact approved `catalog_id` and official item source URL verified; if no product-specific URL exists, approved retailer catalog promo landing page may be `source_url` **only with exact product and price evidence on the page/linked official leaflet**
+- [ ] Unavailable optional fields omitted; missing required image/price/source proof means skip item
 - [ ] Item's geographic offer applicability supported (not just a catalog marked national)
 - [ ] `observed_at` factual; known `valid_from` and `valid_until` retained
 - [ ] **Expired** items (`valid_until` before market today or explicit ending proof) removed from candidate country feed
