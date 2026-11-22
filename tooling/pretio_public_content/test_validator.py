@@ -64,6 +64,18 @@ class StrictPretioValidatorTests(unittest.TestCase):
         with self.assertRaisesRegex(validator.Invalid, "unsupported keys"):
             validator.validate(self.root, validator.date(2026, 11, 22))
 
+    def test_official_catalog_landing_page_is_acceptable_source_url(self):
+        # Structural validation allows official catalog landing pages; the updater
+        # must still independently prove the exact product and price pair there.
+        path = "pretio/promos/highlights/DE.json"
+        feed = validator.read(self.file(path))
+        catalog = validator.read(self.file("pretio/promos/catalog_app.json"))
+        linked_id = feed["items"][0]["catalog_id"]
+        landing = next(row["url"] for row in catalog["items"] if row["id"] == linked_id)
+        feed["items"][0]["source_url"] = landing
+        self.rewrite(path, feed)
+        self.assertEqual(validator.validate(self.root, validator.date(2026, 11, 22))["countries"]["DE"]["items"], 1)
+
     def test_regular_price_cannot_be_published_as_highlight(self):
         p = "pretio/promos/highlights/DE.json"
         feed = validator.read(self.file(p))

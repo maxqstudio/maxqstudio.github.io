@@ -34,6 +34,14 @@ The app shares memory and persistent disk cache across product images, store log
 
 `JSON REFRESH != IMAGE CACHE PURGE`. An unchanged URL and revision must not cause a full image download. `TTL DOES NOT OVERRIDE A NEW IMAGE REVISION`: a changed revision triggers immediate fetch before TTL. Without revision, the app uses ETag and/or Last-Modified conditional revalidation after soft TTL. It validates MIME and image decoding before atomically switching the cache pointer; failure retains the previous valid image. A bad image or HTML error page is never cached as an image.
 
+## Explicit one-off Owner requests (highest priority)
+
+When Owner explicitly requests `kerjakan 1 kali saja untuk Indonesia`, the updater must **run exactly one Indonesia-only cycle**, check every Indonesia catalog, collect and stage valid discounted products, skip inaccessible/unchanged catalogs, prune only supported Indonesia expiries, then STOP. Do not enumerate/fetch/process other countries, create or enable a schedule, repeat the operation or mutate other-country feeds. The shared catalog directory may only change existing Indonesia entries. Global 12-hour exhaustive rules below apply to recurring runs and must **not** override an explicit narrower one-off command. Run manifest CLI: `python3 tooling/pretio_public_content/manifest.py --once --country ID`.
+
+## Complete per-catalog coverage / skip semantics
+
+Each 12-hour run snapshots all unique `(country_code, catalog_id)` pairs from every active Catalog Promo entry in all countries. Every catalog MUST be attempted and receive a completed checklist and compact handoff, even if the retailer has no updates or is inaccessible. When there are no qualifying discounts, source access fails, or country currency is unsupported, mark that catalog as skipped in the run checkpoint/audit **and continue with the next catalog**. Do NOT stop after finding the first new discounted product, after meeting any per-country quota, or after failing one source. Only finish once every catalog in the frozen manifest has a terminal receipt (including skipped/failed) and `pending=0`, then reconcile all valid updates and expiry deletions as a consistent batch. Do not endlessly poll after finishing. A canceled or timed-out run is `INCOMPLETE` and must resume outstanding units. These status/checkpoint fields are NOT to be added to production catalog or highlights JSON.
+
 ## Every 12-hour cycle
 
 1. Read the accepted catalog and inspect active official sources.

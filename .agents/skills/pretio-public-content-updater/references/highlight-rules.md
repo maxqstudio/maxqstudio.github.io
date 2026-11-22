@@ -2,6 +2,12 @@
 
 **Files:** `pretio/promos/highlights/{CC.json,index.json,audit/**}`. The country feed and index retain their currently shipped schemas. Never introduce new field names in production data.
 
+## Source landing-page fallback and missing optional data
+
+`source_url` is **mandatory** but it does NOT have to be a dedicated product-detail landing page. If no product-specific page exists, use the approved official **catalog promo landing URL** from the matching retailer (`catalog_app.json` `url`) or an official accessible leaflet page linked from it. For example, a discounted item shown in Indomaret's official promo catalog may use Indomaret's official general promo page as `source_url` when no individual product URL is provided. **The specific product, price pair, package and market must be verifiably shown in that actual page/leaflet** during the run; a generic retailer home page without this evidence is insufficient. Store the factual URL, screenshot/HTML excerpt and timestamp in the separate run evidence, not in new production fields. If no official page contains the evidence, skip the item.
+
+If an existing optional item field is absent/unverifiable (`brand`, `package_size`, `valid_from`, `valid_until`, `logo_url`, image/logo revisions), **omit that optional key**, not an empty string, guessed value or newly invented substitute field. The required `image_url`, actual normal/promo prices, `source_url` and other required fields remain mandatory: if no valid official image exists, skip the product. Do not skip an otherwise qualified product merely because it lacks a dedicated product URL or optional metadata.
+
 ## Exact schema contracts
 
 - Top-level country-feed keys **only**: `schema`, `schema_version`, `country`, `currency`, `revision`, `generated_at`, `items`. Values `pretio.product_highlights.v1`, `1`, ISO country, configured ISO currency, opaque revision, real UTC generated time.
@@ -20,6 +26,10 @@
 6. Location: verify scope actually covered by that item. A `national` catalog card does not prove its pricing is nationwide. If only one location/store is proven and the feed has no supported location scope field, REJECT from country-wide highlights.
 7. Time: `observed_at` is the real UTC observation time. `valid_from`/`valid_until` are source-backed only. For offers with an explicit end date, retain it; do not drop a known end date.
 8. Deduplicate stable IDs; 80 accepted items max per country and 20 per retailer; no duplicates across catalog entries within the same country.
+
+## Exhaustive catalog scan versus growth target
+
+Every 12-hour cycle must try every `(country_code, catalog_id)` from the complete catalog manifest, **including countries without any existing highlights or recognized currency**. Reaching the one-product target is not a stop condition. A catalog with no eligible offer, no update, missing proof, or fetch failure is recorded as a terminal **skip**, and scanning continues through all remaining catalogs. Currency gaps prevent highlight publication for that market, not catalog source checking. A finished cycle requires one terminal receipt per manifest entry and `pending == 0`; interrupted cycles are `INCOMPLETE`.
 
 ## 12-hour coverage target
 

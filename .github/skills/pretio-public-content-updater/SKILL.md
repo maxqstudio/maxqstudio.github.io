@@ -10,6 +10,8 @@ Follow the canonical skill at:
 
 Read that SKILL.md **in full**, then its linked references and checklist templates **before** processing any Pretio catalog or highlight. All restrictions and gates in the canonical skill are mandatory.
 
+Honor the Owner's explicit scope override: **"kerjakan 1 kali saja untuk Indonesia" means one isolated Indonesia-only execution and STOP**, not a global or recurring scan. A product without a dedicated landing page may use a verified official catalog promo landing URL as `source_url` with proof of that exact discount. Omit unknown optional fields; do not invent required data.
+
 Do not add any JSON field not already supported by Pretio, do not invent discounts to meet the 1-per-country/12h target, prefer evergreen catalog URLs, require a real expiry for rotating catalog links, remove proven-expired highlights, and create a separate compact context after each catalog.
 
 This file is only an agent discovery alias for GitHub Copilot. The canonical rules live in the Codex-compatible `.agents/skills/` location; avoid duplicating or diverging policies.
