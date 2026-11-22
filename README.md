@@ -31,3 +31,15 @@ The `.github/workflows/homepage-ui.yml` GitHub Actions workflow runs headless Ch
 - The header toggle waits for the target CSS to be available before switching; if an inactive stylesheet fails to load, the existing appearance is retained instead of showing unstyled content.
 - Versioned asset references avoid stale cross-release `index.html` / `script.js` combinations.
 - CI checks both appearances, storage persistence, navigation, asset loading, disabled JavaScript fallback, slow CSS loading, blocked external fonts and inactive stylesheet failure.
+
+
+## Pretio public-content updater skill
+
+Agent instructions: [.agents/skills/pretio-public-content-updater/SKILL.md](.agents/skills/pretio-public-content-updater/SKILL.md). GitHub Copilot alias: [.github/skills/pretio-public-content-updater/SKILL.md](.github/skills/pretio-public-content-updater/SKILL.md).
+
+This policy covers BOTH the official **Catalog Promo** directory and **discounted Product Highlights**. Each country/catalog gets an independent checklist and compact handoff; the next retailer is processed in a clean agent context. Only the existing app-compatible fields may be written. Rotating catalog links require source-backed expiry dates; verified-expired highlights are removed. The target of one new verified discounted product per country every 12 hours is aspirational, never a justification to fabricate a product.
+
+Run read-only validation: `python3 tooling/pretio_public_content/validate.py`.
+Preview expired cleanup in a disposable checkout, then use `--prune-expired` on a controlled branch (do not run it on production directly). Validation and regression tests run in GitHub Actions.
+
+**The skill and CI do not themselves fetch retailer data or activate a 12-hour publisher.** A separate scheduler and retailer adapters are required; source authorization, approval gates, cross-country currency metadata and rollback must be solved first.
