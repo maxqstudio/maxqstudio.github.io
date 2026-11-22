@@ -80,6 +80,14 @@ class StrictPretioValidatorTests(unittest.TestCase):
         with self.assertRaisesRegex(validator.Invalid, "unsupported keys"):
             validator.validate(self.root)
 
+    def test_bad_expiry_format_rejected(self):
+        p = "pretio/promos/catalog_app.json"
+        catalog = validator.read(self.file(p))
+        catalog["items"][0]["valid_until"] = "2026-11-22garbage"
+        self.rewrite(p, catalog)
+        with self.assertRaisesRegex(validator.Invalid, "invalid date format"):
+            validator.validate(self.root)
+
     def test_strict_mode_requires_expired_items_removed(self):
         with self.assertRaisesRegex(validator.Invalid, "expired products present"):
             validator.validate(self.root, validator.date(2026, 11, 22), strict_expiry=True)
