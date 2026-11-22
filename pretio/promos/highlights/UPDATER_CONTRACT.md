@@ -1,6 +1,6 @@
 # Pretio Product Highlights Updater Contract
 
-This document is the handoff contract for the external daily catalog updater. Android remains a deterministic JSON/image consumer; it does not crawl retailer websites and contains no autonomous GPT worker.
+This document is the handoff contract for the external 12-hour highlights updater. Android remains a deterministic JSON/image consumer; it does not crawl retailer websites and contains no autonomous GPT worker.
 
 ## Write Boundary
 
@@ -14,7 +14,7 @@ This includes `audit/**`. It must not edit `pretio/promos/catalog_app.json`, `pr
 
 ## Feed Contract
 
-The index schema is `pretio.product_highlights.index.v1`; country feeds use `pretio.product_highlights.v1`; each has `schema_version: 1`. Country files are named `ID.json`, `CL.json`, `RS.json`, `US.json`, `ZA.json`, `DE.json`, and `CH.json`. The index binds each supported country to the canonical HTTPS URL, exact feed SHA-256, and feed revision. Each country feed declares country, currency, revision, UTC `generated_at`, and an `items` array (maximum 80 items; maximum 20 accepted items per retailer).
+The current index schema is **`pretio.product_highlights.index.v2` with `schema_version: 2`**, while country feeds use **`pretio.product_highlights.v1` with `schema_version: 1`**. Current country files are `ID.json`, `CL.json`, `RS.json`, `US.json`, `ZA.json`, `DE.json`, and `CH.json`; additional countries require approved currency metadata and Android compatibility. The v2 index country entries include `code`, `document_id`, `revision`, `sha256`, and `url`. The index binds each supported country to the canonical HTTPS URL, exact feed SHA-256, and feed revision. Each country feed declares country, currency, revision, UTC `generated_at`, and an `items` array (maximum 80 items; maximum 20 accepted items per retailer).
 
 Every production item requires source evidence for retailer, product identity, normal/reference price, lower promo price, currency, official source URL, and a decodable product image. Preserve optional brand, package size, validity dates, and image metadata when verified. Store prices as canonical decimal strings, never floating point or localized display text. Do not infer normal prices from a percentage discount. Promo-only items are ineligible. `discount_percent` is not a price authority.
 
@@ -34,7 +34,7 @@ The app shares memory and persistent disk cache across product images, store log
 
 `JSON REFRESH != IMAGE CACHE PURGE`. An unchanged URL and revision must not cause a full image download. `TTL DOES NOT OVERRIDE A NEW IMAGE REVISION`: a changed revision triggers immediate fetch before TTL. Without revision, the app uses ETag and/or Last-Modified conditional revalidation after soft TTL. It validates MIME and image decoding before atomically switching the cache pointer; failure retains the previous valid image. A bad image or HTML error page is never cached as an image.
 
-## Daily Run
+## Every 12-hour cycle
 
 1. Read the accepted catalog and inspect active official sources.
 2. Collect evidence and normalize decimal prices with source-locale rules.
@@ -42,4 +42,12 @@ The app shares memory and persistent disk cache across product images, store log
 4. Deduplicate IDs and enforce per-retailer and per-country limits.
 5. Validate feed schema and all URLs, currency, dates, prices, item counts, image metadata, and exact index hash.
 6. Write only changed country feed/index/audit files within the allowed subtree.
-7. Keep production `items` empty when no verified product qualifies. Never use test fixtures in production feeds.
+7. **Only discounted products are eligible:** source-verified `promo_price < normal_price` for the same product, package, store and time. Product and feed fields MUST be exactly the existing app-recognized keys; never add `discount_percent`, `confidence` or invented metadata. See `.agents/skills/pretio-public-content-updater/references/highlight-rules.md`.
+8. Check every catalog in every eligible country using its own checklist; write a compact handoff after each and process the next catalog in a new isolated context. See `.agents/skills/pretio-public-content-updater/templates/`.
+9. Aim for **at least one NEW verified discounted product per country per 12-hour cycle**. If the target cannot be met, record `TARGET_MISSED` with evidence. NEVER fabricate products or prices to satisfy the target.
+10. **Delete items whose verified `valid_until` date is before the market's current date**, or whose offer ending is positively established. Do this even if an unrelated source fetch fails; recompute index hashes. Do not delete undated or inaccessible items merely due to a fetch failure; treat them as stale, not confirmed current.
+11. Keep production `items` empty when no verified product qualifies after complete success or deterministic expiry pruning. Never use test fixtures in production feeds.
+
+## Separate Catalog Promo Updater (explicitly distinct writer)
+
+The legacy `highlights/**` writer MUST NOT modify `catalog_app.json`. A separate catalog-maintenance agent may write `pretio/promos/catalog_app.json` under the skill's catalog rules and its own permission boundary. Prefer official **evergreen** catalog landing URLs that update their content in place. If a catalog link rotates by promotion period, a real source-supported `valid_until` is mandatory; no guessing. Catalog data retains `pretio.catalog_app.v2` and its existing field set only. Both workstreams reconcile against the **same final snapshot** before publication.

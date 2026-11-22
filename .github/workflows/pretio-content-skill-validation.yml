@@ -1,0 +1,49 @@
+name: Pretio public content skill & schema gates
+
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/pretio-public-content-updater/**'
+      - '.github/skills/pretio-public-content-updater/**'
+      - 'pretio/promos/**'
+      - 'pretio/data/currency.json'
+      - 'tooling/pretio_public_content/**'
+      - '.github/workflows/pretio-content-skill-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.agents/skills/pretio-public-content-updater/**'
+      - '.github/skills/pretio-public-content-updater/**'
+      - 'pretio/promos/**'
+      - 'pretio/data/currency.json'
+      - 'tooling/pretio_public_content/**'
+      - '.github/workflows/pretio-content-skill-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  schema-and-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax and regression tests
+        run: |
+          python -m py_compile tooling/pretio_public_content/validate.py
+          python -m unittest discover -s tooling/pretio_public_content -p 'test_*.py' -v
+      - name: Current production schema, hashes and expired inventory (read-only)
+        run: |
+          python tooling/pretio_public_content/validate.py
+      - name: Enforce expiry on catalog URL rotations in pull requests
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin main --depth=1
+          git show origin/main:pretio/promos/catalog_app.json >/tmp/pretio-catalog-baseline.json
+          python tooling/pretio_public_content/validate.py --baseline-catalog /tmp/pretio-catalog-baseline.json
