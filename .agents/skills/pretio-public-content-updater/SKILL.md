@@ -31,6 +31,14 @@ description: Maintain Pretio official retailer Catalog Promo entries and discoun
 8. **Do not bypass access restrictions.** Official public sources only; respect ToS, robots, rate limits, copyright and image licenses. No CAPTCHA circumvention, login scraping, stealth or proxy rotation. Use HTTP first, Playwright only where permitted, OCR/LLM as evidence extraction assistance (never as a source of truth).
 9. **Only publish verified data.** Default mode AUDIT or PREPARE (draft branch/PR), never merge/deploy unattended solely because this skill exists. Scheduled PUBLISH requires independent Owner-approved policy + tests + rollback plan.
 
+## Explicit Owner one-off scope OVERRIDES global scheduler policy
+
+When the Owner explicitly requests **"kerjakan 1 kali saja untuk Indonesia"** or equivalently "run once for Indonesia", that instruction takes precedence over the normal worldwide 12-hour scan: create **ONE** on-demand run limited to `country_code = ID`, process **all Indonesia catalogs only**, finalize that run and **STOP**. Do NOT inspect, fetch or update other countries, expand to all 24 markets, start a recurrence, create a cron job, run a second cycle, or assume a standing order. Existing scheduled operations are distinct; the one-off request does not implicitly change any pre-existing schedule, but this task must not start one. If a later instruction explicitly names a different country, use that country only.
+
+**Scope lock:** `python3 tooling/pretio_public_content/manifest.py --once --country ID`. Coverage receipts must exactly match those scoped work units; foreign-country receipts are invalid. The Publisher must change only the selected country highlight feed / its index entry, and only selected-country catalog entries when touching the shared `catalog_app.json`. Other countries and their catalog entries must be byte-equivalent in meaning; do not modify their feed files. Scope policy also applies to source-fetch operations, documentation work and retries. `--once` creates only an isolated manifest: it **does not crawl or publish** by itself.
+
+When the user explicitly requests an unrestricted recurring bot, use the global full-country scan below. An explicit one-off command always overrides that default for its own execution.
+
 ## Execution support
 
 Generate full, country-inclusive work units with `python3 tooling/pretio_public_content/manifest.py`. Pass per-catalog terminal receipts to `--receipts <path>` and require `cycle_status=COMPLETED` before declaring a cycle finished. A completed scan may have zero updates. A dedicated 12-hour runner/crawler still needs to be implemented; this manifest tool **does not** scrape, schedule or publish.
