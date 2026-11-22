@@ -21,6 +21,10 @@
 7. Time: `observed_at` is the real UTC observation time. `valid_from`/`valid_until` are source-backed only. For offers with an explicit end date, retain it; do not drop a known end date.
 8. Deduplicate stable IDs; 80 accepted items max per country and 20 per retailer; no duplicates across catalog entries within the same country.
 
+## Exhaustive catalog scan versus growth target
+
+Every 12-hour cycle must try every `(country_code, catalog_id)` from the complete catalog manifest, **including countries without any existing highlights or recognized currency**. Reaching the one-product target is not a stop condition. A catalog with no eligible offer, no update, missing proof, or fetch failure is recorded as a terminal **skip**, and scanning continues through all remaining catalogs. Currency gaps prevent highlight publication for that market, not catalog source checking. A finished cycle requires one terminal receipt per manifest entry and `pending == 0`; interrupted cycles are `INCOMPLETE`.
+
 ## 12-hour coverage target
 
 For each country, after checking **all applicable catalogs**, aim to add at least **one NEW, unique, verifiably discounted product per run** (two cycles/day). This is an objective, not an artificial minimum. If 0 qualify, report `TARGET_MISSED` with explicit reasons and retain or prune existing items according to evidence. Never publish synthetic discounts to meet a quota.
