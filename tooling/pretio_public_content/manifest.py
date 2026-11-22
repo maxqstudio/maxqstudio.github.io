@@ -23,7 +23,7 @@ TERMINAL = {
 }
 
 
-def build_manifest(catalog: dict) -> list[dict]:
+def build_manifest(catalog: dict, country: str | None = None) -> list[dict]:
     if catalog.get("schema") != "pretio.catalog_app.v2" or catalog.get("schema_version") != 2:
         raise ValueError("Expected Pretio catalog v2")
     raw_items = catalog.get("items")
@@ -55,7 +55,14 @@ def build_manifest(catalog: dict) -> list[dict]:
                     "url": item.get("url"),
                     "valid_until": item.get("valid_until"),
                 }
-    # Every active country/catalog pair is included, independent of currency or highlights feeds.
+    # A scheduled run must include ALL countries. A one-off Owner request may filter
+    # to exactly one explicit country, without creating a recurring schedule.
+    if country is not None:
+        if not isinstance(country, str) or not re.fullmatch(r"[A-Z]{2}", country):
+            raise ValueError("An explicit ISO country code is required for --once")
+        result = {key: entry for key, entry in result.items() if entry["country"] == country}
+        if not result:
+            raise ValueError(f"No active catalogs for requested one-off country {country}")
     return sorted(result.values(), key=lambda x: (x["country"], x["valid_until"] is not None, x["catalog_id"]))
 
 
@@ -95,15 +102,21 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--receipts", type=Path, help="Optional JSON array of per-catalog terminal receipts")
+    parser.add_argument("--country", type=str, help="Explicit one-off ISO country code, e.g. ID")
+    parser.add_argument("--once", action="store_true", help="Run scope exactly once for --country (manifest only; no crawler or scheduler)")
     args = parser.parse_args()
     catalog = json.loads((args.root / "pretio/promos/catalog_app.json").read_text(encoding="utf-8"))
-    manifest = build_manifest(catalog)
+    if args.once != (args.country is not None):
+        raise ValueError("--once and --country must be provided together; recurring/global mode has no country filter")
+    manifest = build_manifest(catalog, country=args.country if args.once else None)
     if args.receipts:
         receipts = json.loads(args.receipts.read_text(encoding="utf-8"))
         result = coverage(manifest, receipts)
+        result["scope"] = args.country if args.once else "ALL_COUNTRIES"
+        result["execution"] = "ONE_OFF" if args.once else "SCHEDULED_GLOBAL"
         print(json.dumps(result, indent=2))
         return 0 if result["cycle_status"] == "COMPLETED" else 2
-    print(json.dumps({"manifest_total": len(manifest), "countries": len(set(x["country"] for x in manifest)), "work_units": manifest}, indent=2, ensure_ascii=False))
+    print(json.dumps({"scope": args.country if args.once else "ALL_COUNTRIES", "execution": "ONE_OFF" if args.once else "SCHEDULED_GLOBAL", "manifest_total": len(manifest), "countries": len(set(x["country"] for x in manifest)), "work_units": manifest}, indent=2, ensure_ascii=False))
     return 0
 
 
