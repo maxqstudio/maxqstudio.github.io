@@ -36,7 +36,7 @@ jobs:
           python-version: '3.12'
       - name: Syntax and regression tests
         run: |
-          python -m py_compile tooling/pretio_public_content/validate.py
+          python -m py_compile tooling/pretio_public_content/validate.py tooling/pretio_public_content/manifest.py
           python -m unittest discover -s tooling/pretio_public_content -p 'test_*.py' -v
       - name: Current production schema, hashes and expired inventory (read-only)
         run: |
