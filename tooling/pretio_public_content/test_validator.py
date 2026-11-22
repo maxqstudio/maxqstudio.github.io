@@ -94,6 +94,20 @@ class StrictPretioValidatorTests(unittest.TestCase):
         self.assertEqual(validator.validate(self.root, validator.date(2026, 11, 22), strict_expiry=True)["countries"]["CH"]["items"], 0)
         self.assertEqual(validator.prune_expired(self.root, validator.date(2026, 11, 22)), {})
 
+    def test_rotating_catalog_url_requires_valid_until(self):
+        catalog_rel = "pretio/promos/catalog_app.json"
+        baseline_path = self.root / "baseline-catalog.json"
+        shutil.copy2(self.file(catalog_rel), baseline_path)
+        catalog = validator.read(self.file(catalog_rel))
+        catalog["items"][0]["url"] = "https://www.indomaret.co.id/promosi/weekly-november"
+        catalog["items"][0]["valid_until"] = None
+        self.rewrite(catalog_rel, catalog)
+        with self.assertRaisesRegex(validator.Invalid, "needs evidenced valid_until"):
+            validator.validate_catalog_link_changes(baseline_path, self.root)
+        catalog["items"][0]["valid_until"] = "2026-11-30"
+        self.rewrite(catalog_rel, catalog)
+        self.assertTrue(validator.validate_catalog_link_changes(baseline_path, self.root))
+
     def test_missing_currency_blocks_new_country_feed(self):
         idx_p = "pretio/promos/highlights/index.json"
         index = validator.read(self.file(idx_p))
