@@ -31,6 +31,10 @@ description: Maintain Pretio official retailer Catalog Promo entries and discoun
 8. **Do not bypass access restrictions.** Official public sources only; respect ToS, robots, rate limits, copyright and image licenses. No CAPTCHA circumvention, login scraping, stealth or proxy rotation. Use HTTP first, Playwright only where permitted, OCR/LLM as evidence extraction assistance (never as a source of truth).
 9. **Only publish verified data.** Default mode AUDIT or PREPARE (draft branch/PR), never merge/deploy unattended solely because this skill exists. Scheduled PUBLISH requires independent Owner-approved policy + tests + rollback plan.
 
+## Execution support
+
+Generate full, country-inclusive work units with `python3 tooling/pretio_public_content/manifest.py`. Pass per-catalog terminal receipts to `--receipts <path>` and require `cycle_status=COMPLETED` before declaring a cycle finished. A completed scan may have zero updates. A dedicated 12-hour runner/crawler still needs to be implemented; this manifest tool **does not** scrape, schedule or publish.
+
 ## Complete-cycle algorithm (MANDATORY)
 
 The **12-hour cycle** means **attempt EVERY catalog of EVERY country**, not stop after the first discount. "Skip" means **finish that catalog with a recorded reason, then proceed to the next catalog**. Never silently omit one from the manifest.
