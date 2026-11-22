@@ -1,10 +1,5 @@
 {
-  "schema": "pretio.product_highlights.v1",
   "schema_version": 1,
-  "country": "CL",
-  "currency": "CLP",
-  "revision": "pretio-highlights-CL-20260923T080756Z",
-  "generated_at": "2026-09-23T08:07:56Z",
   "items": [
     {
       "id": "jumbo-cl-1589277-pak",
@@ -51,5 +46,10 @@
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
       "observed_at": "2026-09-23T08:07:56Z"
     }
-  ]
+  ],
+  "country": "CL",
+  "generated_at": "2026-09-23T08:07:56Z",
+  "schema": "pretio.product_highlights.v1",
+  "currency": "CLP",
+  "revision": "pretio-highlights-CL-20260923T080756Z"
 }
