@@ -150,6 +150,20 @@ def load_catalog(root: Path):
     return doc, mapping
 
 
+def validate_catalog_link_changes(baseline_path: Path, root: Path):
+    """Changed catalog URLs must carry a documented period end; approve canonical migration separately."""
+    baseline = read(baseline_path)
+    require(isinstance(baseline, dict) and isinstance(baseline.get("items"), list), "baseline: invalid catalog")
+    old = {item["id"]: item for item in baseline["items"] if isinstance(item, dict) and "id" in item}
+    candidate, _ = load_catalog(root)
+    for item in candidate["items"]:
+        previous = old.get(item["id"])
+        if previous is not None and previous.get("url") != item["url"]:
+            require(item.get("valid_until") is not None,
+                    f"{item['id']}: changed period URL needs evidenced valid_until; canonical migration requires separate owner review")
+    return True
+
+
 def load_currency(root: Path):
     doc = read(root / "pretio/data/currency.json")
     require(doc.get("schema") == "pretio.currency.v1" and doc.get("schema_version") == 1, "currency: incompatible schema")
@@ -278,8 +292,11 @@ def main():
     parser.add_argument("--as-of", type=date.fromisoformat, help="Override local-market date in YYYY-MM-DD for deterministic tests")
     parser.add_argument("--strict-expiry", action="store_true", help="Fail if any explicit expiration date has passed")
     parser.add_argument("--prune-expired", action="store_true", help="Explicitly delete proven date-expired highlight products and regenerate v2 index hashes")
+    parser.add_argument("--baseline-catalog", type=Path, help="Compare old catalog JSON; changed URLs must have source-backed valid_until")
     args = parser.parse_args()
     try:
+        if args.baseline_catalog:
+            validate_catalog_link_changes(args.baseline_catalog, args.root)
         if args.prune_expired:
             changed = prune_expired(args.root, args.as_of)
             print(json.dumps({"expired_removed_by_country": changed, "status": "PRUNED"}, indent=2))
