@@ -176,7 +176,7 @@
     body.append(node('p', 'highlight-disclaimer', 'Recorded' + (seen ? ' ' + seen : ' previously') + ' · This is not a confirmed current offer.'));
     const bottom = node('div', 'card-bottom');
     const meta = node('div', 'card-meta');
-    append(meta, node('b', '', 'Source: ' + (item.retailer || 'Retailer')), node('small', '', 'Check price and availability'));
+    append(meta, node('b', '', 'Source: ' + (item.retailer || 'Retailer')), node('small', '', (item.country_code ? countryName(item.country_code) + ' · ' : '') + 'Verify with retailer'));
     append(bottom, meta, externalLink(item.source_url, 'View source ↗', 'card-action ghost'));
     body.append(bottom);
     return append(card, media, body);
@@ -189,9 +189,8 @@
   function noticeText() {
     if (state.error) return 'Unable to load public catalog data: ' + state.error + '. Try reloading the page.';
     if (state.tab === 'highlights') {
-      if (state.highlightError) return 'Unable to load this market’s highlights: ' + state.highlightError;
-      if (state.country === 'ALL') return 'Select a country to see its dated product price highlights. Entries are not live offers.';
-      if (!state.index || !Array.isArray(state.index.countries) || !state.index.countries.some(x => x.code === state.country)) return 'No product highlight feed is available for ' + countryName(state.country) + ' yet.';
+      if (state.highlightError) return 'Some highlight data could not be loaded: ' + state.highlightError;
+      if (!state.index || !Array.isArray(state.index.countries) || (state.country !== 'ALL' && !state.index.countries.some(x => x.code === state.country))) return 'No product highlight feed is available for ' + countryName(state.country) + ' yet.';
       return 'Historical price observations only — verify offers with retailers before shopping.';
     }
     const stamps = catalogsInCountry().map(c => c.last_verified_at).filter(Boolean).sort();
@@ -214,7 +213,7 @@
   function paint() {
     $('stat-catalogs').textContent = String(state.catalogs.length || '—');
     $('stat-countries').textContent = String(state.countries.length || '—');
-    $('stat-highlights').textContent = state.country === 'ALL' ? '—' : String(state.highlights.length);
+    $('stat-highlights').textContent = String(state.highlights.length);
     syncMerchantSelect();
     document.querySelectorAll('[data-tab]').forEach(t => {
       const selected = t.dataset.tab === state.tab;
@@ -232,7 +231,7 @@
     const baseCatalogs = catalogsInCountry();
     const list = state.tab === 'catalogs' ? visibleCatalogs() : visibleHighlights();
     $('catalog-count').textContent = String(baseCatalogs.length);
-    $('highlight-count').textContent = state.country === 'ALL' ? '—' : String(state.highlights.length);
+    $('highlight-count').textContent = String(state.highlights.length);
     $('clear-filters').hidden = !state.query && state.merchant === 'ALL' && state.sort === 'featured';
     $('notice').textContent = noticeText();
     $('notice').hidden = !noticeText();
@@ -261,29 +260,33 @@
     const requestId = ++state.selectedRequest;
     state.highlights = [];
     state.highlightError = '';
-    state.highlightLoading = state.country !== 'ALL' && !!(state.index && state.index.countries.some(x => x.code === state.country));
+    const entries = state.index && Array.isArray(state.index.countries) ? state.index.countries : [];
+    const feedCountries = state.country === 'ALL'
+      ? entries.map(e => e.code)
+      : entries.filter(e => e.code === state.country).map(e => e.code);
+    state.highlightLoading = feedCountries.length > 0;
     paint();
     if (!state.highlightLoading) return;
-    try {
-      let feed = state.highlightsByCountry.get(state.country);
+    const loads = await Promise.allSettled(feedCountries.map(async code => {
+      let feed = state.highlightsByCountry.get(code);
       if (!feed) {
-        feed = await readJson('../promos/highlights/' + state.country + '.json');
-        if (feed && feed.schema === 'pretio.product_highlights.v1' && feed.country === state.country && Array.isArray(feed.items)) {
-          state.highlightsByCountry.set(state.country, feed);
-        } else throw new Error('Unexpected highlight data format');
+        feed = await readJson('../promos/highlights/' + code + '.json');
+        if (!feed || feed.schema !== 'pretio.product_highlights.v1' || feed.country !== code || !Array.isArray(feed.items)) {
+          throw new Error('Invalid highlight format (' + code + ')');
+        }
+        state.highlightsByCountry.set(code, feed);
       }
-      if (requestId !== state.selectedRequest) return;
-      const allowedCatalogs = new Set(catalogsInCountry().map(c => c.id));
-      state.highlights = feed.items.filter(x => x && allowedCatalogs.has(x.catalog_id));
-    } catch (error) {
-      if (requestId !== state.selectedRequest) return;
-      state.highlightError = error instanceof Error ? error.message : 'Could not read feed';
-    } finally {
-      if (requestId === state.selectedRequest) {
-        state.highlightLoading = false;
-        paint();
-      }
-    }
+      return feed.items.map(item => Object.assign({}, item, { country_code: code }));
+    }));
+    if (requestId !== state.selectedRequest) return;
+    const allowedCatalogs = new Set(catalogsInCountry().map(c => c.id));
+    state.highlights = loads.flatMap(result => result.status === 'fulfilled'
+      ? result.value.filter(item => item && allowedCatalogs.has(item.catalog_id))
+      : []);
+    const failures = loads.filter(r => r.status === 'rejected');
+    if (failures.length) state.highlightError = failures.length + ' of ' + loads.length + ' feeds unavailable; retry later.';
+    state.highlightLoading = false;
+    paint();
   }
   function populateCountries() {
     const codes = new Set();
