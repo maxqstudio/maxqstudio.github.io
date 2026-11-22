@@ -2,6 +2,12 @@
 
 **Files:** `pretio/promos/highlights/{CC.json,index.json,audit/**}`. The country feed and index retain their currently shipped schemas. Never introduce new field names in production data.
 
+## Source landing-page fallback and missing optional data
+
+`source_url` is **mandatory** but it does NOT have to be a dedicated product-detail landing page. If no product-specific page exists, use the approved official **catalog promo landing URL** from the matching retailer (`catalog_app.json` `url`) or an official accessible leaflet page linked from it. For example, a discounted item shown in Indomaret's official promo catalog may use Indomaret's official general promo page as `source_url` when no individual product URL is provided. **The specific product, price pair, package and market must be verifiably shown in that actual page/leaflet** during the run; a generic retailer home page without this evidence is insufficient. Store the factual URL, screenshot/HTML excerpt and timestamp in the separate run evidence, not in new production fields. If no official page contains the evidence, skip the item.
+
+If an existing optional item field is absent/unverifiable (`brand`, `package_size`, `valid_from`, `valid_until`, `logo_url`, image/logo revisions), **omit that optional key**, not an empty string, guessed value or newly invented substitute field. The required `image_url`, actual normal/promo prices, `source_url` and other required fields remain mandatory: if no valid official image exists, skip the product. Do not skip an otherwise qualified product merely because it lacks a dedicated product URL or optional metadata.
+
 ## Exact schema contracts
 
 - Top-level country-feed keys **only**: `schema`, `schema_version`, `country`, `currency`, `revision`, `generated_at`, `items`. Values `pretio.product_highlights.v1`, `1`, ISO country, configured ISO currency, opaque revision, real UTC generated time.
