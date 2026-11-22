@@ -1,5 +1,11 @@
 # Global 12-hour operations, per-catalog compaction, safety gates
 
+## Highest-priority scope instruction: explicit one-off country
+
+A command like **"kerjakan 1 kali saja untuk Indonesia"** means exactly **ONE manually triggered, non-recurring cycle limited to Indonesia (ID)**, then STOP. It must not open another country, exhaust all countries, or create/enable a schedule. For this task, the scoped checklist is all active official Indonesia catalogs, including failed/unchanged ones; no other countries. A one-off may not bypass product evidence/field, expiry, compact or completion gates. The global exhaustive 12-hour requirement applies **only** when the Owner asks for recurring/all-country operation or no explicit narrow scope is specified.
+
+`python3 tooling/pretio_public_content/manifest.py --once --country ID` creates the locked Indonesia-only work manifest. For completion: `python3 tooling/pretio_public_content/manifest.py --once --country ID --receipts <run-receipts.json>`. The runner must pass the Owner-selected scope to fetchers, checkpoints and publisher; cross-country production changes must be refused. Do not modify existing schedules merely because a one-off run was requested. `--once` is manifest tooling, not a crawler or recurring workflow.
+
 ## Scheduler target (not yet installed by this skill)
 
 Intended GitHub Actions cron (UTC): `17 1,13 * * *` = 09:17 and 21:17 WITA. Also allow `workflow_dispatch` with country selection and `dry_run=true`. GitHub schedule is best-effort and may be delayed or disabled when a public repository has had no activity for 60 days; monitor missing runs. **A SKILL.md file is instructions, not an autonomous runner.** A dedicated scheduler, fetch adapters, publisher and credentials are separate deliverables.
