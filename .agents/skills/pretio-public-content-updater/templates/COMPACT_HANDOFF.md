@@ -1,5 +1,7 @@
 # Pretio catalog checkpoint (≤400 words, separate run artifact)
 
+- Manifest work unit: `<country>:<catalog_id>`, position `<N of manifest_total>`; terminal receipt status `<UPDATED / SKIPPED_* / BLOCKED_CURRENCY_METADATA / FAILED>`.
+- Counted as attempted: `yes`. This catalog must not hold up later entries if no verified new data is available.
 - Run: `<UTC run ID>`, cycle: `<09:17/21:17 WITA>`.
 - Completed: `<country>` / `<catalog_id>` / `<retailer>`.
 - Canonical link: `<source URL>`. Classification: `LINK_STABLE / LINK_PERIODIC_WITH_EXPIRY / BLOCKED_MISSING_EXPIRY`. Known `valid_until`: `<verified date or null for evergreen>`.
