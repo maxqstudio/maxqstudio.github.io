@@ -6,6 +6,12 @@ Intended GitHub Actions cron (UTC): `17 1,13 * * *` = 09:17 and 21:17 WITA. Also
 
 Start with a manual AUDIT, then every scheduled production cycle must **attempt all official catalogs in all countries in the catalog manifest**, not only the 7 highlight-feed countries. Unsupported currency blocks highlight publication for that country, **not** its catalog check. Use country partitions; start at most 4 parallel country workers and <=1 in-flight request per retailer host, finite timeouts and randomized backoff. Avoid robots/ToS violations and HTML scraping when a source provides a permitted public feed.
 
+## Preflight / completeness tools
+
+- Generate the **entire**, currency-independent manifest: `python3 tooling/pretio_public_content/manifest.py > /tmp/pretio-manifest.json`.
+- At the end of a cycle, give the tool a JSON array of terminal receipts with existing audit-only keys `work_id` and `status`: `python3 tooling/pretio_public_content/manifest.py --receipts /tmp/receipts.json`.
+- Exit code `0` means every manifest entry is terminal. Exit code `2` means `INCOMPLETE`; exit code `1` indicates invalid receipt / input. An incomplete run MUST NOT be declared done. These JSON audit objects are not production catalog or highlight records.
+
 ## Deterministic exhaustive 12-hour pipeline
 
 **Completion invariant:** At the start of each cycle, freeze an immutable work manifest from **all** active official catalog entries and all their country codes in `catalog_app.json`. Every unique `(country_code, catalog_id)` must be attempted. **No stop after first product, first target-met country, first source failure, or first success.** The cycle ends only when every manifest entry has a durable terminal checklist/receipt and there are zero remaining entries.
