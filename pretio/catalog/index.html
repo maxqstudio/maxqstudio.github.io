@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6fbf8">
+  <meta name="description" content="Explore Pretio's public store catalog directory and product price highlights. Browse by country, retailer, or product, with links to original sources.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://maxqstudio.dev/pretio/catalog/">
+  <link rel="icon" href="../../images/pretio_icon.png">
+  <link rel="stylesheet" href="./catalog.css?v=20261122-1">
+  <title>Store catalogs &amp; price highlights | Pretio</title>
+  <script src="./catalog.js?v=20261122-1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../" aria-label="Pretio homepage">
+        <img src="../../images/pretio_logo.png" width="42" height="42" alt="">
+        <span>Pretio</span>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-page">Catalog Explorer</span>
+      </a>
+      <nav class="top-links" aria-label="Site">
+        <a href="../">About Pretio</a>
+        <a href="../#screenshots">App screenshots</a>
+        <a class="top-cta" href="https://play.google.com/store/apps/details?id=com.maxq.pretio" target="_blank" rel="noopener noreferrer">Get the app <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Public Pretio catalog</span>
+        <h1 id="hero-title">Explore store <span>offers</span> in one place.</h1>
+        <p>Browse the same public store catalog directory and product highlights used by Pretio. Search retailers, explore markets, and open the original source. No account required.</p>
+        <div class="hero-facts" aria-label="Catalog statistics">
+          <div class="hero-fact"><strong id="stat-catalogs">—</strong><span>Store catalogs</span></div>
+          <div class="hero-fact"><strong id="stat-countries">—</strong><span>Countries</span></div>
+          <div class="hero-fact"><strong id="stat-highlights">—</strong><span>Highlights in market</span></div>
+        </div>
+      </div>
+      <div class="hero-preview" aria-hidden="true">
+        <div class="preview-caption"><span class="preview-dot"></span> PRETIO / CATALOGS <span>▦</span></div>
+        <div class="preview-search">⌕ <span>Search stores &amp; deals</span></div>
+        <div class="preview-pills"><span class="selected">Catalogs</span><span>Highlights</span><span>All stores</span></div>
+        <div class="preview-tile"><span class="preview-merchant">P</span><div><b>Explore official offers</b><small>Find catalogs by location</small></div><span class="preview-arrow">↗</span></div>
+        <div class="preview-tile second"><span class="preview-merchant orange">%</span><div><b>Product highlights</b><small>Compare recorded prices</small></div><span class="preview-arrow">↗</span></div>
+        <div class="preview-footnote">Public data • Original sources</div>
+      </div>
+    </section>
+
+    <section class="directory shell" aria-labelledby="directory-title">
+      <div class="directory-heading">
+        <div><span class="eyebrow small">Browse public data</span><h2 id="directory-title">Store catalogs &amp; highlights</h2><p>Find a retailer, product, or country and explore the available entries.</p></div>
+        <a class="source-link" href="../promos/catalog_app.json" target="_blank" rel="noopener noreferrer">View source JSON <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="filters">
+        <div class="search-block">
+          <label for="search">Search catalogs and products</label>
+          <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search store, offer or product..." autocomplete="off" spellcheck="false"><kbd>/</kbd></div>
+        </div>
+        <div class="select-block"><label for="country">Country / market</label><select id="country"><option value="">Loading markets…</option></select></div>
+        <div class="select-block"><label for="merchant">Retailer</label><select id="merchant"><option value="ALL">All retailers</option></select></div>
+        <div class="select-block compact"><label for="sort">Sort by</label><select id="sort"><option value="featured">Featured</option><option value="name">Name A–Z</option><option value="recent">Last verified</option></select></div>
+      </div>
+      <div class="browse-controls">
+        <div class="tab-list" role="tablist" aria-label="Browse type">
+          <button type="button" class="tab active" id="tab-catalogs" role="tab" aria-selected="true" aria-controls="results" data-tab="catalogs">Store catalogs <span id="catalog-count">0</span></button>
+          <button type="button" class="tab" id="tab-highlights" role="tab" aria-selected="false" aria-controls="results" data-tab="highlights">Product highlights <span id="highlight-count">0</span></button>
+        </div>
+        <div class="view-switch" aria-label="Layout">
+          <button type="button" id="grid-view" class="is-active" aria-label="Grid view" aria-pressed="true" title="Grid view">▦</button>
+          <button type="button" id="list-view" aria-label="List view" aria-pressed="false" title="List view">☷</button>
+        </div>
+      </div>
+
+      <div class="result-meta"><p id="result-summary" aria-live="polite">Loading public catalogs…</p><button id="clear-filters" type="button" hidden>Clear filters</button></div>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <div id="results" class="cards" role="tabpanel" aria-labelledby="tab-catalogs" aria-live="polite"><p class="loading">Loading catalogs…</p></div>
+      <div id="empty" class="empty" hidden><div class="empty-icon" aria-hidden="true">⌕</div><h3>No matching entries</h3><p>Try a different store, country, or search term.</p><button id="empty-reset" type="button">Reset filters</button></div>
+    </section>
+
+    <section class="help shell" aria-labelledby="help-title">
+      <div><span class="eyebrow small">Understand the data</span><h2 id="help-title">Original catalogs, clearly sourced.</h2><p>Catalog cards point to retailer websites. Product highlights are dated price observations, not live price guarantees. Always verify the price, availability, and offer period with the retailer before buying.</p></div>
+      <div class="help-links"><a href="../">Learn about Pretio <span aria-hidden="true">↗</span></a><a href="../privacy.html">Privacy <span aria-hidden="true">↗</span></a><a href="../support.html">Support <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><span>© Max-Q Studio · Pretio</span><span>Independent price tracker. Retailer content belongs to its respective owners.</span></div></footer>
+  <noscript><p class="noscript">JavaScript is required to load and search the public JSON catalogs. You can still <a href="../promos/catalog_app.json">read the catalog JSON directly</a>.</p></noscript>
+</body>
+</html>
