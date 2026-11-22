@@ -1,9 +1,9 @@
 {
-  "schema": "pretio.product_highlights.v1",
-  "schema_version": 1,
   "country": "US",
-  "currency": "USD",
-  "revision": "pretio-highlights-US-20260923T103532Z",
+  "items": [],
   "generated_at": "2026-09-23T10:35:32Z",
-  "items": []
+  "currency": "USD",
+  "schema": "pretio.product_highlights.v1",
+  "revision": "pretio-highlights-US-20260923T103532Z",
+  "schema_version": 1
 }

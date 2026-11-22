@@ -1,10 +1,6 @@
 {
   "schema": "pretio.product_highlights.v1",
-  "schema_version": 1,
-  "country": "ZA",
-  "currency": "ZAR",
   "revision": "pretio-highlights-ZA-20260923T102403Z",
-  "generated_at": "2026-09-23T10:24:03Z",
   "items": [
     {
       "id": "pnp-za-country:russian-bear-original-vodka-750ml",
@@ -70,5 +66,9 @@
       "valid_from": "2026-09-23",
       "valid_until": "2026-09-27"
     }
-  ]
+  ],
+  "country": "ZA",
+  "currency": "ZAR",
+  "schema_version": 1,
+  "generated_at": "2026-09-23T10:24:03Z"
 }

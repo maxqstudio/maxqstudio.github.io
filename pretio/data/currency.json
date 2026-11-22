@@ -1,7 +1,4 @@
 {
-  "schema": "pretio.currency.v1",
-  "schema_version": 1,
-  "revision": "pretio-currency-v1",
   "currencies": [
     {
       "code": "IDR",
@@ -73,5 +70,8 @@
         "CH"
       ]
     }
-  ]
+  ],
+  "schema_version": 1,
+  "schema": "pretio.currency.v1",
+  "revision": "pretio-currency-v1"
 }
