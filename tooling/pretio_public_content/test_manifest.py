@@ -47,6 +47,28 @@ class ExhaustiveCatalogManifestTests(unittest.TestCase):
         self.assertEqual(done["updated"], 1)
         self.assertEqual(done["skipped"], 2)
 
+    def test_one_off_indonesia_runs_only_indonesia_once(self):
+        catalog = json.loads((ROOT / "pretio/promos/catalog_app.json").read_text(encoding="utf-8"))
+        all_work = manifest.build_manifest(catalog)
+        scoped = manifest.build_manifest(catalog, country="ID")
+        self.assertGreater(len(all_work), len(scoped))
+        self.assertGreater(len(scoped), 0)
+        self.assertTrue(all(entry["country"] == "ID" for entry in scoped))
+        self.assertEqual(len(scoped), sum(1 for x in all_work if x["country"] == "ID"))
+        receipts = [{"work_id": x["work_id"], "status": "SKIPPED_NO_CHANGE"} for x in scoped]
+        self.assertEqual(manifest.coverage(scoped, receipts)["cycle_status"], "COMPLETED")
+        foreign = next(x for x in all_work if x["country"] != "ID")
+        receipts.append({"work_id": foreign["work_id"], "status": "UPDATED"})
+        with self.assertRaisesRegex(ValueError, "Unexpected catalog receipt"):
+            manifest.coverage(scoped, receipts)
+
+    def test_invalid_or_missing_one_off_country_rejected(self):
+        catalog = json.loads((ROOT / "pretio/promos/catalog_app.json").read_text(encoding="utf-8"))
+        with self.assertRaisesRegex(ValueError, "explicit ISO country"):
+            manifest.build_manifest(catalog, country="indonesia")
+        with self.assertRaisesRegex(ValueError, "No active catalogs"):
+            manifest.build_manifest(catalog, country="AQ")
+
     def test_duplicate_country_locations_do_not_duplicate_work(self):
         catalog = {"schema": "pretio.catalog_app.v2", "schema_version": 2, "items": [
             {"id": "shop", "status": "active", "locations": [{"country_code": "ID", "province_code": "31"},
