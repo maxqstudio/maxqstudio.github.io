@@ -69,9 +69,11 @@ def parse_day(value, where):
     if value is None:
         return None
     require(isinstance(value, str), f"{where}: ISO date required")
+    require(re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}(?:T\\d{2}:\\d{2}:\\d{2}(?:Z|[+-]\\d{2}:\\d{2}))?", value) is not None,
+            f"{where}: invalid date format")
     try:
-        # Catalog dates may also have a real timezone offset.
-        return date.fromisoformat(value[:10]) if len(value) == 10 or "T" in value else None
+        # Some catalog validity dates have a sourced timezone offset.
+        return date.fromisoformat(value[:10])
     except ValueError as exc:
         raise Invalid(f"{where}: invalid date") from exc
 
