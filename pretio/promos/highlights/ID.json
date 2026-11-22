@@ -1,7 +1,24 @@
 {
-  "items": [],
-  "generated_at": "2026-09-23T00:00:00Z",
-  "revision": "pretio-highlights-ID-empty-v1",
+  "items": [
+    {
+      "id": "id-lotte-mart-pocari-sweat-pet-900ml-20261119",
+      "catalog_id": "lotte-mart-location-live",
+      "retailer": "LOTTE MART",
+      "product_name": "POCARI SWEAT PET 900 ml",
+      "brand": "POCARI SWEAT",
+      "package_size": "900 ml",
+      "normal_price": "14500",
+      "promo_price": "10900",
+      "currency": "IDR",
+      "image_url": "https://www.pocarisweat.id/_next/image?url=https%3A%2F%2Fadmin.pocarisweat.id%2Fstorage%2F252%2FIcon-900mL.png&w=3840&q=75",
+      "source_url": "https://www.lottemart.co.id/media/2327/31b81265e23fb2a5/orig.pdf",
+      "observed_at": "2026-11-22T14:21:48Z",
+      "valid_from": "2026-11-19",
+      "valid_until": "2026-12-02"
+    }
+  ],
+  "generated_at": "2026-11-22T14:21:48Z",
+  "revision": "pretio-highlights-ID-20261122T142148Z",
   "currency": "IDR",
   "schema": "pretio.product_highlights.v1",
   "schema_version": 1,
