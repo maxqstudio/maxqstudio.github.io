@@ -1,11 +1,12 @@
 # Pretio — per-catalog update checklist
 
-Create a **new copy for every (country, catalog_id) in every 12-hour run**. Save as a run artifact, NOT inside `catalog_app.json` or `CC.json`.
+Create a **new copy for EVERY (country, catalog_id) in the frozen complete manifest EVERY 12-hour cycle**, including countries without highlight-feed currency support. Save as a run artifact, NOT inside `catalog_app.json` or `CC.json`. A checked catalog with no update still requires a completed checklist and terminal receipt; do not drop it silently.
 
 Run ID: `<UTC run id>`  
 Country: `<ISO2>` | Catalog ID: `<accepted catalog id>` | Retailer: `<accepted merchant>`  
 Official URL: `<official HTTPS URL>` | Checked UTC: `<timestamp>`  
-Mode: `AUDIT / PREPARE / PUBLISH`
+Mode: `AUDIT / PREPARE / PUBLISH`  
+Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounded retry limit>`
 
 ## 1. Catalog Promo source
 - [ ] Exact `catalog_id`, country, location rules and current original record loaded
@@ -28,7 +29,17 @@ Mode: `AUDIT / PREPARE / PUBLISH`
 - [ ] No item contains any field outside approved item allowlist
 - [ ] Rejected items recorded separately with reasons; no fabricated filler for 12-hour quota
 
-## 3. Checkpoint and context compact
+## 3. Skip-or-update decision (always select one)
+- [ ] **UPDATED** — accepted source-backed catalog or discounted-product changes staged in candidate only
+- [ ] **SKIPPED_NO_CHANGE** — catalog verified but unchanged; no JSON churn
+- [ ] **SKIPPED_NO_PROMO** — catalog checked; no eligible discounted product
+- [ ] **SKIPPED_UNAVAILABLE / SKIPPED_BLOCKED** — fetch failed after bounded retries or legal/access block; preserve existing nonexpired data
+- [ ] **SKIPPED_UNVERIFIED** — missing price pair/image/locality/rotating-link expiry; never invent
+- [ ] **BLOCKED_CURRENCY_METADATA** — catalog checked, but cannot publish highlight for unsupported country
+- [ ] **FAILED** — unexpected catalog-level error; log diagnostics, move on; do not abandon other catalog entries
+- [ ] Skip status is recorded in checkpoint/audit only, NOT a new production JSON field
+
+## 4. Checkpoint and context compact
 - [ ] Accepted new product IDs and observed evidence recorded in run artifact
 - [ ] Rejected candidates, source failures and location restrictions recorded
 - [ ] Candidate country feed saved; unchanged good items retained
@@ -36,15 +47,17 @@ Mode: `AUDIT / PREPARE / PUBLISH`
 - [ ] Mark `CATALOG_DONE`, release raw evidence from next agent context
 - [ ] Dispatch next catalog as NEW isolated task with compact handoff only
 
-## 4. Country closing gate (after all catalogs)
-- [ ] All catalogs processed or explicit failed/blocker receipts
+## 5. Cycle completion and country closing gate (after ALL manifest catalogs)
+- [ ] Every country and every catalog from frozen manifest has a terminal receipt, even when skipped, blocked or failed
+- [ ] `terminal_receipts == manifest_total`; `pending == 0` — otherwise flag `INCOMPLETE`, resume remaining units, do not report done
+- [ ] Never stop because 1 new product per country was already found; finish every remaining catalog
 - [ ] Target **≥1 NEW confirmed discounted product / country / run** checked; if missed report `TARGET_MISSED`
 - [ ] 80/country, 20/retailer, unique ID, currency metadata and expiry validation PASS
 - [ ] All feed fields match existing schema and all referenced `catalog_id` exist
 - [ ] Index v2 entries/revisions and SHA-256 match exact staged bytes
 - [ ] Diff confined to allowed writer paths; CI/approval/rollback ready
 
-Final result: `<CATALOG_DONE / source blocked>`  
+Final result: `<UPDATED / SKIPPED_NO_CHANGE / SKIPPED_NO_PROMO / SKIPPED_UNAVAILABLE / SKIPPED_BLOCKED / SKIPPED_UNVERIFIED / BLOCKED_CURRENCY_METADATA / FAILED>`  
 Accepted NEW product IDs: `<ids or none>`  
 Expired deleted IDs: `<ids or none>`  
 Compact handoff artifact: `<artifact path>`
