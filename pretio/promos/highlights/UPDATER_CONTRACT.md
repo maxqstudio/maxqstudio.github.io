@@ -12,6 +12,12 @@ pretio/promos/highlights/**
 
 This includes `audit/**`. It must not edit `pretio/promos/catalog_app.json`, `pretio/promos/location.json`, `pretio/data/currency.json`, `pretio/localization/**`, legal pages, or application source. Catalog maintenance remains a separately governed workflow.
 
+## Product name cleanup and audit-only structured extraction
+
+The crawler MUST expand known catalog/receipt shorthand before writing new Product Highlights; examples: `MYK GRG`→`Minyak Goreng`, `KCP MNS`→`Kecap Manis`, `PCH`→`Pouch`, `BTL`→`Botol`, `KTG`→`Kaleng`, `SBN MND`→`Sabun Mandi`, `DTRGN`→`Deterjen`. Preserve `UHT`, `3in1`, `SPF` and standard units `ml`, `g`, `kg`, `L`, `pcs`. Normalize unit spacing and brand title case without changing SKU identity.
+
+Each candidate must supply separate **intermediate/audit** `productName`, `brand`, `variant`, `packageSize`, `packCount`, with original source title and evidence. Existing production feed v1 recognizes **only** `product_name`, `brand`, `package_size` for these values; `variant`, `packCount` and raw/camelCase keys must NOT be written as new production JSON fields. Preserve distinct important variants in existing supported names or HOLD if exact identity cannot be safely represented. See the canonical skill `references/product-name-normalization.md` for examples and auditor gating. This improves local Watchlist/Saved Products matching without requiring a network AI operation.
+
 ## Feed Contract
 
 The current index schema is **`pretio.product_highlights.index.v2` with `schema_version: 2`**, while country feeds use **`pretio.product_highlights.v1` with `schema_version: 1`**. Current country files are `ID.json`, `CL.json`, `RS.json`, `US.json`, `ZA.json`, `DE.json`, and `CH.json`; additional countries require approved currency metadata and Android compatibility. The v2 index country entries include `code`, `document_id`, `revision`, `sha256`, and `url`. The index binds each supported country to the canonical HTTPS URL, exact feed SHA-256, and feed revision. Each country feed declares country, currency, revision, UTC `generated_at`, and an `items` array (maximum 80 items; maximum 20 accepted items per retailer).
