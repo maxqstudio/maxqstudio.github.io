@@ -46,6 +46,14 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] No item contains any field outside approved item allowlist
 - [ ] Rejected items recorded separately with reasons; no fabricated filler for 12-hour quota
 
+## 2B. Location relevance & expiry hard gate
+- [ ] PHYSICAL RETAIL: product-level participating area and national price applicability proven (not inferred from nationwide catalog page)
+- [ ] ONLINE STORE: target-country offer price and nationwide order/fulfillment supported; **no provincial/city proof needed** when official market-wide delivery applies
+- [ ] Region-only in current national v1 feed: audit-only, not published
+- [ ] Expired Product Highlights removed from active `CC.json`; hash/revision updated for changed feed
+- [ ] Expired rotating Catalog Promo URL replaced with approved verified URL or safely removed under catalog-writer rules; no stale active listing
+- [ ] Fetch failure/undated offer not falsely marked expired; separate audit reason
+
 ## 3. Skip-or-update decision (always select one)
 - [ ] **UPDATED** — accepted source-backed catalog or discounted-product changes staged in candidate only
 - [ ] **SKIPPED_NO_CHANGE** — catalog verified but unchanged; no JSON churn
