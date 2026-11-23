@@ -46,6 +46,15 @@ The country-feed v1 / index v2 exact-key and evidence requirements remain unchan
 
 **Coverage accounting:** `manifest_total = completed_updated + completed_skipped + completed_failed`; `pending = manifest_total - terminal_receipts`. Count source failures as terminal once they have an audit receipt. If `pending > 0`, result is `INCOMPLETE`. Per-cycle report lists checked and skipped catalogs by country with the reason, new confirmed discounts, expired deletions, and the next cycle target.
 
+## Deletion acceptance gates / operator procedure
+
+- Process a deterministic `expired_product_ids` list per country using market-local end dates and confirmed source termination. Remove **all proven-expired items**, not just newly discovered ones or a sample, from the final country feed.
+- Separately produce an `obsolete_catalog_ids` list with evidence of expired period-specific URLs, confirmed retired campaigns or superseded official links. For each, prefer a verified canonical evergreen URL update with **the same catalog ID** when relevant; otherwise stage removal from the active catalog items array.
+- Compute `referencing_highlight_ids` across **ALL country feeds** before deleting any catalog. Reject an atomic candidate if any highlight is orphaned. Delete expired linked highlights; migrate still-valid verified ones only after catalog/seller/host approval. Never silently delete unrelated verified nonexpired user-relevant products.
+- Verify `expired_product_remaining = 0`, `obsolete_catalog_remaining = 0` for all **proven** old records within the authorized scope, `orphan_highlight_refs = 0`, stable schemas, allowed domains, market coverage and updated exact SHA hashes. A failure blocks publication but does not interrupt other catalog research.
+- Track `expired_products_removed`, `obsolete_catalogs_removed`, `catalogs_relinked_to_evergreen`, `dependent_highlights_removed_or_migrated` and `deletion_blockers` in the audit/PR. Production is NOT the archive; historical references live in bounded audit files only.
+- A source merely blocked/unreachable or last checked long ago remains `STALE_UNVERIFIED`, not automatically obsolete. Do not perform blind mass deletion.
+
 ## Owner expiry cleanup — live list MUST NOT accumulate expired content
 
 At EVERY candidate finalization (registered catalogs, expanded markets, shops), perform deterministic **expiry pruning on final staged snapshots**, including items from sources that were unavailable this run:
