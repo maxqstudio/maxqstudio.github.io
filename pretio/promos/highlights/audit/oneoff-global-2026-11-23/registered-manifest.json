@@ -1,0 +1,600 @@
+{
+  "scope": "ALL_COUNTRIES",
+  "execution": "SCHEDULED_GLOBAL",
+  "manifest_total": 74,
+  "countries": 24,
+  "work_units": [
+    {
+      "work_id": "AE:carrefour-uae-fresh-savers",
+      "country": "AE",
+      "catalog_id": "carrefour-uae-fresh-savers",
+      "retailer": "Carrefour",
+      "url": "https://www.carrefouruae.com/mafuae/en/c/fresh-savers",
+      "valid_until": null
+    },
+    {
+      "work_id": "AE:lulu-uae-top-deals",
+      "country": "AE",
+      "catalog_id": "lulu-uae-top-deals",
+      "retailer": "LuLu Hypermarket",
+      "url": "https://gcc.luluhypermarket.com/en-ae/offers/c/top-deals",
+      "valid_until": null
+    },
+    {
+      "work_id": "CH:aldi-suisse-ch-country",
+      "country": "CH",
+      "catalog_id": "aldi-suisse-ch-country",
+      "retailer": "ALDI Suisse",
+      "url": "https://www.aldi-suisse.ch/de/aktionen-und-angebote",
+      "valid_until": null
+    },
+    {
+      "work_id": "CH:coop-ch-country",
+      "country": "CH",
+      "catalog_id": "coop-ch-country",
+      "retailer": "Coop",
+      "url": "https://www.coop.ch/de/aktionen/alle-aktionen/c/m_1111",
+      "valid_until": null
+    },
+    {
+      "work_id": "CH:denner-ch-country",
+      "country": "CH",
+      "catalog_id": "denner-ch-country",
+      "retailer": "Denner",
+      "url": "https://www.denner.ch/de/aktionen/aktuelle-aktionen",
+      "valid_until": null
+    },
+    {
+      "work_id": "CH:lidl-ch-country",
+      "country": "CH",
+      "catalog_id": "lidl-ch-country",
+      "retailer": "Lidl Schweiz",
+      "url": "https://sortiment.lidl.ch/de/aktuelle-aktionen",
+      "valid_until": null
+    },
+    {
+      "work_id": "CH:migros-ch-country",
+      "country": "CH",
+      "catalog_id": "migros-ch-country",
+      "retailer": "Migros",
+      "url": "https://www.migros.ch/de/offers/home",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:alvi-country-cl",
+      "country": "CL",
+      "catalog_id": "alvi-country-cl",
+      "retailer": "Alvi",
+      "url": "https://fe-browse-alvi-gcp-alvi-prod.alvi.cl/",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:jumbo-country-cl",
+      "country": "CL",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "url": "https://www.jumbo.cl/jumbo-ofertas",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:lider-country-cl",
+      "country": "CL",
+      "catalog_id": "lider-country-cl",
+      "retailer": "Lider",
+      "url": "https://super.lider.cl/v/ofertas",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:mayorista10-country-cl",
+      "country": "CL",
+      "catalog_id": "mayorista10-country-cl",
+      "retailer": "Mayorista 10",
+      "url": "https://www.mayorista10.cl/",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:santaisabel-country-cl",
+      "country": "CL",
+      "catalog_id": "santaisabel-country-cl",
+      "retailer": "Santa Isabel",
+      "url": "https://www.santaisabel.cl/santas-ofertas",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:tottus-country-cl",
+      "country": "CL",
+      "catalog_id": "tottus-country-cl",
+      "retailer": "Tottus",
+      "url": "https://www.tottus.cl/tottus-cl/content/ofertas-tottus",
+      "valid_until": null
+    },
+    {
+      "work_id": "CL:unimarc-country-cl",
+      "country": "CL",
+      "catalog_id": "unimarc-country-cl",
+      "retailer": "Unimarc",
+      "url": "https://www.unimarc.cl/page/catalogo",
+      "valid_until": null
+    },
+    {
+      "work_id": "CO:exito-co-promotions",
+      "country": "CO",
+      "catalog_id": "exito-co-promotions",
+      "retailer": "Éxito",
+      "url": "https://www.exito.com/mercado/descuentos-promociones-exito",
+      "valid_until": null
+    },
+    {
+      "work_id": "CO:olimpica-co-promotions",
+      "country": "CO",
+      "catalog_id": "olimpica-co-promotions",
+      "retailer": "Olímpica",
+      "url": "https://www.olimpica.com/landing-promos",
+      "valid_until": null
+    },
+    {
+      "work_id": "DE:aldi-nord-de-country",
+      "country": "DE",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "url": "https://www.aldi-nord.de/angebote.html",
+      "valid_until": null
+    },
+    {
+      "work_id": "DE:aldi-sued-de-country",
+      "country": "DE",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "url": "https://www.aldi-sued.de/angebote",
+      "valid_until": null
+    },
+    {
+      "work_id": "DE:kaufland-de-country",
+      "country": "DE",
+      "catalog_id": "kaufland-de-country",
+      "retailer": "Kaufland",
+      "url": "https://filiale.kaufland.de/angebote.html",
+      "valid_until": null
+    },
+    {
+      "work_id": "DE:lidl-de-country",
+      "country": "DE",
+      "catalog_id": "lidl-de-country",
+      "retailer": "Lidl",
+      "url": "https://www.lidl.de/c/online-prospekte/s10005610/",
+      "valid_until": null
+    },
+    {
+      "work_id": "DE:rewe-de-country",
+      "country": "DE",
+      "catalog_id": "rewe-de-country",
+      "retailer": "REWE",
+      "url": "https://www.rewe.de/angebote/nationale-angebote/",
+      "valid_until": null
+    },
+    {
+      "work_id": "EC:supermaxi-ec-offers",
+      "country": "EC",
+      "catalog_id": "supermaxi-ec-offers",
+      "retailer": "Supermaxi",
+      "url": "https://www.supermaxi.com/mas-beneficios/",
+      "valid_until": null
+    },
+    {
+      "work_id": "EC:tia-ec-ofertias",
+      "country": "EC",
+      "catalog_id": "tia-ec-ofertias",
+      "retailer": "Tía",
+      "url": "https://www.tia.com.ec/campa-as-marketing/ofertias",
+      "valid_until": null
+    },
+    {
+      "work_id": "EG:carrefour-egypt-offers",
+      "country": "EG",
+      "catalog_id": "carrefour-egypt-offers",
+      "retailer": "Carrefour Egypt",
+      "url": "https://www.carrefouregypt.com/mafegy/en/n/c/clp_carrefour-deals",
+      "valid_until": null
+    },
+    {
+      "work_id": "EG:spinneys-eg-weekly-deals",
+      "country": "EG",
+      "catalog_id": "spinneys-eg-weekly-deals",
+      "retailer": "Spinneys",
+      "url": "https://spinneys-egypt.com/en/deals",
+      "valid_until": null
+    },
+    {
+      "work_id": "ES:aldi-es-weekly-offers",
+      "country": "ES",
+      "catalog_id": "aldi-es-weekly-offers",
+      "retailer": "ALDI",
+      "url": "https://www.aldi.es/ofertas.html",
+      "valid_until": null
+    },
+    {
+      "work_id": "ES:lidl-es-country",
+      "country": "ES",
+      "catalog_id": "lidl-es-country",
+      "retailer": "Lidl",
+      "url": "https://www.lidl.es/c/descubre-nuevas-ofertas-cada-semana-folletos-lidl/s10087402",
+      "valid_until": "2026-11-23T07:00:00+08:00"
+    },
+    {
+      "work_id": "ID:alfamart-national-live",
+      "country": "ID",
+      "catalog_id": "alfamart-national-live",
+      "retailer": "Alfamart",
+      "url": "https://blog.alfagift.id/promo/",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:hypermart-national-live",
+      "country": "ID",
+      "catalog_id": "hypermart-national-live",
+      "retailer": "Hypermart",
+      "url": "https://www.hypermart.co.id/promo-katalog-hypermart/",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:indogrosir-location-live",
+      "country": "ID",
+      "catalog_id": "indogrosir-location-live",
+      "retailer": "Indogrosir",
+      "url": "https://indogrosir.co.id/promosi",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:indomaret-national-live",
+      "country": "ID",
+      "catalog_id": "indomaret-national-live",
+      "retailer": "Indomaret",
+      "url": "https://www.indomaret.co.id/promosi/",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:lotte-grosir-location-live",
+      "country": "ID",
+      "catalog_id": "lotte-grosir-location-live",
+      "retailer": "LOTTE Grosir",
+      "url": "https://www.lottemart.co.id/all-promo-grosir",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:lotte-mart-location-live",
+      "country": "ID",
+      "catalog_id": "lotte-mart-location-live",
+      "retailer": "LOTTE MART",
+      "url": "https://www.lottemart.co.id/all-promo-mart",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:superindo-national-live",
+      "country": "ID",
+      "catalog_id": "superindo-national-live",
+      "retailer": "Super Indo",
+      "url": "https://www.superindo.co.id/promosi/katalog-super-hemat",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:tiptop-location-live",
+      "country": "ID",
+      "catalog_id": "tiptop-location-live",
+      "retailer": "TIP TOP",
+      "url": "https://www.tiptop.co.id/promo-products/katalog",
+      "valid_until": null
+    },
+    {
+      "work_id": "ID:transmart-location-live",
+      "country": "ID",
+      "catalog_id": "transmart-location-live",
+      "retailer": "Transmart",
+      "url": "https://transmart.co.id/katalog",
+      "valid_until": null
+    },
+    {
+      "work_id": "IQ:taawon-iq-weekly-offers",
+      "country": "IQ",
+      "catalog_id": "taawon-iq-weekly-offers",
+      "retailer": "Taawon Hypermarket",
+      "url": "https://store.taawon.iq/",
+      "valid_until": null
+    },
+    {
+      "work_id": "IT:conad-it-volantini",
+      "country": "IT",
+      "catalog_id": "conad-it-volantini",
+      "retailer": "Conad",
+      "url": "https://www.conad.it/app-internal/home_leaflets",
+      "valid_until": null
+    },
+    {
+      "work_id": "IT:lidl-it-country",
+      "country": "IT",
+      "catalog_id": "lidl-it-country",
+      "retailer": "Lidl",
+      "url": "https://www.lidl.it/c/volantino-lidl/s10018048",
+      "valid_until": "2026-11-26T07:00:00+08:00"
+    },
+    {
+      "work_id": "MM:citymart-mm-promotions",
+      "country": "MM",
+      "catalog_id": "citymart-mm-promotions",
+      "retailer": "City Mart",
+      "url": "https://www.citymart.com.mm/promotions?lang=en",
+      "valid_until": null
+    },
+    {
+      "work_id": "MM:ocean-supercenter-mm-promotions",
+      "country": "MM",
+      "catalog_id": "ocean-supercenter-mm-promotions",
+      "retailer": "Ocean Supercenter",
+      "url": "https://www.oceansupercenter.com.mm/promotion?lang=en",
+      "valid_until": null
+    },
+    {
+      "work_id": "MY:aeon-my-promotions",
+      "country": "MY",
+      "catalog_id": "aeon-my-promotions",
+      "retailer": "AEON",
+      "url": "https://aeonretail.com.my/promotion/",
+      "valid_until": null
+    },
+    {
+      "work_id": "MY:lotuss-my-weekly",
+      "country": "MY",
+      "catalog_id": "lotuss-my-weekly",
+      "retailer": "Lotus's",
+      "url": "https://corp.lotuss.com.my/for-you/catalogue-promotions/weekly",
+      "valid_until": null
+    },
+    {
+      "work_id": "NA:agra-na-country",
+      "country": "NA",
+      "catalog_id": "agra-na-country",
+      "retailer": "Agra",
+      "url": "https://agra.com.na/index.php/retail-wholesale/specials-promotions",
+      "valid_until": null
+    },
+    {
+      "work_id": "NA:food-lovers-market-na-country",
+      "country": "NA",
+      "catalog_id": "food-lovers-market-na-country",
+      "retailer": "Food Lover's Market",
+      "url": "https://foodloversmarket.co.za/namibia/",
+      "valid_until": null
+    },
+    {
+      "work_id": "PE:metro-pe-online-catalogs",
+      "country": "PE",
+      "catalog_id": "metro-pe-online-catalogs",
+      "retailer": "Metro",
+      "url": "https://www.metro.pe/catalogos",
+      "valid_until": null
+    },
+    {
+      "work_id": "PE:plazavea-pe-national",
+      "country": "PE",
+      "catalog_id": "plazavea-pe-national",
+      "retailer": "Plaza Vea",
+      "url": "https://catalogos.plazavea.com.pe/volantes",
+      "valid_until": null
+    },
+    {
+      "work_id": "PE:tottus-pe-promotions",
+      "country": "PE",
+      "catalog_id": "tottus-pe-promotions",
+      "retailer": "Tottus",
+      "url": "https://www.tottus.com.pe/tottus-pe/lista/CATG23097/Promociones",
+      "valid_until": null
+    },
+    {
+      "work_id": "PF:carrefour-pf-catalogue",
+      "country": "PF",
+      "catalog_id": "carrefour-pf-catalogue",
+      "retailer": "Carrefour",
+      "url": "https://carrefour.pf/catalogue-en-ligne",
+      "valid_until": null
+    },
+    {
+      "work_id": "PF:tahiti-pas-cher-pf-catalog",
+      "country": "PF",
+      "catalog_id": "tahiti-pas-cher-pf-catalog",
+      "retailer": "Tahiti Pas Cher",
+      "url": "https://www.tahitipascher.pf/catalogue-du-moment/",
+      "valid_until": null
+    },
+    {
+      "work_id": "PL:biedronka-pl-gazetki",
+      "country": "PL",
+      "catalog_id": "biedronka-pl-gazetki",
+      "retailer": "Biedronka",
+      "url": "https://www.biedronka.pl/pl/gazetki",
+      "valid_until": null
+    },
+    {
+      "work_id": "PL:lidl-pl-official-gazette",
+      "country": "PL",
+      "catalog_id": "lidl-pl-official-gazette",
+      "retailer": "Lidl",
+      "url": "https://www.lidl.pl/c/nasze-gazetki/s10008614",
+      "valid_until": null
+    },
+    {
+      "work_id": "PT:auchan-pt-country",
+      "country": "PT",
+      "catalog_id": "auchan-pt-country",
+      "retailer": "Auchan",
+      "url": "https://www.auchan.pt/pt/folhetos/",
+      "valid_until": null
+    },
+    {
+      "work_id": "PT:continente-pt-country",
+      "country": "PT",
+      "catalog_id": "continente-pt-country",
+      "retailer": "Continente",
+      "url": "https://www.continente.pt/folhetos/",
+      "valid_until": null
+    },
+    {
+      "work_id": "PT:intermarche-pt-country",
+      "country": "PT",
+      "catalog_id": "intermarche-pt-country",
+      "retailer": "Intermarché",
+      "url": "https://intermarche.pt/sign/brands/catalog-page",
+      "valid_until": null
+    },
+    {
+      "work_id": "PT:lidl-pt-country",
+      "country": "PT",
+      "catalog_id": "lidl-pt-country",
+      "retailer": "Lidl",
+      "url": "https://www.lidl.pt/c/folhetos/s10020672",
+      "valid_until": null
+    },
+    {
+      "work_id": "PY:stock-py-online-offers",
+      "country": "PY",
+      "catalog_id": "stock-py-online-offers",
+      "retailer": "Supermercados Stock",
+      "url": "https://nuevo.stock.com.py/ofertas",
+      "valid_until": null
+    },
+    {
+      "work_id": "PY:superseis-py-country",
+      "country": "PY",
+      "catalog_id": "superseis-py-country",
+      "retailer": "Superseis",
+      "url": "https://www.superseis.com.py/ofertas/es-es",
+      "valid_until": null
+    },
+    {
+      "work_id": "RO:carrefour-ro-catalogues",
+      "country": "RO",
+      "catalog_id": "carrefour-ro-catalogues",
+      "retailer": "Carrefour",
+      "url": "https://carrefour.ro/corporate/cataloage/",
+      "valid_until": null
+    },
+    {
+      "work_id": "RO:kaufland-ro-country",
+      "country": "RO",
+      "catalog_id": "kaufland-ro-country",
+      "retailer": "Kaufland",
+      "url": "https://www.kaufland.ro/cataloage-cu-reduceri.html",
+      "valid_until": "2026-11-25T06:00:00+08:00"
+    },
+    {
+      "work_id": "RS:idea-rs-country",
+      "country": "RS",
+      "catalog_id": "idea-rs-country",
+      "retailer": "IDEA",
+      "url": "https://www.idea.rs/Akcije/Katalozi",
+      "valid_until": null
+    },
+    {
+      "work_id": "RS:lidl-rs-country",
+      "country": "RS",
+      "catalog_id": "lidl-rs-country",
+      "retailer": "Lidl Srbija",
+      "url": "https://www.lidl.rs/c/online-letak/s10019338",
+      "valid_until": null
+    },
+    {
+      "work_id": "RS:maxi-rs-country",
+      "country": "RS",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "url": "https://www.maxi.rs/maxi-nedeljna-akcija",
+      "valid_until": null
+    },
+    {
+      "work_id": "RS:univerexport-rs-country",
+      "country": "RS",
+      "catalog_id": "univerexport-rs-country",
+      "retailer": "Univerexport",
+      "url": "https://www.univerexport.rs/sr/katalozi",
+      "valid_until": null
+    },
+    {
+      "work_id": "TR:a101-tr-country",
+      "country": "TR",
+      "catalog_id": "a101-tr-country",
+      "retailer": "A101",
+      "url": "https://www.a101.com.tr/liste/aldin-aldin",
+      "valid_until": null
+    },
+    {
+      "work_id": "TR:bim-tr-country",
+      "country": "TR",
+      "catalog_id": "bim-tr-country",
+      "retailer": "BİM",
+      "url": "https://www.bim.com.tr/Categories/254/aktuel-urunler.aspx",
+      "valid_until": null
+    },
+    {
+      "work_id": "TR:migros-tr-country",
+      "country": "TR",
+      "catalog_id": "migros-tr-country",
+      "retailer": "Migros",
+      "url": "https://www.money.com.tr/migroskop-dijital",
+      "valid_until": null
+    },
+    {
+      "work_id": "TR:sok-tr-country",
+      "country": "TR",
+      "catalog_id": "sok-tr-country",
+      "retailer": "ŞOK",
+      "url": "https://kurumsal.sokmarket.com.tr/firsatlar/haftanin-firsatlari",
+      "valid_until": null
+    },
+    {
+      "work_id": "US:aldi-us-country",
+      "country": "US",
+      "catalog_id": "aldi-us-country",
+      "retailer": "ALDI",
+      "url": "https://www.aldi.us/store/aldi/pages/weekly-specials",
+      "valid_until": null
+    },
+    {
+      "work_id": "US:kroger-us-country",
+      "country": "US",
+      "catalog_id": "kroger-us-country",
+      "retailer": "Kroger",
+      "url": "https://www.kroger.com/weeklyad",
+      "valid_until": null
+    },
+    {
+      "work_id": "US:target-us-country",
+      "country": "US",
+      "catalog_id": "target-us-country",
+      "retailer": "Target",
+      "url": "https://www.target.com/weekly-ad",
+      "valid_until": null
+    },
+    {
+      "work_id": "US:walmart-us-country",
+      "country": "US",
+      "catalog_id": "walmart-us-country",
+      "retailer": "Walmart",
+      "url": "https://www.walmart.com/shop/deals/shop-advertised-deals",
+      "valid_until": null
+    },
+    {
+      "work_id": "ZA:foodloversmarket-za-specials",
+      "country": "ZA",
+      "catalog_id": "foodloversmarket-za-specials",
+      "retailer": "Food Lover's Market",
+      "url": "https://foodloversmarket.co.za/specials/",
+      "valid_until": null
+    },
+    {
+      "work_id": "ZA:pnp-za-country",
+      "country": "ZA",
+      "catalog_id": "pnp-za-country",
+      "retailer": "Pick n Pay",
+      "url": "https://www.pnp.co.za/catalogues",
+      "valid_until": null
+    }
+  ]
+}
