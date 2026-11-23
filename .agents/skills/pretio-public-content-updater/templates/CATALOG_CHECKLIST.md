@@ -46,6 +46,16 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] No item contains any field outside approved item allowlist
 - [ ] Rejected items recorded separately with reasons; no fabricated filler for 12-hour quota
 
+## 2A. Confirmed obsolete catalog retirement
+- [ ] Catalog classified as `EVERGREEN_CURRENT`, `PERIODIC_CURRENT`, `VERIFIED_OBSOLETE`, or `STALE_UNVERIFIED` (audit labels only)
+- [ ] If VERIFIED_OBSOLETE: official evidence and market-local end date / confirmed supersession recorded
+- [ ] Searched verified current evergreen/canonical replacement FIRST; if available preserve catalog `id`, stage approved `url` migration
+- [ ] If no approved current successor: catalog entry marked for removal from final active `catalog_app.json.items` after dependency review
+- [ ] Before removal, collect **all** dependent Product Highlight `catalog_id` references across country feeds and resolve each (proven expired deleted, truly valid verified approved migration, otherwise HOLD)
+- [ ] Confirm no orphan references and no new/unsupported catalog `status` or archive keys
+- [ ] Catalog/product retirement included in one atomic feed+index+catalog validation; deletion evidence recorded only in audit
+- [ ] A transient failure/404/old verified timestamp is not falsely treated as obsolete
+
 ## 2B. Location relevance & expiry hard gate
 - [ ] PHYSICAL RETAIL: product-level participating area and national price applicability proven (not inferred from nationwide catalog page)
 - [ ] ONLINE STORE: target-country offer price and nationwide order/fulfillment supported; **no provincial/city proof needed** when official market-wide delivery applies
