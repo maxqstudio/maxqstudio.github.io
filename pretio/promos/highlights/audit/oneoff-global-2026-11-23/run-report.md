@@ -16,7 +16,7 @@
 
 ## Active data changes
 
-- Removed the positively expired dated Spain catalog record `lidl-es-country` from `pretio/promos/catalog_app.json`. Its dated flyer expired on 2026-11-22 in Spain. A reference scan across all seven highlight feeds found **zero** dependent entries, so no highlight reference needed migration/deletion.
+- Removed the expired period-specific Spain flyer record `lidl-es-country` from `pretio/promos/catalog_app.json`; this does **not** mean the registered landing-page URL is obsolete. The removed record described the 16–22 November flyer. A reference scan across all seven highlight feeds found **zero** dependent entries, so no highlight reference needed migration/deletion.
 - No Product Highlights were added, edited or deleted. Final strict validation found **zero expired products** across all seven feeds.
 - No product price, image or catalog entry was copied from audit-only leads whose reuse permission, service area, validity or catalog approval was unresolved. No schema, currency map or location schema was changed.
 - The active catalog manifest now contains 73 entries. Comparing terminal receipts to those active entries yields 73 terminal dispositions, 0 pending and 0 failed. The frozen 74-entry registered run ledger remains unchanged by the separate expired-record retirement.
@@ -48,10 +48,21 @@ After the audit report was updated, all three workflows also passed on report-on
 - [Pretio public catalog browser — run 23](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45168957776) — success.
 - [Website security regression — run 10](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45168957738) — success.
 
-This final evidence update will trigger another documentation-only PR workflow. The PR and Issue #57 handoff will carry the latest head SHA and its final check status.
+All three workflows also passed on PR head `6f72bb8bd6cfb9d580eed94d7386db0949cdc474`:
+
+- [Pretio public content skill & schema gates — run 20](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45170807349) — success.
+- [Pretio public catalog browser — run 24](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45170807490) — success.
+- [Website security regression — run 11](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45170807468) — success.
+
+## Post-run targeted review — Lidl Spain
+
+- The audit follow-up correctly distinguished the stable official weekly-flyer hub from the expired period-specific record. On 2026-11-23, the same official hub URL displayed a successor flyer dated 23–29 November. The live page's title and date listing were checked; no flyer products, prices or images were extracted. Official hub URL (retained as non-clickable evidence text): `https://www.lidl.es/c/descubre-nuevas-ofertas-cada-semana-folletos-lidl/s10087402`.
+- The official Lidl legal notice (`https://www.lidl.es/c/aviso-legal/s10075786`) states that links to the portal from another website require prior express consent, and that commercial reproduction, distribution or public communication of site content requires authorization. No such permission is recorded in this repository or run evidence. The PR therefore keeps the expired period-specific entry retired and does not publish a replacement link or copy current flyer content.
+- The permission decision is tracked separately in [Issue #61](https://github.com/maxqstudio/maxqstudio.github.io/issues/61). If the Owner supplies written permission, a later audited change may restore the same ID with evergreen hub metadata and no invented validity dates. If not, keep the source out of active catalog data.
+- This was a focused post-run source/terms review, not another crawl. It did not change catalog, Product Highlights or schema data.
 
 ## Review handoff
 
-1. Independent auditor: start from the full instructions in [Issue #57](https://github.com/maxqstudio/maxqstudio.github.io/issues/57) and the merged crawling skill from [PR #58](https://github.com/maxqstudio/maxqstudio.github.io/pull/58). Review this run from a separate room and inspect every receipt, checkpoint, handoff, deletion reference scan, and disclosed deviation.
+1. Independent auditor: start from the full instructions in [Issue #57](https://github.com/maxqstudio/maxqstudio.github.io/issues/57) and the merged crawling skill from [PR #58](https://github.com/maxqstudio/maxqstudio.github.io/pull/58). Review this run from a separate room and inspect every receipt, checkpoint, handoff, deletion reference scan, disclosed deviation, and the Lidl permission decision tracked in [Issue #61](https://github.com/maxqstudio/maxqstudio.github.io/issues/61).
 2. Global discovery is incomplete until the remaining 140 selected markets are independently researched or explicitly dispositioned under the Issue #57 contract. Do not treat this candidate as complete global coverage.
-3. No merge or deployment has been performed. Owner approval must wait for the independent auditor's report as required by Issue #57.
+3. Keep PR #60 in Draft and do not merge or deploy until the independent audit, Lidl permission decision, and Owner approval are complete.
