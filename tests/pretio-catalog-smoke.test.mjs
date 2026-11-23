@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:8765';
+const activeCatalogCount = JSON.parse(readFileSync('pretio/promos/catalog_app.json', 'utf8')).items.length;
 mkdirSync('artifacts/screenshots', { recursive: true });
 const browser = await chromium.launch({ headless: true });
 
@@ -59,7 +60,7 @@ try {
     await page.locator('#merchant').selectOption('Lidl');
     assert.equal(await page.locator('.catalog-card').count(), 1);
     await page.locator('#country').selectOption('ALL');
-    assert.equal(await page.locator('.catalog-card').count(), 74);
+    assert.equal(await page.locator('.catalog-card').count(), activeCatalogCount);
     await page.locator('#search').fill('<img src=x onerror=alert(1)>');
     assert.equal(await page.locator('.catalog-card').count(), 0);
     assert.equal(await page.locator('#results img[src="x"]').count(), 0);
