@@ -20,6 +20,14 @@ If an existing optional item field is absent/unverifiable (`brand`, `package_siz
 
 See `online-shop-marketplace-rules.md` and `templates/ONLINE_SHOP_CHECKLIST.md`. Max 80 per country and 20 per retailer remain unchanged.
 
+## Owner rule — location makes a highlight useful
+
+**Physical retailer catalog:** Audit the exact promotion's eligible branches, province/city, validity and published participation rules. The item must have confirmed **country-wide** offer eligibility to enter the current country-level Product Highlights v1. A catalog tagged `national` is insufficient proof: a leaflet for Jabodetabek must never be represented as available across all Indonesia.
+
+**Online store / marketplace:** No province/city match is necessary **if** the product variant, publicly visible deal price and seller's ordering/fulfillment channel are verified as usable for the **entire selected country**. Confirm seller shipping/checkout coverage and country-local currency; do not require every postal code to be individually queried if the seller has credible official nationwide terms. An online platform localized to one region, local-pickup-only item, or country-specific restricted listing still fails the national-product gate.
+
+**Auditor requirement:** Record audit-only `source_kind=PHYSICAL_RETAIL|ONLINE_STORE`, `market_code`, `verified_area`, `fulfillment_evidence`, `location_decision` and the actual source URL. If a physical retailer is regional or an online seller cannot establish target-market eligibility, keep that candidate OUT of published feed. No `area`, `shipping` or `source_kind` field may be added to existing production items.
+
 ## Exact schema contracts
 
 - Top-level country-feed keys **only**: `schema`, `schema_version`, `country`, `currency`, `revision`, `generated_at`, `items`. Values `pretio.product_highlights.v1`, `1`, ISO country, configured ISO currency, opaque revision, real UTC generated time.
