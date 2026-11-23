@@ -25,6 +25,14 @@ Checked UTC: `<timestamp>`
 - [ ] Currency metadata present for publishing; otherwise audit only
 - [ ] All discovered seller/store candidates have terminal audit status
 
+## A2. Extraction normalization before offer matching
+- [ ] Source title preserved exactly in separate audit evidence
+- [ ] All known catalog shorthand expanded into natural user-facing names
+- [ ] Intermediate `productName`, `brand`, `variant`, `packageSize`, `packCount` extracted separately
+- [ ] Verify brand, actual seller, variant and physical pack quantity against public source
+- [ ] Keep recognized abbreviations (`UHT`, `3in1`, `SPF`, `ml`, `g`, `kg`, `L`, `pcs`)
+- [ ] No unsupported structured extraction keys enter production highlight v1 JSON
+
 ## B. Each product offer
 | Audit-only field | Required recorded evidence |
 |---|---|
