@@ -34,6 +34,13 @@ The app shares memory and persistent disk cache across product images, store log
 
 `JSON REFRESH != IMAGE CACHE PURGE`. An unchanged URL and revision must not cause a full image download. `TTL DOES NOT OVERRIDE A NEW IMAGE REVISION`: a changed revision triggers immediate fetch before TTL. Without revision, the app uses ETag and/or Last-Modified conditional revalidation after soft TTL. It validates MIME and image decoding before atomically switching the cache pointer; failure retains the previous valid image. A bad image or HTML error page is never cached as an image.
 
+## Owner location and expiry policy
+
+- **Physical store offers** require a proven eligible geographic area. Do not publish a regional leaflet's item as country-wide merely because the Catalog Promo URL is labeled national.
+- **Online store offers** need a source-backed public price and ability to order/fulfill in the selected country; when country-wide available, **no province/city check is required**. If geographically restricted, do not treat as national.
+- **Known-expired Product Highlights MUST be deleted from active country feeds** as part of staged release, with atomic feed/index SHA update. Known-expired rotating catalogs must be replaced with verified current/evergreen URL or safely retired under catalog-owner approval, without leaving expired content in active lists. Do not pile expired products in production. An inaccessible source or undated item alone is not expiry proof.
+- **Regular-price products** may be collected as audit-only but may not be smuggled into discount-only country feed v1 using equal/guessed prices.
+
 ## Online shop / marketplace compatibility (no new fields)
 
 The existing updater skill additionally researches official **online stores, direct-to-consumer shops, and verified marketplace seller storefronts**. Google Shopping may be used for candidate discovery through permitted methods, **but neither its snippet nor its pricing is a qualifying source**. For each accepted offer, verify the same merchant/seller, exact product variant, real normal price and lower public promo price, authorized individual image, country-wide eligibility, and source-backed expiry on the actual seller's official listing.
