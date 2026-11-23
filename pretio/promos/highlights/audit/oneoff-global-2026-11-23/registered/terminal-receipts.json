@@ -154,5 +154,21 @@
   {
     "work_id": "IT:lidl-it-country",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "MM:citymart-mm-promotions",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "MM:ocean-supercenter-mm-promotions",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "MY:aeon-my-promotions",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "MY:lotuss-my-weekly",
+    "status": "SKIPPED_BLOCKED"
   }
 ]

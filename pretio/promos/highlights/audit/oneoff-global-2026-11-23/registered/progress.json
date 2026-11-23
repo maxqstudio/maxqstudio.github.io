@@ -2,19 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 39,
-  "pending": 35,
+  "terminal_receipts": 43,
+  "pending": 31,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 14,
+    "SKIPPED_BLOCKED": 15,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 24
+    "SKIPPED_UNVERIFIED": 27
   },
   "pending_work_ids": [
-    "MM:citymart-mm-promotions",
-    "MM:ocean-supercenter-mm-promotions",
-    "MY:aeon-my-promotions",
-    "MY:lotuss-my-weekly",
     "NA:agra-na-country",
     "NA:food-lovers-market-na-country",
     "PE:metro-pe-online-catalogs",
