@@ -1,5 +1,7 @@
 # Pretio — registered source checkpoint
 
+**OWNER SOURCE EXCLUSION (post-run):** Taawon is excluded from all eligible source/product/catalog evidence for this one-off run, including the later discovery-phase access after the GPTBot restriction became known. Keep both historical receipts and incident notes, and do not reinterpret `SKIPPED_BLOCKED` as a verified source. See `../../source-exclusions.json` and `../../discovery/deviations.md`.
+
 Run ID: `pretio-oneoff-global-20261123T040625Z`  
 Work unit: `IQ:taawon-iq-weekly-offers` | manifest position: **37/74** | attempt: **1**  
 Country: **IQ** | merchant: **Taawon Hypermarket** | mode: **AUDIT**  
