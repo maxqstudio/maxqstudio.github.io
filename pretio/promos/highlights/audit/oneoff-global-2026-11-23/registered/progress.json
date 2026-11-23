@@ -2,18 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 36,
-  "pending": 38,
+  "terminal_receipts": 39,
+  "pending": 35,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 13,
+    "SKIPPED_BLOCKED": 14,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 22
+    "SKIPPED_UNVERIFIED": 24
   },
   "pending_work_ids": [
-    "IQ:taawon-iq-weekly-offers",
-    "IT:conad-it-volantini",
-    "IT:lidl-it-country",
     "MM:citymart-mm-promotions",
     "MM:ocean-supercenter-mm-promotions",
     "MY:aeon-my-promotions",

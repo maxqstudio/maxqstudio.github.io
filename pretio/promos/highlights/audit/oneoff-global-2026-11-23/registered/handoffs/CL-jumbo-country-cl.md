@@ -1,0 +1,7 @@
+# Compact handoff — CL-jumbo-country-cl
+
+- Work unit `CL:jumbo-country-cl`, position `9/74`; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; this records only this assigned catalog. Baseline/skill SHA: `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- At `2026-11-23T04:28:38.267Z`, <https://www.jumbo.cl/robots.txt> returned `200 text/plain`, 1,450 bytes, no redirect; its wildcard rules did not disallow `/jumbo-ofertas`. The registered <https://www.jumbo.cl/jumbo-ofertas> returned `200 text/html; charset=utf-8`, 4,978,532 bytes, no redirect, at `04:28:44.292Z`; title: `Jumbo Ofertas | Jumbo.cl`. Requests used one bounded 25-second budget: 9.32 seconds total, 3 GETs, 0 retries.
+- The initial HTML included public Jumbo cards with CLP `listPrice`/`price` pairs and promotion text ending `27 OCT AL 23 NOV 2026`. Sample pairs: Confort 8 un. `8190/6790`; Favorita 24 un. `11540/7690`; Elite Soft & Strong 4 un. `6650/5250`. No candidate was accepted: image host `jumbocl.vtexassets.com` is not in the approved host list and image bytes were not decoded; the catalog-level Chile label does not prove product-wide nationwide eligibility.
+- Terms remain unverified. One text-match follow-up landed on a linked “Bases y Salsas” grocery category (`200 text/html`), not legal terms; no guessed URL or further source request was made. No production JSON changed; existing undated Jumbo feed entries were not treated as expired.
+- Next input: `CL:lider-country-cl`.

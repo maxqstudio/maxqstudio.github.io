@@ -1,0 +1,7 @@
+# Compact handoff — DE-kaufland-de-country
+
+- `DE:kaufland-de-country`, position 18/74, terminal receipt `SKIPPED_UNVERIFIED`; run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`, baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- Exact registered page <https://filiale.kaufland.de/angebote.html> and robots URL were checked. The page and robots both returned HTTP 200. Robots rules do not disallow `/angebote.html`. The page served German (`de-DE`) current offers valid 23–28 Nov 2026, with 40 cards. Four bounded page GETs (20–25s timeout) were used to inspect the response; zero retries or bypasses. The wrapper did not expose final URI/redirect metadata. T&Cs and historical URL stability were not independently checked.
+- Multiple live explicit price pairs were seen, including 5 already represented in DE highlights and the additional audit-only observations above. However, store-selected physical offer geography was not proven nationally, and image URLs were not byte-validated. Publish none from this attempt.
+- Existing DE feed contains 8 Kaufland items, all valid through 2026-11-28. Three were not visible in this 40-card landing-page response; no absence-based cleanup was performed. No expiry or catalog obsolescence was proven; no production JSON changed.
+- Next manifest unit: `DE:lidl-de-country` at <https://www.lidl.de/c/online-prospekte/s10005610/>. Continue in a fresh isolated context.

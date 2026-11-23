@@ -1,0 +1,7 @@
+# Compact handoff — CL-santaisabel-country-cl
+
+- Work unit `CL:santaisabel-country-cl`, position `12/74`; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; this covers only the assigned catalog. Baseline/skill SHA: `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- Checked `2026-11-23T04:34:42.2681487Z`–`04:35:01.2338244Z`. Robots returned `200 text/plain`, 179 bytes, no redirect; wildcard rules allow `/santas-ofertas`, with `Crawl-delay: 1`. Registered <https://www.santaisabel.cl/santas-ofertas> returned `200 text/html; charset=utf-8`, 1,901,306 bytes, no redirect, title `Santas ofertas | Santaisabel.cl | Santaisabel.cl`. Two GETs total, 0 retries, 8-second per-request timeout, 18.97 seconds elapsed.
+- The initial public HTML included Santa Isabel offers. Example Omo Matic Ultra Power 800 g: CLP `4490` list / `1990` offer, campaign text `27 OCT AL 23 NOV` / `27102026 AL 23112026`; Galletas McKay Mantequilla 140 g: `990/650`. These are observed examples, not accepted products.
+- No candidate passed: product images point to `santaisabel.vteximg.com.br`, absent from `allowed_hosts`, and nationwide online eligibility was not established from this response. Terms were not independently verified; no terms or additional page was fetched. Inspection was limited to visible excerpts from one page response; output truncation prevents an exhaustive offer count.
+- CLP is supported and feed caps have room. No production JSON changed; existing undated items were not marked expired. Next: `CL:tottus-country-cl`.

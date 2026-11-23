@@ -1,0 +1,7 @@
+# Compact handoff — EG-spinneys-eg-weekly-deals
+
+- Work unit `EG:spinneys-eg-weekly-deals`, manifest position `25/74`; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; base/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- The active Spinneys Egypt record points to `https://spinneys-egypt.com/en/deals`; its host is allowlisted. Its `valid_until` is null; `last_verified_at` remains `2026-11-15T05:42:54.476Z`.
+- Robots returned `200 text/plain` (144 bytes), with an empty `Disallow` for `User-agent: *`; `/en/deals` is allowed. The registered page returned `200 text/html; charset=utf-8` (363,439 bytes), title `Spinneys: Deals`, same request URI. The footer-linked Terms page returned `200` and a targeted automated-access keyword check found no restriction; the whole legal text was not read line by line. Exact request timestamps/final robots URI were not retained.
+- The visible page requires a delivery area and says the selected address lacks a district; no usable deal cards/prices appeared. No location was guessed, and no hidden API or retry was used. Current offer data, normal/promo price pairs, product images, item geography and validity remain unverified. No obsolescence/expiry is inferred.
+- `EG`/EGP has no currency metadata, no `EG` index entry and no `EG.json` feed. No candidate accepted, no expired item removed and no production JSON changed. Continue with the next frozen manifest source in a fresh context.

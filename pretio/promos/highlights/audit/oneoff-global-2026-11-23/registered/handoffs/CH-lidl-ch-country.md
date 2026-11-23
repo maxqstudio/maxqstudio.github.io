@@ -1,0 +1,7 @@
+# Compact handoff — CH-lidl-ch-country
+
+- Work unit `CH:lidl-ch-country`, manifest position `6/74`; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`, audit completed `2026-11-23T04:22:44Z`.
+- Robots <https://sortiment.lidl.ch/robots.txt> returned HTTP 200 `text/plain;charset=UTF-8`, no redirects; wildcard rules allow the registered `/de/aktuelle-aktionen` path. The single canonical URL request <https://sortiment.lidl.ch/de/aktuelle-aktionen> returned HTTP 200 `text/html; charset=UTF-8`, 298,593 bytes, final=requested, zero redirects. No retry or alternate route was used.
+- The official page title is “Aktuelle Aktionen | Lidl Schweiz”; page 1 lists promo-only examples (Weichspüler CHF 1.99/750ml, duplo Lebkuchen CHF 3.59/182g, Airwaves CHF 9.75/294g). The response contains pagination for pages 1–5. The page text has promo prices but no explicit matching normal/reference price evidence, so no candidate qualifies. The listing also says “Angebote solange Vorrat.”
+- Product images were not fetched/decoded; item validity dates and national applicability were not proven. The catalog coverage label says “Switzerland (location-selected offers).” CHF is supported, but that alone is insufficient. Existing CH feed has no Lidl entries. Terms pages were linked but not opened; terms remain unchecked.
+- No production JSON, catalog record, feed, index, or Issue #57 was changed. Next: coordinator proceeds to the next manifest work unit; do not claim the uninspected pages 2–5 were checked.

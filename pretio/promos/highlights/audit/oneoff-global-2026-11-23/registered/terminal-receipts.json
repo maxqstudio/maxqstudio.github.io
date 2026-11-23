@@ -142,5 +142,17 @@
   {
     "work_id": "ID:transmart-location-live",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "IQ:taawon-iq-weekly-offers",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "IT:conad-it-volantini",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "IT:lidl-it-country",
+    "status": "SKIPPED_UNVERIFIED"
   }
 ]

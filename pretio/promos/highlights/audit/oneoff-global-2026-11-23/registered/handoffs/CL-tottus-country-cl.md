@@ -1,0 +1,7 @@
+# Compact handoff — CL-tottus-country-cl
+
+- Work unit `CL:tottus-country-cl`, position `13/74`; terminal receipt `SKIPPED_BLOCKED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`, attempt `1`; baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- The active Catalog Promo record identifies Tottus Chile, national CL coverage, and <https://www.tottus.cl/tottus-cl/content/ofertas-tottus>; registered host `www.tottus.cl` is allowlisted. It has no `valid_until`; `last_verified_at` remains `2026-09-14T00:00:00Z`.
+- At `2026-11-23T04:42:23.5428841Z`, <https://www.tottus.cl/robots.txt> returned `403 text/html; charset=UTF-8`, 4,544 bytes, no redirect. At `04:43:18.8151032Z`, the registered offers URL returned `403 text/html; charset=UTF-8`, 5,658 bytes, no redirect, completing at `04:43:19.1129962Z`. Request timeouts were 8s and 22s; two GETs total, zero retries. Neither response provided robots rules or offer content. Terms remain unverified; no additional or guessed URL was fetched.
+- No products were inspected, so no price/image/validity/nationwide evidence was available. CLP is configured; the feed has 24/80 items and three Tottus items, leaving 56 country and 17 retailer slots. Existing items were not revalidated; no expiry is inferred. No production JSON changed.
+- No CAPTCHA, login, bypass, hidden API, alternate host or proxy was used. Source classification: `STALE_UNVERIFIED`; no obsolescence claim. Next manifest unit: `CL:unimarc-country-cl`.
