@@ -12,6 +12,19 @@ Intended GitHub Actions cron (UTC): `17 1,13 * * *` = 09:17 and 21:17 WITA. Also
 
 Start with a manual AUDIT, then every scheduled production cycle must **attempt all official catalogs in all countries in the catalog manifest**, not only the 7 highlight-feed countries. Unsupported currency blocks highlight publication for that country, **not** its catalog check. Use country partitions; start at most 4 parallel country workers and <=1 in-flight request per retailer host, finite timeouts and randomized backoff. Avoid robots/ToS violations and HTML scraping when a source provides a permitted public feed.
 
+## Bounded online-shop / marketplace discovery after catalog coverage
+
+**Mandatory research scope extension:** Catalog work units are still enumerated exactly from the frozen accepted catalog manifest. In the same Owner-authorized countries, add a **separate bounded discovery phase** for independent online shops and genuine marketplace seller storefronts (including online-only retailers). Do not assume that "retailer" only means a physical supermarket.
+
+1. For each scoped country, search permitted public direct-store directories, authorized e-commerce product feeds/APIs and official marketplace store/offer pages. Google Shopping is only a **discovery lead** when permitted; do not automate scraping Google Search/Shopping pages against their rules or use Google Shopping pricing as source proof.
+2. Verify the real seller identity, the official storefront, seller-specific item URL, market, explicit public normal/promo price pair, item photo, any promo dates, and access conditions. One platform can contain thousands of sellers; treat each discovered seller as a distinct audit identity rather than treating the whole platform as one retailer.
+3. Use `templates/ONLINE_SHOP_CHECKLIST.md` and one compact handoff per new shop. Limit pagination, rate, time and retries, and record **search/query coverage bounds**; no claim of internet-wide completeness.
+4. Map eligible offers to an **existing approved** seller/store `catalog_id` only. If none exists, stage the discovery and price evidence as AUDIT_ONLY, mark `NEEDS_CATALOG_APPROVAL`, and continue without changing the production catalog or feed. A new merchant/canonical marketplace host is never auto-allowlisted.
+5. Keep two distinct sets of counters: registered `manifest_total/terminal_receipts/pending` and discovered `shops_found/checked/verified/awaiting_approval/blocked`. Do not use discovered shops as fake terminal receipts; do not declare research of all web stores "complete" when it was bounded.
+6. On explicit `ONE_OFF:ID` or `ONE_OFF_GLOBAL`, perform **one** scoped research cycle only and STOP; no cron, polling loop, or ongoing scheduler is created by the skill update.
+
+The country-feed v1 / index v2 exact-key and evidence requirements remain unchanged. See `online-shop-marketplace-rules.md` for the complete policy.
+
 ## Preflight / completeness tools
 
 - Generate the **entire**, currency-independent manifest: `python3 tooling/pretio_public_content/manifest.py > /tmp/pretio-manifest.json`.
