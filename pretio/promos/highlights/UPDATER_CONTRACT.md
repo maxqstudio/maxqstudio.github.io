@@ -34,6 +34,14 @@ The app shares memory and persistent disk cache across product images, store log
 
 `JSON REFRESH != IMAGE CACHE PURGE`. An unchanged URL and revision must not cause a full image download. `TTL DOES NOT OVERRIDE A NEW IMAGE REVISION`: a changed revision triggers immediate fetch before TTL. Without revision, the app uses ETag and/or Last-Modified conditional revalidation after soft TTL. It validates MIME and image decoding before atomically switching the cache pointer; failure retains the previous valid image. A bad image or HTML error page is never cached as an image.
 
+## Mandatory confirmed-expiry / obsolete-source deletion
+
+Every authorized staged release must **delete all provably expired items from active Product Highlights country feeds** and **retire or replace every proven-obsolete promotional Catalog Promo entry**. `valid_until < today` in the relevant market proves an item's expiry when date is source-backed. Catalog Promo period-specific URLs that have ended must be replaced with a verified official evergreen/current source (preserving `catalog_id` where appropriate) or removed from the live `items` list once all dependent highlights are resolved.
+
+**Atomic integrity rule:** Removing a Catalog Promo entry must not strand any `CC.json.items[].catalog_id`. Delete proven-expired linked products, migrate independently verified current products only with an approved successor, or HOLD the pending removal for review. Update the exact SHA-256 hashes and revisions of changed country feeds and index. No old catalog/archive record should be kept in the active production list just for history.
+
+Do **not** mass-delete due to a lone 404, timeouts, CAPTCHA, stale `last_verified_at` or lack of observed discounts. These are `STALE_UNVERIFIED` and require evidence. Keep bounded deletion receipts in audit files and report removed product IDs, removed/relinked catalog IDs, evidence and blockers to Owner.
+
 ## Owner location and expiry policy
 
 - **Physical store offers** require a proven eligible geographic area. Do not publish a regional leaflet's item as country-wide merely because the Catalog Promo URL is labeled national.
