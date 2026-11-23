@@ -244,11 +244,31 @@
     "status": "SKIPPED_BLOCKED"
   },
   {
+    "work_id": "RS:lidl-rs-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
     "work_id": "RS:maxi-rs-country",
     "status": "SKIPPED_UNVERIFIED"
   },
   {
     "work_id": "RS:univerexport-rs-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "TR:a101-tr-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "TR:bim-tr-country",
+    "status": "SKIPPED_UNAVAILABLE"
+  },
+  {
+    "work_id": "TR:migros-tr-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "TR:sok-tr-country",
     "status": "SKIPPED_UNVERIFIED"
   }
 ]

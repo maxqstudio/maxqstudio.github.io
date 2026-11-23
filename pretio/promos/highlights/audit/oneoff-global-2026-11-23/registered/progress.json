@@ -2,21 +2,16 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 63,
-  "pending": 11,
+  "terminal_receipts": 68,
+  "pending": 6,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
     "BLOCKED_CURRENCY_METADATA": 2,
-    "SKIPPED_BLOCKED": 22,
-    "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 38
+    "SKIPPED_BLOCKED": 25,
+    "SKIPPED_UNAVAILABLE": 2,
+    "SKIPPED_UNVERIFIED": 39
   },
   "pending_work_ids": [
-    "RS:lidl-rs-country",
-    "TR:a101-tr-country",
-    "TR:bim-tr-country",
-    "TR:migros-tr-country",
-    "TR:sok-tr-country",
     "US:aldi-us-country",
     "US:kroger-us-country",
     "US:target-us-country",
