@@ -46,6 +46,14 @@ Respect `robots.txt`, website terms, CAPTCHA, authentication, platform API limit
 
 For marketplace results, check **seller identity on the product-detail page** as well as the storefront; the same SKU sold by two unrelated merchants must be treated as two independent offers, not a two-price discount. Deduplicate one merchant/SKU observed through multiple discovery paths.
 
+## Physical retail versus online fulfillment location policy
+
+**Physical promotion:** a promotion is eligible for a country Product Highlights only when the offer itself is backed by a nationwide participation/price source (not just the catalog URL). Store-specific/postcode/city/province offers stay audit-only until a supported location-specific presentation exists.
+
+**Online store:** the item does NOT require province/city filters if the same public deal for the same verified seller and variant can be ordered for fulfillment within the target country under official nationwide delivery or market terms. This is a market-level check, not proof from the bare marketplace domain, and not a promise of stock in every postal code. Source-backed nationwide delivery policy and confirmed market-local product availability can be sufficient; if evidence suggests city restrictions, local fulfillment-only, or different regional prices, reject from the country-wide feed. No login or private checkout capture.
+
+Record the actual market and source-supported fulfillment scope in AUDIT artifacts, not in country feed fields. Do not collect users' addresses.
+
 ## 4. Offer qualification — all mandatory
 
 - **Same listing, merchant and variant**: exact `product_name`, model/SKU, size/count, color/variant if price-relevant, condition and retailer/seller verified. Multiple sellers' prices are NOT normal/promo prices for one offer.
