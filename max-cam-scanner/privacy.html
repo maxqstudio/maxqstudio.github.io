@@ -40,7 +40,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Max Cam Scanner by Max-Q Studio</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 16 November 2026 · Android &amp; iOS app “Max Cam Scanner” (com.maxq.scanner)</p>
+      <p class="meta">Effective 23 November 2026 · Android &amp; iOS app “Max Cam Scanner” (com.maxq.scanner)</p>
 
       <div class="box content-card hl">
         <strong>In short:</strong> document photos and OCR are processed on your phone by default. If you choose AI mode, selected page images are sent through our server to configured AI provider(s) to create editable Word or Excel output. Sharing or saving to a workspace also sends data off your device. Ads are served by Google AdMob.
@@ -55,6 +55,7 @@
         <li><strong>Camera and photos.</strong> The camera is used only when you tap Scan. Gallery photos and PDF files are read only when you pick them.</li>
         <li><strong>Scans, OCR results, annotations, watermarks, and signatures.</strong> These are stored in the app's storage on your phone. Text recognition (OCR) uses Google ML Kit running on the device, so OCR itself does not send images to a server. AI mode is different: when you choose it, selected page images are sent for AI processing as described in section 5.</li>
         <li><strong>Signatures</strong> you draw are stored as images on your phone. They are not certified electronic signatures.</li>
+        <li><strong>Password attempt lockout state.</strong> For email-and-password accounts, the App stores a local failed-attempt counter and temporary block expiry timestamp on your phone to enforce progressive blocks (5 wrong attempts &rarr; 5 minutes, then 15 minutes, 60 minutes, and up to 24 hours max; another wrong attempt after 24 hours blocks for 24 hours again) during sign-in and password change. This state is cleared automatically after a successful password entry or password reset.</li>
       </ul>
       <p>Deleting a document or the app removes that data from the device.</p>
 
@@ -102,7 +103,7 @@
       </ul>
 
       <h2>9. Security</h2>
-      <p>Data travels over encrypted connections (HTTPS). Workspace access is limited by security rules that check membership and role on every request. No system is 100% secure, so think twice before storing highly sensitive documents.</p>
+      <p>Data travels over encrypted connections (HTTPS). Workspace access is limited by security rules that check membership and role on every request. Email-and-password sign-in and password changes are additionally protected by progressive temporary blocks after repeated wrong password attempts (5 wrong attempts &rarr; 5 minutes, then 15 minutes, 60 minutes, and up to 24 hours max). No system is 100% secure, so think twice before storing highly sensitive documents.</p>
 
       <h2>10. Children</h2>
       <p>The app is not intended for children under 13, and we do not knowingly collect their data.</p>
@@ -111,7 +112,7 @@
       <p>You can ask to access, correct, or delete your personal data under applicable law, including Indonesia's Personal Data Protection Law (Law No. 27 of 2022). Contact us at the email above.</p>
 
       <h2>12. Changes</h2>
-      <p>If this policy changes, the effective date on this page is updated. For important changes, we also let you know in the app. This update explains AI mode data processing and the separation of Max Cam Scanner accounts, plans, and workspaces from maxq.tools.</p>
+      <p>If this policy changes, the effective date on this page is updated. For important changes, we also let you know in the app. This update explains local password attempt lockout state, AI mode data processing, and the separation of Max Cam Scanner accounts, plans, and workspaces from maxq.tools.</p>
     </article>
   </main>
 
