@@ -17,6 +17,23 @@
 2. **PERIODIC LINK — official URL changes each promotion period:** allowable only when that exact catalog's **real, sourced** `valid_until` is included (and `valid_from` if known), plus evidence for replacement. Do not substitute an arbitrary next Monday or "7-day default". If missing expiry, don't register the rotating link; find the permanent landing URL, else report `BLOCKED_MISSING_EXPIRY`.
 3. **Unstable, blocked or unlicensed URLs:** do not replace with aggregator, guessed redirect, social repost, or bypassed session URL. Preserve known-good canonical registration if still valid, flag for review.
 
+## OWNER RULE — purge obsolete Catalog Promo listings (no accumulation)
+
+A catalog is eligible for **removal from the live `catalog_app.json.items`** when there is **positive evidence** that the exact promotional source is obsolete:
+- A rotating, date-scoped catalog has `valid_until` before today's **local market date**, and no current official replacement can be verified; or its official site identifies it as an ended promotion;
+- The retailer confirms the promotional page/campaign was discontinued or migrated to an official successor. If a verified evergreen successor exists, **prefer replacing `url` on the same stable catalog `id`** rather than deleting a still-useful retailer source;
+- The retailer/publisher publicly confirms a store/channel has ceased operation, or the listing is a confirmed obsolete duplicate of an existing current canonical catalog.
+
+A **single HTTP 404, timeout, CAPTCHA, geo-block, stale `last_verified_at`, or no product discount on one visit is NOT sufficient evidence** of a permanently obsolete retailer/catalog. Mark `SKIPPED_UNAVAILABLE` or `STALE_UNVERIFIED` in audit and keep it out of *current-promo claims* until assessed; do not delete legitimate sources blindly.
+
+For confirmed obsolete sources, **delete their entry from the candidate active `items` array**; don't invent `status=expired`, `archived`, or hidden production fields. Before removal, inspect all `CC.json` feeds for highlights referencing that `catalog_id`:
+1. If an item was proved expired, DELETE it from the active Product Highlights feed.
+2. If a nonexpired offer is still independently verified on an approved official successor, migrate its catalog reference **only** with evidence and approved catalog ID.
+3. Otherwise hold catalog removal for manual review and do not publish an orphan highlight.
+4. Rebuild final source list + changed country feeds + index v2 as **one atomic validated snapshot**, recompute SHA-256 and run strict source/foreign-key/expiry/browser tests.
+
+Retain minimal deletion reasons and former URLs in a **bounded audit report**, not in production. **Acceptance:** no proven obsolete promotion listing and no proven expired Product Highlight remains in active published arrays; zero orphan `catalog_id` foreign keys. This is mandatory for every Owner-authorized staged publication, even if an unrelated crawl fails.
+
 ## Every catalog check (not just products)
 
 - Match `country_code` and explicit regional scope in the accepted location rules. National catalog landing pages can expose store-specific prices; a nationwide entry does **not** establish a national product discount.
