@@ -34,6 +34,14 @@ The app shares memory and persistent disk cache across product images, store log
 
 `JSON REFRESH != IMAGE CACHE PURGE`. An unchanged URL and revision must not cause a full image download. `TTL DOES NOT OVERRIDE A NEW IMAGE REVISION`: a changed revision triggers immediate fetch before TTL. Without revision, the app uses ETag and/or Last-Modified conditional revalidation after soft TTL. It validates MIME and image decoding before atomically switching the cache pointer; failure retains the previous valid image. A bad image or HTML error page is never cached as an image.
 
+## Online shop / marketplace compatibility (no new fields)
+
+The existing updater skill additionally researches official **online stores, direct-to-consumer shops, and verified marketplace seller storefronts**. Google Shopping may be used for candidate discovery through permitted methods, **but neither its snippet nor its pricing is a qualifying source**. For each accepted offer, verify the same merchant/seller, exact product variant, real normal price and lower public promo price, authorized individual image, country-wide eligibility, and source-backed expiry on the actual seller's official listing.
+
+The `catalog_id` must already reference an approved active Catalog Promo store/source with matching official HTTPS host, using the unchanged `official_digital_channel` or `official_retailer` source type. An unregistered seller/platform/store or unapproved host requires separate Owner review and remains **audit-only** until approved. `seller_id`, `platform`, `discovery_source`, `coupon` and any other new fields are forbidden in production catalog/feed/index. Bounded online-store discovery is accounted **separately** from the frozen registered-catalog manifest; manifest receipts alone are not evidence of an internet-wide shop crawl.
+
+An explicit ONE_OFF run remains exactly once for the selected countries; **no scheduler is installed or enabled** by these skill rules.
+
 ## Explicit one-off Owner requests (highest priority)
 
 When Owner explicitly requests `kerjakan 1 kali saja untuk Indonesia`, the updater must **run exactly one Indonesia-only cycle**, check every Indonesia catalog, collect and stage valid discounted products, skip inaccessible/unchanged catalogs, prune only supported Indonesia expiries, then STOP. Do not enumerate/fetch/process other countries, create or enable a schedule, repeat the operation or mutate other-country feeds. The shared catalog directory may only change existing Indonesia entries. Global 12-hour exhaustive rules below apply to recurring runs and must **not** override an explicit narrower one-off command. Run manifest CLI: `python3 tooling/pretio_public_content/manifest.py --once --country ID`.
