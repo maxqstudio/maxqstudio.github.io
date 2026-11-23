@@ -90,5 +90,17 @@
   {
     "work_id": "EC:tia-ec-ofertias",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "EG:carrefour-egypt-offers",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "EG:spinneys-eg-weekly-deals",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ES:aldi-es-weekly-offers",
+    "status": "SKIPPED_BLOCKED"
   }
 ]

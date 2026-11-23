@@ -2,31 +2,33 @@
   "artifact_type": "pretio.oneoff_global_country_discovery_progress.v1",
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
-  "updated_at_utc": "2026-11-23T05:05:21Z",
+  "updated_at_utc": "2026-11-23T09:15:43Z",
   "candidate_country_count": 249,
   "country_target": 174,
   "selected_count": 174,
   "researched_count": 0,
   "verified_official_catalog_count": 0,
   "approved_active_catalog_count": 0,
-  "no_verifiable_source_count": 2,
-  "blocked_count": 1,
-  "terminal_disposition_count": 4,
-  "pending_disposition_count": 170,
+  "no_verifiable_source_count": 5,
+  "blocked_count": 4,
+  "terminal_disposition_count": 10,
+  "pending_disposition_count": 164,
   "disposition_counts": {
-    "SKIPPED_NO_VERIFIABLE_SOURCES": 2,
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 5,
     "NEW_ROTATING_CANDIDATE": 1,
-    "SKIPPED_BLOCKED": 1
+    "SKIPPED_BLOCKED": 4
   },
   "bounded_searches_used": {
-    "catalog_promo_searches": 4,
-    "online_shop_marketplace_searches": 4,
-    "official_leads_opened": 7
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "official_leads_opened": 10
   },
   "lead_outcomes": {
-    "audit_only_rotating_candidate": 1,
-    "unverified_or_nonpromotional": 5,
-    "blocked_by_source_terms": 1
+    "audit_only_rotating_candidates": 1,
+    "blocked_by_source_terms_or_robots": 6,
+    "access_permission_unverified": 2,
+    "unreadable_historical_or_nonpromotional": 4,
+    "search_categories_without_official_lead": 7
   },
   "product_candidates_accepted": 0,
   "production_catalog_or_highlight_changes": 0,
@@ -35,13 +37,20 @@
     "checkpoints/CN-china.md",
     "checkpoints/JP-japan.md",
     "checkpoints/IN-india.md",
-    "checkpoints/GB-united-kingdom.md"
+    "checkpoints/GB-united-kingdom.md",
+    "checkpoints/RU-russia.md",
+    "checkpoints/BR-brazil.md",
+    "checkpoints/KR-south-korea.md",
+    "checkpoints/MX-mexico.md",
+    "checkpoints/FR-france.md",
+    "checkpoints/CA-canada.md"
   ],
   "limitations": [
-    "This four-market batch does not satisfy the 174-market target.",
-    "Meituan and SPAR page opens returned no readable content, Zepto returned HTTP 403, and Tesco terms prohibit automated crawling; other leads lacked current product-promotion evidence.",
-    "GB source terms prohibit automated crawling without prior written consent; that page was not used for product data.",
-    "Search tool did not retain exact query timestamps; country checkpoints record this limitation.",
+    "This progress snapshot covers 10 of the 174 selected markets; 164 dispositions remain pending.",
+    "No country in these batches met the full official-ownership, permitted-access, geography and current-promo coverage gate. JP has one audit-only rotating campaign lead and is not counted as researched or catalog-covered.",
+    "GB Tesco terms prohibit automated crawling without prior written consent; no product information from that source is used.",
+    "Source restrictions included blocked or disallowed pages and terms checks that timed out; details are in the country and per-source checkpoints.",
+    "Search tool did not retain exact query timestamps; country notes record this limitation.",
     "No search-result snippet was used as Product Highlights price evidence."
   ]
 }

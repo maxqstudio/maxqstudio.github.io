@@ -1,0 +1,9 @@
+# Market-discovery source note — France online grocery lead
+
+- Run: `pretio-oneoff-global-20261123T040625Z`; selected market: France (FR), rank 29/174.
+- Search budget: the single France online-shop query was already used: `France courses en ligne supermarché boutique officielle livraison courses`. It returned the Carrefour France lead `https://www.carrefour.fr/courses`. Search result is a discovery lead only, not offer evidence.
+- Public robots request: `GET https://www.carrefour.fr/robots.txt` returned HTTP 200, `text/plain`, 466 UTF-8 bytes. Under `User-agent: *`, paths `/set-store`, `/get-store`, `/webview`, `/g`, and `/b` are disallowed; `/courses` is not disallowed by the returned rules.
+- Exact source request: one time-bounded `GET https://www.carrefour.fr/courses` at approximately `2026-11-23 05:57 UTC` returned HTTP **403 Forbidden**. PowerShell exposed no response content type, final URL, redirect chain, or body in the caught error. No retry, alternate host, guessed Terms URL, login, CAPTCHA, proxy, or bypass was attempted.
+- Ownership is suggested by the source domain and search-result title, but could not be independently confirmed from the blocked page. No Terms link was available because the request returned 403; permission under Terms is unknown. The `.fr` path suggests a France storefront, but order coverage and price geography were not verified.
+- No offer content was opened or used; no normal/promo prices, product images, validity dates, current promotions, or nationwide delivery scope were verified. No Product Highlight candidate accepted and no production data changed.
+- Audit disposition: `SKIPPED_BLOCKED`. This is a single access denial, not evidence that Carrefour France has no online shop or offers. Handoff: this source cannot be used in this run without an authorized access path; France's bounded catalog query also returned no official Catalog Promo URL.

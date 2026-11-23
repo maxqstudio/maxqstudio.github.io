@@ -2,18 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 23,
-  "pending": 51,
+  "terminal_receipts": 26,
+  "pending": 48,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 8,
+    "SKIPPED_BLOCKED": 10,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 14
+    "SKIPPED_UNVERIFIED": 15
   },
   "pending_work_ids": [
-    "EG:carrefour-egypt-offers",
-    "EG:spinneys-eg-weekly-deals",
-    "ES:aldi-es-weekly-offers",
     "ES:lidl-es-country",
     "ID:alfamart-national-live",
     "ID:hypermart-national-live",
