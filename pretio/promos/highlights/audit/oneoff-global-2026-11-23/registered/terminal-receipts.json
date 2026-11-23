@@ -62,5 +62,9 @@
   {
     "work_id": "CO:olimpica-co-promotions",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "DE:aldi-sued-de-country",
+    "status": "SKIPPED_BLOCKED"
   }
 ]

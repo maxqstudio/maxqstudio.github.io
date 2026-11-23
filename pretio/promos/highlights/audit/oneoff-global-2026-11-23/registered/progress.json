@@ -2,17 +2,16 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 16,
-  "pending": 58,
+  "terminal_receipts": 17,
+  "pending": 57,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 6,
+    "SKIPPED_BLOCKED": 7,
     "SKIPPED_UNAVAILABLE": 1,
     "SKIPPED_UNVERIFIED": 9
   },
   "pending_work_ids": [
     "DE:aldi-nord-de-country",
-    "DE:aldi-sued-de-country",
     "DE:kaufland-de-country",
     "DE:lidl-de-country",
     "DE:rewe-de-country",
