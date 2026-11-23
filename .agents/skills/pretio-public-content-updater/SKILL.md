@@ -32,6 +32,17 @@ description: Research and update Pretio official retailer catalogs, direct onlin
 
 **Read `references/online-shop-marketplace-rules.md` in full.** It controls merchant identity, Google Shopping discovery, online evidence, image validation, catalog registration and production mapping; use the `ONLINE_SHOP_CHECKLIST.md` template for every discovered shop.
 
+## Mandatory deletion of expired items and obsolete promotional catalogs
+
+**Never accumulate known-expired or positively obsolete records in LIVE production lists.** For every staged update:
+- Delete each Product Highlights item whose verified `valid_until` is before today's market-local day, or whose official source proves the offer ended. This applies even if its source cannot be fetched now. Recalculate the changed feed's revision and exact index v2 hash.
+- For an old **period-specific Catalog Promo**, first look for a stable official evergreen replacement. If the existing catalog `id` still identifies the same merchant/source, stage a verified `url` migration under catalog-owner review; otherwise, if the old promo is positively obsolete with no valid successor, remove its entry from the active `catalog_app.json.items` array.
+- Do **not** treat a single 404, network error, access block, missing expiry, or old `last_verified_at` as proof of obsolescence. Audit as `STALE_UNVERIFIED`, investigate separately and continue.
+- **Deletion integrity gate:** no removed catalog may leave any orphan Product Highlights `catalog_id` reference. Remove proven-expired dependent offers or migrate still-valid verified offers to an approved successor; otherwise HOLD publication. Stage catalog + impacted country feeds + index atomically, validate strict expiry/foreign keys/host/market scope/CI, then request Owner review.
+- Audit removed product IDs, removed/replaced catalog IDs, evidence, affected feeds and post-update hashes; keep deletion history OUT of published JSON.
+
+Read `references/catalog-rules.md` and `references/operations.md` for source-backed obsolescence decisions and cross-feed referential integrity.
+
 ## Location-first relevance and expired-item cleanup (Owner-locked)
 
 - **Physical retail:** Product Highlights must be useful in the user's area. Verify the specific retail promotion's participating cities/provinces/stores against the accepted location directory. A nationwide Catalog Promo link alone does **not** prove an individual offer is nationwide. Where the existing country-wide Product Highlights v1 cannot encode a regional offer, keep it audit-only; never misrepresent regional inventory as national.
