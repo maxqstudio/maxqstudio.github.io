@@ -234,5 +234,21 @@
   {
     "work_id": "RO:carrefour-ro-catalogues",
     "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "RO:kaufland-ro-country",
+    "status": "BLOCKED_CURRENCY_METADATA"
+  },
+  {
+    "work_id": "RS:idea-rs-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "RS:maxi-rs-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "RS:univerexport-rs-country",
+    "status": "SKIPPED_UNVERIFIED"
   }
 ]

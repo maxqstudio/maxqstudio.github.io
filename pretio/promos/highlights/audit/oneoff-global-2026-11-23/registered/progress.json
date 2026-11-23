@@ -2,21 +2,17 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 59,
-  "pending": 15,
+  "terminal_receipts": 63,
+  "pending": 11,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "BLOCKED_CURRENCY_METADATA": 1,
-    "SKIPPED_BLOCKED": 21,
+    "BLOCKED_CURRENCY_METADATA": 2,
+    "SKIPPED_BLOCKED": 22,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 36
+    "SKIPPED_UNVERIFIED": 38
   },
   "pending_work_ids": [
-    "RO:kaufland-ro-country",
-    "RS:idea-rs-country",
     "RS:lidl-rs-country",
-    "RS:maxi-rs-country",
-    "RS:univerexport-rs-country",
     "TR:a101-tr-country",
     "TR:bim-tr-country",
     "TR:migros-tr-country",

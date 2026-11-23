@@ -1,0 +1,8 @@
+# Compact handoff — RS:maxi-rs-country
+
+- Run pretio-oneoff-global-20261123T040625Z, ONE_OFF_GLOBAL; unit 63/74, attempt 1; terminal SKIPPED_UNVERIFIED. Baseline/skill SHA: 73fd02fe14c4935c3a95bca49bba3c1498a9cb54.
+- Active source: Maxi, official_retailer, https://www.maxi.rs/maxi-nedeljna-akcija; host allowlisted; valid_until and last_verified_at are null. Linked company info names Delhaize Serbia d.o.o. and gives a Belgrade address. RSD is supported.
+- Robots at https://www.maxi.rs/robots.txt allows the registered path under User-agent: *. The robots URL was accidentally opened twice because the first tool call showed no body; this exceeded the one-check-per-host budget and is recorded in the checkpoint/evidence. No alternate user-agent or bypass was used.
+- The registered page opened once but exposed only navigation and a delivery-time prompt, no current catalog dates or products. Its 22 Nov 2026 delivery notice is not promo validity. The terms URL https://www.maxi.rs/usloviposlovanja exposed only a page shell; reuse permission remains unverified. No product/image review was attempted.
+- The record says users must choose a city and address; nationwide applicability of any item is unverified. RS feed has 27 items, including 8 Maxi references with no valid_until. None was revalidated, changed, or declared expired. No offer was checked, so this is not a no-promo result. Keep the catalog active and STALE_UNVERIFIED; no JSON/feed/progress changes.
+- Details: registered/evidence/RS-maxi-rs-country.md and registered/checkpoints/RS-maxi-rs-country.md. Next input: RS:univerexport-rs-country (64/74).
