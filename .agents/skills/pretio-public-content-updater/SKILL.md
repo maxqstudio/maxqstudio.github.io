@@ -16,7 +16,7 @@ description: Research and update Pretio official retailer catalogs, direct onlin
 - `pretio/data/currency.json` — read-only currency coverage, currently seven countries.
 - `pretio/promos/location.json`, `pretio/location/v2/index.json` — read-only geography.
 - `pretio/promos/highlights/UPDATER_CONTRACT.md` — updated compatibility rules.
-- `references/catalog-rules.md`, `references/highlight-rules.md`, **`references/online-shop-marketplace-rules.md`**, `references/operations.md`.
+- `references/catalog-rules.md`, `references/highlight-rules.md`, **`references/global-catalog-discovery.md`**, **`references/online-shop-marketplace-rules.md`**, `references/operations.md`.
 - `templates/CATALOG_CHECKLIST.md`, **`templates/ONLINE_SHOP_CHECKLIST.md`**, and `templates/COMPACT_HANDOFF.md`.
 
 ## Online-commerce coverage (mandatory when researching products)
@@ -49,6 +49,15 @@ Read `references/catalog-rules.md` and `references/operations.md` for source-bac
 - **Online stores and marketplace sellers:** Province/city matching is **not mandatory** when the identical publicly advertised price, currency and variant are verifiably available for ordering/shipping in the selected user's **country/market**. A platform country domain alone is not proof; country-specific delivery restrictions, regional price differences or pickup-only offers still require evidence. If country-wide fulfillment cannot be established, keep the candidate audit-only.
 - **Expired items MUST be removed from live Product Highlights feed, not retained indefinitely.** On every supported staged publication, delete all existing entries with `valid_until` before the source-market current date or official verified ending evidence, even if source fetch failed. Also remove proven-expired catalog promos from the published active list (or replace with verified new period/evergreen URL under catalog approval). Update feed/index hash and check referential integrity. Keep the historical proof in **bounded separate audit artifacts**, not the live lists. Do not treat an inaccessible source or undated item as verified expired.
 - **Regular-price products can be researched** alongside discounts. Record price observations as audit-only until a separate approved schema/Android change supports their public display; current country Product Highlights v1 only permits genuine `normal_price > promo_price` deals.
+
+## Global Catalog Promo discovery and normal-price observations
+
+- **Discovery target approximately 174 countries**, starting with the documented 249-country/territory V2 registry and a justified commercial-market shortlist; do NOT limit discovery to the 24 countries already registered. Treat 174 as an ambitious coverage goal, not an instruction to invent qualified catalogs. Keep country discovery checkpoints separate from registered catalog receipts.
+- **Evergreen catalog links FIRST:** prefer a single official permanent promotions/catalog URL with regularly updated content. **Rotating catalog URLs SECOND:** use official period-specific PDFs/pages only when no evergreen equivalent exists; source-backed `valid_until` and a repeatable official parent/index navigation path are required. Obsolete verified period catalogs must be replaced by approved current links or removed safely from active lists.
+- **Regular-priced products are allowed in research:** collect actual ordinary prices from authorized official seller listings, even with no discounted offer, but keep them as **audit-only** until an independently approved production schema/UI supports such items. Product Highlights v1 stays discount-only and existing validation must not be weakened. Do not populate a fake normal/promo price pair.
+- **Owner one-off remains one-off:** these rules do not schedule, deploy, or run the crawler. Do one scoped research cycle if explicitly requested, then stop; no repeat or cron.
+
+Read `references/global-catalog-discovery.md` in full; it is mandatory for global market research.
 
 ## Fundamental rules
 
