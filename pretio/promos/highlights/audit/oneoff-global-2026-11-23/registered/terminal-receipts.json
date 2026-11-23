@@ -270,5 +270,13 @@
   {
     "work_id": "TR:sok-tr-country",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "US:aldi-us-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "US:kroger-us-country",
+    "status": "SKIPPED_BLOCKED"
   }
 ]

@@ -2,18 +2,16 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 68,
-  "pending": 6,
+  "terminal_receipts": 70,
+  "pending": 4,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
     "BLOCKED_CURRENCY_METADATA": 2,
-    "SKIPPED_BLOCKED": 25,
+    "SKIPPED_BLOCKED": 27,
     "SKIPPED_UNAVAILABLE": 2,
     "SKIPPED_UNVERIFIED": 39
   },
   "pending_work_ids": [
-    "US:aldi-us-country",
-    "US:kroger-us-country",
     "US:target-us-country",
     "US:walmart-us-country",
     "ZA:foodloversmarket-za-specials",

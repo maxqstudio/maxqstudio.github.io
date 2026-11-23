@@ -1,0 +1,7 @@
+# Compact handoff — US-aldi-us-country
+
+- Work unit `US:aldi-us-country`, position **69/74**; terminal status **SKIPPED_BLOCKED**. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`, baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- Registered URL: `https://www.aldi.us/store/aldi/pages/weekly-specials`; the registry lists `www.aldi.us` as allowed. One robots request returned HTTP 200. The default-user-agent group says `Disallow: /`, which blocks this URL for the direct HTTP client. The explicit `ChatGPT-User` allowance is for `/store/partner_recipes`; it was not treated as permission for weekly specials.
+- No request was made to the catalog page or terms page after the robots result. Weekly promo dates, page geography, product prices/images, terms, and content-reuse permission remain unverified. Do not extract product evidence from this source in this run; no retries, user-agent changes, or bypasses were made.
+- No products accepted, no expiry/obsolescence proved, and no production JSON, feed, index, or shared progress files changed. Preserve the current catalog record and `last_verified_at`.
+- Parent run remains incomplete; market discovery is a separate stage. No raw HTML was fetched or stored.
