@@ -8,7 +8,7 @@ description: Maintain Pretio official Catalog Promo links and discounted country
 Follow the canonical skill at:
 `.agents/skills/pretio-public-content-updater/SKILL.md`
 
-Read that SKILL.md **in full**, then its linked references and checklist templates **before** processing any Pretio catalog or highlight. All restrictions and gates in the canonical skill are mandatory.
+Read that SKILL.md **in full**, including its **online-shop-marketplace-rules.md** reference and **ONLINE_SHOP_CHECKLIST.md** template, before processing any Pretio catalog, online shop, marketplace seller, or highlight. Include direct online merchants and permitted marketplace product offers; Google Shopping is authorized discovery only, not price evidence. All restrictions and gates in the canonical skill are mandatory.
 
 Honor the Owner's explicit scope override: **"kerjakan 1 kali saja untuk Indonesia" means one isolated Indonesia-only execution and STOP**, not a global or recurring scan. A product without a dedicated landing page may use a verified official catalog promo landing URL as `source_url` with proof of that exact discount. Omit unknown optional fields; do not invent required data.
 
