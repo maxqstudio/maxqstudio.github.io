@@ -17,6 +17,12 @@ Terminal result: **`SKIPPED_BLOCKED`**
 - [x] The registered page was fetched once before Terms review. After the restriction was identified, no product extraction or further registered-page access was performed. No written permission was obtained.
 - [x] Current promotion dates/validity, canonical evergreen behavior, and participating-store geography remain unverified. No change to the catalog record or `last_verified_at`.
 
+## Explicit scope / one-off validation
+
+- [x] Scope is the frozen `ONE_OFF_GLOBAL` run, manifest total 74; this checkpoint covers only `US:walmart-us-country`.
+- [x] No other retailer, catalog, or country source was opened from this isolated context. Walmart legal pages were inspected only to establish access and reuse permission for this work unit.
+- [x] No scheduler, cron, retry cycle, or second run was started. Shared progress and aggregate receipts were not edited; the parent run remains incomplete until all other manifest and discovery work is resolved.
+
 ## 1B. Online-store / marketplace discovery
 
 This task covers only the frozen Walmart registered catalog. No other store, seller, or marketplace was opened from this source context.

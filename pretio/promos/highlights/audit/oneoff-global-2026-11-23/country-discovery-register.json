@@ -40,8 +40,8 @@
         "carrefour-uae-fresh-savers",
         "lulu-uae-top-deals"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -620,8 +620,8 @@
         "lidl-ch-country",
         "migros-ch-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -670,8 +670,8 @@
         "tottus-country-cl",
         "unimarc-country-cl"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -715,8 +715,8 @@
         "exito-co-promotions",
         "olimpica-co-promotions"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNAVAILABLE",
+      "research_outcome": "SKIPPED_UNAVAILABLE",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -833,8 +833,8 @@
         "lidl-de-country",
         "rewe-de-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -920,8 +920,8 @@
         "supermaxi-ec-offers",
         "tia-ec-ofertias"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -951,8 +951,8 @@
         "carrefour-egypt-offers",
         "spinneys-eg-weekly-deals"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -996,8 +996,8 @@
         "aldi-es-weekly-offers",
         "lidl-es-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -1564,8 +1564,8 @@
         "transmart-location-live",
         "transmart-location-live"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -1650,8 +1650,8 @@
       "registered_catalog_ids": [
         "taawon-iq-weekly-offers"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -1695,8 +1695,8 @@
         "conad-it-volantini",
         "lidl-it-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2202,8 +2202,8 @@
         "citymart-mm-promotions",
         "ocean-supercenter-mm-promotions"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2373,8 +2373,8 @@
         "aeon-my-promotions",
         "lotuss-my-weekly"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2404,8 +2404,8 @@
         "agra-na-country",
         "food-lovers-market-na-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2604,8 +2604,8 @@
         "plazavea-pe-national",
         "tottus-pe-promotions"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2621,8 +2621,8 @@
         "carrefour-pf-catalogue",
         "tahiti-pas-cher-pf-catalog"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2680,8 +2680,8 @@
         "biedronka-pl-gazetki",
         "lidl-pl-official-gazette"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "NEEDS_CATALOG_APPROVAL",
+      "research_outcome": "NEEDS_CATALOG_APPROVAL",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2755,8 +2755,8 @@
         "intermarche-pt-country",
         "lidl-pt-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2786,8 +2786,8 @@
         "stock-py-online-offers",
         "superseis-py-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2831,8 +2831,8 @@
         "carrefour-ro-catalogues",
         "kaufland-ro-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -2850,8 +2850,8 @@
         "maxi-rs-country",
         "univerexport-rs-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_UNVERIFIED",
+      "research_outcome": "SKIPPED_UNVERIFIED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -3345,8 +3345,8 @@
         "migros-tr-country",
         "sok-tr-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_BLOCKED",
+      "research_outcome": "SKIPPED_BLOCKED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -3462,8 +3462,8 @@
         "target-us-country",
         "walmart-us-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_BLOCKED",
+      "research_outcome": "SKIPPED_BLOCKED",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {
@@ -3661,8 +3661,8 @@
         "foodloversmarket-za-specials",
         "pnp-za-country"
       ],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "NEEDS_CATALOG_APPROVAL",
+      "research_outcome": "NEEDS_CATALOG_APPROVAL",
       "scope_reason": "Registered catalog market included before GDP ranking"
     },
     {

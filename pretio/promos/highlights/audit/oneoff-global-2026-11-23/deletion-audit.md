@@ -26,4 +26,11 @@ Baseline: `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`
 - `orphan_highlight_refs`: 0
 - `deletion_blockers`: none observed
 
-The frozen 74-work-unit manifest and its terminal receipt stay unchanged; this deletion is a separately staged candidate change after the source attempt. Re-run catalog, all-feed foreign-key, strict-expiry and CI validators against the final branch snapshot before review.
+The frozen 74-work-unit manifest and its terminal receipt stay unchanged; this deletion is a separately staged candidate change after the source attempt. ## Final validation record (2026-11-23)
+
+- `python -B tooling/pretio_public_content/validate.py --as-of 2026-11-23 --strict-expiry`: **VALID**, no warnings, zero expired entries in all seven feeds.
+- The same strict validator with the `origin/main` catalog baseline: **VALID**, no warnings.
+- `python -B -m unittest discover -s tooling/pretio_public_content -p 'test_*.py' -v`: **22 tests passed**.
+- Active 73-catalog manifest receipt check: **COMPLETED**, 73 terminal, 0 pending, 0 failed.
+- `git diff --check`: **passed**.
+- GitHub Actions runs after Draft PR creation and will be recorded in `run-report.md` and the Issue #57 handoff. No merge or deployment is authorized by this run.

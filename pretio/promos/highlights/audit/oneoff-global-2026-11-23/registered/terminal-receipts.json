@@ -286,5 +286,13 @@
   {
     "work_id": "US:walmart-us-country",
     "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "ZA:foodloversmarket-za-specials",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ZA:pnp-za-country",
+    "status": "SKIPPED_BLOCKED"
   }
 ]

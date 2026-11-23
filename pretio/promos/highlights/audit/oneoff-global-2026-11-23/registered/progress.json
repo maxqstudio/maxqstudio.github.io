@@ -2,17 +2,14 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 72,
-  "pending": 2,
-  "cycle_status": "INCOMPLETE",
+  "terminal_receipts": 74,
+  "pending": 0,
+  "cycle_status": "COMPLETED",
   "status_counts": {
     "BLOCKED_CURRENCY_METADATA": 2,
-    "SKIPPED_BLOCKED": 29,
+    "SKIPPED_BLOCKED": 30,
     "SKIPPED_UNAVAILABLE": 2,
-    "SKIPPED_UNVERIFIED": 39
+    "SKIPPED_UNVERIFIED": 40
   },
-  "pending_work_ids": [
-    "ZA:foodloversmarket-za-specials",
-    "ZA:pnp-za-country"
-  ]
+  "pending_work_ids": []
 }

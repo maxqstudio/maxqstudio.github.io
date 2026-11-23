@@ -2,7 +2,7 @@
   "artifact_type": "pretio.oneoff_global_run_metadata.v1",
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
-  "status": "IN_PROGRESS",
+  "status": "INCOMPLETE",
   "started_at_utc": "2026-11-23T04:06:25Z",
   "base_branch": "main",
   "base_sha": "73fd02fe14c4935c3a95bca49bba3c1498a9cb54",
@@ -16,8 +16,8 @@
     "generator_output_scope": "ALL_COUNTRIES",
     "generator_output_execution_label": "SCHEDULED_GLOBAL",
     "scope_override_note": "The generator has no ONE_OFF_GLOBAL mode; its complete all-country work-unit list is used unchanged under this explicit one-off scope.",
-    "terminal_receipts": 26,
-    "pending": 48
+    "terminal_receipts": 74,
+    "pending": 0
   },
   "country_discovery": {
     "candidate_registry_count": 249,
@@ -26,11 +26,18 @@
     "researched_count": 0,
     "verified_catalog_count": 0,
     "no_source_count": 5,
-    "blocked_count": 4,
+    "blocked_count": 6,
     "not_selected_count": 75,
     "register_path": "country-discovery-register.json",
     "selection_source": "World Bank indicator NY.GDP.MKTP.CD, 2024 current US dollars; all registered catalog countries are included first, then highest-GDP registry markets.",
-    "raw_source_path": "worldbank-gdp-2024.json"
+    "raw_source_path": "worldbank-gdp-2024.json",
+    "terminal_disposition_count": 34,
+    "pending_disposition_count": 140,
+    "search_counts": {
+      "catalog_promo_searches": 36,
+      "online_shop_marketplace_searches": 39,
+      "official_leads_opened": 39
+    }
   },
   "source_query_budget": {
     "registered_catalogs": "One authorized robots policy check per unique host and one canonical Catalog Promo URL attempt per manifest work unit; at most two retries for transient failures; finite 30-second request timeout; no CAPTCHA or access bypass.",
@@ -38,5 +45,5 @@
     "online_offer_review": "Bounded to public items directly discoverable on approved merchant pages; never use Google Shopping snippets as price evidence; new sellers remain audit-only pending catalog approval."
   },
   "historical_baseline_note": "The base includes the earlier PR #55 highlights run audit (commit 0dfc9d92229824606aea6a7becbc79089d82145b). That audit is historical context, not receipts for this Issue #57 run; Issue #57 requires the expanded market-discovery phase and per-source checkpoints.",
-  "baseline_validation_note": "The Windows checkout initially converted JSON feeds to CRLF under system core.autocrlf=true, so local byte hashes appeared different although every index SHA matched the committed Git blob. After testing canonical Git blob bytes, validate.py --as-of 2026-11-23 --strict-expiry returned VALID with zero expired items in all seven feeds. Default timezone lookup is unavailable in the host Python 3.15 because tzdata is not installed; the explicit date was used for the baseline check. No production feed/index changes were made."
+  "baseline_validation_note": "Baseline validator on 2026-11-23 found zero expired Product Highlights. During this run, one positively expired dated Lidl Spain catalog record was removed after checking all feeds for references; its audit evidence is in deletion-audit.md. No highlights were changed. Final validation is recorded in run-report.md."
 }
