@@ -57,9 +57,6 @@ Other examples:
 | `LIFEBUOY SBN MND PCH 450ML` | Lifebuoy Sabun Mandi 450 ml | Lifebuoy | Pouch | 450 ml | null |
 | `RINSO DTRGN 800G` | Rinso Deterjen 800 g | Rinso | null | 800 g | null |
 | `SUSU UHT 3 x 200ML` | Susu UHT 3 × 200 ml | null | null | 200 ml | 3 |
-| `CAT SPF 50 100ML` | Cat SPF 50 100 ml* | null | null | 100 ml | null |
-
-*The last row is a format-preservation example, **not a verified sale item**; do not accept arbitrary or ambiguous product identities without source confirmation.
 
 **Keep essential packaging identification:** if `Pouch` vs `Botol` changes the product/price/SKU, it must be retained as `variant` and/or included in `productName`; the abbreviated word must never silently disappear from the underlying product identity just to shorten the Home card.
 
