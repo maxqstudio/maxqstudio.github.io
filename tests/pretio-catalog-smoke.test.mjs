@@ -85,7 +85,7 @@ try {
     const page = await browser.newPage();
     let externalLookupCount = 0;
     await page.route('**/cdn-cgi/trace', route => route.fulfill({
-      status: 200, contentType: 'text/plain', body: 'h=localhost\\nloc=ID\\nip=203.0.113.50\\n'
+      status: 200, contentType: 'text/plain', body: 'h=localhost\nloc=ID\nip=203.0.113.50\n'
     }));
     await page.route('https://get.geojs.io/**', route => {
       externalLookupCount++;
@@ -123,7 +123,7 @@ try {
 
     const pageUnsupported = await browser.newPage();
     await pageUnsupported.route('**/cdn-cgi/trace', route => route.fulfill({
-      status: 200, contentType: 'text/plain', body: 'loc=JP\\n'
+      status: 200, contentType: 'text/plain', body: 'loc=JP\n'
     }));
     await openCatalog(pageUnsupported, '');
     assert.equal(await pageUnsupported.locator('#country').inputValue(), 'ALL');
@@ -136,7 +136,7 @@ try {
     let ipLookupCount = 0;
     await page.route('**/cdn-cgi/trace', route => {
       ipLookupCount++;
-      return route.fulfill({ status: 200, contentType: 'text/plain', body: 'loc=US\\n' });
+      return route.fulfill({ status: 200, contentType: 'text/plain', body: 'loc=US\n' });
     });
     await openCatalog(page, '?country=DE');
     assert.equal(await page.locator('#country').inputValue(), 'DE');
