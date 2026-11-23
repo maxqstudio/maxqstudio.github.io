@@ -1,5 +1,7 @@
 # Pretio catalog checkpoint — Pick n Pay South Africa
 
+**OWNER SOURCE EXCLUSION (post-run):** This registered-source request fell outside the robots visit-time window, so **all access-derived source content from this one-off visit is excluded from eligible crawl results and product/candidate verification**. The terminal `SKIPPED_BLOCKED` receipt remains a truthful historical record; this does not erase the access incident or change already-published baseline ZA highlights. See `../../source-exclusions.json` and `../../discovery/deviations.md`.
+
 - Manifest work unit: `ZA:pnp-za-country`, position **74 of 74**; terminal receipt: `SKIPPED_BLOCKED`.
 - Counted as attempted: **yes**. One bounded source check; no retries or product-page exploration.
 - Owner scope: `ONE_OFF_GLOBAL`; this isolated context handled only the assigned PnP catalog. No schedule or second cycle.
