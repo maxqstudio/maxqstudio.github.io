@@ -54,6 +54,10 @@ For marketplace results, check **seller identity on the product-detail page** as
 
 Record the actual market and source-supported fulfillment scope in AUDIT artifacts, not in country feed fields. Do not collect users' addresses.
 
+## Catalog/receipt abbreviation normalization also applies to online commerce
+
+Normalize merchant labels as instructed in `product-name-normalization.md` BEFORE deduplication and matching across official storefronts, marketplaces and physical flyers. Produce intermediate `productName`, `brand`, `variant`, `packageSize`, `packCount` separately; retain raw listing title and seller/SKU proof in audit. Preserve genuine trademarks/standard unit abbreviations and never merge distinct pack sizes or sellers. Only supported `product_name`, `brand`, `package_size` may enter current production highlights; other extraction keys are audit-only.
+
 ## 4. Offer qualification — all mandatory
 
 - **Same listing, merchant and variant**: exact `product_name`, model/SKU, size/count, color/variant if price-relevant, condition and retailer/seller verified. Multiple sellers' prices are NOT normal/promo prices for one offer.
