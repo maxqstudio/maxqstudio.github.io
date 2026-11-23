@@ -27,6 +27,18 @@
 - No unrestricted wildcard host allowlist. Logo/image must be HTTPS and from approved sources and rights-compatible; decodable MIME/image when published.
 - Catalog reader must still accept and display the resulting entries and country filters in `/pretio/catalog/`.
 
+## Online shops and marketplace catalog registration
+
+- **Existing official online merchants are eligible Catalog Promo sources.** A direct-to-consumer shop or permitted marketplace official-store storefront is not excluded for lacking a physical shop or downloadable flyer. Check its offers on publicly accessible store pages and stable product/catalog links.
+- A marketplace platform (e.g. Shopee, Tokopedia, Lazada, Amazon or a country-specific platform) is NOT automatically the seller of a third-party listing. A newly proposed catalog entry must document the verifiable **actual merchant/store** as `merchant` and the platform as `publisher` if appropriate, without adding `platform_id`, `seller_id`, `channel` or other new production keys. If the platform itself sells inventory directly, that is a distinct first-party merchant.
+- Existing `source_type = official_digital_channel` may be used ONLY when it truthfully describes the approved store/channel. Keep `content_type = webview`, `coverage_type = national`, allowed country `locations`, HTTPS `url`, and only existing allowlisted keys. The canonical store/catalog URL should be a stable, public link; a seller-specific storefront is preferred over a generic marketplace homepage that does not identify a seller. Periodic URLs need source-backed `valid_until`.
+- **New seller/store registration requires Owner review before any production edit**, including `id`, verified `merchant` identity, `publisher`, seller URL, country-wide coverage, selected market/currency compatibility, matching source host, and exact `allowed_hosts` addition. Do not add broad wildcard hosts or unrelated aggregators. Maintain stable IDs and foreign keys once approved.
+- A merchant found through Google Shopping is **discovery only**; Google Shopping Search results and price cards are not official Catalog Promo entries or Product Highlights `source_url`. Confirm on the actual seller's official website or permitted marketplace listing.
+- A marketplace product page may be the official evidence URL **only when** the page identifies the same registered seller/store, item variant, public price pair and supported country. If store identity or permissions cannot be verified, store the candidate in audit under `NEEDS_CATALOG_APPROVAL` or `SKIPPED_UNVERIFIED`, not the public directory.
+- Deduplicate seller/store registrations: one merchant/store identity, stable URL, no duplicate `catalog_id` just because the merchant was seen in multiple search channels. Regional-only seller pricing cannot be represented as national price guarantees.
+
+See `online-shop-marketplace-rules.md` for detailed research and evidence rules. Discovery-register fields live ONLY in run audit artifacts, never in this production schema.
+
 ## Write boundary and review
 
 Catalog jobs may change only `catalog_app.json` plus separate controlled tooling/reports; highlight jobs have a separate writer for `highlights/**`. If a catalog is removed/rekeyed, either migrate/revalidate existing highlight foreign keys against the same final snapshot or block publication. Separate PR review for new retailer and location coverage.
