@@ -31,6 +31,16 @@ The market-discovery phase opened official pages on retailer domains also presen
 - Approximate official source leads mentioned in country checkpoints: 35 versus the aggregate reported 39, with differing definitions for disallowed/403 attempts and supplementary official pages. Until raw query/open transcripts are available, retain aggregate as **operator-reported, NOT independently verified**, not a passing provenance gate.
 - Do not modify a country status/receipt simply to force the total to match. Explicitly leave provenance and compliance findings open in the independent audit.
 
+## Owner source-exclusion disposition (applies to this one-off run only)
+
+The Owner instructed that access incidents be **removed from eligible crawl results**. Accordingly the registered **IQ Taawon** and **ZA Pick n Pay** access attempts are explicitly excluded from **accepted source evidence**, product candidate eligibility, catalog approval, verified catalog coverage, and attribution of any newly published Product Highlights. See the machine-readable audit-only `../source-exclusions.json` (relative to this discovery directory: `../source-exclusions.json`).
+
+This excludes **run-specific tainted access**, not the historical evidence that the requests occurred. Their frozen terminal receipts, actual request/query accounting and incident descriptions remain in the immutable audit trail; these cannot be erased or treated as compliant. The run accepted **zero new Product Highlights**, and therefore no newly accepted item must be deleted.
+
+The earlier main-branch public catalog can independently contain Pick n Pay and Taawon registrations, and the **pre-existing ZA Pick n Pay Product Highlights remain untouched**. This decision does not authorize removing unrelated baseline items, rewriting feed hashes, or asserting that all previously published prices were newly verified. The local Newton Park SPAR lead remains separate, audit-only and unapproved for national coverage.
+
+**Compliance outcome:** incidents excluded from eligible run outputs, but historical access deviations remain disclosed for independent review. A re-auditor must not mark the original source access as compliant merely because its evidence was excluded.
+
 ## Outcome
 
 No scheduled task, cron job, automatic repeat, source bypass, or production schema change was created. No product data from the overlapping opens was persisted to the active Product Highlights feeds. The discovery budget is now consumed for the countries whose checkpoints record searches; do not repeat those country/category searches in this run.
