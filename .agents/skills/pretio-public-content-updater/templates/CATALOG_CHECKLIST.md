@@ -23,6 +23,16 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] If ONE_OFF: manifest includes ONLY requested country; external sources for other countries are untouched; no cron/second cycle created
 - [ ] Complete every official catalog in the selected country once, including skipped or failed entries, and STOP after its own closing gate
 
+## 1B. Online-store / marketplace discovery alongside registered catalogs
+- [ ] Existing online-only catalog/retailer treated like a first-class official merchant
+- [ ] In each Owner-scoped country, a **separate bounded** permitted online-shop discovery register is prepared (registered manifest accounting unchanged)
+- [ ] If a marketplace is involved, verify actual seller/store identity and differentiate it from platform
+- [ ] Discovery sources (including authorized Google Shopping) are NOT automatically accepted as pricing evidence
+- [ ] New seller/store without reviewed active catalog ID stays `NEEDS_CATALOG_APPROVAL` / audit-only
+- [ ] Seller-specific public offer confirmed on original store/marketplace page with countrywide scope
+- [ ] No login, captcha bypass, misleading coupon-only, member-only or other conditional promo
+- [ ] Use `ONLINE_SHOP_CHECKLIST.md` for each discovered storefront; report search bounds and outcome separately
+
 ## 2. Product Highlights — discounted items ONLY
 - [ ] All eligible discounted products on this catalog checked; candidates listed
 - [ ] Each has same-product explicit **normal and promo prices** from original retailer; `promo_price < normal_price`
