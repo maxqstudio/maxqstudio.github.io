@@ -1,7 +1,0 @@
-# Compact handoff — PY:superseis-py-country
-
-- Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; work unit `58/74`, attempt `1`, terminal status `SKIPPED_BLOCKED`.
-- The active catalog record identifies Superseis / Superseis Online, `official_digital_channel`, URL `https://www.superseis.com.py/ofertas/es-es`, and country-level Paraguay (`PY`) coverage. Its host appears in `allowed_hosts`; existing `last_verified_at` is `2026-10-19T02:37:05.2093648+08:00`.
-- One bounded attempt returned HTTP 403 for the registered offers page and site root. The robots URL was inaccessible via the retrieval tool, and one search query found no applicable site terms or usable permission statement. Access permission and commercial-use rights therefore remain unverified; no alternate route, retry or bypass was used.
-- Current promotions, freshness, redirects, item prices/images/dates and offer-level geography were not verified. No product was observed, so this is not a no-promotion finding. Paraguay catalog location metadata exists; `PY` has no currency entry, which separately blocks highlight publication.
-- No production JSON, feed/index or shared progress was changed. Evidence and complete checklist are in this run's `registered/evidence` and `registered/checkpoints` folders. Coordinator can continue to the next assigned manifest unit; this receipt does not claim global completion.

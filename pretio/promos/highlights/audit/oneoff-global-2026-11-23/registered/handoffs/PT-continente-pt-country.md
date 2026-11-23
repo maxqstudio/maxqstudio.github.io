@@ -1,5 +1,0 @@
-# Compact handoff — PT:continente-pt-country
-
-Receipt `BLOCKED_CURRENCY_METADATA`, manifest position 54/74. The official registered URL `https://www.continente.pt/folhetos/` is a stable evergreen directory and displayed current flyers. Main and leaflet-subdomain robots allowed the public HTML paths. The official Services Policy says online EUR prices apply to online orders and may differ from physical-store prices; it identifies the site content owner but provides no general crawler ban or blanket commercial-reuse license. No delivery address was selected.
-
-Twelve clear normal/promo pairs from current visible flyers (including the 20–23 Nov leaflet) are captured as audit-only in `registered/evidence/PT-continente-pt-country.md`. No individual product images or nationwide item coverage were verified. PT is absent from currency metadata and the highlights index, with zero active references to this catalog. No production data changed; no expiry or obsolescence is inferred. Next source: `PT:intermarche-pt-country` (55/74).

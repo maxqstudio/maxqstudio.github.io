@@ -1,7 +1,0 @@
-# Compact handoff — ZA:foodloversmarket-za-specials
-
-Work unit `ZA:foodloversmarket-za-specials`, position 73/74; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`, baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
-
-The frozen active record points to <https://foodloversmarket.co.za/specials/> (`valid_until: null`, national South Africa label, source metadata says weekly specials may vary by region). Robots returned HTTP 200 and `User-agent: *` has an empty `Disallow`. A standard HTTP request and normal browser render both returned the specials URL with title `Food Lover's Market | Specials`, but content stopped at `Specials loading`; no current offer dates or participating geography appeared. The official terms index lists promotion-specific terms, not general crawler or commercial content/image reuse permission; the footer states © 2026 and All Rights Reserved. Permission is unverified, not expressly prohibited.
-
-No product, price, or image was inspected or retained; no item-level national eligibility or expiry was established. `ZA` supports ZAR and has an existing highlights feed, but zero items reference this catalog. Preserve the active catalog and its existing `last_verified_at`; do not infer expiry. No production JSON changed. Next manifest unit: `ZA:pnp-za-country` (74/74), not included in this task. See `registered/checkpoints/ZA-foodloversmarket-za-specials.md` for evidence.

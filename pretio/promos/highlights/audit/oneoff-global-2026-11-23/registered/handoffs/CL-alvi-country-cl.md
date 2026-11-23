@@ -1,7 +1,0 @@
-# Compact handoff — CL-alvi-country-cl
-
-- Work unit `CL:alvi-country-cl`, position 8/74; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; this checkpoint covers only the assigned registered catalog.
-- At `2026-11-23T04:24:40.458Z`, robots returned `200 text/plain; charset=UTF-8`, 109 bytes, no redirect; it had `User-agent: *`, no `Disallow`, and a sitemap link to `https://www.alvi.cl/sitemap.xml`. At `04:24:41.779Z`, the registered URL returned `200 text/html; charset=utf-8`, 323,799 bytes, no redirect. Each request had a 30-second timeout; no retries were needed.
-- The response identifies the site as Alvi (`<title>Alvi</title>`, `og:site_name="Alvi.cl"`) but declares canonical and `og:url` as `https://www.alvi.cl`, not the registered host. That host is not allowlisted and was not fetched. No terms link/text was captured in the reviewed initial HTML excerpt, so terms remain unverified.
-- The excerpt showed a home banner asset but no product-specific price pair, item image, date, or nationwide offer evidence. No candidate was accepted; no product page or hidden endpoint was opened. `CLP` is supported and the CL feed has no Alvi references. No production JSON changed.
-- Evidence: <https://fe-browse-alvi-gcp-alvi-prod.alvi.cl/robots.txt> and <https://fe-browse-alvi-gcp-alvi-prod.alvi.cl/>. Next: continue to the next manifest unit in an isolated context.

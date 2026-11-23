@@ -1,6 +1,0 @@
-# Compact handoff — ID-hypermart-national-live
-
-- Work unit `ID:hypermart-national-live`, catalog array position 3/74, frozen manifest ordinal 29/74. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`. Terminal receipt: `SKIPPED_UNVERIFIED`.
-- Exact registered URL <https://www.hypermart.co.id/promo-katalog-hypermart/> was requested once: HTTP 200, HTML UTF-8, 156,746 bytes; canonical URL matched. Only response metadata and canonical link were retained, not promo cards or product data. Redirect/final `ResponseUri` was not exposed. The host robots file returned HTTP 200 / 30 bytes and sets `Crawl-delay: 30`; all follow-up requests were separated by at least 30 seconds.
-- The active record has no `valid_until`, says national coverage, contains 29 province locations and retains `last_verified_at: 2026-08-22T01:00:00+08:00`. `www.hypermart.co.id` is allowlisted; IDR is configured. No active highlight JSON references this catalog ID. No price pair, image, current period, item geography, expiry or obsolescence was verified. No Terms link was found in homepage/promo link scans; automated-access permission remains unknown.
-- No production JSON changed. Next manifest work unit is `ID:indogrosir-location-live` at <https://indogrosir.co.id/promosi>. Continue in a fresh isolated context.

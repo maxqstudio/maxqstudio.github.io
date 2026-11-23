@@ -1,8 +1,0 @@
-# Compact handoff — CH-migros-ch-country
-
-- Work unit `CH:migros-ch-country`, position `7/74`; terminal receipt `SKIPPED_UNAVAILABLE`. Counted as attempted. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`.
-- At `2026-11-23T04:29:41Z`, one bounded request to the registered official URL returned HTTP 403 `text/html; charset=UTF-8`, with no redirect and a multilingual Migros Online maintenance message. No retry, alternate offer page, challenge bypass, or hidden endpoint was used; direct offers and terms requests used no proxy. Robots returned 200 and did not disallow `/de/offers/home`; `www.migros.ch` is allowed in the registered host list.
-- The official Migros Help AGB route was not disallowed by its robots file, but a direct request returned HTTP 403 “Just a moment...”. Terms remain unverified; no search-preview text was relied on as current policy.
-- No offer cards were exposed, so accepted products: `0`; observed individual candidates rejected: `0`. No product price pair, image, item-level geography, or validity dates could be verified. CH currency metadata supports CHF; the CH feed has no existing Migros-linked item.
-- Catalog condition `STALE_UNVERIFIED`; its null `valid_until` does not establish an evergreen URL. No expiry or obsolescence evidence; no production JSON or `last_verified_at` changed. Checkpoint: `pretio/promos/highlights/audit/oneoff-global-2026-11-23/registered/checkpoints/CH-migros-ch-country.md`; receipt: `pretio/promos/highlights/audit/oneoff-global-2026-11-23/registered/receipts/CH-migros-ch-country.json`.
-- Next: leave subsequent manifest work to the run coordinator; no other catalog was processed here.

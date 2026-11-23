@@ -1,6 +1,0 @@
-- Work unit: `IT:lidl-it-country`, manifest 39/74; terminal `SKIPPED_UNVERIFIED`; run `pretio-oneoff-global-20261123T040625Z`; baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
-- Official stable source: `https://www.lidl.it/c/volantino-lidl/s10018048`; robots has no matching disallow. Legal info identifies Lidl Italia S.r.l. as site operator and store-promo publisher: `https://www.lidl.it/c/informazioni-legali/s10018358`.
-- Page listed current flyer dates 19–25 Nov 2026 and successor 26 Nov–2 Dec; says weekly successor appears each Thursday. Existing period dates are current and match the stable parent page. No expired catalog removal or URL migration.
-- Page requires selecting a store to show local offers; no national item applicability, normal/promo pair, product image, or exact product was verified. No product candidate accepted. Italy lacks a currency mapping for Product Highlights. No feed reference to this catalog.
-- General commercial reuse permission for the public flyer is unverified; Lidl Plus app terms were not applied to the catalog page. No production JSON or source timestamp changed.
-- Evidence: `registered/evidence/IT-lidl-it-country.md`; checkpoint: `registered/checkpoints/IT-lidl-it-country.md`; receipt: `registered/receipts/IT-lidl-it-country.json`.

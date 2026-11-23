@@ -1,7 +1,0 @@
-# Compact handoff — CL-lider-country-cl
-
-- Work unit CL:lider-country-cl; terminal receipt SKIPPED_UNVERIFIED. Run pretio-oneoff-global-20261123T040625Z, scope ONE_OFF_GLOBAL. Frozen-manifest ordinal was not supplied in the assignment.
-- Robots: <https://super.lider.cl/robots.txt> returned 307 to <https://www.lider.cl/robots.txt>, then 200 text/plain (639 bytes); wildcard rules do not disallow /v/ofertas. Registered URL returned 200 text/html; charset=utf-8 (294,408 bytes), no redirect. Its canonical metadata is <https://www.lider.cl/v/ofertas>, which is not allowlisted; no host migration staged.
-- Page says “Ofertas (211)” and defaults to “Santiago, • Vitacura”. One card appears to show $6.990 normal and $5.990 promo for “N-ofertas - Ventilador Repelente De Moscas Portátil,” tagged “N-OFERTAS.” Linked terms returned 200 text/html and describe Marketplace offers as sold by user sellers. Seller identity, nationwide eligibility, offer period and individual image were not established, so the candidate was rejected.
-- CLP is supported; capacity remains 56 total and 16 for Lider. No accepted products, expiries or production changes. Four existing Lider items remain untouched and unverified by this attempt.
-- Bounds: one offers page; first eight price-text matches only; one linked terms page and one robots fetch; no retries, product/image pages, pagination, hidden endpoints, login, CAPTCHA or proxy. Continue with the next unit from the immutable run manifest in a fresh isolated context.

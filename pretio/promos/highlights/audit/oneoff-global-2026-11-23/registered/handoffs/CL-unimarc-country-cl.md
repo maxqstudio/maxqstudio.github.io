@@ -1,7 +1,0 @@
-# Compact handoff — CL-unimarc-country-cl
-
-- Work unit `CL:unimarc-country-cl`, catalog array position 13/74; frozen-manifest ordinal was not supplied. Terminal receipt: `SKIPPED_BLOCKED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
-- One public robots request (<https://www.unimarc.cl/robots.txt>) and one registered URL request (<https://www.unimarc.cl/page/catalogo>) were made in the 04:45:31–04:45:34Z window. Both bodies said “Access Denied” and included an Akamai/error reference. The local response wrapper did not expose status, content type, byte count, Location, or final URL; redirects therefore remain unknown. Robots rules and terms were not verified. No terms, product, image, or parent page was requested; no retries or bypasses.
-- The registered host `www.unimarc.cl` is allowlisted. CLP is configured; the CL feed contains 24 items, of which 4 reference Unimarc. No candidate price pair, matching individual image, country-wide product eligibility, or source-backed validity could be checked. Accepted/rejected: 0/0 observed; this does not imply no current offers.
-- No expiry/obsolescence was proven. Existing feed items remain untouched and unverified. No catalog, feed, or index JSON changed.
-- Next input: next unit from the immutable run manifest; its ordinal/order was not supplied here. Continue in a fresh isolated context.
