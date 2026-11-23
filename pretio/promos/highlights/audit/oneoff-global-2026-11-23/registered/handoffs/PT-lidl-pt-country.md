@@ -1,0 +1,6 @@
+# Compact handoff — PT:lidl-pt-country
+
+Run `pretio-oneoff-global-20261123T040625Z`; unit 56/74; terminal `SKIPPED_UNVERIFIED`. The registered URL `https://www.lidl.pt/c/folhetos/s10020672` is an official, stable Portugal leaflet directory. Lidl's official Ficha Técnica identifies Lidl & Companhia as operator of lidl.pt. Robots rules allow the registered `/c/folhetos/` page and the linked `/l/pt/folhetos/…` path. The directory currently lists weekly offers starting 23 Nov and weekend offers starting 27 Nov; those headings do not prove item prices or end dates. Its country page labels leaflets National, while the catalog record says “Portugal (location-selected offers)”, so no item-level national availability is assumed.
+
+No general permission to reuse leaflet imagery was found. The located Lidl Plus terms apply to the app, not the public leaflet page; a corporate policy PDF restricts reproduction of that PDF's own content. Product-level review stopped at the “only if permitted” gate. No exact products, prices or image assets were collected, and no highlight was staged. The evergreen catalog remains active with no inferred expiry. No production JSON changed; no schedule was created. Full evidence: `registered/evidence/PT-lidl-pt-country.md`.
+

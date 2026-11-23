@@ -2,22 +2,16 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 52,
-  "pending": 22,
+  "terminal_receipts": 59,
+  "pending": 15,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 17,
+    "BLOCKED_CURRENCY_METADATA": 1,
+    "SKIPPED_BLOCKED": 21,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 34
+    "SKIPPED_UNVERIFIED": 36
   },
   "pending_work_ids": [
-    "PT:auchan-pt-country",
-    "PT:continente-pt-country",
-    "PT:intermarche-pt-country",
-    "PT:lidl-pt-country",
-    "PY:stock-py-online-offers",
-    "PY:superseis-py-country",
-    "RO:carrefour-ro-catalogues",
     "RO:kaufland-ro-country",
     "RS:idea-rs-country",
     "RS:lidl-rs-country",

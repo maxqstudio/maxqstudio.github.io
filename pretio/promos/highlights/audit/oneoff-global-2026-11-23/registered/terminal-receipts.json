@@ -206,5 +206,33 @@
   {
     "work_id": "PL:lidl-pl-official-gazette",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PT:auchan-pt-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PT:continente-pt-country",
+    "status": "BLOCKED_CURRENCY_METADATA"
+  },
+  {
+    "work_id": "PT:intermarche-pt-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "PT:lidl-pt-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PY:stock-py-online-offers",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "PY:superseis-py-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "RO:carrefour-ro-catalogues",
+    "status": "SKIPPED_BLOCKED"
   }
 ]
