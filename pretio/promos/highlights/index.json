@@ -3,54 +3,54 @@
     {
       "code": "ID",
       "document_id": "ID",
-      "revision": "pretio-highlights-ID-20261122T142148Z",
-      "sha256": "d4d3190e87ce516e8fbacfb0e2ff166679da5afd4180b2f0936241799d64226d",
+      "revision": "pretio-highlights-ID-20261123T025842Z",
+      "sha256": "534952635d541606a32ff064cff280436b81b636cca979cf85ffe23510a48827",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/ID.json"
     },
     {
       "code": "CL",
       "document_id": "CL",
-      "revision": "pretio-highlights-CL-20260923T080756Z",
-      "sha256": "ef9b1eef0c6c25181d160734f860aeee9f7a0297aaf3320accdf56652b27e689",
+      "revision": "pretio-highlights-CL-20261123T025341Z",
+      "sha256": "648c0d20a8dc8aba8ca6a3f37e5865fd83611d06bc0cf1ad0f3ba060ac70a278",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/CL.json"
     },
     {
       "code": "RS",
       "document_id": "RS",
-      "revision": "pretio-highlights-RS-empty-v1",
-      "sha256": "823fc6ed5a956ce85f784ec38447dad4749e44380262f831ffcc67a0fff40224",
+      "revision": "pretio-highlights-RS-20261123T025341Z",
+      "sha256": "c43bd495baf279138ff676842bf5e8bd9ccdac9998972e9378db4d7d16041357",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/RS.json"
     },
     {
       "code": "US",
       "document_id": "US",
-      "revision": "pretio-highlights-US-20260923T103532Z",
-      "sha256": "a9b415b4c9b3931a1e55aaa7f96597733d58fdc0d51dbc7a2c3ee2f96699f9ec",
+      "revision": "pretio-highlights-US-20261123T025341Z",
+      "sha256": "4399458384cd7ddf82f4cfc1022376e5bd82467f7c4fc6e86b69c5ef8973e46b",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/US.json"
     },
     {
       "code": "ZA",
       "document_id": "ZA",
-      "revision": "pretio-highlights-ZA-20260923T102403Z",
-      "sha256": "148350efb2afb65ba45b5d2a9039e59a9bea367a33e9ae9140bc9207db8c8cc3",
+      "revision": "pretio-highlights-ZA-20261123T025341Z",
+      "sha256": "cf5b4e45f64fe8056bcb402b017bacebba027c6cf791ca081a1178e0dc91f311",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/ZA.json"
     },
     {
       "code": "DE",
       "document_id": "DE",
-      "revision": "pretio-highlights-DE-20260923T081619Z",
-      "sha256": "8bf712c522c94db601b8b3f7a527465f839c5ac8521cac69419e48993aa968e0",
+      "revision": "pretio-highlights-DE-20261123T025341Z",
+      "sha256": "40d178ca8db44c3089cafee5a928176a3ac48c495833fbfe5108166387d3bc76",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/DE.json"
     },
     {
       "code": "CH",
       "document_id": "CH",
-      "revision": "pretio-highlights-CH-20260923T070539Z",
-      "sha256": "ddf0fc7bd06f25977e05dcc4fdff5b910705467ba6a8a788306d06269fee3566",
+      "revision": "pretio-highlights-CH-20261123T025341Z",
+      "sha256": "e2880a0e751695ede0c2482fa6303ce26350adc9b960023643b3fd815d3a8c88",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/CH.json"
     }
   ],
-  "revision": "2026-11-22T14:21:48Z",
+  "revision": "2026-11-23T02:58:42Z",
   "schema": "pretio.product_highlights.index.v2",
   "schema_version": 2
 }

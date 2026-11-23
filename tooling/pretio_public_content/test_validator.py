@@ -51,10 +51,17 @@ class StrictPretioValidatorTests(unittest.TestCase):
             indexfile.write_text(json.dumps(index, indent=2) + "\n")
 
     def test_baseline_validates_and_reports_expired_without_wiping(self):
+        p = "pretio/promos/highlights/CH.json"
+        feed = validator.read(self.file(p))
+        if feed["items"]:
+            expired_item = dict(feed["items"][0], id="synthetic-expired-item", valid_from="2026-09-17", valid_until="2026-09-23")
+            feed["items"].append(expired_item)
+            self.rewrite(p, feed)
         report = validator.validate(self.root, validator.date(2026, 11, 22))
         self.assertEqual(len(report["countries"]), 7)
-        self.assertEqual(report["countries"]["DE"]["items"], 1)
-        self.assertGreaterEqual(report["countries"]["CH"]["expired"], 1)
+        self.assertGreaterEqual(report["countries"]["DE"]["items"], 1)
+        if feed["items"]:
+            self.assertGreaterEqual(report["countries"]["CH"]["expired"], 1)
 
     def test_unknown_discount_percent_field_is_rejected(self):
         p = "pretio/promos/highlights/DE.json"
@@ -74,7 +81,10 @@ class StrictPretioValidatorTests(unittest.TestCase):
         landing = next(row["url"] for row in catalog["items"] if row["id"] == linked_id)
         feed["items"][0]["source_url"] = landing
         self.rewrite(path, feed)
-        self.assertEqual(validator.validate(self.root, validator.date(2026, 11, 22))["countries"]["DE"]["items"], 1)
+        self.assertEqual(
+            validator.validate(self.root, validator.date(2026, 11, 22))["countries"]["DE"]["items"],
+            len(feed["items"]),
+        )
 
     def test_regular_price_cannot_be_published_as_highlight(self):
         p = "pretio/promos/highlights/DE.json"
@@ -101,17 +111,32 @@ class StrictPretioValidatorTests(unittest.TestCase):
             validator.validate(self.root)
 
     def test_strict_mode_requires_expired_items_removed(self):
+        p = "pretio/promos/highlights/CH.json"
+        feed = validator.read(self.file(p))
+        expired_item = dict(feed["items"][0], id="synthetic-expired-strict", valid_from="2026-09-17", valid_until="2026-09-23")
+        feed["items"].append(expired_item)
+        self.rewrite(p, feed)
         with self.assertRaisesRegex(validator.Invalid, "expired products present"):
             validator.validate(self.root, validator.date(2026, 11, 22), strict_expiry=True)
 
     def test_prune_removes_only_date_expired_and_updates_hashes(self):
+        for cc in ("CH", "ZA"):
+            p = f"pretio/promos/highlights/{cc}.json"
+            feed = validator.read(self.file(p))
+            expired_item = dict(feed["items"][0], id=f"synthetic-expired-{cc}", valid_from="2026-09-17", valid_until="2026-09-23")
+            feed["items"].append(expired_item)
+            self.rewrite(p, feed)
         de_before = self.file("pretio/promos/highlights/DE.json").read_bytes()
+        ch_before_count = len(validator.read(self.file("pretio/promos/highlights/CH.json"))["items"])
         changes = validator.prune_expired(self.root, validator.date(2026, 11, 22))
-        self.assertEqual(len(changes["CH"]), 4)
-        self.assertEqual(len(changes["ZA"]), 4)
+        self.assertEqual(changes["CH"], ["synthetic-expired-CH"])
+        self.assertEqual(changes["ZA"], ["synthetic-expired-ZA"])
         self.assertNotIn("DE", changes)
         self.assertEqual(self.file("pretio/promos/highlights/DE.json").read_bytes(), de_before)
-        self.assertEqual(validator.validate(self.root, validator.date(2026, 11, 22), strict_expiry=True)["countries"]["CH"]["items"], 0)
+        self.assertEqual(
+            validator.validate(self.root, validator.date(2026, 11, 22), strict_expiry=True)["countries"]["CH"]["items"],
+            ch_before_count - 1,
+        )
         self.assertEqual(validator.prune_expired(self.root, validator.date(2026, 11, 22)), {})
 
     def test_rotating_catalog_url_requires_valid_until(self):
