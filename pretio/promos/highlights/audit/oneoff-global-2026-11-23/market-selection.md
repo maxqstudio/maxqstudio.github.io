@@ -10,7 +10,7 @@
 
 The one-off sample includes all 24 countries that already have registered catalogs, then the 150 highest-ranking remaining registry countries by the World Bank's 2024 current-USD GDP indicator (`NY.GDP.MKTP.CD`). GDP is only a deterministic commercial-market prioritization proxy; it does not establish that a catalog, retailer, discount, or online shop exists. World Bank aggregate regions are excluded because their codes do not match a country/territory entry in Pretio's registry. Registered markets without a World Bank 2024 GDP observation remain included because their existing source IDs are in scope.
 
-The raw API response is saved as `worldbank-gdp-2024.json`; the reproducible selection transform is `build-market-register.py`; the resulting 249-row selection and disposition file is `country-discovery-register.json`. The 75 unselected registry entries are `OUT_OF_SCOPE_BY_MARKET_RANK`, **not** `SKIPPED_NO_VERIFIABLE_SOURCES`; no claim is made that they lack commerce or official sources.
+The raw API response is saved as `worldbank-gdp-2024.json` (captured at `2026-11-23T04:01:18Z`); the reproducible selection transform is `build-market-register.py`; the resulting 249-row selection and disposition file is `country-discovery-register.json`. The 75 unselected registry entries are `OUT_OF_SCOPE_BY_MARKET_RANK`, **not** `SKIPPED_NO_VERIFIABLE_SOURCES`; no claim is made that they lack commerce or official sources.
 
 ## Bounded research budget
 

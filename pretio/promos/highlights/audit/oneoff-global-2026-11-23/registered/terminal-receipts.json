@@ -36,7 +36,19 @@
     "status": "SKIPPED_UNVERIFIED"
   },
   {
+    "work_id": "CL:lider-country-cl",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CL:mayorista10-country-cl",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
     "work_id": "CL:santaisabel-country-cl",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CL:tottus-country-cl",
+    "status": "SKIPPED_BLOCKED"
   }
 ]

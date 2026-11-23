@@ -2,18 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 10,
-  "pending": 64,
+  "terminal_receipts": 13,
+  "pending": 61,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 3,
+    "SKIPPED_BLOCKED": 4,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 6
+    "SKIPPED_UNVERIFIED": 8
   },
   "pending_work_ids": [
-    "CL:lider-country-cl",
-    "CL:mayorista10-country-cl",
-    "CL:tottus-country-cl",
     "CL:unimarc-country-cl",
     "CO:exito-co-promotions",
     "CO:olimpica-co-promotions",
