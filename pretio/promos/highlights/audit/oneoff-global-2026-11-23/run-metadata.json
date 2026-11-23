@@ -2,7 +2,7 @@
   "artifact_type": "pretio.oneoff_global_run_metadata.v1",
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
-  "status": "PHASE_0_FROZEN",
+  "status": "IN_PROGRESS",
   "started_at_utc": "2026-11-23T04:06:25Z",
   "base_branch": "main",
   "base_sha": "73fd02fe14c4935c3a95bca49bba3c1498a9cb54",
@@ -16,8 +16,8 @@
     "generator_output_scope": "ALL_COUNTRIES",
     "generator_output_execution_label": "SCHEDULED_GLOBAL",
     "scope_override_note": "The generator has no ONE_OFF_GLOBAL mode; its complete all-country work-unit list is used unchanged under this explicit one-off scope.",
-    "terminal_receipts": 0,
-    "pending": 74
+    "terminal_receipts": 23,
+    "pending": 51
   },
   "country_discovery": {
     "candidate_registry_count": 249,
@@ -25,8 +25,8 @@
     "selected_count": 174,
     "researched_count": 0,
     "verified_catalog_count": 0,
-    "no_source_count": 0,
-    "blocked_count": 0,
+    "no_source_count": 2,
+    "blocked_count": 1,
     "not_selected_count": 75,
     "register_path": "country-discovery-register.json",
     "selection_source": "World Bank indicator NY.GDP.MKTP.CD, 2024 current US dollars; all registered catalog countries are included first, then highest-GDP registry markets.",

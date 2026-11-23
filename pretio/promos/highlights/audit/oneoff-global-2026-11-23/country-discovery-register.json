@@ -698,8 +698,8 @@
       "world_bank_label": "China",
       "registered_catalog_count": 0,
       "registered_catalog_ids": [],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "research_outcome": "SKIPPED_NO_VERIFIABLE_SOURCES",
       "scope_reason": "Selected among highest 2024 current-USD GDP markets in the Pretio location registry"
     },
     {
@@ -1122,8 +1122,8 @@
       "world_bank_label": "United Kingdom",
       "registered_catalog_count": 0,
       "registered_catalog_ids": [],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_BLOCKED",
+      "research_outcome": "SKIPPED_BLOCKED",
       "scope_reason": "Selected among highest 2024 current-USD GDP markets in the Pretio location registry"
     },
     {
@@ -1620,8 +1620,8 @@
       "world_bank_label": "India",
       "registered_catalog_count": 0,
       "registered_catalog_ids": [],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "research_outcome": "SKIPPED_NO_VERIFIABLE_SOURCES",
       "scope_reason": "Selected among highest 2024 current-USD GDP markets in the Pretio location registry"
     },
     {
@@ -1751,8 +1751,8 @@
       "world_bank_label": "Japan",
       "registered_catalog_count": 0,
       "registered_catalog_ids": [],
-      "disposition": "PENDING_RESEARCH",
-      "research_outcome": "PENDING",
+      "disposition": "NEW_ROTATING_CANDIDATE",
+      "research_outcome": "NEW_ROTATING_CANDIDATE",
       "scope_reason": "Selected among highest 2024 current-USD GDP markets in the Pretio location registry"
     },
     {

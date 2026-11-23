@@ -1,0 +1,47 @@
+{
+  "artifact_type": "pretio.oneoff_global_country_discovery_progress.v1",
+  "run_id": "pretio-oneoff-global-20261123T040625Z",
+  "scope": "ONE_OFF_GLOBAL",
+  "updated_at_utc": "2026-11-23T05:05:21Z",
+  "candidate_country_count": 249,
+  "country_target": 174,
+  "selected_count": 174,
+  "researched_count": 0,
+  "verified_official_catalog_count": 0,
+  "approved_active_catalog_count": 0,
+  "no_verifiable_source_count": 2,
+  "blocked_count": 1,
+  "terminal_disposition_count": 4,
+  "pending_disposition_count": 170,
+  "disposition_counts": {
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 2,
+    "NEW_ROTATING_CANDIDATE": 1,
+    "SKIPPED_BLOCKED": 1
+  },
+  "bounded_searches_used": {
+    "catalog_promo_searches": 4,
+    "online_shop_marketplace_searches": 4,
+    "official_leads_opened": 7
+  },
+  "lead_outcomes": {
+    "audit_only_rotating_candidate": 1,
+    "unverified_or_nonpromotional": 5,
+    "blocked_by_source_terms": 1
+  },
+  "product_candidates_accepted": 0,
+  "production_catalog_or_highlight_changes": 0,
+  "status": "IN_PROGRESS",
+  "checkpoint_paths": [
+    "checkpoints/CN-china.md",
+    "checkpoints/JP-japan.md",
+    "checkpoints/IN-india.md",
+    "checkpoints/GB-united-kingdom.md"
+  ],
+  "limitations": [
+    "This four-market batch does not satisfy the 174-market target.",
+    "Meituan and SPAR page opens returned no readable content, Zepto returned HTTP 403, and Tesco terms prohibit automated crawling; other leads lacked current product-promotion evidence.",
+    "GB source terms prohibit automated crawling without prior written consent; that page was not used for product data.",
+    "Search tool did not retain exact query timestamps; country checkpoints record this limitation.",
+    "No search-result snippet was used as Product Highlights price evidence."
+  ]
+}

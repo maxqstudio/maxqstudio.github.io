@@ -2,18 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 20,
-  "pending": 54,
+  "terminal_receipts": 23,
+  "pending": 51,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 7,
+    "SKIPPED_BLOCKED": 8,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 12
+    "SKIPPED_UNVERIFIED": 14
   },
   "pending_work_ids": [
-    "DE:rewe-de-country",
-    "EC:supermaxi-ec-offers",
-    "EC:tia-ec-ofertias",
     "EG:carrefour-egypt-offers",
     "EG:spinneys-eg-weekly-deals",
     "ES:aldi-es-weekly-offers",

@@ -78,5 +78,17 @@
   {
     "work_id": "DE:lidl-de-country",
     "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "DE:rewe-de-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "EC:supermaxi-ec-offers",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "EC:tia-ec-ofertias",
+    "status": "SKIPPED_UNVERIFIED"
   }
 ]

@@ -1,0 +1,9 @@
+# One-off country discovery checkpoint — India (IN)
+
+- Run: `pretio-oneoff-global-20261123T040625Z`; baseline/skill SHA: `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- Market selection: selected rank 27/174, GDP rank 1; no registered Catalog Promo sources.
+- Query budget used: one Catalog Promo search and one online-shop search. Exact search-tool request timestamps were not retained; captured 2026-11-23 UTC. No retry or alternate-source search was made.
+- **Catalog query:** `India supermarket official offers promotions grocery retailer 2026`. Opened SPAR India's official deals page: <https://www.sparindia.com/deals>. The search result described SPAR India as operating 23 stores across 8 cities, so this is not evidence of nationwide offer eligibility. The page open returned no readable lines; the direct robots request completed without captured status/body, and terms were not verified. No current offer card or price was verified.
+- **Online-shop query:** `India online grocery shop official offers delivery nationwide`. Opened official lead <https://www.zepto.com/buy-grocery>; page fetch returned 403 Forbidden. No retry, login, CAPTCHA, alternate host or bypass was attempted. A robots request completed without captured status/body, so directives are unknown. Search-result text is not used as product-price evidence. No current product/price pair, item image, validity dates, or market-wide service proof was verified.
+- No source passed the official ownership, permitted-access, geographic-scope and current-promotion evidence gates. The SPAR and Zepto results remain unqualified leads; this is **no verifiable source in the bounded searches**, not a claim that India has no retailers or promotions. No product candidate accepted; no production data changed.
+- Terminal market disposition for this bounded attempt: `SKIPPED_NO_VERIFIABLE_SOURCES`. Handoff: query budgets spent; later review needs accessible live promotions and retailer coverage evidence.
