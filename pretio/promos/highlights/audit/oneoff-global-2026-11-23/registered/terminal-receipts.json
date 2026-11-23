@@ -72,6 +72,10 @@
     "status": "SKIPPED_BLOCKED"
   },
   {
+    "work_id": "DE:kaufland-de-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
     "work_id": "DE:lidl-de-country",
     "status": "SKIPPED_UNVERIFIED"
   }

@@ -2,16 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 19,
-  "pending": 55,
+  "terminal_receipts": 20,
+  "pending": 54,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
     "SKIPPED_BLOCKED": 7,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 11
+    "SKIPPED_UNVERIFIED": 12
   },
   "pending_work_ids": [
-    "DE:kaufland-de-country",
     "DE:rewe-de-country",
     "EC:supermaxi-ec-offers",
     "EC:tia-ec-ofertias",
