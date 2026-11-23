@@ -8,9 +8,9 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://maxqstudio.dev/pretio/catalog/">
   <link rel="icon" href="../../images/pretio_icon.png">
-  <link rel="stylesheet" href="./catalog.css?v=20261122-1">
+  <link rel="stylesheet" href="./catalog.css?v=20261123-geo1">
   <title>Store catalogs &amp; price highlights | Pretio</title>
-  <script src="./catalog.js?v=20261122-1" defer></script>
+  <script src="./catalog.js?v=20261123-geo1" defer></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -62,7 +62,7 @@
           <label for="search">Search catalogs and products</label>
           <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search store, offer or product..." autocomplete="off" spellcheck="false"><kbd>/</kbd></div>
         </div>
-        <div class="select-block"><label for="country">Country / market</label><select id="country"><option value="">Loading markets…</option></select></div>
+        <div class="select-block"><label for="country">Country / market</label><select id="country" aria-describedby="market-hint"><option value="">Loading markets…</option></select><small class="market-hint" id="market-hint">Auto-detected from approximate IP location; change anytime. <a href="../privacy.html#catalog-explorer-location">How it works</a></small></div>
         <div class="select-block"><label for="merchant">Retailer</label><select id="merchant"><option value="ALL">All retailers</option></select></div>
         <div class="select-block compact"><label for="sort">Sort by</label><select id="sort"><option value="featured">Featured</option><option value="name">Name A–Z</option><option value="recent">Last verified</option></select></div>
       </div>
