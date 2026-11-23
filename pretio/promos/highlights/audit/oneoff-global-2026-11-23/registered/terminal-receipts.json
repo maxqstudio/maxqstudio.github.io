@@ -170,5 +170,29 @@
   {
     "work_id": "MY:lotuss-my-weekly",
     "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "NA:agra-na-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "NA:food-lovers-market-na-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PE:metro-pe-online-catalogs",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PE:plazavea-pe-national",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PE:tottus-pe-promotions",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PF:carrefour-pf-catalogue",
+    "status": "SKIPPED_BLOCKED"
   }
 ]
