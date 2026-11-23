@@ -119,7 +119,7 @@ class OneOffAuditEvidenceIntegrityTests(unittest.TestCase):
 
     def test_query_ledger_sum_does_not_falsely_clear_provenance(self):
         ledger = (DISCOVERY / "query-reconciliation-audit.md").read_text(encoding="utf-8")
-        pattern = re.compile(r"^\\| ([A-Z]{2}) \\| (\\d+) \\| (\\d+) \\| (\\d+) \\|", re.M)
+        pattern = re.compile(r"^\| ([A-Z]{2}) \| (\d+) \| (\d+) \| (\d+) \|", re.M)
         count_rows = pattern.findall(ledger)
         self.assertEqual(len(count_rows), self.discovery_progress["terminal_disposition_count"])
         self.assertEqual(len({code for code, *_ in count_rows}), len(count_rows))
