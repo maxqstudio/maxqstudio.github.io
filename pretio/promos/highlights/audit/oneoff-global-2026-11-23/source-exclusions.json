@@ -43,5 +43,5 @@
   "do_not_modify_historical_query_counts": true,
   "do_not_modify_preexisting_public_catalog_or_highlight_items": true,
   "verify_current_run_has_no_accepted_products_from_exclusions": true,
-  "audit_verdict": "INCIDENTS_RETAINED_IN_AUDIT; EXCLUDED_FROM_ACCEPTED_RUN_RESULTS; NOT_RETROACTIVELY_CURED"
+  "audit_verdict": "HOLD: INCIDENTS_RETAINED_IN_AUDIT; EXCLUDED_FROM_ACCEPTED_RUN_RESULTS; NOT_RETROACTIVELY_CURED"
 }
