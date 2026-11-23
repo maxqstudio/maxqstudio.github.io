@@ -103,7 +103,7 @@ try {
     const page = await browser.newPage();
     await page.route('**/cdn-cgi/trace', route => route.fulfill({ status: 404, body: 'Not Found' }));
     await page.route('https://get.geojs.io/**', route => route.fulfill({
-      status: 200, contentType: 'application/json', body: '{"country":"CL","ip":"203.0.113.7"}'
+      status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"country":"CL","ip":"203.0.113.7"}'
     }));
     await openCatalog(page, '');
     assert.equal(await page.locator('#country').inputValue(), 'CL');
