@@ -35,7 +35,7 @@
   },
   "product_candidates_accepted": 0,
   "production_catalog_or_highlight_changes": 0,
-  "status": "IN_PROGRESS",
+  "status": "INCOMPLETE",
   "checkpoint_paths": [
     "checkpoints/AE-united-arab-emirates.md",
     "checkpoints/BR-brazil.md",
@@ -84,6 +84,11 @@
     "PL delio displayed product promotions, but item identities/prices/images were not retained because permission was unresolved and the seller has no approved catalog. Its address-specific delivery is not countrywide evidence.",
     "One bounded search category was repeated inadvertently for CL, CO and EC; see deviations.md. No further search was made for those countries.",
     "A few market-discovery official page opens overlapped registered retailer sources; see deviations.md and the per-source checkpoints. No second receipt was created for these opens.",
-    "The latest registered-market expansion used 19 catalog-promotion searches (including three over-budget duplicates) and 13 online-shop searches. Thirteen additional official lead pages were reviewed; exact per-query timestamps were not retained by the search tool."
-  ]
+    "The latest registered-market expansion used 19 catalog-promotion searches (including three over-budget duplicates) and 13 online-shop searches. Thirteen additional official lead pages were reviewed; exact per-query timestamps were not retained by the search tool.",
+    "Owner accepted partial one-off results; the 140 pending markets are still PENDING_RESEARCH, not verified, skipped, or silently completed.",
+    "A separate 2026-11-23 operator remediation identified 33 documented Catalog Promo and 34 documented online search queries in 34 country checkpoint narratives; original aggregate 36/39 remains a reported claim pending raw provenance."
+  ],
+  "operator_scope_decision": "OWNER_ACCEPTED_PARTIAL_RESULT; 140 markets remain pending and unresearched; no further requests authorized for this run",
+  "provenance_audit": "NOT_VERIFIED: 36 catalog / 39 online aggregate claims do not map one-to-one to all checkpoint query evidence; see query-reconciliation-audit.md",
+  "compliance_audit": "HOLD: IQ Taawon post-robots revisit; ZA Pick n Pay outside robots visit window; see deviations.md"
 }
