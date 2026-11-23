@@ -50,5 +50,17 @@
   {
     "work_id": "CL:tottus-country-cl",
     "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "CL:unimarc-country-cl",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "CO:exito-co-promotions",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "CO:olimpica-co-promotions",
+    "status": "SKIPPED_UNVERIFIED"
   }
 ]

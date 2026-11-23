@@ -2,18 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 13,
-  "pending": 61,
+  "terminal_receipts": 16,
+  "pending": 58,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 4,
+    "SKIPPED_BLOCKED": 6,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 8
+    "SKIPPED_UNVERIFIED": 9
   },
   "pending_work_ids": [
-    "CL:unimarc-country-cl",
-    "CO:exito-co-promotions",
-    "CO:olimpica-co-promotions",
     "DE:aldi-nord-de-country",
     "DE:aldi-sued-de-country",
     "DE:kaufland-de-country",
