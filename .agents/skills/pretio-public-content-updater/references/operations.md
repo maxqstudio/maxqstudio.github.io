@@ -46,6 +46,15 @@ The country-feed v1 / index v2 exact-key and evidence requirements remain unchan
 
 **Coverage accounting:** `manifest_total = completed_updated + completed_skipped + completed_failed`; `pending = manifest_total - terminal_receipts`. Count source failures as terminal once they have an audit receipt. If `pending > 0`, result is `INCOMPLETE`. Per-cycle report lists checked and skipped catalogs by country with the reason, new confirmed discounts, expired deletions, and the next cycle target.
 
+## Owner expiry cleanup — live list MUST NOT accumulate expired content
+
+At EVERY candidate finalization (registered catalogs, expanded markets, shops), perform deterministic **expiry pruning on final staged snapshots**, including items from sources that were unavailable this run:
+
+- Product Highlights with `valid_until` earlier than the relevant local-market date: DELETE them from their country `CC.json` active `items` list; preserve the exact identities/counts and supporting proof only in separate bounded audit evidence, **not** a historical feed. An official source's proof of earlier termination also justifies removal after human/verifier review. Recalculate exact country-feed bytes SHA and matching index revision together.
+- Catalog Promo with proven-expired rotating URL: replace with a newly verified official evergreen/current link or remove/deactivate via the existing compatible schema under catalog-writer review; do not leave an expired leaflet listed as current or add unsupported `status` values. Revalidate product foreign-key references in the same snapshot.
+- When source is blocked, undated or merely inaccessible, **do not conflate stale with expired**. Record `STALE_UNVERIFIED` in audit and prevent false "current promo" claims. Seek positive expiry evidence or flag manual review, not blind deletion.
+- Confirm `expired_remaining == 0` for known-expired published items before preparing PR. Do not accumulate old batches in production as archive. Any long-term audit evidence retention needs separate bounded storage controls.
+
 ## Safety / source economics
 
 - Prefer canonical permanent retailer catalog pages; replace with a short-lived dated leaflet only when no stable source exists AND `valid_until` is proven.
