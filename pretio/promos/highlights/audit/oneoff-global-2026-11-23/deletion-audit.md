@@ -33,4 +33,4 @@ The frozen 74-work-unit manifest and its terminal receipt stay unchanged; this d
 - `python -B -m unittest discover -s tooling/pretio_public_content -p 'test_*.py' -v`: **22 tests passed**.
 - Active 73-catalog manifest receipt check: **COMPLETED**, 73 terminal, 0 pending, 0 failed.
 - `git diff --check`: **passed**.
-- GitHub Actions runs after Draft PR creation and will be recorded in `run-report.md` and the Issue #57 handoff. No merge or deployment is authorized by this run.
+- All GitHub Actions workflows passed on code/test commit `294b85e37508ab258a1aea239699bb4ab47e3140`; run IDs and the initial stale-count test failure/fix are recorded in `run-report.md`. A documentation-only follow-up commit will trigger fresh workflows. No merge or deployment is authorized by this run.

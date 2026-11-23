@@ -32,7 +32,17 @@ All checks below passed on the final local candidate before PR creation:
 - `python -B tooling/pretio_public_content/manifest.py --receipts <active-73-receipts.json>` — `COMPLETED`, 73/73 terminal, 0 pending, 0 failed. Its printed `SCHEDULED_GLOBAL` label is a legacy generator label; this run was manually scoped `ONE_OFF_GLOBAL`, and no schedule was created.
 - `git diff --check` — passed.
 
-The GitHub Actions result is **pending** until the Draft PR is opened. Update this report and Issue #57 after observing the PR workflow result.
+### GitHub Actions
+
+The first Draft PR run on `a072760` passed the public-content skill/schema gates, while the browser smoke failed because its test hard-coded 74 cards after the intentional expiry removal left 73 active catalog records. The assertion was corrected in `294b85e` to compare the UI count with `catalog_app.json`. No product or schema data changed in that fix.
+
+All three workflows passed on `294b85e37508ab258a1aea239699bb4ab47e3140`:
+
+- [Pretio public content skill & schema gates — run 18](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45168582334) — success.
+- [Pretio public catalog browser — run 22](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45168582378) — success.
+- [Website security regression — run 9](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45168582517) — success.
+
+A documentation-only follow-up to record these results will trigger a fresh PR workflow. The PR and Issue #57 handoff will carry the latest head SHA and final check status.
 
 ## Review handoff
 
