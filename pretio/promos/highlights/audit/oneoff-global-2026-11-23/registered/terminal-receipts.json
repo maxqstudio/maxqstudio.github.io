@@ -1,0 +1,42 @@
+[
+  {
+    "work_id": "AE:carrefour-uae-fresh-savers",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "AE:lulu-uae-top-deals",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "CH:aldi-suisse-ch-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "CH:coop-ch-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CH:denner-ch-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CH:lidl-ch-country",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CH:migros-ch-country",
+    "status": "SKIPPED_UNAVAILABLE"
+  },
+  {
+    "work_id": "CL:alvi-country-cl",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CL:jumbo-country-cl",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "CL:santaisabel-country-cl",
+    "status": "SKIPPED_UNVERIFIED"
+  }
+]
