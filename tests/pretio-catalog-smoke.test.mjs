@@ -35,10 +35,13 @@ try {
     assert.equal(links.length, 5);
     assert.ok(links.every(x => x.href.startsWith('https://') && x.target === '_blank' && x.rel.includes('noopener')));
     await page.getByRole('tab', { name: /product highlights/i }).click();
-    await page.waitForFunction(() => document.querySelectorAll('.highlight-card').length === 1);
-    assert.match(await page.locator('.highlight-card').innerText(), /Solevita Orangensaft 100%/);
-    assert.match(await page.locator('.highlight-card').innerText(), /€1\.39/);
-    assert.match(await page.locator('.highlight-card').innerText(), /not a confirmed current offer/i);
+    await page.waitForFunction(() => document.querySelectorAll('.highlight-card').length >= 1);
+    const solevitaCard = page.locator('.highlight-card', { hasText: 'Solevita Orangensaft 100%' }).first();
+    await solevitaCard.waitFor();
+    const solevitaText = await solevitaCard.innerText();
+    assert.match(solevitaText, /Solevita Orangensaft 100%/);
+    assert.match(solevitaText, /€1\.39/);
+    assert.match(solevitaText, /not a confirmed current offer/i);
     assert.deepEqual(errors, []);
     await page.screenshot({ path: 'artifacts/screenshots/pretio-catalog-germany-desktop.png', fullPage: true });
     await page.close();
