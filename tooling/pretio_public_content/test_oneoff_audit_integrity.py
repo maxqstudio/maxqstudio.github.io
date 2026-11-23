@@ -156,6 +156,44 @@ class OneOffAuditEvidenceIntegrityTests(unittest.TestCase):
         self.assertIn("Issue #61", report)
         self.assertIn("HOLD", self.discovery_progress["compliance_audit"])
 
+    def test_owner_source_exclusions_are_enforced_in_run_evidence(self):
+        policy = read_json(RUN / "source-exclusions.json")
+        self.assertEqual(policy["scope"], "ONE_OFF_GLOBAL")
+        self.assertEqual(policy["run_id"], self.register["run_id"])
+        self.assertEqual(
+            policy["decision"],
+            "OWNER_EXCLUDE_NONCOMPLIANT_ACCESS_FROM_CRAWL_RESULTS",
+        )
+        self.assertTrue(policy["retain_historical_evidence"])
+        self.assertTrue(policy["do_not_modify_frozen_registered_manifest"])
+        self.assertTrue(policy["do_not_modify_historical_query_counts"])
+        self.assertTrue(policy["do_not_modify_preexisting_public_catalog_or_highlight_items"])
+
+        sources = policy["excluded_sources"]
+        self.assertEqual(
+            {(s["country"], s["catalog_id"]) for s in sources},
+            {
+                ("IQ", "taawon-iq-weekly-offers"),
+                ("ZA", "pnp-za-country"),
+            },
+        )
+        receipts = {r["work_id"]: r["status"] for r in self.receipts}
+        markets = {m["code"]: m["disposition"] for m in self.register["markets"]}
+        for s in sources:
+            self.assertEqual(receipts[s["registered_work_id"]], s["registered_receipt"])
+            self.assertEqual(markets[s["country"]], s["market_disposition"])
+            self.assertTrue(s["exclude_current_run_content"])
+            self.assertTrue(s["exclude_from_verified_coverage"])
+            self.assertTrue(s["exclude_from_product_highlights_candidates"])
+            self.assertTrue(s["exclude_from_catalog_approval"])
+            self.assertTrue(s["historical_attempts_still_counted"])
+        self.assertEqual(self.discovery_progress["product_candidates_accepted"], 0)
+        self.assertEqual(self.discovery_progress["verified_official_catalog_count"], 0)
+        self.assertIn("HOLD", policy["audit_verdict"])
+        report = (RUN / "run-report.md").read_text(encoding="utf-8")
+        self.assertIn("source-exclusions.json", report)
+        self.assertIn("historical", report.lower())
+
     def test_retired_catalog_has_no_highlight_foreign_key(self):
         catalog = read_json(REPO / "pretio/promos/catalog_app.json")
         catalog_ids = {item["id"] for item in catalog["items"]}
