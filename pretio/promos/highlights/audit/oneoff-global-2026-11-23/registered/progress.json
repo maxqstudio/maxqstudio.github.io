@@ -2,18 +2,15 @@
   "run_id": "pretio-oneoff-global-20261123T040625Z",
   "scope": "ONE_OFF_GLOBAL",
   "manifest_total": 74,
-  "terminal_receipts": 49,
-  "pending": 25,
+  "terminal_receipts": 52,
+  "pending": 22,
   "cycle_status": "INCOMPLETE",
   "status_counts": {
-    "SKIPPED_BLOCKED": 16,
+    "SKIPPED_BLOCKED": 17,
     "SKIPPED_UNAVAILABLE": 1,
-    "SKIPPED_UNVERIFIED": 32
+    "SKIPPED_UNVERIFIED": 34
   },
   "pending_work_ids": [
-    "PF:tahiti-pas-cher-pf-catalog",
-    "PL:biedronka-pl-gazetki",
-    "PL:lidl-pl-official-gazette",
     "PT:auchan-pt-country",
     "PT:continente-pt-country",
     "PT:intermarche-pt-country",

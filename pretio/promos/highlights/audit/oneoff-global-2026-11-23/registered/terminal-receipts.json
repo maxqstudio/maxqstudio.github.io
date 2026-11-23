@@ -194,5 +194,17 @@
   {
     "work_id": "PF:carrefour-pf-catalogue",
     "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "PF:tahiti-pas-cher-pf-catalog",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "PL:biedronka-pl-gazetki",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "PL:lidl-pl-official-gazette",
+    "status": "SKIPPED_UNVERIFIED"
   }
 ]
