@@ -4,6 +4,10 @@
 
 **Authoritative candidate-country universe:** `pretio/location/v2/index.json` currently contains **249** country/territory codes. `pretio/promos/catalog_app.json` currently has **74** registered catalogs covering **24** countries. Build the discovery country registry from location v2, not a hardcoded 174-country list and not the current 24-country feed. Each country/territory gets its own audit eligibility disposition. Do NOT silently pick the first 174 alphabetically or invent sources for the quota.
 
+## Product-type and area policy for discovered markets
+
+Product candidate research covers **normal public prices and discounted prices**. Only verified discounted products are eligible in Product Highlights v1; regular-price observations remain audit-only until the app's schema supports them. Product source and market applicability must be recorded. **Physical retailers** require item-level eligible area evidence; **online stores** need evidence of market-country ordering/fulfillment at the displayed public price but do not need province/city proof where official countrywide service applies. An expired published catalog/discount should be removed or replaced from the live data list under safe atomic validation; keep limited audit history separately.
+
 ## Selection and measurement
 
 - Attempt research in all **Owner-scoped** countries. For a global 174-market expansion, traverse the V2 candidate universe with documented market filters and country checkpoints; prioritize markets with registered sources, established online commerce, and verified official retail presence. Territories, tiny markets, disputed areas and locations without accessible commercial retail may be `SKIPPED_NO_VERIFIABLE_SOURCES` with proof; do not make unsupported blanket exclusions.
