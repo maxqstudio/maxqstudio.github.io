@@ -33,6 +33,19 @@ Do not use arbitrary aggregator/referral/shortened URLs as `source_url`; resolve
 
 Respect `robots.txt`, website terms, CAPTCHA, authentication, platform API limits, copyright and image hotlink rules. Never bypass restrictions, scrape accounts, rotate IPs to evade blocks, or require user login/private cart data. Playwright or OCR may help on **permitted** pages only.
 
+## 3B. Online-commerce extraction playbook (per approved merchant/store)
+
+1. **Start at the canonical public storefront:** inspect the merchant's own `/promotions`, `/offers`, `/sale`, `/deals`, weekly listing, official catalog link, or permitted store-specific marketplace deal category. Prefer a retailer-published public structured feed/API over HTML automation when the site's terms explicitly allow it.
+2. **Find product-detail links:** use merchant-official category navigation, `Product`/`Offer` JSON-LD, accessible item cards and public pagination. Preserve the seller identifier/variant/market observed on each candidate page. Do not assume "Sale" categories contain real discounts.
+3. **Extract prices from the same rendered product context:** distinguish `price` versus genuine `listPrice` / `strikethroughPrice` / original regular price as explicitly labeled by that seller. If only a `price` field is present, no discount is proved. If the page price differs from JSON-LD, quarantine and review; do not fabricate a baseline. Ignore cross-seller comparison rows and personalization.
+4. **Use browser rendering only as permitted:** inspect public JS-rendered listings when static HTML lacks prices. Wait for the actual seller/variant/locale price to stabilize and capture source evidence. Never log in, use hidden cart APIs, automate purchases, bypass bot checks or scrape Google Shopping results without authorization.
+5. **Confirm the public final item context:** variant selected, in-stock/purchasable, currency and country-wide applicability, no mandatory voucher, credit card, points, app-new-user account or membership gate. If the store changes pricing with postal code and only one city is checked, `SKIPPED_UNVERIFIED` for nationwide feed.
+6. **Get the individual product image:** follow official seller image/media references and check decode + exact item/variant match. A full flyer image is supporting evidence, **not** the product `image_url`. Use source-approved CDN hosts and preserve original unmodified URLs.
+7. **Record one seller/page verdict:** `ACCEPTED`, `SKIPPED_NO_PROMO`, `SKIPPED_UNVERIFIED`, `SKIPPED_BLOCKED`, `SKIPPED_UNAVAILABLE`, or `NEEDS_CATALOG_APPROVAL`. Keep the evidence, compact context and move on. Set limits on item pages/pagination per storefront and report what was not inspected.
+8. **Reconcile** only registered sellers against catalog v2 + feed v1 + index v2. No direct-to-`main` writes. Run the existing deterministic validator, expiry pruning, and browser regression tests.
+
+For marketplace results, check **seller identity on the product-detail page** as well as the storefront; the same SKU sold by two unrelated merchants must be treated as two independent offers, not a two-price discount. Deduplicate one merchant/SKU observed through multiple discovery paths.
+
 ## 4. Offer qualification — all mandatory
 
 - **Same listing, merchant and variant**: exact `product_name`, model/SKU, size/count, color/variant if price-relevant, condition and retailer/seller verified. Multiple sellers' prices are NOT normal/promo prices for one offer.
@@ -54,7 +67,7 @@ When any mandatory proof is absent, mark the item `SKIPPED_UNVERIFIED` in **audi
 
 ## 6. Suggested work-unit audit
 
-For each researched shop/product page, use `templates/ONLINE_SHOP_CHECKLIST.md`. Preserve separate evidence for `discovery_channel`, `platform`, `seller/storefront ID`, `seller URL`, `offer URL`, observed market, normal/promo price pair, photo, legality/robots, eligibility, rejection reason and relevant `catalog_id`. These are **audit metadata only**.
+For each researched shop/product page, use `../templates/ONLINE_SHOP_CHECKLIST.md`. Preserve separate evidence for `discovery_channel`, `platform`, `seller/storefront ID`, `seller URL`, `offer URL`, observed market, normal/promo price pair, photo, legality/robots, eligibility, rejection reason and relevant `catalog_id`. These are **audit metadata only**.
 
 End-of-run reports distinguish:
 1. **Registered catalog coverage**: `manifest_total`, terminal receipts, pending.
