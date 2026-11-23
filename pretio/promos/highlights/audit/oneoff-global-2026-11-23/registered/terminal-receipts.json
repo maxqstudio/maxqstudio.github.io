@@ -102,5 +102,45 @@
   {
     "work_id": "ES:aldi-es-weekly-offers",
     "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "ES:lidl-es-country",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "ID:alfamart-national-live",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ID:hypermart-national-live",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ID:indogrosir-location-live",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ID:indomaret-national-live",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ID:lotte-grosir-location-live",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "ID:lotte-mart-location-live",
+    "status": "SKIPPED_BLOCKED"
+  },
+  {
+    "work_id": "ID:superindo-national-live",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ID:tiptop-location-live",
+    "status": "SKIPPED_UNVERIFIED"
+  },
+  {
+    "work_id": "ID:transmart-location-live",
+    "status": "SKIPPED_UNVERIFIED"
   }
 ]
