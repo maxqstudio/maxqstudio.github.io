@@ -54,6 +54,14 @@ All three workflows also passed on PR head `6f72bb8bd6cfb9d580eed94d7386db0949cd
 - [Pretio public catalog browser — run 24](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45170807490) — success.
 - [Website security regression — run 11](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45170807468) — success.
 
+All three workflows passed again on the targeted Lidl audit-follow-up head `72f86a640f01ed688ecb79f3dee4c1f9506903dc`:
+
+- [Pretio public content skill & schema gates — run 21](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45176763765) — success.
+- [Pretio public catalog browser — run 25](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45176763792) — success.
+- [Website security regression — run 12](https://github.com/maxqstudio/maxqstudio.github.io/actions/runs/45176763982) — success.
+
+The exact check status for later documentation-only handoff changes is shown on the current [Draft PR #60](https://github.com/maxqstudio/maxqstudio.github.io/pull/60).
+
 ## Post-run targeted review — Lidl Spain
 
 - The audit follow-up correctly distinguished the stable official weekly-flyer hub from the expired period-specific record. On 2026-11-23, the same official hub URL displayed a successor flyer dated 23–29 November. The live page's title and date listing were checked; no flyer products, prices or images were extracted. Official hub URL (retained as non-clickable evidence text): `https://www.lidl.es/c/descubre-nuevas-ofertas-cada-semana-folletos-lidl/s10087402`.

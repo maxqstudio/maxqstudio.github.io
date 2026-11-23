@@ -34,4 +34,4 @@ The frozen 74-work-unit manifest and its terminal receipt stay unchanged; this d
 - `python -B -m unittest discover -s tooling/pretio_public_content -p 'test_*.py' -v`: **22 tests passed**.
 - Active 73-catalog manifest receipt check: **COMPLETED**, 73 terminal, 0 pending, 0 failed.
 - `git diff --check`: **passed**.
-- All GitHub Actions workflows passed on code/test commit `294b85e37508ab258a1aea239699bb4ab47e3140` and PR head `6f72bb8bd6cfb9d580eed94d7386db0949cdc474`; run IDs and the initial stale-count test failure/fix are recorded in `run-report.md`. The targeted Lidl audit follow-up is documentation-only and will trigger CI on its final commit. No merge or deployment is authorized by this run.
+- All GitHub Actions workflows passed on code/test commit `294b85e37508ab258a1aea239699bb4ab47e3140` and subsequent documentation commits; exact run IDs, including the targeted Lidl review commit, and the initial stale-count test failure/fix are recorded in `run-report.md`. The latest documentation-only handoff checks are visible on Draft PR #60. No merge or deployment is authorized by this run.
