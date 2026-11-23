@@ -8,6 +8,18 @@
 
 If an existing optional item field is absent/unverifiable (`brand`, `package_size`, `valid_from`, `valid_until`, `logo_url`, image/logo revisions), **omit that optional key**, not an empty string, guessed value or newly invented substitute field. The required `image_url`, actual normal/promo prices, `source_url` and other required fields remain mandatory: if no valid official image exists, skip the product. Do not skip an otherwise qualified product merely because it lacks a dedicated product URL or optional metadata.
 
+## Online-store / marketplace Product Highlights
+
+- **Include online merchants, official e-commerce shops and permitted marketplace listings.** Google Shopping can suggest possible discounts through authorized discovery, but a Google snippet/search result or comparison card does **not** establish `normal_price`, `promo_price`, an official merchant URL or country availability. Verify the pair on the **actual seller's** listing.
+- Confirm the **same seller**, product SKU/model/size, public purchase channel and country. Never compare the regular price from one seller with the discounted price from another, or a membership/coupon/credit-card/first-purchase price with a public regular price. RRP/MSRP alone is not proof that the item previously sold for that normal price.
+- `catalog_id` must refer to an **approved existing active** seller/store Catalog Promo entry, not a generic unrelated marketplace category. `retailer` must identify the actual seller/store, not merely the marketplace brand for third-party listings. `source_url` must be the approved merchant/marketplace official HTTPS page (or verified permanent seller catalog) that displays the matching price evidence, with the exact catalog-source host relationship enforced by the current validator.
+- Source may be a permitted dynamic product page, official retailer API or structured `Product`/`Offer` data **if the evidence agrees with what the public customer actually sees**. Do not use seller-private APIs, cart data, Google Shopping values or inferred original prices.
+- Product `image_url` must represent the individual matching item/variant and decode successfully; marketplace thumbnails and official merchant CDN assets are permitted when rights and host checks pass. **Do not use the entire flyer/page image** as an individual product photo.
+- Confirm the price/availability is valid **countrywide**. An IP-localized, postcode-restricted, store pickup only, region-only or other conditional price is not eligible for current country-wide feeds. Do not infer worldwide shipping or convert currencies across markets.
+- Newly discovered stores/marketplace sellers lacking an approved catalog ID remain **AUDIT_ONLY**, even if both prices are verified. New catalog registration and host additions need Owner review first. Store `platform`, `seller_id`, `discovery_source`, proof and approval decision in separate audit/checklist files; **NEVER** add these as production item fields.
+
+See `online-shop-marketplace-rules.md` and `templates/ONLINE_SHOP_CHECKLIST.md`. Max 80 per country and 20 per retailer remain unchanged.
+
 ## Exact schema contracts
 
 - Top-level country-feed keys **only**: `schema`, `schema_version`, `country`, `currency`, `revision`, `generated_at`, `items`. Values `pretio.product_highlights.v1`, `1`, ISO country, configured ISO currency, opaque revision, real UTC generated time.
