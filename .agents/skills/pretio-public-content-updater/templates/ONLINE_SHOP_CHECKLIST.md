@@ -18,7 +18,10 @@ Checked UTC: `<timestamp>`
 - [ ] Source permits access; no bot/CAPTCHA/login bypass or account scraping
 - [ ] Link redirects, canonical host and allowed host checked
 - [ ] If `catalog_id` is missing, candidate stays audit-only until separately approved
-- [ ] Country-wide price/availability verified; do not claim regional pricing is national
+- [ ] **Online country-wide offer/delivery eligibility** verified through official shipping/market terms and offer context; **province/city checks not mandatory** for a genuine market-wide online deal
+- [ ] Country-only storefront/domain does not itself prove eligible market, and pickup-only/regional pricing is not nationwide
+- [ ] Price can be genuinely regular (AUDIT_ONLY) or discounted (eligible highlight if approved and verified)
+- [ ] Expired published offers pruned from active feeds with matched index SHA; do not retain expired live records
 - [ ] Currency metadata present for publishing; otherwise audit only
 - [ ] All discovered seller/store candidates have terminal audit status
 
