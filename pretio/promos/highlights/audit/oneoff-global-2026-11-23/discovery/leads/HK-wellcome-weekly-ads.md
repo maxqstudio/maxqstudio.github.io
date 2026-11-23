@@ -1,0 +1,8 @@
+# Hong Kong — Wellcome Weekly Ads lead (audit only)
+
+- Run: `pretio-oneoff-global-20261123T040625Z`; selected market: Hong Kong (HK), rank 52/174.
+- Lead from the already-used bounded HK Catalog Promo query `Hong Kong official supermarket weekly promotion catalogue Wellcome PARKnSHOP 2026`: `https://www.wellcome.com.hk/en/d/UYotKNFg7BGJ.html`. Search output identified the URL as Wellcome Online Store's Weekly Ads page; this was used as discovery only, not source evidence.
+- Robots: `GET https://www.wellcome.com.hk/robots.txt` returned HTTP 200 at approximately `2026-11-23 09:29 UTC`. Its `User-agent: *` section disallows selected `/freView`, `/happystamp`, `/wd2shop`, and `/similar` paths. It does not disallow the lead path `/en/d/...`.
+- Terms check: `GET https://www.wellcome.com.hk/en` returned HTTP 200. The returned HTML did not expose a Terms, conditions, legal, or privacy link in the retained response, so automated reuse/retention permission for catalog content could not be verified from a linked primary terms source.
+- I did not open the Weekly Ads page or any offer/product detail after the terms gate remained unresolved. Thus official ownership, current product offers/prices, validity dates, and whether offers apply in-store or online were not independently verified from the retailer page. No search-result price/content was retained as product evidence.
+- Source disposition: `SKIPPED_UNVERIFIED`. No Product Highlight candidate was accepted, and no production data changed. This does not establish that Wellcome has no current offers or that any existing catalog is obsolete.

@@ -1,0 +1,6 @@
+# Compact catalog handoff
+
+- Work unit `ID:indomaret-national-live`, manifest position 31/74; terminal receipt `SKIPPED_UNVERIFIED`. Run `pretio-oneoff-global-20261123T040625Z`, scope `ONE_OFF_GLOBAL`; baseline/skill SHA `73fd02fe14c4935c3a95bca49bba3c1498a9cb54`.
+- Exact registered URL <https://www.indomaret.co.id/promosi/> is official, HTTPS, and already host-allowlisted. Its stable-looking landing path returned current campaign windows, including Paling Murah and Hemat Minggu Ini through 25 Nov 2026. Promo 4 Hari is listed for 19–22 Nov and had ended by the market date; that card does not prove the evergreen page obsolete. Update-in-place behavior is not established.
+- Robots returned HTTP 200 but no readable rule lines; general crawling/reuse terms were not located by bounded page-link inspection and site-scoped terms search, so permission remains unverified. The inspected Paling Murah image is a generic campaign-logo thumbnail. No item-level normal/promo prices, product image, or offer-level national eligibility were verified.
+- IDR is supported; the current ID feed has zero references to this catalog. No product accepted, no product/catalog retired, and no production JSON changed. Next manifest work unit: `ID:lotte-grosir-location-live`.
