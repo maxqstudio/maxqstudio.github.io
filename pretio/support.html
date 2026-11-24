@@ -41,15 +41,23 @@
         </details>
         <details>
           <summary>Do I need to create an account?</summary>
-          <p>No. Pretio does not require login.</p>
+          <p>No for local use. You can track prices, save Watchlist items, and manage shopping lists locally without signing in. A signed-in (non-anonymous) Google account is required only if you want Cloud Sync across devices or AI product scans.</p>
         </details>
         <details>
           <summary>Where is my data stored?</summary>
-          <p>Your products, saved prices, and shopping list stay on this device unless you choose to back them up, export them, or restore them yourself.</p>
+          <p>Your products, saved prices, Product Watchlist, and shopping list stay locally on your device. If you choose to sign in with Google, your core records are also synced to your Pretio cloud account so you can access them on your active devices.</p>
+        </details>
+        <details>
+          <summary>How does AI product recognition work?</summary>
+          <p>Barcode AI, photo product scans, and Product Insight route through Pretio's backend with automatic multi-provider fallback: Google Gemini is the primary provider, with OpenAI and Anthropic as fallback providers if the primary is unavailable. Failed AI attempts are not counted against your daily or monthly quota, and Google Search Grounding results are never persistently cached.</p>
+        </details>
+        <details>
+          <summary>Why am I seeing an app update screen?</summary>
+          <p>Pretio checks for newer versions via Firebase Remote Config. Optional updates show a dismissible prompt, while required updates (for example when older pre-1.5.0 AI endpoints are retired) ask you to update from Google Play to continue.</p>
         </details>
         <details>
           <summary>What is Price Memory?</summary>
-          <p>Price Memory helps you see the best value, product details, and price history at a glance.</p>
+          <p>Price Memory helps you see your Best Deal (% savings vs historical average), product details, and price history at a glance.</p>
         </details>
         <details>
           <summary>What is Compare by Category?</summary>
@@ -57,11 +65,11 @@
         </details>
         <details>
           <summary>Can I delete all data?</summary>
-          <p>Yes. You can use Delete All Data to remove products, saved prices, your shopping list, stores, and related records from this device. App preferences such as language, theme, number format, currency, and text size are preserved.</p>
+          <p>Yes. You can use Delete All Data to remove products, saved prices, your shopping list, stores, Product Watchlist, and related records from this device (and from your synced cloud account when signed in). App preferences such as language, theme, number format, currency, and text size are preserved.</p>
         </details>
         <details>
           <summary>Can Pretio delete server-side data for me?</summary>
-          <p>Not at this time. Delete All Data removes records stored locally on your device, but Pretio currently cannot reliably identify and delete server-side records for one installation. You may contact support with a privacy question using the <a href="data-deletion.html">data and privacy information page</a>; do not send passwords, payment-card details, or Google Play purchase tokens.</p>
+          <p>When signed in, you can delete your synced cloud records using Delete All Data or delete your account from the Account page (recoverable within 30 days). For legacy unattributable caches and hashed purchase-entitlement records, see the <a href="data-deletion.html">data and privacy information page</a>; do not send passwords, payment-card details, or Google Play purchase tokens.</p>
         </details>
       </div>
 
