@@ -19,21 +19,21 @@
     <article class="container legal-card">
       <p class="eyebrow">Privacy &amp; Data Safety</p>
       <h1>Pretio Data and Privacy Information</h1>
-      <p><strong>Effective date:</strong> November 2, 2026 · <strong>Last reviewed:</strong> November 2, 2026</p>
+      <p><strong>Effective date:</strong> November 24, 2026 (Pretio 1.5.0) · <strong>Last reviewed:</strong> November 24, 2026</p>
       <div class="content-card" role="note">
-        <p>Pretio works without an account. If you choose to sign in (Pretio 1.4.6), your records are also stored in your account so they can sync across your phones. Pretio currently has no operational process for receiving and fulfilling individual requests to delete server-side records. The email below is for privacy questions; it is not a server-side deletion service.</p>
+        <p>Pretio works without an account. If you choose to sign in with Google, your records are also stored in your account so they can sync across your phones. You can delete your local and synced cloud records directly inside the app. Pretio currently has no operational process for receiving and fulfilling individual email requests to delete legacy unattributable server-side records. The email below is for privacy questions; it is not a server-side deletion service.</p>
       </div>
 
       <h2>Delete data stored on your device</h2>
-      <p>Use Pretio's Delete All Data feature to remove products, saved prices, stores, shopping lists, and related records stored locally in the app. To confirm, type DELETE and wait for a short countdown. When you are signed in, Delete All Data also deletes your synced cloud data. Pretio never deletes your data automatically when you exceed a plan limit.</p>
+      <p>Use Pretio's Delete All Data feature to remove products, saved prices, stores, shopping lists, Product Watchlist items, and related records stored locally in the app. To confirm, type DELETE and wait for a short countdown. When you are signed in, Delete All Data also deletes your synced cloud data. Pretio never deletes your data automatically when you exceed a plan limit.</p>
 
-      <h2>Delete your account (Pretio 1.4.6)</h2>
+      <h2>Delete your account</h2>
       <p>You can delete your account from the Account page. Deleted accounts can be recovered within 30 days. Individual items you delete can be restored from Recently Deleted.</p>
 
-      <h2>Backups</h2>
+      <h2>Backups and external AI providers</h2>
       <p>Backups are manual. Before destructive actions Pretio asks whether you want to back up your data first.</p>
 
-      <p>In Pretio v1.4.4, Photo Product identification sends a locally compressed image to Google Gemini through Firebase AI Logic when you choose to identify a product. Photos are not stored in Pretio's saved product records, but external service provider retention may apply. Deleting local Pretio data does not erase any data retained by Google. For details, see the <a href="privacy.html">Privacy Policy</a>.</p>
+      <p>In Pretio 1.5.0, AI requests—including Photo Product identification (a locally compressed JPEG with EXIF/GPS metadata removed), Barcode AI, and Product Insight—are sent through Pretio's Firebase Cloud Functions backend to Google Gemini (primary) and, when fallback is triggered, to OpenAI or Anthropic. Photos and Google Search Grounding results are not stored in Pretio's saved product records or persistent caches, but external AI provider retention may apply under each provider's policies. Deleting local or cloud Pretio data does not erase any data retained by Google, OpenAI, or Anthropic. For details and provider links, see the <a href="privacy.html">Privacy Policy</a>.</p>
 
       <h2>Ask a privacy question</h2>
       <p>For questions about Pretio's data practices, email <a href="mailto:pretio.support@maxqstudio.dev?subject=Pretio%20Privacy%20Question">pretio.support@maxqstudio.dev</a>. Do not send passwords, payment-card details, or Google Play purchase tokens. The email route has not been verified as a server-data deletion process, and Pretio cannot promise deletion of server-side records in response.</p>
