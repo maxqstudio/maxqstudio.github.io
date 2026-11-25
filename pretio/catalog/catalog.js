@@ -1,14 +1,60 @@
 'use strict';
-/* Public Pretio JSON viewer. No authentication, cookies, geolocation or analytics. */
+/* Public Pretio JSON viewer. No browser GPS, authentication or analytics. Country is estimated by IP only for initial market selection. */
 (function () {
   const $ = (id) => document.getElementById(id);
   const state = {
     catalogs: [], index: null, highlights: [], highlightsByCountry: new Map(),
-    country: 'DE', merchant: 'ALL', tab: 'catalogs', sort: 'featured',
+    country: 'ALL', merchant: 'ALL', tab: 'catalogs', sort: 'featured',
     query: '', view: 'grid', loading: true, highlightLoading: false,
     error: '', highlightError: '', countries: [], selectedRequest: 0
   };
   const MAX_AGE_DAYS = 30;
+  const COUNTRY_PREFERENCE_KEY = 'pretio.catalog.preferredCountry';
+  let manualSelectionVersion = 0;
+
+  function supportedCountry(code) {
+    return code === 'ALL' || state.countries.includes(code);
+  }
+  function savedCountry() {
+    try {
+      const choice = String(window.localStorage.getItem(COUNTRY_PREFERENCE_KEY) || '').toUpperCase();
+      return supportedCountry(choice) ? choice : null;
+    } catch (_) { return null; }
+  }
+  function saveCountry(code) {
+    try { window.localStorage.setItem(COUNTRY_PREFERENCE_KEY, code); }
+    catch (_) { /* Private browsing may disable storage; selection still works. */ }
+  }
+  async function fetchIpRegion(url, responseKind, timeoutMs) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal, cache: 'no-store',
+        credentials: 'omit', referrerPolicy: 'no-referrer'
+      });
+      if (!response.ok) return null;
+      if (responseKind === 'trace') {
+        // Cloudflare provides loc=XX; discard all other fields, including IP.
+        const match = (await response.text()).slice(0, 4096).match(/^loc=([A-Z]{2})\s*$/m);
+        return match ? match[1] : null;
+      }
+      const json = await response.json();
+      return json && typeof json.country === 'string' ? json.country.toUpperCase() : null;
+    } catch (_) {
+      return null;
+    } finally { clearTimeout(timer); }
+  }
+  async function detectIpCountry() {
+    // No precise-location permission is requested. First try the site's
+    // own Cloudflare edge (only present if this host is Cloudflare-proxied).
+    const ownCountry = await fetchIpRegion('/cdn-cgi/trace', 'trace', 1200);
+    if (ownCountry) return supportedCountry(ownCountry) ? ownCountry : 'ALL';
+    // Static GitHub Pages cannot inspect visitor IP. GeoJS is an HTTPS/CORS
+    // country-only fallback; it receives the normal browser IP request.
+    const publicCountry = await fetchIpRegion('https://get.geojs.io/v1/ip/country.json', 'json', 2200);
+    return publicCountry && supportedCountry(publicCountry) ? publicCountry : 'ALL';
+  }
   const nameByCountry = new Map();
   const dateFormatter = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'short', year: 'numeric' });
   let displayNames;
@@ -255,7 +301,7 @@
     return res.json();
   }
   async function selectCountry(code) {
-    state.country = state.countries.includes(code) || code === 'ALL' ? code : 'DE';
+    state.country = supportedCountry(code) ? code : 'ALL';
     state.merchant = 'ALL';
     const requestId = ++state.selectedRequest;
     state.highlights = [];
@@ -300,10 +346,12 @@
   }
   function parseQuery() {
     const p = new URLSearchParams(window.location.search);
-    const requested = String(p.get('country') || '').toUpperCase();
-    const localeRegion = ((navigator.language || '').split('-')[1] || '').toUpperCase();
-    state.country = requested || (state.countries.includes(localeRegion) ? localeRegion : 'ID');
-    if (state.country !== 'ALL' && !state.countries.includes(state.country)) state.country = 'DE';
+    const requested = String(p.get('country') || '').trim().toUpperCase();
+    const explicit = p.has('country') && supportedCountry(requested);
+    const remembered = savedCountry();
+    // Explicit shared links outrank a manually saved choice; if neither
+    // exists, default to ALL until a supported IP country is detected.
+    state.country = explicit ? requested : (remembered || 'ALL');
     state.tab = p.get('tab') === 'highlights' ? 'highlights' : 'catalogs';
     state.merchant = p.get('merchant') || 'ALL';
     state.sort = ['featured', 'name', 'recent'].includes(p.get('sort')) ? p.get('sort') : 'featured';
@@ -312,6 +360,7 @@
     $('search').value = state.query;
     $('country').value = state.country;
     $('sort').value = state.sort;
+    return explicit || !!remembered;
   }
   function reset() {
     state.query = ''; state.merchant = 'ALL'; state.sort = 'featured';
@@ -319,7 +368,12 @@
   }
   function bindControls() {
     $('search').addEventListener('input', e => { state.query = e.target.value.slice(0, 150); paint(); });
-    $('country').addEventListener('change', e => { selectCountry(e.target.value); });
+    $('country').addEventListener('change', e => {
+      manualSelectionVersion++;
+      const code = supportedCountry(e.target.value) ? e.target.value : 'ALL';
+      saveCountry(code);
+      void selectCountry(code);
+    });
     $('merchant').addEventListener('change', e => { state.merchant = e.target.value; paint(); });
     $('sort').addEventListener('change', e => { state.sort = e.target.value; paint(); });
     document.querySelectorAll('[data-tab]').forEach(button => button.addEventListener('click', () => {
@@ -351,7 +405,20 @@
       } catch (_) {
         state.index = null; // Keep the retailer catalog usable if highlights are unavailable.
       }
-      parseQuery();
+      const pinnedCountry = parseQuery();
+      if (!pinnedCountry) {
+        const version = manualSelectionVersion;
+        const detected = await detectIpCountry();
+        // A visitor can change markets while the IP lookup is in flight.
+        // Never overwrite that choice with a late network response.
+        if (version !== manualSelectionVersion) {
+          state.loading = false;
+          paint();
+          return;
+        }
+        state.country = detected;
+        $('country').value = detected;
+      }
       state.loading = false;
       await selectCountry(state.country);
     } catch (error) {

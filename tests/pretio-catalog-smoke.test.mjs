@@ -4,7 +4,9 @@ import { mkdirSync, readFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:8765';
-const activeCatalogCount = JSON.parse(readFileSync('pretio/promos/catalog_app.json', 'utf8')).items.length;
+const activeCatalogs = JSON.parse(readFileSync('pretio/promos/catalog_app.json', 'utf8')).items;
+const activeCatalogCount = activeCatalogs.length;
+const catalogCountFor = code => activeCatalogs.filter(item => item.locations.some(loc => loc.country_code === code)).length;
 mkdirSync('artifacts/screenshots', { recursive: true });
 const browser = await chromium.launch({ headless: true });
 
@@ -80,6 +82,78 @@ try {
     assert.equal(await page.locator('.highlight-card').count(), 1);
     assert.deepEqual(errors, []);
     await page.close();
+  });
+
+  await test('IP country from same-origin Cloudflare trace is the initial market', async () => {
+    const page = await browser.newPage();
+    let externalLookupCount = 0;
+    await page.route('**/cdn-cgi/trace', route => route.fulfill({
+      status: 200, contentType: 'text/plain', body: 'h=localhost\nloc=ID\nip=203.0.113.50\n'
+    }));
+    await page.route('https://get.geojs.io/**', route => {
+      externalLookupCount++;
+      return route.fulfill({ status: 200, contentType: 'application/json', body: '{"country":"US"}' });
+    });
+    await openCatalog(page, '');
+    assert.equal(await page.locator('#country').inputValue(), 'ID');
+    assert.equal(await page.locator('.catalog-card').count(), catalogCountFor('ID'));
+    assert.equal(externalLookupCount, 0);
+    assert.match(page.url(), /country=ID/);
+    await page.close();
+  });
+
+  await test('GeoJS country fallback works if own edge has no country', async () => {
+    const page = await browser.newPage();
+    await page.route('**/cdn-cgi/trace', route => route.fulfill({ status: 404, body: 'Not Found' }));
+    await page.route('https://get.geojs.io/**', route => route.fulfill({
+      status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"country":"CL","ip":"203.0.113.7"}'
+    }));
+    await openCatalog(page, '');
+    assert.equal(await page.locator('#country').inputValue(), 'CL');
+    assert.equal(await page.locator('.catalog-card').count(), catalogCountFor('CL'));
+    await page.close();
+  });
+
+  await test('All countries is the fallback when IP detection fails or is unsupported', async () => {
+    const page = await browser.newPage({ locale: 'en-US' });
+    await page.route('**/cdn-cgi/trace', route => route.fulfill({ status: 404, body: 'No edge' }));
+    await page.route('https://get.geojs.io/**', route => route.fulfill({ status: 503, body: 'No geo service' }));
+    await openCatalog(page, '');
+    assert.equal(await page.locator('#country').inputValue(), 'ALL');
+    assert.equal(await page.locator('.catalog-card').count(), activeCatalogCount);
+    assert.doesNotMatch(page.url(), /country=/);
+    await page.close();
+
+    const pageUnsupported = await browser.newPage();
+    await pageUnsupported.route('**/cdn-cgi/trace', route => route.fulfill({
+      status: 200, contentType: 'text/plain', body: 'loc=JP\n'
+    }));
+    await openCatalog(pageUnsupported, '');
+    assert.equal(await pageUnsupported.locator('#country').inputValue(), 'ALL');
+    await pageUnsupported.close();
+  });
+
+  await test('Explicit country link and manually saved market override IP geolocation', async () => {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    let ipLookupCount = 0;
+    await page.route('**/cdn-cgi/trace', route => {
+      ipLookupCount++;
+      return route.fulfill({ status: 200, contentType: 'text/plain', body: 'loc=US\n' });
+    });
+    await openCatalog(page, '?country=DE');
+    assert.equal(await page.locator('#country').inputValue(), 'DE');
+    assert.equal(ipLookupCount, 0, 'explicit link should never make an IP lookup');
+    await page.locator('#country').selectOption('ID');
+    assert.equal(await page.locator('.catalog-card').count(), catalogCountFor('ID'));
+    await page.goto(base + '/pretio/catalog/', { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => (document.querySelector('#result-summary')?.textContent || '').startsWith('Showing '));
+    assert.equal(await page.locator('#country').inputValue(), 'ID', 'manually saved market should persist');
+    assert.equal(ipLookupCount, 0, 'saved market should not make an IP lookup');
+    await page.goto(base + '/pretio/catalog/?country=CH', { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => (document.querySelector('#result-summary')?.textContent || '').startsWith('Showing '));
+    assert.equal(await page.locator('#country').inputValue(), 'CH', 'explicit link outranks stored selection');
+    await context.close();
   });
 
   await test('Mobile layout fits screen and provides search, tabs and cards', async () => {
