@@ -17,8 +17,8 @@
     {
       "code": "RS",
       "document_id": "RS",
-      "revision": "pretio-highlights-RS-20261123T025341Z",
-      "sha256": "c43bd495baf279138ff676842bf5e8bd9ccdac9998972e9378db4d7d16041357",
+      "revision": "pretio-highlights-RS-20261125230700Z",
+      "sha256": "f4918454f83a36ae1327c78dff357c2a4e319ec16ad346f5d656aa52e0e03754",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/RS.json"
     },
     {
@@ -45,12 +45,12 @@
     {
       "code": "CH",
       "document_id": "CH",
-      "revision": "pretio-highlights-CH-20261123T025341Z",
-      "sha256": "e2880a0e751695ede0c2482fa6303ce26350adc9b960023643b3fd815d3a8c88",
+      "revision": "pretio-highlights-CH-20261125230700Z",
+      "sha256": "14172805866dd8ca74b62abdde6db34510a757f7aad8454d47f9274dbaa95edd",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/CH.json"
     }
   ],
-  "revision": "2026-11-23T02:58:42Z",
+  "revision": "2026-11-25T23:07:00Z",
   "schema": "pretio.product_highlights.index.v2",
   "schema_version": 2
 }
