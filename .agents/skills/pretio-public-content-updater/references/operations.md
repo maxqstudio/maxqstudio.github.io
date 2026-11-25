@@ -35,6 +35,10 @@ For **each candidate** collected during a registered-catalog or newly discovered
 - At the end of a cycle, give the tool a JSON array of terminal receipts with existing audit-only keys `work_id` and `status`: `python3 tooling/pretio_public_content/manifest.py --receipts /tmp/receipts.json`.
 - Exit code `0` means every manifest entry is terminal. Exit code `2` means `INCOMPLETE`; exit code `1` indicates invalid receipt / input. An incomplete run MUST NOT be declared done. These JSON audit objects are not production catalog or highlight records.
 
+## Durable resume ledger
+
+Use the [checkpoint operator guide](../../../../tooling/pretio_public_content/CHECKPOINT.md) to freeze the manifest, record each terminal outcome and persist a separate discovery ledger. The operator must save the audit files in durable cross-run storage after each receipt and recover them before resuming. The ledger is single-writer and does not itself crawl or publish; RESEARCH_TERMINAL is not publication clearance.
+
 ## Deterministic exhaustive 12-hour pipeline
 
 **Completion invariant:** At the start of each cycle, freeze an immutable work manifest from **all** active official catalog entries and all their country codes in `catalog_app.json`. Every unique `(country_code, catalog_id)` must be attempted. **No stop after first product, first target-met country, first source failure, or first success.** The cycle ends only when every manifest entry has a durable terminal checklist/receipt and there are zero remaining entries.
