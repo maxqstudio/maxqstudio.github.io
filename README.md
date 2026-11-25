@@ -35,6 +35,10 @@ The `.github/workflows/homepage-ui.yml` GitHub Actions workflow runs headless Ch
 
 ## Pretio public-content updater skill
 
+The skill additionally covers **online shops, official marketplace seller storefronts, and public e-commerce discounted offers**; Google Shopping may be used as an authorized **discovery** source only, not as final price evidence. New seller/store IDs require Owner-reviewed catalog registration and app-compatible official domain validation before highlight publication. The workflow includes bounded online discovery per country and a seller/offer evidence checklist in `.agents/skills/pretio-public-content-updater/templates/ONLINE_SHOP_CHECKLIST.md`. This does **not** implement or schedule a crawler.
+
+
+
 Agent instructions: [.agents/skills/pretio-public-content-updater/SKILL.md](.agents/skills/pretio-public-content-updater/SKILL.md). GitHub Copilot alias: [.github/skills/pretio-public-content-updater/SKILL.md](.github/skills/pretio-public-content-updater/SKILL.md).
 
 This policy covers BOTH the official **Catalog Promo** directory and **discounted Product Highlights**. Each country/catalog gets an independent checklist and compact handoff; the next retailer is processed in a clean agent context. Only the existing app-compatible fields may be written. Rotating catalog links require source-backed expiry dates; verified-expired highlights are removed. The target of one new verified discounted product per country every 12 hours is aspirational, never a justification to fabricate a product.

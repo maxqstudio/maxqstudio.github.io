@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pretio: Price Tracker with AI | Max-Q Studio</title>
-  <meta name="description" content="Pretio: Price Tracker AI helps you scan barcodes or product photos, save prices, compare by unit or category, review price history, browse catalogs, and organize shopping lists." />
+  <meta name="description" content="Pretio: Price Tracker AI helps you scan barcodes or product photos, track Best Deal savings, compare by unit or category, watch Product Highlights, review price history, and organize shopping lists." />
   <meta name="theme-color" content="#f6fbf8" />
   <link rel="icon" href="../images/pretio_icon.png" />
   <link rel="stylesheet" href="pretio.css?v=20261120-146e" />
@@ -88,9 +88,8 @@
           <div class="copy-card reveal">
             <p class="quote-line">Your own prices, available when you need them.</p>
             <p>
-              Save products, stores, prices, units, and shopping-list items on
-              your device, and optionally sign in to sync them across your phones. Best Price is based on your recorded price history,
-              not a guaranteed live store offer.
+              Save products, stores, prices, units, Watchlist items, and shopping-list items on
+              your device, and optionally sign in with Google to sync them across your phones. Home Best Deal highlights your largest percentage savings against your historical average (falling back to your lowest recorded price), based on your own price history rather than a guaranteed live store offer.
             </p>
           </div>
           <div class="copy-card reveal">
@@ -138,13 +137,13 @@
             <p>Open online product listings for comparison. Prices and availability depend on external sellers and search results.</p>
           </article>
           <article class="feature-card reveal">
-            <h3>Store catalogs</h3>
-            <p>Explore available store catalogs and promotions for supported locations.</p>
+            <h3>Product Highlights &amp; Watchlist</h3>
+            <p>Explore curated Product Highlights for your country and area with live search and a single Filter &amp; Sort menu. Watch products locally, compare identical items directly against your saved prices, and prefill Price History or Shopping List entries.</p>
             <p><a href="catalog/" style="font-weight:800;color:#08653a">Browse the public catalog explorer ↗</a></p>
           </article>
           <article class="feature-card reveal">
             <h3>Product Insight</h3>
-            <p>Open AI-assisted product details when available from Product Detail. Treat generated descriptions and estimates as suggestions, not verified facts.</p>
+            <p>Open AI-assisted product details when available from Product Detail. AI requests route through Pretio's backend with multi-provider fallback (Google Gemini primary, OpenAI and Anthropic fallback). Treat generated descriptions and estimates as suggestions, not verified facts.</p>
           </article>
         </div>
       </div>
@@ -153,37 +152,33 @@
     <section id="whats-new" class="section">
       <div class="container">
         <div class="section-title wide reveal">
-          <p class="eyebrow">What's new in 1.4.6</p>
-          <h2>Cloud sync, more AI, smarter catalogs</h2>
+          <p class="eyebrow">What's new in 1.5.0</p>
+          <h2>Best Deal, Product Watchlist, and reliable multi-provider AI</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card reveal">
-            <h3>Cloud sync with login</h3>
-            <p>Sign in to back up and sync your products, prices, stores, and shopping lists. Signing in is optional; without it Pretio works locally as before.</p>
+            <h3>Home Best Deal</h3>
+            <p>Home spotlights your Best Deal — the product with the largest percentage savings compared to your historical average price, falling back to your lowest recorded price.</p>
           </article>
           <article class="feature-card reveal">
-            <h3>Multiple devices</h3>
-            <p>Sign in on several phones. A limited number of phones can be active (syncing) at once; switch the active phone from Account whenever you like.</p>
+            <h3>Product Highlights &amp; Watchlist</h3>
+            <p>Home displays up to 5 Product Highlights plus a dedicated Product Highlights page with live search and one Filter &amp; Sort button (Watchlist, Sort, Store, verified Area). Compare identical watched products directly against your price history in a single card and prefill Add to Price History or Shopping List.</p>
           </article>
           <article class="feature-card reveal">
-            <h3>30-day account recovery</h3>
-            <p>If you delete your account, you can recover it within 30 days.</p>
+            <h3>Multi-provider AI fallback</h3>
+            <p>Barcode AI, photo product identification, and Product Insight route through Pretio's backend with automatic fallback (Google Gemini primary, OpenAI and Anthropic fallback) for higher availability. Failed AI attempts are never counted against your quota.</p>
           </article>
           <article class="feature-card reveal">
-            <h3>Recently Deleted</h3>
-            <p>Deleted items can be restored from Recently Deleted instead of being lost right away.</p>
+            <h3>Cloud sync &amp; multiple devices</h3>
+            <p>Optional Google sign-in backs up and syncs your products, prices, stores, and shopping lists across phones (1 active phone on Free, up to 3 on Premium), with Recently Deleted restore and 30-day account recovery.</p>
           </article>
           <article class="feature-card reveal">
-            <h3>AI product scan &amp; barcode AI</h3>
-            <p>Identify products from a photo or a barcode with AI. Usage is limited per day and per month; your usage is shown as bars on the Account page. A failed AI result is not counted.</p>
+            <h3>Security hardening &amp; app updates</h3>
+            <p>Non-anonymous Google sign-in is required for cloud sync and AI, legacy pre-1.5.0 AI endpoints are retired, purchase verification is rate-limited, and an in-app update check notifies you when a newer version is available.</p>
           </article>
           <article class="feature-card reveal">
-            <h3>Catalog promos for your country</h3>
-            <p>Store catalogs and promos are shown for the country detected on your device, so you only see offers that apply to where you are. Choose your province and city within that country.</p>
-          </article>
-          <article class="feature-card reveal">
-            <h3>Decimal prices</h3>
-            <p>Enter prices with decimals for more exact comparisons.</p>
+            <h3>Country-scoped highlights &amp; decimal prices</h3>
+            <p>Product Highlights and store catalogs match your detected country and chosen province/city, while decimal pricing gives exact unit comparisons.</p>
           </article>
         </div>
       </div>
@@ -231,7 +226,7 @@
         <div class="section-title wide reveal">
           <p class="eyebrow">Screenshots</p>
           <h2>See Pretio in action</h2>
-          <p>Illustrations of Pretio 1.4.6 using sample data; the app screens may differ in detail.</p>
+          <p>Illustrations of Pretio using sample data; screens in 1.5.0 may differ in detail.</p>
         </div>
         <div class="screenshot-grid pretio-screenshot-grid">
           <figure class="pretio-screen-card reveal">
@@ -276,18 +271,20 @@
           <div class="policy-item">
             <h3>Local shopping records</h3>
             <p>
-              Saved products, price history, stores, and shopping lists are kept
+              Saved products, price history, stores, Watchlist items, and shopping lists are kept
               locally on your device. No Pretio account or cloud synchronization is
-              needed to use these local features. If you choose to sign in in
-              Pretio 1.4.6, your records are also synced to your account.
+              needed to use these local features. If you choose to sign in with Google in
+              Pretio 1.5.0, your core records are also synced to your account.
             </p>
           </div>
           <div class="policy-item">
-            <h3>Optional online features</h3>
+            <h3>Optional online &amp; AI features</h3>
             <p>
-              Photo-based product recognition can send the selected image to
-              Google's Gemini service through Firebase AI Logic. Online search
-              and catalogs may contact external services. AI suggestions and
+              AI product recognition, barcode enrichment, and Product Insight send requests
+              through Pretio's backend to Google Gemini (primary) and, if unavailable,
+              configured fallback AI providers (OpenAI and Anthropic). Grounded search
+              results are never persistently cached by Pretio. Online search, Product
+              Highlights, and catalogs may contact external services, and AI suggestions or
               online prices can be inaccurate or unavailable.
             </p>
           </div>

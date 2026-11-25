@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:8765';
+const activeCatalogs = JSON.parse(readFileSync('pretio/promos/catalog_app.json', 'utf8')).items;
+const activeCatalogCount = activeCatalogs.length;
+const catalogCountFor = code => activeCatalogs.filter(item => item.locations.some(loc => loc.country_code === code)).length;
 mkdirSync('artifacts/screenshots', { recursive: true });
 const browser = await chromium.launch({ headless: true });
 
@@ -59,7 +62,7 @@ try {
     await page.locator('#merchant').selectOption('Lidl');
     assert.equal(await page.locator('.catalog-card').count(), 1);
     await page.locator('#country').selectOption('ALL');
-    assert.equal(await page.locator('.catalog-card').count(), 74);
+    assert.equal(await page.locator('.catalog-card').count(), activeCatalogCount);
     await page.locator('#search').fill('<img src=x onerror=alert(1)>');
     assert.equal(await page.locator('.catalog-card').count(), 0);
     assert.equal(await page.locator('#results img[src="x"]').count(), 0);
@@ -93,7 +96,7 @@ try {
     });
     await openCatalog(page, '');
     assert.equal(await page.locator('#country').inputValue(), 'ID');
-    assert.equal(await page.locator('.catalog-card').count(), 9);
+    assert.equal(await page.locator('.catalog-card').count(), catalogCountFor('ID'));
     assert.equal(externalLookupCount, 0);
     assert.match(page.url(), /country=ID/);
     await page.close();
@@ -107,7 +110,7 @@ try {
     }));
     await openCatalog(page, '');
     assert.equal(await page.locator('#country').inputValue(), 'CL');
-    assert.equal(await page.locator('.catalog-card').count(), 7);
+    assert.equal(await page.locator('.catalog-card').count(), catalogCountFor('CL'));
     await page.close();
   });
 
@@ -117,7 +120,7 @@ try {
     await page.route('https://get.geojs.io/**', route => route.fulfill({ status: 503, body: 'No geo service' }));
     await openCatalog(page, '');
     assert.equal(await page.locator('#country').inputValue(), 'ALL');
-    assert.equal(await page.locator('.catalog-card').count(), 74);
+    assert.equal(await page.locator('.catalog-card').count(), activeCatalogCount);
     assert.doesNotMatch(page.url(), /country=/);
     await page.close();
 
@@ -142,7 +145,7 @@ try {
     assert.equal(await page.locator('#country').inputValue(), 'DE');
     assert.equal(ipLookupCount, 0, 'explicit link should never make an IP lookup');
     await page.locator('#country').selectOption('ID');
-    assert.equal(await page.locator('.catalog-card').count(), 9);
+    assert.equal(await page.locator('.catalog-card').count(), catalogCountFor('ID'));
     await page.goto(base + '/pretio/catalog/', { waitUntil: 'domcontentloaded' });
     await page.waitForFunction(() => (document.querySelector('#result-summary')?.textContent || '').startsWith('Showing '));
     assert.equal(await page.locator('#country').inputValue(), 'ID', 'manually saved market should persist');

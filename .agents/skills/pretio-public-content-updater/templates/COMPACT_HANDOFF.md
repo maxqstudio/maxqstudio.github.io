@@ -5,8 +5,11 @@
 - Owner scope: `<ONE_OFF:ID / SCHEDULED_GLOBAL>`. If ONE_OFF, do not dispatch any catalog from other countries or any second cycle.
 - Run: `<UTC run ID>`, cycle: `<09:17/21:17 WITA>`.
 - Completed: `<country>` / `<catalog_id>` / `<retailer>`.
+- Source kind: `<physical catalog / online store / marketplace seller>`. Discovery (if any): `<seller store URL, platform, verified seller ID, authorized discovery source>` — AUDIT ONLY.
+- Online offer status: `<registered catalog match / NEEDS_CATALOG_APPROVAL / skip>`; Google Shopping is not price proof. Unregistered sellers cannot be published.
 - Canonical link: `<source URL>`. Classification: `LINK_STABLE / LINK_PERIODIC_WITH_EXPIRY / BLOCKED_MISSING_EXPIRY`. Known `valid_until`: `<verified date or null for evergreen>`.
 - Result: `<CATALOG_DONE / FETCH_FAILED / SOURCE_BLOCKED / ...>`.
+- Product identity QA: `<raw → normalized examples, brand/variant/packageSize/packCount completeness, ambiguous items HOLD>` (audit-only; see `references/product-name-normalization.md`).
 - New discounted products accepted: `<count and stable IDs only>`.
 - Products rejected: `<count, short reasons; no raw HTML>`.
 - Expired IDs pruned from country candidate: `<ids>`.

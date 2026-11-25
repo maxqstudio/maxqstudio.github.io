@@ -1960,54 +1960,6 @@
       "last_verified_at": "2026-10-19T02:37:05.2093648+08:00"
     },
     {
-      "id": "lidl-es-country",
-      "merchant": "Lidl",
-      "publisher": "Lidl España",
-      "title": "Folleto Alimentación 16/11",
-      "summary": "Folleto de alimentación vigente del 16 al 22 de noviembre de 2026. Las ofertas pueden variar según la tienda; selecciónala en la web oficial.",
-      "coverage_type": "national",
-      "coverage_label": "España",
-      "content_type": "webview",
-      "url": "https://www.lidl.es/c/descubre-nuevas-ofertas-cada-semana-folletos-lidl/s10087402",
-      "source_type": "official_retailer",
-      "status": "active",
-      "sort_order": 680,
-      "locations": [
-        {
-          "country": "Spain",
-          "country_code": "ES",
-          "type": "country"
-        }
-      ],
-      "last_verified_at": "2026-11-18T00:35:23Z",
-      "valid_from": "2026-11-16T07:00:00+08:00",
-      "valid_until": "2026-11-23T07:00:00+08:00"
-    },
-    {
-      "id": "kaufland-ro-country",
-      "merchant": "Kaufland",
-      "publisher": "Kaufland România",
-      "title": "Catalog Kaufland 18–24 noiembrie 2026",
-      "summary": "Catalogul săptămânal este valabil între 18 și 24 noiembrie 2026; ofertele și disponibilitatea pot varia în funcție de magazin și stoc.",
-      "coverage_type": "national",
-      "coverage_label": "România",
-      "content_type": "webview",
-      "url": "https://www.kaufland.ro/cataloage-cu-reduceri.html",
-      "source_type": "official_retailer",
-      "status": "active",
-      "sort_order": 690,
-      "locations": [
-        {
-          "country": "Romania",
-          "country_code": "RO",
-          "type": "country"
-        }
-      ],
-      "last_verified_at": "2026-11-18T00:35:23Z",
-      "valid_from": "2026-11-18T06:00:00+08:00",
-      "valid_until": "2026-11-25T06:00:00+08:00"
-    },
-    {
       "id": "lidl-it-country",
       "merchant": "Lidl",
       "publisher": "Lidl Italia",

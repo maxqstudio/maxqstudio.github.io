@@ -12,6 +12,23 @@ Intended GitHub Actions cron (UTC): `17 1,13 * * *` = 09:17 and 21:17 WITA. Also
 
 Start with a manual AUDIT, then every scheduled production cycle must **attempt all official catalogs in all countries in the catalog manifest**, not only the 7 highlight-feed countries. Unsupported currency blocks highlight publication for that country, **not** its catalog check. Use country partitions; start at most 4 parallel country workers and <=1 in-flight request per retailer host, finite timeouts and randomized backoff. Avoid robots/ToS violations and HTML scraping when a source provides a permitted public feed.
 
+## Bounded online-shop / marketplace discovery after catalog coverage
+
+**Mandatory research scope extension:** Catalog work units are still enumerated exactly from the frozen accepted catalog manifest. In the same Owner-authorized countries, add a **separate bounded discovery phase** for independent online shops and genuine marketplace seller storefronts (including online-only retailers). Do not assume that "retailer" only means a physical supermarket.
+
+1. For each scoped country, search permitted public direct-store directories, authorized e-commerce product feeds/APIs and official marketplace store/offer pages. Google Shopping is only a **discovery lead** when permitted; do not automate scraping Google Search/Shopping pages against their rules or use Google Shopping pricing as source proof.
+2. Verify the real seller identity, the official storefront, seller-specific item URL, market, explicit public normal/promo price pair, item photo, any promo dates, and access conditions. One platform can contain thousands of sellers; treat each discovered seller as a distinct audit identity rather than treating the whole platform as one retailer.
+3. Use `templates/ONLINE_SHOP_CHECKLIST.md` and one compact handoff per new shop. Limit pagination, rate, time and retries, and record **search/query coverage bounds**; no claim of internet-wide completeness.
+4. Map eligible offers to an **existing approved** seller/store `catalog_id` only. If none exists, stage the discovery and price evidence as AUDIT_ONLY, mark `NEEDS_CATALOG_APPROVAL`, and continue without changing the production catalog or feed. A new merchant/canonical marketplace host is never auto-allowlisted.
+5. Keep two distinct sets of counters: registered `manifest_total/terminal_receipts/pending` and discovered `shops_found/checked/verified/awaiting_approval/blocked`. Do not use discovered shops as fake terminal receipts; do not declare research of all web stores "complete" when it was bounded.
+6. On explicit `ONE_OFF:ID` or `ONE_OFF_GLOBAL`, perform **one** scoped research cycle only and STOP; no cron, polling loop, or ongoing scheduler is created by the skill update.
+
+The country-feed v1 / index v2 exact-key and evidence requirements remain unchanged. See `online-shop-marketplace-rules.md` for the complete policy.
+
+## Mandatory product-name extraction quality gate
+
+For **each candidate** collected during a registered-catalog or newly discovered-shop run, preserve the raw source title and normalize common market abbreviations with the rules in `product-name-normalization.md`. Record five intermediate identity fields (`productName`, `brand`, `variant`, `packageSize`, `packCount`) and source evidence in the audit. Match identical normalized seller/SKU/variant/pack units before deduplication; do not merge different packaging or sizes merely because their cleaned display names are similar. Map only supported keys to feed v1 and include raw/normalized identity evidence in auditor handoff. Standard terms (`UHT`, `3in1`, `SPF`, units) must remain intact.
+
 ## Preflight / completeness tools
 
 - Generate the **entire**, currency-independent manifest: `python3 tooling/pretio_public_content/manifest.py > /tmp/pretio-manifest.json`.
@@ -32,6 +49,24 @@ Start with a manual AUDIT, then every scheduled production cycle must **attempt 
 8. **Stop**: finish the cycle and release runners. **Do not loop forever**, do not schedule continuous crawls after completion. The next clock event ~12 hours later starts a **new full manifest scan**.
 
 **Coverage accounting:** `manifest_total = completed_updated + completed_skipped + completed_failed`; `pending = manifest_total - terminal_receipts`. Count source failures as terminal once they have an audit receipt. If `pending > 0`, result is `INCOMPLETE`. Per-cycle report lists checked and skipped catalogs by country with the reason, new confirmed discounts, expired deletions, and the next cycle target.
+
+## Deletion acceptance gates / operator procedure
+
+- Process a deterministic `expired_product_ids` list per country using market-local end dates and confirmed source termination. Remove **all proven-expired items**, not just newly discovered ones or a sample, from the final country feed.
+- Separately produce an `obsolete_catalog_ids` list with evidence of expired period-specific URLs, confirmed retired campaigns or superseded official links. For each, prefer a verified canonical evergreen URL update with **the same catalog ID** when relevant; otherwise stage removal from the active catalog items array.
+- Compute `referencing_highlight_ids` across **ALL country feeds** before deleting any catalog. Reject an atomic candidate if any highlight is orphaned. Delete expired linked highlights; migrate still-valid verified ones only after catalog/seller/host approval. Never silently delete unrelated verified nonexpired user-relevant products.
+- Verify `expired_product_remaining = 0`, `obsolete_catalog_remaining = 0` for all **proven** old records within the authorized scope, `orphan_highlight_refs = 0`, stable schemas, allowed domains, market coverage and updated exact SHA hashes. A failure blocks publication but does not interrupt other catalog research.
+- Track `expired_products_removed`, `obsolete_catalogs_removed`, `catalogs_relinked_to_evergreen`, `dependent_highlights_removed_or_migrated` and `deletion_blockers` in the audit/PR. Production is NOT the archive; historical references live in bounded audit files only.
+- A source merely blocked/unreachable or last checked long ago remains `STALE_UNVERIFIED`, not automatically obsolete. Do not perform blind mass deletion.
+
+## Owner expiry cleanup — live list MUST NOT accumulate expired content
+
+At EVERY candidate finalization (registered catalogs, expanded markets, shops), perform deterministic **expiry pruning on final staged snapshots**, including items from sources that were unavailable this run:
+
+- Product Highlights with `valid_until` earlier than the relevant local-market date: DELETE them from their country `CC.json` active `items` list; preserve the exact identities/counts and supporting proof only in separate bounded audit evidence, **not** a historical feed. An official source's proof of earlier termination also justifies removal after human/verifier review. Recalculate exact country-feed bytes SHA and matching index revision together.
+- Catalog Promo with proven-expired rotating URL: replace with a newly verified official evergreen/current link or remove/deactivate via the existing compatible schema under catalog-writer review; do not leave an expired leaflet listed as current or add unsupported `status` values. Revalidate product foreign-key references in the same snapshot.
+- When source is blocked, undated or merely inaccessible, **do not conflate stale with expired**. Record `STALE_UNVERIFIED` in audit and prevent false "current promo" claims. Seek positive expiry evidence or flag manual review, not blind deletion.
+- Confirm `expired_remaining == 0` for known-expired published items before preparing PR. Do not accumulate old batches in production as archive. Any long-term audit evidence retention needs separate bounded storage controls.
 
 ## Safety / source economics
 

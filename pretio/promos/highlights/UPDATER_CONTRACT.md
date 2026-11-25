@@ -12,6 +12,12 @@ pretio/promos/highlights/**
 
 This includes `audit/**`. It must not edit `pretio/promos/catalog_app.json`, `pretio/promos/location.json`, `pretio/data/currency.json`, `pretio/localization/**`, legal pages, or application source. Catalog maintenance remains a separately governed workflow.
 
+## Product name cleanup and audit-only structured extraction
+
+The crawler MUST expand known catalog/receipt shorthand before writing new Product Highlights; examples: `MYK GRG`→`Minyak Goreng`, `KCP MNS`→`Kecap Manis`, `PCH`→`Pouch`, `BTL`→`Botol`, `KTG`→`Kaleng`, `SBN MND`→`Sabun Mandi`, `DTRGN`→`Deterjen`. Preserve `UHT`, `3in1`, `SPF` and standard units `ml`, `g`, `kg`, `L`, `pcs`. Normalize unit spacing and brand title case without changing SKU identity.
+
+Each candidate must supply separate **intermediate/audit** `productName`, `brand`, `variant`, `packageSize`, `packCount`, with original source title and evidence. Existing production feed v1 recognizes **only** `product_name`, `brand`, `package_size` for these values; `variant`, `packCount` and raw/camelCase keys must NOT be written as new production JSON fields. Preserve distinct important variants in existing supported names or HOLD if exact identity cannot be safely represented. See the canonical skill `references/product-name-normalization.md` for examples and auditor gating. This improves local Watchlist/Saved Products matching without requiring a network AI operation.
+
 ## Feed Contract
 
 The current index schema is **`pretio.product_highlights.index.v2` with `schema_version: 2`**, while country feeds use **`pretio.product_highlights.v1` with `schema_version: 1`**. Current country files are `ID.json`, `CL.json`, `RS.json`, `US.json`, `ZA.json`, `DE.json`, and `CH.json`; additional countries require approved currency metadata and Android compatibility. The v2 index country entries include `code`, `document_id`, `revision`, `sha256`, and `url`. The index binds each supported country to the canonical HTTPS URL, exact feed SHA-256, and feed revision. Each country feed declares country, currency, revision, UTC `generated_at`, and an `items` array (maximum 80 items; maximum 20 accepted items per retailer).
@@ -33,6 +39,29 @@ Try to record `image_url`, `image_revision`, `logo_url`, and `logo_revision` whe
 The app shares memory and persistent disk cache across product images, store logos, catalog thumbnails, and promo images. Current defaults: product/promo soft revalidation 24 hours and disk retention 60 days; store/catalog soft revalidation 7 days and disk retention 180 days; one 225 MiB / 300-object global LRU budget. The next 1–2 cards may be prefetched, not the entire feed.
 
 `JSON REFRESH != IMAGE CACHE PURGE`. An unchanged URL and revision must not cause a full image download. `TTL DOES NOT OVERRIDE A NEW IMAGE REVISION`: a changed revision triggers immediate fetch before TTL. Without revision, the app uses ETag and/or Last-Modified conditional revalidation after soft TTL. It validates MIME and image decoding before atomically switching the cache pointer; failure retains the previous valid image. A bad image or HTML error page is never cached as an image.
+
+## Mandatory confirmed-expiry / obsolete-source deletion
+
+Every authorized staged release must **delete all provably expired items from active Product Highlights country feeds** and **retire or replace every proven-obsolete promotional Catalog Promo entry**. `valid_until < today` in the relevant market proves an item's expiry when date is source-backed. Catalog Promo period-specific URLs that have ended must be replaced with a verified official evergreen/current source (preserving `catalog_id` where appropriate) or removed from the live `items` list once all dependent highlights are resolved.
+
+**Atomic integrity rule:** Removing a Catalog Promo entry must not strand any `CC.json.items[].catalog_id`. Delete proven-expired linked products, migrate independently verified current products only with an approved successor, or HOLD the pending removal for review. Update the exact SHA-256 hashes and revisions of changed country feeds and index. No old catalog/archive record should be kept in the active production list just for history.
+
+Do **not** mass-delete due to a lone 404, timeouts, CAPTCHA, stale `last_verified_at` or lack of observed discounts. These are `STALE_UNVERIFIED` and require evidence. Keep bounded deletion receipts in audit files and report removed product IDs, removed/relinked catalog IDs, evidence and blockers to Owner.
+
+## Owner location and expiry policy
+
+- **Physical store offers** require a proven eligible geographic area. Do not publish a regional leaflet's item as country-wide merely because the Catalog Promo URL is labeled national.
+- **Online store offers** need a source-backed public price and ability to order/fulfill in the selected country; when country-wide available, **no province/city check is required**. If geographically restricted, do not treat as national.
+- **Known-expired Product Highlights MUST be deleted from active country feeds** as part of staged release, with atomic feed/index SHA update. Known-expired rotating catalogs must be replaced with verified current/evergreen URL or safely retired under catalog-owner approval, without leaving expired content in active lists. Do not pile expired products in production. An inaccessible source or undated item alone is not expiry proof.
+- **Regular-price products** may be collected as audit-only but may not be smuggled into discount-only country feed v1 using equal/guessed prices.
+
+## Online shop / marketplace compatibility (no new fields)
+
+The existing updater skill additionally researches official **online stores, direct-to-consumer shops, and verified marketplace seller storefronts**. Google Shopping may be used for candidate discovery through permitted methods, **but neither its snippet nor its pricing is a qualifying source**. For each accepted offer, verify the same merchant/seller, exact product variant, real normal price and lower public promo price, authorized individual image, country-wide eligibility, and source-backed expiry on the actual seller's official listing.
+
+The `catalog_id` must already reference an approved active Catalog Promo store/source with matching official HTTPS host, using the unchanged `official_digital_channel` or `official_retailer` source type. An unregistered seller/platform/store or unapproved host requires separate Owner review and remains **audit-only** until approved. `seller_id`, `platform`, `discovery_source`, `coupon` and any other new fields are forbidden in production catalog/feed/index. Bounded online-store discovery is accounted **separately** from the frozen registered-catalog manifest; manifest receipts alone are not evidence of an internet-wide shop crawl.
+
+An explicit ONE_OFF run remains exactly once for the selected countries; **no scheduler is installed or enabled** by these skill rules.
 
 ## Explicit one-off Owner requests (highest priority)
 

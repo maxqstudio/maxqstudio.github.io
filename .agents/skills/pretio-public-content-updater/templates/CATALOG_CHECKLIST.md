@@ -23,6 +23,16 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] If ONE_OFF: manifest includes ONLY requested country; external sources for other countries are untouched; no cron/second cycle created
 - [ ] Complete every official catalog in the selected country once, including skipped or failed entries, and STOP after its own closing gate
 
+## 1B. Online-store / marketplace discovery alongside registered catalogs
+- [ ] Existing online-only catalog/retailer treated like a first-class official merchant
+- [ ] In each Owner-scoped country, a **separate bounded** permitted online-shop discovery register is prepared (registered manifest accounting unchanged)
+- [ ] If a marketplace is involved, verify actual seller/store identity and differentiate it from platform
+- [ ] Discovery sources (including authorized Google Shopping) are NOT automatically accepted as pricing evidence
+- [ ] New seller/store without reviewed active catalog ID stays `NEEDS_CATALOG_APPROVAL` / audit-only
+- [ ] Seller-specific public offer confirmed on original store/marketplace page with countrywide scope
+- [ ] No login, captcha bypass, misleading coupon-only, member-only or other conditional promo
+- [ ] Use `ONLINE_SHOP_CHECKLIST.md` for each discovered storefront; report search bounds and outcome separately
+
 ## 2. Product Highlights — discounted items ONLY
 - [ ] All eligible discounted products on this catalog checked; candidates listed
 - [ ] Each has same-product explicit **normal and promo prices** from original retailer; `promo_price < normal_price`
@@ -35,6 +45,33 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] **Expired** items (`valid_until` before market today or explicit ending proof) removed from candidate country feed
 - [ ] No item contains any field outside approved item allowlist
 - [ ] Rejected items recorded separately with reasons; no fabricated filler for 12-hour quota
+
+## 2A. Confirmed obsolete catalog retirement
+- [ ] Catalog classified as `EVERGREEN_CURRENT`, `PERIODIC_CURRENT`, `VERIFIED_OBSOLETE`, or `STALE_UNVERIFIED` (audit labels only)
+- [ ] If VERIFIED_OBSOLETE: official evidence and market-local end date / confirmed supersession recorded
+- [ ] Searched verified current evergreen/canonical replacement FIRST; if available preserve catalog `id`, stage approved `url` migration
+- [ ] If no approved current successor: catalog entry marked for removal from final active `catalog_app.json.items` after dependency review
+- [ ] Before removal, collect **all** dependent Product Highlight `catalog_id` references across country feeds and resolve each (proven expired deleted, truly valid verified approved migration, otherwise HOLD)
+- [ ] Confirm no orphan references and no new/unsupported catalog `status` or archive keys
+- [ ] Catalog/product retirement included in one atomic feed+index+catalog validation; deletion evidence recorded only in audit
+- [ ] A transient failure/404/old verified timestamp is not falsely treated as obsolete
+
+## 2C. Clean product identity (mandatory extraction)
+- [ ] For every candidate, original raw catalog/receipt product title and supporting source snapshot saved in audit
+- [ ] Known shorthand expanded to natural full names, including `MYK GRG`, `KCP MNS`, `PCH`, `BTL`, `KTG`, `SBN MND`, `DTRGN`
+- [ ] Preserved recognized `UHT`, `3in1`, `SPF`, `ml`, `g`, `kg`, `L`, `pcs` and normalized quantity spacing
+- [ ] Working extraction has separate `productName`, `brand`, `variant`, `packageSize`, `packCount` with `null` only when source doesn't establish a field
+- [ ] Verified same brand, variant, size and pack count against the price/image source; no guessed product details
+- [ ] Production only contains existing `product_name`, optional `brand`, `package_size`; no camelCase, raw title or extra keys
+- [ ] Distinct SKUs/variants/packaging cannot collapse into the same matched product; HOLD if incompatible with v1
+
+## 2B. Location relevance & expiry hard gate
+- [ ] PHYSICAL RETAIL: product-level participating area and national price applicability proven (not inferred from nationwide catalog page)
+- [ ] ONLINE STORE: target-country offer price and nationwide order/fulfillment supported; **no provincial/city proof needed** when official market-wide delivery applies
+- [ ] Region-only in current national v1 feed: audit-only, not published
+- [ ] Expired Product Highlights removed from active `CC.json`; hash/revision updated for changed feed
+- [ ] Expired rotating Catalog Promo URL replaced with approved verified URL or safely removed under catalog-writer rules; no stale active listing
+- [ ] Fetch failure/undated offer not falsely marked expired; separate audit reason
 
 ## 3. Skip-or-update decision (always select one)
 - [ ] **UPDATED** — accepted source-backed catalog or discounted-product changes staged in candidate only

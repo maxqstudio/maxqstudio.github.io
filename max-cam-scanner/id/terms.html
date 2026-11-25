@@ -40,7 +40,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Max Cam Scanner oleh Max-Q Studio</p>
       <h1>Syarat Penggunaan</h1>
-        <p class="meta">Berlaku sejak 16 November 2026</p>
+        <p class="meta">Berlaku sejak 24 November 2026</p>
       
         <p>Dengan memakai Max Cam Scanner (“Aplikasi”), kamu menyetujui syarat berikut. Jika tidak setuju, jangan gunakan Aplikasi.</p>
       
@@ -51,6 +51,7 @@
         <ul>
           <li>Tanpa akun, kamu tetap bisa scan dan export. File hanya tersimpan di perangkatmu.</li>
           <li>Workspace memerlukan akun Max Cam Scanner. Aplikasi mandiri ini memiliki akun, paket, dan workspace sendiri; semuanya tidak terhubung atau tersinkron dengan maxq.tools. Kamu bertanggung jawab atas aktivitas yang terjadi di akunmu.</li>
+          <li><strong>Keamanan password &amp; pemblokiran sementara:</strong> Untuk melindungi akun email dan password dari percobaan berulang, salah memasukkan password sebanyak 5 kali saat masuk atau mengubah password di aplikasi akan memblokir percobaan berikutnya di sisi server (lintas perangkat) selama 5 menit. Jika salah lagi setelah masa blokir berakhir, durasi blokir meningkat menjadi 15 menit, lalu 60 menit, hingga maksimal 24 jam (setiap kesalahan berikutnya setelah blokir 24 jam akan kembali diblokir 24 jam). Memasukkan password yang benar atau menyelesaikan reset password akan menghapus blokir tersebut.</li>
         </ul>
       
         <h2>3. Workspace, peran, dan kuota</h2>
@@ -58,7 +59,7 @@
           <li><strong>Owner</strong>: semua akses, termasuk menghapus workspace. <strong>Co-owner</strong>: sama seperti owner (anggota, peran, undangan, hapus file, rollback) kecuali menghapus workspace atau mengubah owner. <strong>Editor</strong>: menambah file dan menyimpan versi baru. <strong>Commenter</strong>: membuka file, komentar, dan minta tanda tangan. <strong>Viewer</strong>: hanya membuka dan mengunduh.</li>
     <li>Setiap simpan membuat versi baru. Menghapus file juga menghapus semua versi dan komentarnya, dan tidak bisa dibatalkan. Rollback menjadikan versi lama sebagai versi aktif. Setelah kamu konfirmasi, semua versi yang lebih baru dihapus permanen dari riwayat dan tidak bisa dipulihkan. Jumlah versi tidak dibatasi; versi dihitung sebagai penyimpanan.</li>
           <li>Pengguna Free punya satu workspace milik sendiri dengan kapasitas 50 MB. Paket berbayar memiliki satu kolam penyimpanan per Owner: 25 GB untuk Pro dan Pro Team, 100 GB untuk Max dan Max Team, dipakai bersama oleh semua workspace Owner, tanpa batas jumlah workspace. Owner dapat mengatur batas kapasitas tiap workspace; total batasnya tidak boleh melebihi kolam, dan penyimpanan yang akan melewati batas workspace ditolak (versi yang ada tidak pernah dihapus). File yang diunggah anggota memakai kuota milik Owner workspace tersebut.</li>
-          <li>Jumlah anggota per workspace bergantung pada paket Owner. Anggota ditambah undangan yang masih Pending, tidak termasuk Owner, dapat berjumlah: Free hingga 2 orang (1 workspace, 50 MB), Pro hingga 10, Max hingga 25, dan tanpa batas untuk Pro Team dan Max Team. Paket Team juga mencakup 4 kursi paket (Pro atau Max untukmu plus 4 orang lain yang ikut paketmu), yang terpisah dari keanggotaan workspace.</li>
+          <li>Jumlah anggota per workspace bergantung pada paket Owner. Anggota ditambah undangan yang masih Pending, tidak termasuk Owner, dapat berjumlah: Free hingga 2 orang (1 workspace, 50 MB), Pro dan Pro Team hingga 10 orang per workspace (kolam 25 GB, workspace tanpa batas), serta Max dan Max Team hingga 25 orang per workspace (kolam 100 GB, workspace tanpa batas). Pro Team dan Max Team memiliki manfaat per akun yang sama persis dengan Pro dan Max, ditambah 4 kursi paket tim tambahan (kamu + 4 pengguna lain). Masa aktif anggota kursi tim selalu mengikuti sisa masa aktif langganan Google Play milik Owner; mengganti satu anggota dengan anggota lain tidak mereset masa aktif.</li>
           <li>Undangan dikirim ke email dan hanya dapat diterima oleh akun dengan email yang sama (Google, atau email dan password), dalam waktu 7 hari. Orang yang diundang dapat memblokir undangan dari seorang Owner; pemblokiran menyembunyikan undangan di sisinya dan tidak memberi tahu Owner, yang tetap melihatnya sebagai Pending.</li>
           <li>Owner bertanggung jawab memilih siapa yang diundang. Semua anggota bisa melihat file di workspace.</li>
         </ul>
@@ -68,7 +69,7 @@
         <p>Sesi server kedaluwarsa 60 detik setelah perpanjangan terakhir yang berhasil. Saat editor aktif, Aplikasi mengirim heartbeat ringan setiap 30 detik; heartbeat tidak mengunduh dokumen, model, atau blob. Kembali, penyimpanan workspace yang berhasil, serta aplikasi yang masuk latar belakang atau ditutup secara normal akan menghentikan heartbeat dan langsung mencoba melepas sesi. Force-stop, crash, perangkat mati, atau gangguan koneksi dapat mencegah pelepasan segera atau deteksi langsung; jika heartbeat berhenti, sesi kedaluwarsa otomatis paling lambat 60 detik setelah perpanjangan terakhir yang berhasil.</p>
       
         <h2>4. Paket berbayar</h2>
-        <p>Paket berbayar (Pro, Pro Team, Max, Max Team) memberikan export tanpa iklan, kolam penyimpanan lebih besar seperti di bagian 3, dan mode AI dengan batas pemakaian yang ditampilkan di Aplikasi. Jika kamu memilih mode AI, gambar halaman yang dipilih dikirim ke server kami dan penyedia AI yang dikonfigurasi untuk layanan ini. Penyedia tersebut dapat mencakup OpenAI, Anthropic, atau penyedia lain yang dikonfigurasi; jika satu penyedia gagal, layanan dapat mencoba penyedia aktif berikutnya. Harga, masa tagihan, dan pembatalan mengikuti ketentuan Google Play atau App Store yang ditampilkan saat pembelian.</p>
+        <p>Paket berbayar (Pro, Pro Team, Max, Max Team) memberikan export tanpa iklan, kolam penyimpanan lebih besar seperti di bagian 3, dan mode AI (150 halaman AI/bulan per akun untuk Pro &amp; Pro Team; 750 halaman AI/bulan per akun untuk Max &amp; Max Team, sesuai batas pemakaian yang ditampilkan di Aplikasi). Jika kamu memilih mode AI, gambar halaman yang dipilih dikirim ke server kami dan diteruskan ke penyedia AI yang dikonfigurasi dalam urutan fallback otomatis: <strong>Google Gemini &rarr; Ollama &rarr; OpenAI &rarr; Anthropic</strong>; jika satu penyedia gagal, timeout, atau mencapai batas kuota/rate limit, layanan akan mencoba penyedia aktif berikutnya. Harga, masa tagihan, dan pembatalan mengikuti ketentuan Google Play atau App Store yang ditampilkan saat pembelian. Jika kamu sudah memiliki langganan Google Play aktif, kelola atau batalkan terlebih dahulu di Google Play Subscriptions sebelum membeli paket lain agar tidak tertagih dua kali; pengguna Free dan anggota kursi tim tetap dapat berlangganan sendiri secara langsung.</p>
       
         <h2>5. Iklan</h2>
         <p>Versi gratis menampilkan iklan. Sebelum export, kamu dapat diminta menonton iklan berhadiah. Kamu selalu bisa melewatinya, tetapi export tidak dibuat jika iklan dilewati.</p>
@@ -81,7 +82,7 @@
           <li>Dokumen tetap milikmu. Kami tidak mengklaim hak atas isinya.</li>
           <li>Jangan memindai atau membagikan konten yang melanggar hukum, hak cipta, atau privasi orang lain.</li>
           <li>Hasil OCR bisa keliru. Periksa kembali sebelum memakainya untuk keperluan penting.</li>
-          <li>Konversi AI dapat salah membaca atau melewatkan isi. Periksa hasilnya sebelum digunakan. Gambar halaman yang kamu pilih untuk diproses dengan AI dikirim ke server kami dan penyedia AI yang dikonfigurasi; penanganan data kiriman mengikuti ketentuan dan praktik privasi mereka. Lihat <a href="https://openai.com/business-data/">informasi privasi data bisnis OpenAI</a> dan <a href="https://privacy.anthropic.com/en/">Pusat Privasi Anthropic</a>.</li>
+          <li>Konversi AI dapat salah membaca atau melewatkan isi. Periksa hasilnya sebelum digunakan. Gambar halaman yang kamu pilih untuk diproses dengan AI dikirim ke server kami dan penyedia AI yang dikonfigurasi (Google Gemini &rarr; Ollama &rarr; OpenAI &rarr; Anthropic); penanganan data kiriman mengikuti ketentuan dan praktik privasi mereka. Lihat <a href="https://ai.google.dev/gemini-api/terms">Ketentuan &amp; Privasi Google Gemini API</a>, <a href="https://openai.com/business-data/">informasi privasi data bisnis OpenAI</a>, dan <a href="https://privacy.anthropic.com/en/">Pusat Privasi Anthropic</a>.</li>
         </ul>
       
         <h2>8. Larangan</h2>
@@ -97,7 +98,7 @@
         <p>Syarat ini diatur oleh hukum Republik Indonesia.</p>
       
         <h2>12. Perubahan</h2>
-        <p>Syarat ini dapat diperbarui. Tanggal berlaku di atas akan berubah, dan untuk perubahan penting kami memberi tahu lewat aplikasi. Riwayat perubahan: pemrosesan data mode AI; pemisahan akun, paket, dan workspace Max Cam Scanner dari maxq.tools; <a href="https://github.com/maxqstudio/max-cam-scanner/issues/107">Sesi edit workspace dan penyimpanan cache (#107)</a>, terkait pemulihan sesi pada perangkat yang sama di <a href="https://github.com/maxqstudio/max-cam-scanner/issues/106">#106</a>.</p>
+        <p>Syarat ini dapat diperbarui. Tanggal berlaku di atas akan berubah, dan untuk perubahan penting kami memberi tahu lewat aplikasi. Riwayat perubahan: penyedia fallback mode AI (Google Gemini &rarr; Ollama &rarr; OpenAI &rarr; Anthropic); ketentuan resmi per-akun Pro Team / Max Team &amp; masa aktif kursi tim mengikuti langganan Owner (<a href="https://github.com/maxqstudio/max-cam-scanner/issues/176">#176</a>); pencegahan double subscription Google Play (<a href="https://github.com/maxqstudio/max-cam-scanner/issues/146">#146</a>); pemisahan akun, paket, dan workspace Max Cam Scanner dari maxq.tools; <a href="https://github.com/maxqstudio/max-cam-scanner/issues/107">Sesi edit workspace dan penyimpanan cache (#107)</a>, terkait pemulihan sesi pada perangkat yang sama di <a href="https://github.com/maxqstudio/max-cam-scanner/issues/106">#106</a>; pemblokiran sementara bertahap untuk salah password (<a href="https://github.com/maxqstudio/max-cam-scanner/issues/149">#149</a>).</p>
     </article>
   </main>
 

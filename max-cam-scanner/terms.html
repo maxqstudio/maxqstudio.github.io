@@ -40,7 +40,7 @@
     <article class="container legal-card">
       <p class="eyebrow">Max Cam Scanner by Max-Q Studio</p>
       <h1>Terms of Use</h1>
-      <p class="meta">Effective 16 November 2026</p>
+      <p class="meta">Effective 24 November 2026</p>
 
       <p>By using Max Cam Scanner (the “App”), you agree to these terms. If you don't agree, don't use the App.</p>
 
@@ -51,6 +51,7 @@
       <ul>
         <li>Without an account you can still scan and export. Files are stored on your device only.</li>
         <li>Workspaces require a Max Cam Scanner account. This standalone App has its own accounts, plans, and workspaces; they are not connected or synced with maxq.tools. You are responsible for activity on your account.</li>
+        <li><strong>Password security &amp; temporary blocks:</strong> To protect email-and-password accounts from repeated guessing, entering the wrong password 5 times during sign-in or in-app password change temporarily blocks further attempts on our server (across devices) for 5 minutes. If a wrong password is entered again after the block expires, the block increases to 15 minutes, then 60 minutes, and up to a maximum of 24 hours (each subsequent wrong attempt after a 24-hour block triggers another 24-hour block). Entering the correct password or completing a password reset clears the block.</li>
       </ul>
 
       <h2>3. Workspaces, roles, and storage</h2>
@@ -58,7 +59,7 @@
         <li><strong>Owner</strong>: everything, including deleting the workspace. <strong>Co-owner</strong>: the same as the owner (members, roles, invites, deleting files, rollback) except deleting the workspace or changing the owner. <strong>Editor</strong>: add files and save new versions. <strong>Commenter</strong>: open files, comment, and request signatures. <strong>Viewer</strong>: open and download only.</li>
         <li>Every save creates a version. Deleting a file removes all of its versions and comments and cannot be undone. A rollback makes an older version the current one. After you confirm, all newer versions are permanently deleted from the history and cannot be restored. There is no limit on the number of versions; they count toward storage.</li>
         <li>Free users have one workspace of their own with 50 MB of storage. Paid plans have one storage pool per Owner: 25 GB for Pro and Pro Team, 100 GB for Max and Max Team, shared by all of the Owner's workspaces, with no limit on the number of workspaces. The Owner may set a storage limit for each workspace; the limits together cannot exceed the pool, and a save that would pass a workspace's limit is refused (existing versions are never deleted). Files uploaded by members count against the Owner's storage.</li>
-        <li>Members per workspace depend on the Owner's plan. Members plus pending invites, not counting the Owner, may total: Free up to 2 people (1 workspace, 50 MB), Pro up to 10, Max up to 25, and unlimited for Pro Team and Max Team. Team plans also include 4 plan seats (Pro or Max for you plus 4 more people on your plan), which is separate from workspace membership.</li>
+        <li>Members per workspace depend on the Owner's plan. Members plus pending invites, not counting the Owner, may total: Free up to 2 people (1 workspace, 50 MB), Pro and Pro Team up to 10 people per workspace (25 GB pool, unlimited workspaces), and Max and Max Team up to 25 people per workspace (100 GB pool, unlimited workspaces). Pro Team and Max Team include identical per-account benefits as Pro and Max respectively, plus 4 additional team plan seats (you + 4 other users). A team seat member's active period always follows the Owner's remaining Google Play subscription period; replacing one seat member with another does not reset the period.</li>
         <li>Invites are sent by email and can only be accepted, within 7 days, by the account with the same email (Google, or email and password). The invited person can block invites from an Owner; blocking hides the invite on their side and does not notify the Owner, who keeps seeing it as Pending.</li>
         <li>Owners are responsible for who they invite. All members can see the files in a workspace.</li>
       </ul>
@@ -68,7 +69,7 @@
       <p>The server session expires 60 seconds after the last successful renewal. While the editor is active, the App sends a lightweight heartbeat every 30 seconds; it does not download the document, model, or blobs. Back, a successful workspace save, and normal app backgrounding or closing stop renewals and attempt to release the session right away. A force-stop, crash, power loss, or connectivity failure may prevent immediate release or detection; if renewals stop, the session expires automatically no later than 60 seconds after the last successful renewal.</p>
 
       <h2>4. Paid plans</h2>
-      <p>Paid plans (Pro, Pro Team, Max, Max Team) provide ad-free export, a larger storage pool as described in section 3, and AI mode, subject to the usage limits shown in the App. When you choose AI mode, selected page images are sent to our server and the AI provider or providers configured for the service. These may include OpenAI, Anthropic, or another configured provider; if one provider fails, the service may try another enabled provider. Price, billing period, and cancellation follow the Google Play or App Store terms shown at purchase.</p>
+      <p>Paid plans (Pro, Pro Team, Max, Max Team) provide ad-free export, a larger storage pool as described in section 3, and AI mode (150 AI pages/month per account on Pro &amp; Pro Team; 750 AI pages/month per account on Max &amp; Max Team, subject to the usage limits shown in the App). When you choose AI mode, selected page images are sent to our server and forwarded to our configured AI providers in automatic fallback order: <strong>Google Gemini &rarr; Ollama &rarr; OpenAI &rarr; Anthropic</strong>; if one provider fails, times out, or reaches a rate/quota limit, the service tries the next enabled provider. Price, billing period, and cancellation follow the Google Play or App Store terms shown at purchase. If you already have an active Google Play subscription, manage or cancel it in Google Play Subscriptions before purchasing another plan to avoid double billing; Free users and Team Seat members may subscribe directly on their own account.</p>
 
       <h2>5. Ads</h2>
       <p>The free version shows ads. Before export you may be asked to watch a rewarded ad. You can always skip it, but the export is not created if you skip.</p>
@@ -81,7 +82,7 @@
         <li>Your documents remain yours. We claim no rights to their contents.</li>
         <li>Don't scan or share content that breaks the law or infringes copyright or other people's privacy.</li>
         <li>OCR results can be wrong. Check them before relying on them for anything important.</li>
-        <li>AI conversion may misread or omit content. Review its output before using it. Page images you choose to process with AI are sent to our server and configured AI provider(s); their handling of submitted data is subject to their own terms and privacy practices. See <a href="https://openai.com/business-data/">OpenAI's business data privacy information</a> and the <a href="https://privacy.anthropic.com/en/">Anthropic Privacy Center</a>.</li>
+        <li>AI conversion may misread or omit content. Review its output before using it. Page images you choose to process with AI are sent to our server and configured AI providers (Google Gemini &rarr; Ollama &rarr; OpenAI &rarr; Anthropic); their handling of submitted data is subject to their own terms and privacy practices. See the <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API Terms &amp; Privacy</a>, <a href="https://openai.com/business-data/">OpenAI's business data privacy information</a>, and the <a href="https://privacy.anthropic.com/en/">Anthropic Privacy Center</a>.</li>
       </ul>
 
       <h2>8. Prohibited use</h2>
@@ -97,7 +98,7 @@
       <p>These terms are governed by the laws of the Republic of Indonesia.</p>
 
       <h2>12. Changes</h2>
-      <p>These terms may be updated. The effective date above will change, and for important changes we let you know in the app. Change history: AI mode data processing; Max Cam Scanner account, plan, and workspace separation from maxq.tools; <a href="https://github.com/maxqstudio/max-cam-scanner/issues/107">Workspace editing and cached saves (#107)</a>, related to the same-device session recovery in <a href="https://github.com/maxqstudio/max-cam-scanner/issues/106">#106</a>.</p>
+      <p>These terms may be updated. The effective date above will change, and for important changes we let you know in the app. Change history: AI mode fallback providers (Google Gemini &rarr; Ollama &rarr; OpenAI &rarr; Anthropic); official Pro Team / Max Team per-account limits &amp; seat validity following Owner subscription (<a href="https://github.com/maxqstudio/max-cam-scanner/issues/176">#176</a>); Google Play double-subscription guard (<a href="https://github.com/maxqstudio/max-cam-scanner/issues/146">#146</a>); Max Cam Scanner account, plan, and workspace separation from maxq.tools; <a href="https://github.com/maxqstudio/max-cam-scanner/issues/107">Workspace editing and cached saves (#107)</a>, related to the same-device session recovery in <a href="https://github.com/maxqstudio/max-cam-scanner/issues/106">#106</a>; progressive wrong-password temporary lockout (<a href="https://github.com/maxqstudio/max-cam-scanner/issues/149">#149</a>).</p>
     </article>
   </main>
 
