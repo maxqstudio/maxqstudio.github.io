@@ -1963,8 +1963,8 @@
       "id": "lidl-it-country",
       "merchant": "Lidl",
       "publisher": "Lidl Italia",
-      "title": "Volantino settimanale 19–25 novembre 2026",
-      "summary": "Volantino settimanale Lidl Italia valido dal 19 al 25 novembre 2026. Le offerte e la disponibilità possono variare in base al punto vendita; seleziona il tuo negozio sul sito ufficiale.",
+      "title": "Volantini settimanali Lidl Italia",
+      "summary": "Consulta i volantini settimanali sul sito ufficiale di Lidl Italia. Le offerte e la disponibilità possono variare in base al punto vendita; seleziona il tuo negozio.",
       "coverage_type": "national",
       "coverage_label": "Italia",
       "content_type": "webview",
@@ -1980,8 +1980,8 @@
         }
       ],
       "last_verified_at": "2026-11-18T03:09:34Z",
-      "valid_from": "2026-11-19T07:00:00+08:00",
-      "valid_until": "2026-11-26T07:00:00+08:00"
+      "valid_from": null,
+      "valid_until": null
     },
     {
       "id": "plazavea-pe-national",
@@ -2558,6 +2558,6 @@
       "last_verified_at": "2026-11-18T03:09:34Z"
     }
   ],
-  "catalog_revision": "pretio-global-promo-country-gap-2026-11-18-v5",
+  "catalog_revision": "pretio-catalog-evergreen-it-2026-11-25-v1",
   "schema_version": 2
 }
