@@ -56,6 +56,15 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] Catalog/product retirement included in one atomic feed+index+catalog validation; deletion evidence recorded only in audit
 - [ ] A transient failure/404/old verified timestamp is not falsely treated as obsolete
 
+## 2C. Clean product identity (mandatory extraction)
+- [ ] For every candidate, original raw catalog/receipt product title and supporting source snapshot saved in audit
+- [ ] Known shorthand expanded to natural full names, including `MYK GRG`, `KCP MNS`, `PCH`, `BTL`, `KTG`, `SBN MND`, `DTRGN`
+- [ ] Preserved recognized `UHT`, `3in1`, `SPF`, `ml`, `g`, `kg`, `L`, `pcs` and normalized quantity spacing
+- [ ] Working extraction has separate `productName`, `brand`, `variant`, `packageSize`, `packCount` with `null` only when source doesn't establish a field
+- [ ] Verified same brand, variant, size and pack count against the price/image source; no guessed product details
+- [ ] Production only contains existing `product_name`, optional `brand`, `package_size`; no camelCase, raw title or extra keys
+- [ ] Distinct SKUs/variants/packaging cannot collapse into the same matched product; HOLD if incompatible with v1
+
 ## 2B. Location relevance & expiry hard gate
 - [ ] PHYSICAL RETAIL: product-level participating area and national price applicability proven (not inferred from nationwide catalog page)
 - [ ] ONLINE STORE: target-country offer price and nationwide order/fulfillment supported; **no provincial/city proof needed** when official market-wide delivery applies

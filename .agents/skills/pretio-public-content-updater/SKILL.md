@@ -16,7 +16,7 @@ description: Research and update Pretio official retailer catalogs, direct onlin
 - `pretio/data/currency.json` — read-only currency coverage, currently seven countries.
 - `pretio/promos/location.json`, `pretio/location/v2/index.json` — read-only geography.
 - `pretio/promos/highlights/UPDATER_CONTRACT.md` — updated compatibility rules.
-- `references/catalog-rules.md`, `references/highlight-rules.md`, **`references/global-catalog-discovery.md`**, **`references/online-shop-marketplace-rules.md`**, `references/operations.md`.
+- `references/catalog-rules.md`, `references/highlight-rules.md`, **`references/product-name-normalization.md`**, **`references/global-catalog-discovery.md`**, **`references/online-shop-marketplace-rules.md`**, `references/operations.md`.
 - `templates/CATALOG_CHECKLIST.md`, **`templates/ONLINE_SHOP_CHECKLIST.md`**, and `templates/COMPACT_HANDOFF.md`.
 
 ## Online-commerce coverage (mandatory when researching products)
@@ -58,6 +58,15 @@ Read `references/catalog-rules.md` and `references/operations.md` for source-bac
 - **Owner one-off remains one-off:** these rules do not schedule, deploy, or run the crawler. Do one scoped research cycle if explicitly requested, then stop; no repeat or cron.
 
 Read `references/global-catalog-discovery.md` in full; it is mandatory for global market research.
+
+## Mandatory product-name normalization (every extracted product)
+
+- Expand receipt/catalog shorthand into natural, readable Indonesian product names before matching, deduplicating or staging: `MYK GRG → Minyak Goreng`, `KCP MNS → Kecap Manis`, `PCH → Pouch`, `BTL → Botol`, `KTG → Kaleng`, `SBN MND → Sabun Mandi`, `DTRGN → Deterjen`. Preserve recognized standard terms `UHT`, `3in1`, `SPF`, `ml`, `g`, `kg`, `L`, `pcs`; normalize unit spacing without changing SKU identity. Do not guess unknown abbreviations.
+- The **intermediate extraction** MUST produce separate `productName`, `brand`, `variant`, `packageSize`, and `packCount` fields (use `null` where unverifiable), plus original raw text and source proof in **audit only**. Example: `BIMOLI MYK GRG PCH 2L` → `productName = Bimoli Minyak Goreng 2 L`, `brand = Bimoli`, `variant = Pouch`, `packageSize = 2 L`.
+- **Production strict mapping:** current country Product Highlights v1 only supports `product_name`, optional `brand` and `package_size`; `variant` and `packCount` remain separate audit data unless essential identification can be safely represented in existing fields. **Never introduce camelCase or new item JSON keys.** No item may be published if size/variant/pack count identity is ambiguous.
+- Matching user-saved products/Watchlist should use brand + normalized name + exact variant/size/pack count where possible; lightweight normalization of user typing belongs to a separate Android PR, not this crawler.
+
+**Read `references/product-name-normalization.md` in full and apply its auditor checks.**
 
 ## Fundamental rules
 

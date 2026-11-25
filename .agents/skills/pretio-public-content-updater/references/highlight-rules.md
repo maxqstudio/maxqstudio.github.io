@@ -28,6 +28,14 @@ See `online-shop-marketplace-rules.md` and `templates/ONLINE_SHOP_CHECKLIST.md`.
 
 **Auditor requirement:** Record audit-only `source_kind=PHYSICAL_RETAIL|ONLINE_STORE`, `market_code`, `verified_area`, `fulfillment_evidence`, `location_decision` and the actual source URL. If a physical retailer is regional or an online seller cannot establish target-market eligibility, keep that candidate OUT of published feed. No `area`, `shipping` or `source_kind` field may be added to existing production items.
 
+## Product identity cleanup before publishing
+
+Every source product from a receipt-like catalog, leaflet, online store, or marketplace must be normalized using `product-name-normalization.md` before comparing prices/deduplicating or writing candidate highlights. Expand known Indonesian shorthand such as `MYK GRG`, `KCP MNS`, `PCH`, `BTL`, `KTG`, `SBN MND`, `DTRGN`; preserve `UHT`, `3in1`, `SPF` and standardized measurement units. Keep source raw text, exact SKU/variant, and extraction proof in separate audit.
+
+The extractor must produce separate audit/working fields `productName`, `brand`, `variant`, `packageSize`, `packCount`. Map only the currently supported `product_name`, `brand`, `package_size` into the strict v1 feed. A variant or pack count that changes product identity must not be silently lost during mapping; use existing `product_name` / `package_size` when faithful or HOLD the candidate. No new production keys.
+
+**Auditor** checks raw-to-normalized names, preserved identity, original-source price/variant/pack size equality, no artificial brands or sizes and strict allowed feed keys.
+
 ## Exact schema contracts
 
 - Top-level country-feed keys **only**: `schema`, `schema_version`, `country`, `currency`, `revision`, `generated_at`, `items`. Values `pretio.product_highlights.v1`, `1`, ISO country, configured ISO currency, opaque revision, real UTC generated time.

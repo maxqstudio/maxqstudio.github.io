@@ -25,6 +25,10 @@ Start with a manual AUDIT, then every scheduled production cycle must **attempt 
 
 The country-feed v1 / index v2 exact-key and evidence requirements remain unchanged. See `online-shop-marketplace-rules.md` for the complete policy.
 
+## Mandatory product-name extraction quality gate
+
+For **each candidate** collected during a registered-catalog or newly discovered-shop run, preserve the raw source title and normalize common market abbreviations with the rules in `product-name-normalization.md`. Record five intermediate identity fields (`productName`, `brand`, `variant`, `packageSize`, `packCount`) and source evidence in the audit. Match identical normalized seller/SKU/variant/pack units before deduplication; do not merge different packaging or sizes merely because their cleaned display names are similar. Map only supported keys to feed v1 and include raw/normalized identity evidence in auditor handoff. Standard terms (`UHT`, `3in1`, `SPF`, units) must remain intact.
+
 ## Preflight / completeness tools
 
 - Generate the **entire**, currency-independent manifest: `python3 tooling/pretio_public_content/manifest.py > /tmp/pretio-manifest.json`.
