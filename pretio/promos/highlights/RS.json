@@ -76,21 +76,6 @@
       "valid_until": "2026-12-06"
     },
     {
-      "id": "idea-rs-60000804-krastavac",
-      "catalog_id": "idea-rs-country",
-      "retailer": "IDEA",
-      "product_name": "Krastavac",
-      "normal_price": "169.99",
-      "promo_price": "149.99",
-      "currency": "RSD",
-      "image_url": "https://online.idea.rs/images/products/125/125000005_1.jpg?1558023068",
-      "source_url": "https://online.idea.rs/#!/products/60000804/krastavac",
-      "logo_url": "https://www.idea.rs/favicon.ico",
-      "observed_at": "2026-11-23T02:47:19Z",
-      "valid_from": "2026-11-23",
-      "valid_until": "2026-11-25"
-    },
-    {
       "id": "idea-rs-60005614-rosa-voda-negazirana-0-5l",
       "catalog_id": "idea-rs-country",
       "retailer": "IDEA",
@@ -134,21 +119,6 @@
       "observed_at": "2026-11-23T02:47:19Z",
       "valid_from": "2026-11-23",
       "valid_until": "2026-12-06"
-    },
-    {
-      "id": "idea-rs-60088385-avokado-komad",
-      "catalog_id": "idea-rs-country",
-      "retailer": "IDEA",
-      "product_name": "Avokado komad",
-      "normal_price": "169.99",
-      "promo_price": "119.99",
-      "currency": "RSD",
-      "image_url": "https://online.idea.rs/images/products/114/114000009_1.jpg?1554120622",
-      "source_url": "https://online.idea.rs/#!/products/60088385/avokado-komad",
-      "logo_url": "https://www.idea.rs/favicon.ico",
-      "observed_at": "2026-11-23T02:47:19Z",
-      "valid_from": "2026-11-20",
-      "valid_until": "2026-11-25"
     },
     {
       "id": "idea-rs-60025000-jogurt-natur-400g-dukatos",
@@ -392,8 +362,8 @@
       "brand": "Plazma"
     }
   ],
-  "revision": "pretio-highlights-RS-20261123T025341Z",
-  "generated_at": "2026-11-23T02:53:41Z",
+  "revision": "pretio-highlights-RS-20261125230700Z",
+  "generated_at": "2026-11-25T23:07:00Z",
   "schema_version": 1,
   "currency": "RSD",
   "country": "RS",
