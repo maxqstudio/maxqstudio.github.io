@@ -1960,30 +1960,6 @@
       "last_verified_at": "2026-10-19T02:37:05.2093648+08:00"
     },
     {
-      "id": "lidl-it-country",
-      "merchant": "Lidl",
-      "publisher": "Lidl Italia",
-      "title": "Volantino settimanale 19–25 novembre 2026",
-      "summary": "Volantino settimanale Lidl Italia valido dal 19 al 25 novembre 2026. Le offerte e la disponibilità possono variare in base al punto vendita; seleziona il tuo negozio sul sito ufficiale.",
-      "coverage_type": "national",
-      "coverage_label": "Italia",
-      "content_type": "webview",
-      "url": "https://www.lidl.it/c/volantino-lidl/s10018048",
-      "source_type": "official_retailer",
-      "status": "active",
-      "sort_order": 700,
-      "locations": [
-        {
-          "country": "Italy",
-          "country_code": "IT",
-          "type": "country"
-        }
-      ],
-      "last_verified_at": "2026-11-18T03:09:34Z",
-      "valid_from": "2026-11-19T07:00:00+08:00",
-      "valid_until": "2026-11-26T07:00:00+08:00"
-    },
-    {
       "id": "plazavea-pe-national",
       "merchant": "Plaza Vea",
       "publisher": "Plaza Vea Perú",
@@ -2558,6 +2534,6 @@
       "last_verified_at": "2026-11-18T03:09:34Z"
     }
   ],
-  "catalog_revision": "pretio-global-promo-country-gap-2026-11-18-v5",
+  "catalog_revision": "pretio-catalog-expired-it-2026-11-26-v1",
   "schema_version": 2
 }
