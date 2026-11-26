@@ -1960,30 +1960,6 @@
       "last_verified_at": "2026-10-19T02:37:05.2093648+08:00"
     },
     {
-      "id": "lidl-it-country",
-      "merchant": "Lidl",
-      "publisher": "Lidl Italia",
-      "title": "Volantini settimanali Lidl Italia",
-      "summary": "Consulta i volantini settimanali sul sito ufficiale di Lidl Italia. Le offerte e la disponibilità possono variare in base al punto vendita; seleziona il tuo negozio.",
-      "coverage_type": "national",
-      "coverage_label": "Italia",
-      "content_type": "webview",
-      "url": "https://www.lidl.it/c/volantino-lidl/s10018048",
-      "source_type": "official_retailer",
-      "status": "active",
-      "sort_order": 700,
-      "locations": [
-        {
-          "country": "Italy",
-          "country_code": "IT",
-          "type": "country"
-        }
-      ],
-      "last_verified_at": "2026-11-18T03:09:34Z",
-      "valid_from": null,
-      "valid_until": null
-    },
-    {
       "id": "plazavea-pe-national",
       "merchant": "Plaza Vea",
       "publisher": "Plaza Vea Perú",
@@ -2558,6 +2534,6 @@
       "last_verified_at": "2026-11-18T03:09:34Z"
     }
   ],
-  "catalog_revision": "pretio-catalog-evergreen-it-2026-11-25-v1",
+  "catalog_revision": "pretio-catalog-expired-it-2026-11-26-v1",
   "schema_version": 2
 }
