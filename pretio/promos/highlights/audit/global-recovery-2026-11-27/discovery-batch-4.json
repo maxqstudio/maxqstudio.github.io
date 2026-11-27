@@ -1,0 +1,356 @@
+{
+  "artifact_type": "pretio.global_recovery_discovery_batch.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 4,
+  "prior_run_id": "pretio-oneoff-global-20261123T040625Z",
+  "base_sha": "65bc23a54515c138d23e0e1465b9317a4bbc29d0",
+  "scope": "Manual one-off research only; exactly MA, ET, SK, PR, DO, UZ, VE, KE, BG, GT; no repo edits, production writes, schedules, or repeat.",
+  "recorded_at_utc": "2026-11-27T04:59:16Z",
+  "query_counts": {
+    "markets": 10,
+    "catalog_promo_searches": 10,
+    "online_shop_searches": 10,
+    "total_searches": 20
+  },
+  "access_counts": {
+    "robots_urls_requested": 13,
+    "readable": 1,
+    "http_404": 1,
+    "inaccessible_to_reader": 11,
+    "terms_pages_opened": 0,
+    "official_offer_or_product_pages_opened": 0,
+    "prices_or_images_verified": 0
+  },
+  "result_visibility_limit": "MA, ET, SK, PR online searches were issued earlier, but their tool output was truncated. Queries were not repeated; no source page was opened from those hidden results.",
+  "robots_limit": "One of 13 robot URLs was an exploratory guessed Ethiopia host (www.shoha.et), not an official lead; it is not treated as evidence.",
+  "markets": [
+    {
+      "code": "MA",
+      "name": "Morocco",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Morocco official supermarket weekly catalogue offers Marjane promotions catalogue Maroc",
+        "Morocco official online supermarket grocery offers Marjane Mall shopping"
+      ],
+      "official_ownership": "Marjane-branded result on marjane.ma is a plausible official lead; legal operator not independently confirmed.",
+      "sources": [
+        {
+          "merchant": "Marjane",
+          "kind": "catalog promo",
+          "stable_url": "https://www.marjane.ma/offres-market/offres-imbattables-market",
+          "stable_url_status": "Candidate only; permanence/update behavior unverified.",
+          "robots": "www.marjane.ma/robots.txt returned 404; bare-host robots inaccessible to reader.",
+          "rights": "Commercial reuse grant and terms not verified.",
+          "geo": "Morocco brand/domain; store or offer region scope unverified.",
+          "finding": "Search result was crawled about two months earlier and showed old content; not current catalog proof.",
+          "decision": "No offer page opened.",
+          "evidence": [
+            "https://www.marjane.ma/offres-market/offres-imbattables-market",
+            "https://www.marjane.ma/robots.txt",
+            "https://marjane.ma/robots.txt"
+          ]
+        }
+      ],
+      "discovery_only": [
+        "https://www.midio.ma/ (third-party listing; snippet not proof)",
+        "https://img.offers.ma/2026/11/Catalogue-Marjane-Maroc-du-26-novembre-au-13-decembre-2026.pdf (third-party PDF; not opened)"
+      ],
+      "terminal_disposition": "Official-looking candidate, but access, currentness, reuse rights, and offer geography unresolved; no page opened."
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopia",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Ethiopia supermarket promotions catalogue official offers Shoa supermarket",
+        "Ethiopia official online supermarket grocery deals offers delivery"
+      ],
+      "official_ownership": "No official retailer source retained in visible catalog results; online result output unavailable.",
+      "sources": [],
+      "access_rights_geo": "No qualifying official host established; no offer/source page opened. A guessed https://www.shoha.et/robots.txt was inaccessible and is not official evidence.",
+      "terminal_disposition": "Online search was issued, but its output was truncated; cannot conclude no qualifying source exists.",
+      "evidence": [
+        "https://www.shoha.et/robots.txt"
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Slovakia official supermarket weekly offers leták Kaufland Lidl official",
+        "Slovakia online supermarket grocery offers official online shop"
+      ],
+      "official_ownership": "Visible catalog result included a third-party flyer aggregator (Munch); no official current offer page captured. Online result output unavailable.",
+      "sources": [],
+      "discovery_only": [
+        "Munch aggregator (exact URL not retained in visible output)."
+      ],
+      "access_rights_geo": "No qualifying official host established; no source page opened; scope and rights unknown.",
+      "terminal_disposition": "No official lead in visible catalog output; online output truncated, so absence is not established.",
+      "evidence": []
+    },
+    {
+      "code": "PR",
+      "name": "Puerto Rico",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Puerto Rico supermarket weekly ad official Econo SuperMax offers catalog",
+        "Puerto Rico online grocery supermarket deals official online shop Econo To Go"
+      ],
+      "official_ownership": "No official retailer source captured in visible catalog output; online result output unavailable.",
+      "sources": [],
+      "discovery_only": [
+        {
+          "url": "https://cdn.shoppersdepuertorico.com/shopper-econo-2026-10-05.pdf",
+          "note": "Third-party October 2026 flyer, stale at observation; not opened or used as product/price proof."
+        }
+      ],
+      "access_rights_geo": "No official host established; rights and service scope unknown; no source page opened.",
+      "terminal_disposition": "Only a stale third-party flyer was visible; online output truncated; no official source verified.",
+      "evidence": [
+        "https://cdn.shoppersdepuertorico.com/shopper-econo-2026-10-05.pdf"
+      ]
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Dominican Republic official supermarket weekly offers catalog promociones Nacional Jumbo La Sirena",
+        "Dominican Republic official online supermarket grocery shopping offers Nacional Jumbo La Sirena online"
+      ],
+      "official_ownership": "Jumbo-branded page at jumbo.com.do; legal operating entity not independently confirmed.",
+      "sources": [
+        {
+          "merchant": "Jumbo",
+          "kind": "online supermarket",
+          "stable_url": "https://jumbo.com.do/supermercado",
+          "stable_url_status": "Category-path candidate; update behavior unverified.",
+          "robots": "www and bare-host robots inaccessible to reader.",
+          "rights": "Reuse grant/terms not verified.",
+          "geo": "Dominican Republic indicated by host; delivery/item scope unverified.",
+          "finding": "Search result identified online supermarket; no product/price detail accepted.",
+          "decision": "No offer page opened.",
+          "evidence": [
+            "https://jumbo.com.do/supermercado",
+            "https://www.jumbo.com.do/robots.txt",
+            "https://jumbo.com.do/robots.txt"
+          ]
+        }
+      ],
+      "discovery_only": [
+        "https://dominicana.do/encartes/ (third-party index)."
+      ],
+      "terminal_disposition": "Branded online candidate, but robots/access, reuse permission, and service geography unresolved.",
+      "evidence": [
+        "https://dominicana.do/encartes/",
+        "https://jumbo.com.do/supermercado",
+        "https://www.jumbo.com.do/robots.txt",
+        "https://jumbo.com.do/robots.txt"
+      ]
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Uzbekistan official supermarket promotions weekly catalog Korzinka offers",
+        "Uzbekistan official online grocery shop offers Korzinka Go online shopping"
+      ],
+      "official_ownership": "Korzinka corporate and branded domains identify the chain; legal ownership details not independently checked.",
+      "sources": [
+        {
+          "merchant": "Korzinka",
+          "kind": "catalog promo",
+          "stable_url": "https://www.korzinka.uz/en/catalog",
+          "stable_url_status": "Stable-path candidate; cadence/current offers unverified.",
+          "robots": "www and bare-host robots inaccessible to reader.",
+          "rights": "Offer-specific terms mentioned in snippet; commercial reuse grant not verified.",
+          "geo": "Corporate result says physical stores in 12 Uzbekistan regions; item/store scope not checked.",
+          "finding": "Catalog result described promotions but was crawled two months earlier; not current offer proof.",
+          "decision": "No offer page opened; catalog approval needed.",
+          "evidence": [
+            "https://www.korzinka.uz/en/catalog",
+            "https://www.korzinka.uz/robots.txt",
+            "https://korzinka.uz/robots.txt"
+          ]
+        },
+        {
+          "merchant": "Korzinka Go",
+          "kind": "online shop/app",
+          "stable_url": "https://www.korzinka.uz/go/en",
+          "stable_url_status": "App information path candidate.",
+          "robots": "www host robots inaccessible to reader.",
+          "rights": "Reuse permission not verified.",
+          "geo": "Corporate result describes online supermarket; older annual-report result mentions Tashkent area, not current nationwide coverage.",
+          "finding": "No product/offer evidence accepted.",
+          "decision": "No offer page opened.",
+          "evidence": [
+            "https://www.korzinka.uz/go/en",
+            "https://corp.korzinka.uz/",
+            "https://corp.korzinka.uz/robots.txt",
+            "https://api.korzinka.uz/Korzinka_annual_report.pdf"
+          ]
+        }
+      ],
+      "terminal_disposition": "Official catalog/app candidates, but access and reuse rights unverified; current online geographic coverage unproved."
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": [
+        "Venezuela official supermarket promotions catalog ofertas Excelsior Gama Central Madeirense",
+        "Venezuela official online supermarket grocery shop offers online store"
+      ],
+      "official_ownership": "A Farmatodo Venezuela YouTube result appeared, but no official commerce-host URL was captured/authenticated.",
+      "sources": [],
+      "discovery_only": [
+        "https://www.youtube.com/watch?v=KF2HI9LGcj4 (official-channel video result only; not a catalog/shop URL or price proof)."
+      ],
+      "access_rights_geo": "No qualifying retail host established; no relevant robots/terms or offer page opened; service geography unverified.",
+      "terminal_disposition": "Bounded searches yielded no verifiable official current public catalog/shop URL.",
+      "evidence": [
+        "https://www.youtube.com/watch?v=KF2HI9LGcj4"
+      ]
+    },
+    {
+      "code": "KE",
+      "name": "Kenya",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Kenya official supermarket weekly offers catalog Carrefour Naivas Quickmart",
+        "Kenya official online supermarket grocery shop offers Carrefour Kenya online Naivas"
+      ],
+      "official_ownership": "Naivas-branded result on naivas.online is a candidate; domain control not independently confirmed.",
+      "sources": [
+        {
+          "merchant": "Naivas",
+          "kind": "promotions/online shop",
+          "stable_url": "https://www.naivas.online/promos",
+          "stable_url_status": "Candidate path; update behavior unverified.",
+          "robots": "www and bare-host robots inaccessible to reader.",
+          "rights": "Commercial reuse permission/terms not verified.",
+          "geo": "Search result says delivery to Nairobi; wider national or store scope not established.",
+          "finding": "Search result labels promotions/delivery only; snippet not accepted as offer/product evidence.",
+          "decision": "No offer page opened.",
+          "evidence": [
+            "https://www.naivas.online/promos",
+            "https://www.naivas.online/robots.txt",
+            "https://naivas.online/robots.txt"
+          ]
+        }
+      ],
+      "terminal_disposition": "Branded candidate, but official ownership, robots/access, reuse rights, and national scope unverified."
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Bulgaria official supermarket weekly offers catalog Kaufland Lidl BILLA",
+        "Bulgaria official online supermarket grocery shop delivery offers Kaufland Bulgaria online shop"
+      ],
+      "official_ownership": "Kaufland Bulgaria-branded official host/result; legal operator not independently checked.",
+      "sources": [
+        {
+          "merchant": "Kaufland Bulgaria",
+          "kind": "catalog promo",
+          "stable_url": "https://www.kaufland.bg/aktualni-predlozheniya.html",
+          "stable_url_status": "Stable landing-path candidate; content not verified.",
+          "robots": "Retrieved; User-agent * does not disallow candidate path; unrelated component/path restrictions exist.",
+          "rights": "Commercial data/image reuse grant and terms not verified.",
+          "geo": "Bulgaria-specific host; item/store scope not confirmed.",
+          "finding": "Official search result identifies current-offer landing page; no offer content opened.",
+          "decision": "No offer page opened; approval required.",
+          "evidence": [
+            "https://www.kaufland.bg/aktualni-predlozheniya.html",
+            "https://www.kaufland.bg/robots.txt"
+          ]
+        },
+        {
+          "merchant": "Kaufland via Glovo",
+          "kind": "online marketplace service information",
+          "stable_url": "https://www.kaufland.bg/moyat-kaufland/uslugi/dostavka.html",
+          "stable_url_status": "Service-information path candidate.",
+          "robots": "Same Kaufland robots policy; page not opened.",
+          "rights": "Kaufland/Glovo reuse terms not verified.",
+          "geo": "Search result lists Sofia and selected areas in Plovdiv, Varna, Burgas, Pleven, Stara Zagora, Ruse, Blagoevgrad, Dobrich, Veliko Tarnovo; not nationwide.",
+          "finding": "Official search result describes Glovo delivery; no marketplace offer page opened.",
+          "decision": "No product/offer data accessed.",
+          "evidence": [
+            "https://www.kaufland.bg/moyat-kaufland/uslugi/dostavka.html",
+            "https://www.kaufland.bg/robots.txt"
+          ]
+        }
+      ],
+      "terminal_disposition": "Official leads; robots permits the catalog landing path, but reuse permission and item geography remain unverified."
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala",
+      "observed_at_utc": "2026-11-27T04:57:07Z",
+      "status": "SKIPPED_UNVERIFIED",
+      "queries": [
+        "Guatemala official supermarket weekly offers catalog Walmart Paiz La Torre",
+        "Guatemala official online grocery supermarket shop delivery offers Paiz online Walmart Guatemala"
+      ],
+      "official_ownership": "Paiz-branded pages at paiz.com.gt; legal operator not independently confirmed.",
+      "sources": [
+        {
+          "merchant": "Paiz",
+          "kind": "promotions information/online shop",
+          "stable_url": "https://www.paiz.com.gt/",
+          "related_urls": [
+            "https://www.paiz.com.gt/reglamento-de-promociones",
+            "https://www.paiz.com.gt/como-comprar",
+            "https://www.paiz.com.gt/preguntas-frecuentes"
+          ],
+          "stable_url_status": "Homepage and information-path candidates; promo update behavior unverified.",
+          "robots": "www and bare-host robots inaccessible to reader.",
+          "rights": "Promo regulations appeared in snippets, but no general commercial reuse grant verified; terms pages not opened.",
+          "geo": "Search results state delivery within 10 km of Paiz stores; no nationwide item scope established.",
+          "finding": "Search results identify online supermarket and promo-rules page; no product/price snippets used.",
+          "decision": "No offer page opened.",
+          "evidence": [
+            "https://www.paiz.com.gt/",
+            "https://www.paiz.com.gt/reglamento-de-promociones",
+            "https://www.paiz.com.gt/como-comprar",
+            "https://www.paiz.com.gt/preguntas-frecuentes",
+            "https://www.paiz.com.gt/robots.txt",
+            "https://paiz.com.gt/robots.txt"
+          ]
+        }
+      ],
+      "terminal_disposition": "Official-branded candidates, but robots/access and reuse rights unresolved; delivery is local around stores."
+    }
+  ],
+  "summary": {
+    "terminal_receipts": 10,
+    "status_counts": {
+      "SKIPPED_NO_VERIFIABLE_SOURCES": 1,
+      "SKIPPED_UNVERIFIED": 9
+    },
+    "verified_official_current_catalogs": 0,
+    "eligible_product_highlights": 0,
+    "production_changes": false
+  },
+  "limits": [
+    "Search snippets were discovery only; no product or price claims were accepted as proof.",
+    "No official offer/product page was opened; no price or image was verified.",
+    "No commercial data/image reuse permission was established.",
+    "Kaufland Bulgaria robots was readable and allowed the candidate landing path; most other candidate-host robots URLs were unavailable, and Marjane www robots returned 404.",
+    "MA/ET/SK/PR online search output was truncated; those searches were not repeated.",
+    "All new merchant/catalog candidates require owner approval; no IDs or production entries were created."
+  ]
+}

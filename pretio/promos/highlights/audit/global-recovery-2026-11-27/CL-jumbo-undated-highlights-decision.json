@@ -1,0 +1,68 @@
+{
+  "artifact_type": "pretio.undated_highlight_review.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "checked_country": "CL",
+  "retailer": "Jumbo",
+  "robots_policy": "Previously checked official robots.txt allowed public product paths; exact product URLs were requested sequentially once with no retries.",
+  "requested_count": 7,
+  "withheld_without_feed_change": [
+    {
+      "id": "jumbo-cl-1842649",
+      "reason": "Direct page exposed current price and Black Friday badge but no comparable normal price; discount pair not verified."
+    },
+    {
+      "id": "jumbo-cl-915067",
+      "reason": "Direct page exposed current price and Black Friday badge but no comparable normal price; discount pair not verified."
+    },
+    {
+      "id": "jumbo-cl-264343",
+      "reason": "Direct page exposed two prices but no Black Friday badge; price/discount meaning and period were not strong enough to update."
+    },
+    {
+      "id": "jumbo-cl-1247547",
+      "reason": "Direct page exposed current price and Black Friday badge but no comparable normal price; discount pair not verified."
+    },
+    {
+      "id": "jumbo-cl-1991096",
+      "reason": "Direct page exposed current price and Black Friday badge but no comparable normal price; discount pair not verified."
+    }
+  ],
+  "http_summary": {
+    "requested": 7,
+    "http_200": 7,
+    "live_price_captured": 7,
+    "product_pages_not_opened_after_error": 0
+  },
+  "source_receipt": "CL-jumbo-undated-highlights-live-check.json",
+  "campaign_receipt": "CL-jumbo-black-friday-event.json",
+  "note": "Prices were read from public official product pages but were not written to the production feed. The feed removals are separately itemized in deletion-reconciliation.json.",
+  "audit_only_discount_observations": [
+    {
+      "id": "jumbo-cl-1589277-pak",
+      "observed_at_utc": "2026-11-27T05:37:18Z",
+      "normal_price": "14250",
+      "promo_price": "12900",
+      "currency": "CLP",
+      "valid_from": "2026-11-27",
+      "valid_until": "2026-11-30",
+      "evidence": "Direct official product response lists CLP price 12900 and 14250, Black Friday badge, in-stock marker; product URL/code and existing feed identity match."
+    },
+    {
+      "id": "jumbo-cl-302978",
+      "observed_at_utc": "2026-11-27T05:37:41Z",
+      "normal_price": "3090",
+      "promo_price": "2790",
+      "currency": "CLP",
+      "valid_from": "2026-11-27",
+      "valid_until": "2026-11-30",
+      "evidence": "Direct official product response lists 2790/3090 with Black Friday badge and in-stock marker. Current official page text separately displayed 2790/3090 and a payment-method price 2318; only the public 2790 price was used."
+    }
+  ],
+  "candidate_ids": [
+    "jumbo-cl-1589277-pak",
+    "jumbo-cl-302978"
+  ],
+  "production_updated_ids": [],
+  "published_count": 0,
+  "decision": "AUDIT_ONLY_GEOGRAPHY_NOT_NATIONWIDE_VERIFIED"
+}

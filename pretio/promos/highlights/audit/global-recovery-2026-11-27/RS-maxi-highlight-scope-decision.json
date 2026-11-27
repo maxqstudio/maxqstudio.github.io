@@ -1,0 +1,26 @@
+{
+  "artifact_type": "pretio.highlight_scope_removal.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "country": "RS",
+  "retailer": "Maxi",
+  "removed_count": 8,
+  "removed_ids": [
+    "maxi-rs-7175923-stari-mlinar-brasno-psen-t-400-glatko-stari-mlinar1kg",
+    "maxi-rs-7478963-heineken-pivo-heineken-0-33l-limenka",
+    "maxi-rs-7176016-grand-kafa-mlevena-grand-gold-200g",
+    "maxi-rs-7193098-tomatino-kuvani-paradajz-tomatino-1-03kg",
+    "maxi-rs-7554628-cmana-doo-cmana-promet-doo-med-cvetni-moj-domaci-med-950g",
+    "maxi-rs-7175708-vital-margarin-stoni-vital-250g",
+    "maxi-rs-7308945-coca-cola-coca-cola-2x1-5l",
+    "maxi-rs-7182301-plazma-keks-plazma-mlevena-800g"
+  ],
+  "removed_at_utc": "2026-11-27T05:46:08Z",
+  "reason": "Countrywide Product Highlights cannot represent the city-limited online fulfillment scope documented by Maxi. These items were sourced from Maxi online product pages. No evidence establishes that the same public online price or delivery applies across Serbia.",
+  "not_expiry": true,
+  "evidence": [
+    "RS-maxi-delivery-scope.json",
+    "RS-undated-live-check.json"
+  ],
+  "price_handling": "No price was accepted from the captured Maxi product pages. A parser returned 0.00 for those pages; these values were rejected as invalid evidence.",
+  "catalog_change": "None. The catalog entry remains active; this change removes only the eight online price highlights from the nationwide feed."
+}

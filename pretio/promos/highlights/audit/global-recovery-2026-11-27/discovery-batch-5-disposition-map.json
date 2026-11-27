@@ -1,0 +1,86 @@
+{
+  "artifact_type": "pretio.market_disposition_normalization.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "source_receipt": "discovery-batch-5.json",
+  "applied_at_utc": "2026-11-27T05:05:32Z",
+  "status_vocabulary": "Pretio .agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+  "note": "Raw discovery receipt remains unchanged. This file maps its descriptive per-market labels to the documented market discovery vocabulary; it does not upgrade any market to verified.",
+  "markets": [
+    {
+      "code": "OM",
+      "name": "Oman",
+      "raw_receipt_disposition": "UNVERIFIED_POLICY",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Access, permissions, source ownership, or geography remains unverified."
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "raw_receipt_disposition": "UNVERIFIED_POLICY",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Access, permissions, source ownership, or geography remains unverified."
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "raw_receipt_disposition": "UNVERIFIED_POLICY",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Access, permissions, source ownership, or geography remains unverified."
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "raw_receipt_disposition": "NO_QUALIFYING_LEAD",
+      "canonical_market_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "normalization_basis": "No qualifying official source lead is present in the retained search output."
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "raw_receipt_disposition": "SCOPE_RESTRICTED",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Candidate service is region-limited; countrywide applicability is not established."
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "raw_receipt_disposition": "UNVERIFIED_POLICY",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Access, permissions, source ownership, or geography remains unverified."
+    },
+    {
+      "code": "CI",
+      "name": "Côte d'Ivoire",
+      "raw_receipt_disposition": "SCOPE_UNVERIFIED",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Candidate scope is unresolved; no countrywide applicability is established."
+    },
+    {
+      "code": "PA",
+      "name": "Panama",
+      "raw_receipt_disposition": "SCOPE_RESTRICTED",
+      "canonical_market_disposition": "SKIPPED_UNVERIFIED",
+      "normalization_basis": "Candidate service is region-limited; countrywide applicability is not established."
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "raw_receipt_disposition": "NEEDS_CATALOG_APPROVAL",
+      "canonical_market_disposition": "NEEDS_CATALOG_APPROVAL",
+      "normalization_basis": "Official-source candidate is not verified/approved for production registration."
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "raw_receipt_disposition": "SEARCH_OUTPUT_UNAVAILABLE",
+      "canonical_market_disposition": "SKIPPED_UNAVAILABLE",
+      "normalization_basis": "Search output was truncated; no source result was retained or retried."
+    }
+  ],
+  "canonical_counts": {
+    "SKIPPED_UNVERIFIED": 7,
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 1,
+    "NEEDS_CATALOG_APPROVAL": 1,
+    "SKIPPED_UNAVAILABLE": 1
+  }
+}

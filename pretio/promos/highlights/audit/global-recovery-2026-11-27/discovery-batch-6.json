@@ -1,0 +1,801 @@
+{
+  "receipt_type": "independent_discovery_batch",
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 6,
+  "markets_requested": [
+    "UY",
+    "TZ",
+    "BY",
+    "CD",
+    "AZ",
+    "SI",
+    "JO",
+    "BO",
+    "UG",
+    "CM"
+  ],
+  "collection_timing": {
+    "batch_window_start_utc": "2026-11-27T04:53:41Z",
+    "batch_window_end_utc": "2026-11-27T04:58:51Z",
+    "exact_per_search_timestamps": "not retained; not reconstructed",
+    "exact_per_robots_timestamps": "not retained; not reconstructed",
+    "receipt_written_utc": "2026-11-27T05:10:00Z"
+  },
+  "scope_and_method": {
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "total_searches": 20,
+    "per_market_search_cap": "one Catalog Promo search and one online shop/marketplace search",
+    "exact_query_strings": "not retained; not reconstructed",
+    "robots_urls_attempted": 9,
+    "robots_urls_readable": 7,
+    "robots_urls_inaccessible": 2,
+    "merchant_or_offer_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "prices_or_images_verified": 0,
+    "product_highlights_created": 0,
+    "verified_catalogs": 0,
+    "new_catalogs_approved": 0,
+    "production_data_created": false,
+    "repo_changes": false,
+    "notes": [
+      "Search results were discovery leads only; no prices or product claims were accepted.",
+      "Only robots.txt URLs were directly requested; no merchant, catalog, product, flyer, or offers page was opened.",
+      "New merchant/catalog leads remain NEEDS_CATALOG_APPROVAL.",
+      "Exact queries and per-market timestamps were not retained and are not reconstructed."
+    ]
+  },
+  "robots_checks": [
+    {
+      "url": "https://tienda.provisionbellavista.com.uy/robots.txt",
+      "result": "TIMEOUT",
+      "details": "Direct GET timed out after 15 seconds; no retry.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://www.v1.co.tz/robots.txt",
+      "result": "READABLE",
+      "details": "HTTP 200; public paths allowed; returned text welcomed bots.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://sokogrocery.co.tz/robots.txt",
+      "result": "READABLE_AI_INPUT_NO",
+      "details": "HTTP 200; Content-Signal ai-input=no.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://carrefour.cd/robots.txt",
+      "result": "READABLE",
+      "details": "HTTP 200; public paths except wp-admin.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://bravosupermarket.az/robots.txt",
+      "result": "READABLE",
+      "details": "HTTP 200; User-agent * Allow: /.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://www.spar.si/robots.txt",
+      "result": "READABLE_LIMITED",
+      "details": "HTTP 200; Request-rate 1/10, Crawl-delay 10, Visit-time 0400-0845 UTC.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://informacion.hipermaxi.com/robots.txt",
+      "result": "READABLE",
+      "details": "HTTP 200; public paths except wp-admin.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://carrefouruganda.com/robots.txt",
+      "result": "HTTP_403",
+      "details": "Direct GET returned 403; no retry.",
+      "observed_utc": null
+    },
+    {
+      "url": "https://carrefour.cm/robots.txt",
+      "result": "READABLE",
+      "details": "HTTP 200; public paths except WPForms upload.",
+      "observed_utc": null
+    }
+  ],
+  "markets": [
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [],
+        "finding": "No exact catalog lead URL retained."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://tienda.provisionbellavista.com.uy/tienda.php"
+        ],
+        "finding": "Search result surfaced an online shop; seller ownership and delivery scope unverified."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://tienda.provisionbellavista.com.uy/tienda.php",
+          "label": "Provision Bella Vista",
+          "type": "online shop",
+          "ownership": "Retailer identity surfaced in search only; first-party ownership unverified.",
+          "rights_access": "robots timed out; terms/reuse unverified.",
+          "geography": "Uruguay-associated domain; service area unknown.",
+          "stable_url": "Path URL; persistence/update behavior unverified.",
+          "robots_url": "https://tienda.provisionbellavista.com.uy/robots.txt",
+          "robots_result": "TIMEOUT after 15s; no retry",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Could not retrieve robots policy; no offer page opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "robots policy timed out; no official source or offer scope verified."
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzania",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://www.v1.co.tz/discounts/"
+        ],
+        "finding": "V1 result snippets included ended dates; not current offer proof."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://sokogrocery.co.tz/bogo-list"
+        ],
+        "finding": "Soko robots signal prevents page use."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://www.v1.co.tz/discounts/",
+          "label": "V1 Supermarket discounts",
+          "type": "catalog/promo",
+          "ownership": "First-party retailer lead; privacy search result names V1 Supermarket, not independently checked.",
+          "rights_access": "robots allows public paths; commercial reuse not established.",
+          "geography": "One listed location in Dar es Salaam; national scope not proved.",
+          "stable_url": "Non-periodic landing path; updates unverified.",
+          "robots_url": "https://www.v1.co.tz/robots.txt",
+          "robots_result": "HTTP 200; public paths allowed; bot access welcomed.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Rights and national scope unresolved; only robots opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://sokogrocery.co.tz/bogo-list",
+          "label": "Soko Grocery BOGO",
+          "type": "online shop/promo",
+          "ownership": "First-party-looking result; ownership unverified.",
+          "rights_access": "robots permits paths but Content-Signal ai-input=no.",
+          "geography": "Service geography unverified.",
+          "stable_url": "Path URL; persistence unknown.",
+          "robots_url": "https://sokogrocery.co.tz/robots.txt",
+          "robots_result": "HTTP 200; Content-Signal ai-input=no.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "AI input prohibited by robots signal; no page opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "No source passed access, rights, currentness and geography checks; V1 appears local and Soko disallows AI input."
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://listovki.zabava.by/",
+          "https://www.pakupnik.by/"
+        ],
+        "finding": "Search surfaced flyer aggregators, not an official retailer catalog."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://ozon.by/seller/dostavka-s-prilavka/"
+        ],
+        "finding": "Ozon seller listing surfaced; seller authority/scope unknown."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://listovki.zabava.by/",
+          "label": "Listovki",
+          "type": "third-party flyer aggregator",
+          "ownership": "Not retailer-owned; merchant authorization unverified.",
+          "rights_access": "Access/reuse policy unchecked; not accepted as official.",
+          "geography": "Search result centered on Minsk; national scope unverified.",
+          "stable_url": "Landing URL; freshness unverified.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Third-party status/rights unverified.",
+          "candidate_disposition": "NOT_ELIGIBLE_UNVERIFIED"
+        },
+        {
+          "url": "https://www.pakupnik.by/",
+          "label": "Pakupnik",
+          "type": "third-party flyer aggregator",
+          "ownership": "Retailer ownership/authorization unverified.",
+          "rights_access": "Access/reuse policy unchecked.",
+          "geography": "Belarus scope unverified.",
+          "stable_url": "Landing URL; freshness unverified.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Third-party status/rights unverified.",
+          "candidate_disposition": "NOT_ELIGIBLE_UNVERIFIED"
+        },
+        {
+          "url": "https://ozon.by/seller/dostavka-s-prilavka/",
+          "label": "Ozon seller - Dostavka s Prilavka",
+          "type": "marketplace seller",
+          "ownership": "Seller authority/catalog ownership unverified.",
+          "rights_access": "Marketplace policy and reuse rights unchecked.",
+          "geography": "Fulfillment regions unverified.",
+          "stable_url": "Seller path; updates unknown.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Seller authority and policy unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "No retailer-owned catalog or authorized seller source verified."
+    },
+    {
+      "code": "CD",
+      "name": "Democratic Republic of the Congo",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://carrefour.cd/catalogues/",
+          "https://sksupermarchedrc.com/",
+          "https://sksupermarchedrc.com/wp-content/uploads/2026/08/KINSHASA_CATLOG_BACK_TO_SCHOOL.pdf"
+        ],
+        "finding": "Carrefour result said A venir; S&K August flyer stale and local."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://www.shoppi.cd/en"
+        ],
+        "finding": "Shoppi described as online supermarket in Kinshasa."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://carrefour.cd/catalogues/",
+          "label": "Carrefour Congo catalogues",
+          "type": "catalog landing",
+          "ownership": "Official-brand country site lead; ownership unchecked.",
+          "rights_access": "robots permits public paths except wp-admin; terms/reuse unchecked.",
+          "geography": "Country site; result said A venir; current offer scope unverified.",
+          "stable_url": "Evergreen landing path; updates unknown.",
+          "robots_url": "https://carrefour.cd/robots.txt",
+          "robots_result": "HTTP 200; public paths except wp-admin.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No active offer; rights and scope unresolved.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://sksupermarchedrc.com/",
+          "label": "S&K Supermarche",
+          "type": "retailer/catalog",
+          "ownership": "First-party-looking domain; ownership unchecked.",
+          "rights_access": "Robots and terms unchecked.",
+          "geography": "Kinshasa presence; national scope unestablished.",
+          "stable_url": "Root URL; catalog updates unknown.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Regional scope and policy unresolved.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://sksupermarchedrc.com/wp-content/uploads/2026/08/KINSHASA_CATLOG_BACK_TO_SCHOOL.pdf",
+          "label": "S&K August 2026 flyer",
+          "type": "periodic catalog PDF",
+          "ownership": "Hosted on retailer-looking domain; owner unchecked.",
+          "rights_access": "Robots/terms unchecked.",
+          "geography": "Search result explicitly Kinshasa-only.",
+          "stable_url": "Period PDF from Aug 2026; stale.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Stale date and local scope; PDF not opened.",
+          "candidate_disposition": "NOT_CURRENT"
+        },
+        {
+          "url": "https://www.shoppi.cd/en",
+          "label": "Shoppi (S&K)",
+          "type": "online shop",
+          "ownership": "Result described S&K online supermarket; ownership link unverified.",
+          "rights_access": "Robots/reuse terms unchecked.",
+          "geography": "Kinshasa per search result; national coverage unknown.",
+          "stable_url": "Root path; service updates unknown.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Local scope and policy unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "Only upcoming or Kinshasa-scoped leads; no current nationwide source or reuse permission verified."
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://bravosupermarket.az/special-offers/"
+        ],
+        "finding": "Bravo result was crawled two months earlier, not current proof."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://ozio.az/en/"
+        ],
+        "finding": "Ozio partner-store/cashback platform; catalog authority unverified."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://bravosupermarket.az/special-offers/",
+          "label": "Bravo Supermarket special offers",
+          "type": "catalog/promo",
+          "ownership": "First-party retailer domain candidate; ownership unchecked.",
+          "rights_access": "robots allows public paths; terms/reuse unchecked.",
+          "geography": "Azerbaijan brand; national offer scope unverified.",
+          "stable_url": "Non-periodic landing URL; cadence unknown.",
+          "robots_url": "https://bravosupermarket.az/robots.txt",
+          "robots_result": "HTTP 200; User-agent * Allow: /.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Search result two months old; currentness/rights/scope unresolved.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://ozio.az/en/",
+          "label": "Ozio Plus",
+          "type": "marketplace/platform",
+          "ownership": "Platform surfaced; merchant/catalog authority unverified.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Azerbaijan association; customer regions unknown.",
+          "stable_url": "Root page; update policy unknown.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Seller authority, rights and geography unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "Potential retailer lead unverified for currentness, rights and countrywide scope."
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://www.spar.si/letak"
+        ],
+        "finding": "Store locations surfaced; no offer details opened."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [],
+        "finding": "No separate official online shop lead retained; other results aggregators."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://www.spar.si/letak",
+          "label": "SPAR Slovenia catalogs",
+          "type": "catalog landing",
+          "ownership": "First-party SPAR domain lead; ownership unchecked.",
+          "rights_access": "robots path allowed; Request-rate 1/10, Crawl-delay 10, Visit-time 0400-0845 UTC; reuse terms unchecked.",
+          "geography": "Many locations in Slovenia; offers store-specific; online differs.",
+          "stable_url": "Evergreen landing URL; flyer updates unverified.",
+          "robots_url": "https://www.spar.si/robots.txt",
+          "robots_result": "HTTP 200; rate/time limits; checked inside visit window.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Reuse permission not established; no flyer opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "Catalog lead only; commercial reuse and item-level applicability unverified."
+    },
+    {
+      "code": "JO",
+      "name": "Jordan",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://citystoresjo.com/"
+        ],
+        "finding": "City Stores result described three locations."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://cozmo.jo/about-cozmo",
+          "https://www.sugarcanemarkets.com/en"
+        ],
+        "finding": "Cozmo and Sugar Cane surfaced; enabled zones are not nationwide proof."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://citystoresjo.com/",
+          "label": "City Stores",
+          "type": "retailer/catalog",
+          "ownership": "First-party-looking retailer lead; ownership unchecked.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Three locations per result; not national.",
+          "stable_url": "Root appears evergreen; flyer URL/update unknown.",
+          "robots_url": "https://citystoresjo.com/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Local scope and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://cozmo.jo/about-cozmo",
+          "label": "Cozmo",
+          "type": "online grocery",
+          "ownership": "First-party-looking site; ownership unchecked.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Ecommerce described; national delivery unestablished.",
+          "stable_url": "About page persistent; offers URL unknown.",
+          "robots_url": "https://cozmo.jo/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Coverage and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.sugarcanemarkets.com/en",
+          "label": "Sugar Cane Markets",
+          "type": "online grocery",
+          "ownership": "First-party-looking shop; ownership unchecked.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Enabled zones across Jordan per result; not full coverage proof.",
+          "stable_url": "Root appears persistent; offers update unknown.",
+          "robots_url": "https://www.sugarcanemarkets.com/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Zone coverage and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "Leads are local/zone-limited; access and reuse terms unverified."
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://informacion.hipermaxi.com/"
+        ],
+        "finding": "Hipermaxi result claimed 37 stores and 37 pharmacies."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://laoferta.bolivia.bo/",
+          "https://www.fsa.bo/"
+        ],
+        "finding": "Shop leads surfaced; sellers/delivery unverified."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://informacion.hipermaxi.com/",
+          "label": "Hipermaxi",
+          "type": "retailer/catalog",
+          "ownership": "First-party info site candidate; identity not independently checked.",
+          "rights_access": "robots allows public pages except wp-admin; reuse terms unchecked.",
+          "geography": "Search result claims 37 stores and 37 pharmacies across Bolivia; item scope unknown.",
+          "stable_url": "Info/promo landing appears persistent; updates unknown.",
+          "robots_url": "https://informacion.hipermaxi.com/robots.txt",
+          "robots_result": "HTTP 200; public paths except wp-admin.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Rights and item-level scope unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://laoferta.bolivia.bo/",
+          "label": "La Oferta",
+          "type": "online shop",
+          "ownership": "Seller/catalog identity unverified.",
+          "rights_access": "Robots and reuse terms unchecked.",
+          "geography": "Bolivia host; coverage unknown.",
+          "stable_url": "Shop path persistence/update unknown.",
+          "robots_url": null,
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Seller authority and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.fsa.bo/",
+          "label": "FSA shop",
+          "type": "online shop",
+          "ownership": "Seller/catalog identity unverified.",
+          "rights_access": "Robots and reuse terms unchecked.",
+          "geography": "Search result claimed Bolivia-wide shipping; unverified.",
+          "stable_url": "Root/shop URL; updates unknown.",
+          "robots_url": "https://www.fsa.bo/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Seller authority, coverage and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "No source passed ownership, rights and geography checks; Bolivia currency metadata is absent from current highlight feed."
+    },
+    {
+      "code": "UG",
+      "name": "Uganda",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://www.carrefouruganda.com/promotions"
+        ],
+        "finding": "Result indicated loyalty/points promos, not item discounts."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://kamilmart.ug/",
+          "https://kibokostore.com/",
+          "https://www.mtn.co.ug/newsabout/mtn-market-by-momo-launches-sambagala-full-time-bringing-the-excitement-home-with-trusted-deals-delivered-straight-to-your-doorstep/"
+        ],
+        "finding": "Shop leads and MTN marketplace article surfaced; no offers opened."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://www.carrefouruganda.com/promotions",
+          "label": "Carrefour Uganda Promotions",
+          "type": "catalog/promo",
+          "ownership": "Official Carrefour country-site lead; ownership unchecked.",
+          "rights_access": "robots returned HTTP 403; policy unavailable.",
+          "geography": "Uganda site; promo eligibility/regions unknown.",
+          "stable_url": "Evergreen promotions path candidate; updates unknown.",
+          "robots_url": "https://carrefouruganda.com/robots.txt",
+          "robots_result": "HTTP 403; no retry.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "robots unavailable; no offer page opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://kamilmart.ug/",
+          "label": "Kamil Mart",
+          "type": "online shop",
+          "ownership": "Seller identity/first-party status unverified.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Result claimed Uganda-wide delivery; unverified.",
+          "stable_url": "Root URL; update policy unknown.",
+          "robots_url": "https://kamilmart.ug/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Seller, coverage and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://kibokostore.com/",
+          "label": "Kiboko Store",
+          "type": "online shop",
+          "ownership": "Seller identity unverified.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Kampala association; national scope unknown.",
+          "stable_url": "Root URL; update policy unknown.",
+          "robots_url": "https://kibokostore.com/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Local scope and policy unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.mtn.co.ug/newsabout/mtn-market-by-momo-launches-sambagala-full-time-bringing-the-excitement-home-with-trusted-deals-delivered-straight-to-your-doorstep/",
+          "label": "MTN Market by MoMo announcement",
+          "type": "related evidence, not offer source",
+          "ownership": "MTN corporate-domain article surfaced; marketplace page not opened.",
+          "rights_access": "Marketplace access/reuse unchecked.",
+          "geography": "Article describes Uganda marketplace; offer regions unknown.",
+          "stable_url": "Corporate news URL, not a catalog.",
+          "robots_url": "NOT_CHECKED",
+          "robots_result": "Not an offer page; no snippet price accepted.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "NOT_CATALOG_SOURCE",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Carrefour robots returned HTTP 403; other shop leads unverified for seller, access, rights and national scope."
+    },
+    {
+      "code": "CM",
+      "name": "Cameroon",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://carrefour.cm/promotions/",
+          "https://dovv.schuamealexandre.com/"
+        ],
+        "finding": "Carrefour archive appears branch-local; DOVV result described a campaign ending 2026-09-30."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": null,
+        "query_text_retained": false,
+        "lead_urls": [
+          "https://sasayez.biz/douala_en",
+          "https://selzamarket.com/"
+        ],
+        "finding": "Sasayez and SELZA leads; coverage/rights unknown."
+      },
+      "candidate_sources": [
+        {
+          "url": "https://carrefour.cm/promotions/",
+          "label": "Carrefour Cameroon Promotions",
+          "type": "catalog/promo archive",
+          "ownership": "Official Carrefour country-site lead; ownership unchecked.",
+          "rights_access": "robots allows public paths except WPForms upload; reuse terms unchecked.",
+          "geography": "Result listed Douala/Yaounde branches; national scope unknown.",
+          "stable_url": "Evergreen archive path; update behavior unknown.",
+          "robots_url": "https://carrefour.cm/robots.txt",
+          "robots_result": "HTTP 200; public paths except WPForms upload.",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Branch applicability/reuse rights unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://dovv.schuamealexandre.com/",
+          "label": "DOVV Distribution",
+          "type": "retailer/promo",
+          "ownership": "Result named DOVV Distribution SA; ownership unchecked.",
+          "rights_access": "Robots/terms unchecked.",
+          "geography": "20 neighborhood stores in Yaounde per result.",
+          "stable_url": "Root URL; campaign ended 2026-09-30, stale.",
+          "robots_url": "https://dovv.schuamealexandre.com/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Stale and city-only; no page opened.",
+          "candidate_disposition": "NOT_CURRENT"
+        },
+        {
+          "url": "https://sasayez.biz/douala_en",
+          "label": "Sasayez",
+          "type": "online partner delivery",
+          "ownership": "Partner platform; seller authority unverified.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Douala path; national scope unknown.",
+          "stable_url": "Region path; update unknown.",
+          "robots_url": "https://sasayez.biz/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Local scope, rights and identity unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://selzamarket.com/",
+          "label": "SELZA Market",
+          "type": "online marketplace",
+          "ownership": "Marketplace lead; seller/catalog rights unverified.",
+          "rights_access": "Robots, terms and reuse unchecked.",
+          "geography": "Cameroon-wide service unestablished.",
+          "stable_url": "Root URL; offer update policy unknown.",
+          "robots_url": "https://selzamarket.com/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Seller identity, scope and rights unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNVERIFIED",
+      "reason": "Results were branch/city scoped or stale; marketplace rights and service scope unverified."
+    }
+  ],
+  "aggregate_dispositions": {
+    "SKIPPED_UNAVAILABLE": 2,
+    "SKIPPED_UNVERIFIED": 8
+  },
+  "final_counts": {
+    "markets": 10,
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "total_searches": 20,
+    "robots_checks_attempted": 9,
+    "robots_checks_readable": 7,
+    "robots_checks_inaccessible": 2,
+    "merchant_or_offer_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "verified_official_catalogs": 0,
+    "new_catalogs_approved": 0,
+    "product_highlights_created": 0,
+    "product_or_price_claims": 0
+  },
+  "limitations": [
+    "Exact search queries and per-search timestamps were not retained in execution notes.",
+    "No offer page was opened because access/reuse policy, currentness, or geography was blocked or unverified.",
+    "No catalog source was verified; candidate merchants require owner approval before registration."
+  ]
+}

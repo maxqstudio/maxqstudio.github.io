@@ -1,0 +1,52 @@
+{
+  "artifact_type": "pretio.product_candidate_policy_review.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "country_code": "DE",
+  "merchant": "Lidl",
+  "catalog_id": "lidl-de-country",
+  "candidate_id": "lidl-de-silvercrest-premium-slushie-maker-ssm-220-a1",
+  "source_url": "https://www.lidl.de/p/silvercrest-premium-slushie-maker-ssm-220-a1/p100412188",
+  "source_observation": {
+    "observed_at_utc_precision": "2026-11-27T06:41Z (minute precision retained in prior source receipt)",
+    "product_name": "SILVERCREST® Premium-Slushie-Maker »SSM 220 A1«",
+    "brand": "SILVERCREST®",
+    "model": "SSM 220 A1",
+    "article_number": "100412188",
+    "normal_price": "179.00",
+    "normal_price_label": "vorher",
+    "promo_price": "129.00",
+    "currency": "EUR",
+    "campaign_label": "BLACK WEEK DEAL",
+    "campaign_url": "https://www.lidl.de/c/black-week/s10080642",
+    "campaign_valid_from": "2026-11-16",
+    "campaign_valid_until": "2026-11-30",
+    "image_url": "https://www.lidl.de/assets/gcpd3a5f48c63cf4868b6389be07fb7be27.png",
+    "image_observation": {
+      "mime": "image/png",
+      "dimensions": "772x579",
+      "sha256": "3f86e32e5e09aa300226f6ac7d7bcb4639129b7776f646ce69dc61f1e259a793",
+      "decoded_and_matched": true
+    }
+  },
+  "market_evidence": {
+    "official_shipping_terms_url": "https://www.lidl.de/c/allgemeine-geschaeftsbedingungen-onlineshop/s10005181",
+    "official_imprint_url": "https://www.lidl.de/c/impressum/s10005386",
+    "finding": "Lidl online-shop offers require a delivery address in Germany; market scope is supported."
+  },
+  "policy_review": {
+    "official_terms_searches": [
+      "site:lidl.de Nutzungsbedingungen Website Bilder kommerzielle Nutzung Inhalte",
+      "site:lidl.de urheberrechtlich geschützt Inhalte Bilder",
+      "Lidl.de Nutzungsbedingungen website Urheberrecht Nutzungsrechte Bilder Produktfotos"
+    ],
+    "pages_reviewed": [
+      "https://www.lidl.de/c/allgemeine-geschaeftsbedingungen-onlineshop/s10005181",
+      "https://www.lidl.de/c/impressum/s10005386"
+    ],
+    "finding": "The bounded review did not locate an explicit license or permission to reuse the product image/content in Pretio. It also did not establish an express prohibition. Rights status remains unverified; this is not a legal conclusion.",
+    "image_reuse_authorized": false
+  },
+  "decision": "AUDIT_ONLY_NOT_PUBLISHED_RIGHTS_UNVERIFIED",
+  "production_changes": false,
+  "next_action": "Only reconsider if an authorized product image/feed or explicit reuse permission is available."
+}

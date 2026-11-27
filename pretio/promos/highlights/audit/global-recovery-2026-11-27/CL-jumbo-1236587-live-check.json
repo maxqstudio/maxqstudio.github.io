@@ -1,0 +1,21 @@
+{
+  "requested_url": "https://www.jumbo.cl/papel-higienico-elite-ultra-doble-hoja-18-rollos-50-m-c-u/p",
+  "observed_at": "2026-11-27T05:17:57Z",
+  "http_status": 200,
+  "final_url": null,
+  "body_sha256": "511998c0c98ff9fc294786a5c57b9f68c3246b8d265b00a085beaa4d7a8402ad",
+  "body_chars": 1526495,
+  "has_sku_1236587": true,
+  "has_current_14939": true,
+  "has_regular_24490": true,
+  "excerpt_matches": [
+    "ct:availability\" content=\"in stock\"/><meta name=\"product:price:amount\" content=\"14939\"/><meta name=\"product:price:currency\" content=\"CLP\"/><link rel=\"canonical\" href=\"https://www.jumbo.cl/papel-higienico-e",
+    "\"Brand\",\"name\":\"Elite\"},\"offers\":{\"@type\":\"Offer\",\"priceCurrency\":\"CLP\",\"price\":14939,\"availability\":\"https://schema.org/InStock\",\"itemCondition\":\"https://schema.org/NewCondition\",\"url\":\"https://www.jumbo.",
+    "los-50-m-c-u/p\",\"priceSpecification\":[{\"@type\":\"UnitPriceSpecification\",\"price\":14939,\"priceCurrency\":\"CLP\"},{\"@type\":\"UnitPriceSpecification\",\"price\":24490,\"priceCurrency\":\"CLP\",\"priceType\":\"https://schem",
+    "pel Higiénico Elite Ultra Suave Doble Hoja 50 m 18 un.\" data-cnstrc-item-price=\"14939\"><div class=\"flex flex-col\" data-testid=\"buybox-cluster\"><div><div class=\"flex items-center justify-center font-semibol",
+    "yle=\"background-color:#BFBFBF;color:#000000\"><p class=\"h-[18px] leading-[18px]\">Black Friday</p></div></div><div><a aria-label=\"Ir a la página de Elite\" class=\"block w-fit text-base font-semibold capitalize text-",
+    "n.</h1></div><div class=\"mt-1\"><p class=\"text-sm text-gray-500\">Código: <!-- -->1236587</p></div><div class=\"mt-3\"><div class=\"flex items-center gap-2\"><div class=\"flex items-center gap-0.5\" aria-label=\"Rati",
+    "ne text-neutral700 gap-2 md:gap-3 font-bold text-2xl lg:text-3xl mt-0\">$<!-- -->14.939<span class=\"text-lg line-through text-grey-dark font-semibold text-2xl\">$<!-- -->24.490</span></div><div class=\"ppum-pr",
+    "tock\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"8\\\",{\\\"name\\\":\\\"product:price:amount\\\",\\\"content\\\":\\\"14939\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"9\\\",{\\\"name\\\":\\\"product:price:currency\\\",\\\"content\\\":\\\"CLP\\\"}],[\\\"$\\\",\\\"link\\\",\\\"10\\\",{\\\"rel\\\":\\\""
+  ]
+}

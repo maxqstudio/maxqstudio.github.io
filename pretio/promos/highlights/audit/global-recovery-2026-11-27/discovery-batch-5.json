@@ -1,0 +1,492 @@
+{
+  "receipt_type": "independent_discovery_batch",
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 5,
+  "markets_requested": [
+    "OM",
+    "AO",
+    "LK",
+    "CR",
+    "LU",
+    "HR",
+    "CI",
+    "PA",
+    "LT",
+    "GH"
+  ],
+  "collection_timing": {
+    "run_id_nominal_start_utc": "2026-11-27T04:34Z",
+    "exact_per_search_timestamps": "not retained in the carried-forward execution notes",
+    "receipt_reviewed_utc": "2026-11-27T04:56:17Z"
+  },
+  "scope_and_method": {
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "total_searches": 20,
+    "per_market_search_cap": "one catalog/promo search and one online shop/marketplace search",
+    "source_page_opens": 0,
+    "offers_page_opens": 0,
+    "robots_urls_attempted": 10,
+    "robots_urls_readable": 2,
+    "robots_urls_inaccessible_via_research_tool": 8,
+    "product_price_image_claims_accepted": 0,
+    "production_data_created": false,
+    "repo_changes": false,
+    "notes": [
+      "Search-result snippets are treated only as leads, never as verified offer or price evidence.",
+      "This continuation opened robots.txt URLs only; no merchant, catalog, product, or offers page was opened.",
+      "Exact search strings are preserved only where the predecessor handoff included them; missing strings are explicitly marked rather than reconstructed."
+    ]
+  },
+  "robots_checks": [
+    {
+      "url": "https://www.alhumaidhihypermarket.com/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://www.kerohipermercado.com/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://www.alimentaangola.co.ao/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://www.mkb.lk/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://smartmarket.lu/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://www.konzum.hr/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "read",
+      "evidence": "https://www.konzum.hr/robots.txt",
+      "findings": "User-agent * disallows checkout, cart, orders, user/account, API, password and other private paths. No offers-page path was opened. Terms and reuse permission remain unverified."
+    },
+    {
+      "url": "https://www.kaufland.hr/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://carrefour.ci/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://www.jumbo.com.pa/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "inaccessible_via_research_tool",
+      "evidence": "open attempt returned internal error; policy not verified"
+    },
+    {
+      "url": "https://www.maxima.lt/robots.txt",
+      "observed_utc": "2026-11-27T04:56:17Z",
+      "result": "read",
+      "evidence": "https://www.maxima.lt/robots.txt",
+      "findings": "User-agent * disallows /uploads*, /images*, /custom_assets* and two media paths. Terms and reuse permission remain unverified; no offers-page path was opened."
+    }
+  ],
+  "markets": [
+    {
+      "code": "OM",
+      "name": "Oman",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Oman official supermarket weekly offers catalogue promotions retailer",
+        "lead_urls": [
+          "https://www.alhumaidhihypermarket.com/?lang=en"
+        ],
+        "finding": "Search surfaced Al Humaidhi Hypermarket, whose result described weekly/monthly promotions and no active promotions at the time. No active offer verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.alhumaidhihypermarket.com/?lang=en"
+        ],
+        "finding": "Same first-party-looking retailer lead surfaced; no separate verified online shop or public offer evidence."
+      },
+      "sources": [
+        {
+          "url": "https://www.alhumaidhihypermarket.com/?lang=en",
+          "publisher_ownership": "candidate retailer; official ownership and site claims not directly inspected in this batch",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "Oman-associated lead; nationwide service scope unverified",
+          "stable_url_assessment": "candidate root URL, update persistence not verified",
+          "disposition": "UNVERIFIED_POLICY",
+          "no_page_open_reason": "robots/access and reuse policy could not be established"
+        }
+      ],
+      "terminal_disposition": "UNVERIFIED_POLICY"
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Angola official supermarket catalogo ofertas promocao supermercado",
+        "lead_urls": [
+          "https://www.alimentaangola.co.ao/folhetos/",
+          "https://www.kerohipermercado.com/"
+        ],
+        "finding": "Alimenta result said its flyer promotions apply only in physical stores. Kero surfaced as an Angola hypermarket with multiple branches and weekly promotions; neither catalog nor terms was opened."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://merkado.ao/"
+        ],
+        "finding": "Merkado surfaced as a marketplace for independent Angolan stores; each store determines delivery, so the platform is not itself a verified seller."
+      },
+      "sources": [
+        {
+          "url": "https://www.alimentaangola.co.ao/folhetos/",
+          "publisher_ownership": "candidate first-party Alimenta Angola domain; not directly verified",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "physical-store-only promotions per search result; branch eligibility not verified",
+          "stable_url_assessment": "candidate folhetos path; permanence not verified",
+          "disposition": "SCOPE_RESTRICTED",
+          "no_page_open_reason": "physical-only scope plus unresolved robots/access/reuse"
+        },
+        {
+          "url": "https://www.kerohipermercado.com/",
+          "publisher_ownership": "candidate first-party Kero domain; not directly verified",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "Angola branches surfaced; national coverage unverified",
+          "stable_url_assessment": "candidate root URL; update persistence not verified",
+          "disposition": "UNVERIFIED_POLICY",
+          "no_page_open_reason": "robots/access and reuse policy could not be established"
+        },
+        {
+          "url": "https://merkado.ao/",
+          "publisher_ownership": "marketplace platform, not verified as a retailer/seller",
+          "rights_access": "not checked because not a qualifying first-party seller source",
+          "geography": "Angolan stores; seller-by-seller delivery",
+          "stable_url_assessment": "candidate platform root",
+          "disposition": "NOT_QUALIFYING_SOURCE",
+          "no_page_open_reason": "not a direct official seller catalog"
+        }
+      ],
+      "terminal_disposition": "UNVERIFIED_POLICY"
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Sri Lanka official supermarket weekly offers promotions leaflet catalogue",
+        "lead_urls": [
+          "https://supermarket.lk/"
+        ],
+        "finding": "Search surfaced a grocery discovery platform and bank-hosted card promotions; neither is a verified public retailer catalog."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.mkb.lk/",
+          "https://supermarket.lk/"
+        ],
+        "finding": "MKB surfaced as a local supermarket with a real catalog reportedly ordered through its app; some result text indicated members-only offers. Supermarket.lk is a discovery platform."
+      },
+      "sources": [
+        {
+          "url": "https://www.mkb.lk/",
+          "publisher_ownership": "candidate MKB first-party domain; not directly verified",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified; members-only offers are excluded",
+          "geography": "local Sri Lankan supermarket; national service coverage unverified",
+          "stable_url_assessment": "candidate root URL; catalog URL permanence not verified",
+          "disposition": "UNVERIFIED_POLICY",
+          "no_page_open_reason": "robots/access and reuse policy unclear; public catalog access not verified"
+        },
+        {
+          "url": "https://supermarket.lk/",
+          "publisher_ownership": "grocery discovery platform, not verified as retailer",
+          "rights_access": "not checked as it is not a qualifying first-party seller catalog",
+          "geography": "Sri Lanka-oriented platform",
+          "stable_url_assessment": "candidate platform root",
+          "disposition": "NOT_QUALIFYING_SOURCE",
+          "no_page_open_reason": "aggregator/discovery source, not seller catalog"
+        }
+      ],
+      "terminal_disposition": "UNVERIFIED_POLICY"
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Costa Rica official supermercado catálogo ofertas promociones semanales retailer",
+        "lead_urls": [],
+        "finding": "No direct official retailer catalog was visible in captured results."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [],
+        "finding": "No direct official online shop/marketplace result was visible in captured output. This does not establish that none exists."
+      },
+      "sources": [],
+      "terminal_disposition": "NO_QUALIFYING_LEAD",
+      "no_page_open_reason": "No qualifying official lead surfaced in the one-per-type searches; no source host was available for policy checks."
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.letzlife.lu/shopping"
+        ],
+        "finding": "LetzLife surfaced as an aggregator, not a first-party retailer catalog."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://smartmarket.lu/en/"
+        ],
+        "finding": "Smartmarket surfaced as an online supermarket; stated delivery minimum was Luxembourg City, so coverage is regional."
+      },
+      "sources": [
+        {
+          "url": "https://www.letzlife.lu/shopping",
+          "publisher_ownership": "aggregator, not retailer",
+          "rights_access": "not checked as it is not a qualifying first-party seller source",
+          "geography": "Luxembourg shopping listings",
+          "stable_url_assessment": "candidate aggregator page",
+          "disposition": "NOT_QUALIFYING_SOURCE",
+          "no_page_open_reason": "not a direct official retailer source"
+        },
+        {
+          "url": "https://smartmarket.lu/en/",
+          "publisher_ownership": "candidate first-party online supermarket; not directly verified",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "Luxembourg City delivery restriction per search result; not nationwide",
+          "stable_url_assessment": "candidate root URL; offers URL permanence not verified",
+          "disposition": "SCOPE_RESTRICTED",
+          "no_page_open_reason": "regional service scope and unresolved robots/access/reuse"
+        }
+      ],
+      "terminal_disposition": "SCOPE_RESTRICTED"
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.kaufland.hr/ponuda.html",
+          "https://www.konzum.hr/",
+          "https://www.konzum.hr/katalozi"
+        ],
+        "finding": "Search surfaced retailer-domain catalog/offer leads for Kaufland and Konzum. Konzum search result FAQ said online availability can differ from catalog promotions."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.konzum.hr/",
+          "https://www.konzum.hr/novosti/black-weekend-u-webshopu",
+          "https://www.konzum.hr/korisnicka-podrska/akcije-i-popusti",
+          "https://www.spar.hr/"
+        ],
+        "finding": "Konzum campaign result advertised an extra 40% only with Mastercard; this conditional benefit is excluded. No offer page opened."
+      },
+      "sources": [
+        {
+          "url": "https://www.konzum.hr/",
+          "publisher_ownership": "candidate first-party Konzum domain",
+          "rights_access": "robots readable; private checkout/account/API paths disallowed; public terms/reuse permission unverified",
+          "geography": "Croatia retailer; online/catalog region equivalence unverified",
+          "stable_url_assessment": "candidate root and catalog URLs; update persistence not verified",
+          "disposition": "UNVERIFIED_POLICY",
+          "no_page_open_reason": "reuse policy unresolved and campaign evidence was payment-card conditional"
+        },
+        {
+          "url": "https://www.kaufland.hr/ponuda.html",
+          "publisher_ownership": "candidate first-party Kaufland Croatia domain",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "Croatia page; service region not verified",
+          "stable_url_assessment": "candidate offers URL; permanence not verified",
+          "disposition": "UNVERIFIED_POLICY",
+          "no_page_open_reason": "robots/access and reuse policy could not be established"
+        },
+        {
+          "url": "https://www.spar.hr/",
+          "publisher_ownership": "candidate first-party SPAR Croatia domain",
+          "rights_access": "not checked because no qualifying offer URL was selected",
+          "geography": "Croatia-associated domain; service area not verified",
+          "stable_url_assessment": "candidate root URL",
+          "disposition": "UNVERIFIED_POLICY",
+          "no_page_open_reason": "source access/reuse and regional scope unverified"
+        }
+      ],
+      "terminal_disposition": "UNVERIFIED_POLICY"
+    },
+    {
+      "code": "CI",
+      "name": "Côte d'Ivoire",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://carrefour.ci/promotions/"
+        ],
+        "finding": "Carrefour Côte d'Ivoire promotions page surfaced; result identified named stores/locations, implying a store-selectable or locality-specific scope."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [],
+        "finding": "No online shop result was visible in captured output; the Carrefour promotions lead came from the catalog/promo search only."
+      },
+      "sources": [
+        {
+          "url": "https://carrefour.ci/promotions/",
+          "publisher_ownership": "candidate first-party Carrefour Côte d'Ivoire domain; not directly verified",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "named stores indicate local/store-specific scope; national coverage unverified",
+          "stable_url_assessment": "candidate promotions path; permanence not verified",
+          "disposition": "SCOPE_UNVERIFIED",
+          "no_page_open_reason": "robots/access and reuse unclear; local store scope not resolved"
+        }
+      ],
+      "terminal_disposition": "SCOPE_UNVERIFIED"
+    },
+    {
+      "code": "PA",
+      "name": "Panama",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [],
+        "finding": "No direct official catalog source was visible in captured results."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.jumbo.com.pa/JumboWeb/"
+        ],
+        "finding": "Jumbo Market search result said ecommerce was being rebuilt; delivery limited to within 5 km of a branch, with weekly promotions on Instagram or by email."
+      },
+      "sources": [
+        {
+          "url": "https://www.jumbo.com.pa/JumboWeb/",
+          "publisher_ownership": "candidate first-party Jumbo Market Panama domain; not directly verified",
+          "rights_access": "robots inaccessible; public terms/reuse rights unverified",
+          "geography": "delivery limited to 5 km around branches per search result; not countrywide",
+          "stable_url_assessment": "candidate shop path during rebuild; not a stable public offer URL",
+          "disposition": "SCOPE_RESTRICTED",
+          "no_page_open_reason": "countrywide scope absent, ecommerce rebuilding, and robots/access/reuse unresolved"
+        }
+      ],
+      "terminal_disposition": "SCOPE_RESTRICTED"
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.maxima.lt/leidiniai",
+          "https://krepza.lt/en/leidiniai"
+        ],
+        "finding": "Maxima official-domain publications page surfaced and result said publications refresh Tuesdays. Krepza is an aggregator linking to official catalogs."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [
+          "https://www.maxima.lt/leidiniai"
+        ],
+        "finding": "No distinct official online shop source visible in captured output; Maxima publication page remained the qualifying candidate."
+      },
+      "sources": [
+        {
+          "url": "https://www.maxima.lt/leidiniai",
+          "publisher_ownership": "candidate first-party Maxima Lithuania domain; direct ownership not independently inspected",
+          "rights_access": "robots readable; generic agent disallows uploads/images/custom_assets and specified media paths; public terms/reuse permission unverified",
+          "geography": "Lithuania-associated retailer; national service scope not directly verified",
+          "stable_url_assessment": "likely evergreen publications index by URL; weekly refresh claim surfaced in search result, not directly verified",
+          "disposition": "NEEDS_CATALOG_APPROVAL",
+          "no_page_open_reason": "candidate not opened because public terms/reuse permission remains unclear; approval required before catalog intake"
+        },
+        {
+          "url": "https://krepza.lt/en/leidiniai",
+          "publisher_ownership": "aggregator, not retailer",
+          "rights_access": "not checked as it is not a qualifying first-party source",
+          "geography": "Lithuanian catalog aggregation",
+          "stable_url_assessment": "candidate aggregator page",
+          "disposition": "NOT_QUALIFYING_SOURCE",
+          "no_page_open_reason": "aggregator rather than official seller source"
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code": "GH",
+      "name": "Ghana",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [],
+        "finding": "Search was executed, but its output was truncated before results could be inspected; no source can be safely reported."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "exact query string not retained in carried-forward execution notes",
+        "lead_urls": [],
+        "finding": "Search was executed, but its output was truncated before results could be inspected; no source can be safely reported."
+      },
+      "sources": [],
+      "terminal_disposition": "SEARCH_OUTPUT_UNAVAILABLE",
+      "no_page_open_reason": "tool response was truncated, so no official host could be identified for robots or terms checks; no retry/search was made"
+    }
+  ],
+  "aggregate_dispositions": {
+    "UNVERIFIED_POLICY": 4,
+    "NO_QUALIFYING_LEAD": 1,
+    "SCOPE_RESTRICTED": 2,
+    "SCOPE_UNVERIFIED": 1,
+    "NEEDS_CATALOG_APPROVAL": 1,
+    "SEARCH_OUTPUT_UNAVAILABLE": 1
+  },
+  "final_counts": {
+    "markets": 10,
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "total_searches": 20,
+    "robots_checks_attempted": 10,
+    "robots_checks_readable": 2,
+    "robots_checks_inaccessible": 8,
+    "merchant_source_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "verified_official_catalogs": 0,
+    "new_merchant_catalogs_approved": 0,
+    "product_highlights_created": 0,
+    "product_or_price_claims": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "artifact_type": "pretio.highlight_price_basis_review.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "checked_date_utc": "2026-11-27",
+  "source_capture_time_utc": "not exposed by the official web reader; product page was marked crawled today",
+  "decision": "REMOVE_HIGHLIGHT_INVALID_NORMAL_PRICE_BASIS",
+  "product_id": "lidl-de-bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste",
+  "catalog_id": "lidl-de-country",
+  "source_url": "https://www.lidl.de/p/bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste/p100406921",
+  "official_page_evidence": {
+    "product_title": "BOSCH Readyy BBHL2LED dark night 20 V 2in1, inkl. LED Bürste",
+    "article_number": "100406921",
+    "price_label": "UVP: 134.99",
+    "current_displayed_price": "99.99 EUR",
+    "campaign_label": "BLACK WEEK DEAL",
+    "reader_lines": "167-194",
+    "robots_url": "https://www.lidl.de/robots.txt",
+    "robots_result": "User-agent:* does not disallow the public /p/ product route."
+  },
+  "published_item_values_before_removal": {
+    "normal_price": "134.99",
+    "promo_price": "99.99",
+    "currency": "EUR",
+    "valid_from": "2026-11-23",
+    "valid_until": "2026-11-28"
+  },
+  "reason": "The published normal_price equals the source-labelled UVP (recommended retail price). UVP/MSRP alone is not evidence that Lidl actually charged that normal price for this product. No independent former Lidl selling price was verified.",
+  "removed_id": "lidl-de-bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste",
+  "expiry_claim": false,
+  "scope_note": "This conclusion applies only to this checked product. Other Lidl DE items have not been independently re-audited for price-basis in this recovery.",
+  "no_schema_change": true
+}

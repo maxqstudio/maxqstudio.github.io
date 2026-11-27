@@ -1,0 +1,281 @@
+{
+  "artifact_type": "pretio.highlight_deletion_reconciliation.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "base_sha": "65bc23a54515c138d23e0e1465b9317a4bbc29d0",
+  "decision_time_utc": "2026-11-27T06:06:29Z",
+  "expired_products_removed": 0,
+  "catalogs_removed": 0,
+  "products_removed_total_vs_base": 32,
+  "items": [
+    {
+      "country_code": "CL",
+      "id": "jumbo-cl-1589277-pak",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_NOT_NATIONWIDE_VERIFIED",
+      "valid_until": null
+    },
+    {
+      "country_code": "CL",
+      "id": "jumbo-cl-1236587",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_NOT_NATIONWIDE_VERIFIED",
+      "valid_until": null
+    },
+    {
+      "country_code": "CL",
+      "id": "jumbo-cl-302978",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_NOT_NATIONWIDE_VERIFIED",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-eisbergsalat",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-tafelbirnen",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-bio-kulturchampignons-braun",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-bio-speisekartoffeln",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-orangen",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-clementinen",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-minutensteaks",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-nord-de-haehnchenbrustfilet-teilstuecke-xxl",
+      "catalog_id": "aldi-nord-de-country",
+      "retailer": "ALDI Nord",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-cachet-katzenfutter-nass-100-g-rinderpastete",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-romeo-premium-hunde-nassfutter-400-g-rind",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-cachet-premium-katzentrockenfutter-800-g-frischgefluegel",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-cachet-katzen-nassfutter-8-x-85-g-fisch",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-cachet-premium-katzen-nassfutter-85-g-kalbspastete",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-cachet-premium-katzen-nassfutter-205-g-fischgelee",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-romeo-premium-hunde-nassfutter-150-g-rinderpastete",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "aldi-sued-de-romeo-classic-hunde-nassfutter-300-g-rind-leber",
+      "catalog_id": "aldi-sued-de-country",
+      "retailer": "ALDI Süd",
+      "reason_code": "REGIONAL_RETAILER_SCOPE_NOT_NATIONWIDE",
+      "valid_until": null
+    },
+    {
+      "country_code": "DE",
+      "id": "lidl-de-bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste",
+      "catalog_id": "lidl-de-country",
+      "retailer": "Lidl",
+      "reason_code": "NORMAL_PRICE_IS_ONLY_UVP",
+      "valid_until": "2026-11-28"
+    },
+    {
+      "country_code": "ID",
+      "id": "id-lotte-mart-pocari-sweat-pet-900ml-20261119",
+      "catalog_id": "lotte-mart-location-live",
+      "retailer": "LOTTE MART",
+      "reason_code": "SOURCE_POLICY_NO_COMMERCIAL_REUSE_PERMISSION",
+      "valid_until": "2026-12-02"
+    },
+    {
+      "country_code": "ID",
+      "id": "id-lotte-mart-buavita-juice-245ml-20261119",
+      "catalog_id": "lotte-mart-location-live",
+      "retailer": "LOTTE MART",
+      "reason_code": "SOURCE_POLICY_NO_COMMERCIAL_REUSE_PERMISSION",
+      "valid_until": "2026-12-02"
+    },
+    {
+      "country_code": "ID",
+      "id": "id-lotte-mart-vaseline-gluta-hya-330ml-20261119",
+      "catalog_id": "lotte-mart-location-live",
+      "retailer": "LOTTE MART",
+      "reason_code": "SOURCE_POLICY_NO_COMMERCIAL_REUSE_PERMISSION",
+      "valid_until": "2026-12-02"
+    },
+    {
+      "country_code": "ID",
+      "id": "id-lotte-mart-teh-kotak-300ml-20261119",
+      "catalog_id": "lotte-mart-location-live",
+      "retailer": "LOTTE MART",
+      "reason_code": "SOURCE_POLICY_NO_COMMERCIAL_REUSE_PERMISSION",
+      "valid_until": "2026-12-02"
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7175923-stari-mlinar-brasno-psen-t-400-glatko-stari-mlinar1kg",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7478963-heineken-pivo-heineken-0-33l-limenka",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7176016-grand-kafa-mlevena-grand-gold-200g",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7193098-tomatino-kuvani-paradajz-tomatino-1-03kg",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7554628-cmana-doo-cmana-promet-doo-med-cvetni-moj-domaci-med-950g",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7175708-vital-margarin-stoni-vital-250g",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7308945-coca-cola-coca-cola-2x1-5l",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    },
+    {
+      "country_code": "RS",
+      "id": "maxi-rs-7182301-plazma-keks-plazma-mlevena-800g",
+      "catalog_id": "maxi-rs-country",
+      "retailer": "Maxi",
+      "reason_code": "ONLINE_DELIVERY_GEOGRAPHY_CITY_LIMITED",
+      "valid_until": null
+    }
+  ],
+  "active_highlight_total_after": 73,
+  "active_highlights_by_country_after": {
+    "ID": 0,
+    "CL": 21,
+    "RS": 17,
+    "US": 12,
+    "ZA": 2,
+    "DE": 16,
+    "CH": 5
+  },
+  "undated_items_remaining": 46,
+  "duplicate_product_ids_after": 0,
+  "orphan_catalog_references_after": 0,
+  "catalog_ids_remain_active_for_all_removed_items": true
+}

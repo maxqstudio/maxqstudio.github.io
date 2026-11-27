@@ -1,0 +1,22 @@
+{
+  "artifact_type": "pretio.source_policy_check.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "observed_at_utc": "2026-11-27T04:44:48Z",
+  "base_sha": "65bc23a54515c138d23e0e1465b9317a4bbc29d0",
+  "country": "ID",
+  "work_id": "ID:lotte-mart-location-live",
+  "catalog_url": "https://www.lottemart.co.id/all-promo-mart",
+  "robots_url": "https://www.lottemart.co.id/robots.txt",
+  "robots_http_status": 200,
+  "robots_result": "User-agent * disallows store/account routes only; /media and /syarat-dan-ketentuan are not disallowed.",
+  "terms_url": "https://www.lottemart.co.id/syarat-dan-ketentuan",
+  "terms_result": "Sections 8.1 and 8.3 restrict website content to personal use, exclude business/commercial purpose and prohibit copying/downloading. No commercial reuse authorization for campaign text/data verified.",
+  "decision": "SKIPPED_BLOCKED",
+  "affected_active_highlight_ids": [
+    "id-lotte-mart-pocari-sweat-pet-900ml-20261119",
+    "id-lotte-mart-buavita-juice-245ml-20261119",
+    "id-lotte-mart-vaseline-gluta-hya-330ml-20261119",
+    "id-lotte-mart-teh-kotak-300ml-20261119"
+  ],
+  "production_action": "Remove affected items from active ID highlight feed; retain the official catalog URL because this finding does not prove the catalog obsolete. Catalog-link/webview rights remain separate review."
+}

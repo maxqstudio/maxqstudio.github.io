@@ -1,0 +1,347 @@
+{
+  "artifact_type": "pretio.global_recovery_discovery_batch.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "scope": "Manual continuation of frozen pending queue; batch 1 covers prior selection ranks 35-44 only; no schedule/repeat.",
+  "base_sha": "65bc23a54515c138d23e0e1465b9317a4bbc29d0",
+  "prior_run_id": "pretio-oneoff-global-20261123T040625Z",
+  "recorded_at_utc": "2026-11-27T04:45:54Z",
+  "counts": {
+    "markets": 10,
+    "catalog_searches": 10,
+    "online_searches": 10,
+    "legal_support_searches": 8,
+    "robots_pages_opened": 11,
+    "terms_pages_opened": 2,
+    "official_offer_or_product_pages_opened": 0,
+    "prices_or_images_verified": 0,
+    "new_catalogs_verified": 0
+  },
+  "markets": [
+    {
+      "code": "AU",
+      "name": "Australia",
+      "rank": 35,
+      "queries": [
+        "Australia official supermarket weekly specials catalogue Woolworths Coles offers",
+        "site:coles.com.au online grocery deals official Australia"
+      ],
+      "status": "SKIPPED_UNVERIFIED",
+      "sources": [
+        {
+          "merchant": "Coles",
+          "kind": "catalog",
+          "url": "https://www.coles.com.au/catalogues",
+          "robots": "Retrieved; /catalogues not disallowed; /on-special and product paths disallowed.",
+          "terms": "https://www.coles.com.au/important-information/customer-agreement search result did not establish a reuse grant; only says use/copy must respect IP.",
+          "geo": "Catalog asks shopper to select a location.",
+          "decision": "No offer opened; permissions and countrywide item scope unverified; new catalog approval needed."
+        },
+        {
+          "merchant": "Coles Online",
+          "kind": "online shop",
+          "url": "https://www.coles.com.au/offers",
+          "robots": "Retrieved; some on-special/product paths disallowed.",
+          "terms": "Reuse permission not verified.",
+          "geo": "Official result says in-store and online offers are separate and may differ from Uber Eats.",
+          "decision": "No offer opened; new catalog approval needed."
+        }
+      ],
+      "evidence": [
+        "https://www.coles.com.au/robots.txt",
+        "https://www.coles.com.au/catalogues",
+        "https://www.coles.com.au/offers",
+        "https://www.coles.com.au/important-information/customer-agreement"
+      ]
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "rank": 36,
+      "queries": [
+        "Saudi Arabia official supermarket weekly offers catalogue Carrefour Lulu",
+        "Saudi Arabia online grocery offers official online store Carrefour Saudi Lulu"
+      ],
+      "status": "SKIPPED_BLOCKED",
+      "sources": [
+        {
+          "merchant": "Carrefour Saudi Arabia",
+          "kind": "catalog and online shop",
+          "url": "https://www.carrefourksa.com/mafsau/ar/",
+          "robots": "Retrieved; explicit GPTBot Disallow: /; tool identity not specific enough to assume an allowed group.",
+          "terms": "Not checked because stopped at robots.",
+          "geo": "Search result localized to Granada, Riyadh; national offer scope not proved.",
+          "decision": "No source page opened; conservatively blocked."
+        }
+      ],
+      "evidence": [
+        "https://www.carrefourksa.com/robots.txt",
+        "https://www.carrefourksa.com/mafsau/ar/"
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "rank": 37,
+      "queries": [
+        "Netherlands official supermarket weekly offers folder Albert Heijn aanbiedingen",
+        "Netherlands online supermarket offers official grocery delivery AH Jumbo"
+      ],
+      "status": "SKIPPED_BLOCKED",
+      "sources": [
+        {
+          "merchant": "Albert Heijn",
+          "kind": "catalog",
+          "url": "https://www.ah.nl/bonus/folder",
+          "robots": "Retrieved; folder path not disallowed.",
+          "terms": "Official terms say public reproduction/distribution/editing requires prior express consent, except personal use.",
+          "geo": "No offer-item country scope verified.",
+          "decision": "Stopped before offers; no permission evidenced."
+        },
+        {
+          "merchant": "Albert Heijn Online",
+          "kind": "online shop",
+          "url": "https://www.ah.nl/informatie/online-groceries",
+          "robots": "Public info path not disallowed; product/order paths restricted.",
+          "terms": "Same personal-use-only terms.",
+          "geo": "Country service described but item price scope unchecked.",
+          "decision": "Stopped before offers; no permission evidenced."
+        }
+      ],
+      "evidence": [
+        "https://www.ah.nl/robots.txt",
+        "https://www.ah.nl/bonus/folder",
+        "https://www.ah.nl/informatie/online-groceries",
+        "https://www.ah.nl/algemene-voorwaarden"
+      ]
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "rank": 38,
+      "queries": [
+        "Belgium official supermarket promotions weekly folders Colruyt Carrefour",
+        "Belgium online supermarket offers official grocery webshop Delhaize Colruyt"
+      ],
+      "status": "SKIPPED_UNVERIFIED",
+      "sources": [
+        {
+          "merchant": "Colruyt",
+          "kind": "catalog",
+          "url": "https://www.colruyt.be/nl/folders",
+          "robots": "Retrieved; crawl-delay 5 sec; folder landing allowed; product-detail and /content/clp paths disallowed.",
+          "terms": "Commercial permission not verified.",
+          "geo": "Offer applicability unverified.",
+          "decision": "Stopped before flyer/product paths."
+        },
+        {
+          "merchant": "Delhaize",
+          "kind": "online shop",
+          "url": "https://www.delhaize.be/nl/welkom",
+          "robots": "Retrieved; /nl/welkom allowed; search/account/service paths restricted.",
+          "terms": "Commercial permission not verified.",
+          "geo": "Official copy says delivery everywhere, but no item/price scope verified.",
+          "decision": "No product page opened; new catalog approval needed."
+        }
+      ],
+      "evidence": [
+        "https://www.colruyt.be/robots.txt",
+        "https://www.colruyt.be/nl/folders",
+        "https://www.delhaize.be/robots.txt",
+        "https://www.delhaize.be/nl/welkom"
+      ]
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "rank": 39,
+      "queries": [
+        "Argentina official supermercado ofertas folleto Coto Carrefour Argentina promo",
+        "site:coto.com.ar tienda online ofertas supermercado Argentina online"
+      ],
+      "status": "SKIPPED_UNVERIFIED",
+      "sources": [
+        {
+          "merchant": "Coto",
+          "kind": "catalog and online shop",
+          "url": "https://www.coto.com.ar/hoy/",
+          "robots": "robots.txt inaccessible through permitted reader; access policy unresolved.",
+          "terms": "Search result at https://www.coto.com.ar/legales/ surfaced an old 19-25 Oct 2026 offer text and province-limited scope plus online; not current proof.",
+          "geo": "Search result scope listed CABA, Buenos Aires, Neuquén, Mendoza, Entre Ríos, Santa Fe plus online; not all Argentina.",
+          "decision": "No offer page opened; current promo and robots permission unverified."
+        }
+      ],
+      "evidence": [
+        "https://www.coto.com.ar/robots.txt",
+        "https://www.coto.com.ar/hoy/",
+        "https://www.coto.com.ar/legales/"
+      ]
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "rank": 40,
+      "queries": [
+        "Ireland official supermarket weekly offers Tesco Ireland offers",
+        "Ireland online supermarket offers official Tesco SuperValu online shop deals"
+      ],
+      "status": "SKIPPED_BLOCKED",
+      "sources": [
+        {
+          "merchant": "Tesco Ireland",
+          "kind": "catalog and online shop",
+          "url": "https://www.tesco.ie/shop/en-IE/promotions/",
+          "robots": "Retrieved; canonical promotions path allowed; some query/product patterns disallowed.",
+          "terms": "Official terms allow personal non-commercial use only and prohibit commercial use without written permission.",
+          "geo": "Not checked.",
+          "decision": "No offers opened; search result Clubcard price is conditional and ineligible."
+        },
+        {
+          "merchant": "SuperValu",
+          "kind": "online shop",
+          "url": "https://shop.supervalu.ie/promotions",
+          "robots": "Not checked.",
+          "terms": "Not checked.",
+          "geo": "Country fulfilment/item scope unverified.",
+          "decision": "New catalog approval and image/data permission required; search results included multibuy/Rewards offers, not accepted evidence."
+        }
+      ],
+      "evidence": [
+        "https://www.tesco.ie/robots.txt",
+        "https://www.tesco.ie/shop/en-IE/promotions/",
+        "https://www.tesco.ie/shop/en-IE/zone/terms-and-conditions/",
+        "https://shop.supervalu.ie/promotions"
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "rank": 41,
+      "queries": [
+        "Sweden official supermarket weekly offers ICA erbjudanden",
+        "Sweden online supermarket offers official ICA online shop deals"
+      ],
+      "status": "SKIPPED_UNVERIFIED",
+      "sources": [
+        {
+          "merchant": "ICA",
+          "kind": "catalog and online shop",
+          "url": "https://www.ica.se/erbjudanden/",
+          "robots": "Retrieved; /erbjudanden allowed; deep product paths restricted.",
+          "terms": "Commercial reuse permission not verified.",
+          "geo": "Official page says select store to view current store offers; no nationwide prices.",
+          "decision": "Regional/store scope incompatible with national feed; no offer page opened."
+        }
+      ],
+      "evidence": [
+        "https://www.ica.se/robots.txt",
+        "https://www.ica.se/erbjudanden/"
+      ]
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "rank": 42,
+      "queries": [
+        "Singapore official supermarket weekly deals FairPrice promotions",
+        "Singapore online grocery deals official FairPrice online shop promotions"
+      ],
+      "status": "SKIPPED_BLOCKED",
+      "sources": [
+        {
+          "merchant": "NTUC FairPrice",
+          "kind": "catalog and online shop",
+          "url": "https://www.fairprice.com.sg/store-weekly-ads/",
+          "robots": "robots.txt inaccessible through permitted reader.",
+          "terms": "Official terms prohibit commercial use/copy/distribution without prior written consent; prohibit use of product listings, data-mining, robots and similar extraction; services are non-commercial.",
+          "geo": "No item-level scope checked.",
+          "decision": "No offer pages opened; explicit terms restriction and unresolved robots policy."
+        }
+      ],
+      "evidence": [
+        "https://www.fairprice.com.sg/robots.txt",
+        "https://www.fairprice.com.sg/store-weekly-ads/",
+        "https://omni.fairprice.com.sg/",
+        "https://help.fairprice.com.sg/hc/en-us/articles/360025882372-Terms-Conditions"
+      ]
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "rank": 43,
+      "queries": [
+        "Israel official supermarket weekly offers catalog Shufersal online",
+        "Israel official online supermarket deals offers Shufersal online shop promotions official"
+      ],
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "sources": [
+        {
+          "merchant": null,
+          "kind": "third-party discovery lead",
+          "url": "https://wizstore.co.il/en/deals",
+          "robots": null,
+          "terms": null,
+          "geo": "Aggregator prices mention few-store coverage; not seller-certified.",
+          "decision": "Not an official source; app-store descriptions did not identify current official offers page."
+        }
+      ],
+      "reason": "Two bounded searches did not identify an official public current Catalog Promo/online offers source. Aggregator content not used as proof.",
+      "evidence": [
+        "https://wizstore.co.il/en/deals"
+      ]
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "rank": 44,
+      "queries": [
+        "Austria official supermarket offers flyers BILLA Aktionen online shop",
+        "Austria official BILLA online shop promotions groceries"
+      ],
+      "status": "SKIPPED_UNVERIFIED",
+      "sources": [
+        {
+          "merchant": "BILLA",
+          "kind": "catalog",
+          "url": "https://www.billa.at/unsere-aktionen/aktionen",
+          "robots": "Retrieved with sitemap only and no disallow rules.",
+          "terms": "Commercial reuse permission not verified.",
+          "geo": "Official result says not all items are available throughout Austria; exclusions include BILLA Online Shop and regional promotions.",
+          "decision": "No offer page opened; nationwide item scope and catalog approval unresolved."
+        },
+        {
+          "merchant": "BILLA Online Shop",
+          "kind": "online shop",
+          "url": "https://shop.billa.at/",
+          "robots": "robots.txt inaccessible through permitted reader.",
+          "terms": "Not checked.",
+          "geo": "Search result says Foodora delivery in Vienna, Graz, Linz, Salzburg and Innsbruck only.",
+          "decision": "No countrywide offer scope or rights verified."
+        }
+      ],
+      "evidence": [
+        "https://www.billa.at/robots.txt",
+        "https://shop.billa.at/robots.txt",
+        "https://www.billa.at/unsere-aktionen/aktionen",
+        "https://shop.billa.at/"
+      ]
+    }
+  ],
+  "summary": {
+    "terminal_receipts": 10,
+    "status_counts": {
+      "SKIPPED_BLOCKED": 4,
+      "SKIPPED_UNVERIFIED": 5,
+      "CHECKED": 1
+    },
+    "official_current_catalogs_verified": 0,
+    "eligible_product_highlights": 0,
+    "production_changes": false
+  },
+  "limits": [
+    "Search snippets were discovery only, not offer proof.",
+    "No official offer/product page was opened; no product prices/images were collected.",
+    "All new merchant/catalog IDs require Owner review; no IDs or production entries were created.",
+    "Commercial data/image reuse permission is absent or unverified for every official lead; geographic scope is local/unclear for several.",
+    "robots.txt was retrievable for 8 official root domains; 3 endpoints were inaccessible through the permitted reader (Coto, FairPrice, and the BILLA shop); 11 endpoints were attempted."
+  ]
+}

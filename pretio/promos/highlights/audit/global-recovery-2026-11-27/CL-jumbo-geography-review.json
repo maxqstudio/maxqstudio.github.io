@@ -1,0 +1,75 @@
+{
+  "artifact_type": "pretio.online_highlight_geography_review.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "checked_date_utc": "2026-11-27",
+  "source_capture_time_utc": "not exposed by the official web reader; direct product fetch timestamps are retained in the linked HTTP receipts",
+  "decision": "REMOVE_FROM_COUNTRYWIDE_FEED",
+  "decision_reason": "Three exact public Jumbo.cl Black Friday price pairs were observed, but the official help pages say delivery is limited to covered communes and product availability is evaluated after selecting a delivery address or pickup store. The feed has no city/commune field. The exact online prices were not proven nationwide and the separate physical-store price was not shown to match.",
+  "inference": "A countrywide Product Highlights entry cannot safely represent these online offers. This is a geographic-scope cleanup, not an expiry finding and not a claim that the deals are unavailable in every location.",
+  "campaign_evidence": {
+    "url": "https://www.jumbo.cl/black-friday",
+    "campaign": "Black Friday 2026, 2026-11-27 to 2026-11-30",
+    "official_page_says": "Online and in Jumbo stores; some promotions can be channel-specific; exact product pages carry the offer evidence.",
+    "reader_lines": "83-101",
+    "robots_url": "https://www.jumbo.cl/robots.txt",
+    "robots_result": "Public product and campaign paths are not disallowed for ChatGPT-User/GPTBot; private/cart/account paths are disallowed."
+  },
+  "geography_evidence": [
+    {
+      "url": "https://ayuda.jumbo.cl/ayuda/comprar-jumbo/nueva-direccion",
+      "official_statement": "Delivery addresses are accepted only in communes with Jumbo coverage; unsupported addresses trigger an alert.",
+      "source_reader_freshness": "search result reported crawled last month; exact capture timestamp not exposed"
+    },
+    {
+      "url": "https://ayuda.jumbo.cl/ayuda/comprar-jumbo/buscar-productos",
+      "official_statement": "After selecting delivery address or pickup store, the site shows items available at the Jumbo location assigned to prepare the order.",
+      "source_reader_freshness": "search result reported crawled 3 weeks ago; exact capture timestamp not exposed"
+    },
+    {
+      "url": "https://www.jumbo.cl/informaciones-legales/terminos-y-condiciones",
+      "official_statement": "Terms updated 2026-08-03; order confirmation validates stock and the platform distinguishes online offers from store substitution prices.",
+      "reader_lines": "36, 58-67, 87-97, 129-134",
+      "source_reader_freshness": "crawled today; exact capture timestamp not exposed"
+    }
+  ],
+  "price_observations_not_published": [
+    {
+      "id": "jumbo-cl-1236587",
+      "sku": "1236587",
+      "normal_price": "24490",
+      "promo_price": "14939",
+      "currency": "CLP",
+      "observed_at_utc": "2026-11-27T05:17:57Z",
+      "product_page": "https://www.jumbo.cl/papel-higienico-elite-ultra-doble-hoja-18-rollos-50-m-c-u/p",
+      "evidence_file": "CL-jumbo-1236587-live-check.json"
+    },
+    {
+      "id": "jumbo-cl-1589277-pak",
+      "sku": "1589277-PAK",
+      "normal_price": "14250",
+      "promo_price": "12900",
+      "currency": "CLP",
+      "observed_at_utc": "2026-11-27T05:37:18Z",
+      "product_page": "https://www.jumbo.cl/pack-leche-entera-soprole-1-l-12-unid/p",
+      "evidence_file": "CL-jumbo-undated-highlights-live-check.json"
+    },
+    {
+      "id": "jumbo-cl-302978",
+      "sku": "302978",
+      "normal_price": "3090",
+      "promo_price": "2790",
+      "currency": "CLP",
+      "observed_at_utc": "2026-11-27T05:37:41Z",
+      "product_page": "https://www.jumbo.cl/mantequilla-con-sal-soprole-250-g/p",
+      "evidence_file": "CL-jumbo-undated-highlights-live-check.json"
+    }
+  ],
+  "removed_ids": [
+    "jumbo-cl-1236587",
+    "jumbo-cl-1589277-pak",
+    "jumbo-cl-302978"
+  ],
+  "catalog_action": "Keep jumbo-country-cl catalog entry unchanged; no catalog was removed or relinked.",
+  "expiry_claim": false,
+  "no_schema_change": true
+}

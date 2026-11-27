@@ -1,0 +1,1060 @@
+{
+  "receipt_type": "independent_discovery_batch",
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 14,
+  "policy_reference": {
+    "branch": "main",
+    "skill_path": ".agents/skills/pretio-public-content-updater/SKILL.md",
+    "skill_file_sha": "2f46a28da390388eb34c316d5dbf45ad27ac264a",
+    "discovery_path": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+    "discovery_file_sha": "348450b582d4064814d09a23fe5cb6fa3d8d5015",
+    "status_vocabulary": [
+      "REGISTERED_VERIFIED",
+      "NEW_EVERGREEN_CANDIDATE",
+      "NEW_ROTATING_CANDIDATE",
+      "NEEDS_CATALOG_APPROVAL",
+      "NEEDS_VALIDATOR_MIGRATION_REVIEW",
+      "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "SKIPPED_BLOCKED",
+      "SKIPPED_UNAVAILABLE",
+      "BLOCKED_COUNTRY_COMPATIBILITY"
+    ]
+  },
+  "markets_requested": [
+    "MU",
+    "MV",
+    "MW",
+    "NC",
+    "SL",
+    "SO",
+    "SR",
+    "SZ",
+    "TG",
+    "TJ"
+  ],
+  "selection_order_source": "Parent supplied exact ordered code list; absolute frozen-register ranks not retained and not reconstructed.",
+  "collection_timing": {
+    "exact_per_search_timestamps": "not retained at query-call time; not reconstructed",
+    "robots_checks_completed_by_utc": "2026-11-27T05:24:02Z",
+    "receipt_recorded_utc": "2026-11-27T05:27:22Z"
+  },
+  "scope_and_method": {
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "total_searches": 20,
+    "per_market_search_limit": "one query of each type",
+    "search_output_clipped": false,
+    "robots_urls_attempted": 30,
+    "robots_urls_readable": 2,
+    "robots_urls_unavailable_via_research_tool": 28,
+    "terms_pages_opened": 0,
+    "merchant_source_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "products_or_prices_verified": 0,
+    "product_highlights_created": 0,
+    "official_catalogs_verified": 0,
+    "new_catalogs_approved": 0,
+    "production_data_created": false,
+    "repo_changes": false,
+    "schedules_created": false,
+    "notes": [
+      "Exactly one Catalog Promo and one online-shop/marketplace search was made for each requested market.",
+      "Search snippets were used only to identify candidate URLs; no snippet price, product, or discount claim was accepted.",
+      "Only robots.txt URLs were directly opened. No merchant, catalog, flyer, shop, product, or offers page was opened.",
+      "Twenty-eight robots endpoints returned Internal Error via the permitted reader; no retry or alternate path was used.",
+      "Terms/reuse pages were not checked because access policy was unavailable or no offers page was to be opened; all candidate permissions remain unverified."
+    ]
+  },
+  "robots_checks": [
+    {
+      "url": "https://myfamilygrocer.mu/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://theshop.mu/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.bluecart.mv/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.muexpress.mv/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.zettamart.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://swiftserve.mw/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.easymartmalawi.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://mobuy.store/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.hyperu-paita.nc/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://monclub.nc/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://shop.nc/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://kargosl.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://magic-sl.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://hayatmarket.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://adeeg.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.aaranonline.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://hiiliye.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.hem.sr/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.avoda.sr/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://suribuys.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://surigoapp.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://picknpayeswatini.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.spar.co.za/robots.txt",
+      "result": "READABLE",
+      "observed_utc": null,
+      "details": "SPAR: HTTP 200, public paths allowed except CMS/store finder. Magnit: HTTP 200, User-agent * Disallow is empty."
+    },
+    {
+      "url": "https://www.spareswatini.co.sz/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://www.groupelechampion.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://vroomtg.com/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://spar.tj/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://paykar.tj/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    },
+    {
+      "url": "https://magnit.tj/robots.txt",
+      "result": "READABLE",
+      "observed_utc": null,
+      "details": "SPAR: HTTP 200, public paths allowed except CMS/store finder. Magnit: HTTP 200, User-agent * Disallow is empty."
+    },
+    {
+      "url": "https://prinesi.tj/robots.txt",
+      "result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+      "observed_utc": null,
+      "details": "Open returned Internal Error; URL unavailable via permitted reader; no retry or alternate access."
+    }
+  ],
+  "markets": [
+    {
+      "code": "MU",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Mauritius official supermarket catalog weekly offers promotions flyer retailer",
+        "lead_urls": [
+          "https://myfamilygrocer.mu/specials/",
+          "https://savemax.mu/"
+        ],
+        "finding": "MyFamily Grocer specials landing and SaveMax e-catalog surfaced; no catalog content was opened or validated."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Mauritius official online grocery supermarket shop delivery retailer",
+        "lead_urls": [
+          "https://theshop.mu/",
+          "https://maukart.mu/"
+        ],
+        "finding": "TheShop.mu and MauKart surfaced; TheShop result claims island-wide service, but terms/geography were not independently checked."
+      },
+      "sources": [
+        {
+          "url": "https://myfamilygrocer.mu/specials/",
+          "name": "MyFamily Grocer Specials",
+          "kind": "catalog/promo landing",
+          "official_ownership": "Search result identifies MyFamily Grocer Mauritius; ownership not independently checked.",
+          "geography": "Search result lists one Quatre-Bornes address; national applicability not proved.",
+          "stable_url_assessment": "Evergreen specials landing with brochures; update persistence not verified.",
+          "robots_url": "https://myfamilygrocer.mu/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots not retrievable by permitted reader; no offers page opened.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Local address and access/reuse rights unresolved.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://theshop.mu/",
+          "name": "TheShop.mu",
+          "kind": "online grocery",
+          "official_ownership": "Search result About page names TheShop.mu Ltd; operator not independently checked.",
+          "geography": "Search result claims island-wide delivery; not verified.",
+          "stable_url_assessment": "Root shop URL appears evergreen; offer update behavior unknown.",
+          "robots_url": "https://theshop.mu/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop/offers page opened; terms and coverage unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://maukart.mu/",
+          "name": "MauKart",
+          "kind": "online marketplace",
+          "official_ownership": "Search result describes a grocery/pharmacy delivery platform; seller relationships unverified.",
+          "geography": "Search result describes local stores around the customer; national scope not established.",
+          "stable_url_assessment": "Root URL, not a stable promo catalog.",
+          "robots_url": "https://maukart.mu/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "rights_access": "Not selected for direct policy check.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No offer page opened; seller IDs and rights not verified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Official-looking catalog and online-shop leads surfaced, but robots policy could not be retrieved; no source pages or offers were opened."
+    },
+    {
+      "code": "MV",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Maldives official supermarket catalog promotions weekly offers flyer retailer",
+        "lead_urls": [
+          "https://miadhu.mv/en/articles/14354"
+        ],
+        "finding": "Search surfaced a third-party news item about a retailer promotion; it is not a first-party catalog source."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Maldives official online grocery supermarket shop delivery",
+        "lead_urls": [
+          "https://www.bluecart.mv/",
+          "https://www.muexpress.mv/",
+          "https://www.zettamart.com/shop"
+        ],
+        "finding": "BlueCart, Mu Express and Zettamart online grocery leads surfaced; available-area coverage is local/unclear."
+      },
+      "sources": [
+        {
+          "url": "https://miadhu.mv/en/articles/14354",
+          "name": "Miadhu report on Ufanveli Shops",
+          "kind": "third-party promotion news lead",
+          "official_ownership": "News publisher, not the retailer; promotion details not treated as verified source data.",
+          "geography": "Search result names Mal� and Hulhumal� shops only.",
+          "stable_url_assessment": "Dated news article, not an evergreen retailer catalog.",
+          "robots_url": "https://miadhu.mv/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "rights_access": "Not a first-party source and not opened.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No offer page opened; third-party news is not accepted as catalog proof.",
+          "candidate_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+        },
+        {
+          "url": "https://www.bluecart.mv/",
+          "name": "BlueCart",
+          "kind": "online grocery candidate",
+          "official_ownership": "First-party retailer/platform ownership not independently verified.",
+          "geography": "Delivery area not established.",
+          "stable_url_assessment": "Root URL; no promo landing/update behavior verified.",
+          "robots_url": "https://www.bluecart.mv/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop/offers page opened; terms and geography unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.zettamart.com/shop",
+          "name": "Zettamart",
+          "kind": "online grocery candidate",
+          "official_ownership": "Shop identity surfaced in search; ownership not independently checked.",
+          "geography": "Search result indicates Mal� and Hulhumal� service; not nationwide.",
+          "stable_url_assessment": "Shop path; updates unknown.",
+          "robots_url": "https://www.zettamart.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Local service scope and rights not verified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.muexpress.mv/",
+          "name": "Mu Express",
+          "kind": "online grocery candidate",
+          "official_ownership": "First-party-looking service result; operator not independently verified.",
+          "geography": "Result gives a Hulhumal� address; countrywide delivery not established.",
+          "stable_url_assessment": "Root URL, update cadence unknown.",
+          "robots_url": "https://www.muexpress.mv/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop page opened; rights and service area unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Only local shop leads and third-party news surfaced; robots checks for online leads were unavailable, so no source page was opened."
+    },
+    {
+      "code": "MW",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Malawi official supermarket catalogue weekly specials promotions retailer",
+        "lead_urls": [],
+        "finding": "No official current Catalog Promo page surfaced in the bounded catalog search."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Malawi official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://swiftserve.mw/",
+          "https://mobuy.store/",
+          "https://www.easymartmalawi.com/"
+        ],
+        "finding": "SwiftServe, MoBuy and EasyMart Malawi surfaced as online shops/marketplaces; results indicate Blantyre or seller-based/local scope, not one verified countrywide merchant."
+      },
+      "sources": [
+        {
+          "url": "https://swiftserve.mw/",
+          "name": "SwiftServe Marketplace",
+          "kind": "multi-seller marketplace",
+          "official_ownership": "Platform and vendor identities not independently verified.",
+          "geography": "Search result describes stores/products across Blantyre.",
+          "stable_url_assessment": "Marketplace root, not a verified catalog URL.",
+          "robots_url": "https://swiftserve.mw/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No seller-specific offers page opened; terms and rights unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://mobuy.store/",
+          "name": "MoBuy",
+          "kind": "marketplace",
+          "official_ownership": "Platform and sellers not independently verified.",
+          "geography": "Search result claims nationwide delivery, but seller/service terms not checked.",
+          "stable_url_assessment": "Root marketplace; offer update policy unknown.",
+          "robots_url": "https://mobuy.store/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No marketplace/seller offers opened; rights unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.easymartmalawi.com/",
+          "name": "EasyMart Malawi",
+          "kind": "online grocery candidate",
+          "official_ownership": "Shop identity from search result; ownership not independently verified.",
+          "geography": "Service geography not established.",
+          "stable_url_assessment": "Root URL, offers/update behavior unknown.",
+          "robots_url": "https://www.easymartmalawi.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop page opened; terms/coverage unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Online shop leads surfaced, but all selected robots checks were unavailable; no offer page could be considered."
+    },
+    {
+      "code": "NC",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "New Caledonia official supermarket catalogue promotions flyer retailer",
+        "lead_urls": [
+          "https://www.hyperu-paita.nc/nos-catalogues/",
+          "https://monclub.nc/category/catalogues/"
+        ],
+        "finding": "Hyper U Pa�ta catalog landing surfaced; another catalog archive lead showed a dated G�ant offer period already past at observation time, but no flyer was opened."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "New Caledonia official online supermarket grocery shop delivery",
+        "lead_urls": [
+          "https://shop.nc/alimentaire-gastronomie.html"
+        ],
+        "finding": "Shop.nc marketplace surfaced with many local vendors; no individual official seller was identified."
+      },
+      "sources": [
+        {
+          "url": "https://www.hyperu-paita.nc/nos-catalogues/",
+          "name": "Hyper U Pa�ta catalogs",
+          "kind": "retailer catalog candidate",
+          "official_ownership": "Retailer-looking domain surfaced in search; ownership not independently checked.",
+          "geography": "Pa�ta store path, so regional applicability only.",
+          "stable_url_assessment": "Stable catalog landing path candidate; updates not verified.",
+          "robots_url": "https://www.hyperu-paita.nc/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No catalog opened; local scope and permissions unresolved.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://monclub.nc/category/catalogues/",
+          "name": "Mon Club catalog archive",
+          "kind": "periodic catalog archive",
+          "official_ownership": "Publisher/retailer relationship to G�ant not independently checked.",
+          "geography": "Catalog result was a dated offer for one retailer; store coverage unverified.",
+          "stable_url_assessment": "Archive path; search result showed an October-November period, not current proof.",
+          "robots_url": "https://monclub.nc/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No PDF opened; rights and currentness not verified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://shop.nc/alimentaire-gastronomie.html",
+          "name": "Shop.nc food marketplace",
+          "kind": "online marketplace",
+          "official_ownership": "Search result describes a platform for Caledonian merchants; individual sellers not verified.",
+          "geography": "Search result mentions local Caledonian sellers; territory-wide fulfillment not established.",
+          "stable_url_assessment": "Category landing URL; seller listings and offers change.",
+          "robots_url": "https://shop.nc/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No seller/product page opened; marketplace rights and geography unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Local catalog and multi-vendor leads surfaced, but robots policy was unavailable and no source page was opened."
+    },
+    {
+      "code": "SL",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Sierra Leone official supermarket promotions catalog flyers weekly offers retailer",
+        "lead_urls": [],
+        "finding": "No official retailer Catalog Promo source surfaced in the bounded search."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Sierra Leone official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://kargosl.com/",
+          "https://magic-sl.com/marketplace/food-groceries",
+          "https://www.shop2sitesl.com/"
+        ],
+        "finding": "Marketplace and delivery services surfaced, but no verified official seller/storefront with approved grocery offers was identified."
+      },
+      "sources": [
+        {
+          "url": "https://kargosl.com/",
+          "name": "KargoSL",
+          "kind": "delivery marketplace",
+          "official_ownership": "Platform result describes local businesses; retailer ownership/sellers not verified.",
+          "geography": "Sierra Leone association only; fulfillment scope unverified.",
+          "stable_url_assessment": "Marketplace root, no catalog URL.",
+          "robots_url": "https://kargosl.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No seller page opened; terms and seller authorization unverified.",
+          "candidate_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+        },
+        {
+          "url": "https://magic-sl.com/marketplace/food-groceries",
+          "name": "Magic food and groceries",
+          "kind": "online marketplace",
+          "official_ownership": "Search result describes a Sierra Leone marketplace; individual vendor identities not verified.",
+          "geography": "Result says marketplace caters for Sierra Leone; seller-level availability not checked.",
+          "stable_url_assessment": "Marketplace category path, not a stable merchant promo catalog.",
+          "robots_url": "https://magic-sl.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No offers opened; seller and reuse rights unverified.",
+          "candidate_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+        },
+        {
+          "url": "https://www.shop2sitesl.com/",
+          "name": "Shop 2 Site",
+          "kind": "online grocery delivery lead",
+          "official_ownership": "Service identity/retailer ownership not independently confirmed.",
+          "geography": "Search result describes delivery to remote work sites; geographic scope not general/national.",
+          "stable_url_assessment": "Root service URL; no promo catalog.",
+          "robots_url": "https://www.shop2sitesl.com/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "rights_access": "Not selected for direct policy check.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No public offers or approved seller verified.",
+          "candidate_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "reason": "Search surfaced marketplaces and delivery services, but no retailer-owned current catalog or seller-specific official offer source was verified."
+    },
+    {
+      "code": "SO",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Somalia official supermarket catalog promotions weekly offers flyer retailer",
+        "lead_urls": [],
+        "finding": "No official current Catalog Promo source surfaced in the bounded search."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Somalia official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://hayatmarket.com/",
+          "https://adeeg.com/pages/faqs",
+          "https://www.aaranonline.com/",
+          "https://hiiliye.com/"
+        ],
+        "finding": "Hayat/Adeeg, Aaran and Hiiliye surfaced as grocery-commerce leads; search results indicate Mogadishu or local coverage for several."
+      },
+      "sources": [
+        {
+          "url": "https://hayatmarket.com/",
+          "name": "Hayat Market",
+          "kind": "retailer/online shop candidate",
+          "official_ownership": "Search result names Hayat Market and links Adeeg as e-commerce; operator not independently verified.",
+          "geography": "Hayat store result is Mogadishu-specific; Adeeg regional coverage not established.",
+          "stable_url_assessment": "Root retailer page; offer URL/update unknown.",
+          "robots_url": "https://hayatmarket.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No retailer/shop page opened; rights and coverage unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://adeeg.com/pages/faqs",
+          "name": "Adeeg",
+          "kind": "online shop candidate",
+          "official_ownership": "Search result identifies the Hayat Market relationship; not independently verified.",
+          "geography": "FAQ result ties physical shop to Mogadishu; delivery coverage not established.",
+          "stable_url_assessment": "FAQ path, not promo catalog.",
+          "robots_url": "https://adeeg.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop/offers page opened; terms/reuse unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.aaranonline.com/",
+          "name": "Aaran Online Market",
+          "kind": "online retailer candidate",
+          "official_ownership": "Retailer identity surfaced in search; ownership not independently checked.",
+          "geography": "Search result gives Mogadishu address; national coverage not proved.",
+          "stable_url_assessment": "Root shop URL; update behavior unknown.",
+          "robots_url": "https://www.aaranonline.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No offers opened; rights and service area unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://hiiliye.com/",
+          "name": "Hiiliye",
+          "kind": "delivery marketplace",
+          "official_ownership": "Platform identity from search; partner stores/sellers not identified.",
+          "geography": "Search result says delivery across Mogadishu and expanding; not nationwide.",
+          "stable_url_assessment": "Root platform URL, not catalog.",
+          "robots_url": "https://hiiliye.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No seller-specific offer opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Online grocery leads appear Mogadishu-focused or seller-based; robots policy was unavailable and no page was opened."
+    },
+    {
+      "code": "SR",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Suriname official supermarket offers catalogue weekly promotions flyer retailer",
+        "lead_urls": [
+          "https://ez.gov.sr/",
+          "https://gov.sr/wp-content/uploads/2026/11/Publicatielijst-Basis-goederen-voor-de-periode-31-okt-13-nov-2026.pdf"
+        ],
+        "finding": "Search surfaced government price-monitoring and a basic-goods price list, not a retailer Catalog Promo."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Suriname official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://www.hem.sr/en/online-shops",
+          "https://www.avoda.sr/hoe-werkt-het/",
+          "https://surigoapp.com/"
+        ],
+        "finding": "HEM Now2SU and Avoda online grocery services surfaced; one is for ordering groceries for recipients in Suriname, and delivery/pickup details are described."
+      },
+      "sources": [
+        {
+          "url": "https://ez.gov.sr/",
+          "name": "SRD Check price monitoring",
+          "kind": "government price information, not catalog",
+          "official_ownership": "Official government domain result; not a retailer source.",
+          "geography": "Country-level price monitoring, not store promo applicability.",
+          "stable_url_assessment": "Stable government information URL, not Catalog Promo.",
+          "robots_url": "https://ez.gov.sr/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "rights_access": "No retailer source page opened.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Not applicable as retailer reuse.",
+          "candidate_disposition": "No official retailer promo catalog surfaced."
+        },
+        {
+          "url": "https://www.hem.sr/en/online-shops",
+          "name": "HEM Now2SU",
+          "kind": "online grocery service",
+          "official_ownership": "HEM Suriname N.V. named on company domain; ownership not independently opened.",
+          "geography": "Orders can be made from abroad for recipients in Suriname; delivery/pickup through HEM/branches per search result.",
+          "stable_url_assessment": "Company online-shops page stable-looking; promotion update not verified.",
+          "robots_url": "https://www.hem.sr/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No online shop page opened; terms/reuse unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.avoda.sr/hoe-werkt-het/",
+          "name": "Avoda online supermarket",
+          "kind": "online shop candidate",
+          "official_ownership": "First-party-looking Suriname online store result; ownership not checked.",
+          "geography": "Search result describes Suriname delivery; actual service zones not inspected.",
+          "stable_url_assessment": "About/how-it-works path, not offer page.",
+          "robots_url": "https://www.avoda.sr/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop/offers page opened; rights and geography unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://surigoapp.com/",
+          "name": "SuriGO",
+          "kind": "online marketplace/delivery",
+          "official_ownership": "Platform identity from search; store/seller identities not verified.",
+          "geography": "Search result says built for Suriname; delivery-area scope unknown.",
+          "stable_url_assessment": "Root platform, not catalog.",
+          "robots_url": "https://surigoapp.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No seller/offer page opened.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE",
+      "reason": "Online-shop leads surfaced but robots policy was unavailable; government price monitoring is not a retailer promotion catalog."
+    },
+    {
+      "code": "SZ",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Eswatini official supermarket weekly specials catalog promotions retailer",
+        "lead_urls": [
+          "https://picknpayeswatini.com/promotions/",
+          "https://www.spar.co.za/regional-specials/SWZ"
+        ],
+        "finding": "Pick n Pay Eswatini promotions and SPAR regional-specials pages surfaced; a dated Pick n Pay PDF lead was not treated as current evidence."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Eswatini official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://www.spareswatini.co.sz/",
+          "https://take.app/greengoosegrocery"
+        ],
+        "finding": "SPAR Eswatini and Green Goose grocery shop leads surfaced; seller scope and permissions were not verified."
+      },
+      "sources": [
+        {
+          "url": "https://www.spar.co.za/regional-specials/SWZ",
+          "name": "SPAR regional specials - Eswatini",
+          "kind": "regional promo landing candidate",
+          "official_ownership": "SPAR official South Africa domain; Eswatini region code shown in result.",
+          "geography": "Search result identifies Eswatini specials; exact participating stores/current geography not checked.",
+          "stable_url_assessment": "Stable regional-specials URL candidate; update behavior not verified.",
+          "robots_url": "https://www.spar.co.za/robots.txt",
+          "robots_result": "READABLE",
+          "rights_access": "HTTP 200; User-agent * allows public pages; store-finder and CMS paths disallowed.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Terms/reuse and catalog host approval not checked.",
+          "candidate_disposition": "No promo page opened; source/host approval and terms remain unresolved."
+        },
+        {
+          "url": "https://picknpayeswatini.com/promotions/",
+          "name": "Pick n Pay Swatini Promotions",
+          "kind": "promo landing candidate",
+          "official_ownership": "First-party-looking retailer country domain surfaced; ownership not independently checked.",
+          "geography": "Result includes all Eswatini supermarkets for one flyer; current scope not verified.",
+          "stable_url_assessment": "Evergreen promotions path; update history not verified.",
+          "robots_url": "https://picknpayeswatini.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No promo page opened; rights and currentness unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://www.spareswatini.co.sz/",
+          "name": "SPAR Eswatini online",
+          "kind": "retailer/online lead",
+          "official_ownership": "First-party-looking brand site surfaced; ownership not checked.",
+          "geography": "Address result in Manzini; countrywide online service not established.",
+          "stable_url_assessment": "Root URL, no online promo catalog verified.",
+          "robots_url": "https://www.spareswatini.co.sz/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No page opened; access, rights and geography unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://take.app/greengoosegrocery",
+          "name": "Green Goose Grocery",
+          "kind": "online shop listing",
+          "official_ownership": "Take App seller listing; seller identity/official merchant ownership not independently verified.",
+          "geography": "Eswatini association only; delivery coverage not established.",
+          "stable_url_assessment": "Seller platform path, not stable retailer-controlled promo URL.",
+          "robots_url": "https://take.app/robots.txt",
+          "robots_result": "NOT_CHECKED",
+          "rights_access": "Not selected for direct policy check.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No seller page opened; rights unknown.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL",
+      "reason": "SPAR regional specials robots allow public pages, but terms/reuse, participating stores, and Owner catalog approval remain unresolved; Pick n Pay robots were unavailable."
+    },
+    {
+      "code": "TG",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Togo official supermarket promotions catalog weekly offers flyer retailer",
+        "lead_urls": [
+          "https://www.groupelechampion.com/en"
+        ],
+        "finding": "Le Champion official group page surfaced with nationwide retail network and promotion references, but no current public Catalog Promo URL was identified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Togo official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://vroomtg.com/"
+        ],
+        "finding": "Vroom Togo delivery service surfaced as a Lom�-local lead; no countrywide online grocery source verified."
+      },
+      "sources": [
+        {
+          "url": "https://www.groupelechampion.com/en",
+          "name": "Groupe Le Champion",
+          "kind": "retailer corporate page, no current catalog",
+          "official_ownership": "Search result identifies a Togo retailer group; ownership not independently opened.",
+          "geography": "Search result describes 14 supermarkets across Togo.",
+          "stable_url_assessment": "Corporate landing URL, not promo catalog.",
+          "robots_url": "https://www.groupelechampion.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No offers page opened; current catalog and reuse rights not verified.",
+          "candidate_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+        },
+        {
+          "url": "https://vroomtg.com/",
+          "name": "Vroom Togo",
+          "kind": "local delivery marketplace",
+          "official_ownership": "Service identity from search result; seller/retailer identity unverified.",
+          "geography": "Search result says Lom�, Togo; local scope.",
+          "stable_url_assessment": "Root delivery URL, no grocery promo page.",
+          "robots_url": "https://vroomtg.com/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop or seller offers opened.",
+          "candidate_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "reason": "No current official Catalog Promo or seller-specific country-wide online grocery offer source was verified."
+    },
+    {
+      "code": "TJ",
+      "catalog_promo_search": {
+        "count": 1,
+        "query_text": "Tajikistan official supermarket catalog promotions weekly offers retailer",
+        "lead_urls": [
+          "https://spar.tj/en/customers",
+          "https://paykar.tj/sales"
+        ],
+        "finding": "SPAR Tajikistan and Paykar promotion/catalog references surfaced; no offers page opened."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query_text": "Tajikistan official online grocery supermarket shop delivery marketplace",
+        "lead_urls": [
+          "https://magnit.tj/news/super-aktsiya-ot-magnittj",
+          "https://prinesi.tj/en/delivery/grocery-delivery"
+        ],
+        "finding": "Magnit Tajikistan online supermarket and Prinesi grocery delivery surfaced; service geography and terms remain unverified."
+      },
+      "sources": [
+        {
+          "url": "https://spar.tj/en/customers",
+          "name": "SPAR Tajikistan customers / promo catalog",
+          "kind": "catalog/promo candidate",
+          "official_ownership": "Search result names official SPAR representative Yovar LLC; not independently verified by opening.",
+          "geography": "Country site; store-level offer coverage not checked.",
+          "stable_url_assessment": "Customer info page references a promo catalogue; permanent link/history not verified.",
+          "robots_url": "https://spar.tj/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No catalog or offers page opened; rights/terms unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://paykar.tj/sales",
+          "name": "Paykar promotions",
+          "kind": "promo landing candidate",
+          "official_ownership": "Retailer-branded Tajik site surfaced; ownership not independently checked.",
+          "geography": "Country chain; participating store coverage not verified.",
+          "stable_url_assessment": "Evergreen sales path candidate; current offer history not verified.",
+          "robots_url": "https://paykar.tj/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No promo page opened; access/reuse unresolved.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        },
+        {
+          "url": "https://magnit.tj/news/super-aktsiya-ot-magnittj",
+          "name": "Magnit Tajikistan promotion announcement",
+          "kind": "online retailer promo candidate",
+          "official_ownership": "Official-looking online supermarket domain surfaced in search; ownership not independently verified.",
+          "geography": "Tajikistan association; fulfillment regions not verified.",
+          "stable_url_assessment": "News/campaign path is period-specific; search result about a prior campaign, not current evidence.",
+          "robots_url": "https://magnit.tj/robots.txt",
+          "robots_result": "READABLE",
+          "rights_access": "HTTP 200; User-Agent * has empty Disallow, sitemap present.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "Terms/reuse not checked.",
+          "candidate_disposition": "No offer/news content opened; currentness and country service unverified."
+        },
+        {
+          "url": "https://prinesi.tj/en/delivery/grocery-delivery",
+          "name": "Prinesi grocery delivery",
+          "kind": "online delivery candidate",
+          "official_ownership": "Service identity from search result; merchant/seller identity unclear.",
+          "geography": "Delivery result specifies Dushanbe; not countrywide.",
+          "stable_url_assessment": "Delivery info page, not Catalog Promo.",
+          "robots_url": "https://prinesi.tj/robots.txt",
+          "robots_result": "UNAVAILABLE_VIA_RESEARCH_TOOL",
+          "rights_access": "Robots unavailable via permitted reader.",
+          "terms_reuse": "NOT_VERIFIED",
+          "observed_utc": null,
+          "offer_page_opened": false,
+          "no_page_open_reason": "No shop/offer page opened; terms and service area unverified.",
+          "candidate_disposition": "NEEDS_CATALOG_APPROVAL"
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL",
+      "reason": "Promising official retailer and online-shop leads surfaced; two hosts had robots policies unavailable and Magnit permission/geography/terms remain unverified."
+    }
+  ],
+  "aggregate_dispositions": {
+    "NEEDS_CATALOG_APPROVAL": 2,
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 2,
+    "SKIPPED_UNAVAILABLE": 6
+  },
+  "final_counts": {
+    "markets": 10,
+    "catalog_promo_searches": 10,
+    "online_shop_marketplace_searches": 10,
+    "total_searches": 20,
+    "robots_checks_attempted": 30,
+    "robots_checks_readable": 2,
+    "robots_checks_unavailable_via_research_tool": 28,
+    "terms_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "official_catalogs_verified": 0,
+    "products_or_prices_verified": 0,
+    "product_highlights_created": 0,
+    "repo_changes": false
+  }
+}
