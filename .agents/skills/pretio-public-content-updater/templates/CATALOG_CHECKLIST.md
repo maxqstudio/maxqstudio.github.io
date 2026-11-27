@@ -29,7 +29,7 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] If a marketplace is involved, verify actual seller/store identity and differentiate it from platform
 - [ ] Discovery sources (including authorized Google Shopping) are NOT automatically accepted as pricing evidence
 - [ ] New seller/store without reviewed active catalog ID stays `NEEDS_CATALOG_APPROVAL` / audit-only
-- [ ] Seller-specific public offer confirmed on original store/marketplace page with countrywide scope
+- [ ] Seller-specific public offer verified for its actual eligible country/province/city/local area; national coverage is not required
 - [ ] No login, captcha bypass, misleading coupon-only, member-only or other conditional promo
 - [ ] Use `ONLINE_SHOP_CHECKLIST.md` for each discovered storefront; report search bounds and outcome separately
 
@@ -66,8 +66,9 @@ Manifest work-unit number: `<N of manifest_total>` | Attempt number: `<1..bounde
 - [ ] Distinct SKUs/variants/packaging cannot collapse into the same matched product; HOLD if incompatible with v1
 
 ## 2B. Location relevance & expiry hard gate
-- [ ] PHYSICAL RETAIL: product-level participating area and national price applicability proven (not inferred from nationwide catalog page)
-- [ ] ONLINE STORE: target-country offer price and nationwide order/fulfillment supported; **no provincial/city proof needed** when official market-wide delivery applies
+- [ ] Regional candidate retained with eligible area label/evidence; no deletion solely for geography; LOCATION_AWARE_PENDING until compatible feed and Android filtering/labels accepted
+- [ ] PHYSICAL RETAIL: participating area, canonical location identifiers, branch conditions and same-area price proven; regional offers retained
+- [ ] ONLINE STORE: actual eligible ordering/fulfillment area and same-area price proven; country-only scope when genuinely national
 - [ ] Region-only in current national v1 feed: audit-only, not published
 - [ ] Expired Product Highlights removed from active `CC.json`; hash/revision updated for changed feed
 - [ ] Expired rotating Catalog Promo URL replaced with approved verified URL or safely removed under catalog-writer rules; no stale active listing

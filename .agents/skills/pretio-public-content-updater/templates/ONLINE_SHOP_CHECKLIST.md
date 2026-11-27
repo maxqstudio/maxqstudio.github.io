@@ -18,8 +18,8 @@ Checked UTC: `<timestamp>`
 - [ ] Source permits access; no bot/CAPTCHA/login bypass or account scraping
 - [ ] Link redirects, canonical host and allowed host checked
 - [ ] If `catalog_id` is missing, candidate stays audit-only until separately approved
-- [ ] **Online country-wide offer/delivery eligibility** verified through official shipping/market terms and offer context; **province/city checks not mandatory** for a genuine market-wide online deal
-- [ ] Country-only storefront/domain does not itself prove eligible market, and pickup-only/regional pricing is not nationwide
+- [ ] **Actual eligible area** and delivery/price scope verified via official terms and offer evidence; nationwide not required
+- [ ] Country-only domain does not prove scope; retain regional/pickup offers with exact canonical area and restrictions; no national extrapolation
 - [ ] Price can be genuinely regular (AUDIT_ONLY) or discounted (eligible highlight if approved and verified)
 - [ ] Expired published offers pruned from active feeds with matched index SHA; do not retain expired live records
 - [ ] Currency metadata present for publishing; otherwise audit only
@@ -41,7 +41,7 @@ Checked UTC: `<timestamp>`
 | Discovery URL | Where found (including Google Shopping if authorized); never production `source_url` |
 | Price evidence | Explicit public normal and discounted prices from same seller/listing, same market/currency |
 | Restrictions | Public, unconditional, no member/cart/credit-card/coupon-only/cashback ambiguity |
-| Geo & period | Country-wide offer evidence, source-provided validity if known |
+| Geo & period | Country/province/city/local scope evidence, canonical identifiers, eligible area label, source-provided dates; regional candidate retained pending compatible rollout |
 | Image | Decodable real individual product image, authorized host, screenshot/MIME proof |
 | Catalog mapping | Existing validated `catalog_id` and matching `source_url` host |
 | Decision | `ACCEPTED` / `SKIPPED_UNVERIFIED` / `SKIPPED_BLOCKED` / `NEEDS_CATALOG_APPROVAL` / etc |

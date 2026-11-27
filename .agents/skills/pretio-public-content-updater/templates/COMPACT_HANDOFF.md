@@ -19,3 +19,6 @@
 - **Next input:** `<next country/catalog_id>`. Load only this checkpoint, next catalog entry, and relevant matching highlight IDs. Start a **new isolated context**; never rely on carrying a long previous conversation.
 
 No extra field is to be added to a production catalog or highlight entry. These checkpoint keys exist **only** in the markdown audit artifact.
+
+
+- Location-aware handoff: eligible country/province/city/local scope, canonical IDs, area label and price/fulfillment evidence; regional is not expiry. Keep LOCATION_AWARE_PENDING candidates for compatible feed/Android rollout (issue #111).
