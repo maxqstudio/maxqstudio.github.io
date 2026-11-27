@@ -6,7 +6,7 @@
 
 ## Product-type and area policy for discovered markets
 
-Product candidate research covers **normal public prices and discounted prices**. Only verified discounted products are eligible in Product Highlights v1; regular-price observations remain audit-only until the app's schema supports them. Product source and market applicability must be recorded. **Physical retailers** require item-level eligible area evidence; **online stores** need evidence of market-country ordering/fulfillment at the displayed public price but do not need province/city proof where official countrywide service applies. An expired published catalog/discount should be removed or replaced from the live data list under safe atomic validation; keep limited audit history separately.
+Product candidate research covers regular and discounted public prices. Only genuine verified discounts qualify for Product Highlights; regular prices remain audit-only. National, provincial, city and local offers are eligible for research; verify actual offer geography, price and fulfillment scope. Follow location-aware compatibility policy in `highlight-rules.md`, retaining regional candidates until safe rollout. Expired content must still be removed under atomic validation.
 
 ## Selection and measurement
 
@@ -39,7 +39,7 @@ If no stable official URL exposes the promotional content, locate retailer-publi
 
 ### Tier 3: shop-only evergreen promotion page
 
-For an online-only shop with no printed flyer, its official promotions/deals page is a legitimate Catalog Promo candidate **if it contains actual public offers** and publisher/store ownership, HTTPS, countrywide applicability and permitted access are verified. An arbitrary marketplace homepage, seller search result or generic shop home with no offers is not a promo catalog.
+For an online-only shop with no printed flyer, its official promotions/deals page is a legitimate Catalog Promo candidate if actual public offers, ownership, HTTPS, actual eligible geographic area (not necessarily countrywide), and permitted access are verified. Generic marketplaces or homepages without offers are not qualifying catalogs.
 
 ### Tier 4: no qualified source
 

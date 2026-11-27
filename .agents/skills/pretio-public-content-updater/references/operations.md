@@ -41,6 +41,8 @@ Use the [checkpoint operator guide](../../../../tooling/pretio_public_content/CH
 
 ## Deterministic exhaustive 12-hour pipeline
 
+**Location-aware Owner correction:** follow `highlight-rules.md`: national coverage is not required; collect regional offers with precise canonical locations and price scope. Preserve candidates and evidence pending compatible feed/Android migration; never delete solely because regional or count them as expired. Apply the user's selected location and display actual area after rollout. Source rights and all other gates remain mandatory.
+
 **Completion invariant:** At the start of each cycle, freeze an immutable work manifest from **all** active official catalog entries and all their country codes in `catalog_app.json`. Every unique `(country_code, catalog_id)` must be attempted. **No stop after first product, first target-met country, first source failure, or first success.** The cycle ends only when every manifest entry has a durable terminal checklist/receipt and there are zero remaining entries.
 
 1. **Manifest**: calculate `manifest_total`, work-unit IDs, last completed checkpoint, and market code. Country and catalog coverage must not be filtered by highlight feed existence or currency metadata. Prioritize stable evergreen links, then dated catalogs; every one must eventually be attempted.
