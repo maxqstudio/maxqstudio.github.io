@@ -10,15 +10,15 @@
     {
       "code": "CL",
       "document_id": "CL",
-      "revision": "pretio-highlights-CL-20261127T060629Z",
-      "sha256": "2b447587151a8bb72745b9435b3635f7d623575ea627f0853cadb18b9f2f5bfc",
+      "revision": "pretio-highlights-CL-20261123T025341Z",
+      "sha256": "648c0d20a8dc8aba8ca6a3f37e5865fd83611d06bc0cf1ad0f3ba060ac70a278",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/CL.json"
     },
     {
       "code": "RS",
       "document_id": "RS",
-      "revision": "pretio-highlights-RS-20261127T054608Z",
-      "sha256": "f0843909a4d1a2368afe75c09da6690fbeaa6edb0bb099a64fbd6ab82d5813ec",
+      "revision": "pretio-highlights-RS-20261125230700Z",
+      "sha256": "f4918454f83a36ae1327c78dff357c2a4e319ec16ad346f5d656aa52e0e03754",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/RS.json"
     },
     {
@@ -38,8 +38,8 @@
     {
       "code": "DE",
       "document_id": "DE",
-      "revision": "pretio-highlights-DE-20261127T060629Z",
-      "sha256": "d5b76d4547793b2ebd7e6b844660cdf136df38474ed297f399d58eb46b49c0bf",
+      "revision": "pretio-highlights-DE-20261127T125036Z",
+      "sha256": "020362fb725148a730becfa6f88fe220e5bf50f42f4d2e15bffe977280ed7ebd",
       "url": "https://maxqstudio.dev/pretio/promos/highlights/DE.json"
     },
     {
@@ -50,7 +50,7 @@
       "url": "https://maxqstudio.dev/pretio/promos/highlights/CH.json"
     }
   ],
-  "revision": "2026-11-27T06:06:29Z",
+  "revision": "2026-11-27T12:50:36Z",
   "schema": "pretio.product_highlights.index.v2",
   "schema_version": 2
 }

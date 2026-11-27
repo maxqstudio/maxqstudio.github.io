@@ -1,3 +1,9 @@
+# Superseded candidate delta — Owner location correction
+
+The historical operator report below is preserved. Its 105→73 / 32 removals candidate is superseded by [owner-location-policy-reconciliation.json](owner-location-policy-reconciliation.json): 27 geographic-only removals withdrawn, 105→100 candidate, 5 remaining proposed non-geographic removals, 0 new products. No fresh source verification or legacy regional display fix is claimed. HOLD remains; see PR #74 and maxqstudio/pretio#111.
+
+---
+
 # Pretio global recovery report — 2026-11-27
 
 **Run:** `pretio-global-recovery-20261127T0434Z`

@@ -2,6 +2,21 @@
   "schema_version": 1,
   "items": [
     {
+      "id": "jumbo-cl-1589277-pak",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "product_name": "Pack 12 un. Leche Soprole Entera Natural 1 L",
+      "brand": "Soprole",
+      "package_size": "12 x 1 L",
+      "normal_price": "16200",
+      "promo_price": "13200",
+      "currency": "CLP",
+      "image_url": "https://jumbocl.vtexassets.com/arquivos/ids/351685-900-900?aspect=true&height=900&width=900",
+      "source_url": "https://www.jumbo.cl/pack-leche-entera-soprole-1-l-12-unid/p",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
+      "observed_at": "2026-09-23T08:07:56Z"
+    },
+    {
       "id": "jumbo-cl-1842649",
       "catalog_id": "jumbo-country-cl",
       "retailer": "Jumbo",
@@ -32,6 +47,21 @@
       "observed_at": "2026-09-23T08:07:56Z"
     },
     {
+      "id": "jumbo-cl-1236587",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "product_name": "Papel Higiénico Elite Ultra Suave Doble Hoja 50 m 18 un.",
+      "brand": "Elite",
+      "package_size": "18 un. x 50 m",
+      "normal_price": "24490",
+      "promo_price": "15650",
+      "currency": "CLP",
+      "image_url": "https://jumbocl.vteximg.com.br/arquivos/ids/671930-900-900/Papel-Higienico-Elite-Ultra-Suave-Doble-Hoja-50-m-18-un.jpg",
+      "source_url": "https://www.jumbo.cl/papel-higienico-elite-ultra-doble-hoja-18-rollos-50-m-c-u/p",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
+      "observed_at": "2026-11-23T02:45:00Z"
+    },
+    {
       "id": "jumbo-cl-264343",
       "catalog_id": "jumbo-country-cl",
       "retailer": "Jumbo",
@@ -58,6 +88,21 @@
       "currency": "CLP",
       "image_url": "https://jumbocl.vteximg.com.br/arquivos/ids/298602-900-900/Aceite-de-Oliva-extra-virgen-1-L.jpg",
       "source_url": "https://www.jumbo.cl/aceite-de-oliva-chef-botella-1-l-extra-virgen-2/p",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
+      "observed_at": "2026-11-23T02:45:00Z"
+    },
+    {
+      "id": "jumbo-cl-302978",
+      "catalog_id": "jumbo-country-cl",
+      "retailer": "Jumbo",
+      "product_name": "Mantequilla Soprole con Sal 250 g",
+      "brand": "Soprole",
+      "package_size": "250 g",
+      "normal_price": "3140",
+      "promo_price": "2790",
+      "currency": "CLP",
+      "image_url": "https://jumbocl.vteximg.com.br/arquivos/ids/684253-900-900/Mantequilla-Soprole-con-Sal-250-g.jpg",
+      "source_url": "https://www.jumbo.cl/mantequilla-con-sal-soprole-250-g/p",
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png",
       "observed_at": "2026-11-23T02:45:00Z"
     },
@@ -313,8 +358,8 @@
     }
   ],
   "country": "CL",
-  "generated_at": "2026-11-27T06:06:29Z",
+  "generated_at": "2026-11-23T02:53:41Z",
   "schema": "pretio.product_highlights.v1",
   "currency": "CLP",
-  "revision": "pretio-highlights-CL-20261127T060629Z"
+  "revision": "pretio-highlights-CL-20261123T025341Z"
 }
