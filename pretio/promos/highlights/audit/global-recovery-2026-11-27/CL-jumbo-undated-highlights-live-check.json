@@ -1,0 +1,143 @@
+{
+  "artifact_type": "pretio.highlight_live_price_checks.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "scope": "One permitted, sequential, no-retry check of existing Jumbo Chile item URLs; robots had previously allowed public product paths. No non-Jumbo hosts accessed.",
+  "items": [
+    {
+      "id": "jumbo-cl-1589277-pak",
+      "requested_url": "https://www.jumbo.cl/pack-leche-entera-soprole-1-l-12-unid/p",
+      "observed_at_utc": "2026-11-27T05:37:18Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/pack-leche-entera-soprole-1-l-12-unid/p",
+      "body_sha256": "daa98ae154c3cc9de53d13f8a614fb7ddfafb95197e02c29b5b807eac7c5362c",
+      "body_bytes": 1621306,
+      "product_name_match": null,
+      "sku_match": "1589277",
+      "current_price": "12900",
+      "price_currency": "CLP",
+      "listed_prices": [
+        "12900",
+        "14250"
+      ],
+      "black_friday_badge": true,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    },
+    {
+      "id": "jumbo-cl-1842649",
+      "requested_url": "https://www.jumbo.cl/huevo-grande-blanco-30-un/p",
+      "observed_at_utc": "2026-11-27T05:37:22Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/huevo-grande-blanco-30-un/p",
+      "body_sha256": "1424771d8c473903764c4d327aff09d09bdb28c10e57fc4c7f685de9fc07516d",
+      "body_bytes": 1555625,
+      "product_name_match": null,
+      "sku_match": "1842649",
+      "current_price": "9950",
+      "price_currency": "CLP",
+      "listed_prices": [],
+      "black_friday_badge": true,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    },
+    {
+      "id": "jumbo-cl-915067",
+      "requested_url": "https://www.jumbo.cl/aceite-de-oliva-las-doscientas-500-ml-blend-extra-virgen/p",
+      "observed_at_utc": "2026-11-27T05:37:27Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/aceite-de-oliva-las-doscientas-500-ml-blend-extra-virgen/p",
+      "body_sha256": "7c5bed50ab19c109ca1a088995f2ec5334f60faf80eb06bf250e189f8bafb0dd",
+      "body_bytes": 1558138,
+      "product_name_match": null,
+      "sku_match": "915067",
+      "current_price": "9090",
+      "price_currency": "CLP",
+      "listed_prices": [],
+      "black_friday_badge": true,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    },
+    {
+      "id": "jumbo-cl-264343",
+      "requested_url": "https://www.jumbo.cl/aceite-maravilla-chef-1-l/p",
+      "observed_at_utc": "2026-11-27T05:37:31Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/aceite-maravilla-chef-1-l/p",
+      "body_sha256": "facf5edf61bf9e9bbbbc54f15d639739772ddd9e0757baeedffb8d0f7b5b18b5",
+      "body_bytes": 1557939,
+      "product_name_match": null,
+      "sku_match": "264343",
+      "current_price": "3090",
+      "price_currency": "CLP",
+      "listed_prices": [
+        "3090",
+        "3490"
+      ],
+      "black_friday_badge": false,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    },
+    {
+      "id": "jumbo-cl-1247547",
+      "requested_url": "https://www.jumbo.cl/aceite-de-oliva-chef-botella-1-l-extra-virgen-2/p",
+      "observed_at_utc": "2026-11-27T05:37:37Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/aceite-de-oliva-chef-botella-1-l-extra-virgen-2/p",
+      "body_sha256": "2e81cca32332b62352ed968aecd60209e98d66c518a4b630390e8867aeb599cb",
+      "body_bytes": 1586668,
+      "product_name_match": null,
+      "sku_match": "1247547",
+      "current_price": "18390",
+      "price_currency": "CLP",
+      "listed_prices": [],
+      "black_friday_badge": true,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    },
+    {
+      "id": "jumbo-cl-302978",
+      "requested_url": "https://www.jumbo.cl/mantequilla-con-sal-soprole-250-g/p",
+      "observed_at_utc": "2026-11-27T05:37:41Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/mantequilla-con-sal-soprole-250-g/p",
+      "body_sha256": "3a121ab626bfb0d54f1c4cba2f9363e577edf13176aed152cc428614dd026ed5",
+      "body_bytes": 1611351,
+      "product_name_match": null,
+      "sku_match": "302978",
+      "current_price": "2790",
+      "price_currency": "CLP",
+      "listed_prices": [
+        "2790",
+        "3090",
+        "2318",
+        "2500"
+      ],
+      "black_friday_badge": true,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    },
+    {
+      "id": "jumbo-cl-1991096",
+      "requested_url": "https://www.jumbo.cl/huevo-ext-col-gall-libre-20-u-cuisine-and-co-1991096/p",
+      "observed_at_utc": "2026-11-27T05:37:44Z",
+      "http_status": 200,
+      "final_url": "https://www.jumbo.cl/huevo-ext-col-gall-libre-20-u-cuisine-and-co-1991096/p",
+      "body_sha256": "da15076edacbba20ffc262b4ee751a60dce637b97ce6c79a14d57aefd5175192",
+      "body_bytes": 1526446,
+      "product_name_match": null,
+      "sku_match": "1991096",
+      "current_price": "8390",
+      "price_currency": "CLP",
+      "listed_prices": [],
+      "black_friday_badge": true,
+      "in_stock_marker": true,
+      "result": "LIVE_PRICE_CAPTURED"
+    }
+  ],
+  "summary": {
+    "requested": 7,
+    "http_200": 7,
+    "live_price_captured": 7,
+    "product_pages_not_opened_after_error": 0
+  }
+}

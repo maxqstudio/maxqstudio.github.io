@@ -1,0 +1,61 @@
+{
+  "source_url": "https://www.jumbo.cl/black-friday",
+  "recorded_at_utc": "2026-11-27T05:19:34Z",
+  "retrieval": "official Jumbo Chile Black Friday page opened through web reader; source marked crawled today",
+  "evidence": {
+    "campaign": "Black Friday 2026",
+    "campaign_dates": "2026-11-27 through 2026-11-30",
+    "channel": "Jumbo.cl online and physical stores",
+    "product_category": "page lists paper products; selected Elite products up to 40% off, exclusive online (lines 47-52)",
+    "end_date_statement": "Jumbo says the event ends Monday 30 November; line 85; FAQ line 95 says 27 November 00:00 to 30 November 23:59."
+  },
+  "exact_product_evidence": {
+    "product_url": "https://www.jumbo.cl/papel-higienico-elite-ultra-doble-hoja-18-rollos-50-m-c-u/p",
+    "local_http_receipt": "CL-jumbo-1236587-live-check.json",
+    "status": 200,
+    "observed_at_utc": "2026-11-27T05:17:57Z",
+    "sku": "1236587",
+    "normal_price": "24490 CLP",
+    "promo_price": "14939 CLP",
+    "sale_badge": "Black Friday",
+    "availability": "in stock"
+  },
+  "scope_note": "Price pairs were observed on official product pages, but countrywide online delivery was not verified; these are audit-only observations. No item from this artifact was published.",
+  "date_basis": "Jumbo Black Friday page states 27 Nov 00:00 to 30 Nov 23:59 local time and online/store availability; each accepted product page carried the Black Friday label at current direct retrieval.",
+  "audit_only_price_observations": [
+    {
+      "id": "jumbo-cl-1236587",
+      "product_url": "https://www.jumbo.cl/papel-higienico-elite-ultra-doble-hoja-18-rollos-50-m-c-u/p",
+      "sku": "1236587",
+      "normal_price": "24490 CLP",
+      "promo_price": "14939 CLP",
+      "evidence_file": "CL-jumbo-1236587-live-check.json",
+      "page_has_black_friday_badge": true,
+      "availability": "in stock"
+    },
+    {
+      "id": "jumbo-cl-1589277-pak",
+      "product_url": "https://www.jumbo.cl/pack-leche-entera-soprole-1-l-12-unid/p",
+      "sku": "1589277-PAK",
+      "normal_price": "14250 CLP",
+      "promo_price": "12900 CLP",
+      "evidence_file": "CL-jumbo-undated-highlights-live-check.json",
+      "page_has_black_friday_badge": true,
+      "availability": "in stock",
+      "identity_note": "Feed identity and page product code/title match; the web-reader cache price was stale and is not used."
+    },
+    {
+      "id": "jumbo-cl-302978",
+      "product_url": "https://www.jumbo.cl/mantequilla-con-sal-soprole-250-g/p",
+      "sku": "302978",
+      "normal_price": "3090 CLP",
+      "promo_price": "2790 CLP",
+      "evidence_file": "CL-jumbo-undated-highlights-live-check.json",
+      "page_has_black_friday_badge": true,
+      "availability": "in stock",
+      "excluded_alternative": "Page separately shows a card/means-of-payment price of 2318 CLP; it was not published."
+    }
+  ],
+  "production_decision": "NO_JUMBO_PRODUCT_HIGHLIGHTS_PUBLISHED",
+  "published_count": 0
+}

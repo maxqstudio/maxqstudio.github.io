@@ -1,0 +1,98 @@
+{
+  "artifact_type": "pretio.physical_retail_geography_review.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "checked_date_utc": "2026-11-27",
+  "source_capture_time_utc": "not exposed by the official web reader; pages were marked crawled today",
+  "decision": "REMOVE_16_FROM_COUNTRYWIDE_HIGHLIGHT_FEED",
+  "decision_reason": "Official ALDI SÜD company material states that ALDI SÜD operates in South and West Germany and that ALDI Nord maintains its own store network in North and East Germany. The country Product Highlights v1 has no region/location field, so each chain-specific offer cannot be represented as nationwide.",
+  "inference": "A current ALDI Nord item is not available through the ALDI SÜD network and vice versa. The product feed cannot limit a card to a chain footprint. The Catalog Promo directory entries remain useful as location-selected retailer pages; only the product highlights are removed.",
+  "regional_scope_evidence": {
+    "url": "https://www.aldi-sued.de/unternehmen/ueber-uns",
+    "official_statements": [
+      {
+        "lines": "267",
+        "text": "ALDI SÜD operates around 2,000 stores in South and West Germany."
+      },
+      {
+        "lines": "329-336",
+        "text": "The SÜD network is in South and West Germany; the associated ALDI Nord group operates its own store network in North and East Germany."
+      },
+      {
+        "lines": "421",
+        "text": "Company history again distinguishes SÜD stores in South/West and Nord stores in North/East Germany."
+      }
+    ]
+  },
+  "aldi_nord_current_offer_page": {
+    "url": "https://www.aldi-nord.de/angebote.html",
+    "robots_url": "https://www.aldi-nord.de/robots.txt",
+    "robots_result": "Public /angebote.html and /produkt paths are not disallowed by the returned User-agent:* rules.",
+    "current_offer_context": "Official current-week page labels offers beginning Monday 23 Nov 2026; eight corresponding ALDI Nord items with explicit current price pairs were visible.",
+    "reader_lines": "26-64, 68-74, 123-133, 157-168, 207-217, 239-263, 282-290, 339-349",
+    "sample_pairs_eur": [
+      {
+        "name": "Eisbergsalat",
+        "normal_price": "0.99",
+        "promo_price": "0.75"
+      },
+      {
+        "name": "Tafelbirnen",
+        "normal_price": "1.99",
+        "promo_price": "1.59"
+      },
+      {
+        "name": "Kulturchampignons braun",
+        "normal_price": "1.89",
+        "promo_price": "1.49"
+      },
+      {
+        "name": "Speisekartoffeln",
+        "normal_price": "1.99",
+        "promo_price": "1.79"
+      },
+      {
+        "name": "Orangen",
+        "normal_price": "2.49",
+        "promo_price": "2.22"
+      },
+      {
+        "name": "Clementinen",
+        "normal_price": "1.49",
+        "promo_price": "1.29"
+      },
+      {
+        "name": "Minutensteaks",
+        "normal_price": "2.99",
+        "promo_price": "2.29"
+      },
+      {
+        "name": "Hähnchenbrustfilet-Teilstücke XXL",
+        "normal_price": "9.99",
+        "promo_price": "8.49"
+      }
+    ],
+    "not_used_as_published_content": "Prices and product tile images were not added or updated; the page did not establish a nationwide German footprint or validate image bytes."
+  },
+  "aldi_sued_source_note": "Existing eight ALDI Süd items were not individually price-refreshed during this review. Their retailer footprint is independently shown as regional by the official company page.",
+  "removed_product_ids": [
+    "aldi-nord-de-eisbergsalat",
+    "aldi-nord-de-tafelbirnen",
+    "aldi-nord-de-bio-kulturchampignons-braun",
+    "aldi-nord-de-bio-speisekartoffeln",
+    "aldi-nord-de-orangen",
+    "aldi-nord-de-clementinen",
+    "aldi-nord-de-minutensteaks",
+    "aldi-nord-de-haehnchenbrustfilet-teilstuecke-xxl",
+    "aldi-sued-de-cachet-katzenfutter-nass-100-g-rinderpastete",
+    "aldi-sued-de-romeo-premium-hunde-nassfutter-400-g-rind",
+    "aldi-sued-de-cachet-premium-katzentrockenfutter-800-g-frischgefluegel",
+    "aldi-sued-de-cachet-katzen-nassfutter-8-x-85-g-fisch",
+    "aldi-sued-de-cachet-premium-katzen-nassfutter-85-g-kalbspastete",
+    "aldi-sued-de-cachet-premium-katzen-nassfutter-205-g-fischgelee",
+    "aldi-sued-de-romeo-premium-hunde-nassfutter-150-g-rinderpastete",
+    "aldi-sued-de-romeo-classic-hunde-nassfutter-300-g-rind-leber"
+  ],
+  "catalog_action": "Keep aldi-nord-de-country and aldi-sued-de-country entries and URLs unchanged.",
+  "expiry_claim": false,
+  "no_schema_change": true
+}

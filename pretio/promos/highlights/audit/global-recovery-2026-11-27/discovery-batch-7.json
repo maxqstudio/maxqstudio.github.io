@@ -1,0 +1,593 @@
+{
+  "receipt_type": "independent_global_catalog_discovery",
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 7,
+  "canonical_discovery_reference": {
+    "repository": "maxqstudio/maxqstudio.github.io",
+    "baseline_ref": "65bc23a",
+    "path": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+    "file_sha": "348450b582d4064814d09a23fe5cb6fa3d8d5015",
+    "audit_only_statuses_used": [
+      "NEEDS_CATALOG_APPROVAL",
+      "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "SKIPPED_BLOCKED",
+      "BLOCKED_COUNTRY_COMPATIBILITY"
+    ],
+    "note": "These are audit dispositions only and were not added to production JSON."
+  },
+  "timing": {
+    "run_id_nominal_start_utc": "2026-11-27T04:34Z",
+    "evidence_reviewed_utc": "2026-11-27T05:06:49Z",
+    "exact_per_query_timestamps": "not captured individually by the search tool; this timestamp records batch evidence review"
+  },
+  "constraints_and_counts": {
+    "markets": 10,
+    "catalog_promo_queries": 10,
+    "online_shop_or_marketplace_queries": 10,
+    "total_queries": 20,
+    "queries_per_market": "exactly one catalog/promo and one online shop/marketplace query",
+    "robots_urls_attempted": 16,
+    "robots_urls_readable": 2,
+    "robots_urls_inaccessible_via_tool": 14,
+    "public_terms_pages_opened": 0,
+    "merchant_or_shop_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "product_or_price_claims_accepted": 0,
+    "production_catalogs_created": 0,
+    "production_highlights_created": 0,
+    "repository_edits": false,
+    "scheduling_created": false,
+    "notes": [
+      "Only public search results and public robots.txt files were consulted. Search snippets served as leads and were not treated as verified product or price evidence.",
+      "No offer page was opened because public reuse/access terms were unresolved for candidates, or there was no qualifying official offer source.",
+      "Robots.txt content was readable for Rimi Latvia and Rimi Estonia only. For other attempted hosts, the research tool returned an access error; this is recorded as unverified, not as a robots disallow.",
+      "The Al Sater search result exposed its public Terms of Service text, including a written-permission requirement for reproducing site content; the page itself was not opened.",
+      "No CAPTCHA, login, private API, API key, hidden endpoint, or app-only data access was attempted."
+    ]
+  },
+  "robots_checks": [
+    {
+      "url": "https://www.carrefour.tn/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://www.geant.tn/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://alsater.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://alosraonline.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://www.aeoncambodia.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://aeononlineshopping.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://shop.post.tm/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://latts.lv/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://www.maxima.lv/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://www.rimi.lv/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "read",
+      "evidence": "https://www.rimi.lv/robots.txt",
+      "findings": "User-agent * disallows /admin/, /search?q=*, /checkout, /account and /cart/; sitemap paths are listed."
+    },
+    {
+      "url": "https://pasal.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://mamashmarket.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://www.rimi.ee/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "read",
+      "evidence": "https://www.rimi.ee/robots.txt",
+      "findings": "User-agent * disallows /admin/, /search?q=*, /checkout, /account and /cart/; sitemap paths are listed."
+    },
+    {
+      "url": "https://campaign.ee/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://www.hyper.sd/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    },
+    {
+      "url": "https://aeoncambodia.com/robots.txt",
+      "observed_utc": "2026-11-27T05:06:49Z",
+      "result": "inaccessible_via_tool",
+      "evidence": "open returned internal error; policy unverified"
+    }
+  ],
+  "markets": [
+    {
+      "code": "TN",
+      "name": "Tunisia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Tunisia official supermarket promotions catalogue catalogues prospectus offres promotion retailer Tunisia",
+        "lead_urls": [
+          "https://www.carrefour.tn/les-promotions-du-moment.html",
+          "https://www.geant.tn/content/category/6-catalogues"
+        ],
+        "finding": "Official retailer-domain promotion/catalog pages surfaced in search; current content, official ownership, geography and reuse were not directly verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Tunisia official online grocery shop supermarket delivery ecommerce retailer",
+        "lead_urls": [
+          "https://aladdine.tn/"
+        ],
+        "finding": "Online food retailer lead surfaced with a Tunisia address; online fulfillment scope and ownership/reuse terms were not directly verified."
+      },
+      "sources": [
+        {
+          "url": "https://www.carrefour.tn/les-promotions-du-moment.html",
+          "publisher": "Carrefour Tunisia candidate; retailer domain surfaced by search",
+          "ownership": "not directly inspected",
+          "rights_access": "robots inaccessible via tool; terms/reuse unverified",
+          "geography": "Tunisia site; branch-level/national applicability unverified",
+          "stable_url": "permanent-looking promotions path; stable historical updates not verified",
+          "no_page_open_reason": "robots/access and reuse could not be verified"
+        },
+        {
+          "url": "https://www.geant.tn/content/category/6-catalogues",
+          "publisher": "Géant Tunisia candidate; retailer domain surfaced by search",
+          "ownership": "not directly inspected",
+          "rights_access": "robots inaccessible via tool; terms/reuse unverified",
+          "geography": "Tunisia retailer; national applicability unverified",
+          "stable_url": "catalog index path; cycle updates not directly verified",
+          "no_page_open_reason": "robots/access and reuse could not be verified"
+        },
+        {
+          "url": "https://aladdine.tn/",
+          "publisher": "online food retailer candidate",
+          "ownership": "not directly inspected",
+          "rights_access": "robots/terms not checked; no offers page opened",
+          "geography": "Tunisia; delivery scope unknown",
+          "stable_url": "candidate root URL; update persistence unknown",
+          "no_page_open_reason": "public access/reuse and country fulfillment not verified"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_UNAVAILABLE"
+    },
+    {
+      "code": "SD",
+      "name": "Sudan",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Sudan official supermarket offers catalogue promotions retailer Khartoum",
+        "lead_urls": [],
+        "excluded_leads": [
+          "https://www.shops1000.com/SD/Khartoum/104664688831852/ALAnfal-AlManshia-Mall----%D9%85%D9%88%D9%84-%D8%A7%D9%84%D8%A3%D9%86%D9%81%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D9%86%D8%B4%D9%8A%D8%A9"
+        ],
+        "finding": "Results were a directory/social listing rather than a verifiable first-party catalog source."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Sudan official online supermarket grocery shop marketplace delivery",
+        "lead_urls": [
+          "https://mersalk.com/en/mersalk.html",
+          "https://www.hyper.sd/"
+        ],
+        "finding": "Mersalk describes itself as a delivery/marketplace platform connecting stores across Sudan; Hyper.sd surfaced with a Port Sudan location. Neither was verified as a public promotional catalog."
+      },
+      "sources": [
+        {
+          "url": "https://mersalk.com/en/mersalk.html",
+          "publisher": "Mersalk marketplace platform; search result says it is run by MIT",
+          "ownership": "operator self-description surfaced; not independently verified",
+          "rights_access": "robots/terms not checked; no offers page opened",
+          "geography": "Sudan platform; fulfillment coverage not verified by address",
+          "stable_url": "candidate platform page",
+          "no_page_open_reason": "marketplace homepage is not a verified public catalog of merchant offers"
+        },
+        {
+          "url": "https://www.hyper.sd/",
+          "publisher": "Hyper.sd online shopping lead",
+          "ownership": "not verified",
+          "rights_access": "robots inaccessible via tool; terms/reuse unverified",
+          "geography": "search result gave Port Sudan address, not national coverage",
+          "stable_url": "candidate home URL",
+          "no_page_open_reason": "no public offer catalog or countrywide scope verified"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code": "MO",
+      "name": "Macao",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Macao official supermarket weekly offers promotions catalogue Macau retailer",
+        "lead_urls": [],
+        "finding": "No first-party retailer catalog/promo source surfaced; results were general news, government food-safety material and nonofficial references."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Macao Macau official online grocery shop supermarket delivery retailer",
+        "lead_urls": [],
+        "finding": "No first-party retailer/marketplace online shop with public catalog evidence surfaced."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "no_page_open_reason": "No qualifying official lead identified for robots/terms checks."
+    },
+    {
+      "code": "LY",
+      "name": "Libya",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Libya official supermarket offers catalogue promotions retailer Tripoli",
+        "lead_urls": [],
+        "excluded_leads": [
+          "https://www.findglocal.com/LY/Tripoli/101991671765316/%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A-%D9%84%D9%84%D8%AA%D8%B3%D9%88%D9%82-%D9%82%D8%B5%D8%B1-%D8%A8%D9%86-%D8%BA%D8%B4%D9%8A%D8%B1"
+        ],
+        "finding": "Search surfaced a third-party directory/social listing, not an official current public catalog."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Libya official online grocery supermarket shop ecommerce delivery retailer",
+        "lead_urls": [
+          "https://play.google.com/store/apps/details?id=com.mamash.app"
+        ],
+        "finding": "App-store listing identifies MAMASH MARKET and claims grocery delivery across Libya; no first-party public web catalog or offers URL was surfaced."
+      },
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.mamash.app",
+          "publisher": "MAMASH MARKET app listing",
+          "ownership": "developer name/address appear in app listing; no first-party web page verified",
+          "rights_access": "app-only product access not attempted; no public terms/reuse verification",
+          "geography": "listing claims Libya-wide delivery; operational countrywide fulfillment not independently verified",
+          "stable_url": "app listing, not a public catalog URL",
+          "no_page_open_reason": "no public web offer/catalog page; app data was not accessed"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Bahrain official supermarket weekly offers leaflet catalogue promotions retailer",
+        "lead_urls": [
+          "https://alsater.com/"
+        ],
+        "excluded_leads": [
+          "https://www.leafletmarket.com/bh-en-cata-list/catalogs/supermarket",
+          "https://bh.ilofo.com/en/catalogs/supermarket"
+        ],
+        "finding": "Al Sater Markets official-site result states it operates in Bahrain and shows a public Terms of Service statement that site content may not be reproduced without written permission. No current official flyer cycle was verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Bahrain official online grocery supermarket shop delivery ecommerce retailer",
+        "lead_urls": [
+          "https://www.bmmigroup.com/divisions/supermarkets/",
+          "https://alosraonline.com/"
+        ],
+        "finding": "BMMI's official group page says it owns Alosra and operates a dedicated e-commerce site; service area and public offer reuse were not verified."
+      },
+      "sources": [
+        {
+          "url": "https://alsater.com/",
+          "publisher": "Al Sater Market W.L.L., Bahrain, according to its search-result Terms of Service",
+          "ownership": "search result exposed operator statement; page not directly opened",
+          "rights_access": "robots inaccessible; surfaced terms require written permission to reproduce site content",
+          "geography": "Kingdom of Bahrain; flyer applies only for stated period per terms, current period not verified",
+          "stable_url": "root URL; current flyer URL not identified",
+          "no_page_open_reason": "robots inaccessible and written permission for reuse absent"
+        },
+        {
+          "url": "https://www.bmmigroup.com/divisions/supermarkets/",
+          "publisher": "BMMI Group",
+          "ownership": "group page identifies Alosra as owned/operated by BMMI",
+          "rights_access": "terms not checked; no offer page opened",
+          "geography": "six Alosra stores across Bahrain; e-commerce availability/coverage unverified",
+          "stable_url": "corporate profile page; not a promo catalog URL",
+          "no_page_open_reason": "not an offers page and no public reuse policy verified"
+        },
+        {
+          "url": "https://alosraonline.com/",
+          "publisher": "Alosra online shop candidate linked by BMMI",
+          "ownership": "parent relationship surfaced by BMMI result; store page not inspected",
+          "rights_access": "robots inaccessible; terms/reuse unverified",
+          "geography": "Bahrain; delivery scope unknown",
+          "stable_url": "candidate shop root URL",
+          "no_page_open_reason": "robots/access and reuse could not be verified"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_BLOCKED"
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Cambodia official supermarket weekly promotions catalogue offers retailer",
+        "lead_urls": [
+          "https://aeoncambodia.com/promotion/great-weekend-in-november/",
+          "https://aeoncambodia.com/promotion/topvalu-fair-2026/"
+        ],
+        "finding": "AEON Cambodia promotion pages surfaced on the retailer domain. Search results describe branch-specific promotions; this batch did not verify current period or permission."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Cambodia official online grocery shop supermarket ecommerce delivery retailer",
+        "lead_urls": [
+          "https://app.delishop.asia/info/about?locale=en",
+          "https://play.google.com/store/apps/details?id=com.aeononlineshopping"
+        ],
+        "finding": "Delishop describes an online supermarket using partner suppliers; AEON Online has an app listing. Delivery geography and public terms were not verified."
+      },
+      "sources": [
+        {
+          "url": "https://aeoncambodia.com/promotion/great-weekend-in-november/",
+          "publisher": "AEON Cambodia promotion page candidate",
+          "ownership": "brand/domain association surfaced; not directly inspected",
+          "rights_access": "robots inaccessible; terms/reuse unverified",
+          "geography": "search result says offers apply at named AEON mall branches; not verified as countrywide",
+          "stable_url": "campaign-specific path; cycle persistence unknown",
+          "no_page_open_reason": "robots/access and reuse unresolved; branch coverage is limited/unclear"
+        },
+        {
+          "url": "https://app.delishop.asia/info/about?locale=en",
+          "publisher": "Delishop online supermarket platform",
+          "ownership": "first-party description surfaced; not independently inspected",
+          "rights_access": "robots/terms not checked; no offers page opened",
+          "geography": "Cambodia delivery claimed; countrywide coverage not established",
+          "stable_url": "candidate about page; not a promo catalog URL",
+          "no_page_open_reason": "terms, countrywide fulfillment and public offers not verified"
+        }
+      ],
+      "terminal_disposition": "BLOCKED_COUNTRY_COMPATIBILITY"
+    },
+    {
+      "code": "TM",
+      "name": "Turkmenistan",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Turkmenistan official supermarket offers promotions catalogue Ashgabat retailer",
+        "lead_urls": [],
+        "finding": "No official grocery catalog/promo source surfaced."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Turkmenistan official online supermarket grocery shop ecommerce delivery retailer",
+        "lead_urls": [
+          "https://tmrl.gov.tm/en/news/article/433",
+          "https://shop.post.tm/"
+        ],
+        "finding": "Government-site result describes Shop.post.tm as a national postal marketplace inviting retailers and covering electronics, construction, stationery, children's goods and similar categories; it did not establish a public grocery promo catalog."
+      },
+      "sources": [
+        {
+          "url": "https://tmrl.gov.tm/en/news/article/433",
+          "publisher": "Turkmenistan State Service of Maritime and River Transportation; government news page",
+          "ownership": "official government publisher by domain/title",
+          "rights_access": "not a retailer offer source; no marketplace or offer page opened",
+          "geography": "Turkmenistan marketplace platform referenced",
+          "stable_url": "government article, not a catalog URL",
+          "no_page_open_reason": "official evidence does not verify food retail offers or public promo catalog"
+        },
+        {
+          "url": "https://shop.post.tm/",
+          "publisher": "Turkmenposhta marketplace lead referenced by government result",
+          "ownership": "state postal platform relationship surfaced by government page",
+          "rights_access": "robots inaccessible; terms/reuse unverified",
+          "geography": "Turkmenistan platform; grocery fulfillment unverified",
+          "stable_url": "candidate marketplace root, not a catalog URL",
+          "no_page_open_reason": "no public food-promotion source verified"
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Latvia official supermarket weekly akcijas katalogs leaflet retailer",
+        "lead_urls": [
+          "https://www.latts.lv/akciju-avize",
+          "https://www.maxima.lv/uploads/releases/pdf/MAXIMA_KC46_2026_7qA1.pdf"
+        ],
+        "finding": "LaTS official page result showed an expired 1-21 September 2026 period. A Maxima Latvia retailer-domain PDF surfaced but its validity period was not established; no PDF was opened."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Latvia official online supermarket grocery ecommerce shop delivery retailer",
+        "lead_urls": [
+          "https://www.rimi.lv/e-veikals?lang=en"
+        ],
+        "finding": "Rimi Latvia e-shop surfaced on the retailer domain with a promotions/booklets section; delivery depends on service area/address. Terms and national coverage were not verified."
+      },
+      "sources": [
+        {
+          "url": "https://www.latts.lv/akciju-avize",
+          "publisher": "LaTS Latvia candidate retailer catalog page",
+          "ownership": "retailer domain surfaced; not directly inspected",
+          "rights_access": "robots inaccessible; terms/reuse unverified",
+          "geography": "search result described LaTS stores throughout Latvia",
+          "stable_url": "evergreen-looking akciju-avize page; search result period was expired",
+          "no_page_open_reason": "current catalog not verified and robots/reuse unclear"
+        },
+        {
+          "url": "https://www.maxima.lv/uploads/releases/pdf/MAXIMA_KC46_2026_7qA1.pdf",
+          "publisher": "Maxima Latvia candidate retailer PDF",
+          "ownership": "retailer domain surfaced; not directly inspected",
+          "rights_access": "robots inaccessible; PDF not opened; terms/reuse unverified",
+          "geography": "Latvia retailer; regional scope unknown",
+          "stable_url": "rotating PDF URL; validity dates not available in captured result",
+          "no_page_open_reason": "robots/access/reuse unresolved and no validity dates verified"
+        },
+        {
+          "url": "https://www.rimi.lv/e-veikals?lang=en",
+          "publisher": "Rimi Latvia e-store candidate",
+          "ownership": "retailer-domain source surfaced; legal operator not directly inspected",
+          "rights_access": "robots readable; generic rules allow public paths and disallow account/checkout/cart paths; terms/reuse not verified",
+          "geography": "Latvia-specific site; delivery coverage requires address/service-area check",
+          "stable_url": "candidate evergreen e-store URL; promotional cycle updates not directly verified",
+          "no_page_open_reason": "terms/reuse and countrywide service coverage remain unverified"
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code": "NP",
+      "name": "Nepal",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Nepal official supermarket weekly offers catalogue promotions retailer",
+        "lead_urls": [],
+        "finding": "No current first-party public catalog/promo source surfaced; a dated retailer-domain brochure result was not verified as a current catalog."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Nepal official online grocery supermarket shop delivery ecommerce retailer",
+        "lead_urls": [
+          "https://pasal.com/",
+          "https://mymart.com.np/"
+        ],
+        "finding": "Pasal.com result describes an online grocer serving Pokhara and Lekhnath from four stores; My Mart surfaced as a Nepal online supermarket with nearest-store delivery. Countrywide scope not verified."
+      },
+      "sources": [
+        {
+          "url": "https://pasal.com/",
+          "publisher": "Pasal Nepal online grocery shop candidate",
+          "ownership": "self-description surfaced; not independently inspected",
+          "rights_access": "robots inaccessible; terms/reuse unverified",
+          "geography": "Pokhara and Lekhnath only per search result, not Nepal-wide",
+          "stable_url": "candidate shop root; product listings reportedly last updated 2 September 2026, not a current promo catalog",
+          "no_page_open_reason": "regional service scope incompatible with a national market source; rights/access unverified"
+        },
+        {
+          "url": "https://mymart.com.np/",
+          "publisher": "My Mart Nepal online supermarket candidate",
+          "ownership": "self-description surfaced; not independently inspected",
+          "rights_access": "robots/terms not checked; no offers page opened",
+          "geography": "nearest-store delivery; supported area not verified",
+          "stable_url": "candidate shop root; no public promo catalog verified",
+          "no_page_open_reason": "countrywide fulfillment and public promotional terms not verified"
+        }
+      ],
+      "terminal_disposition": "BLOCKED_COUNTRY_COMPATIBILITY"
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Estonia official supermarket weekly offers catalogue campaigns retailer",
+        "lead_urls": [
+          "https://www.rimi.ee/kampaaniad"
+        ],
+        "excluded_leads": [
+          "https://campaign.ee/en/"
+        ],
+        "finding": "Rimi campaign index surfaced on its official Estonia domain with current campaign listings in the result. Campaigns are treated as candidate evidence only; no offer details were accepted."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Estonia official online grocery shop supermarket ecommerce delivery retailer",
+        "lead_urls": [
+          "https://www.rimi.ee/epood/en",
+          "https://www.rimi.ee/epood/en/delivery-options"
+        ],
+        "finding": "Rimi E-Store result identifies Rimi Eesti Food AS and describes courier, pickup and store delivery options; exact countrywide service coverage was not verified."
+      },
+      "sources": [
+        {
+          "url": "https://www.rimi.ee/kampaaniad",
+          "publisher": "Rimi Eesti Food AS candidate campaign index",
+          "ownership": "same retailer domain as Rimi E-Store; entity name surfaced in official shop result",
+          "rights_access": "robots readable; generic rules allow public pages and disallow account/checkout/cart paths; terms/reuse unverified",
+          "geography": "Estonia-specific site; campaign/store applicability not directly checked",
+          "stable_url": "evergreen-looking campaign index; update history not independently checked",
+          "no_page_open_reason": "reuse permission and campaign applicability were not verified"
+        },
+        {
+          "url": "https://www.rimi.ee/epood/en",
+          "publisher": "Rimi Eesti Food AS e-store",
+          "ownership": "official search result lists operator Rimi Eesti Food AS and address",
+          "rights_access": "robots readable; terms/reuse unverified; no offer page opened",
+          "geography": "Estonia; delivery options listed, but full national coverage not proven",
+          "stable_url": "candidate evergreen e-store URL",
+          "no_page_open_reason": "rights/reuse and national service coverage remain unverified"
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL"
+    }
+  ],
+  "aggregate_dispositions": {
+    "SKIPPED_UNAVAILABLE": 1,
+    "SKIPPED_BLOCKED": 1,
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 4,
+    "BLOCKED_COUNTRY_COMPATIBILITY": 2,
+    "NEEDS_CATALOG_APPROVAL": 2
+  },
+  "final_counts": {
+    "markets": 10,
+    "catalog_promo_queries": 10,
+    "online_shop_marketplace_queries": 10,
+    "total_queries": 20,
+    "robots_attempts": 16,
+    "robots_readable": 2,
+    "robots_inaccessible": 14,
+    "source_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "official_catalogs_fully_verified": 0,
+    "new_catalogs_approved": 0,
+    "product_highlights_created": 0,
+    "product_price_claims_accepted": 0
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch_number": 13,
+  "observed_at_utc": "2026-11-27T05:24:20Z",
+  "activity": "bounded_public_source_discovery_only",
+  "canonical_disposition_reference": {
+    "repository_baseline_sha": "65bc23a",
+    "path": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+    "canonical_statuses_used": [
+      "NEEDS_CATALOG_APPROVAL",
+      "SKIPPED_NO_VERIFIABLE_SOURCES"
+    ]
+  },
+  "scope": {
+    "markets_requested": [
+      {"code":"DJ","name":"Djibouti"},
+      {"code":"FJ","name":"Fiji"},
+      {"code":"FO","name":"Faroe Islands"},
+      {"code":"GQ","name":"Equatorial Guinea"},
+      {"code":"KY","name":"Cayman Islands"},
+      {"code":"LI","name":"Liechtenstein"},
+      {"code":"LR","name":"Liberia"},
+      {"code":"MC","name":"Monaco"},
+      {"code":"ME","name":"Montenegro"},
+      {"code":"MR","name":"Mauritania"}
+    ],
+    "market_count": 10
+  },
+  "search_budget": {
+    "catalog_promo_queries_attempted": 10,
+    "online_shop_marketplace_queries_attempted": 10,
+    "total_discovery_queries_attempted": 20,
+    "online_results_clipped": 4,
+    "clipped_market_codes": ["DJ","FJ","FO","GQ"],
+    "clipped_results_requeried": false,
+    "query_rule": "One catalog/promo search and one official online shop/marketplace search per market; no additional discovery searches."
+  },
+  "robots_checks": [
+    {"market_code":"DJ","url":"https://www.djiboutifresh.com/robots.txt","method":"GET","http_status":409,"observation":"Robots content unavailable due conflict response; access policy could not be determined."},
+    {"market_code":"FJ","url":"https://superstore.com.fj/robots.txt","method":"GET","http_status":200,"observation":"User-agent * disallows /wp-admin/ and allows /wp-admin/admin-ajax.php; no general public-page disallow observed."},
+    {"market_code":"GQ","url":"https://tiendaeg.com/robots.txt","method":"GET","http_status":200,"observation":"User-agent * allows /; disallows /admin and /api."},
+    {"market_code":"KY","url":"https://www.fosters.ky/robots.txt","method":"GET","http_status":403,"observation":"Robots content unavailable due forbidden response; access policy could not be determined."},
+    {"market_code":"LR","url":"https://shoptsev.com/robots.txt","method":"GET","http_status":403,"observation":"Robots content unavailable due forbidden response; access policy could not be determined."},
+    {"market_code":"MC","url":"https://monpanier.boutique/robots.txt","method":"GET","http_status":200,"observation":"Allows public pages; disallows cart, checkout, account, invoice, seller, reservation and other listed private routes."},
+    {"market_code":"ME","url":"https://aromamarketi.me/robots.txt","method":"GET","http_status":200,"observation":"Disallows /izvjestaji/ and /wp-admin/; no general public-page disallow observed."},
+    {"market_code":"MR","url":"https://groxmarket.com/robots.txt","method":"GET","http_status":403,"observation":"Robots content unavailable due forbidden response; access policy could not be determined."},
+    {"market_code":"KY","url":"https://shopright.ky/robots.txt","method":"GET","http_status":200,"observation":"Public paths are not generally disallowed; robots lists checkout/account/cart and other restricted routes."},
+    {"market_code":"ME","url":"https://www.voli.me/robots.txt","method":"GET","http_status":200,"observation":"User-agent * with empty Disallow value; no disallow rule observed."}
+  ],
+  "access_totals": {
+    "robots_requests": 10,
+    "robots_http_200": 6,
+    "robots_http_403": 3,
+    "robots_http_409": 1,
+    "source_or_catalog_pages_opened": 0,
+    "offer_pages_opened": 0,
+    "terms_pages_opened": 0,
+    "product_or_price_facts_accepted": 0,
+    "product_highlights_created": 0,
+    "repository_or_production_data_changed": false,
+    "schedules_created": false
+  },
+  "markets": [
+    {
+      "code":"DJ",
+      "country":"Djibouti",
+      "catalog_search":{
+        "query":"Djibouti official supermarket weekly flyer promotions catalogue retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Djibouti Fresh","url":"https://www.djiboutifresh.com/","search_result_observation":"Search result described an online market and weekend promotions; no page was opened, so ownership, current offer details, and terms are unverified."},
+          {"name":"NIRIGS","url":"https://nirigs.com/","search_result_observation":"Search result described an online shop in Djibouti Ville; ownership and promotional catalog status not verified."},
+          {"name":"LIMO Djibouti","url":"https://www.limodjibouti.com/","search_result_observation":"Search result appeared to describe a delivery/aggregation service; not treated as a first-party retailer catalog."}
+        ]
+      },
+      "online_search":{
+        "query":"Djibouti official online grocery delivery market shop supermarket",
+        "result_state":"CLIPPED_NO_REQUERY",
+        "observation":"Output exceeded available context; no result interpreted or reused from that clipped response."
+      },
+      "robots_check_urls":["https://www.djiboutifresh.com/robots.txt"],
+      "ownership_and_rights":"Search snippets only; merchant ownership and permission/terms were not verified.",
+      "geography":"Search result named Djibouti Ville for NIRIGS; nationwide service coverage not verified.",
+      "stable_url_assessment":"Candidate homepage appears evergreen by URL form only; update behavior was not checked.",
+      "pages_not_opened_reason":"Robots request returned HTTP 409 and terms/geographic eligibility were not verified.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"FJ",
+      "country":"Fiji",
+      "catalog_search":{
+        "query":"Fiji official supermarket weekly specials catalogue promotions retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Superstore Fiji","url":"https://superstore.com.fj/","search_result_observation":"Search result described weekly specials and delivery in Suva, Lami, Nasinu, and Nausori; ownership and current catalog not independently checked."},
+          {"name":"NewWorld IGA Fiji","url":"https://www.newworld.com.fj/","search_result_observation":"Search result showed Promotions and Catalogue navigation; current offer and rights not verified."},
+          {"name":"CJS Supermarket","url":"https://www.cjssupermarket.com.fj/","search_result_observation":"Search result described an online store with weekly specials; official ownership not independently checked."}
+        ]
+      },
+      "online_search":{
+        "query":"Fiji official online supermarket grocery shop delivery retailer ecommerce",
+        "result_state":"CLIPPED_NO_REQUERY",
+        "observation":"Output exceeded available context; no result interpreted or reused from that clipped response."
+      },
+      "robots_check_urls":["https://superstore.com.fj/robots.txt"],
+      "ownership_and_rights":"Search snippets only; public robots rules were readable for Superstore, but terms and ownership were not reviewed.",
+      "geography":"Search snippet limited Superstore delivery to Suva, Lami, Nasinu, and Nausori; not evidence of nationwide delivery.",
+      "stable_url_assessment":"Retailer homepages are candidate evergreen URLs; no update behavior verified.",
+      "pages_not_opened_reason":"Offer/catalog pages not opened because terms, rights, and country coverage were not fully checked.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"FO",
+      "country":"Faroe Islands",
+      "catalog_search":{
+        "query":"Faroe Islands official supermarket offers promotion flyer catalogue retailer Faroes",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"A handil","url":"https://ahandil.fo/wp-content/uploads/2025/08/A25_V33_Blad-1.pdf","search_result_observation":"Search surfaced a period-specific flyer dated in its path to 2025; not opened and not evidence of a current catalog."},
+          {"name":"FK","url":"https://www.fk.fo/wp-content/uploads/2025/12/fk-bladid-vika1-2026.pdf","search_result_observation":"Search surfaced a week-1 2026 flyer; not opened and not evidence of a current catalog."},
+          {"name":"Samkeyp","url":"https://samkeyp.fo/wp-content/uploads/2026/02/S26_V6_Netblad-1.pdf","search_result_observation":"Search surfaced a week-6 2026 flyer; not opened and not evidence of a current catalog."},
+          {"name":"Sparin","url":"https://sparin.arbosoft.com/","search_result_observation":"Search result appeared to aggregate offers; not treated as first-party source."}
+        ]
+      },
+      "online_search":{
+        "query":"Faroe Islands official online grocery supermarket shop delivery retailer",
+        "result_state":"CLIPPED_NO_REQUERY",
+        "observation":"Output exceeded available context; no result interpreted or reused from that clipped response."
+      },
+      "robots_check_urls":[],
+      "ownership_and_rights":"Search results included retailer-hosted PDF paths and an aggregator, but no source page or terms were opened.",
+      "geography":"Faroe Islands-specific scope not confirmed from current content.",
+      "stable_url_assessment":"Only period-specific PDF URLs and an aggregator surfaced; no current evergreen official catalog verified.",
+      "pages_not_opened_reason":"Candidate PDFs were historical periods and no current offer page was opened.",
+      "terminal_disposition":"SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code":"GQ",
+      "country":"Equatorial Guinea",
+      "catalog_search":{
+        "query":"Equatorial Guinea official supermarket catalog promotions offers retailer Malabo",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"TIENDA EG","url":"https://www.tiendaeg.com/","search_result_observation":"Search result described a store with promotions/catalog and referenced Malabo and Bata; source ownership and full market scope not independently verified."}
+        ]
+      },
+      "online_search":{
+        "query":"Equatorial Guinea official online grocery shop supermarket ecommerce delivery retailer",
+        "result_state":"CLIPPED_NO_REQUERY",
+        "observation":"Output exceeded available context; no result interpreted or reused from that clipped response."
+      },
+      "robots_check_urls":["https://tiendaeg.com/robots.txt"],
+      "ownership_and_rights":"Robots allows public paths except /admin and /api; legal terms, operator identity, and offer reuse permission were not checked.",
+      "geography":"Search result mentioned Malabo and Bata; coverage outside those locations not verified.",
+      "stable_url_assessment":"Homepage URL is a candidate stable source; update and catalog persistence not verified.",
+      "pages_not_opened_reason":"Terms, ownership, and geographic scope were not fully established before opening offers.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"KY",
+      "country":"Cayman Islands",
+      "catalog_search":{
+        "query":"Cayman Islands official supermarket weekly specials catalogue promotions retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Foster's Supermarket","url":"https://www.fosters.ky/","search_result_observation":"Search result indicated weekly specials; official source was not opened."},
+          {"name":"Hurley's","url":"https://hurleys.ky/deals/","search_result_observation":"Search result referenced a deals period of 3–16 September 2026, which is past at batch time; not treated as current."},
+          {"name":"Shopright","url":"https://www.shopright.ky/","search_result_observation":"Search result described an online grocery store and stated it does not ship outside Cayman Islands; source ownership not independently checked."}
+        ]
+      },
+      "online_search":{
+        "query":"Cayman Islands official online grocery supermarket shop delivery retailer ecommerce",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Shopright","url":"https://www.shopright.ky/","search_result_observation":"Search result described online groceries, deals, and Cayman-only shipping; no offer or product page opened."},
+          {"name":"Let's Eat","url":"https://letseat.ky/","search_result_observation":"Search result described Foster's grocery delivery island-wide on Grand Cayman; operator relationship and terms not independently checked."}
+        ]
+      },
+      "robots_check_urls":["https://www.fosters.ky/robots.txt","https://shopright.ky/robots.txt"],
+      "ownership_and_rights":"Shopright robots returned 200 and listed restricted account/cart/checkout routes. Foster's robots returned 403. Terms and reuse permissions were not reviewed.",
+      "geography":"Shopright result stated no shipping outside Cayman; Let's Eat result stated Grand Cayman/island-wide service. Broader territory coverage not verified.",
+      "stable_url_assessment":"Retailer homepage and deals route appear persistent by URL structure; offer update/expiry behavior was not validated.",
+      "pages_not_opened_reason":"Foster's robots policy was unavailable, and terms/access permission were not fully checked for Shopright.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"LI",
+      "country":"Liechtenstein",
+      "catalog_search":{
+        "query":"Liechtenstein official supermarket prospectus offers promotions leaflet retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[]
+      },
+      "online_search":{
+        "query":"Liechtenstein official online supermarket grocery shop ecommerce delivery retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[],
+        "observation":"Returned material was unrelated legal text; no verifiable official retailer or marketplace lead surfaced."
+      },
+      "robots_check_urls":[],
+      "ownership_and_rights":"No source found to review.",
+      "geography":"No market-specific official shopping source verified.",
+      "stable_url_assessment":"None identified.",
+      "pages_not_opened_reason":"No qualifying source surfaced in the bounded searches.",
+      "terminal_disposition":"SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code":"LR",
+      "country":"Liberia",
+      "catalog_search":{
+        "query":"Liberia official supermarket weekly offers catalogue promotions Monrovia retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"ShopTSV local marketplace","url":"https://shoptsev.com/local","search_result_observation":"Search result described locally stocked Monrovia goods and local promotions; marketplace operator/merchant source details not independently checked."}
+        ]
+      },
+      "online_search":{
+        "query":"Liberia official online grocery supermarket marketplace delivery retailer Monrovia",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"The Liberian Market","url":"https://www.theliberianmarket.net/","search_result_observation":"Search result described a Liberian digital marketplace for local sellers; no retailer promo catalog verified."},
+          {"name":"Ezee Market","url":"https://ezeemarket.wixsite.com/ezeemarket","search_result_observation":"Search result described a Liberian e-commerce marketplace and delivery; no offer page opened."}
+        ]
+      },
+      "robots_check_urls":["https://shoptsev.com/robots.txt"],
+      "ownership_and_rights":"ShopTSV robots request returned 403 so its policy could not be determined. Marketplace identity and offer reuse terms were not independently checked.",
+      "geography":"ShopTSV result specified local stock in Monrovia and pickup points there; national coverage not verified.",
+      "stable_url_assessment":"ShopTSV /local is a stable-looking route but current content/update behavior was not verified.",
+      "pages_not_opened_reason":"Robots response was forbidden and terms/access/geography were not sufficiently verified.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"MC",
+      "country":"Monaco",
+      "catalog_search":{
+        "query":"Monaco official supermarket promotions catalogue offers retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Carrefour Monaco store","url":"https://www.carrefour.fr/magasin/monaco","search_result_observation":"Search result surfaced an official Carrefour France-hosted Monaco store page."},
+          {"name":"Carrefour Monaco catalog index","url":"https://www.carrefour.fr/catalogue/magasin/monaco","search_result_observation":"Search result surfaced a Monaco store catalog route; country-host and catalog eligibility not reviewed."},
+          {"name":"Intermarché Monaco store","url":"https://www.intermarche.com/magasins/01459/monaco-98000/infos-pratiques","search_result_observation":"Search result referenced current offers at this store; no offer page opened."}
+        ]
+      },
+      "online_search":{
+        "query":"Monaco official online grocery supermarket shop delivery retailer ecommerce",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"MonPanier","url":"https://monpanier.boutique/?lang=en","ownership_evidence_url":"https://monpanier.boutique/about","search_result_observation":"Search result described an e-commerce platform for Monaco businesses and identified SERENITECH SARL as seller/operator at a Monaco address."},
+          {"name":"EatIn Monaco","url":"https://www.manager.eatinmonaco.com/en/","search_result_observation":"Search result described an app-based local delivery service for supermarkets and shops; orders are placed in its app."}
+        ]
+      },
+      "robots_check_urls":["https://monpanier.boutique/robots.txt"],
+      "ownership_and_rights":"MonPanier robots returned 200 and allows public pages while disallowing private routes. Search result identified an operator, but terms and product-feed reuse permission were not reviewed.",
+      "geography":"MonPanier search result scoped partner merchants to Monaco neighborhoods; local scope only. Carrefour/Intermarché use France-hosted pages for a Monaco store.",
+      "stable_url_assessment":"MonPanier home/about and retailer store/catalog routes are stable-looking; recurring catalog update behavior not checked.",
+      "pages_not_opened_reason":"Offer/product routes were not opened because terms, eligibility, and reuse permissions were not checked.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"ME",
+      "country":"Montenegro",
+      "catalog_search":{
+        "query":"Montenegro official supermarket akcije offers catalogue flyer promotions retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Voli November offers","url":"https://kompanija.voli.me/uhvati-novembarske-ponude/","search_result_observation":"Search result described validity 28 October–7 November 2026, already past at batch time."},
+          {"name":"Aroma catalogs","url":"https://aromamarketi.me/aroma-katalozi/","search_result_observation":"Search result surfaced a retailer catalog index and a November 2026 PDF at https://aromamarketi.me/wp-content/uploads/sites/2/2026/11/Dan-iznenadenja-8.pdf; exact validity dates were not confirmed."}
+        ]
+      },
+      "online_search":{
+        "query":"Montenegro official online grocery shop supermarket delivery retailer ecommerce",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Voli webshop","url":"https://www.voli.me/","search_result_observation":"Search result described an official-looking grocery webshop and stated advertised delivery/prices apply to Podgorica, Tuzi, and Zeta."},
+          {"name":"IDEA online shop","url":"https://www.idea.co.me/Webshop/O-IDEA-online-prodavnici","search_result_observation":"Search result described an online shop operated by Mercator CG d.o.o.; delivery coverage and current offers were not fully reviewed."}
+        ]
+      },
+      "robots_check_urls":["https://aromamarketi.me/robots.txt","https://www.voli.me/robots.txt"],
+      "ownership_and_rights":"Aroma and Voli robots returned 200; public pages were not generally disallowed. Terms and promotional-content reuse permissions were not reviewed.",
+      "geography":"Voli result explicitly limited ecommerce delivery/price claims to Podgorica, Tuzi, and Zeta; no nationwide coverage verified.",
+      "stable_url_assessment":"Voli webshop and Aroma catalog index are persistent-looking routes; the Voli flyer is period-specific and expired, while the recent Aroma PDF had no verified validity dates.",
+      "pages_not_opened_reason":"No offers/PDF opened because public terms, reuse permission, and current catalog validity were not confirmed.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"MR",
+      "country":"Mauritania",
+      "catalog_search":{
+        "query":"Mauritania official supermarket promotions catalogue offers Nouakchott retailer",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"GROX by MIGROSS","url":"https://groxmarket.com/en","search_result_observation":"Search result described a Nouakchott supermarket/webshop with a discounts section; ownership and current offer details not independently verified."},
+          {"name":"GalerieTATA","url":"https://galerietata.com/content/3-conditions-vente","search_result_observation":"Search result was a public sales-terms page stating service/catalog delivery is limited to Nouakchott; no product/offer page opened."}
+        ]
+      },
+      "online_search":{
+        "query":"Mauritania official online grocery supermarket delivery shop ecommerce retailer Nouakchott",
+        "result_state":"results_returned",
+        "candidate_sources":[
+          {"name":"Zoomi","url":"https://zoomiapp.com/?lang=en","geography_evidence_url":"https://zoomiapp.com/page/a-propos-de-zoomi","search_result_observation":"Search result described grocery/market delivery and stated Nouakchott coverage; service status on page indicated not operating in the viewer location."},
+          {"name":"Jemli","url":"https://jemli.mr/en/","search_result_observation":"Search result described grocery delivery and instant deals, currently in Nouakchott."},
+          {"name":"Wejabat","url":"https://www.wejabat.com/en/","search_result_observation":"Search result described grocery listings and special offers; current coverage and operator evidence not independently checked."},
+          {"name":"GROX","url":"https://groxmarket.com/en","search_result_observation":"Search result described a Nouakchott supermarket webshop with discounts."}
+        ]
+      },
+      "robots_check_urls":["https://groxmarket.com/robots.txt"],
+      "ownership_and_rights":"GROX robots request returned 403, so its policy could not be determined. Other marketplace terms/access were not reviewed.",
+      "geography":"Search results generally limited delivery to Nouakchott; national coverage is not established.",
+      "stable_url_assessment":"Retailer/app homepages appear persistent by URL form only; no catalog update schedule or expiry verified.",
+      "pages_not_opened_reason":"Robots policy for the strongest discount candidate was unavailable; no offer page opened because access/terms/rights were not confirmed.",
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    }
+  ],
+  "summary": {
+    "markets_with_terminal_disposition": 10,
+    "needs_catalog_approval": 8,
+    "skipped_no_verifiable_sources": 2,
+    "registered_catalogs_verified": 0,
+    "new_catalogs_verified": 0,
+    "highlights_created": 0,
+    "prices_recorded": 0,
+    "production_data_mutations": 0,
+    "repository_mutations": 0,
+    "pending_followup": [
+      "Owner/auditor must decide whether each newly discovered retailer/catalog/marketplace may be added.",
+      "Review terms, reuse rights, geographic eligibility, and current offer validity for candidates before any offer page or production data use.",
+      "Resolve robots 403/409 access-policy ambiguity for DJ, KY Foster's, LR ShopTSV, and MR GROX before opening those source pages.",
+      "FO and LI had no current verifiable official catalog from this bounded search batch."
+    ]
+  }
+}

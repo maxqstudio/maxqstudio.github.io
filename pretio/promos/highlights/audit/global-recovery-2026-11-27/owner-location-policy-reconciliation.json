@@ -1,0 +1,229 @@
+{
+  "artifact_type": "pretio.owner_location_policy_reconciliation.v1",
+  "observed_utc": "2026-11-27T12:50:36Z",
+  "base_sha": "b5c263aae52447fd2d53656abe8a7b235cfe8763",
+  "superseded_head": "4c3132e3cbf6d84ea0bda598c69f697ebd6d7a54",
+  "owner_policy_pr": 74,
+  "android_issue": "https://github.com/maxqstudio/pretio/issues/111",
+  "counts": {
+    "ID": {
+      "main": 4,
+      "old_candidate": 0,
+      "reconciled": 0,
+      "restored": 0,
+      "remaining_proposed_removals": 4
+    },
+    "DE": {
+      "main": 33,
+      "old_candidate": 16,
+      "reconciled": 32,
+      "restored": 16,
+      "remaining_proposed_removals": 1
+    },
+    "CL": {
+      "main": 24,
+      "old_candidate": 21,
+      "reconciled": 24,
+      "restored": 3,
+      "remaining_proposed_removals": 0
+    },
+    "RS": {
+      "main": 25,
+      "old_candidate": 17,
+      "reconciled": 25,
+      "restored": 8,
+      "remaining_proposed_removals": 0
+    },
+    "US": {
+      "main": 12,
+      "old_candidate": 12,
+      "reconciled": 12,
+      "restored": 0,
+      "remaining_proposed_removals": 0
+    },
+    "ZA": {
+      "main": 2,
+      "old_candidate": 2,
+      "reconciled": 2,
+      "restored": 0,
+      "remaining_proposed_removals": 0
+    },
+    "CH": {
+      "main": 5,
+      "old_candidate": 5,
+      "reconciled": 5,
+      "restored": 0,
+      "remaining_proposed_removals": 0
+    }
+  },
+  "retained_legacy_records": [
+    {
+      "country": "CL",
+      "id": "jumbo-cl-1589277-pak",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "CL",
+      "id": "jumbo-cl-1236587",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "CL",
+      "id": "jumbo-cl-302978",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-eisbergsalat",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-tafelbirnen",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-bio-kulturchampignons-braun",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-bio-speisekartoffeln",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-orangen",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-clementinen",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-minutensteaks",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-nord-de-haehnchenbrustfilet-teilstuecke-xxl",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-cachet-katzenfutter-nass-100-g-rinderpastete",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-romeo-premium-hunde-nassfutter-400-g-rind",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-cachet-premium-katzentrockenfutter-800-g-frischgefluegel",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-cachet-katzen-nassfutter-8-x-85-g-fisch",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-cachet-premium-katzen-nassfutter-85-g-kalbspastete",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-cachet-premium-katzen-nassfutter-205-g-fischgelee",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-romeo-premium-hunde-nassfutter-150-g-rinderpastete",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "DE",
+      "id": "aldi-sued-de-romeo-classic-hunde-nassfutter-300-g-rind-leber",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7175923-stari-mlinar-brasno-psen-t-400-glatko-stari-mlinar1kg",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7478963-heineken-pivo-heineken-0-33l-limenka",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7176016-grand-kafa-mlevena-grand-gold-200g",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7193098-tomatino-kuvani-paradajz-tomatino-1-03kg",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7554628-cmana-doo-cmana-promet-doo-med-cvetni-moj-domaci-med-950g",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7175708-vital-margarin-stoni-vital-250g",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7308945-coca-cola-coca-cola-2x1-5l",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    },
+    {
+      "country": "RS",
+      "id": "maxi-rs-7182301-plazma-keks-plazma-mlevena-800g",
+      "status": "LEGACY_BASELINE_UNCHANGED_LOCATION_AWARE_PENDING"
+    }
+  ],
+  "proposed_remaining_deletions": [
+    {
+      "country": "DE",
+      "id": "lidl-de-bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste",
+      "status": "PROPOSED_REMOVAL_REQUIRES_REVIEW"
+    },
+    {
+      "country": "ID",
+      "id": "id-lotte-mart-pocari-sweat-pet-900ml-20261119",
+      "status": "PROPOSED_REMOVAL_REQUIRES_REVIEW"
+    },
+    {
+      "country": "ID",
+      "id": "id-lotte-mart-buavita-juice-245ml-20261119",
+      "status": "PROPOSED_REMOVAL_REQUIRES_REVIEW"
+    },
+    {
+      "country": "ID",
+      "id": "id-lotte-mart-vaseline-gluta-hya-330ml-20261119",
+      "status": "PROPOSED_REMOVAL_REQUIRES_REVIEW"
+    },
+    {
+      "country": "ID",
+      "id": "id-lotte-mart-teh-kotak-300ml-20261119",
+      "status": "PROPOSED_REMOVAL_REQUIRES_REVIEW"
+    }
+  ],
+  "notes": [
+    "Historical 32-item deletion reconciliation remains immutable evidence of the superseded operator candidate. This file supersedes its production delta; geographic-only removals are withdrawn.",
+    "The 27 records are identical to existing main records, not newly published or reverified prices or nationwide applicability. Legacy v1 cannot encode scope. No new regional records may enter v1; retain evidence for compatible versioned rollout.",
+    "Five non-geographic proposed removals remain HOLD for independent review of rights and price basis, including consistent review of restricted-source items. No automatic merge/deployment.",
+    "0 new products, 0 price updates, 0 expiry removals, 0 new catalogs. Lidl RS metadata candidate remains pending review."
+  ]
+}

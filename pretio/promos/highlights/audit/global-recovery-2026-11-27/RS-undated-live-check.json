@@ -1,0 +1,311 @@
+{
+  "artifact_type": "pretio.undated_highlight_live_page_check.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "robots_checks": {
+    "lidl.rs": "robots read today: /p product paths not disallowed; q/search, digit-leading, and asset paths disallowed.",
+    "maxi.rs": "robots read today: root Serbian paths allowed; /en/, account, cart, checkout, and search paths disallowed."
+  },
+  "requested": 15,
+  "items": [
+    {
+      "id": "lidl-rs-11497679-sveza-ociscena-orada",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/sveza-ociscena-orada/p11497679",
+      "observed_at_utc": "2026-11-27T05:42:57Z",
+      "http_status": 200,
+      "final_url": "https://www.lidl.rs/p/sveza-ociscena-orada/p11497679",
+      "body_sha256": "7986fbca2eab6456d9624d2f5cb4b6c083fa8cf99bcb4402f19e4c77c3577dfc",
+      "body_bytes": 364375,
+      "currency": "RSD",
+      "product_name": "Sveža očišćena orada - Lidl",
+      "current_price": "1299.99",
+      "listed_prices": [],
+      "availability": "InStoreOnly",
+      "promo_markers": [
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "lidl-rs-11497680-kuvane-kozice",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/kuvane-kozice/p11497680",
+      "observed_at_utc": "2026-11-27T05:43:00Z",
+      "http_status": 200,
+      "final_url": "https://www.lidl.rs/p/kuvane-kozice/p11497680",
+      "body_sha256": "08d1dfe3c47d8f14bc499e074a6a4429f955fb15168f4e153f00be0ba77b2f0e",
+      "body_bytes": 364406,
+      "currency": "RSD",
+      "product_name": "Kuvane kozice - Lidl",
+      "current_price": "639.99",
+      "listed_prices": [],
+      "availability": "InStoreOnly",
+      "promo_markers": [
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "lidl-rs-11330257-susi-toya",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/susi-toya/p11330257",
+      "observed_at_utc": "2026-11-27T05:43:03Z",
+      "http_status": 200,
+      "final_url": "https://www.lidl.rs/p/susi-toya/p11330257",
+      "body_sha256": "3718574e1edad0e2629d0a439f6e5b08e33ff4aa8807f25e812cf6eab57e48e7",
+      "body_bytes": 369116,
+      "currency": "RSD",
+      "product_name": "- | Suši Toya - Lidl",
+      "current_price": "339.99",
+      "listed_prices": [],
+      "availability": "InStoreOnly",
+      "promo_markers": [
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "lidl-rs-11000272-sushi-mukawa",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/sushi-mukawa/p11000272",
+      "observed_at_utc": "2026-11-27T05:43:05Z",
+      "http_status": 200,
+      "final_url": "https://www.lidl.rs/p/sushi-mukawa/p11000272",
+      "body_sha256": "639dd367f787255992bf62c7cc786307d4657fde1cc58e44139cf05e0fae331d",
+      "body_bytes": 370345,
+      "currency": "RSD",
+      "product_name": "- | Sushi Mukawa - Lidl",
+      "current_price": "599.99",
+      "listed_prices": [],
+      "availability": "InStoreOnly",
+      "promo_markers": [
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "lidl-rs-11000792-deluxe-tuna-steak",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/deluxe-tuna-steak/p11000792",
+      "observed_at_utc": "2026-11-27T05:43:08Z",
+      "http_status": null,
+      "final_url": null,
+      "body_sha256": null,
+      "body_bytes": 0,
+      "currency": "RSD",
+      "product_name": null,
+      "current_price": null,
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [],
+      "result": "UNAVAILABLE",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "id": "lidl-rs-11004058-w5-univerzalno-sredstvo-za-ciscenje-podova",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/w5-univerzalno-sredstvo-za-ciscenje-podova/p11004058",
+      "observed_at_utc": "2026-11-27T05:43:10Z",
+      "http_status": 200,
+      "final_url": "https://www.lidl.rs/p/w5-univerzalno-sredstvo-za-ciscenje-podova/p11004058",
+      "body_sha256": "3b0cfaaf0deefd2afe58bffce3c17aa402b479e52b852aca28c2c6825d4bd1c4",
+      "body_bytes": 394268,
+      "currency": "RSD",
+      "product_name": "W5 | Univerzalno sredstvo za čišćenje podova - Lidl",
+      "current_price": "119.99",
+      "listed_prices": [],
+      "availability": "InStoreOnly",
+      "promo_markers": [
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "lidl-rs-11029524-lavlja-griva",
+      "retailer": "Lidl Srbija",
+      "requested_url": "https://www.lidl.rs/p/lavlja-griva/p11029524",
+      "observed_at_utc": "2026-11-27T05:43:13Z",
+      "http_status": 200,
+      "final_url": "https://www.lidl.rs/p/lavlja-griva/p11029524",
+      "body_sha256": "b4fcd1855f520d167886a8839c25c25b0ab23b279c410583c378d8874b274e3e",
+      "body_bytes": 364120,
+      "currency": "RSD",
+      "product_name": "Lavlja griva - Lidl",
+      "current_price": "239.99",
+      "listed_prices": [],
+      "availability": "OutOfStock",
+      "promo_markers": [
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7175923-stari-mlinar-brasno-psen-t-400-glatko-stari-mlinar1kg",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Pakovana-hrana-i-osnovne-namirnice/Brashno/Pshenichno/Brasno-psen-T-400-glatko-Stari-Mlinar1kg/p/7175923",
+      "observed_at_utc": "2026-11-27T05:43:16Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Pakovana-hrana-i-osnovne-namirnice/Brashno/Pshenichno/Brasno-psen-T-400-glatko-Stari-Mlinar1kg/p/7175923",
+      "body_sha256": "3ed936cd7b88b3c29df0d4409338ab8479c4f73efb7468d586a6125391353ce5",
+      "body_bytes": 660902,
+      "currency": "RSD",
+      "product_name": "Brasno psen.T-400 glatko Stari Mlinar1kg",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7478963-heineken-pivo-heineken-0-33l-limenka",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Picje-kafa-i-chaj/Pivo/Svetlo/Pivo-Heineken-0-33l-limenka/p/7478963",
+      "observed_at_utc": "2026-11-27T05:43:22Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Picje-kafa-i-chaj/Pivo/Svetlo/Pivo-Heineken-0-33l-limenka/p/7478963",
+      "body_sha256": "38a48cfe74fe575c9f0b84c62a37f5cdad7869bb182d2bd09c945270b0e0aac0",
+      "body_bytes": 660138,
+      "currency": "RSD",
+      "product_name": "Pivo Heineken 0,33l limenka",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7176016-grand-kafa-mlevena-grand-gold-200g",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Picje-kafa-i-chaj/Kafa/Tradicionalna-kafa/Kafa-mlevena-Grand-Gold-200g/p/7176016",
+      "observed_at_utc": "2026-11-27T05:43:25Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Picje-kafa-i-chaj/Kafa/Tradicionalna-kafa/Kafa-mlevena-Grand-Gold-200g/p/7176016",
+      "body_sha256": "4d8f8d650b7ae33b47c442bfcf14809bf6be6cf3450f1ca0dd1ec667fe6051c1",
+      "body_bytes": 660318,
+      "currency": "RSD",
+      "product_name": "Kafa mlevena Grand Gold 200g",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7193098-tomatino-kuvani-paradajz-tomatino-1-03kg",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Pakovana-hrana-i-osnovne-namirnice/Sosevi-kechap-i-majonez/Paradajz-sos/Kuvani-paradajz-Tomatino-1-03kg/p/7193098",
+      "observed_at_utc": "2026-11-27T05:43:31Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Pakovana-hrana-i-osnovne-namirnice/Sosevi-kechap-i-majonez/Paradajz-sos/Kuvani-paradajz-Tomatino-1-03kg/p/7193098",
+      "body_sha256": "86cf456170b088c51383d5c2149fcaf23df0a1e50920a1a1fd878400de97893d",
+      "body_bytes": 660821,
+      "currency": "RSD",
+      "product_name": "Kuvani paradajz Tomatino 1.03kg",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7554628-cmana-doo-cmana-promet-doo-med-cvetni-moj-domaci-med-950g",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Pakovana-hrana-i-osnovne-namirnice/Med-vocjni-namazi-i-kompot/Med/Med-Cvetni-Moj-domaci-med-950g/p/7554628",
+      "observed_at_utc": "2026-11-27T05:43:36Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Pakovana-hrana-i-osnovne-namirnice/Med-vocjni-namazi-i-kompot/Med/Med-Cvetni-Moj-domaci-med-950g/p/7554628",
+      "body_sha256": "39e1296c41834d0f7df5275023434d37cccc777ebc7ab0b2287bd70c1d5e3779",
+      "body_bytes": 660783,
+      "currency": "RSD",
+      "product_name": "Med Cvetni Moj domaci med 950g",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7175708-vital-margarin-stoni-vital-250g",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Mlechni-proizvodi-i-jaja/Margarin/Stoni/Margarin-stoni-Vital-250g/p/7175708",
+      "observed_at_utc": "2026-11-27T05:43:41Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Mlechni-proizvodi-i-jaja/Margarin/Stoni/Margarin-stoni-Vital-250g/p/7175708",
+      "body_sha256": "592a70e0268caa0606ea63a4f0c43c6e692f503118ede49d57e7cbce171651da",
+      "body_bytes": 660189,
+      "currency": "RSD",
+      "product_name": "Margarin stoni Vital 250g",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7308945-coca-cola-coca-cola-2x1-5l",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Picje-kafa-i-chaj/Sokovi-i-osvezhavajucja-bezalkoholna-picja/Gazirani-napici/Coca-Cola-2x1-5l/p/7308945",
+      "observed_at_utc": "2026-11-27T05:43:45Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Picje-kafa-i-chaj/Sokovi-i-osvezhavajucja-bezalkoholna-picja/Gazirani-napici/Coca-Cola-2x1-5l/p/7308945",
+      "body_sha256": "99a03d130ae46407d1733a313fdfa80a2dab82c64f54fc74c2bea857eeeab638",
+      "body_bytes": 660373,
+      "currency": "RSD",
+      "product_name": "Coca Cola 2x1.5l",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    },
+    {
+      "id": "maxi-rs-7182301-plazma-keks-plazma-mlevena-800g",
+      "retailer": "Maxi",
+      "requested_url": "https://www.maxi.rs/Slatki-i-slani-konditori/Keks/Biskvit/Keks-Plazma-mlevena-800g/p/7182301",
+      "observed_at_utc": "2026-11-27T05:43:48Z",
+      "http_status": 200,
+      "final_url": "https://www.maxi.rs/Slatki-i-slani-konditori/Keks/Biskvit/Keks-Plazma-mlevena-800g/p/7182301",
+      "body_sha256": "1779dbdb4b4c4141e5be082eca7d053aeb08f0f2601560beb50859fe0d9d6083",
+      "body_bytes": 660126,
+      "currency": "RSD",
+      "product_name": "Keks Plazma mlevena 800g",
+      "current_price": "0.00",
+      "listed_prices": [],
+      "availability": null,
+      "promo_markers": [
+        "Akcija",
+        "Popust",
+        "RSD"
+      ],
+      "result": "LIVE_PAGE_CAPTURED"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_type": "pretio.source_policy_decision.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "country_code": "US",
+  "merchant": "Walmart",
+  "catalog_id": "walmart-us-country",
+  "checked_at_utc": "2026-11-27T07:01:43Z",
+  "official_terms_url": "https://www.walmart.com/help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0/",
+  "official_terms_last_updated": "2026-09-21",
+  "terms_evidence": {
+    "lines": "373, 377, 380-383",
+    "finding": "The official terms prohibit commercial use, reproduction/exploitation, incorporation into another service, systematic downloading, and automated/manual-agent retrieval of site materials without Walmart's express prior written consent.",
+    "written_consent_available": false
+  },
+  "access_history": {
+    "discovery_surface": "Public Walmart Black Friday listing was previously viewed as a candidate lead; it was not accepted as final price evidence.",
+    "product_page": "A prior public-reader request was made before the terms were identified; a direct request redirected to /blocked. No further product requests were made after discovering the terms.",
+    "image": "Image retrieval did not succeed; no image bytes were obtained or stored."
+  },
+  "decision": "BLOCKED_TERMS_NO_WRITTEN_PERMISSION",
+  "production_use": "NONE",
+  "retained_product_or_price_payload": false,
+  "next_action": "Do not revisit Walmart product or image endpoints unless the merchant grants prior written permission or provides a clearly authorized feed."
+}

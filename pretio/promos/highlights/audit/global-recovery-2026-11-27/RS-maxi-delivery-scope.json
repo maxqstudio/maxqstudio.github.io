@@ -1,0 +1,37 @@
+{
+  "artifact_type": "pretio.retailer_online_scope_check.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "checked_at_utc": "2026-11-27T05:46:08Z",
+  "source_url": "https://www.maxi.rs/mapadostave",
+  "access": "Official Maxi delivery-map page opened via public web reader; crawled today. No account, checkout, or cart was used.",
+  "evidence": [
+    {
+      "lines": "51-53",
+      "finding": "The FAQ limits delivery to listed neighborhoods in Belgrade and Pančevo."
+    },
+    {
+      "lines": "54-56",
+      "finding": "The FAQ separately lists delivery neighborhoods in Novi Sad."
+    },
+    {
+      "lines": "65-75",
+      "finding": "The FAQ separately lists delivery neighborhoods in Niš and states a Niš minimum order and delivery fee."
+    },
+    {
+      "lines": "76-83",
+      "finding": "The purchase instructions require checking a specific delivery address and selecting an available delivery slot."
+    }
+  ],
+  "conclusion": "The online fulfillment scope published by Maxi is city/neighborhood-limited. The eight feed items point to online product pages, so their city-scoped prices cannot be represented as verified countrywide Product Highlights. This is a scope correction, not proof that any discount expired.",
+  "affected_items": [
+    "maxi-rs-7175923-stari-mlinar-brasno-psen-t-400-glatko-stari-mlinar1kg",
+    "maxi-rs-7478963-heineken-pivo-heineken-0-33l-limenka",
+    "maxi-rs-7176016-grand-kafa-mlevena-grand-gold-200g",
+    "maxi-rs-7193098-tomatino-kuvani-paradajz-tomatino-1-03kg",
+    "maxi-rs-7554628-cmana-doo-cmana-promet-doo-med-cvetni-moj-domaci-med-950g",
+    "maxi-rs-7175708-vital-margarin-stoni-vital-250g",
+    "maxi-rs-7308945-coca-cola-coca-cola-2x1-5l",
+    "maxi-rs-7182301-plazma-keks-plazma-mlevena-800g"
+  ],
+  "active_catalog_action": "No Maxi Catalog Promo record was deleted or changed."
+}

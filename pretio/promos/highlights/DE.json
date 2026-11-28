@@ -1,7 +1,7 @@
 {
   "currency": "EUR",
-  "revision": "pretio-highlights-DE-20261123T025341Z",
-  "generated_at": "2026-11-23T02:53:41Z",
+  "revision": "pretio-highlights-DE-20261127T125036Z",
+  "generated_at": "2026-11-27T12:50:36Z",
   "items": [
     {
       "id": "lidl-de-solevita-orangensaft-100-1l",
@@ -356,21 +356,6 @@
       "valid_from": "2026-11-23",
       "valid_until": "2026-11-28",
       "package_size": "je 0,7-l-Fl."
-    },
-    {
-      "id": "lidl-de-bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste",
-      "catalog_id": "lidl-de-country",
-      "retailer": "Lidl",
-      "product_name": "BOSCH Readyy BBHL2LED dark night 20 V 2in1, inkl. LED Bürste",
-      "normal_price": "134.99",
-      "promo_price": "99.99",
-      "currency": "EUR",
-      "image_url": "https://www.lidl.de/assets/gcpfb80473f29bc4afc944364e10c29359d.jpg",
-      "source_url": "https://www.lidl.de/p/bosch-readyy-bbhl2led-dark-night-20-v-2in1-inkl-led-buerste/p100406921",
-      "observed_at": "2026-11-23T02:45:00Z",
-      "valid_from": "2026-11-23",
-      "valid_until": "2026-11-28",
-      "brand": "BOSCH"
     },
     {
       "id": "lidl-de-silvercrest-monsieur-cuisine-smart-skms-1200-c1-anthrazit",

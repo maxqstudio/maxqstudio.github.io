@@ -1,0 +1,468 @@
+{
+  "artifact_type": "pretio.global_recovery_discovery_batch.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 10,
+  "prior_run_id": "pretio-oneoff-global-20261123T040625Z",
+  "base_sha": "65bc23a54515c138d23e0e1465b9317a4bbc29d0",
+  "scope": "One-off research, exactly BF, MZ, JM, BJ, GA, TD, NE, NI, BW, MD by selection rank; no repository edits, production writes, schedules, or repeat.",
+  "canonical_status_source": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+  "query_policy": {
+    "catalog_promo_searches_per_market_max": 1,
+    "official_online_shop_marketplace_searches_per_market_max": 1
+  },
+  "counters": {
+    "candidate_country_count": 10,
+    "countries_researched": 10,
+    "countries_with_verified_official_catalogs": 0,
+    "countries_with_approved_active_catalogs": 0,
+    "countries_no_source": 5,
+    "countries_blocked": 5,
+    "country_target": 174,
+    "catalog_searches": 10,
+    "online_searches": 10,
+    "total_searches": 20,
+    "robots_urls_attempted": 11,
+    "robots_readable": 0,
+    "robots_unavailable_to_reader": 11,
+    "terms_pages_opened": 0,
+    "official_offer_or_product_pages_opened": 0,
+    "prices_or_images_verified": 0,
+    "new_catalogs_verified": 0,
+    "eligible_product_highlights": 0,
+    "production_changes": false
+  },
+  "markets": [
+    {
+      "code": "BF",
+      "name": "Burkina Faso",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Burkina Faso official supermarket promotions catalogue offres magasin Burkina Faso Ouagadougou",
+        "online_shop": "Burkina Faso official online grocery supermarket shop delivery Ouagadougou retailer"
+      },
+      "official_ownership": "No retailer-owned current public promo source or qualifying supermarket shop was verified.",
+      "catalog_leads": [
+        {
+          "url": "https://gouvernement.gov.bf/actualites/faso-yaar-lancement-de-loperation-speciale-de-vente-de-produits-de-grande-consommation-2/",
+          "owner": "Burkina Faso government information service",
+          "note": "Official subsidized sale announcement, dated Feb 2026; not a current retailer catalog."
+        },
+        {
+          "url": "https://boutikobf.com/",
+          "owner": "Marketplace; operator not established",
+          "note": "General local marketplace, not an official retailer promo catalog."
+        },
+        {
+          "url": "https://www.rapidbon.com/deals?category_id=4",
+          "owner": "Third-party deals aggregator"
+        }
+      ],
+      "online_leads": [
+        {
+          "url": "https://www.koyoes.com/",
+          "owner": "Marketplace; independent seller/retailer ownership not verified",
+          "note": "Local-goods marketplace result; no official supermarket offer page identified."
+        },
+        {
+          "url": "https://cesmonjour.com/",
+          "owner": "Delivery marketplace; retailer source not established"
+        }
+      ],
+      "access_rights_geo": "No qualifying merchant host established; no offer page opened and no rights/fulfillment scope verified.",
+      "stable_url": "None verified.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "Bounded searches surfaced a dated public sale announcement and marketplaces, but no verifiable current retailer-owned Catalog Promo source."
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Mozambique official supermarket weekly catalogue promotions Shoprite Mozambique offers",
+        "online_shop": "Mozambique official online supermarket grocery shop delivery Shoprite Mozambique online"
+      },
+      "official_ownership": "Shoprite Mozambique's retailer identity is supported by its official specials host and SPAR International source identifies SPAR e-commerce in Mozambique; VIP Supermercado is a branded online merchant, but legal ownership was not independently reviewed.",
+      "catalog_leads": [
+        {
+          "url": "https://specials.shoprite.co.mz/deals/mzpoupancasdoaniversario20jul09ago26/index.html",
+          "owner": "Shoprite Mozambique official specials host",
+          "stability": "Dated/rotating URL",
+          "note": "Search result was for an expired July–August 2026 promotion; not current catalog proof."
+        },
+        {
+          "url": "https://www.findglocal.com/MZ/Maputo/117266509675275/Shoprite-Mozambique",
+          "owner": "Third-party social directory",
+          "note": "Discovery only; no official ownership or current offers verified."
+        }
+      ],
+      "online_candidate": {
+        "merchant": "VIP Supermercado / SPAR",
+        "stable_url": "https://vipspar.com/",
+        "stability": "Evergreen storefront candidate; promo path/update behavior not verified.",
+        "robots": "https://vipspar.com/robots.txt inaccessible to reader.",
+        "rights": "No commercial data/image reuse permission verified; terms not checked.",
+        "geography": "Search result states deliveries in Maputo, Matola, and Zimpeto; not nationwide.",
+        "finding": "Official-looking online supermarket result lists daily/weekly online promotions; snippet not used as offer proof.",
+        "evidence": [
+          "https://vipspar.com/",
+          "https://vipspar.com/robots.txt",
+          "https://spar-international.com/news/spar-stores-in-mozambique-now-offer-e-commerce/"
+        ]
+      },
+      "stable_url": "Official current evergreen catalog not verified; VIPSPAR storefront remains a blocked candidate.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "Official-branded shop candidate exists, but robots/access, reuse rights, and current public offer content are unresolved; Shoprite URL surfaced was expired."
+    },
+    {
+      "code": "JM",
+      "name": "Jamaica",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Jamaica official supermarket weekly specials catalogue promotions MegaMart Progressive Foods",
+        "online_shop": "Jamaica official online grocery supermarket shop delivery MegaMart Jamaica online"
+      },
+      "official_ownership": "No official supermarket catalog/promo page was captured. Virtual Mart is a self-branded online supermarket candidate, but legal owner/retailer standing was not independently verified.",
+      "catalog_leads": [],
+      "online_leads": [
+        {
+          "url": "https://virtualmartja.com/",
+          "owner": "Virtual Mart Jamaica-branded shop; legal operator not verified",
+          "note": "Online supermarket/warehouse-club result; no public promo/catalog page surfaced."
+        },
+        {
+          "url": "https://mart.7krave.com/",
+          "owner": "Third-party grocery delivery marketplace"
+        },
+        {
+          "url": "https://app.grocerylistjamaica.com/",
+          "owner": "Third-party order marketplace"
+        }
+      ],
+      "access_rights_geo": "Robots, commercial reuse terms, and exact delivery eligibility were not verified; no offer page opened.",
+      "stable_url": "No qualified promo URL verified.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "No current official public Catalog Promo source was verified; online-store discovery results did not establish a permitted current offers page."
+    },
+    {
+      "code": "BJ",
+      "name": "Benin",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Benin official supermarket promotions catalogue offres Erevan supermarket Benin",
+        "online_shop": "Benin official online supermarket grocery delivery shop Erevan Super U Benin online"
+      },
+      "official_ownership": "Official Benin Food Bank result identifies Erevan/Super U as a local retailer with stores in Cotonou area; no current official catalog/shop source verified.",
+      "catalog_leads": [
+        {
+          "url": "https://erevanbenin.com/assets/uploads/Catalogue_U_Gamme_U_A_Bas_Prix.pdf",
+          "owner": "Erevan-branded host; exact publisher not independently confirmed",
+          "note": "Search result dated about 1.5 years earlier; stale, not current proof."
+        },
+        {
+          "url": "https://erevanbenin.com/assets/uploads/Catalogue_Mois_du_consommons_local-Super_U_Benin.pdf",
+          "owner": "Erevan-branded host",
+          "note": "Dated old PDF; not current proof."
+        },
+        {
+          "url": "https://banquealimentaire.bj/partenaire-detail.php?partenaire=erevan-super-u",
+          "owner": "Benin Food Bank; retailer identity/context only"
+        }
+      ],
+      "online_leads": [
+        {
+          "url": "https://take.app/esupermarchebenin",
+          "owner": "Third-party ordering platform/seller; official retailer ownership not established"
+        },
+        {
+          "url": "https://sungrocery.biz/benin_grocery",
+          "owner": "Third-party online grocery"
+        }
+      ],
+      "access_rights_geo": "No qualifying current official host identified; no offers page opened; rights and fulfillment scope unverified.",
+      "stable_url": "No current evergreen promo URL verified.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "Only old/third-party catalog leads and non-verified ordering services surfaced; no current official public catalog/shop promo source."
+    },
+    {
+      "code": "GA",
+      "name": "Gabon",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Gabon official supermarket catalogue promotions offres Mbolo Prix Import Libreville",
+        "online_shop": "Gabon official online supermarket grocery shop delivery Prix Import Libreville online store"
+      },
+      "official_ownership": "PRIX IMPORT's official corporate site and Carrefour partnership source establish retail presence, but no current public promo catalog surfaced.",
+      "catalog_leads": [
+        {
+          "url": "https://www.priximport.com/",
+          "owner": "PRIX IMPORT institutional website",
+          "note": "Corporate site only; no Catalog Promo page verified."
+        },
+        {
+          "url": "https://www.carrefour.com/sites/default/files/2021-12/CP_Carrefour%20Partenariat%20International%20annonce%20l%E2%80%99ouverture%20du%20premier%20magasin%20au%20Gabon%20.pdf",
+          "owner": "Carrefour official press release; historical ownership/partnership context"
+        }
+      ],
+      "online_leads": [
+        {
+          "url": "https://www.ecomarketgabon.com/",
+          "owner": "Eco Market-branded e-commerce site; supermarket/operator identity not verified",
+          "note": "Fresh-produce delivery result for Libreville environs; no offers page identified."
+        },
+        {
+          "url": "https://shop.hpo-sogada.org/connexion",
+          "owner": "SOGADA-branded shop; merchant/retailer scope not verified"
+        },
+        {
+          "url": "https://www.gabgoexpress.com/",
+          "owner": "Third-party marketplace/delivery platform"
+        }
+      ],
+      "robots": "https://www.ecomarketgabon.com/robots.txt was inaccessible to reader; no offer page opened.",
+      "access_rights_geo": "No verified current promo source; candidate online shops advertise local delivery but reuse rights and exact scope are unverified.",
+      "stable_url": "No qualified Catalog Promo URL verified.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "Official retailer context and general grocery e-commerce leads surfaced, but no verifiable current public Catalog Promo source."
+    },
+    {
+      "code": "TD",
+      "name": "Chad",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Chad official supermarket promotions catalogue offers N'Djamena supermarket official",
+        "online_shop": "Chad official online supermarket grocery shop delivery N'Djamena ecommerce"
+      },
+      "official_ownership": "No retailer-owned public source verified. An ONASA food-security portal result is a public distribution program, not a retailer catalog.",
+      "catalog_leads": [
+        {
+          "url": "https://site-web-ong.online/",
+          "owner": "Result titled ONASA.TD; host ownership/authenticity not independently verified",
+          "note": "Public food-security/sales-distribution portal result, not a retailer's recurring Catalog Promo."
+        }
+      ],
+      "online_leads": [
+        {
+          "url": "https://loumou.online/welcome",
+          "owner": "Marketplace platform; specific retailer ownership not established"
+        },
+        {
+          "url": "https://www.grocery10.com/TD/N%27Djamena/926897413846007/E-Sahel-Connecta",
+          "owner": "Third-party directory listing"
+        }
+      ],
+      "access_rights_geo": "No qualifying official retailer host; no offer page opened; access/rights/market scope unverified.",
+      "stable_url": "No qualified Catalog Promo URL verified.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "Searches found a government food distribution result and third-party marketplaces/directories, but no verifiable official current retailer catalog/shop."
+    },
+    {
+      "code": "NE",
+      "name": "Niger",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Niger official supermarket promotions catalogue offres Niamey magasin officiel",
+        "online_shop": "Niger official online grocery supermarket shop delivery e-commerce Niger Poste Kaomini"
+      },
+      "official_ownership": "Official Niger Post and national news results identify Kaomini as an e-commerce platform developed by Niger Poste; it is a marketplace, not a retailer-owned supermarket.",
+      "catalog_candidate": {
+        "merchant": "Kaomini / Niger Poste marketplace",
+        "stable_url": "https://kaomini.nigerposte.ne/",
+        "stability": "Evergreen marketplace-home candidate; category/deal URL update behavior not verified.",
+        "robots": "https://kaomini.nigerposte.ne/robots.txt inaccessible to reader.",
+        "rights": "Use terms/privacy result exists at https://kaomini.nigerposte.ne/condition/utilisation, but was not opened because robots access was unresolved; no commercial reuse grant verified.",
+        "geography": "Search result contains worldwide-access language, not proof of Niger-country ordering/fulfillment scope for public prices.",
+        "finding": "Search result includes an e-commerce marketplace and promotional items, but no retailer-owned grocery catalog was verified; no offer page opened.",
+        "evidence": [
+          "https://kaomini.nigerposte.ne/",
+          "https://kaomini.nigerposte.ne/robots.txt",
+          "https://kaomini.nigerposte.ne/condition/utilisation",
+          "https://anp.ne/niamey-installation-du-comite-interministeriel-charge-de-reflechir-sur-le-developpement-de-la-plateforme-e-commerce-kaomini-ne-de-niger-poste/"
+        ]
+      },
+      "stable_url": "Candidate only; no qualified catalog path verified.",
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "SKIPPED_BLOCKED: official marketplace candidate exists, but robots/access, commercial reuse, grocery source ownership, and Niger fulfillment scope are unresolved."
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Nicaragua official supermarket weekly catalog ofertas promociones La Colonia Walmart La Union",
+        "online_shop": "Nicaragua official online supermarket grocery shop delivery La Colonia Nicaragua online"
+      },
+      "official_ownership": "La Colonia branded official online supermarket host; independent legal-operator check not completed.",
+      "catalog_candidate": {
+        "merchant": "La Colonia",
+        "stable_url": "https://lacolonia.com.ni/",
+        "stability": "Evergreen storefront with offers-category candidate; current promo path/update behavior not verified.",
+        "robots": "https://lacolonia.com.ni/robots.txt inaccessible to reader.",
+        "rights": "Terms/commercial data and image reuse permission not verified.",
+        "geography": "Nicaragua-branded online store; FAQ result on web-staging subdomain describes branch-selected delivery coverage and is not accepted as current official scope.",
+        "finding": "Search results identify an online supermarket with an offers category; no page opened and no snippet price/product accepted.",
+        "evidence": [
+          "https://lacolonia.com.ni/",
+          "https://lacolonia.com.ni/robots.txt",
+          "https://web-staging.lacolonia.com.ni/ayuda/preguntas-frecuentes"
+        ]
+      },
+      "online_candidate": {
+        "merchant": "La Colonia online",
+        "stable_url": "https://lacolonia.com.ni/",
+        "stability": "Stable storefront URL candidate; update behavior not verified.",
+        "robots": "Same-host robots inaccessible to reader.",
+        "rights": "No reuse grant verified.",
+        "geography": "Delivery and store-pickup shown in search result; exact delivery coverage unresolved.",
+        "finding": "Online shop and offers category candidate; no source page opened.",
+        "evidence": [
+          "https://lacolonia.com.ni/",
+          "https://lacolonia.com.ni/robots.txt"
+        ]
+      },
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "SKIPPED_BLOCKED: promising official online-shop/offer lead, but robots/access, reuse rights and delivery area remain unverified."
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Botswana official supermarket specials weekly catalogue promotions Choppies Shoprite Botswana",
+        "online_shop": "Botswana official online grocery supermarket shop delivery SPAR Choppies online shopping"
+      },
+      "official_ownership": "Choppies and SPAR Botswana official sites identify the retail chains; legal operators not independently checked in this pass.",
+      "catalog_candidates": [
+        {
+          "merchant": "SPAR Botswana",
+          "url": "https://spar.co.bw/specials/",
+          "stability": "Evergreen specials path candidate; content not verified.",
+          "robots": "https://spar.co.bw/robots.txt inaccessible to reader.",
+          "rights": "Commercial reuse permission/terms not verified.",
+          "geo": "Search result says national and store specials; item/store applicability not verified.",
+          "evidence": [
+            "https://spar.co.bw/specials/",
+            "https://spar.co.bw/robots.txt"
+          ]
+        },
+        {
+          "merchant": "Choppies Botswana",
+          "url": "https://choppies.co.bw/promotions/",
+          "stability": "Evergreen promotions path candidate; update behavior not verified.",
+          "robots": "https://choppies.co.bw/robots.txt inaccessible to reader.",
+          "rights": "Commercial reuse permission/terms not verified.",
+          "geo": "Botswana-specific host; exact store scope not verified.",
+          "evidence": [
+            "https://choppies.co.bw/promotions/",
+            "https://choppies.co.bw/robots.txt"
+          ]
+        }
+      ],
+      "online_candidate": {
+        "merchant": "Choppies online portal",
+        "stable_url": "https://choppies.co.bw/",
+        "stability": "Storefront/index candidate; current offer path not verified.",
+        "robots": "Same-host robots inaccessible to reader.",
+        "rights": "Terms/reuse permission not verified.",
+        "geography": "Official result states online shopping at selected locations; not nationwide.",
+        "finding": "Search result says the retailer has online shopping portal; no destination or offer page opened.",
+        "evidence": [
+          "https://choppies.co.bw/",
+          "https://choppies.co.bw/robots.txt"
+        ]
+      },
+      "discovery_only": [
+        "https://www.government.co.bw/catalogues (government-hosted catalog directory; not retailer-owned source)"
+      ],
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "SKIPPED_BLOCKED: official catalog and online-shopping leads exist, but robots/access and reuse rights are unresolved; online service is location-limited."
+    },
+    {
+      "code": "MD",
+      "name": "Moldova",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Moldova official supermarket weekly offers catalogue promotions Linella Kaufland Moldova",
+        "online_shop": "Moldova official online grocery supermarket shop delivery Linella Kaufland online store"
+      },
+      "official_ownership": "Kaufland Moldova official local domain; Linella legal operator is identified in a Linella-branded terms result as MOLDRETAIL GROUP S.R.L.; ownership evidence was not opened/independently confirmed.",
+      "catalog_candidates": [
+        {
+          "merchant": "Kaufland Moldova",
+          "url": "https://www.kaufland.md/ro/oferte.html",
+          "stability": "Evergreen offers path candidate; update cadence/current page not verified.",
+          "robots": "https://www.kaufland.md/robots.txt inaccessible to reader.",
+          "rights": "Commercial reuse permission/terms not verified.",
+          "geo": "Moldova-specific host; item/store scope not confirmed.",
+          "evidence": [
+            "https://www.kaufland.md/ro/oferte.html",
+            "https://www.kaufland.md/robots.txt"
+          ]
+        },
+        {
+          "merchant": "Linella",
+          "url": "https://linella.md/",
+          "stability": "Evergreen homepage/catalog candidate; offer update behavior not verified.",
+          "robots": "https://linella.md/robots.txt inaccessible to reader.",
+          "rights": "Commercial reuse permission/terms not verified.",
+          "geo": "Moldova domain; online page asks users to choose a region and nearby locality, so nationwide item scope is not proven.",
+          "evidence": [
+            "https://linella.md/",
+            "https://linella.md/robots.txt",
+            "https://linella.md/ro/catalog"
+          ]
+        }
+      ],
+      "online_candidate": {
+        "merchant": "Linella online",
+        "stable_url": "https://linella.md/en/",
+        "stability": "Evergreen online storefront candidate; current offer URLs not verified.",
+        "robots": "https://linella.md/robots.txt inaccessible to reader.",
+        "rights": "Commercial reuse permission/terms not verified; no terms page opened.",
+        "geography": "Countrywide stores are claimed in search results, but online fulfillment requires region selection; displayed-price applicability is unresolved.",
+        "finding": "Official search results identify online shopping and offers; snippets not used as product/price proof.",
+        "evidence": [
+          "https://linella.md/en/",
+          "https://linella.md/robots.txt",
+          "https://www.dero.linella.md/termeni_si_conditii"
+        ]
+      },
+      "observed_at_utc": "2026-11-27T05:18:14Z",
+      "terminal_disposition": "SKIPPED_BLOCKED: official offers and online-shop candidates exist, but robots/access and reuse terms are unverified; fulfillment requires local region selection."
+    }
+  ],
+  "summary": {
+    "terminal_receipts": 10,
+    "status_counts": {
+      "SKIPPED_BLOCKED": 5,
+      "SKIPPED_NO_VERIFIABLE_SOURCES": 5
+    },
+    "verified_official_current_catalogs": 0,
+    "verified_approved_catalogs": 0,
+    "countries_without_a_qualifying_source": [
+      "BF",
+      "JM",
+      "BJ",
+      "GA",
+      "TD"
+    ],
+    "countries_blocked_on_access_or_rights": [
+      "MZ",
+      "NE",
+      "NI",
+      "BW",
+      "MD"
+    ],
+    "eligible_product_highlights": 0,
+    "prices_or_images_verified": 0,
+    "production_changes": false
+  },
+  "limits": [
+    "Canonical discovery dispositions from global-catalog-discovery.md were used; these are audit statuses only, not production JSON fields.",
+    "Exactly one catalog-promo and one online-shop/marketplace search was issued for each market; no query was repeated and no result output was clipped.",
+    "Search results were discovery only. No product or price snippets were used as proof or copied into this receipt.",
+    "All 11 attempted candidate-host robots URLs were inaccessible to this reader; no terms pages or official offer/product pages were opened.",
+    "Expired period-specific Shoprite and old Erevan PDFs were not treated as current catalogs.",
+    "No new catalog, highlight, schema field, or production entry was created."
+  ],
+  "recorded_at_utc": "2026-11-27T05:18:14Z"
+}

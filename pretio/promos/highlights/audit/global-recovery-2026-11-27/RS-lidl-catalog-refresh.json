@@ -1,0 +1,24 @@
+{
+  "artifact_type": "pretio.registered_catalog_verification.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "catalog_id": "lidl-rs-country",
+  "verified_at_utc": "2026-11-27T05:47:34Z",
+  "catalog_url": "https://www.lidl.rs/c/online-letak/s10019338",
+  "source": "Official Lidl Srbija Online letak landing page opened via permitted public web reader; its robots policy does not disallow this public path.",
+  "current_child_catalog": {
+    "label": "Pogledajte naše ponude 26.11. - 2.12.",
+    "href": "https://www.lidl.rs/l/sr/katalog/pogledajte-nase-ponude-26-11-2-12/ar/0",
+    "valid_from": "2026-11-26",
+    "valid_until": "2026-12-02",
+    "evidence": "Official landing page lines 128-139; the child page returned no readable text, so no product prices or images were used."
+  },
+  "catalog_record": {
+    "coverage_type": "national",
+    "coverage_label": "Serbia (location-selected offers)",
+    "valid_from": null,
+    "valid_until": null,
+    "last_verified_at_before": "2026-09-22T00:00:00Z",
+    "last_verified_at_after": "2026-11-27T05:47:34Z"
+  },
+  "decision": "Keep the permanent hub URL and evergreen date fields; update only last_verified_at and catalog_revision. The rotating child leaflet remains audit evidence only; no guessed period data or product highlights were added."
+}

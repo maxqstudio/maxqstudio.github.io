@@ -1248,7 +1248,7 @@
       "source_type": "official_retailer",
       "valid_from": null,
       "valid_until": null,
-      "last_verified_at": "2026-09-22T00:00:00Z",
+      "last_verified_at": "2026-11-27T05:47:34Z",
       "status": "active",
       "sort_order": 380,
       "locations": [
@@ -2534,6 +2534,6 @@
       "last_verified_at": "2026-11-18T03:09:34Z"
     }
   ],
-  "catalog_revision": "pretio-catalog-expired-it-2026-11-26-v1",
+  "catalog_revision": "pretio-catalog-verified-lidl-rs-2026-11-27-v1",
   "schema_version": 2
 }

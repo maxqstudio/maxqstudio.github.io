@@ -1,0 +1,468 @@
+{
+  "receipt_type": "independent_global_catalog_discovery",
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 12,
+  "canonical_discovery_reference": {
+    "repository": "maxqstudio/maxqstudio.github.io",
+    "baseline_ref": "65bc23a",
+    "path": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+    "file_sha": "348450b582d4064814d09a23fe5cb6fa3d8d5015"
+  },
+  "timing": {
+    "run_id_nominal_start_utc": "2026-11-27T04:34:00Z",
+    "evidence_reviewed_utc": "2026-11-27T05:24:02Z",
+    "exact_per_search_timestamps": "not captured individually"
+  },
+  "method_and_counts": {
+    "markets": 10,
+    "catalog_promo_queries": 10,
+    "online_shop_marketplace_queries": 10,
+    "total_search_queries": 20,
+    "queries_per_market": "exactly one of each",
+    "online_query_outputs_clipped_unavailable": 4,
+    "clipped_markets": [
+      "BM",
+      "BT",
+      "BZ",
+      "CF"
+    ],
+    "unique_robots_hosts_checked": 8,
+    "direct_http_robots_requests": 10,
+    "direct_http_robots_200": 7,
+    "direct_http_robots_403": 3,
+    "direct_http_robots_404": 0,
+    "browser_robots_attempts": 0,
+    "merchant_or_store_pages_opened": 0,
+    "offer_or_catalog_pages_opened": 0,
+    "terms_pages_opened": 0,
+    "official_catalogs_fully_verified": 0,
+    "production_catalogs_created": 0,
+    "product_highlights_created": 0,
+    "product_or_price_claims_accepted": 0,
+    "repository_edits": false,
+    "schedules_created": false,
+    "external_messages_sent": false,
+    "notes": [
+      "Searches identified leads only; no product or price snippets were treated as evidence.",
+      "BM, BT, BZ and CF online-search outputs were clipped before review; each query was issued once, none was repeated, and no finding is inferred from unavailable output.",
+      "Robots checks used direct requests. HTTP 403 means the robots policy was unavailable, not that all pages on the host are inaccessible.",
+      "No merchant, shop, catalog, offer or terms page was opened. No source is claimed as covered; current promos, terms/reuse and applicability remain unverified where stated.",
+      "No CAPTCHA, login, API key, private API, hidden endpoint or app-only data was accessed."
+    ]
+  },
+  "robots_checks": [
+    {
+      "url": "https://www.pyrenees.ad/robots.txt",
+      "http_status": 200,
+      "result": "read",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "User-agent * Allow: /; Content-Signal search=yes, ai-train=no, use=reference. Named AI/training bots disallowed. Separate terms not reviewed."
+    },
+    {
+      "url": "https://alimentacio.andorra2000.ad/robots.txt",
+      "http_status": 200,
+      "result": "read",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "Public root allowed; pagination, sorting, filtering and product-search query patterns disallowed. Content-Signal search=yes, ai-train=no, use=reference. Terms not reviewed."
+    },
+    {
+      "url": "https://lingandsonsaruba.com/robots.txt",
+      "http_status": 200,
+      "result": "read",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "User-agent * Allow: /. Terms/reuse not reviewed."
+    },
+    {
+      "url": "https://shop.lingandsons.com/robots.txt",
+      "http_status": 403,
+      "result": "unavailable",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "HTTP 403; policy unavailable."
+    },
+    {
+      "url": "https://brodies.bz/robots.txt",
+      "http_status": 200,
+      "result": "read",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "User-agent * disallows /404."
+    },
+    {
+      "url": "https://www.vdtcuracao.com/robots.txt",
+      "http_status": 403,
+      "result": "unavailable",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "HTTP 403; offers-host policy unavailable."
+    },
+    {
+      "url": "https://shopvdtcuracao.com/robots.txt",
+      "http_status": 200,
+      "result": "read",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "Root allowed; /catalog/, checkout, selected application paths and query URLs disallowed. Terms not reviewed."
+    },
+    {
+      "url": "https://www.crfrcuracao.com/robots.txt",
+      "http_status": 403,
+      "result": "unavailable",
+      "observed_utc_window": "2026-11-27T05:20Z/2026-11-27T05:24Z",
+      "findings": "HTTP 403; policy unavailable."
+    }
+  ],
+  "markets": [
+    {
+      "code": "AD",
+      "name": "Andorra",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Andorra official supermarket weekly offers promotions catalogue Pyrénées Andorra 2000",
+        "lead_urls": [
+          "https://www.pyrenees.ad/alimentacio/fr/promotions",
+          "https://www.andorra2000.com/"
+        ],
+        "finding": "Retailer-domain promotions and grocery leads surfaced; pages and current promos not opened/verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Andorra official online grocery supermarket shop delivery Andorra 2000 Pyrenees online",
+        "output_status": "available",
+        "lead_urls": [
+          "https://alimentacio.andorra2000.ad/availability.php"
+        ],
+        "finding": "Online-grocery availability page lead; country scope, offers and terms not verified."
+      },
+      "sources": [
+        {
+          "url": "https://www.pyrenees.ad/alimentacio/fr/promotions",
+          "publisher": "Pyrénées retailer candidate",
+          "ownership": "Retailer-branded domain surfaced; not inspected.",
+          "rights_access": "Robots 200, public paths allowed; Content-Signal use=reference; terms not reviewed.",
+          "geography": "Andorra retailer lead; national/item applicability unverified.",
+          "stable_url": "Permanent-looking promo path; cycle not verified.",
+          "no_page_open_reason": "Terms/reuse and current promo not verified."
+        },
+        {
+          "url": "https://alimentacio.andorra2000.ad/availability.php",
+          "publisher": "Andorra 2000 online grocery candidate",
+          "ownership": "Retailer-branded subdomain surfaced; not inspected.",
+          "rights_access": "Robots 200; selected query patterns disallowed; terms not reviewed.",
+          "geography": "Andorra service scope unverified.",
+          "stable_url": "Availability endpoint, not a verified promo directory.",
+          "no_page_open_reason": "Not a Catalog Promo page; terms/geography unverified."
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code": "AW",
+      "name": "Aruba",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Aruba official supermarket weekly specials brochure Ling and Sons Super Food Plaza offers",
+        "lead_urls": [
+          "https://lingandsonsaruba.com/"
+        ],
+        "finding": "Ling & Sons local retailer and offers lead surfaced; current promos and eligible areas not verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Aruba official online supermarket grocery delivery Ling and Sons Super Food Aruba shop",
+        "output_status": "available",
+        "lead_urls": [
+          "https://shop.lingandsons.com/",
+          "https://shop.lingandsons.com/pages/agreement"
+        ],
+        "finding": "Branded online-shop and agreement leads; result text described Aruba delivery, but shop robots returned 403 and no shop/terms page was opened."
+      },
+      "sources": [
+        {
+          "url": "https://lingandsonsaruba.com/",
+          "publisher": "Ling & Sons Aruba",
+          "ownership": "Retailer-branded domain surfaced; not inspected.",
+          "rights_access": "Robots 200, User-agent * Allow: /; terms not reviewed.",
+          "geography": "Oranjestad lead; retailer-wide/item-level applicability unverified.",
+          "stable_url": "Homepage with offers lead; promo path/cycle unverified.",
+          "no_page_open_reason": "Current offer proof, terms and item-level area evidence absent."
+        },
+        {
+          "url": "https://shop.lingandsons.com/",
+          "publisher": "Ling & Sons online shop candidate",
+          "ownership": "Brand association surfaced; not inspected.",
+          "rights_access": "Robots 403; agreement URL surfaced but not opened.",
+          "geography": "Search result stated Aruba delivery; official terms not reviewed.",
+          "stable_url": "Shop root; not a promo directory.",
+          "no_page_open_reason": "Robots policy unavailable; terms/geography not directly verified."
+        }
+      ],
+      "terminal_disposition": "NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code": "BB",
+      "name": "Barbados",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Barbados official supermarket weekly specials flyer Massy Stores Barbados offers",
+        "output_status": "available",
+        "lead_urls": [
+          "https://askdealia.gov.bb/"
+        ],
+        "finding": "Government price-comparison platform, not a retailer-owned promo catalog; no current official retailer catalog found."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Barbados official online grocery supermarket shop delivery Massy Stores Barbados online",
+        "output_status": "available",
+        "lead_urls": [],
+        "nonqualifying_urls": [
+          "https://www.barbadosbarbados.com/activity/on-line-grocery-shopping/"
+        ],
+        "finding": "Captured result was a tourism directory, not official retailer shop."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code": "BI",
+      "name": "Burundi",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Burundi official supermarket promotions catalogue Bujumbura supermarket offers",
+        "output_status": "available",
+        "lead_urls": [],
+        "nonqualifying_urls": [
+          "https://mctit.gov.bi/wp-content/uploads/2025/03/Ordonnance-Ministerielle-750-1234-du-27-03-2025-portant-fixation-du-bareme-des-prix-des-produits-alimentaires-constituants-le-panier-menager-au-Burundi_0001.pdf"
+        ],
+        "finding": "No current retailer promo; captured government document is regulated-food pricing, not retailer promotions."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Burundi official online supermarket grocery shop delivery Bujumbura",
+        "output_status": "available",
+        "lead_urls": [],
+        "nonqualifying_urls": [
+          "https://www.royapay.net/en/essentials",
+          "https://www.baza.bi/"
+        ],
+        "finding": "Marketplace/local delivery leads; no official retailer-owned supermarket or promo catalog established."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code": "BM",
+      "name": "Bermuda",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Bermuda official supermarket weekly offers flyer MarketPlace Lindo's Bermuda specials",
+        "output_status": "available",
+        "lead_urls": [
+          "https://costofliving.gov.bm/savings"
+        ],
+        "nonqualifying_urls": [
+          "https://www.gov.bm/articles/ministry-home-affairs-launches-affordable-bermuda-basket",
+          "https://www.costofliving.gov.bm/Portals/1/Documents/AffordableBermudaBasket%20.pdf?ver=GepWIaVYAYQXT09uFIS0cw%3D%3D"
+        ],
+        "finding": "Government directory lists retailer specials; cited campaign ended 2026-07-31 and PDF is historical. No current retailer-owned catalog verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Bermuda official online grocery supermarket shop delivery MarketPlace Lindo's online ordering",
+        "output_status": "clipped_unavailable",
+        "lead_urls": [],
+        "finding": "Issued once; tool output clipped before review. No inference and no repeat."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_BLOCKED"
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Bhutan official supermarket food promotions catalogue Food Corporation of Bhutan retail store offers",
+        "output_status": "available",
+        "lead_urls": [],
+        "finding": "No official current retailer catalog surfaced in captured results."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Bhutan official online grocery supermarket shop delivery Food Corporation of Bhutan online",
+        "output_status": "clipped_unavailable",
+        "lead_urls": [],
+        "finding": "Issued once; tool output clipped before review. No inference and no repeat."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_BLOCKED"
+    },
+    {
+      "code": "BZ",
+      "name": "Belize",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Belize official supermarket weekly offers catalogue Save U Brodies Belize promotions",
+        "output_status": "available",
+        "lead_urls": [
+          "https://brodies.bz/"
+        ],
+        "nonqualifying_urls": [
+          "https://www.contractors1000.com/BZ/Belize-City/921927564561168/Save-U-Supermarket"
+        ],
+        "finding": "Brodies retailer homepage surfaced, no current promo page/content identified; Save-U result was a third-party directory."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Belize official online supermarket grocery shop delivery Brodies Save U online shop",
+        "output_status": "clipped_unavailable",
+        "lead_urls": [],
+        "finding": "Issued once; tool output clipped before review. No inference and no repeat."
+      },
+      "sources": [
+        {
+          "url": "https://brodies.bz/",
+          "publisher": "Brodies Belize candidate",
+          "ownership": "Retailer-branded domain surfaced; not inspected.",
+          "rights_access": "Robots 200, only /404 disallowed; terms not reviewed.",
+          "geography": "Belize retailer lead; area applicability unverified.",
+          "stable_url": "Homepage only; no promo URL/content verified.",
+          "no_page_open_reason": "No promo source identified; online search output clipped."
+        }
+      ],
+      "terminal_disposition": "SKIPPED_BLOCKED"
+    },
+    {
+      "code": "CF",
+      "name": "Central African Republic",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Central African Republic official supermarket promotions catalogue Bangui supermarket offers",
+        "output_status": "available",
+        "lead_urls": [],
+        "nonqualifying_urls": [
+          "https://banguistore.com/",
+          "https://236shopping.com/pages/a-propos-de-nous"
+        ],
+        "finding": "Marketplace leads surfaced; official retailer ownership, public promotions and national scope not verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Central African Republic official online grocery supermarket shop delivery Bangui online shop",
+        "output_status": "clipped_unavailable",
+        "lead_urls": [],
+        "finding": "Issued once; tool output clipped before review. No inference and no repeat."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_BLOCKED"
+    },
+    {
+      "code": "CV",
+      "name": "Cabo Verde",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Cabo Verde official supermarket weekly offers promotions catalogue supermercado promoções",
+        "output_status": "available",
+        "lead_urls": [],
+        "nonqualifying_urls": [
+          "https://centralcv.cv/2-inicio",
+          "https://simplyshop.cv/pt"
+        ],
+        "finding": "No retailer promo verified; potential grocery/shop leads lack confirmed ownership and current discounts."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Cabo Verde official online supermarket grocery shop delivery supermarket Cape Verde online",
+        "output_status": "available",
+        "lead_urls": [],
+        "nonqualifying_urls": [
+          "https://www.go.cv/en",
+          "https://popaspoupancas.cv/",
+          "https://tudteli.com/supermarket/"
+        ],
+        "finding": "Marketplace/local grocery-delivery leads; official ownership, public promotions and countrywide fulfillment not verified."
+      },
+      "sources": [],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code": "CW",
+      "name": "Curaçao",
+      "catalog_promo_search": {
+        "count": 1,
+        "query": "Curacao official supermarket weekly specials catalogue Centrum Van den Tweel grocery offers",
+        "output_status": "available",
+        "lead_urls": [
+          "https://www.vdtcuracao.com/acties",
+          "https://www.crfrcuracao.com/"
+        ],
+        "finding": "Van den Tweel Actions and Carrefour Curaçao weekly-specials leads surfaced; current offers not opened or verified."
+      },
+      "online_shop_search": {
+        "count": 1,
+        "query": "Curacao official online supermarket grocery shop delivery Van den Tweel Carrefour online",
+        "output_status": "available",
+        "lead_urls": [
+          "https://shopvdtcuracao.com/"
+        ],
+        "nonqualifying_urls": [
+          "https://kuakaminda.com/curacao-info/supermarkets"
+        ],
+        "finding": "Branded online shop surfaced; delivery-scope detail was from a non-retailer guide, not official terms."
+      },
+      "sources": [
+        {
+          "url": "https://www.vdtcuracao.com/acties",
+          "publisher": "Van den Tweel Supermarket Curaçao",
+          "ownership": "Retailer-branded domain and weekly-actions lead surfaced; not inspected.",
+          "rights_access": "Robots 403; policy unavailable; terms not reviewed.",
+          "geography": "Curaçao store lead; island-wide applicability not verified.",
+          "stable_url": "Permanent-looking /acties path; cycle unverified.",
+          "no_page_open_reason": "Robots policy unavailable; current offers and permission not verified."
+        },
+        {
+          "url": "https://www.crfrcuracao.com/",
+          "publisher": "Carrefour Market Curaçao",
+          "ownership": "Retailer-branded domain surfaced; not inspected.",
+          "rights_access": "Robots 403; policy unavailable; terms not reviewed.",
+          "geography": "Willemstad/Curaçao lead; store/item area applicability unverified.",
+          "stable_url": "Homepage/weekly-specials lead; stable promo path unverified.",
+          "no_page_open_reason": "Robots policy unavailable; no offer page opened."
+        },
+        {
+          "url": "https://shopvdtcuracao.com/",
+          "publisher": "Van den Tweel online grocery candidate",
+          "ownership": "Same-brand association surfaced; not inspected.",
+          "rights_access": "Robots 200; root allowed, /catalog/ and selected paths/queries disallowed; terms not reviewed.",
+          "geography": "Official Curaçao fulfillment scope not verified; guide was non-retailer.",
+          "stable_url": "Shop root; not a promo URL.",
+          "no_page_open_reason": "Terms and fulfillment geography not confirmed."
+        }
+      ],
+      "terminal_disposition": "SKIPPED_BLOCKED"
+    }
+  ],
+  "aggregate_dispositions": {
+    "NEEDS_CATALOG_APPROVAL": 2,
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 3,
+    "SKIPPED_BLOCKED": 5
+  },
+  "final_counts": {
+    "markets": 10,
+    "catalog_promo_queries": 10,
+    "online_shop_marketplace_queries": 10,
+    "total_search_queries": 20,
+    "online_query_outputs_clipped_unavailable": 4,
+    "unique_robots_hosts_checked": 8,
+    "direct_http_robots_requests": 10,
+    "direct_http_robots_200": 7,
+    "direct_http_robots_403": 3,
+    "direct_http_robots_404": 0,
+    "browser_robots_attempts": 0,
+    "merchant_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "terms_pages_opened": 0,
+    "official_catalogs_fully_verified": 0,
+    "new_catalogs_approved": 0,
+    "product_highlights_created": 0,
+    "product_or_price_claims": 0,
+    "production_changes": 0
+  }
+}

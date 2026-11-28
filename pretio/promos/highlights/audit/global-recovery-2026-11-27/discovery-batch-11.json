@@ -1,0 +1,195 @@
+{
+  "receipt_type": "independent_global_catalog_discovery",
+  "receipt_version": 1,
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 11,
+  "canonical_discovery_reference": {
+    "repository": "maxqstudio/maxqstudio.github.io",
+    "baseline_ref": "65bc23a",
+    "path": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+    "file_sha": "348450b582d4064814d09a23fe5cb6fa3d8d5015",
+    "note": "Uses audit-only country dispositions. No discovery status was added to production data."
+  },
+  "timing": {
+    "run_id_nominal_start_utc": "2026-11-27T04:34Z",
+    "evidence_reviewed_utc": "2026-11-27T05:17:41Z",
+    "exact_per_query_timestamps": "not captured individually by the search tool; review timestamp is recorded here"
+  },
+  "method_and_counts": {
+    "markets": 10,
+    "catalog_promo_queries": 10,
+    "online_shop_marketplace_queries": 10,
+    "total_search_queries": 20,
+    "queries_per_market": "exactly one catalog/promo and one online shop/marketplace search",
+    "browser_robots_open_attempts": 14,
+    "browser_robots_open_successes": 0,
+    "direct_http_robots_attempts": 14,
+    "direct_http_robots_200": 9,
+    "direct_http_robots_403": 2,
+    "direct_http_robots_404": 3,
+    "offer_pages_opened": 0,
+    "merchant_or_store_pages_opened": 0,
+    "terms_pages_opened": 0,
+    "official_catalogs_fully_verified": 0,
+    "production_catalogs_created": 0,
+    "product_highlights_created": 0,
+    "product_or_price_claims_accepted": 0,
+    "repository_edits": false,
+    "schedules_created": false,
+    "notes": [
+      "Search results were used only to identify candidate sources and their stated geographic scope. No search-result price or product details were accepted.",
+      "The browser tool could not display any of the 14 robots URLs; the same exact robots URLs were then requested directly over HTTP. A 403 or 404 is recorded as a robots retrieval failure, not as proof that all pages on the host are blocked.",
+      "No offer or merchant page was opened. Public access/reuse rights remain unresolved where noted; therefore no offer pages were opened even when robots.txt allowed the public path.",
+      "No CAPTCHA, login, API key, private API, hidden endpoint, or app-only product data was accessed."
+    ]
+  },
+  "robots_checks": [
+    {"url":"https://asia.kg/robots.txt","http_status":200,"result":"read","findings":"Blocks admin, plugin/theme/cache paths, feed, search/filter query patterns, and query URLs containing lang; public /ru/ path is not listed as disallowed.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://khorakapp.com/robots.txt","http_status":200,"result":"read","findings":"User-agent * allowed except /paid.html.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://www.carrefour-madagascar.com/robots.txt","http_status":200,"result":"read","findings":"User-agent * has empty Disallow; sitemap listed on the apex host.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://www.leaderprice.mg/robots.txt","http_status":403,"result":"unavailable","findings":"HTTP 403 on robots.txt; policy could not be read.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://atva.mk/robots.txt","http_status":200,"result":"read","findings":"Disallows admin/cart/checkout and transaction paths; public weekly action path is not listed as disallowed.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://vgmart.la/robots.txt","http_status":200,"result":"read","findings":"User-agent * allows all paths; sitemaps listed.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://offers.alshini.ps/robots.txt","http_status":404,"result":"unavailable","findings":"HTTP 404; no robots policy text available at this URL.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://bravosupermarket.ps/robots.txt","http_status":200,"result":"read","findings":"Disallows admin, WooCommerce logs/uploads and add-to-cart query patterns; allows admin ajax.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://solomonsfreshmarkets.com/robots.txt","http_status":404,"result":"unavailable","findings":"HTTP 404; no robots policy text available at this URL.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://firstchoicefreshmarket.com/robots.txt","http_status":403,"result":"unavailable","findings":"HTTP 403 on robots.txt; policy could not be read.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://brazzamarket.fr/robots.txt","http_status":404,"result":"unavailable","findings":"HTTP 404; no robots policy text available at this URL.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://seria.supasave.com.bn/robots.txt","http_status":200,"result":"read","findings":"Disallows WooCommerce logs/uploads, add-to-cart query patterns and admin; public root is not listed as disallowed.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://sparrwanda.rw/robots.txt","http_status":200,"result":"read","findings":"Disallows /wp-admin/ and allows admin ajax; public root is not listed as disallowed.","observed_utc":"2026-11-27T05:17:41Z"},
+    {"url":"https://tuma250.com/robots.txt","http_status":200,"result":"read","findings":"User-agent * allows all paths; sitemap listed.","observed_utc":"2026-11-27T05:17:41Z"}
+  ],
+  "markets": [
+    {
+      "code":"KG",
+      "name":"Kyrgyzstan",
+      "catalog_promo_search":{"count":1,"query":"Kyrgyzstan official supermarket promotions catalog akcija flyer retailer","lead_urls":["https://asia.kg/ru/"],"finding":"Search result identifies Asia as a grocery-market chain and describes a catalog of promotional items/special offers; source content and market coverage were not directly verified."},
+      "online_shop_search":{"count":1,"query":"Kyrgyzstan official online grocery supermarket shop delivery retailer ecommerce","lead_urls":[],"finding":"Captured result was a government e-commerce overview, not an official retailer online store or marketplace storefront."},
+      "sources":[
+        {"url":"https://asia.kg/ru/","publisher":"Asia grocery-market chain candidate","ownership":"first-party-looking Kyrgyz retailer domain surfaced; not directly inspected","rights_access":"robots readable; public /ru/ path not disallowed; public terms/reuse not verified","geography":"Kyrgyz retailer; national scope not directly verified","stable_url":"candidate permanent language path; historical/current cycle stability not verified","no_page_open_reason":"terms/reuse and current catalog evidence were not verified"}
+      ],
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"AF",
+      "name":"Afghanistan",
+      "catalog_promo_search":{"count":1,"query":"Afghanistan official supermarket promotions catalogue offers Kabul grocery retailer","lead_urls":[],"nonqualifying_urls":["https://www.arzaq.gov.af/sites/default/files/2025-01/%D8%AF%20%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%20%D9%BE%D8%A7%D9%86%DA%AB%D9%88%D9%86%DB%90%20%D9%81%D8%B1%D8%B5%D8%AA%D9%88%D9%86%D9%87.pdf"],"finding":"The official state-owned ARZAQ result was an investment/opportunity document, not a public current Catalog Promo source."},
+      "online_shop_search":{"count":1,"query":"Afghanistan official online grocery shop supermarket delivery retailer ecommerce Kabul","lead_urls":["https://khorakapp.com/"],"finding":"Khorak presents Kabul food/grocery delivery and app ordering with delivery areas selected by address; no public retailer catalog of current grocery promotions was verified."},
+      "sources":[
+        {"url":"https://khorakapp.com/","publisher":"Khorak food/grocery delivery platform","ownership":"first-party site self-description surfaced; not independently inspected","rights_access":"robots readable, public paths allowed except /paid.html; terms/reuse not reviewed","geography":"Kabul delivery-area selection, not national coverage","stable_url":"candidate app/service homepage; no public promo catalog URL verified","no_page_open_reason":"shop offers require app/address-dependent selection; no publicly verifiable current catalog was established"}
+      ],
+      "terminal_disposition":"SKIPPED_NO_VERIFIABLE_SOURCES"
+    },
+    {
+      "code":"MG",
+      "name":"Madagascar",
+      "catalog_promo_search":{"count":1,"query":"Madagascar official supermarket catalogues promotions prospectus offers retailer","lead_urls":["https://www.carrefour-madagascar.com/notre-catalogue-retrouver-ici.html"],"finding":"Retailer-domain catalog index surfaced and described weekly Carrefour Madagascar promotions; update cycle and current catalog were not directly verified."},
+      "online_shop_search":{"count":1,"query":"Madagascar official online supermarket grocery shop delivery retailer ecommerce","lead_urls":["https://www.leaderprice.mg/index.php"],"finding":"Leader Price Madagascar online ordering surfaced; result describes pickup at the selected store and account/payment requirements."},
+      "sources":[
+        {"url":"https://www.carrefour-madagascar.com/notre-catalogue-retrouver-ici.html","publisher":"Carrefour Madagascar candidate","ownership":"retailer domain and brand surfaced; page not directly inspected","rights_access":"robots readable; empty Disallow; public terms/reuse not verified","geography":"Madagascar site; catalog/store applicability not verified","stable_url":"evergreen-looking catalog index; search result says updates weekly, not directly confirmed","no_page_open_reason":"public terms/reuse and actual current catalog cycle were not verified"},
+        {"url":"https://www.leaderprice.mg/index.php","publisher":"Leader Price Madagascar online drive candidate","ownership":"retailer domain surfaced; direct ownership not inspected","rights_access":"robots.txt returned HTTP 403; terms/reuse not verified","geography":"search result describes click-and-collect from selected stores; not countrywide delivery","stable_url":"candidate online store root","no_page_open_reason":"robots policy unavailable; ordering requires account and service area is store-selectable"}
+      ],
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"MK",
+      "name":"North Macedonia",
+      "catalog_promo_search":{"count":1,"query":"North Macedonia official supermarket акции katalog promotions weekly offers retailer","lead_urls":["https://atva.mk/nedelna-akcija","https://dim.mk/","https://spar.mk/promotions"],"finding":"First-party retailer-domain weekly offers/promotions pages surfaced. ATVA is the selected candidate; current content was not directly opened or verified."},
+      "online_shop_search":{"count":1,"query":"North Macedonia official online grocery supermarket shop ecommerce delivery retailer","lead_urls":[],"nonqualifying_urls":["https://zegin.com.mk/sites/default/files/2024-04/opsti%20uslovi%20za%20koristenje%20-%20Zegin.pdf"],"finding":"Captured result included Zegin online-shop terms but no qualifying public grocery storefront/marketplace page."},
+      "sources":[
+        {"url":"https://atva.mk/nedelna-akcija","publisher":"ATVA Markets candidate","ownership":"retailer-domain page surfaced; ownership not directly inspected","rights_access":"robots readable; public weekly action path not disallowed; terms/reuse unverified","geography":"North Macedonia retailer; exact branch coverage not verified","stable_url":"permanent-looking weekly action path; update continuity not verified","no_page_open_reason":"terms/reuse and source applicability not verified"},
+        {"url":"https://dim.mk/","publisher":"DIM Markets candidate","ownership":"retailer-domain homepage surfaced","rights_access":"robots not checked; no page opened","geography":"search result lists stores in multiple Macedonian cities; national scope not verified","stable_url":"candidate homepage with promotions/navigation; persistence unverified","no_page_open_reason":"secondary candidate not selected for access/terms validation"}
+      ],
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"LA",
+      "name":"Laos",
+      "catalog_promo_search":{"count":1,"query":"Laos official supermarket promotions flyer catalogue offers retailer","lead_urls":[],"finding":"No first-party current Catalog Promo source surfaced."},
+      "online_shop_search":{"count":1,"query":"Laos official online grocery supermarket shop ecommerce delivery retailer","lead_urls":["https://www.vgmart.la/"],"finding":"VG Mart describes an online grocery store serving Vientiane; its search-result Terms page also says the service is for Vientiane delivery."},
+      "sources":[
+        {"url":"https://www.vgmart.la/","publisher":"VG Mart online grocery platform","ownership":"first-party site self-description surfaced; not independently inspected","rights_access":"robots readable and allows public paths; terms surfaced in search but no reuse permission was verified","geography":"Vientiane only, not all Laos","stable_url":"candidate store root; no qualifying catalog URL verified","no_page_open_reason":"regional service scope is incompatible with national discovery coverage; no public reuse permission"}
+      ],
+      "terminal_disposition":"BLOCKED_COUNTRY_COMPATIBILITY"
+    },
+    {
+      "code":"PS",
+      "name":"Palestinian Territory",
+      "catalog_promo_search":{"count":1,"query":"Palestinian Territory official supermarket offers catalogue promotions leaflet retailer","lead_urls":["https://offers.alshini.ps/","https://bravosupermarket.ps/"],"finding":"Al Shini direct offers page and Bravo supermarket site surfaced. Search results identify Al Bireh/Ramallah/Nablus/Hebron locations, but full geographic coverage and active public catalog were not verified."},
+      "online_shop_search":{"count":1,"query":"Palestinian Territory official online supermarket grocery shop delivery ecommerce retailer","lead_urls":[],"finding":"Captured online-shop query results did not expose a qualifying first-party public supermarket storefront."},
+      "sources":[
+        {"url":"https://offers.alshini.ps/","publisher":"Al Shini Store & Gas Company Ltd. offers page","ownership":"company name and Al Bireh address surfaced in result; not directly inspected","rights_access":"robots.txt returned HTTP 404; access/reuse terms unverified","geography":"Al Bireh lead; branch coverage not confirmed","stable_url":"offers subdomain candidate; evergreen behavior not verified","no_page_open_reason":"robots text unavailable; market coverage and reuse permission unresolved"},
+        {"url":"https://bravosupermarket.ps/","publisher":"Bravo Supermarket Palestine candidate","ownership":"retailer-domain homepage surfaced","rights_access":"robots readable; public paths allowed aside from admin/cart/upload patterns; reuse terms unverified","geography":"result shows West Bank city presence; broader territory coverage not established","stable_url":"candidate retailer root with offers/online-shopping navigation","no_page_open_reason":"re-use permission and territory coverage require catalog approval"}
+      ],
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"BS",
+      "name":"Bahamas",
+      "catalog_promo_search":{"count":1,"query":"Bahamas official supermarket weekly flyer promotions catalogue retailer","lead_urls":["https://www.amlfoods.com/solomons/","https://www.supervaluequalitymarkets.com/"],"finding":"Solomon's and Super Value retailer pages surfaced with weekly-specials navigation. Solomon's result separates Nassau and Freeport specials; no nationwide catalog coverage was verified."},
+      "online_shop_search":{"count":1,"query":"Bahamas official online grocery supermarket shop delivery ecommerce retailer","lead_urls":["https://firstchoicefreshmarket.com/","https://amlfoods.com/cr-love-your-pet-2/"],"finding":"First Choice result describes Nassau delivery. AML Foods' official result describes Solomon's online orders for selected locations, with family-island orders routed to mail boats; no full-island home-delivery coverage verified."},
+      "sources":[
+        {"url":"https://www.amlfoods.com/solomons/","publisher":"AML Foods / Solomon's Fresh Market","ownership":"official AML Foods retailer group page surfaced","rights_access":"terms not checked; no catalog page opened","geography":"separate Nassau and Freeport special sections; not all Bahamas verified","stable_url":"candidate evergreen specials index","no_page_open_reason":"market-wide geographic applicability and reuse permission not verified"},
+        {"url":"https://firstchoicefreshmarket.com/","publisher":"First Choice Fresh Market online shop candidate","ownership":"first-party-looking store domain surfaced; ownership not independently confirmed","rights_access":"robots.txt returned HTTP 403; terms/reuse unavailable","geography":"Nassau only per search result","stable_url":"candidate online storefront root","no_page_open_reason":"robots unavailable and service limited to Nassau"}
+      ],
+      "terminal_disposition":"BLOCKED_COUNTRY_COMPATIBILITY"
+    },
+    {
+      "code":"CG",
+      "name":"Republic of the Congo",
+      "catalog_promo_search":{"count":1,"query":"Republic of the Congo official supermarket catalogue promotions offers Brazzaville retailer","lead_urls":["https://brazzamarket.fr/","https://dbs.cg/etsdaniellechezvous/pages/catalogue.php"],"finding":"BrazzaMarket surfaced as a marketplace with a food category and promotions; EtsDaniel surfaced as a local distributor catalog. Both describe Brazzaville service rather than countrywide service."},
+      "online_shop_search":{"count":1,"query":"Republic of the Congo official online supermarket grocery shop delivery retailer ecommerce","lead_urls":["https://www.commerce.gouv.cg/en/services-usagers/"],"finding":"Government trade page describes a national e-commerce platform for Congolese product catalogs but does not itself identify a public supermarket storefront."},
+      "sources":[
+        {"url":"https://brazzamarket.fr/","publisher":"BrazzaMarket marketplace operated by LYS Ingénierie & Digital per result","ownership":"operator and Brazzaville address surfaced; not independently inspected","rights_access":"robots.txt returned HTTP 404; terms/reuse unverified","geography":"delivery result says Brazzaville; not national","stable_url":"candidate marketplace root with promotions section","no_page_open_reason":"regional service scope and robots/reuse policy prevent national catalog qualification"},
+        {"url":"https://dbs.cg/etsdaniellechezvous/pages/catalogue.php","publisher":"EtsDanielChezVous distributor catalog","ownership":"distributor identity surfaced; not independently inspected","rights_access":"robots not checked; no page opened","geography":"Brazzaville-only delivery per result","stable_url":"candidate catalog page; update cycle unknown","no_page_open_reason":"city-limited coverage and no verified discount catalog"}
+      ],
+      "terminal_disposition":"BLOCKED_COUNTRY_COMPATIBILITY"
+    },
+    {
+      "code":"BN",
+      "name":"Brunei",
+      "catalog_promo_search":{"count":1,"query":"Brunei official supermarket weekly offers catalog promotions flyer retailer","lead_urls":["https://seria.supasave.com.bn/","https://gadong.supasave.com.bn/"],"finding":"Supa Save retailer-domain pages surfaced with weekly and in-store promotions. These are selected store subdomains; service geography and current public reuse rights were not verified."},
+      "online_shop_search":{"count":1,"query":"Brunei official online grocery supermarket shop ecommerce delivery retailer","lead_urls":[],"finding":"Captured results were an e-commerce directory/report and third-party business listings; no qualifying first-party shop was returned by this query."},
+      "sources":[
+        {"url":"https://seria.supasave.com.bn/","publisher":"Supa Save Brunei online store candidate","ownership":"retailer subdomain and product categories surfaced; not directly inspected","rights_access":"robots readable; public pages allowed, cart/admin and upload paths restricted; terms/reuse not verified","geography":"Seria-area store site; countrywide delivery not established","stable_url":"candidate store homepage with weekly-promotion section","no_page_open_reason":"countrywide scope and public reuse permission unresolved"},
+        {"url":"https://gadong.supasave.com.bn/","publisher":"Supa Save Brunei online store candidate","ownership":"same retailer brand, separate location subdomain","rights_access":"robots not separately checked; no page opened","geography":"Gadong-area store site; national coverage not established","stable_url":"candidate store homepage","no_page_open_reason":"no separate access/terms/geography verification"}
+      ],
+      "terminal_disposition":"NEEDS_CATALOG_APPROVAL"
+    },
+    {
+      "code":"RW",
+      "name":"Rwanda",
+      "catalog_promo_search":{"count":1,"query":"Rwanda official supermarket weekly offers promotions catalogue retailer","lead_urls":["https://sparrwanda.rw/","https://inzovusupermarket.com/"],"finding":"SPAR Rwanda and Inzovu Supermarket retailer-domain pages surfaced with promotions. Search results associate SPAR's address and online-store leads with Kigali; national coverage was not verified."},
+      "online_shop_search":{"count":1,"query":"Rwanda official online supermarket grocery shop ecommerce delivery retailer","lead_urls":["https://huro.africa/","https://tuma250.com/about-us/"],"finding":"Huro describes a Kigali-delivery online store; Tuma250 describes an online marketplace of Vista Supermarket serving Kigali and surrounding areas."},
+      "sources":[
+        {"url":"https://sparrwanda.rw/","publisher":"SPAR Rwanda candidate","ownership":"retailer-domain page surfaced; legal operator not directly inspected","rights_access":"robots readable; only admin path disallowed; terms/reuse unverified","geography":"Kigali address/store surfaced; countrywide reach not verified","stable_url":"candidate root with promotions section","no_page_open_reason":"geographic coverage and reuse permission not verified"},
+        {"url":"https://huro.africa/","publisher":"Huro online grocery shop candidate","ownership":"first-party store self-description surfaced; not independently inspected","rights_access":"robots not checked; terms/reuse unverified","geography":"Kigali delivery only per search result","stable_url":"candidate online-store root","no_page_open_reason":"service area is local, not national"},
+        {"url":"https://tuma250.com/about-us/","publisher":"Tuma250 marketplace / Vista Supermarket","ownership":"first-party about page self-description surfaced; not independently inspected","rights_access":"robots readable and allows public paths; terms/reuse unverified","geography":"Kigali and surrounding areas per result","stable_url":"candidate about page; not a promo catalog URL","no_page_open_reason":"service scope is local and public reuse permission is unknown"}
+      ],
+      "terminal_disposition":"BLOCKED_COUNTRY_COMPATIBILITY"
+    }
+  ],
+  "aggregate_dispositions": {
+    "NEEDS_CATALOG_APPROVAL": 5,
+    "SKIPPED_NO_VERIFIABLE_SOURCES": 1,
+    "BLOCKED_COUNTRY_COMPATIBILITY": 4
+  },
+  "final_counts": {
+    "markets": 10,
+    "catalog_promo_queries": 10,
+    "online_shop_marketplace_queries": 10,
+    "total_queries": 20,
+    "browser_robots_attempts": 14,
+    "direct_http_robots_attempts": 14,
+    "direct_http_robots_200": 9,
+    "direct_http_robots_403": 2,
+    "direct_http_robots_404": 3,
+    "merchant_pages_opened": 0,
+    "offers_pages_opened": 0,
+    "terms_pages_opened": 0,
+    "official_catalogs_fully_verified": 0,
+    "new_catalogs_approved": 0,
+    "product_highlights_created": 0,
+    "product_or_price_claims": 0
+  }
+}

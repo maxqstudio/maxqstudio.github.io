@@ -1,0 +1,429 @@
+{
+  "artifact_type": "pretio.global_recovery_discovery_batch.v1",
+  "run_id": "pretio-global-recovery-20261127T0434Z",
+  "batch": 8,
+  "prior_run_id": "pretio-oneoff-global-20261123T040625Z",
+  "base_sha": "65bc23a54515c138d23e0e1465b9317a4bbc29d0",
+  "scope": "One-off research, exactly ZW, CY, HN, SV, GE, IS, SN, PG, BA, AL by selection rank; no repo edits, production writes, schedules, or repeat.",
+  "canonical_status_source": ".agents/skills/pretio-public-content-updater/references/global-catalog-discovery.md",
+  "recorded_at_utc": "2026-11-27T05:08:23Z",
+  "query_limits": {
+    "catalog_promo_per_market_max": 1,
+    "online_shop_marketplace_per_market_max": 1,
+    "queries_issued": 20
+  },
+  "counters": {
+    "candidate_country_count": 10,
+    "countries_researched": 10,
+    "countries_with_verified_official_catalogs": 0,
+    "countries_with_approved_active_catalogs": 0,
+    "countries_no_source": 2,
+    "countries_blocked": 8,
+    "country_target": 174,
+    "catalog_searches": 10,
+    "online_searches": 10,
+    "robots_urls_attempted": 14,
+    "robots_readable": 1,
+    "robots_unavailable_to_reader": 13,
+    "terms_pages_opened": 1,
+    "official_offer_or_product_pages_opened": 0,
+    "prices_or_images_verified": 0,
+    "new_catalogs_verified": 0,
+    "eligible_product_highlights": 0,
+    "production_changes": false,
+    "total_searches": 20
+  },
+  "markets": [
+    {
+      "code": "ZW",
+      "name": "Zimbabwe",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Zimbabwe official supermarket weekly specials catalogue Pick n Pay Zimbabwe OK Zimbabwe promotions",
+        "online_shop": "Zimbabwe official online supermarket grocery shopping delivery Pick n Pay Zimbabwe SPAR online"
+      },
+      "official_ownership": "Search results identify TM Pick n Pay, SPAR Zimbabwe and SPAR International; no legal operator verification was made for the specific catalog or shop hosts.",
+      "catalog_candidate": {
+        "merchant": "TM Pick n Pay",
+        "stable_url": "https://tmpnponline.co.zw/catalog",
+        "stability": "Evergreen path candidate; stable update behavior not verified.",
+        "robots": "https://tmpnponline.co.zw/robots.txt was inaccessible to the reader.",
+        "rights": "Terms/reuse permission not verified.",
+        "geography": "Zimbabwe in host and source title; item/store applicability not checked.",
+        "finding": "Search result title identifies in-store catalogues; no catalog page opened.",
+        "evidence": [
+          "https://tmpnponline.co.zw/catalog",
+          "https://tmpnponline.co.zw/robots.txt"
+        ]
+      },
+      "online_candidate": {
+        "merchant": "SPAR Zimbabwe Online",
+        "stable_url": "https://online-spar.co.zw/",
+        "stability": "Storefront path candidate; update behavior not verified.",
+        "robots": "https://online-spar.co.zw/robots.txt was inaccessible. Related https://www.spar.co.zw/robots.txt was also inaccessible.",
+        "rights": "Terms/reuse permission not verified.",
+        "geography": "Official delivery-policy result describes Zimbabwe delivery zones dependent on fulfillment location; national coverage/item scope not proven.",
+        "finding": "Search result describes online grocery delivery and store selection; no offer/product page opened.",
+        "evidence": [
+          "https://online-spar.co.zw/",
+          "https://online-spar.co.zw/robots.txt",
+          "https://www.spar.co.zw/policies/delivery",
+          "https://www.spar.co.zw/robots.txt"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: official-branded catalog/shop leads exist, but robots access is unresolved and terms/reuse plus item geography were not verified."
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Cyprus official supermarket weekly offers leaflet AlphaMega promotions official",
+        "online_shop": "Cyprus official online grocery supermarket shop delivery Alphamega e-shop offers"
+      },
+      "official_ownership": "Alphamega official site/channel results and Alphamega corporate subdomain support the brand link; legal entity not independently confirmed.",
+      "catalog_candidate": {
+        "merchant": "Alphamega",
+        "stable_url": "https://www.alphamega.com.cy/",
+        "stability": "Evergreen storefront candidate; promo update behavior not verified.",
+        "robots": "https://www.alphamega.com.cy/robots.txt was inaccessible to the reader.",
+        "rights": "Commercial data/image reuse permission and terms not verified.",
+        "geography": "Cyprus-specific domain; item and store applicability not verified.",
+        "finding": "Search result identifies online groceries and a current-offer notice; snippet not accepted as current offer proof.",
+        "alternatives": [
+          "https://www.mas.com.cy/our-offers/",
+          "https://www.lidl.com.cy/en-CY/"
+        ],
+        "evidence": [
+          "https://www.alphamega.com.cy/",
+          "https://www.alphamega.com.cy/robots.txt",
+          "https://csr.alphamega.com.cy/en/περιβαλλον-archive/"
+        ]
+      },
+      "online_candidate": {
+        "merchant": "Alphamega online grocery",
+        "stable_url": "https://www.alphamega.com.cy/",
+        "stability": "Storefront URL candidate; permanence of offer subpaths not verified.",
+        "robots": "Same host robots URL inaccessible to reader.",
+        "rights": "No reuse grant verified.",
+        "geography": "Cyprus online groceries indicated; fulfillment boundaries not verified.",
+        "finding": "No online page opened.",
+        "evidence": [
+          "https://www.alphamega.com.cy/",
+          "https://www.alphamega.com.cy/robots.txt"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: official leads surfaced, but host access, terms/reuse and item-level market scope could not be verified."
+    },
+    {
+      "code": "HN",
+      "name": "Honduras",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Honduras official supermarket weekly offers promociones catálogo La Colonia official",
+        "online_shop": "Honduras official online supermarket grocery shop delivery La Colonia online"
+      },
+      "official_ownership": "La Colonia-branded host and official company site/search results identify the retailer; legal operator was not independently verified.",
+      "catalog_candidate": null,
+      "online_candidate": {
+        "merchant": "Supermercados La Colonia",
+        "stable_url": "https://mobile.lacolonia.com/supermercado/honduras",
+        "stability": "Online category path candidate; catalog/promo freshness not verified.",
+        "robots": "https://mobile.lacolonia.com/robots.txt was inaccessible to the reader.",
+        "rights": "The official terms result describes purchase terms, not a commercial data-reuse grant; page not opened because robots access was unresolved.",
+        "geography": "Official FAQ/terms search results state delivery only within Honduras in enabled distribution zones; not all-area coverage.",
+        "finding": "Search results surfaced an online supermarket, FAQ, and terms page; no offer/product page opened.",
+        "related_terms_url": "https://mobile.lacolonia.com/terminos-y-condiciones",
+        "evidence": [
+          "https://mobile.lacolonia.com/supermercado/honduras",
+          "https://mobile.lacolonia.com/preguntas-frecuentes",
+          "https://mobile.lacolonia.com/terminos-y-condiciones",
+          "https://mobile.lacolonia.com/robots.txt"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: official online-shop lead exists, but robots access and commercial reuse are unresolved; delivery is limited to enabled Honduras zones."
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "El Salvador official supermarket weekly offers catalog promociones Super Selectos Despensa Familiar",
+        "online_shop": "El Salvador official online supermarket grocery shop delivery Súper Selectos online store"
+      },
+      "official_ownership": "Súper Selectos-branded official host result and a registered-brand statement; legal operator not independently confirmed.",
+      "catalog_candidate": null,
+      "discovery_only": [
+        {
+          "url": "https://precompra.defensoria.gov.sv/Dashboard/Index",
+          "note": "Government consumer price/offers platform; not a retailer-owned catalog, use/terms not reviewed."
+        },
+        {
+          "url": "https://www.foodbevg.com/SV/Unknown/147724765250673/S%C3%BAper-Selectos",
+          "note": "Third-party social listing; not official catalog evidence."
+        }
+      ],
+      "online_candidate": {
+        "merchant": "Súper Selectos Online",
+        "stable_url": "https://www.superselectos.com/",
+        "stability": "Storefront path candidate; promo URL/update behavior not verified.",
+        "robots": "https://www.superselectos.com/robots.txt was inaccessible to the reader.",
+        "rights": "Terms and commercial data/image reuse permission not verified.",
+        "geography": "El Salvador retailer; item-level fulfillment/applicability not checked.",
+        "finding": "Search result identifies online delivery and a registered supermarket brand; no offer page opened.",
+        "evidence": [
+          "https://www.superselectos.com/",
+          "https://www.superselectos.com/robots.txt"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: official online-shop candidate found, but access and terms could not be verified; no retailer-owned catalog promo page was surfaced."
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Georgia country official supermarket promotions catalog Carrefour Georgia offers",
+        "online_shop": "Georgia country official online grocery supermarket shop delivery Carrefour Georgia Glovo Wolt"
+      },
+      "official_ownership": "No retailer-controlled official current catalog/shop URL was returned in the two bounded searches.",
+      "catalog_candidate": null,
+      "online_candidate": null,
+      "discovery_only": [
+        {
+          "url": "https://ekalata.gov.ge/en",
+          "note": "Government discount aggregation/consumer portal, not a retailer-owned catalog; no terms or access review."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=W8d66Y5PZ9k",
+          "note": "Carrefour Georgia official-channel result, but campaign dates were in September 2026 and expired."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=dUwCSrT1Uq8",
+          "note": "Carrefour Georgia official-channel result, but campaign dates were in October 2026 and expired."
+        },
+        {
+          "url": "https://wolt.com/en/geo",
+          "note": "Marketplace discovery lead; no merchant-specific official offer page verified."
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES: searches surfaced a government aggregator, marketplace, and expired campaign videos, but no current retailer-owned official public catalog/shop source."
+    },
+    {
+      "code": "IS",
+      "name": "Iceland",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Iceland official supermarket weekly offers leaflet Bónus Krónan supermarket promotions",
+        "online_shop": "Iceland official online grocery shop delivery supermarket Bónus Krónan online shop"
+      },
+      "official_ownership": "Bónus-branded official domain/result supports retailer identity; corporate ownership not independently checked.",
+      "catalog_candidate": {
+        "merchant": "Bónus",
+        "stable_url": "https://bonus.is/",
+        "stability": "Homepage is an evergreen URL candidate; offers path/update behavior not verified.",
+        "robots": "https://bonus.is/robots.txt was inaccessible to the reader.",
+        "rights": "Terms and commercial reuse permission not verified.",
+        "geography": "Iceland retailer; specific offer/store applicability not checked.",
+        "finding": "Search result points to 'this week's offers'; no offer page opened.",
+        "evidence": [
+          "https://bonus.is/",
+          "https://bonus.is/robots.txt",
+          "https://bonus.is/english/"
+        ]
+      },
+      "online_candidate": null,
+      "discovery_only": [
+        {
+          "url": "https://www.aha.is/groceries-landing",
+          "note": "Third-party delivery marketplace result mentions several Icelandic cities; not retailer-owned."
+        }
+      ],
+      "terminal_disposition": "SKIPPED_BLOCKED: official Bónus promo lead exists but robots/access and rights are unresolved; no official online grocery storefront was verified."
+    },
+    {
+      "code": "SN",
+      "name": "Senegal",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Senegal official supermarket promotions catalogue offres Auchan Sénégal EDK market",
+        "online_shop": "Senegal official online grocery supermarket ecommerce delivery Auchan Sénégal online shop"
+      },
+      "official_ownership": "Auchan Sénégal official-domain results and official-channel result identify the local retailer.",
+      "catalog_candidate": {
+        "merchant": "Auchan Sénégal",
+        "stable_url": "https://www.auchan.sn/promotions",
+        "stability": "Evergreen promotion path candidate; update behavior not verified.",
+        "robots": "https://www.auchan.sn/robots.txt was inaccessible to the reader.",
+        "rights": "Terms/data-image reuse permission not verified.",
+        "geography": "Senegal-branded host; promotion store/area scope not established.",
+        "finding": "Official search result exposes a promotions page, but result snippets were not used as offer proof.",
+        "evidence": [
+          "https://www.auchan.sn/promotions",
+          "https://www.auchan.sn/robots.txt"
+        ]
+      },
+      "online_candidate": {
+        "merchant": "Auchan Sénégal online",
+        "stable_url": "https://www.auchan.sn/",
+        "stability": "Evergreen storefront candidate; current delivery and offer URLs not verified.",
+        "robots": "Same-host robots inaccessible to reader.",
+        "rights": "Commercial reuse permission not verified.",
+        "geography": "Official result describes online delivery in Dakar; pickup was described for named stores in an older official-channel video. No nationwide scope established.",
+        "finding": "No shop/offer page opened.",
+        "evidence": [
+          "https://www.auchan.sn/",
+          "https://www.auchan.sn/robots.txt",
+          "https://www.youtube.com/watch?v=0-fE4Hfc2C0"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: official promotions and online-shop leads exist, but host access and reuse permission are unresolved; online applicability appears Dakar/store-limited."
+    },
+    {
+      "code": "PG",
+      "name": "Papua New Guinea",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_NO_VERIFIABLE_SOURCES",
+      "queries": {
+        "catalog_promo": "Papua New Guinea official supermarket weekly catalogue promotions Stop N Shop PNG Foodworld",
+        "online_shop": "Papua New Guinea official online supermarket groceries shop delivery Stop N Shop PNG online shopping"
+      },
+      "official_ownership": "CPL Group press result identifies its shop.cpl.com.pg online shop and local Stop & Shop service; no promo-catalog owner page surfaced.",
+      "catalog_candidate": null,
+      "online_candidate": {
+        "merchant": "CPL Group / Stop & Shop",
+        "stable_url": "https://shop.cpl.com.pg/",
+        "stability": "Storefront candidate; no current public promotions URL identified.",
+        "robots": "https://shop.cpl.com.pg/robots.txt was inaccessible to the reader.",
+        "rights": "Reuse permission not verified.",
+        "geography": "Official corporate result mentions delivery by local delivery company and pickup at Stop & Shop Harbour City; nationwide scope not established.",
+        "finding": "A generic online shop was identified, but search results did not verify a public offers page.",
+        "evidence": [
+          "https://shop.cpl.com.pg/",
+          "https://shop.cpl.com.pg/robots.txt",
+          "https://cpl.com.pg/press/city-pharmacy-group-limited-launches-online-shopping-in-time-for-christmas/"
+        ]
+      },
+      "discovery_only": [
+        {
+          "url": "https://www.mapuai.com/ForShoppers/",
+          "note": "Third-party price comparison service; not official retailer source."
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCdpghkgi1hDD65pIAUsrTqQ",
+          "note": "Third-party marketplace channel; not a qualifying retailer source."
+        }
+      ],
+      "terminal_disposition": "SKIPPED_NO_VERIFIABLE_SOURCES: an official general shop is discoverable, but no public catalog/promotions source with actual offers was verified."
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Bosnia and Herzegovina official supermarket weekly offers catalogue Bingo Konzum akcija",
+        "online_shop": "Bosnia and Herzegovina official online supermarket grocery shop delivery Konzum BiH Bingo online shop"
+      },
+      "official_ownership": "Konzum BiH official-domain result and official customer-guide PDF identify the retailer and online shop; legal operator not independently checked.",
+      "catalog_candidate": {
+        "merchant": "Konzum BiH",
+        "stable_url": "https://konzum.co.ba/",
+        "stability": "Homepage/catalog-index candidate; update behavior not verified from the page.",
+        "robots": "https://konzum.co.ba/robots.txt and www variant were inaccessible to the reader.",
+        "rights": "Terms/data-image reuse permission not verified.",
+        "geography": "Search result exposes separate Federation/RS catalog labels and a local store offer; national uniform item coverage not established.",
+        "finding": "Official search result identifies current catalog section; no catalog page opened.",
+        "evidence": [
+          "https://konzum.co.ba/",
+          "https://konzum.co.ba/robots.txt",
+          "https://www.konzum.co.ba/robots.txt"
+        ]
+      },
+      "online_candidate": {
+        "merchant": "Konzum Internet prodavnica",
+        "stable_url": "https://www.konzumshop.ba/",
+        "stability": "Shop host candidate; current promo/update path not verified.",
+        "robots": "https://www.konzumshop.ba/robots.txt was inaccessible to the reader.",
+        "rights": "Reuse permission not verified.",
+        "geography": "Official-domain PDF describes home delivery/pickup; selected-city scope from a non-official result was not accepted as proof.",
+        "finding": "Official Konzum-hosted customer guide references the shop and offers, but no shop/offer page opened.",
+        "evidence": [
+          "https://www.konzumshop.ba/",
+          "https://www.konzum.co.ba/content/download/2117557/40234800/version/1/file/Konzum%2520Internet%2520prodavnica-upute%2520za%2520kupce.pdf",
+          "https://www.konzumshop.ba/robots.txt"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: official catalog/shop candidates exist, but robots/access and reuse terms are unverified; catalog applicability is split by subregion/store."
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "observed_at_utc": "2026-11-27T05:08:23Z",
+      "status": "SKIPPED_BLOCKED",
+      "queries": {
+        "catalog_promo": "Albania official supermarket promotions weekly catalogue SPAR Albania Conad offers",
+        "online_shop": "Albania official online grocery supermarket shop delivery SPAR Albania online order"
+      },
+      "official_ownership": "SPAR International names the Albania license and shop host; the online terms identify Spar Albania Sh.p.k. as operator.",
+      "catalog_candidate": {
+        "merchant": "SPAR Albania",
+        "stable_url": "https://www.spar.al/al/katalogu/category/9?print=1&tmpl=component",
+        "stability": "Catalog/category path candidate; evergreen update behavior not verified.",
+        "robots": "https://www.spar.al/robots.txt was inaccessible to the reader.",
+        "rights": "Catalog-host-specific terms not checked.",
+        "geography": "Albania-specific website; actual catalog store/geography applicability not verified.",
+        "finding": "Official search result identifies a SPAR catalog page; no catalog page opened.",
+        "evidence": [
+          "https://www.spar.al/al/katalogu/category/9?print=1&tmpl=component",
+          "https://www.spar.al/robots.txt",
+          "https://spar-international.com/country/albania-2/"
+        ]
+      },
+      "online_candidate": {
+        "merchant": "SPAR Albania online",
+        "stable_url": "https://shop.spar.al/",
+        "stability": "Stable storefront path candidate; promotions page not opened.",
+        "robots": "Retrieved; User-agent * disallows only /wp-admin/ and allows admin-ajax; crawl-delay 10 seconds.",
+        "rights": "Official terms state personal use only and prohibit unauthorized copying; no commercial reuse grant.",
+        "geography": "Official terms say delivery only in Tirana and Durrës until further notice.",
+        "finding": "Terms page opened after robots check; it confirms Spar Albania Sh.p.k. ownership. No offers page opened.",
+        "terms_url": "https://shop.spar.al/terms-and-conditions/",
+        "evidence": [
+          "https://shop.spar.al/",
+          "https://shop.spar.al/robots.txt",
+          "https://shop.spar.al/terms-and-conditions/"
+        ]
+      },
+      "terminal_disposition": "SKIPPED_BLOCKED: shop terms limit use to personal use and prohibit unauthorized copying; catalog-host robots/access and geography remain unverified."
+    }
+  ],
+  "summary": {
+    "terminal_receipts": 10,
+    "status_counts": {
+      "SKIPPED_BLOCKED": 8,
+      "SKIPPED_NO_VERIFIABLE_SOURCES": 2
+    },
+    "verified_official_current_catalogs": 0,
+    "verified_approved_catalogs": 0,
+    "eligible_product_highlights": 0,
+    "new_catalogs_verified": 0,
+    "prices_or_images_verified": 0,
+    "production_changes": false
+  },
+  "limits": [
+    "Canonical discovery statuses from global-catalog-discovery.md were used; these are audit dispositions only, not production JSON.",
+    "All 20 bounded searches were issued exactly once; no result output was clipped, and no query was repeated.",
+    "Search snippets were discovery only; no product or price claims were accepted as evidence.",
+    "No official offer or product page was opened. Public terms were opened only for shop.spar.al after its robots policy was read.",
+    "Most robots endpoints were inaccessible through this reader; this was treated as unresolved access and offers pages were not opened.",
+    "No new catalog entries, prices, images, highlights, schema fields, or production changes were created."
+  ]
+}
