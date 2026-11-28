@@ -8,6 +8,7 @@ and capable-client acceptance remain separate release gates.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -26,13 +27,22 @@ URL_BASE = "https://maxqstudio.dev/pretio/promos/highlights/v2"
 LOCATION_URL_BASE = "https://maxqstudio.dev/pretio/location/v2"
 CC = re.compile(r"[A-Z]{2}")
 DAY = re.compile(r"\d{4}-\d{2}-\d{2}")
-SHA = re.compile(r"[a-f0-9]{64}")
+MATCH_FIELDS = {"barcode", "variant", "pack_count"}
+TEXT_LIMITS = {
+    "catalog_id": 128, "retailer": 80, "product_name": 120, "brand": 80,
+    "package_size": 48, "barcode": 32, "variant": 64, "normal_price": 128,
+    "promo_price": 128, "image_url": 2048, "source_url": 2048, "logo_url": 2048,
+    "image_revision": 256, "logo_revision": 256, "observed_at": 40,
+}
+
+
+def _client_text(value, limit, where):
+    require(isinstance(value, str) and value == value.strip() and bool(value)
+            and len(value.encode("utf-16-le")) // 2 <= limit, f"{where}: invalid text")
 
 
 def _revision(value, where):
-    require(isinstance(value, str) and bool(value.strip()) and
-            value == value.strip() and len(value) <= 80,
-            f"{where}: invalid revision")
+    _client_text(value, 80, where)
     return value
 
 
@@ -132,13 +142,21 @@ def validate_locations(locations, cc, directory, where):
             f"{where}: country scope cannot be mixed with narrower scope")
 
 
-def validate_feed(root, path, cc, catalogs, currencies, as_of=None):
-    feed = strict_keys(read(path), FEED_TOP, set(), f"{cc}: feed")
+def _read_client_payload(path):
+    with path.open("rb") as stream:
+        raw = stream.read(900 * 1024 + 1)
+    require(len(raw) <= 900 * 1024, f"{path.name}: exceeds client payload limit")
+    return json.loads(raw.decode("utf-8")), hashlib.sha256(raw).hexdigest()
+
+
+def validate_feed(root, payload, cc, catalogs, currencies, as_of=None):
+    feed = strict_keys(payload, FEED_TOP, set(), f"{cc}: feed")
     require(feed["schema"] == SCHEMA and feed["schema_version"] == 2 and
             feed["country"] == cc, f"{cc}: incompatible feed")
     require(cc in currencies and feed["currency"] == currencies[cc],
             f"{cc}: currency mismatch or unsupported market")
     _revision(feed["revision"], cc)
+    _client_text(feed["generated_at"], 40, cc)
     parse_timestamp(feed["generated_at"], cc)
     items = feed["items"]
     require(isinstance(items, list) and len(items) <= 80, f"{cc}: invalid item count")
@@ -146,15 +164,21 @@ def validate_feed(root, path, cc, catalogs, currencies, as_of=None):
     ids, counts = set(), {}
     for i, item in enumerate(items):
         where = f"{cc}.items[{i}]"
-        strict_keys(item, ITEM_REQUIRED | {"locations"}, ITEM_OPTIONAL, where)
+        strict_keys(item, ITEM_REQUIRED | {"locations"}, ITEM_OPTIONAL | MATCH_FIELDS, where)
         validate_locations(item["locations"], cc, directory, where)
+        for key, limit in TEXT_LIMITS.items():
+            if item.get(key) is not None:
+                _client_text(item[key], limit, f"{where}.{key}")
+        pack_count = item.get("pack_count")
+        require(pack_count is None or (type(pack_count) is int and 1 <= pack_count <= 1000),
+                f"{where}: invalid pack_count")
         # v2 retains all existing price, catalog, currency and image gates.
         # The Android reader accepts date-only offer validity; reject timestamps.
         for key in ("valid_from", "valid_until"):
             value = item.get(key)
             require(value is None or (isinstance(value, str) and DAY.fullmatch(value)),
                     f"{where}: validity requires YYYY-MM-DD")
-        legacy = {k: v for k, v in item.items() if k != "locations"}
+        legacy = {k: v for k, v in item.items() if k not in MATCH_FIELDS | {"locations"}}
         require(not validate_highlight_item(legacy, where, cc, currencies[cc],
                     catalogs, country_today(cc, as_of)), f"{where}: expired product")
         require(item["id"] not in ids, f"{where}: duplicate id")
@@ -174,9 +198,10 @@ def _bindings(root, candidate, as_of=None):
         cc = path.stem
         require(CC.fullmatch(cc) is not None and path.is_file() and not path.is_symlink(),
                 "candidate: invalid country filename")
-        feed = validate_feed(root, path, cc, catalogs, currencies, as_of)
+        payload, sha = _read_client_payload(path)
+        feed = validate_feed(root, payload, cc, catalogs, currencies, as_of)
         entries.append({"code": cc, "document_id": cc, "revision": feed["revision"],
-                        "sha256": digest(path), "url": f"{URL_BASE}/{cc}.json"})
+                        "sha256": sha, "url": f"{URL_BASE}/{cc}.json"})
     return entries
 
 
@@ -184,7 +209,8 @@ def validate_candidate(root, candidate, as_of=None):
     candidate = _candidate_path(root, candidate)
     index_path = candidate / "index.json"
     require(not index_path.is_symlink(), "candidate: index must not be a symlink")
-    index = strict_keys(read(index_path), INDEX_TOP, set(), "v2 candidate index")
+    index_payload, _ = _read_client_payload(index_path)
+    index = strict_keys(index_payload, INDEX_TOP, set(), "v2 candidate index")
     require(index["schema"] == INDEX_SCHEMA and index["schema_version"] == 3,
             "candidate: incompatible index")
     _revision(index["revision"], "index")
