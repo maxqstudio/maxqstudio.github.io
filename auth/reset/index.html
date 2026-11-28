@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset password · Max Cam Scanner</title>
+  <meta name="description" content="Set a new password for your Max Cam Scanner account." />
+  <meta name="theme-color" content="#fff4dd" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Send only the site origin (never oobCode) to Firebase; HTTP-referrer-restricted Web keys need Referer. -->
+  <meta name="referrer" content="origin" />
+  <link rel="icon" href="../../images/max-cam-scanner/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="../../max-cam-scanner/max-cam-scanner.css" />
+  <style>
+    .reset-card { max-width: 520px; margin: 40px auto; }
+    .reset-field { display: grid; gap: 8px; margin-top: 16px; }
+    .reset-field label { font-weight: 700; }
+    .reset-row { position: relative; }
+    .reset-row input { width: 100%; padding: 14px 64px 14px 14px; font: inherit; border: 3px solid #26201a; border-radius: 12px; background: #fffdf7; }
+    .reset-toggle { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: 0; font: 700 14px "JetBrains Mono", monospace; cursor: pointer; padding: 8px; }
+    .reset-rules { list-style: none; padding: 0; margin: 10px 0 0; font-size: 15px; display: grid; gap: 4px; }
+    .reset-rules li::before { content: "○ "; }
+    .reset-rules li.ok::before { content: "● "; }
+    .reset-msg { margin-top: 16px; font-weight: 600; }
+    .reset-msg.err { color: #b42318; }
+    .reset-hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../max-cam-scanner/index.html" aria-label="Max Cam Scanner home">
+        <img class="brand-icon" src="../../images/max-cam-scanner/logo_icon.svg" width="38" height="38" alt="" />
+        <span class="brand-text">MAX CAM <span class="tag mono">Scanner</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="../../max-cam-scanner/support.html" data-i18n="navSupport">Support</a>
+        <a class="lang" id="langLink" href="?lang=id" hreflang="id" lang="id">ID</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <article class="container legal-card reset-card">
+      <span class="tag" data-i18n="tag">Password</span>
+      <h1 style="margin-top:14px" data-i18n="title">Reset your password</h1>
+
+      <p id="status" data-i18n="checking">Checking your link…</p>
+
+      <form id="resetForm" class="reset-hidden" novalidate>
+        <p class="meta" id="forEmail"></p>
+
+        <div class="reset-field">
+          <label for="pw1" data-i18n="newLabel">New password</label>
+          <div class="reset-row">
+            <input id="pw1" type="password" autocomplete="new-password" required />
+            <button type="button" class="reset-toggle" data-toggle="pw1" data-i18n="show">Show</button>
+          </div>
+          <ul class="reset-rules" id="rules">
+            <li data-rule="len" data-i18n="ruleLen">At least 8 characters</li>
+            <li data-rule="upper" data-i18n="ruleUpper">One uppercase letter</li>
+            <li data-rule="lower" data-i18n="ruleLower">One lowercase letter</li>
+            <li data-rule="num" data-i18n="ruleNum">One number</li>
+            <li data-rule="sym" data-i18n="ruleSym">One symbol</li>
+          </ul>
+        </div>
+
+        <div class="reset-field">
+          <label for="pw2" data-i18n="confirmLabel">Confirm new password</label>
+          <div class="reset-row">
+            <input id="pw2" type="password" autocomplete="new-password" required />
+            <button type="button" class="reset-toggle" data-toggle="pw2" data-i18n="show">Show</button>
+          </div>
+          <p class="meta reset-hidden" id="mismatch" data-i18n="mismatch">The passwords do not match.</p>
+        </div>
+
+        <div class="support-links" style="margin-top:20px">
+          <button id="submitBtn" class="button primary" type="submit" data-i18n="submit" disabled>Update password</button>
+        </div>
+      </form>
+
+      <p id="msg" class="reset-msg reset-hidden" role="status"></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Max-Q Studio. Max Cam Scanner.</p>
+    </div>
+  </footer>
+
+  <script type="module">
+    // Public web config only (no secrets). No analytics on this page.
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, verifyPasswordResetCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    // A Firebase Web API key is public, but must NOT reuse the Android-restricted key.
+    // Keep this feature unavailable until a dedicated HTTP-referrer-restricted Web key
+    // has been configured in firebase-config.js and verified end-to-end.
+    const firebaseWebConfig = (await import("./firebase-config.js")).firebaseWebConfig;
+    const isWebConfigured = typeof firebaseWebConfig?.apiKey === "string" &&
+      /^AIza[A-Za-z0-9_-]{30,}$/.test(firebaseWebConfig.apiKey) &&
+      firebaseWebConfig.authDomain === "max-cam-scanner.firebaseapp.com" &&
+      firebaseWebConfig.projectId === "max-cam-scanner";
+    const auth = isWebConfigured ? getAuth(initializeApp(firebaseWebConfig)) : null;
+
+    const I18N = {
+      en: {
+        navSupport: "Support", tag: "Password", title: "Reset your password",
+        checking: "Checking your link…", newLabel: "New password", confirmLabel: "Confirm new password",
+        show: "Show", hide: "Hide", ruleLen: "At least 8 characters", ruleUpper: "One uppercase letter",
+        ruleLower: "One lowercase letter", ruleNum: "One number", ruleSym: "One symbol",
+        mismatch: "The passwords do not match.", submit: "Update password",
+        forEmail: (e) => `For ${e}`,
+        done: "Password updated, sign in in the app.",
+        expired: "This link has expired or was already used. Request a new link in the app.",
+        invalid: "This link is not valid. Request a new link in the app.",
+        weak: "This password does not meet the rules above.",
+        generic: "Something went wrong. Try again in a moment.",
+        noCode: "This link is incomplete. Open the link from the email again, or request a new one in the app.",
+        notConfigured: "Password reset is not available on this website yet. Please request a new link in the app.",
+      },
+      id: {
+        navSupport: "Bantuan", tag: "Password", title: "Atur ulang password",
+        checking: "Memeriksa link kamu…", newLabel: "Password baru", confirmLabel: "Konfirmasi password baru",
+        show: "Lihat", hide: "Sembunyikan", ruleLen: "Minimal 8 karakter", ruleUpper: "Satu huruf besar",
+        ruleLower: "Satu huruf kecil", ruleNum: "Satu angka", ruleSym: "Satu simbol",
+        mismatch: "Password tidak sama.", submit: "Perbarui password",
+        forEmail: (e) => `Untuk ${e}`,
+        done: "Password diperbarui, silakan masuk di app.",
+        expired: "Link ini sudah kedaluwarsa atau sudah dipakai. Minta link baru di app.",
+        invalid: "Link ini tidak valid. Minta link baru di app.",
+        weak: "Password ini belum memenuhi aturan di atas.",
+        generic: "Terjadi kesalahan. Coba lagi sebentar lagi.",
+        noCode: "Link ini tidak lengkap. Buka lagi link dari email, atau minta link baru di app.",
+        notConfigured: "Pengaturan ulang password belum tersedia di situs ini. Minta link baru melalui aplikasi.",
+      },
+    };
+
+    const params = new URLSearchParams(location.search);
+    const lang = params.get("lang") === "id" || (!params.get("lang") && navigator.language?.startsWith("id")) ? "id" : "en";
+    const L = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = lang === "id" ? "Atur ulang password · Max Cam Scanner" : "Reset password · Max Cam Scanner";
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const v = L[el.dataset.i18n];
+      if (typeof v === "string") el.textContent = v;
+    });
+    document.getElementById("langLink").href = lang === "id" ? "?lang=en" : "?lang=id";
+    document.getElementById("langLink").textContent = lang === "id" ? "EN" : "ID";
+
+    const $ = (id) => document.getElementById(id);
+    const show = (el, on) => el.classList.toggle("reset-hidden", !on);
+    const say = (text, err = false) => { const m = $("msg"); m.textContent = text; m.classList.toggle("err", err); show(m, true); };
+
+    // Read oobCode once, then remove it from the address bar.
+    const oobCode = params.get("oobCode") || "";
+    if (oobCode) history.replaceState(null, "", location.pathname);
+
+    const failMsg = (e) => {
+      const c = e && e.code ? e.code : "";
+      if (c === "auth/expired-action-code" || c === "auth/invalid-action-code") return c.includes("expired") ? L.expired : L.invalid;
+      return L.generic;
+    };
+
+    if (!oobCode) {
+      $("status").textContent = L.noCode;
+    } else if (!auth) {
+      $("status").textContent = L.notConfigured;
+    } else {
+      verifyPasswordResetCode(auth, oobCode)
+        .then((email) => {
+          $("status").textContent = "";
+          $("forEmail").textContent = L.forEmail(email);
+          show($("resetForm"), true);
+          $("pw1").focus();
+        })
+        .catch((e) => {
+          $("status").textContent = "";
+          say(failMsg(e), true);
+        });
+    }
+
+    // Password rules, same as sign-up.
+    const rules = {
+      len: (p) => p.length >= 8,
+      upper: (p) => /[A-Z]/.test(p),
+      lower: (p) => /[a-z]/.test(p),
+      num: (p) => /[0-9]/.test(p),
+      sym: (p) => /[^A-Za-z0-9]/.test(p),
+    };
+    const refresh = () => {
+      const p1 = $("pw1").value, p2 = $("pw2").value;
+      let allOk = true;
+      document.querySelectorAll("#rules li").forEach((li) => {
+        const ok = rules[li.dataset.rule](p1);
+        li.classList.toggle("ok", ok);
+        if (!ok) allOk = false;
+      });
+      const mismatch = p2.length > 0 && p1 !== p2;
+      show($("mismatch"), mismatch);
+      $("submitBtn").disabled = !(allOk && p1 === p2 && p2.length > 0) || !oobCode;
+    };
+    $("pw1").addEventListener("input", refresh);
+    $("pw2").addEventListener("input", refresh);
+
+    document.querySelectorAll(".reset-toggle").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const input = $(btn.dataset.toggle);
+        const showing = input.type === "text";
+        input.type = showing ? "password" : "text";
+        btn.textContent = showing ? L.show : L.hide;
+      });
+    });
+
+    $("resetForm").addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      const p1 = $("pw1").value;
+      $("submitBtn").disabled = true;
+      try {
+        await confirmPasswordReset(auth, oobCode, p1);
+        show($("resetForm"), false);
+        say(L.done);
+      } catch (e) {
+        if (e && e.code === "auth/weak-password") {
+          say(L.weak, true);
+        } else {
+          show($("resetForm"), false);
+          say(failMsg(e), true);
+        }
+        refresh();
+      }
+    });
+  </script>
+</body>
+</html>
